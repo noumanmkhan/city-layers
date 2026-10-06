@@ -504,7 +504,12 @@ qf.addEventListener('submit', async e => {
     const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
     const list = await fetch(url, {signal: ctl.signal, headers: {'Accept-Language': 'en'}}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
     clearTimeout(timer);
-    const inCity = list.filter(r => hit(data.boroughs, +r.lon, +r.lat));
+    // Keep matches inside the city, and merge repeats of the same address (one per entrance/postcode).
+    const inCity = [];
+    list.filter(r => hit(data.boroughs, +r.lon, +r.lat)).forEach(r => {
+      const dup = inCity.some(k => placeLabel(k) === placeLabel(r) && metres([+k.lon, +k.lat], [+r.lon, +r.lat]) < 150);
+      if (!dup) inCity.push(r);
+    });
     if (!inCity.length){
       showResults('<li class="msg">No match inside the City of Toronto for “' + esc(text) + '”. Try the full street name, like “789 Yonge Street”.</li>');
     } else if (inCity.length === 1){
