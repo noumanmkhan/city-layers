@@ -1,7 +1,7 @@
 """Who represents each part of Toronto, with a link to their official page.
 Inputs: raw/representatives/ (fetched by fetch_representatives.py), and the map's ward and
 federal riding files for the names to match against.
-Output: ../docs/data/representatives.json
+Output: ../docs/toronto/data/representatives.json
   {"updated": date, "wards": {"11": {name, url}}, "prov": {"University—Rosedale": {name, party, url}},
    "fed": {"University—Rosedale": {name, party, url}}}
 
@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, 'raw', 'representatives')
-DOCS = os.path.join(HERE, '..', 'docs', 'data')
+DOCS = os.path.join(HERE, '..', 'docs', 'toronto', 'data')
 
 
 def key(s):

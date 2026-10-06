@@ -1,6 +1,6 @@
 """Neighbourhood lenses from the City's 2021 Neighbourhood Profiles (2021 Census, 158 neighbourhoods).
 Input: raw/neighbourhood_profiles_2021.xlsx (fetched by fetch_profiles.py)
-Output: ../docs/data/nbhd_profiles.json  {neighbourhood number: {...figures and tiers...}}
+Output: ../docs/toronto/data/nbhd_profiles.json  {neighbourhood number: {...figures and tiers...}}
 
 Three lenses, each a simple, labelled tier rather than a precise figure. The point is the feel
 of a neighbourhood relative to the rest of Toronto, not a price list.
@@ -24,7 +24,7 @@ import openpyxl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, 'raw', 'neighbourhood_profiles_2021.xlsx')
-OUT = os.path.join(HERE, '..', 'docs', 'data', 'nbhd_profiles.json')
+OUT = os.path.join(HERE, '..', 'docs', 'toronto', 'data', 'nbhd_profiles.json')
 
 rows = list(openpyxl.load_workbook(SRC, read_only=True)['hd2021_census_profile'].iter_rows(values_only=True))
 label = {i: str(r[0]).strip() for i, r in enumerate(rows)}

@@ -6,12 +6,12 @@ tier 1 = spread-out, city-scale anchors (icons from zoom 11); tier 2 = dense or 
 so downtown doesn't pile up when zoomed out.
 aliases = other names people type into search (old names, nicknames, abbreviations).
 Positions were checked against OpenStreetMap (Nominatim); big parks use a point inside the Toronto part.
-Output: ../docs/data/landmarks.geojson
+Output: ../docs/toronto/data/landmarks.geojson
 """
 import json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(HERE, '..', 'docs', 'data', 'landmarks.geojson')
+OUT = os.path.join(HERE, '..', 'docs', 'toronto', 'data', 'landmarks.geojson')
 
 # (name, category, tier, lat, lon, aliases)
 LANDMARKS = [

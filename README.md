@@ -2,7 +2,7 @@
 
 An interactive map of the City of Toronto where you turn civic and cultural boundaries on and off, then tap any spot to see every boundary it falls inside.
 
-**Live site:** https://maps.noumankhan.ca
+**Live site:** https://maps.noumankhan.ca/toronto/
 
 ![Toronto Layers: the whole city with former cities, highways and rapid transit](assets/screenshot.png)
 
@@ -80,7 +80,7 @@ Rebuild the data:
 ```bash
 cd pipeline
 pip install shapely
-./run.sh            # writes docs/data/*.geojson and docs/index.html
+./run.sh            # writes docs/toronto/data/*.geojson and docs/toronto/index.html
 cd ../docs && python3 -m http.server 8000
 ```
 

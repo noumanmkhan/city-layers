@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from cultural import CULTURAL
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-R = os.path.join(HERE, 'raw') + '/'; OUT = os.path.join(HERE, '..', 'docs', 'data') + '/'; TMP = os.path.join(HERE, 'tmp') + '/'
+R = os.path.join(HERE, 'raw') + '/'; OUT = os.path.join(HERE, '..', 'docs', 'toronto', 'data') + '/'; TMP = os.path.join(HERE, 'tmp') + '/'
 os.makedirs(OUT, exist_ok=True); os.makedirs(TMP, exist_ok=True)
 ZIP = R
 
