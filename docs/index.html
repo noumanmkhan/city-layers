@@ -1155,8 +1155,14 @@ function choose(r){
   const latlng = L.latLng(+r.lat, +r.lon), name = placeLabel(r);
   showResults('');
   q.value = name;
-  map.flyTo(latlng, Math.max(map.getZoom(), 15), {duration: .8});
-  inspect(latlng, name);
+  inspect(latlng, name);  // fill the card first, so a map-move problem can't hide the result
+  const zoom = Math.max(map.getZoom(), 15);
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try {
+    const size = map.getSize();
+    if (calm || !size.x || !size.y) map.setView(latlng, zoom, {animate: false});
+    else map.flyTo(latlng, zoom, {duration: .8});
+  } catch (err){ try { map.setView(latlng, zoom, {animate: false}); } catch (e2){} }
 }
 let busy = false;
 async function geocode(url){
@@ -1186,7 +1192,9 @@ qf.addEventListener('submit', async e => {
   const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=6&countrycodes=ca&bounded=1' +
     '&viewbox=-79.64,43.86,-79.11,43.58&q=' + encodeURIComponent(text);
   try {
-    const list = await geocode(url);
+    let list;
+    try { list = await geocode(url); }
+    catch (err){ showResults('<li class="msg">Address search isn\u2019t responding right now. Try again in a moment, or tap the map instead.</li>'); return; }
     // Keep matches inside the city, and merge repeats of the same address (one per entrance/postcode).
     const inCity = [];
     list.filter(r => hit(data.boroughs, +r.lon, +r.lat)).forEach(r => {
@@ -1204,7 +1212,8 @@ qf.addEventListener('submit', async e => {
       results.querySelector('button').focus();
     }
   } catch (err){
-    showResults('<li class="msg">Address search isn’t responding right now. Try again in a moment, or tap the map instead.</li>');
+    console.error(err);
+    showResults('<li class="msg">Something went wrong showing that result. Try again, or tap the map instead.</li>');
   } finally { busy = false; go.disabled = false; go.textContent = 'Find'; }
 });
 q.addEventListener('keydown', e => { if (e.key === 'Escape'){ showResults(''); q.blur(); } });
