@@ -74,7 +74,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 
 /* ---------- panel ---------- */
 #panel{position:absolute;z-index:1000;top:16px;left:16px;bottom:16px;width:300px;display:flex;flex-direction:column;
-  background:var(--panel);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+  background:var(--panel);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;overflow:clip}
 .ph{padding:18px 18px 12px;border-bottom:1px solid var(--rule)}
 .ph h1{margin:0;font-size:21px;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
 .ph p{margin:4px 0 0;color:var(--ink-2);font-size:12.5px}
@@ -82,9 +82,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 #layers{overflow:auto;padding:6px 10px 14px;flex:1;min-height:0}
 .grp{margin-top:10px}
 .grp h2{margin:8px 8px 4px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
-.row{display:flex;align-items:flex-start;gap:10px;padding:8px;border-radius:9px;cursor:pointer;user-select:none}
+.row{position:relative;display:flex;align-items:flex-start;gap:10px;padding:8px;border-radius:9px;cursor:pointer;user-select:none}
 .row:hover{background:var(--pill-bg)}
-.row input{position:absolute;opacity:0;pointer-events:none}
+/* The real checkbox sits invisibly over its own switch, so focusing it never scrolls anything but the list. */
+.row input{position:absolute;top:10px;right:8px;width:32px;height:18px;margin:0;opacity:0;pointer-events:none}
 .sw{flex:none;width:30px;height:22px;border-radius:6px;position:relative;overflow:hidden;border:1px solid var(--rule)}
 .tx{flex:1;min-width:0}
 .tx b{display:block;font-weight:600;font-size:13.5px}
