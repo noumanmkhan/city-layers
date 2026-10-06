@@ -1108,7 +1108,7 @@ const BUILD = {
       const SP = z < 13 ? 420 : z < 14 ? 340 : 280;
       // Keep clear of other labels, shields and the panels floating over the map.
       const mr = map.getContainer().getBoundingClientRect();
-      document.querySelectorAll('#search, #here, #panel, .leaflet-tooltip.lbl, .shield, .poi, .stn, .leaflet-pin-pane > *').forEach(el => {
+      document.querySelectorAll('#search, #here, #panel, .leaflet-tooltip.lbl, .shield, .lm i, .lm b, .stn, .leaflet-pin-pane > *').forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.width && r.height) boxes.push(rect((r.left + r.right) / 2 - mr.left, (r.top + r.bottom) / 2 - mr.top, r.width / 2 + 3, r.height / 2 + 3, 0));
       });
