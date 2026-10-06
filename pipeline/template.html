@@ -230,8 +230,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .flist{display:flex;flex-wrap:wrap;gap:4px;max-height:150px;overflow:auto}
 .flist button{font:inherit;font-size:11.5px;padding:3px 7px;border-radius:6px;border:none;background:var(--pill-bg);color:var(--ink);cursor:pointer;text-align:left}
 .flist button:hover{outline:1px solid var(--ink-3)}
-.live{border-top:1px solid var(--rule);padding:10px 16px 12px}
-.live h3{margin:0 0 6px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.live{padding:0 16px 12px}
 .live dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12.5px}
 .live dt{color:var(--ink-3)} .live dd{margin:0;font-weight:500;min-width:0}
 .live dd span{display:block;font-weight:400;color:var(--ink-2);font-size:11.5px}
@@ -279,7 +278,18 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 dl.facts{margin:0;padding:10px 16px 14px;border-top:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12.5px}
 dl.facts dt{color:var(--ink-3)}
 dl.facts dd{margin:0;font-weight:500;min-width:0}
-.more{display:none;width:100%;font:600 12px/1 var(--font);color:var(--ink-2);background:none;border:none;border-top:1px solid var(--rule);padding:9px;cursor:pointer}
+.sec{border-top:1px solid var(--rule)}
+.sec>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 16px;cursor:pointer;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);user-select:none}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary::after{content:'';width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s}
+.sec[open]>summary::after{transform:rotate(-135deg) translate(-1px,-1px)}
+.sec>summary:hover{color:var(--ink-2)}
+.sec>summary:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.sec dl.facts{border-top:none;padding-top:0}
+.reps a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
+.reps a:hover{text-decoration-color:currentColor}
+.reps a::after{content:' \2197';font-size:10px;color:var(--ink-3)}
+.reps .vacant{color:var(--ink-2);font-weight:500;font-style:italic}
 .hint{padding:12px 16px 14px;color:var(--ink-2);font-size:12.5px;border-top:1px solid var(--rule)}
 
 @media (max-width:760px){
@@ -290,10 +300,10 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph h1{font-size:17px}
   .ph p{display:none}
   #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
-  #here:not(.open) dl.facts,#here:not(.open) .live{display:none}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
-  .more{display:block!important}
+  .sec>summary{padding:9px 12px}
+  .sec dl.facts,.live{padding-left:12px;padding-right:12px}
   .leaflet-top.leaflet-left{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -798,12 +808,32 @@ function livingHere(nb){
   const d = nb && data.profiles ? data.profiles[String(nb.properties.code)] : null;
   if (!d) return '';
   const tier = (key, v) => { const [label, col] = TIER_LABEL[key + ':' + v]; return '<span class="tier"><i style="background:var(' + col + ')"></i>' + esc(label) + '</span>'; };
-  return '<section class="live"><h3>Living here</h3><dl>' +
+  return '<div class="live"><dl>' +
     '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' \u00b7 rent $' + d.rent.toLocaleString('en-CA') + '/mo</span><span class="caveat">Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.</span></dd>' +
     (d.union != null ? '<dt>To Union</dt><dd>' + tier('unionBand', d.unionBand) + '<span>About ' + d.union + ' min by transit, weekday morning</span></dd>' : '') +
     '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive \u00b7 ' + d.transitPct + '% transit \u00b7 ' + d.walkBikePct + '% walk or bike</span></dd>' +
     '<dt>Households</dt><dd>' + tier('tenure', d.tenure) + '<span>' + d.renterPct + '% rent</span></dd>' +
-    '</dl><p>2021 Census and TTC/GO schedules, ' + esc(d.name) + '. Tiers compare neighbourhoods across Toronto.</p></section>';
+    '</dl><p>2021 Census and TTC/GO schedules, ' + esc(d.name) + '. Tiers compare neighbourhoods across Toronto.</p></div>';
+}
+// Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
+const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, reps:false} : {bounds:true, live:true, reps:false};
+let secOpen = Object.assign({}, SEC_DEFAULT);
+try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || '{}')); } catch (e) {}
+function section(id, title, body){
+  if (!body) return '';
+  return '<details class="sec" data-sec="' + id + '"' + (secOpen[id] ? ' open' : '') + '><summary>' + title + '</summary>' + body + '</details>';
+}
+// Who represents this spot. Names link to their official pages (toronto.ca, ola.org, ourcommons.ca).
+function representatives(ward, fed){
+  const R = data.reps; if (!R || !ward) return '';
+  const link = r => r && r.name ? '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.name) + '</a>' : '<span class="vacant">Seat currently vacant</span>';
+  const c = R.wards[String(ward.properties.num)], p = R.prov[ward.properties.prov], f = fed ? R.fed[fed.properties.name] : null;
+  const row = (role, r, sub) => '<dt>' + role + '</dt><dd>' + link(r) + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</dd>';
+  return '<div class="live reps"><dl>' +
+    row('City councillor', c, 'Ward ' + ward.properties.num) +
+    row('MPP', p, p && p.party) +
+    (fed ? row('MP', f, f && f.party) : '') +
+    '</dl><p>Names open each person\u2019s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change ' + esc(new Date(...R.updated.split('-').map((v, i) => +v - (i === 1))).toLocaleDateString('en-CA', {month:'long', day:'numeric', year:'numeric'})) + '.</p></div>';
 }
 function placePin(latlng){
   if (pin) pin.setLatLng(latlng); else pin = L.marker(latlng, {pane:'pin', interactive:false, keyboard:false, icon: L.divIcon({className:'', iconSize:[20, 20], iconAnchor:[10, 10], html:'<span class="pin"></span>'})}).addTo(map);
@@ -846,11 +876,11 @@ function inspect(latlng, title){
   here.hidden = false;
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || (y.toFixed(4) + '° N, ' + Math.abs(x).toFixed(4) + '° W')) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
-    '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>' +
-    livingHere(nb) +
-    '<button type="button" class="more" id="hereMore">' + (here.classList.contains('open') ? 'Hide details' : 'Show all details') + '</button>';
+    section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
+    section('live', 'Living here', livingHere(nb)) +
+    section('reps', 'Representatives', representatives(ward, fed));
   document.getElementById('hereX').onclick = closeHere;
-  document.getElementById('hereMore').onclick = () => { here.classList.toggle('open'); document.getElementById('hereMore').textContent = here.classList.contains('open') ? 'Hide details' : 'Show all details'; };
+  here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
 }
 function renderEmpty(msg){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
@@ -1011,9 +1041,9 @@ document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416'), get('nbhd_profiles.json')])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416, profiles]) => {
-  Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks, profiles,
+Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416'), get('nbhd_profiles.json'), get('representatives.json').catch(() => null)])
+.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416, profiles, reps]) => {
+  Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks, profiles, reps,
     gta: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, regions);
   // Toronto-only mode: cover every other municipality and the land beyond the GTA (the lake stays visible).

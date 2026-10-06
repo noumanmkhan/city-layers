@@ -52,7 +52,15 @@ The What's here card adds a *Living here* section with the same tiers and the fi
 
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
 
-**What's here:** click anywhere and a card lists the former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding and federal riding for that point. The lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.
+**What's here:** click anywhere and a card sums up the spot in a few coloured pills, then breaks it down in sections you can open and close (the page remembers which you keep open):
+
+- *Boundaries:* former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding and federal riding.
+- *Living here:* the neighbourhood lens tiers and the figures behind them.
+- *Representatives:* the city councillor, MPP and MP for that spot, each name linking to their official page on toronto.ca, ola.org or ourcommons.ca, with party for the MPP and MP (Toronto councillors run without party labels).
+
+The boundary lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.
+
+**Keeping representatives current:** a GitHub Action runs every Monday, reads the current members straight from the City, the Legislative Assembly and the House of Commons, and republishes the site only if something changed, so by-elections and the new council after an election show up within a week. Names come from the same pages they link to. Open North's representatives data was tried first and dropped: it still listed an MP six months after her by-election.
 
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
 
@@ -95,6 +103,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - There is no street basemap yet, just land and water.
 - The neighbourhood lens uses the 2021 Census, so prices are a few years old, and commuting was counted in May 2021, during the pandemic, when transit use was unusually low. The tiers are relative to the rest of Toronto, which is what they're meant to show.
 - Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
+- Representatives are refreshed weekly, so for a few days after an election or by-election the card can lag. Vacant seats say so.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
 
 ## Roadmap
@@ -105,6 +114,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 ## Data sources and licences
 
 - City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, Neighbourhood Profiles (2021 Census), BIAs, expressway centrelines and the TTC GTFS feed.
+- Elected representatives from [toronto.ca](https://www.toronto.ca/city-government/council/members-of-council/), the [Legislative Assembly of Ontario](https://www.ola.org/en/members/current) and the [House of Commons](https://www.ourcommons.ca/members/en).
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
 - Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
 - Travel times to Union computed from the TTC schedules and from Metrolinx's GO and UP Express GTFS ([Metrolinx Open Data](https://www.metrolinx.com/en/about-us/open-data)), with walking routes from OpenStreetMap.
