@@ -1,0 +1,7 @@
+{
+  "name": "toronto-layers-pipeline",
+  "private": true,
+  "description": "Data build tools for Toronto Layers",
+  "scripts": { "build": "bash run.sh" },
+  "devDependencies": { "leaflet": "1.9.4", "mapshaper": "^0.6.0" }
+}
