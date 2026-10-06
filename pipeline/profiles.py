@@ -13,6 +13,10 @@ Getting to work: share of commuters who drive (car, truck or van, as driver or p
 Renters and owners: share of households that rent. Mostly owners under 35%, a mix 35-60%,
   mostly renters over 60%.
 
+To Union by transit: if raw/transit_union.json is present (computed by fetch_transit_union.py in
+  GitHub Actions), each neighbourhood also gets its typical weekday-morning transit time to Union
+  Station, banded under 30, 30-45, 45-60 and over 60 minutes.
+
 Caveats shown on the page: Census figures are from 2021; commuting was counted in May 2021,
 during the pandemic, when transit use was unusually low everywhere."""
 import json, os
@@ -80,8 +84,16 @@ for d in data.values():
     d['commute'] = 'car' if d['carPct'] >= 68 else 'mixed' if d['carPct'] >= 50 else 'transit'
     d['tenure'] = 'owners' if d['renterPct'] < 35 else 'mix' if d['renterPct'] <= 60 else 'renters'
 
+TU = os.path.join(HERE, 'raw', 'transit_union.json')
+if os.path.exists(TU):
+    tu = json.load(open(TU))['neighbourhoods']
+    for k, d in data.items():
+        m = (tu.get(k) or {}).get('minutes')
+        d['union'] = m
+        d['unionBand'] = None if m is None else 'under30' if m < 30 else '30to45' if m < 45 else '45to60' if m <= 60 else 'over60'
+
 json.dump(data, open(OUT, 'w'), separators=(',', ':'))
 from collections import Counter
 print('profiles:', len(data), 'neighbourhoods;',
       dict(Counter(d['cost'] for d in data.values())), dict(Counter(d['commute'] for d in data.values())),
-      dict(Counter(d['tenure'] for d in data.values())))
+      dict(Counter(d['tenure'] for d in data.values())), dict(Counter(d.get('unionBand') for d in data.values())))
