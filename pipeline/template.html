@@ -481,7 +481,8 @@ function placeLabel(r){
 }
 function placeSub(r){
   const a = r.address || {};
-  return [a.neighbourhood || a.suburb || a.quarter, a.postcode].filter(Boolean).join(' · ');
+  const name = r.name && r.name !== placeLabel(r) ? r.name : '';
+  return [name, a.neighbourhood || a.suburb || a.quarter, a.postcode].filter(Boolean).join(' · ');
 }
 function choose(r){
   const latlng = L.latLng(+r.lat, +r.lon), name = placeLabel(r);
