@@ -9,6 +9,7 @@ python3 regions.py
 python3 subway.py
 python3 build.py
 python3 streets.py
+python3 landmarks.py
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "../docs/data/$1.geojson" precision=0.00001 format=geojson -quiet; }
 simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10
 simplify federal 10; simplify neighbourhoods 10; simplify wards 10
