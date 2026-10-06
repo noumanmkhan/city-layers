@@ -23,7 +23,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
-| Neighbourhood lens | 158 | Housing cost, getting to work,<br>renters and owners (2021 Census) |
+| Neighbourhood lens | 158 | Housing cost, time to Union,<br>getting to work, renters and owners |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
@@ -44,8 +44,11 @@ Toronto's geography is described in several overlapping ways at once. A single a
 - *Housing cost:* lower, middle or higher, from median home value and median rent, each ranked against the rest of the city and weighted by how many households own or rent.
 - *Getting to work:* mostly transit, walk or bike; mixed; or mostly car, from the share of commuters who drive.
 - *Renters and owners:* mostly owners, a mix, or mostly renters.
+- *To Union:* the typical transit trip to Union Station on a weekday morning: under 30 minutes, 30–45, 45–60, or over an hour. Computed ahead of time from the TTC, GO and UP Express schedules with [r5py](https://r5py.readthedocs.io/), from points about 400 m apart across each neighbourhood (about 4,000 in all), leaving any time between 8 and 9 am. Walking to the stop and waiting count. Each neighbourhood shows the median of its points.
 
-The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
+**Narrow it down:** under the lens legend, pick what you're looking for (say, middle housing cost and up to 45 minutes to Union) and the neighbourhoods that don't fit fade out. The ones that do are listed by name; tap one to fly there. It answers the question a newcomer actually asks: "where should I be looking?"
+
+The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, time to Union, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
 
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
 
@@ -91,6 +94,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Federal riding shapes are simplified, so a point within a few metres of a riding edge can be misattributed. Wards and provincial ridings use the City's detailed lines.
 - There is no street basemap yet, just land and water.
 - The neighbourhood lens uses the 2021 Census, so prices are a few years old, and commuting was counted in May 2021, during the pandemic, when transit use was unusually low. The tiers are relative to the rest of Toronto, which is what they're meant to show.
+- Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
 
 ## Roadmap
@@ -103,6 +107,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, Neighbourhood Profiles (2021 Census), BIAs, expressway centrelines and the TTC GTFS feed.
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
 - Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
+- Travel times to Union computed from the TTC schedules and from Metrolinx's GO and UP Express GTFS ([Metrolinx Open Data](https://www.metrolinx.com/en/about-us/open-data)), with walking routes from OpenStreetMap.
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
