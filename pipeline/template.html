@@ -491,20 +491,35 @@ function choose(r){
   map.flyTo(latlng, Math.max(map.getZoom(), 15), {duration: .8});
   inspect(latlng, name);
 }
+let busy = false;
+async function geocode(url){
+  // One retry after a pause covers a brief rate-limit (HTTP 429) or network hiccup.
+  for (let attempt = 0; ; attempt++){
+    try {
+      const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
+      const r = await fetch(url, {signal: ctl.signal, headers: {'Accept-Language': 'en'}});
+      clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.json();
+    } catch (err){
+      if (attempt >= 1) throw err;
+      await new Promise(r => setTimeout(r, 1500));
+    }
+  }
+}
 qf.addEventListener('submit', async e => {
   e.preventDefault();
   const text = q.value.trim();
-  if (!text || !data.boroughs) return;
+  if (!text || !data.boroughs || busy) return;
+  busy = true;
   const wait = 1100 - (Date.now() - lastSearch);
   if (wait > 0) await new Promise(r => setTimeout(r, wait));
   lastSearch = Date.now();
-  go.disabled = true; go.textContent = '…';
+  go.disabled = true; go.textContent = '\u2026';
   const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=6&countrycodes=ca&bounded=1' +
     '&viewbox=-79.64,43.86,-79.11,43.58&q=' + encodeURIComponent(text);
   try {
-    const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 10000);
-    const list = await fetch(url, {signal: ctl.signal, headers: {'Accept-Language': 'en'}}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
-    clearTimeout(timer);
+    const list = await geocode(url);
     // Keep matches inside the city, and merge repeats of the same address (one per entrance/postcode).
     const inCity = [];
     list.filter(r => hit(data.boroughs, +r.lon, +r.lat)).forEach(r => {
@@ -523,7 +538,7 @@ qf.addEventListener('submit', async e => {
     }
   } catch (err){
     showResults('<li class="msg">Address search isn’t responding right now. Try again in a moment, or tap the map instead.</li>');
-  } finally { go.disabled = false; go.textContent = 'Find'; }
+  } finally { busy = false; go.disabled = false; go.textContent = 'Find'; }
 });
 q.addEventListener('keydown', e => { if (e.key === 'Escape'){ showResults(''); q.blur(); } });
 q.addEventListener('input', () => { if (!q.value) showResults(''); });
