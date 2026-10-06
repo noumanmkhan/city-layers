@@ -26,18 +26,24 @@ st = collections.OrderedDict()
 for f in s['features']:
     arr = set(f['properties']['arr']) & set(L)
     if not arr: continue
-    n = f['properties']['name']
-    if n in ('Finch', 'Vaughan Metropolitan Centre'): n += ' Station'
-    if n == 'York University': n = 'York University Station'
+    raw = f['properties']['name']
+    n = 'York University Station' if raw == 'York University' else raw
     n = re.sub(r' - Subway Platform$', '', n).replace(' Station', '')
     n = {'Bloor': 'Bloor-Yonge', 'Yonge': 'Bloor-Yonge'}.get(n, n)
-    e = st.setdefault(n, {'lines': set(), 'pts': []}); e['lines'] |= arr; e['pts'].append(f['geometry']['coordinates'])
-st['Union'] = {'lines': {'1'}, 'pts': [[-79.3806, 43.6453]]}  # missing from the source stop list
+    e = st.setdefault(n, {'lines': set(), 'pts': [], 'real': []})
+    e['lines'] |= arr
+    # GTFS also has headsign stops named after a terminus (a "Finch" stop that is really a platform at
+    # Union). Entries named "... Station" are the station itself, so prefer them when they exist.
+    (e['real'] if 'Station' in raw or raw == 'York University' else e['pts']).append(f['geometry']['coordinates'])
+st['Union'] = {'lines': {'1'}, 'pts': [], 'real': [[-79.3806, 43.6453]]}  # missing from the source stop list
 
+ends = [c for l in lines for c in (l['geometry']['coordinates'][0], l['geometry']['coordinates'][-1])]
 pts = []
 for n, e in st.items():
-    x = sum(p[0] for p in e['pts']) / len(e['pts']); y = sum(p[1] for p in e['pts']) / len(e['pts'])
-    pts.append({'type': 'Feature', 'properties': {'name': n, 'lines': sorted(e['lines'])},
+    use = e['real'] or e['pts']
+    x = sum(p[0] for p in use) / len(use); y = sum(p[1] for p in use) / len(use)
+    term = any(abs(x - a) < 0.004 and abs(y - b) < 0.003 for a, b in ends)
+    pts.append({'type': 'Feature', 'properties': {'name': n, 'lines': sorted(e['lines']), 'terminus': term},
                 'geometry': {'type': 'Point', 'coordinates': [round(x, 5), round(y, 5)]}})
 
 json.dump({'type': 'FeatureCollection', 'features': lines}, open(os.path.join(TMP, 'subway_lines.geojson'), 'w'), separators=(',', ':'))
