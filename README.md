@@ -24,14 +24,17 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
-| Highways | 10 routes | 400-series, QEW, DVP,<br>Gardiner, Allen Rd, 2A |
+| Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
+| GO Transit trains | 7 lines<br>+ UP Express | ~70 stations, Metrolinx<br>line colours |
 
 **Landmarks:** a short, curated list of the places Torontonians give directions by (Scotiabank Arena, High Park, Massey Hall, City Hall, U of T, Exhibition Place…), not an exhaustive points-of-interest database. Big, spread-out anchors appear city-wide; dense downtown venues appear as you zoom in, and overlapping labels are hidden automatically.
 
 **Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto. Landmarks also suggest themselves as you type, including old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), without any network call.
 
 **Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
+
+**Toronto in the GTA:** the highways continue past the city limits (OpenStreetMap data, joined to the City's centrelines at the boundary) and the GO Train lines run out to Barrie, Kitchener, Niagara Falls and Oshawa. Lines that share track near Union fan out as you zoom in. Tapping a spot outside Toronto names its municipality and region.
 
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
 
@@ -87,7 +90,8 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 
 - City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, BIAs, expressway centrelines and the TTC GTFS feed.
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
-- Subway and LRT geometry derived from TTC GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
+- Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
+- Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
 `pipeline/SOURCES.md` lists the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.
