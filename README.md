@@ -25,6 +25,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Highways | 10 routes | 400-series, QEW, DVP,<br>Gardiner, Allen Rd, 2A |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
 
+**Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto.
+
 **What's here:** click anywhere and a card lists the former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding and federal riding for that point. The lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.
 
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
@@ -66,10 +68,10 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Known-as names are approximate centre points, not areas.
 - Federal riding shapes are simplified, so a point within a few metres of a riding edge can be misattributed. Wards and provincial ridings use the City's detailed lines.
 - There is no street basemap yet, just land and water.
+- Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
 
 ## Roadmap
 
-- Address search: type "620 King St W" and get the readout as pills.
 - Known-as names as drawn areas instead of points.
 - An optional street basemap.
 
