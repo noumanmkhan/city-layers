@@ -129,7 +129,6 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .bia:hover{fill-opacity:.7}
 .hwy-case{stroke:var(--hwy-case);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .hwy-core{stroke:var(--hwy);fill:none;stroke-linecap:round;stroke-linejoin:round}
-.hwy-core.city{stroke:var(--hwy-city)}
 .sub-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .sub-line.l1{stroke:var(--l1)} .sub-line.l2{stroke:var(--l2)} .sub-line.l4{stroke:var(--l4)} .sub-line.l5{stroke:var(--l5)} .sub-line.l6{stroke:var(--l6)}
 .stn{fill:var(--station);stroke:var(--ink);stroke-width:1.5}
@@ -360,10 +359,10 @@ const BUILD = {
   hwy: fc => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? [5, 2.4] : z < 13 ? [7, 3.6] : [10, 5.5]; };
-    const cas = L.geoJSON(fc, {pane:'hwy', interactive:false, style: f => ({className:'hwy-case', weight: w()[0] * (f.properties.kind === 'city' ? .85 : 1)})});
-    const core = L.geoJSON(fc, {pane:'hwy', style: f => ({className:'hwy-core ' + f.properties.kind, weight: w()[1] * (f.properties.kind === 'city' ? .85 : 1)}),
+    const cas = L.geoJSON(fc, {pane:'hwy', interactive:false, style: f => ({className:'hwy-case', weight: w()[0]})});
+    const core = L.geoJSON(fc, {pane:'hwy', style: f => ({className:'hwy-core ' + f.properties.kind, weight: w()[1]}),
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
-    map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0] * (l.feature.properties.kind === 'city' ? .85 : 1)})); core.eachLayer(l => l.setStyle({weight: w()[1] * (l.feature.properties.kind === 'city' ? .85 : 1)})); });
+    map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0]})); core.eachLayer(l => l.setStyle({weight: w()[1]})); });
     g.addLayer(cas); g.addLayer(core);
     const SH = {'401':'401','400':'400','404':'404','409':'409','427':'427','QEW':'QEW','2A':'2A','DVP':'DVP','Gardiner':'Gardiner','Allen':'Allen Rd'};
     fc.features.forEach(f => {
