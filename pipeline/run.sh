@@ -8,10 +8,12 @@ mkdir -p tmp ../docs/data
 python3 regions.py
 python3 subway.py
 python3 build.py
+python3 streets.py
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "../docs/data/$1.geojson" precision=0.00001 format=geojson -quiet; }
 simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10
 simplify federal 10; simplify neighbourhoods 10; simplify wards 10
 npx mapshaper -i tmp/highways.geojson -simplify interval=6 -o ../docs/data/highways.geojson precision=0.00001 -quiet
+npx mapshaper -i tmp/streets.geojson -simplify interval=6 keep-shapes -o ../docs/data/streets.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/subway_lines.geojson -simplify interval=5 -o ../docs/data/subway_lines.geojson precision=0.00001 -quiet
 python3 assemble.py
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

@@ -5,6 +5,7 @@ All files were fetched on 2026-10-06.
 | File | Source |
 |---|---|
 | `city_bundle1.json` | City of Toronto ArcGIS REST services at `https://gis.toronto.ca/arcgis/rest/services/`, queried with `query?where=1=1&outFields=*&outSR=4326&f=geojson&geometryPrecision=5&maxAllowableOffset=0.00004` (0.00003 for roads), paged with `resultOffset`. Holds `formermun` (cot_geospatial27/MapServer/6, Former Municipality), `wards` (cot_geospatial26/MapServer/0, City Ward), `provexp` (cot_geospatial/MapServer/4, Provincial Expressway), `cityexp` (cot_geospatial/MapServer/5, City Expressway) and `prov` (cot_geospatial28/MapServer/9). `prov` is not used because it holds the pre-2018 ridings. |
+| `streets.json` | Fetched by `fetch_streets.py` (run by the *Fetch street centrelines* GitHub Action) from the same City GIS service: the Major Arterial, Minor Arterial and Collector layers of `cot_geospatial/MapServer`. Collectors are kept for later but not drawn yet. |
 | `nbhd158.geojson` | City of Toronto Open Data, "Neighbourhoods" (158, 4326 GeoJSON) |
 | `nbhd140.geojson` | City of Toronto Open Data, historical 140-neighbourhood boundaries (used only to define the Old Toronto areas) |
 | `bia.geojson` | City of Toronto Open Data, "Business Improvement Areas" (85 features) |

@@ -22,6 +22,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
+| Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 routes | 400-series, QEW, DVP,<br>Gardiner, Allen Rd, 2A |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
 

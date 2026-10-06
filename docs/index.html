@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <title>Toronto Layers</title>
 <script>try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<meta name="description" content="A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, highways and rapid transit.">
+<meta name="description" content="A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -687,7 +687,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   /* civic */
   --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --cult:#23262B; --cult-enclave:#B0306A;
   /* transport */
-  --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
+  --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
   --l1:#FFC425; --l2:#00A64F; --l4:#A8518A; --l5:#F58426; --l6:#959595; --station:#FFFFFF;
   --pill-bg:#F1EFE8;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -699,7 +699,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
-  --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
+  --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
@@ -710,7 +710,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
-  --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
+  --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
@@ -769,6 +769,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .sw.prov{background:var(--city);background-image:repeating-linear-gradient(90deg,var(--prov) 0 4px,transparent 4px 7px);background-size:100% 2px;background-repeat:no-repeat;background-position:0 50%}
 .sw.fed{background:var(--city);box-shadow:inset 0 0 0 2px var(--fed)}
 .sw.bia{background:color-mix(in srgb,var(--bia) 45%,var(--city))}
+.sw.streets{background:var(--city);background-image:linear-gradient(var(--st-case),var(--st-case)),linear-gradient(var(--st),var(--st));background-size:100% 5px,100% 3px;background-position:0 50%,0 50%;background-repeat:no-repeat}
 .sw.hwy{background:var(--city);background-image:linear-gradient(var(--hwy-case),var(--hwy-case)),linear-gradient(var(--hwy),var(--hwy));background-size:100% 6px,100% 2px;background-position:0 50%,0 50%;background-repeat:no-repeat}
 .sw.subway{background:linear-gradient(var(--l1) 0 25%,var(--l2) 0 50%,var(--l5) 0 75%,var(--l4) 0)}
 
@@ -792,6 +793,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .fed:hover{fill-opacity:.08}
 .bia{fill:var(--bia);fill-opacity:.45;stroke:var(--bia);stroke-width:1.2}
 .bia:hover{fill-opacity:.7}
+.st-case{stroke:var(--st-case);fill:none;stroke-linecap:round;stroke-linejoin:round}
+.st-core{stroke:var(--st);fill:none;stroke-linecap:round;stroke-linejoin:round}
+#map:not(.z12) .st-case.minor,#map:not(.z12) .st-core.minor{display:none}
+.st-lbl{position:absolute;left:0;top:0;display:block;white-space:nowrap;pointer-events:none;font:600 11.5px/1 var(--font);color:var(--ink);
+  text-shadow:0 0 2px var(--city),0 0 3px var(--city),0 0 5px var(--city)}
+.st-lbl.minor{font-weight:500;font-size:10.5px;color:var(--ink-2)}
 .hwy-case{stroke:var(--hwy-case);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .hwy-core{stroke:var(--hwy);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .sub-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -941,6 +948,7 @@ const GROUPS = [
     {id:'bia', name:'Business Improvement Areas', note:'85 BIAs'},
   ]],
   ['Getting around', [
+    {id:'streets', name:'Main streets', note:'Arterials like King, Queen, Eglinton, Don Mills', on:true},
     {id:'hwy', name:'Highways', note:'400-series, QEW, DVP, Gardiner, Allen', on:true},
     {id:'subway', name:'Subway & LRT', note:'Lines 1, 2, 4, 5 and 6', on:true, sub:{id:'stnNames', label:'Show station names', on:true}},
   ]],
@@ -949,15 +957,16 @@ const GROUPS = [
 const map = L.map('map', {zoomSnap:.25, zoomDelta:.5, minZoom:8.5, maxZoom:17, attributionControl:true, zoomControl:true, preferCanvas:false});
 map.attributionControl.setPrefix(false);
 window.torontoMap = map;
-map.attributionControl.addAttribution('Boundaries & roads: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim');
+map.attributionControl.addAttribution('Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim');
 const CITY_BOUNDS = L.latLngBounds([43.581,-79.639],[43.855,-79.115]);
 const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
 map.setMaxBounds(L.latLngBounds([43.05,-80.6],[44.75,-78.2]));  // the GTA plus a margin
 
-const panes = [['base',200],['fill',350],['lines',420],['civic',430],['hwy',450],['transit',470],['pts',480],['pin',620]];
+const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['transit',470],['stlbl',475],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
 map.getPane('base').style.pointerEvents = 'none';
+map.getPane('stlbl').style.pointerEvents = 'none';
 
 const layers = {}; const data = {};
 const get = f => fetch(DATA + f + '.geojson').then(r => { if (!r.ok) throw new Error(f); return r.json(); });
@@ -1023,6 +1032,79 @@ const BUILD = {
     fc.features.forEach(f => g.addLayer(label(f.properties.name, 'lbl-cult' + (f.properties.kind === 'enclave' ? ' enclave' : ''), ll(f.geometry.coordinates))));
     return g;
   },
+  streets: fc => {
+    // Arterial roads, with names laid along the line. Labels are re-placed after every
+    // move so they never overlap each other; majors win over minors, longer streets first.
+    const g = L.layerGroup(), labels = L.layerGroup();
+    const w = () => { const z = map.getZoom(); return z < 11 ? [2, 1] : z < 12 ? [3, 1.6] : z < 13 ? [4.2, 2.6] : z < 14 ? [6, 4] : [8, 5.6]; };
+    const k = f => f.properties.cls === 'major' ? 1 : .75;
+    const cas = L.geoJSON(fc, {pane:'streets', interactive:false, style: f => ({className:'st-case ' + f.properties.cls, weight: w()[0] * k(f)})});
+    const core = L.geoJSON(fc, {pane:'streets', style: f => ({className:'st-core ' + f.properties.cls, weight: w()[1] * k(f)}),
+      onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
+    map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0] * k(l.feature)})); core.eachLayer(l => l.setStyle({weight: w()[1] * k(l.feature)})); });
+    g.addLayer(cas); g.addLayer(core); g.addLayer(labels);
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    const streets = fc.features.map(f => {
+      const parts = (f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates).map(p => p.map(c => L.latLng(c[1], c[0])));
+      return {name: f.properties.name, cls: f.properties.cls, parts: parts.map(p => ({pts: p, b: L.latLngBounds(p)}))};
+    });
+    const ctx = document.createElement('canvas').getContext('2d');
+    const rect = (x, y, hw, hh, r) => ({x, y, hw, hh, ax: [[Math.cos(r), Math.sin(r)], [-Math.sin(r), Math.cos(r)]]});
+    const overlap = (A, B) => [...A.ax, ...B.ax].every(([ux, uy]) => {
+      const ext = R => R.hw * Math.abs(R.ax[0][0] * ux + R.ax[0][1] * uy) + R.hh * Math.abs(R.ax[1][0] * ux + R.ax[1][1] * uy);
+      return Math.abs((B.x - A.x) * ux + (B.y - A.y) * uy) < ext(A) + ext(B);
+    });
+    const pointAt = (px, d, t) => { let i = 1; while (i < d.length - 1 && d[i] < t) i++; const s = (t - d[i-1]) / ((d[i] - d[i-1]) || 1); return L.point(px[i-1].x + (px[i].x - px[i-1].x) * s, px[i-1].y + (px[i].y - px[i-1].y) * s); };
+    function place(){
+      labels.clearLayers();
+      const z = map.getZoom();
+      if (!map.hasLayer(g) || z < 12) return;
+      const size = map.getSize(), view = map.getBounds(), boxes = [], seen = {}, fam = getComputedStyle(document.body).fontFamily;
+      const SP = z < 13 ? 420 : z < 14 ? 340 : 280;
+      // Keep clear of other labels, shields and the panels floating over the map.
+      const mr = map.getContainer().getBoundingClientRect();
+      document.querySelectorAll('#search, #here, #panel, .leaflet-tooltip.lbl, .shield, .poi, .stn, .leaflet-pin-pane > *').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.width && r.height) boxes.push(rect((r.left + r.right) / 2 - mr.left, (r.top + r.bottom) / 2 - mr.top, r.width / 2 + 3, r.height / 2 + 3, 0));
+      });
+      let count = 0;
+      for (const s of streets){
+        if ((s.cls === 'minor' && z < 13) || count >= 90) continue;
+        ctx.font = (s.cls === 'major' ? '600 11.5px ' : '500 10.5px ') + fam;
+        const tw = ctx.measureText(s.name).width + 8, th = s.cls === 'major' ? 15 : 14;
+        const mine = seen[s.name] || (seen[s.name] = []);
+        for (const part of s.parts){
+          if (!view.intersects(part.b)) continue;
+          const px = part.pts.map(p => map.latLngToContainerPoint(p));
+          const d = [0]; for (let i = 1; i < px.length; i++) d.push(d[i-1] + px[i].distanceTo(px[i-1]));
+          const total = d[d.length-1];
+          if (total < tw * 1.3) continue;
+          for (let at = Math.max(tw / 2, Math.min(SP / 2, total / 2)); at + tw / 2 <= total; at += 40){
+            const a = pointAt(px, d, at - tw / 2), b = pointAt(px, d, at + tw / 2), c0 = pointAt(px, d, at);
+            if (c0.x < 20 || c0.y < 20 || c0.x > size.x - 20 || c0.y > size.y - 20) continue;
+            if (a.distanceTo(b) < tw * .94) continue;               // too curvy here
+            if (mine.some(p => p.distanceTo(c0) < SP)) continue;     // same street labelled nearby
+            let ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+            if (ang > 90) ang -= 180; if (ang < -90) ang += 180;     // keep text upright
+            const r = ang * Math.PI / 180;
+            // On the street if there's room, otherwise just beside it (e.g. where a subway runs along it).
+            let c = null, box;
+            for (const off of [0, th / 2 + 9, -(th / 2 + 9)]){
+              const q = L.point(c0.x - Math.sin(r) * off, c0.y + Math.cos(r) * off);
+              const bx = rect(q.x, q.y, tw / 2, th / 2, r);
+              if (!boxes.some(o => overlap(o, bx))) { c = q; box = bx; break; }
+            }
+            if (!c) continue;
+            boxes.push(box); mine.push(c0); count++;
+            labels.addLayer(L.marker(map.containerPointToLatLng(c), {pane:'stlbl', interactive:false, keyboard:false,
+              icon: L.divIcon({className:'', iconSize:null, html:'<span class="st-lbl ' + s.cls + '" style="transform:translate(-50%,-50%) rotate(' + ang.toFixed(1) + 'deg)">' + esc(s.name) + '</span>'})}));
+          }
+        }
+      }
+    }
+    map.on('moveend', place); g.on('add', () => setTimeout(place));
+    return g;
+  },
   hwy: fc => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? [5, 2.4] : z < 13 ? [7, 3.6] : [10, 5.5]; };
@@ -1064,7 +1146,7 @@ const BUILD = {
     return g;
   },
 };
-const FILES = {boroughs:'boroughs', areas:'areas', nbhd:'neighbourhoods', cultural:'cultural', wards:'wards', prov:'wards', fed:'federal', bia:'bia', hwy:'highways', subway:['subway_lines','subway_stations']};
+const FILES = {boroughs:'boroughs', areas:'areas', nbhd:'neighbourhoods', cultural:'cultural', wards:'wards', prov:'wards', fed:'federal', bia:'bia', streets:'streets', hwy:'highways', subway:['subway_lines','subway_stations']};
 
 /* ---------- panel ---------- */
 const state = {};
@@ -1094,7 +1176,7 @@ function syncStnNames(){
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
 }
-const ORDER = ['boroughs','areas','bia','nbhd','fed','prov','wards','cultural','hwy','subway'];
+const ORDER = ['boroughs','areas','bia','nbhd','fed','prov','wards','cultural','streets','hwy','subway'];
 function setLayer(id, on){
   state[id] = on;
   const lyr = layers[id]; if (!lyr) return;
@@ -1247,11 +1329,11 @@ q.addEventListener('input', () => { if (!q.value) showResults(''); });
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions')])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, hwy, sl, ss, regions]) => {
+Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions')])
+.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions]) => {
   Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia});
   buildBase(base, regions);
-  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, hwy, subway: [sl, ss]};
+  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy, subway: [sl, ss]};
   ORDER.forEach(id => { layers[id] = BUILD[id](src[id]); });
   ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });
   syncStnNames();
