@@ -23,6 +23,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
+| Neighbourhood lens | 158 | Housing cost, getting to work,<br>renters and owners (2021 Census) |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
@@ -37,6 +38,14 @@ Toronto's geography is described in several overlapping ways at once. A single a
 **416 or 416 + 905:** a switch at the top of the layer panel picks the extent. *Greater Toronto Area* (the default) shows the highways and GO lines across the region; *Toronto* greys out everything beyond the city limits and clips the GO lines at the boundary, leaving the TTC in full.
 
 **Toronto in the GTA:** the highways continue past the city limits (OpenStreetMap data, joined to the City's centrelines at the boundary) and the GO Train lines run out to Barrie, Kitchener, Niagara Falls and Oshawa. Lines that share track near Union fan out as you zoom in. Tapping a spot outside Toronto names its municipality and region.
+
+**Neighbourhood lens:** for someone new to Toronto, a quick sense of what each neighbourhood is like to live in. One lens at a time shades the 158 neighbourhoods in three plain tiers rather than precise figures:
+
+- *Housing cost:* lower, middle or higher, from median home value and median rent, each ranked against the rest of the city and weighted by how many households own or rent.
+- *Getting to work:* mostly transit, walk or bike; mixed; or mostly car, from the share of commuters who drive.
+- *Renters and owners:* mostly owners, a mix, or mostly renters.
+
+The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
 
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
 
@@ -81,6 +90,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Known-as names are approximate centre points, not areas.
 - Federal riding shapes are simplified, so a point within a few metres of a riding edge can be misattributed. Wards and provincial ridings use the City's detailed lines.
 - There is no street basemap yet, just land and water.
+- The neighbourhood lens uses the 2021 Census, so prices are a few years old, and commuting was counted in May 2021, during the pandemic, when transit use was unusually low. The tiers are relative to the rest of Toronto, which is what they're meant to show.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
 
 ## Roadmap
@@ -90,7 +100,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 
 ## Data sources and licences
 
-- City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, BIAs, expressway centrelines and the TTC GTFS feed.
+- City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, Neighbourhood Profiles (2021 Census), BIAs, expressway centrelines and the TTC GTFS feed.
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
 - Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.

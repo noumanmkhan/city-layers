@@ -690,6 +690,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
   --l1:#FFC425; --l2:#00A64F; --l4:#A8518A; --l5:#F58426; --l6:#959595; --station:#FFFFFF;
   --pill-bg:#F1EFE8;
+  --cost-1:#F3E3B3; --cost-2:#E2A64B; --cost-3:#A85A1E;
+  --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
+  --ten-1:#8FA7D9; --ten-2:#D8D2E6; --ten-3:#7A56A8;
   --shield-etr:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A; --go-a:#98002E; --go-b:#00853E; --go-c:#0099C7; --go-d:#FF0D00;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -702,7 +705,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }}
@@ -713,7 +716,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }
@@ -857,6 +860,29 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .scope button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
 .mask{fill:var(--land-out);fill-opacity:.94;stroke:var(--land-out-line);stroke-width:1}
 .mode-416 .shield.gta,.mode-416 .go-out,.mode-416 path.gta,.mode-416 .lbl-region{display:none}
+.lens{fill-opacity:.78;stroke:var(--city);stroke-width:.8}
+.lens:hover{fill-opacity:.92}
+.lens.cost-lower{fill:var(--cost-1)} .lens.cost-middle{fill:var(--cost-2)} .lens.cost-higher{fill:var(--cost-3)}
+.lens.commute-transit{fill:var(--com-1)} .lens.commute-mixed{fill:var(--com-2)} .lens.commute-car{fill:var(--com-3)}
+.lens.tenure-owners{fill:var(--ten-1)} .lens.tenure-mix{fill:var(--ten-2)} .lens.tenure-renters{fill:var(--ten-3)}
+.sw.lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
+.lensbox{margin:-2px 8px 8px 48px;display:grid;gap:8px}
+.lensbox .seg{display:flex;width:100%}
+.lensbox .seg button{flex:1;font:inherit;font-size:11.5px;border:none;border-radius:6px;padding:5px 4px;background:none;color:var(--ink-2);cursor:pointer}
+.lensbox .seg button[aria-checked="true"]{background:var(--pill-bg);color:var(--ink);font-weight:600}
+.legend{display:grid;gap:4px;font-size:12px;color:var(--ink-2)}
+.legend div{display:flex;align-items:center;gap:8px}
+.legend i{width:14px;height:10px;border-radius:3px;flex:none}
+.legend small{font-size:10.5px;color:var(--ink-3);line-height:1.35}
+.live{border-top:1px solid var(--rule);padding:10px 16px 12px}
+.live h3{margin:0 0 6px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.live dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12.5px}
+.live dt{color:var(--ink-3)} .live dd{margin:0;font-weight:500;min-width:0}
+.live dd span{display:block;font-weight:400;color:var(--ink-2);font-size:11.5px}
+.live .tier{display:inline-flex;align-items:center;gap:6px}
+.live .tier i{width:9px;height:9px;border-radius:50%}
+.live p{margin:8px 0 0;font-size:10.5px;color:var(--ink-3)}
+#here{max-height:calc(100vh - 110px);overflow:auto}
 .gta-note{padding:0 16px 12px;color:var(--ink-2);font-size:12.5px}
 .hover-tip{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--rule)!important;box-shadow:var(--shadow)!important;font:600 12px/1.3 var(--font)!important;border-radius:7px!important;padding:4px 8px!important}
 .hover-tip::before{display:none}
@@ -907,7 +933,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph h1{font-size:17px}
   .ph p{display:none}
   #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
-  #here:not(.open) dl.facts{display:none}
+  #here:not(.open) dl.facts,#here:not(.open) .live{display:none}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
   .more{display:block!important}
@@ -963,11 +989,25 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 const DATA = 'data/';
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
+/* Neighbourhood lenses (2021 Census, City of Toronto Neighbourhood Profiles). One shows at a time. */
+const LENSES = {
+  cost: {short:'Housing cost', key:'cost', tiers:[['lower','Lower housing cost','--cost-1'],['middle','Middle','--cost-2'],['higher','Higher housing cost','--cost-3']],
+    note:'Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto.'},
+  commute: {short:'Getting to work', key:'commute', tiers:[['transit','Mostly transit, walk or bike','--com-1'],['mixed','Mixed','--com-2'],['car','Mostly car','--com-3']],
+    note:'Share of commuters who drive: under 50%, 50\u201368%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere.'},
+  tenure: {short:'Renters & owners', key:'tenure', tiers:[['owners','Mostly owners','--ten-1'],['mix','A mix','--ten-2'],['renters','Mostly renters','--ten-3']],
+    note:'Share of households that rent: under 35%, 35\u201360%, over 60%.'},
+};
+let lens = 'cost';
+const TIER_LABEL = {};
+Object.values(LENSES).forEach(L_ => L_.tiers.forEach(([k, label, v]) => { TIER_LABEL[L_.key + ':' + k] = [label, v]; }));
+
 const GROUPS = [
   ['Places', [
     {id:'boroughs', name:'Former cities', note:'The 6 municipalities merged in 1998', on:true},
     {id:'areas', name:'Old Toronto areas', note:'Downtown, Midtown, Uptown, West End, East End'},
     {id:'nbhd', name:'Neighbourhoods', note:'The City’s 158 official neighbourhoods'},
+    {id:'lens', name:'Neighbourhood lens', note:'Housing cost, getting to work, renters and owners', lens:true},
     {id:'cultural', name:'Known-as names', note:'King West, Little Italy, the Junction…', swatch:'Aa'},
     {id:'landmarks', name:'Landmarks', note:'Arenas, big parks, music venues, campuses', on:true, swatch:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>'},
   ]],
@@ -1001,7 +1041,7 @@ map.getPane('stlbl').style.pointerEvents = 'none';
 map.getPane('mask').style.pointerEvents = 'none';
 
 const layers = {}; const data = {};
-const get = f => fetch(DATA + f + '.geojson').then(r => { if (!r.ok) throw new Error(f); return r.json(); });
+const get = f => fetch(DATA + (f.includes('.') ? f : f + '.geojson')).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
 
 function zoomClasses(){
   const z = map.getZoom(), el = map.getContainer();
@@ -1080,6 +1120,21 @@ const GLYPH = {
 const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + d + '</svg>';
 
 const BUILD = {
+  lens: ([fc, prof]) => {
+    const g = L.geoJSON(fc, {pane:'fill', style: f => {
+      const d = prof[String(f.properties.code)];
+      return {className: 'lens ' + (d ? LENSES[lens].key + '-' + d[LENSES[lens].key] : '')};
+    }, onEachFeature: (f, lyr) => {
+      lyr.bindTooltip(() => { const d = prof[String(f.properties.code)]; return f.properties.name + (d ? ' \u00b7 ' + TIER_LABEL[LENSES[lens].key + ':' + d[LENSES[lens].key]][0] : ''); },
+        {sticky:true, className:'hover-tip', direction:'top', offset:[0,-8]});
+      lyr.on('click', e => inspect(e.latlng));
+    }});
+    g._restyle = () => g.eachLayer(l => {
+      const d = prof[String(l.feature.properties.code)], el = l.getElement && l.getElement();
+      if (el) el.setAttribute('class', 'lens ' + (d ? LENSES[lens].key + '-' + d[LENSES[lens].key] : '') + ' leaflet-interactive');
+    });
+    return g;
+  },
   go: ([lines, stns, lines416]) => {
     const g = L.layerGroup();
     // Two versions of the lines: the full routes (GTA mode) and clipped at the city limits (Toronto mode).
@@ -1276,6 +1331,14 @@ GROUPS.forEach(([title, items]) => {
       '<input type="checkbox" id="lyr-' + it.id + '"' + (it.on ? ' checked' : '') + '><span class="tg" aria-hidden="true"></span>';
     grp.appendChild(row);
     row.querySelector('input').addEventListener('change', e => setLayer(it.id, e.target.checked));
+    if (it.lens){
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'lensbox'; box.hidden = !it.on;
+      box.innerHTML = '<div class="seg" role="radiogroup" aria-label="Neighbourhood lens">' +
+        Object.entries(LENSES).map(([k, L_]) => '<button type="button" role="radio" data-lens="' + k + '" aria-checked="' + (k === lens) + '">' + L_.short + '</button>').join('') +
+        '</div><div class="legend" id="legend"></div>';
+      grp.appendChild(box);
+      box.querySelectorAll('[data-lens]').forEach(b => b.addEventListener('click', () => setLens(b.dataset.lens)));
+    }
     if (it.sub){
       const s = document.createElement('label'); s.className = 'sub';
       s.innerHTML = '<input type="checkbox" id="' + it.sub.id + '"' + (it.sub.on ? ' checked' : '') + '> ' + it.sub.label;
@@ -1292,12 +1355,31 @@ function syncStnNames(){
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
 }
-const ORDER = ['boroughs','areas','bia','nbhd','fed','prov','wards','cultural','streets','hwy','go','subway','landmarks'];
+const ORDER = ['boroughs','areas','lens','bia','nbhd','fed','prov','wards','cultural','streets','hwy','go','subway','landmarks'];
+function drawLegend(){
+  const el = document.getElementById('legend'); if (!el) return;
+  const L_ = LENSES[lens];
+  el.innerHTML = L_.tiers.map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
+    '<small>' + L_.note + ' Source: 2021 Census via City of Toronto Neighbourhood Profiles.</small>';
+}
+function setLens(k){
+  lens = k;
+  document.querySelectorAll('[data-lens]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.lens === k)));
+  drawLegend();
+  if (layers.lens && layers.lens._restyle) layers.lens._restyle();
+}
 function setLayer(id, on){
   state[id] = on;
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (id === 'subway') syncStnNames();
+  if (id === 'lens'){
+    document.getElementById('lensbox').hidden = !on;
+    drawLegend();
+    // Coloured fills on top of each other turn to mud: the lens replaces the other area fills.
+    if (on) ['boroughs', 'areas'].forEach(o => { const cb = document.getElementById('lyr-' + o); if (cb && cb.checked){ cb.checked = false; setLayer(o, false); } });
+  }
+  if (on && (id === 'boroughs' || id === 'areas')){ const cb = document.getElementById('lyr-lens'); if (cb && cb.checked){ cb.checked = false; setLayer('lens', false); } }
 }
 document.getElementById('allOff').addEventListener('click', () => {
   Object.keys(state).forEach(id => { const cb = document.getElementById('lyr-' + id); if (cb.checked){ cb.checked = false; setLayer(id, false); } });
@@ -1310,6 +1392,17 @@ if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
 const here = document.getElementById('here');
 let pin = null;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => '$' + (v >= 1e6 ? (v / 1e6).toFixed(v % 1e6 ? 1 : 0) + 'M' : Math.round(v / 1e3) + 'K');
+function livingHere(nb){
+  const d = nb && data.profiles ? data.profiles[String(nb.properties.code)] : null;
+  if (!d) return '';
+  const tier = (key, v) => { const [label, col] = TIER_LABEL[key + ':' + v]; return '<span class="tier"><i style="background:var(' + col + ')"></i>' + esc(label) + '</span>'; };
+  return '<section class="live"><h3>Living here</h3><dl>' +
+    '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' \u00b7 rent $' + d.rent.toLocaleString('en-CA') + '/mo</span></dd>' +
+    '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive \u00b7 ' + d.transitPct + '% transit \u00b7 ' + d.walkBikePct + '% walk or bike</span></dd>' +
+    '<dt>Households</dt><dd>' + tier('tenure', d.tenure) + '<span>' + d.renterPct + '% rent</span></dd>' +
+    '</dl><p>2021 Census, ' + esc(d.name) + '. Tiers compare neighbourhoods across Toronto.</p></section>';
+}
 function placePin(latlng){
   if (pin) pin.setLatLng(latlng); else pin = L.marker(latlng, {pane:'pin', interactive:false, keyboard:false, icon: L.divIcon({className:'', iconSize:[20, 20], iconAnchor:[10, 10], html:'<span class="pin"></span>'})}).addTo(map);
 }
@@ -1352,6 +1445,7 @@ function inspect(latlng, title){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || (y.toFixed(4) + '° N, ' + Math.abs(x).toFixed(4) + '° W')) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
     '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>' +
+    livingHere(nb) +
     '<button type="button" class="more" id="hereMore">' + (here.classList.contains('open') ? 'Hide details' : 'Show all details') + '</button>';
   document.getElementById('hereX').onclick = closeHere;
   document.getElementById('hereMore').onclick = () => { here.classList.toggle('open'); document.getElementById('hereMore').textContent = here.classList.contains('open') ? 'Hide details' : 'Show all details'; };
@@ -1515,15 +1609,15 @@ document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416')])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416]) => {
-  Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks,
+Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416'), get('nbhd_profiles.json')])
+.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416, profiles]) => {
+  Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks, profiles,
     gta: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, regions);
   // Toronto-only mode: cover every other municipality and the land beyond the GTA (the lake stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});
-  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy: [hwy, gtaHwy, gtaShields], go: [goLines, goStns, goLines416], subway: [sl, ss], landmarks};
+  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy: [hwy, gtaHwy, gtaShields], go: [goLines, goStns, goLines416], lens: [nbhd, profiles], subway: [sl, ss], landmarks};
   ORDER.forEach(id => { layers[id] = BUILD[id](src[id]); });
   ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });
   syncStnNames();
