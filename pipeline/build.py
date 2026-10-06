@@ -39,12 +39,26 @@ def title(s):
 
 bundle = json.load(open(R + 'city_bundle1.json'))
 
+# Land only: the City's "Toronto Land And Water Area" layer (2xxx = land, incl. each island;
+# 1xxx = Toronto Harbour, Grenadier Pond, etc.). Admin boundaries run out into the lake and
+# across the harbour, so every polygon layer is clipped to this.
+LAND = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(R + 'landwater.geojson'))['features']
+                    if f['properties']['AREA_SHORT_CODE'].startswith('2')]).buffer(0)
+
+
+def land(g):
+    g = g.intersection(LAND)
+    if g.geom_type == 'GeometryCollection':
+        g = unary_union([x for x in g.geoms if x.geom_type in ('Polygon', 'MultiPolygon')])
+    return g
+
+
 # ---------- City outline + former municipalities ----------
 FM_NAMES = {'TORONTO': 'Old Toronto', 'YORK': 'York', 'NORTH YORK': 'North York',
             'EAST YORK': 'East York', 'ETOBICOKE': 'Etobicoke', 'SCARBOROUGH': 'Scarborough'}
 fm = {}
 for f in bundle['formermun']['features']:
-    fm[FM_NAMES[f['properties']['AREA_NAME']]] = shape(f['geometry']).buffer(0)
+    fm[FM_NAMES[f['properties']['AREA_NAME']]] = land(shape(f['geometry']).buffer(0))
 CITY = unary_union(list(fm.values())).buffer(0.00005).buffer(-0.00005)
 FM_INFO = {
     'Old Toronto': 'The original City of Toronto, incorporated in 1834.',
@@ -61,7 +75,7 @@ nb = json.load(open(R + 'nbhd158.geojson'))
 region_of = json.load(open(R + 'nbhd_region.json'))
 nb_feats, nb_geoms = [], []
 for f in nb['features']:
-    p = f['properties']; g = shape(f['geometry']).buffer(0)
+    p = f['properties']; g = land(shape(f['geometry']).buffer(0))
     code = p['AREA_SHORT_CODE']
     nb_geoms.append((code, g))
     nb_feats.append(feat(g, {'name': p['AREA_NAME'], 'code': int(code), 'lp': label_pt(g),
@@ -94,7 +108,7 @@ prov = json.load(open(R + 'prov2015.geojson'))
 prov_g = [(f['properties']['name'], shape(f['geometry']).buffer(0)) for f in prov['features']]
 wf = []
 for f in bundle['wards']['features']:
-    p = f['properties']; g = shape(f['geometry']).buffer(0)
+    p = f['properties']; g = land(shape(f['geometry']).buffer(0))
     best = max(prov_g, key=lambda t: t[1].intersection(g).area)
     wf.append(feat(g, {'num': int(p['AREA_SHORT_CODE']), 'name': p['AREA_NAME'],
                        'prov': best[0], 'lp': label_pt(g)}))
@@ -106,9 +120,9 @@ fed = json.load(open(R + 'fed2023.geojson'))
 ff = []
 for f in fed['features']:
     g = shape(f['geometry']).buffer(0)
-    inside = g.intersection(CITY)
-    if inside.area / g.area < 0.5:
+    if g.intersection(CITY).area / g.area < 0.5:  # keep ridings mostly inside the city limits
         continue
+    inside = land(g)
     ff.append(feat(inside, {'name': f['properties']['name'], 'lp': label_pt(inside)}))
 ff.sort(key=lambda x: x['properties']['name'])
 dump('federal', fc(ff))
@@ -118,7 +132,7 @@ print('federal ridings', len(ff))
 bia = json.load(open(R + 'bia.geojson'))
 bf = []
 for f in bia['features']:
-    p = f['properties']; g = shape(f['geometry']).buffer(0)
+    p = f['properties']; g = land(shape(f['geometry']).buffer(0))
     yr = (p.get('YearCreated') or '')[:4]
     bf.append(feat(g, {'name': p['AREA_NAME'], 'since': yr, 'link': p.get('Link') or '', 'lp': label_pt(g)}))
 dump('bia', fc(bf))
@@ -170,7 +184,7 @@ for f in json.load(open(R + 'lake_ontario.geojson'))['features']:
     if f['properties'].get('name') == 'Lake Ontario':
         lake = shape(f['geometry']).buffer(0)
 FRAME = box(-79.85, 43.45, -78.95, 44.0)
-base = [feat(CITY, {'kind': 'city', 'name': 'City of Toronto'})]
+base = [feat(LAND, {'kind': 'city', 'name': 'City of Toronto'})]
 for fid, name in NEIGH.items():
     j = json.load(open(R + f'neighbours/{fid}.geojson'))
     g = shape(j['geometry']).buffer(0).difference(lake).difference(CITY.buffer(0.0003)).intersection(FRAME)
