@@ -117,13 +117,15 @@ dump('wards', fc(wf))
 
 # ---------- Federal ridings (2023 Representation Order) ----------
 fed = json.load(open(R + 'fed2023.geojson'))
+# Ridings renamed by Parliament after the 2023 boundaries were drawn (the House of Commons uses the new names).
+RENAMED = {'York Centre': 'North York'}
 ff = []
 for f in fed['features']:
     g = shape(f['geometry']).buffer(0)
     if g.intersection(CITY).area / g.area < 0.5:  # keep ridings mostly inside the city limits
         continue
     inside = land(g)
-    ff.append(feat(inside, {'name': f['properties']['name'], 'lp': label_pt(inside)}))
+    ff.append(feat(inside, {'name': RENAMED.get(f['properties']['name'], f['properties']['name']), 'lp': label_pt(inside)}))
 ff.sort(key=lambda x: x['properties']['name'])
 dump('federal', fc(ff))
 print('federal ridings', len(ff))
