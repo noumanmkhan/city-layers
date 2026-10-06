@@ -214,6 +214,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .live dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12.5px}
 .live dt{color:var(--ink-3)} .live dd{margin:0;font-weight:500;min-width:0}
 .live dd span{display:block;font-weight:400;color:var(--ink-2);font-size:11.5px}
+.live dd span.caveat{color:var(--ink-3);font-size:10.5px;font-style:italic;margin-top:2px;line-height:1.35}
 .live .tier{display:inline-flex;align-items:center;gap:6px}
 .live .tier i{width:9px;height:9px;border-radius:50%}
 .live p{margin:8px 0 0;font-size:10.5px;color:var(--ink-3)}
@@ -325,7 +326,7 @@ const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, 
 /* Neighbourhood lenses (2021 Census, City of Toronto Neighbourhood Profiles). One shows at a time. */
 const LENSES = {
   cost: {short:'Housing cost', key:'cost', tiers:[['lower','Lower housing cost','--cost-1'],['middle','Middle','--cost-2'],['higher','Higher housing cost','--cost-3']],
-    note:'Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto.'},
+    note:'Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices.'},
   commute: {short:'Getting to work', key:'commute', tiers:[['transit','Mostly transit, walk or bike','--com-1'],['mixed','Mixed','--com-2'],['car','Mostly car','--com-3']],
     note:'Share of commuters who drive: under 50%, 50\u201368%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere.'},
   tenure: {short:'Renters & owners', key:'tenure', tiers:[['owners','Mostly owners','--ten-1'],['mix','A mix','--ten-2'],['renters','Mostly renters','--ten-3']],
@@ -731,7 +732,7 @@ function livingHere(nb){
   if (!d) return '';
   const tier = (key, v) => { const [label, col] = TIER_LABEL[key + ':' + v]; return '<span class="tier"><i style="background:var(' + col + ')"></i>' + esc(label) + '</span>'; };
   return '<section class="live"><h3>Living here</h3><dl>' +
-    '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' \u00b7 rent $' + d.rent.toLocaleString('en-CA') + '/mo</span></dd>' +
+    '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' \u00b7 rent $' + d.rent.toLocaleString('en-CA') + '/mo</span><span class="caveat">Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.</span></dd>' +
     '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive \u00b7 ' + d.transitPct + '% transit \u00b7 ' + d.walkBikePct + '% walk or bike</span></dd>' +
     '<dt>Households</dt><dd>' + tier('tenure', d.tenure) + '<span>' + d.renterPct + '% rent</span></dd>' +
     '</dl><p>2021 Census, ' + esc(d.name) + '. Tiers compare neighbourhoods across Toronto.</p></section>';
