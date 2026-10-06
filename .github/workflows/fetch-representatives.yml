@@ -1,25 +1,33 @@
-name: Fetch representatives
-# Downloads the current councillors, MPPs and MPs from toronto.ca, ola.org and ourcommons.ca
-# into pipeline/raw/representatives/ and commits them back to the branch that ran it.
+name: Refresh representatives
+# Weekly: fetches the current councillors, MPPs and MPs from toronto.ca, ola.org and
+# ourcommons.ca and rebuilds docs/data/representatives.json. Commits to main only when a
+# name, party or link changed (a by-election, a new council after an election); GitHub Pages
+# then republishes the site. Can also be run by hand from the Actions tab.
 on:
+  schedule:
+    - cron: '17 9 * * 1'   # Mondays 09:17 UTC
   workflow_dispatch:
-  push:
-    branches: [fetch-representatives]
-    paths: ['pipeline/fetch_representatives.py', '.github/workflows/fetch-representatives.yml']
 permissions:
   contents: write
+concurrency:
+  group: refresh-representatives
 jobs:
-  fetch:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: python3 pipeline/fetch_representatives.py
+      - run: python3 pipeline/representatives.py
       - run: |
+          if git diff --quiet -- docs/data/representatives.json; then echo "no changes"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
-          git add pipeline/raw/representatives
-          git commit -m "Fetch current councillors, MPPs and MPs" || echo "no changes"
-          git push
+          git add pipeline/raw/representatives docs/data/representatives.json
+          git commit -m "Refresh Toronto councillors, MPPs and MPs"
+          git pull --rebase origin main
+          git push origin HEAD:main

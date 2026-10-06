@@ -21,5 +21,6 @@ npx mapshaper -i tmp/gta_highways.geojson -simplify interval=15 -o ../docs/data/
 npx mapshaper -i tmp/go_lines.geojson -simplify interval=40 -o ../docs/data/go_lines.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/go_lines_416.geojson -simplify interval=40 -o ../docs/data/go_lines_416.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/subway_lines.geojson -simplify interval=5 -o ../docs/data/subway_lines.geojson precision=0.00001 -quiet
+python3 representatives.py   # after the boundaries above: it matches names against them
 python3 assemble.py
 echo "Done. Preview: cd docs && python3 -m http.server 8000"
