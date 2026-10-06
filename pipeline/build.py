@@ -139,10 +139,15 @@ dump('bia', fc(bf))
 
 # ---------- Highways ----------
 def route_of(n):
-    n0 = n
+    low = n.lower()
+    # Highway 427's last stretch into the QEW/Gardiner interchange is coded as 427<->QEW/Gardiner
+    # connector "ramps"; keep those so the 427 meets the QEW instead of stopping at Browns Line.
+    if 'ramp' in low and '427' in low and ('qew' in low or 'gardiner' in low) \
+            and not any(s in low for s in ('browns', 'evans', 'queensway', 'sherway', 'west mall')):
+        return '427'
     if 'Ramp' in n:
         return None
-    n = n.lower()
+    n = low
     rules = [('401', r'(highway 401|^401 [cx] [ew] 401|^dvp 401$)'), ('400', r'highway 400'), ('404', r'highway 404'),
              ('409', r'highway 409'), ('427', r'(highway 427|^427 [cx] [ns] 427)'), ('QEW', r'^qew'),
              ('2A', r'highway 2a'), ('DVP', r'don valley parkway'),
@@ -176,19 +181,41 @@ cf = [{'type': 'Feature', 'properties': {'name': n, 'kind': k},
        'geometry': {'type': 'Point', 'coordinates': [x, y]}} for n, x, y, k in CULTURAL]
 json.dump(fc(cf), open(OUT + 'cultural.geojson', 'w'), separators=(',', ':'))
 
-# ---------- Base: city land, neighbouring municipalities ----------
-NEIGH = {'1954127': 'Mississauga', '2407358': 'Brampton', '324212': 'Vaughan', '324213': 'Markham',
-         '2407259': 'Richmond Hill', '2408836': 'Pickering', '2407500': 'Oakville', '2408837': 'Ajax'}
-lake = None
-for f in json.load(open(R + 'lake_ontario.geojson'))['features']:
-    if f['properties'].get('name') == 'Lake Ontario':
-        lake = shape(f['geometry']).buffer(0)
-FRAME = box(-79.85, 43.45, -78.95, 44.0)
+# ---------- Base: Toronto, the rest of the GTA, and land beyond ----------
+# GTA = Toronto + the regional municipalities of Halton, Peel, York and Durham (OpenStreetMap boundaries).
+GTA = {
+    '2407500': ('Oakville', 'Halton'), '2407513': ('Burlington', 'Halton'), '2414122': ('Milton', 'Halton'),
+    '2414222': ('Halton Hills', 'Halton'),
+    '1954127': ('Mississauga', 'Peel'), '2407358': ('Brampton', 'Peel'), '4198908': ('Caledon', 'Peel'),
+    '324212': ('Vaughan', 'York'), '324213': ('Markham', 'York'), '2407259': ('Richmond Hill', 'York'),
+    '2407406': ('Newmarket', 'York'), '2401094': ('Aurora', 'York'), '2407380': ('King', 'York'),
+    '2416081': ('Whitchurch-Stouffville', 'York'), '2408845': ('East Gwillimbury', 'York'), '2408844': ('Georgina', 'York'),
+    '2408836': ('Pickering', 'Durham'), '2408837': ('Ajax', 'Durham'), '2408838': ('Whitby', 'Durham'),
+    '333748': ('Oshawa', 'Durham'), '2408839': ('Clarington', 'Durham'), '2408842': ('Uxbridge', 'Durham'),
+    '2408840': ('Scugog', 'Durham'), '2408841': ('Brock', 'Durham'),
+}
+WATER = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(R + 'lakes.geojson'))['features']])
+FRAME = box(-82.5, 41.5, -75.5, 46.5)  # far beyond the map's pan limits, so no edge ever shows
 base = [feat(LAND, {'kind': 'city', 'name': 'City of Toronto'})]
-for fid, name in NEIGH.items():
-    j = json.load(open(R + f'neighbours/{fid}.geojson'))
-    g = shape(j['geometry']).buffer(0).difference(lake).difference(CITY.buffer(0.0003)).intersection(FRAME)
-    if not g.is_empty:
-        base.append(feat(g, {'kind': 'neighbour', 'name': name, 'lp': label_pt(g)}))
+munis = []
+for fid, (name, region) in GTA.items():
+    g = shape(json.load(open(R + f'neighbours/{fid}.geojson'))['geometry']).buffer(0)
+    g = g.difference(WATER).difference(CITY.buffer(0.0003))
+    if g.geom_type == 'MultiPolygon':  # drop slivers left in the lake
+        big = max(p.area for p in g.geoms)
+        g = unary_union([p for p in g.geoms if p.area > big * 0.002])
+    munis.append(g)
+    base.append(feat(g, {'kind': 'neighbour', 'name': name, 'region': region, 'lp': label_pt(g)}))
+# Land outside the GTA (Hamilton, Simcoe County, Kawartha Lakes...) as plain land so it isn't drawn as water.
+outside = FRAME.difference(WATER).difference(unary_union(munis + [CITY]).buffer(0.0005))
+base.insert(0, feat(outside, {'kind': 'outside', 'name': ''}))
+# One label point per region, shown when zoomed out to the whole GTA (points, so written unsimplified).
+regions = {}
+for i, (fid, (name, region)) in enumerate(GTA.items()):
+    regions.setdefault(region, []).append(munis[i])
+rl = [{'type': 'Feature', 'properties': {'name': region + ' Region'},
+       'geometry': {'type': 'Point', 'coordinates': label_pt(unary_union(gs).buffer(0.002))}}
+      for region, gs in regions.items()]
+json.dump(fc(rl), open(OUT + 'regions.geojson', 'w'), separators=(',', ':'))
 dump('base', fc(base))
 print('done')
