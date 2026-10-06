@@ -18,6 +18,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Old Toronto areas | 5 | Downtown, Midtown, Uptown,<br>West End, East End |
 | Neighbourhoods | 158 | The City's official set (2022) |
 | Known-as names | 85 | King West, Little Italy, the Junction… |
+| Landmarks | 38 | Arenas, big parks, music venues,<br>civic buildings, campuses, airports |
 | City wards | 25 | |
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
@@ -26,7 +27,9 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Highways | 10 routes | 400-series, QEW, DVP,<br>Gardiner, Allen Rd, 2A |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
 
-**Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto.
+**Landmarks:** a short, curated list of the places Torontonians give directions by (Scotiabank Arena, High Park, Massey Hall, City Hall, U of T, Exhibition Place…), not an exhaustive points-of-interest database. Big, spread-out anchors appear city-wide; dense downtown venues appear as you zoom in, and overlapping labels are hidden automatically.
+
+**Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto. Landmarks also suggest themselves as you type, including old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), without any network call.
 
 **Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
 
