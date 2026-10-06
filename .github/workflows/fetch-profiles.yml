@@ -1,0 +1,25 @@
+name: Fetch neighbourhood profiles
+# Downloads the City of Toronto's 2021 Neighbourhood Profiles (158 neighbourhoods) into
+# pipeline/raw/ and commits them back to the branch that ran it.
+on:
+  workflow_dispatch:
+  push:
+    branches: [fetch-profiles]
+    paths: ['pipeline/fetch_profiles.py', '.github/workflows/fetch-profiles.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 pipeline/fetch_profiles.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add pipeline/raw/neighbourhood_profiles_2021.xlsx pipeline/raw/neighbourhood_profiles_resources.txt
+          git commit -m "Fetch 2021 Neighbourhood Profiles" || echo "no changes"
+          git push
