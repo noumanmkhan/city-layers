@@ -64,6 +64,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 #map{position:absolute;inset:0;background:var(--water)}
 .leaflet-container{background:var(--water);font-family:var(--font)}
 .leaflet-container :focus-visible{outline:2px solid var(--focus)}
+.leaflet-control-zoom{box-shadow:var(--shadow)!important;border:1px solid var(--rule)!important}
+.leaflet-bottom.leaflet-left .leaflet-control-zoom{margin:0 0 26px 332px}
+@media (max-width:760px){.leaflet-control-zoom{display:none}}
 .leaflet-control-zoom a{background:var(--panel)!important;color:var(--ink)!important;border-color:var(--rule)!important}
 .leaflet-bar{box-shadow:var(--shadow)!important;border:none!important}
 .leaflet-control-attribution{background:color-mix(in srgb,var(--panel) 85%,transparent)!important;color:var(--ink-3)!important;font-size:10.5px}
@@ -385,7 +388,9 @@ const GROUPS = [
   ]],
 ];
 
-const map = L.map('map', {zoomSnap:.25, zoomDelta:.5, minZoom:8.5, maxZoom:17, attributionControl:true, zoomControl:true, preferCanvas:false});
+const map = L.map('map', {zoomSnap:.25, zoomDelta:.5, minZoom:8.5, maxZoom:17, attributionControl:true, zoomControl:false, preferCanvas:false});
+// Bottom-left, just beside the layer panel: the panel covers the top-left corner and the What's here card the right side. Phones pinch to zoom, so the buttons are hidden there.
+L.control.zoom({position:'bottomleft'}).addTo(map);
 map.attributionControl.setPrefix(false);
 window.torontoMap = map;
 map.attributionControl.addAttribution('Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim');
