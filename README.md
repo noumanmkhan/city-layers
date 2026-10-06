@@ -34,6 +34,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 
 **Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
 
+**416 or 416 + 905:** a switch at the top of the layer panel picks the extent. *Greater Toronto Area* (the default) shows the highways and GO lines across the region; *Toronto* greys out everything beyond the city limits and clips the GO lines at the boundary, leaving the TTC in full.
+
 **Toronto in the GTA:** the highways continue past the city limits (OpenStreetMap data, joined to the City's centrelines at the boundary) and the GO Train lines run out to Barrie, Kitchener, Niagara Falls and Oshawa. Lines that share track near Union fan out as you zoom in. Tapping a spot outside Toronto names its municipality and region.
 
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.

@@ -183,6 +183,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lbl-go{font-size:10px;font-weight:600;color:var(--go-ink)!important}
 .lbl-go.end{font-size:11px;font-weight:700}
 .sw.go{background:linear-gradient(var(--go-a) 0 25%,var(--go-b) 0 50%,var(--go-c) 0 75%,var(--go-d) 0)}
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:12px 16px 2px;padding:3px;border:1px solid var(--rule);border-radius:10px}
+.scope button{font:inherit;text-align:left;border:none;border-radius:7px;padding:7px 10px;background:none;color:var(--ink-2);cursor:pointer;min-width:0}
+.scope button b{display:block;font-size:12.5px;font-weight:600;line-height:1.2}
+.scope button span{display:block;font-size:11px;color:var(--ink-3);margin-top:1px}
+.scope button[aria-checked="true"]{background:var(--pill-bg);color:var(--ink)}
+.scope button[aria-checked="true"] b{font-weight:700}
+.scope button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.mask{fill:var(--land-out);fill-opacity:.94;stroke:var(--land-out-line);stroke-width:1}
+.mode-416 .shield.gta,.mode-416 .go-out,.mode-416 path.gta,.mode-416 .lbl-region{display:none}
 .gta-note{padding:0 16px 12px;color:var(--ink-2);font-size:12.5px}
 .hover-tip{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--rule)!important;box-shadow:var(--shadow)!important;font:600 12px/1.3 var(--font)!important;border-radius:7px!important;padding:4px 8px!important}
 .hover-tip::before{display:none}
@@ -251,6 +260,10 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
       <h1>Toronto Layers</h1>
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
     </div>
+    <div class="scope" role="radiogroup" aria-label="Map extent">
+      <button type="button" role="radio" data-scope="gta" aria-checked="true"><b>Greater Toronto Area</b><span>416 + 905</span></button>
+      <button type="button" role="radio" data-scope="416" aria-checked="false"><b>Toronto</b><span>416 only</span></button>
+    </div>
     <div id="layers"></div>
     <div class="pf">
       <button type="button" id="allOff">Hide all layers</button>
@@ -314,10 +327,11 @@ const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
 map.setMaxBounds(L.latLngBounds([43.05,-80.6],[44.75,-78.2]));  // the GTA plus a margin
 
-const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['transit',470],['stlbl',475],['pts',480],['pin',620]];
+const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['transit',470],['stlbl',475],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
 map.getPane('base').style.pointerEvents = 'none';
 map.getPane('stlbl').style.pointerEvents = 'none';
+map.getPane('mask').style.pointerEvents = 'none';
 
 const layers = {}; const data = {};
 const get = f => fetch(DATA + f + '.geojson').then(r => { if (!r.ok) throw new Error(f); return r.json(); });
@@ -399,28 +413,37 @@ const GLYPH = {
 const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + d + '</svg>';
 
 const BUILD = {
-  go: ([lines, stns]) => {
+  go: ([lines, stns, lines416]) => {
     const g = L.layerGroup();
+    // Two versions of the lines: the full routes (GTA mode) and clipped at the city limits (Toronto mode).
+    const full = L.layerGroup(), inner = L.layerGroup();
     // Lines that share track near Union fan out sideways as you zoom in (offset in screen pixels).
     const gap = () => { const z = map.getZoom(); return z < 11 ? 0 : z < 12 ? 2 : z < 13 ? 3 : 4; };
     const w = () => { const z = map.getZoom(); return z < 11 ? 2.2 : z < 13 ? 3 : 3.5; };
-    const segs = lines.features.map(f => {
-      const pl = L.polyline(f.geometry.coordinates.map(ll), {pane:'rail', className:'go-line', color: f.properties.color, weight: w(), offset: f.properties.offset * gap()});
-      hoverTip(pl, f.properties.name + (f.properties.line === 'UP' ? ' (Union \u2013 Pearson)' : ' line \u00b7 Union \u2013 ' + f.properties.to));
-      pl.on('click', e => inspect(e.latlng));
-      g.addLayer(pl); return [pl, f];
-    });
+    const segs = [];
+    [[lines, full], [lines416, inner]].forEach(([fc, grp]) => fc.features.forEach(f => {
+      const parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
+      parts.forEach(part => {
+        const pl = L.polyline(part.map(ll), {pane:'rail', className:'go-line', color: f.properties.color, weight: w(), offset: f.properties.offset * gap()});
+        hoverTip(pl, f.properties.name + (f.properties.line === 'UP' ? ' (Union \u2013 Pearson)' : ' line \u00b7 Union \u2013 ' + f.properties.to));
+        pl.on('click', e => inspect(e.latlng));
+        grp.addLayer(pl); segs.push([pl, f]);
+      });
+    }));
+    g.addLayer(full);
+    g._scope = s => { const [on, off] = s === '416' ? [inner, full] : [full, inner]; g.removeLayer(off); g.addLayer(on); };
     map.on('zoomend', () => segs.forEach(([pl, f]) => { pl.setStyle({weight: w()}); if (pl.setOffset) pl.setOffset(f.properties.offset * gap()); }));
     // A station is a line end if it is the last stop on any line.
     const ends = lines.features.map(f => f.geometry.coordinates[f.geometry.coordinates.length - 1]);
     stns.features.forEach(f => {
       const c = f.geometry.coordinates, p = f.properties;
       const end = ends.some(e => Math.abs(e[0] - c[0]) < .01 && Math.abs(e[1] - c[1]) < .008);
-      const m = L.circleMarker(ll(c), {pane:'pts', radius: p.hub ? 6 : end ? 4.5 : 3.5, className: 'go-stn' + (p.hub ? ' hub' : '') + (end ? ' end' : '')});
+      const out = !hit(data.boroughs, c[0], c[1]) ? ' go-out' : '';
+      const m = L.circleMarker(ll(c), {pane:'pts', radius: p.hub ? 6 : end ? 4.5 : 3.5, className: 'go-stn' + (p.hub ? ' hub' : '') + (end ? ' end' : '') + out});
       hoverTip(m, p.name + ' \u00b7 ' + p.lines.join(', '));
       m.on('click', e => inspect(e.latlng));
       g.addLayer(m);
-      g.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6, 0], className:'lbl lbl-go' + (end || p.hub ? ' end' : ''), interactive:false}).setLatLng(ll(c)).setContent(esc(p.name)));
+      g.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6, 0], className:'lbl lbl-go' + (end || p.hub ? ' end' : '') + out, interactive:false}).setLatLng(ll(c)).setContent(esc(p.name)));
     });
     return g;
   },
@@ -530,8 +553,8 @@ const BUILD = {
     map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0]})); core.eachLayer(l => l.setStyle({weight: w()[1]})); });
     g.addLayer(cas); g.addLayer(core);
     // Beyond the city limits (OpenStreetMap): same look, shields stay visible when zoomed out to the GTA.
-    const gcas = L.geoJSON(gta, {pane:'hwy', interactive:false, style: () => ({className:'hwy-case', weight: w()[0]})});
-    const gcore = L.geoJSON(gta, {pane:'hwy', style: () => ({className:'hwy-core', weight: w()[1]}),
+    const gcas = L.geoJSON(gta, {pane:'hwy', interactive:false, style: () => ({className:'hwy-case gta', weight: w()[0]})});
+    const gcore = L.geoJSON(gta, {pane:'hwy', style: () => ({className:'hwy-core gta', weight: w()[1]}),
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
     map.on('zoomend', () => { gcas.eachLayer(l => l.setStyle({weight: w()[0]})); gcore.eachLayer(l => l.setStyle({weight: w()[1]})); });
     g.addLayer(gcas); g.addLayer(gcore);
@@ -803,18 +826,43 @@ results.addEventListener('keydown', e => {
   if (e.key === 'Escape'){ showResults(''); q.focus(); }
 });
 
+/* ---------- Scope: Greater Toronto Area (416 + 905) or Toronto only (416) ---------- */
+const GTA_VIEW = L.latLngBounds([43.40,-80.05],[44.10,-78.85]);
+let mask = null, scope = 'gta';
+function frame(bounds){
+  const opts = wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]};
+  const size = map.getSize(), calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (calm || !size.x || !size.y) map.fitBounds(bounds, Object.assign({animate:false}, opts));
+  else map.flyToBounds(bounds, Object.assign({duration:.8}, opts));
+}
+function setScope(s, move){
+  scope = s;
+  document.querySelectorAll('[data-scope]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.scope === s)));
+  map.getContainer().classList.toggle('mode-416', s === '416');
+  if (mask) { if (s === '416') mask.addTo(map); else map.removeLayer(mask); }
+  if (layers.go && layers.go._scope) layers.go._scope(s);
+  if (move) frame(s === '416' ? CITY_BOUNDS : GTA_VIEW);
+  queueDeclutter();
+}
+document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click', () => { if (b.dataset.scope !== scope) setScope(b.dataset.scope, true); }));
+
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations')])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns]) => {
+Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416')])
+.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416]) => {
   Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks,
     gta: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, regions);
-  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy: [hwy, gtaHwy, gtaShields], go: [goLines, goStns], subway: [sl, ss], landmarks};
+  // Toronto-only mode: cover every other municipality and the land beyond the GTA (the lake stays visible).
+  mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
+    {pane:'mask', interactive:false, style: () => ({className:'mask'})});
+  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy: [hwy, gtaHwy, gtaShields], go: [goLines, goStns, goLines416], subway: [sl, ss], landmarks};
   ORDER.forEach(id => { layers[id] = BUILD[id](src[id]); });
   ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });
   syncStnNames();
   zoomClasses();
+  setScope('gta', false);
+  frame(GTA_VIEW);
   inspect(L.latLng(43.67194, -79.38667), 'Toronto Reference Library (example)');
 }).catch(err => { renderEmpty('The map data didn’t load (' + err.message + '). Reload the page to try again.'); });
 })();
