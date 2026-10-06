@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <title>Toronto Layers</title>
+<script>try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <meta name="description" content="A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, highways and rapid transit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
   /* page */
   --bg:#F4F3EE; --panel:#FFFFFF; --ink:#23262B; --ink-2:#5D6168; --ink-3:#8A8E95; --rule:#E2E0D8; --accent:#7A3EC8; --focus:#2F7FD8;
   /* map */
-  --water:#CFE7F7; --land-out:#ECEAE3; --land-out-line:#C9C6BC; --city:#FBFAF6; --city-line:#4A4E55; --muni-label:#8E8B82;
+  --water:#CFE7F7; --land-out:#E6E3DA; --land-out-line:#C4C0B4; --land-far:#F2F1EC; --city:#FBFAF6; --city-line:#4A4E55; --muni-label:#8E8B82;
   /* former cities */
   --b-oldtoronto:#EE6E73; --b-york:#B9A5E6; --b-northyork:#95CA7E; --b-eastyork:#6BC4CF; --b-etobicoke:#F0A06E; --b-scarborough:#7DAFE0;
   /* old toronto areas */
@@ -29,7 +30,7 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
-  --water:#13283A; --land-out:#22252A; --land-out-line:#3A3E45; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
+  --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
@@ -40,7 +41,7 @@
 }}
 :root[data-theme="dark"]{
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
-  --water:#13283A; --land-out:#22252A; --land-out-line:#3A3E45; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
+  --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
   --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
@@ -89,6 +90,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf{padding:10px 18px 14px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink-3)}
 .pf button{font:inherit;color:var(--ink-2);background:none;border:1px solid var(--rule);border-radius:7px;padding:4px 9px;cursor:pointer}
 .pf button:hover{color:var(--ink)}
+.pf{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;padding:2px;gap:2px}
+.pf .seg button{border:none;border-radius:6px;padding:4px 8px;font-size:11.5px}
+.pf .seg button[aria-checked="true"]{background:var(--pill-bg);color:var(--ink);font-weight:600}
 
 /* swatches */
 .sw.boroughs{background:conic-gradient(var(--b-etobicoke) 0 17%,var(--b-northyork) 0 34%,var(--b-scarborough) 0 51%,var(--b-york) 0 68%,var(--b-eastyork) 0 84%,var(--b-oldtoronto) 0)}
@@ -104,6 +109,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 
 /* ---------- map styling (CSS overrides Leaflet's SVG attributes, so both themes work) ---------- */
 .base-out{fill:var(--land-out);fill-opacity:1;stroke:var(--land-out-line);stroke-width:1}
+.base-far{fill:var(--land-far);fill-opacity:1;stroke:none}
 .base-city{fill:var(--city);fill-opacity:1;stroke:var(--city-line);stroke-width:1.6}
 .boro{fill-opacity:.55;stroke:var(--city);stroke-width:2}
 .boro.old-toronto{fill:var(--b-oldtoronto)} .boro.york{fill:var(--b-york)} .boro.north-york{fill:var(--b-northyork)}
@@ -152,6 +158,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .poi b{font:700 11.5px/1.15 var(--font);color:var(--ink);text-shadow:0 0 2px var(--city),0 0 3px var(--city),0 0 5px var(--city)}
 #map:not(.z12) .poi b{display:none}
 .lbl-muni{font-size:13px;font-weight:500;font-style:italic;color:var(--muni-label)!important;text-shadow:none}
+.lbl-region{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muni-label)!important;text-shadow:none}
 .lbl-lake{font-size:24px;font-weight:600;font-style:italic;color:color-mix(in srgb,var(--water) 40%,#2F7FD8)!important;text-shadow:none;letter-spacing:.02em}
 .shield{display:grid;place-items:center;height:18px;min-width:26px;padding:0 4px;border-radius:5px;background:var(--shield);color:#fff;
   font:700 10.5px/1 var(--font);box-shadow:0 0 0 1.5px #fff;white-space:nowrap}
@@ -160,6 +167,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .hover-tip::before{display:none}
 /* zoom-gated labels */
 #map:not(.z11) .lbl-area,#map:not(.z11) .lbl-ward,#map:not(.z11) .lbl-prov,#map:not(.z11) .lbl-fed{display:none}
+#map.z10 .lbl-region,#map:not(.z10) .lbl-muni,#map:not(.z10) .lbl-boro,#map:not(.z10) .shield,#map:not(.z10) .poi b,#map:not(.z10) .lake-near,#map.z10 .lake-far{display:none}
 #map:not(.z12) .lbl-cult,#map:not(.z12) .shield.minor{display:none}
 #map:not(.z13) .lbl-nbhd,#map:not(.z13) .lbl-stn:not(.end){display:none}
 #map:not(.z11) .lbl-stn.end{display:none}
@@ -225,6 +233,11 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
     <div id="layers"></div>
     <div class="pf">
       <button type="button" id="allOff">Hide all layers</button>
+      <div class="seg" role="radiogroup" aria-label="Colour theme">
+        <button type="button" role="radio" data-theme-choice="auto" title="Match your device">Auto</button>
+        <button type="button" role="radio" data-theme-choice="light">Light</button>
+        <button type="button" role="radio" data-theme-choice="dark">Dark</button>
+      </div>
     </div>
   </aside>
 
@@ -274,7 +287,7 @@ map.attributionControl.addAttribution('Boundaries & roads: City of Toronto Open 
 const CITY_BOUNDS = L.latLngBounds([43.581,-79.639],[43.855,-79.115]);
 const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
-map.setMaxBounds(CITY_BOUNDS.pad(.6));
+map.setMaxBounds(L.latLngBounds([43.05,-80.6],[44.75,-78.2]));  // the GTA plus a margin
 
 const panes = [['base',200],['fill',350],['lines',420],['civic',430],['hwy',450],['transit',470],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
@@ -285,7 +298,7 @@ const get = f => fetch(DATA + f + '.geojson').then(r => { if (!r.ok) throw new E
 
 function zoomClasses(){
   const z = map.getZoom(), el = map.getContainer();
-  [11,12,13,14].forEach(t => el.classList.toggle('z'+t, z >= t - .01));
+  [10,11,12,13,14].forEach(t => el.classList.toggle('z'+t, z >= t - .01));
 }
 map.on('zoomend', zoomClasses); zoomClasses();
 
@@ -316,11 +329,13 @@ const BORO_ORDER = ['Etobicoke','York','North York','East York','Old Toronto','S
 const AREA_VAR = {'Downtown':'--a-downtown','Midtown':'--a-midtown','Uptown':'--a-uptown','West End':'--a-westend','East End':'--a-eastend'};
 const BORO_VAR = {'Old Toronto':'--b-oldtoronto','York':'--b-york','North York':'--b-northyork','East York':'--b-eastyork','Etobicoke':'--b-etobicoke','Scarborough':'--b-scarborough'};
 
-function buildBase(fc){
-  const g = L.geoJSON(fc, {pane:'base', interactive:false, style: f => ({className: f.properties.kind === 'city' ? 'base-city' : 'base-out'})});
+function buildBase(fc, regions){
+  const g = L.geoJSON(fc, {pane:'base', interactive:false, style: f => ({className: {city:'base-city', neighbour:'base-out', outside:'base-far'}[f.properties.kind]})});
   g.addTo(map);
   fc.features.filter(f => f.properties.kind === 'neighbour').forEach(f => label(f.properties.name, 'lbl-muni', ll(f.properties.lp)).addTo(map));
-  label('Lake Ontario', 'lbl-lake', [43.585, -79.40]).addTo(map);
+  regions.features.forEach(f => label(f.properties.name, 'lbl-region', ll(f.geometry.coordinates)).addTo(map));
+  label('Lake Ontario', 'lbl-lake lake-near', [43.585, -79.40]).addTo(map);
+  label('Lake Ontario', 'lbl-lake lake-far', [43.45, -78.75]).addTo(map);
   const PLANE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>';
   [['Billy Bishop Airport', 43.6275, -79.3962]].forEach(([name, lat, lng]) => {
     L.marker([lat, lng], {pane:'pts', interactive:false, keyboard:false,
@@ -469,6 +484,18 @@ function renderEmpty(msg){
 }
 function closeHere(){ here.hidden = true; if (pin){ map.removeLayer(pin); pin = null; } }
 
+/* ---------- Theme: Auto (device setting), Light or Dark; remembered in this browser ---------- */
+function applyTheme(choice){
+  if (choice === 'light' || choice === 'dark') document.documentElement.dataset.theme = choice;
+  else delete document.documentElement.dataset.theme;
+  document.querySelectorAll('[data-theme-choice]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.themeChoice === choice)));
+  try { if (choice === 'auto') localStorage.removeItem('theme'); else localStorage.setItem('theme', choice); } catch (e) {}
+}
+let savedTheme = 'auto';
+try { savedTheme = localStorage.getItem('theme') || 'auto'; } catch (e) {}
+applyTheme(savedTheme);
+document.querySelectorAll('[data-theme-choice]').forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.themeChoice)));
+
 /* ---------- Address search (OpenStreetMap Nominatim; one request per search, per its usage policy) ---------- */
 const qf = document.getElementById('qf'), q = document.getElementById('q'), go = document.getElementById('go'), results = document.getElementById('results');
 let lastSearch = 0;
@@ -554,10 +581,10 @@ q.addEventListener('input', () => { if (!q.value) showResults(''); });
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('highways'), get('subway_lines'), get('subway_stations')])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, hwy, sl, ss]) => {
+Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions')])
+.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, hwy, sl, ss, regions]) => {
   Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia});
-  buildBase(base);
+  buildBase(base, regions);
   const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, hwy, subway: [sl, ss]};
   ORDER.forEach(id => { layers[id] = BUILD[id](src[id]); });
   ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });

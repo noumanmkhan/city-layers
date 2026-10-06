@@ -27,6 +27,10 @@ Toronto's geography is described in several overlapping ways at once. A single a
 
 **Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto.
 
+**Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
+
+**Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
+
 **What's here:** click anywhere and a card lists the former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding and federal riding for that point. The lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.
 
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
