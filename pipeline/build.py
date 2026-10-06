@@ -1,7 +1,7 @@
 """Build web-ready layer files for the Toronto layers map.
 Inputs in raw/, outputs in site/data/. Polygons are simplified later by mapshaper."""
 import json, os, re, sys, subprocess
-from shapely.geometry import shape, mapping, Point, box
+from shapely.geometry import shape, mapping, Point, box, LineString, MultiLineString
 from shapely.ops import unary_union, linemerge, polylabel
 sys.path.insert(0, os.path.dirname(__file__))
 from cultural import CULTURAL
@@ -218,4 +218,49 @@ rl = [{'type': 'Feature', 'properties': {'name': region + ' Region'},
       for region, gs in regions.items()]
 json.dump(fc(rl), open(OUT + 'regions.geojson', 'w'), separators=(',', ':'))
 dump('base', fc(base))
+
+# ---------- GTA highways beyond the city limits (OpenStreetMap) ----------
+# Inside Toronto the City's centrelines above are used. Here: the 400-series, QEW and 407 outside it,
+# overlapping the city limit by ~50 m so the two sources join without a gap.
+GTA_ROUTES = {'401': 'Highway 401', '407': 'Highway 407 (toll)', 'QEW': 'Queen Elizabeth Way', '403': 'Highway 403',
+              '400': 'Highway 400', '427': 'Highway 427', '404': 'Highway 404', '410': 'Highway 410',
+              '406': 'Highway 406', '409': 'Highway 409', '405': 'Highway 405', '412': 'Highway 412',
+              '418': 'Highway 418', '420': 'Highway 420'}
+osm = json.load(open(R + 'gta_motorways.json'))
+inner = CITY.buffer(-0.0006)
+gseg = {}
+for w in osm['ways']:
+    ref = (w['ref'] or '').split(';')[0].strip().replace('407 ETR', '407')
+    if ref not in GTA_ROUTES or len(w['coords']) < 2:
+        continue
+    g = LineString(w['coords']).difference(inner)
+    if not g.is_empty:
+        gseg.setdefault(ref, []).append(g)
+GTA_AREA = unary_union(munis + [CITY]).buffer(0.01)
+gh, shields = [], []
+for ref, gs in gseg.items():
+    m = linemerge(unary_union(gs))
+    parts = [p for p in getattr(m, 'geoms', [m]) if p.length * 80000 > 300]
+    if not parts:
+        continue
+    m = MultiLineString(parts) if len(parts) > 1 else parts[0]
+    gh.append(feat(m, {'route': ref, 'name': GTA_ROUTES[ref], 'toll': ref == '407'}))
+    # Shields every ~20 km along each long stretch (lengths in degrees; ~80 km per degree east-west here)
+    for p in parts:
+        km = p.length * 80
+        if km < 8:
+            continue
+        for d in [x for x in range(8, int(km) - 3, 35)] or [km / 2]:
+            pt = p.interpolate(d / 80)
+            if not GTA_AREA.contains(pt):  # highways are drawn beyond the GTA, shields only inside it
+                continue
+            # each direction of a divided highway is its own line; skip near-duplicates
+            if any(s['properties']['route'] == ref and Point(s['geometry']['coordinates']).distance(pt) * 80 < 20 for s in shields):
+                continue
+            shields.append({'type': 'Feature', 'properties': {'route': ref, 'toll': ref == '407'},
+                            'geometry': {'type': 'Point', 'coordinates': [round(pt.x, 5), round(pt.y, 5)]}})
+dump('gta_highways', fc(gh))
+json.dump(fc(shields), open(OUT + 'gta_shields.geojson', 'w'), separators=(',', ':'))
+print('gta highways', sorted(gseg), len(shields), 'shields')
+
 print('done')
