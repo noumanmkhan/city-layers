@@ -18,6 +18,7 @@ npx mapshaper -i tmp/highways.geojson -simplify interval=6 -o ../docs/data/highw
 npx mapshaper -i tmp/streets.geojson -simplify interval=6 keep-shapes -o ../docs/data/streets.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/gta_highways.geojson -simplify interval=15 -o ../docs/data/gta_highways.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/go_lines.geojson -simplify interval=40 -o ../docs/data/go_lines.geojson precision=0.00001 -quiet
+npx mapshaper -i tmp/go_lines_416.geojson -simplify interval=40 -o ../docs/data/go_lines_416.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/subway_lines.geojson -simplify interval=5 -o ../docs/data/subway_lines.geojson precision=0.00001 -quiet
 python3 assemble.py
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

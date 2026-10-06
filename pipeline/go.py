@@ -69,5 +69,16 @@ for n, e in st.items():
                 'geometry': {'type': 'Point', 'coordinates': [round(x, 5), round(y, 5)]}})
 
 json.dump({'type': 'FeatureCollection', 'features': lines}, open(os.path.join(TMP, 'go_lines.geojson'), 'w'), separators=(',', ':'))
+
+# Toronto-only version for the page's "Toronto (416)" mode: each line clipped at the city limits.
+from shapely.geometry import shape, mapping
+from shapely.ops import unary_union
+city = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(os.path.join(RAW, 'city_bundle1.json')))['formermun']['features']]).buffer(0.0008)
+inside = []
+for f in lines:
+    g = shape(f['geometry']).intersection(city)
+    if not g.is_empty:
+        inside.append({'type': 'Feature', 'properties': f['properties'], 'geometry': mapping(g)})
+json.dump({'type': 'FeatureCollection', 'features': inside}, open(os.path.join(TMP, 'go_lines_416.geojson'), 'w'), separators=(',', ':'))
 json.dump({'type': 'FeatureCollection', 'features': pts}, open(os.path.join(OUT, 'go_stations.geojson'), 'w'), separators=(',', ':'))
 print('go:', len(lines), 'lines,', len(pts), 'stations')
