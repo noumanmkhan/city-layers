@@ -99,6 +99,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf{padding:10px 18px 14px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink-3)}
 .pf button{font:inherit;color:var(--ink-2);background:none;border:1px solid var(--rule);border-radius:7px;padding:4px 9px;cursor:pointer}
 .pf button:hover{color:var(--ink)}
+.pfb{display:flex;gap:6px}
 .pf{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;padding:2px;gap:2px}
 .pf .seg button{border:none;border-radius:6px;padding:4px 8px;font-size:11.5px}
@@ -319,12 +320,12 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
     </div>
     <div class="scope" role="radiogroup" aria-label="Map extent">
-      <button type="button" role="radio" data-scope="gta" aria-checked="true"><b>Greater Toronto Area</b><span>416 + 905</span></button>
-      <button type="button" role="radio" data-scope="416" aria-checked="false"><b>Toronto</b><span>416 only</span></button>
+      <button type="button" role="radio" data-scope="gta" aria-checked="false"><b>Greater Toronto Area</b><span>416 + 905</span></button>
+      <button type="button" role="radio" data-scope="416" aria-checked="true"><b>Toronto</b><span>416 only</span></button>
     </div>
     <div id="layers"></div>
     <div class="pf">
-      <button type="button" id="allOff">Hide all layers</button>
+      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button></div>
       <div class="seg" role="radiogroup" aria-label="Colour theme">
         <button type="button" role="radio" data-theme-choice="auto" title="Match your device">Auto</button>
         <button type="button" role="radio" data-theme-choice="light">Light</button>
@@ -378,11 +379,11 @@ const tierOf = d => d && d[LENSES[lens].key] ? TIER_LABEL[LENSES[lens].key + ':'
 const GROUPS = [
   ['Places', [
     {id:'boroughs', name:'Former cities', note:'The 6 municipalities merged in 1998', on:true},
-    {id:'areas', name:'Old Toronto areas', note:'Downtown, Midtown, Uptown, West End, East End'},
-    {id:'nbhd', name:'Neighbourhoods', note:'The City’s 158 official neighbourhoods'},
+    {id:'areas', name:'Old Toronto areas', note:'Downtown, Midtown, Uptown, West End, East End', on:true},
+    {id:'nbhd', name:'Neighbourhoods', note:'The City’s 158 official neighbourhoods', on:true},
     {id:'lens', name:'Neighbourhood lens', note:'Housing cost, time to Union, renters and owners. Narrow it to a shortlist.', lens:true},
-    {id:'cultural', name:'Known-as names', note:'King West, Little Italy, the Junction…', swatch:'Aa'},
-    {id:'landmarks', name:'Landmarks', note:'Arenas, big parks, music venues, campuses', on:true, swatch:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>'},
+    {id:'cultural', name:'Known-as names', note:'King West, Little Italy, the Junction…', on:true, swatch:'Aa'},
+    {id:'landmarks', name:'Landmarks', note:'Arenas, big parks, music venues, campuses', swatch:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>'},
   ]],
   ['Representation', [
     {id:'wards', name:'City wards', note:'25 wards, one councillor each'},
@@ -792,6 +793,16 @@ function setLayer(id, on){
   }
   if (on && (id === 'boroughs' || id === 'areas')){ const cb = document.getElementById('lyr-lens'); if (cb && cb.checked){ cb.checked = false; setLayer('lens', false); } }
 }
+// Reset: back to the starting view (Toronto only, the default layers, the first lens with no filter).
+document.getElementById('reset').addEventListener('click', () => {
+  GROUPS.forEach(([, items]) => items.forEach(it => {
+    const cb = document.getElementById('lyr-' + it.id), want = !!it.on;
+    if (cb.checked !== want){ cb.checked = want; setLayer(it.id, want); }
+    if (it.sub){ const sb = document.getElementById(it.sub.id); if (sb.checked !== !!it.sub.on){ sb.checked = !!it.sub.on; syncStnNames(); } }
+  }));
+  ['cost','commute','tenure'].forEach(k => filt[k].clear()); filt.union = 0; applyFilter(); setLens('cost');
+  setScope('416', true);
+});
 document.getElementById('allOff').addEventListener('click', () => {
   Object.keys(state).forEach(id => { const cb = document.getElementById('lyr-' + id); if (cb.checked){ cb.checked = false; setLayer(id, false); } });
 });
@@ -1056,8 +1067,8 @@ Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), 
   ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });
   syncStnNames();
   zoomClasses();
-  setScope('gta', false);
-  frame(GTA_VIEW);
+  setScope('416', false);
+  frame(CITY_BOUNDS);
   inspect(L.latLng(43.67194, -79.38667), 'Toronto Reference Library (example)');
 }).catch(err => { renderEmpty('The map data didn’t load (' + err.message + '). Reload the page to try again.'); });
 })();
