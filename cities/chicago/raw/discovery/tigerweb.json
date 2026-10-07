@@ -1,0 +1,668 @@
+{
+ "services": [
+  {
+   "name": "TIGERweb/AIANNHA",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/CBSA",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Hydro",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Labels",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Legislative",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Places_CouSub_ConCity_SubMCD",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/PUMA_TAD_TAZ_UGA_ZCTA",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Region_Division",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/School",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Special_Land_Use_Areas",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/State_County",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2012",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2013",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2014",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2015",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2016",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2017",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2018",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2019",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2021",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2022",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2023",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2024",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2025",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ACS2026",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_Census2010",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_Census2020",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_CurrentBlocks",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_Current",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_ECON2012",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/tigerWMS_PhysicalFeatures",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Tracts_Blocks",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Transportation",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/TribalTracts",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/Urban",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/US_InternationalBoundary_Line",
+   "type": "MapServer"
+  },
+  {
+   "name": "TIGERweb/USLandmass",
+   "type": "MapServer"
+  }
+ ],
+ "Legislative": [
+  [
+   0,
+   "120th Congressional Districts"
+  ],
+  [
+   1,
+   "2026 State Legislative Districts - Upper"
+  ],
+  [
+   2,
+   "2026 State Legislative Districts - Lower"
+  ],
+  [
+   3,
+   "BAS 2026"
+  ],
+  [
+   4,
+   "119th Congressional Districts"
+  ],
+  [
+   5,
+   "2024 State Legislative Districts - Upper"
+  ],
+  [
+   6,
+   "2024 State Legislative Districts - Lower"
+  ],
+  [
+   7,
+   "ACS 2025"
+  ],
+  [
+   8,
+   "119th Congressional Districts"
+  ],
+  [
+   9,
+   "2024 State Legislative Districts - Upper"
+  ],
+  [
+   10,
+   "2024 State Legislative Districts - Lower"
+  ],
+  [
+   11,
+   "Census 2020"
+  ],
+  [
+   12,
+   "116th Congressional Districts"
+  ],
+  [
+   13,
+   "2018 State Legislative Districts - Upper"
+  ],
+  [
+   14,
+   "2018 State Legislative Districts - Lower"
+  ],
+  [
+   15,
+   "Voting Districts"
+  ]
+ ],
+ "Places_CouSub_ConCity_SubMCD": [
+  [
+   0,
+   "Estates"
+  ],
+  [
+   1,
+   "County Subdivisions"
+  ],
+  [
+   2,
+   "Subbarrios"
+  ],
+  [
+   3,
+   "Consolidated Cities"
+  ],
+  [
+   4,
+   "Incorporated Places"
+  ],
+  [
+   5,
+   "Census Designated Places"
+  ],
+  [
+   6,
+   "BAS 2026"
+  ],
+  [
+   7,
+   "Estates"
+  ],
+  [
+   8,
+   "County Subdivisions"
+  ],
+  [
+   9,
+   "Subbarrios"
+  ],
+  [
+   10,
+   "Consolidated Cities"
+  ],
+  [
+   11,
+   "Incorporated Places"
+  ],
+  [
+   12,
+   "Census Designated Places"
+  ],
+  [
+   13,
+   "ACS 2025"
+  ],
+  [
+   14,
+   "Estates"
+  ],
+  [
+   15,
+   "County Subdivisions"
+  ],
+  [
+   16,
+   "Subbarrios"
+  ],
+  [
+   17,
+   "Consolidated Cities"
+  ],
+  [
+   18,
+   "Incorporated Places"
+  ],
+  [
+   19,
+   "Census Designated Places"
+  ],
+  [
+   20,
+   "Census 2020"
+  ],
+  [
+   21,
+   "Estates"
+  ],
+  [
+   22,
+   "County Subdivisions"
+  ],
+  [
+   23,
+   "Subbarrios"
+  ],
+  [
+   24,
+   "Consolidated Cities"
+  ],
+  [
+   25,
+   "Incorporated Places"
+  ],
+  [
+   26,
+   "Census Designated Places"
+  ]
+ ],
+ "State_County": [
+  [
+   0,
+   "States"
+  ],
+  [
+   1,
+   "Counties"
+  ],
+  [
+   2,
+   "States"
+  ],
+  [
+   3,
+   "Counties"
+  ],
+  [
+   4,
+   "States"
+  ],
+  [
+   5,
+   "Counties"
+  ],
+  [
+   6,
+   "States"
+  ],
+  [
+   7,
+   "Counties"
+  ],
+  [
+   8,
+   "States"
+  ],
+  [
+   9,
+   "Counties"
+  ],
+  [
+   10,
+   "States"
+  ],
+  [
+   11,
+   "Counties"
+  ],
+  [
+   12,
+   "States"
+  ],
+  [
+   13,
+   "Counties"
+  ],
+  [
+   14,
+   "States"
+  ],
+  [
+   15,
+   "States"
+  ],
+  [
+   16,
+   "States"
+  ],
+  [
+   17,
+   "BAS 2026"
+  ],
+  [
+   18,
+   "States"
+  ],
+  [
+   19,
+   "Counties"
+  ],
+  [
+   20,
+   "States"
+  ],
+  [
+   21,
+   "Counties"
+  ],
+  [
+   22,
+   "States"
+  ],
+  [
+   23,
+   "Counties"
+  ],
+  [
+   24,
+   "States"
+  ],
+  [
+   25,
+   "Counties"
+  ],
+  [
+   26,
+   "States"
+  ],
+  [
+   27,
+   "Counties"
+  ],
+  [
+   28,
+   "States"
+  ],
+  [
+   29,
+   "Counties"
+  ],
+  [
+   30,
+   "States"
+  ],
+  [
+   31,
+   "Counties"
+  ],
+  [
+   32,
+   "States"
+  ],
+  [
+   33,
+   "States"
+  ],
+  [
+   34,
+   "States"
+  ],
+  [
+   35,
+   "ACS 2025"
+  ],
+  [
+   36,
+   "States"
+  ],
+  [
+   37,
+   "Counties"
+  ],
+  [
+   38,
+   "States"
+  ],
+  [
+   39,
+   "Counties"
+  ],
+  [
+   40,
+   "States"
+  ],
+  [
+   41,
+   "Counties"
+  ],
+  [
+   42,
+   "States"
+  ],
+  [
+   43,
+   "Counties"
+  ],
+  [
+   44,
+   "States"
+  ],
+  [
+   45,
+   "Counties"
+  ],
+  [
+   46,
+   "States"
+  ],
+  [
+   47,
+   "Counties"
+  ],
+  [
+   48,
+   "States"
+  ],
+  [
+   49,
+   "Counties"
+  ],
+  [
+   50,
+   "States"
+  ],
+  [
+   51,
+   "States"
+  ],
+  [
+   52,
+   "States"
+  ],
+  [
+   53,
+   "Census 2020"
+  ],
+  [
+   54,
+   "States"
+  ],
+  [
+   55,
+   "Counties"
+  ],
+  [
+   56,
+   "States"
+  ],
+  [
+   57,
+   "Counties"
+  ],
+  [
+   58,
+   "States"
+  ],
+  [
+   59,
+   "Counties"
+  ],
+  [
+   60,
+   "States"
+  ],
+  [
+   61,
+   "Counties"
+  ],
+  [
+   62,
+   "States"
+  ],
+  [
+   63,
+   "Counties"
+  ],
+  [
+   64,
+   "States"
+  ],
+  [
+   65,
+   "Counties"
+  ],
+  [
+   66,
+   "States"
+  ],
+  [
+   67,
+   "Counties"
+  ],
+  [
+   68,
+   "States"
+  ],
+  [
+   69,
+   "States"
+  ],
+  [
+   70,
+   "States"
+  ]
+ ],
+ "Tracts_Blocks": [
+  [
+   0,
+   "Census Tracts"
+  ],
+  [
+   1,
+   "Census Block Groups"
+  ],
+  [
+   2,
+   "2020 Census Blocks"
+  ],
+  [
+   3,
+   "BAS 2026"
+  ],
+  [
+   4,
+   "Census Tracts"
+  ],
+  [
+   5,
+   "Census Block Groups"
+  ],
+  [
+   6,
+   "ACS 2025"
+  ],
+  [
+   7,
+   "Census Tracts"
+  ],
+  [
+   8,
+   "Census Block Groups"
+  ],
+  [
+   9,
+   "Census 2020"
+  ],
+  [
+   10,
+   "Census Tracts"
+  ],
+  [
+   11,
+   "Census Block Groups"
+  ],
+  [
+   12,
+   "Census Blocks"
+  ]
+ ]
+}

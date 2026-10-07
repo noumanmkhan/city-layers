@@ -1,0 +1,30 @@
+{
+ "metra_gtfs": [
+  "200",
+  400000
+ ],
+ "cta_gtfs": [
+  "200",
+  400000
+ ],
+ "house_clerk": [
+  "200",
+  400000
+ ],
+ "ilga_house": [
+  "ERR <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+  0
+ ],
+ "ilga_senate": [
+  "ERR <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+  0
+ ],
+ "ilga_house_old": [
+  "ERR <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+  0
+ ],
+ "chicago_aldermen": [
+  "ERR HTTP Error 403: Forbidden",
+  0
+ ]
+}
