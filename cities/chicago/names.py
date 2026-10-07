@@ -53,12 +53,12 @@ VILLAGES = {'Northalsted'}
 KNOWN_AS_EXTRA = [
     ('Pilsen', -87.6600, 41.8560),
     ('Bronzeville', -87.6170, 41.8250),
-    ('South Loop', -87.6260, 41.8580),
-    ('Fulton Market', -87.6520, 41.8865),
+    ('South Loop', -87.6258, 41.8658),
+    ('Fulton Market', -87.6481, 41.8869),
     ('River West', -87.6530, 41.8935),
     ('Roscoe Village', -87.6800, 41.9430),
-    ('Ravenswood', -87.6745, 41.9645),
-    ('Back of the Yards', -87.6610, 41.8075),
+    ('Ravenswood', -87.6792, 41.9688),
+    ('Back of the Yards', -87.6649, 41.8048),
     ('Canaryville', -87.6420, 41.8155),
     ('Old Irving Park', -87.7350, 41.9545),
 ]
@@ -100,3 +100,11 @@ MAJOR_STREETS = {
     'Milwaukee Ave', 'Elston Ave', 'Lincoln Ave', 'Clark St', 'Broadway', 'Ogden Ave', 'Archer Ave', 'Vincennes Ave',
     'Northwest Hwy', 'South Chicago Ave', 'Ridge Ave',
 }
+
+# SSA names as the City's file abbreviates them, written out.
+SSA_NAMES = {'CentLakeview/Wrigleyville': 'Central Lakeview/Wrigleyville', 'Greek Town': 'Greektown',
+             'West Town-2014': 'West Town', 'Calumet Hts/Avalon': 'Calumet Heights/Avalon',
+             'Village:AustinChgoAvCCorr': 'Austin / Chicago Avenue', 'Andersonville-Clark St': 'Andersonville',
+             'Lincoln Park/Clark St': 'Lincoln Park', 'Clark St (Rogers Park)': 'Rogers Park', 'Devon Ave': 'Devon Avenue',
+             'Sheridan Rd': 'Sheridan Road', '87th St Business Corridor': '87th Street', '71st - Stony Island': '71st/Stony Island',
+             'Cottage Grove - 47th St': 'Cottage Grove/47th', 'Auburn Gresham/79th St': 'Auburn Gresham/79th Street'}

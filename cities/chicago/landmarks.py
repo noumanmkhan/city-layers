@@ -47,10 +47,10 @@ LANDMARKS = [
     ('McCormick Place', 'civic', 2, 41.8517, -87.6155, []),
 
     # Campuses
-    ('University of Chicago', 'campus', 1, 41.7886, -87.5987, ['UChicago', 'U of C']),
-    ('University of Illinois Chicago', 'campus', 1, 41.8708, -87.6505, ['UIC']),
+    ('University of Chicago', 'campus', 1, 41.7900, -87.5995, ['UChicago', 'U of C']),
+    ('University of Illinois Chicago', 'campus', 1, 41.8749, -87.6520, ['UIC']),
     ('Loyola University', 'campus', 2, 41.9990, -87.6578, ['Loyola University Chicago', 'Loyola']),
-    ('DePaul University', 'campus', 2, 41.9247, -87.6553, ['DePaul']),
+    ('DePaul University', 'campus', 2, 41.9246, -87.6507, ['DePaul']),
     ('Northwestern (Chicago campus)', 'campus', 2, 41.8960, -87.6185, ['Northwestern Memorial', 'Feinberg', 'Northwestern']),
     ('Illinois Tech', 'campus', 2, 41.8349, -87.6270, ['IIT', 'Illinois Institute of Technology']),
 
@@ -66,7 +66,7 @@ LANDMARKS = [
     ('Merchandise Mart', 'culture', 2, 41.8885, -87.6354, ['The Mart']),
 
     # Airports
-    ("O'Hare Airport", 'airport', 1, 41.9786, -87.9048, ["O'Hare International Airport", 'ORD', 'OHare']),
+    ("O'Hare Airport", 'airport', 1, 41.9800, -87.9098, ["O'Hare International Airport", 'ORD', 'OHare']),
     ('Midway Airport', 'airport', 1, 41.7868, -87.7522, ['Midway International Airport', 'MDW']),
 ]
 

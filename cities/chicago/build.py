@@ -9,7 +9,7 @@ from shapely.ops import unary_union, linemerge, polylabel
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from names import (ca_name, SIDES, SIDE_INFO, KNOWN_AS_RENAME, KNOWN_AS_DROP, KNOWN_AS_EXTRA, known_as_kind,
-                   street_name, MAJOR_STREETS)
+                   street_name, MAJOR_STREETS, SSA_NAMES)
 
 R = os.path.join(HERE, 'raw') + '/'
 OUT = os.path.join(HERE, '..', '..', 'docs', 'chicago', 'data') + '/'
@@ -46,7 +46,17 @@ def write(name, feats):
 
 
 # ---------- The city, community areas and the nine sides ----------
-CITY = unary_union([shape(f['geometry']).buffer(0) for f in load('city.geojson')['features']]).buffer(0)
+# Water: Lake Michigan as surveyed by the Census Bureau (TIGER area hydrography tiles) along
+# Chicagoland's shore, and Natural Earth's coarser lake farther away. The City's boundary takes in its
+# harbours; clipping to land leaves them as water, like the lake around them.
+FRAME = box(-91.5, 39.5, -84.0, 44.5)  # far beyond the map's pan limits, so no edge ever shows
+SHORE = box(-87.95, 41.55, -86.80, 42.55)   # where the TIGER tiles were fetched (fetch_lake.py)
+NE_LAKE = unary_union([shape(f['geometry']).buffer(0) for f in load('lakes.geojson')['features']])
+if os.path.exists(R + 'lake_michigan.geojson'):
+    WATER = unary_union([shape(f['geometry']).buffer(0) for f in load('lake_michigan.geojson')['features']] + [NE_LAKE.difference(SHORE)])
+else:
+    WATER = NE_LAKE
+CITY = polys(unary_union([shape(f['geometry']).buffer(0) for f in load('city.geojson')['features']]).buffer(0).difference(WATER))
 inside = lambda g: polys(g.intersection(CITY))
 
 cas = {}
@@ -98,8 +108,8 @@ for f in load('ssa.geojson')['features']:
         continue
     g = inside(shape(f['geometry']).buffer(0))
     if g.is_empty: continue
-    num = re.sub(r'\D', '', p.get('ref_no') or '')
-    ssa.append(feat(g, {'name': p['name'].strip(), 'num': int(num) if num else None, 'lp': label_pt(g)}))
+    num = re.search(r'\d+', p.get('ref_no') or '')   # "SSA# 1-2015" is SSA 1 (re-established in 2015)
+    ssa.append(feat(g, {'name': SSA_NAMES.get(p['name'].strip(), p['name'].strip()), 'num': int(num.group()) if num else None, 'lp': label_pt(g)}))
 dump('ssa', sorted(ssa, key=lambda f: f['properties']['num'] or 0))
 
 # ---------- Base: Chicago, the rest of Chicagoland, and land beyond ----------
@@ -107,8 +117,6 @@ dump('ssa', sorted(ssa, key=lambda f: f['properties']['num'] or 0))
 COUNTIES = {'17031': 'Cook', '17043': 'DuPage', '17089': 'Kane', '17093': 'Kendall', '17097': 'Lake', '17111': 'McHenry',
             '17197': 'Will', '18089': 'Lake', '18127': 'Porter'}
 STATE = {'17': 'IL', '18': 'IN'}
-WATER = unary_union([shape(f['geometry']).buffer(0) for f in load('lakes.geojson')['features']])
-FRAME = box(-91.5, 39.5, -84.0, 44.5)  # far beyond the map's pan limits, so no edge ever shows
 counties = {}
 for f in load('counties.geojson')['features']:
     gid = f['properties']['GEOID']
@@ -139,11 +147,18 @@ for f in load('places.geojson')['features']:
     if home:
         places[home].append(g)
         neighbour(g, p['BASENAME'], home)
+# Enclosed harbours (Burnham, Diversey...) are left out of both the City's boundary and the Census
+# lake tiles. Pieces along the lakefront that no municipality claims are those harbours: leave them
+# out of the base so they show as water.
+all_places = unary_union([g for gs in places.values() for g in gs])
+extra = box(-87.70, 41.64, -87.50, 42.03).difference(WATER).difference(CITY).difference(all_places.buffer(0.0003))
+extra = [p for p in getattr(extra, 'geoms', [extra]) if p.geom_type == 'Polygon' and p.area > 2e-7 and p.centroid.x > -87.66]
+print('lakefront harbours shown as water:', len(extra))
 # What's left of each county is unincorporated land, still part of the region.
 for gid, cg in counties.items():
     rest = cg.difference(unary_union(places[gid]).buffer(0.0002)) if places[gid] else cg
     neighbour(rest, 'Unincorporated ' + county_name(gid).replace(', Indiana', ''), gid)
-outside = FRAME.difference(WATER).difference(unary_union(munis + [CITY]).buffer(0.0005))
+outside = FRAME.difference(WATER).difference(unary_union(munis + [CITY] + extra).buffer(0.0005))
 base.insert(0, feat(outside, {'kind': 'outside', 'name': ''}))
 dump('base', base)
 write('regions', [{'type': 'Feature', 'properties': {'name': county_name(gid)},

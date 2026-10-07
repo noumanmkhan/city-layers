@@ -1,8 +1,5 @@
-"""Third Chicago fetch: the shoreline, and a position check for the hand-placed points.
-Runs in GitHub Actions (.github/workflows/fetch-chicago.yml).
+"""Position check for Chicago's hand-placed points. Runs in GitHub Actions (.github/workflows/fetch-chicago.yml).
 
-- raw/landmass.geojson: Census TIGERweb USLandmass around Chicagoland. The map's water is everything
-  in the frame that isn't land, which follows the real shoreline (harbours, piers, Northerly Island).
 - raw/point_check.json: OpenStreetMap Nominatim's position for each landmark and added known-as name,
   one request every 1.5 seconds (Nominatim's usage policy allows one per second).
 """
@@ -26,17 +23,6 @@ def get(url, tries=3):
     raise RuntimeError('failed: ' + url)
 
 
-def landmass():
-    q = {'where': '1=1', 'outFields': '*', 'outSR': 4326, 'f': 'geojson', 'geometryPrecision': 5, 'maxAllowableOffset': 0.00008,
-         'geometry': '-89.4,40.8,-86.3,42.9', 'geometryType': 'esriGeometryEnvelope', 'inSR': 4326, 'spatialRel': 'esriSpatialRelIntersects'}
-    svc = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/USLandmass/MapServer'
-    layers = json.loads(get(svc + '?f=json'))['layers']
-    print('USLandmass layers:', [(l['id'], l['name']) for l in layers])
-    d = json.loads(get(f"{svc}/{layers[0]['id']}/query?" + urllib.parse.urlencode(q)))
-    json.dump(d, open(os.path.join(RAW, 'landmass.geojson'), 'w'), separators=(',', ':'))
-    print('wrote landmass.geojson', len(d.get('features', [])), 'features')
-
-
 def points():
     from landmarks import LANDMARKS
     from names import KNOWN_AS_EXTRA
@@ -54,7 +40,7 @@ def points():
     print('wrote point_check.json', len(out))
 
 
-for label, fn in [('landmass', landmass), ('points', points)]:
+for label, fn in [('points', points)]:
     try:
         fn()
     except Exception as e:

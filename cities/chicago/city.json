@@ -16,8 +16,8 @@
   },
   "footprint": "sides",
   "water": [
-    {"name": "Lake Michigan", "at": [41.90, -87.50], "cls": "lake-near"},
-    {"name": "Lake Michigan", "at": [42.15, -87.25], "cls": "lake-far"}
+    {"name": "Lake Michigan", "at": [41.97, -87.57], "cls": "lake-near"},
+    {"name": "Lake Michigan", "at": [42.40, -87.55], "cls": "lake-far"}
   ],
   "attribution": "Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim",
   "example": {"at": [41.8763, -87.6282], "name": "Harold Washington Library (example)"},
@@ -115,7 +115,7 @@
         {"role": "State senator", "layer": "house", "table": "senate", "key": "senate", "sub": "{r.party} · District {f.senate}"},
         {"role": "U.S. representative", "layer": "congress", "table": "congress", "key": "num", "sub": "{r.party} · IL-{f.num}"}
       ],
-      "note": "Names open each person’s official page. Chicago’s city council elections are nonpartisan. Last change {date}."
+      "note": "Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."
     }
   }
 }
