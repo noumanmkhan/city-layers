@@ -55,6 +55,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 - *Renters and owners:* mostly owners, a mix, or mostly renters.
 - *To Union:* the typical transit trip to Union Station on a weekday morning: under 30 minutes, 30–45, 45–60, or over an hour. Computed ahead of time from the TTC, GO and UP Express schedules with [r5py](https://r5py.readthedocs.io/), from points about 400 m apart across each neighbourhood (about 4,000 in all), leaving any time between 8 and 9 am. Walking to the stop and waiting count. Each neighbourhood shows the median of its points.
 
+**Suburban lens:** in the Greater Toronto Area view, each municipality is shaded by its typical drive to Union Station with no traffic: under 30 minutes, 30–60, 60–90, or 90 and over. A grid of points about 1.5 km apart covers the suburbs (about 2,900 in the GTA); each is timed with [OSRM](https://project-osrm.org/) on OpenStreetMap roads at posted speeds, and each municipality shows the median of its points. Tapping a spot outside the city adds the time from there, so someone in a big municipality like Caledon sees their own area, not an average. The times are best case on purpose: they compare places, and anyone can add their own rush hour.
+
 **Narrow it down:** under the lens legend, pick what you're looking for (say, middle housing cost and up to 45 minutes to Union) and the neighbourhoods that don't fit fade out. The ones that do are listed by name; tap one to fly there. It answers the question a newcomer actually asks: "where should I be looking?"
 
 The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, time to Union, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
@@ -92,7 +94,7 @@ The second city runs on the same engine with its own data and config (`cities/ch
 | Metra | 11 lines | From four downtown terminals |
 | The 'L' | 8 lines, 144 stations | CTA rapid transit |
 
-The community area lens uses the American Community Survey (2020–2024 five-year estimates): Census tracts are grouped into community areas, and median home values and rents are read from the summed price brackets. Its tiers use the same cut-offs as Toronto's, so the two maps read alike. Representatives are the alderperson, state representative, state senator and member of Congress, refreshed weekly from the City's data portal, Open States and the Clerk of the House.
+The community area lens uses the American Community Survey (2020–2024 five-year estimates): Census tracts are grouped into community areas, and median home values and rents are read from the summed price brackets. Its tiers use the same cut-offs as Toronto's, so the two maps read alike. The suburban lens works the same way in the Chicagoland view, timed to State & Madison, the zero point of Chicago's address grid, from about 5,300 points; unincorporated county land stays grey but still gets a time on the card. Representatives are the alderperson, state representative, state senator and member of Congress, refreshed weekly from the City's data portal, Open States and the Clerk of the House.
 
 ## How it's built
 
@@ -152,6 +154,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
 - Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
 - Travel times to Union computed from the TTC schedules and from Metrolinx's GO and UP Express GTFS ([Metrolinx Open Data](https://www.metrolinx.com/en/about-us/open-data)), with walking routes from OpenStreetMap.
+- Suburban drive times (both cities) routed with [OSRM](https://project-osrm.org/) on © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors' roads (ODbL).
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 

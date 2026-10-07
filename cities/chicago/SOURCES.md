@@ -25,5 +25,6 @@ sandbox these maps are built in can't reach the source servers. Fetched on 2026-
 | `point_check.json` | OpenStreetMap Nominatim positions for the curated landmarks and added known-as names (`fetch_check.py`), to compare against the lists in `landmarks.py` and `names.py` |
 | `representatives/` | Fetched by `fetch_representatives.py`: `ward_offices.json` (City Data Portal, alderpersons and ward websites), `il.csv` (Open States, current Illinois legislators), `house.xml` (Clerk of the U.S. House member list). `representatives.py` matches them to the map's wards and districts |
 | `discovery/` | One-off listing of candidate sources (`discover.py`), kept as a record of what was available |
+| `drive_points.json`, `drive_times.json` | The suburban lens: `engine/drive.py points chicago` lays a grid about 1.5 km apart over the municipalities around the city; `engine/fetch_drive_times.py` (the *Fetch drive times* GitHub Action) times each point by car to State & Madison with OSRM's public server on OpenStreetMap roads, free-flow, and drops points more than 1 km from a road. Fetched on 2026-10-07. |
 
 Hand-kept lists, in code: the nine sides, the known-as additions and the major streets (`names.py`), and the landmarks (`landmarks.py`).

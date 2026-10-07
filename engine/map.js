@@ -146,6 +146,11 @@ const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
 // Representation layers draw in one of three styles, by level of government.
 const OUTLINE = {city:'ward', state:'prov', national:'fed'};
 
+/* Suburban lens: free-flow drive time to the downtown hub, by municipality, in the regional view only. */
+const DRIVE_TIERS = [['d1', 'Under 30 min', '--drv-1', 30], ['d2', '30–60 min', '--drv-2', 60], ['d3', '60–90 min', '--drv-3', 90], ['d4', '90 min or more', '--drv-4', Infinity]];
+const driveTier = m => m == null ? null : DRIVE_TIERS.find(t => m < t[3]);
+const SUBURBS = LAYERS.find(it => it.kind === 'suburbs');
+
 /* One builder per kind of layer. Each gets its config entry and its loaded data. */
 const KINDS = {
   fill: (it, fc) => {
@@ -325,6 +330,9 @@ const KINDS = {
     });
     return g;
   },
+  suburbs: (it, base) => polyLayer({type: 'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}, {
+    cls: f => { const t = driveTier(f.properties.drive); return 'drv ' + (f.properties.rest || !t ? 'rest' : t[0]); },
+    hover: f => f.properties.name + (f.properties.drive != null && !f.properties.rest ? ' · about ' + f.properties.drive + ' min' : '')}),
   metro: (it, [lines, stns]) => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? 3 : z < 13 ? 4.5 : 6; };
@@ -346,7 +354,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -380,6 +388,11 @@ CITY.groups.forEach(([title, items]) => {
       }));
       box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); });
     }
+    if (it.kind === 'suburbs'){
+      row.classList.add('outer-only'); row.id = 'row-' + it.id;
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'drvbox'; box.hidden = true;
+      grp.appendChild(box);
+    }
     if (it.sub){
       const s = document.createElement('label'); s.className = 'sub';
       s.innerHTML = '<input type="checkbox" id="' + it.sub.id + '"' + (it.sub.on ? ' checked' : '') + '> ' + it.sub.label;
@@ -395,6 +408,15 @@ function syncStnNames(){
   const want = state[METRO.id] && document.getElementById(METRO.sub.id).checked;
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
+}
+function drawDriveLegend(){
+  const el = document.getElementById('drvbox'); if (!el || !data.layers) return;
+  const subs = (data.outer || {features: []}).features;
+  const used = new Set(subs.filter(f => !f.properties.rest).map(f => (driveTier(f.properties.drive) || [])[0]));
+  const rest = subs.some(f => f.properties.rest);
+  el.innerHTML = '<div class="legend">' + DRIVE_TIERS.filter(t => used.has(t[0])).map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
+    (rest ? '<div><i class="rest"></i>Unincorporated land</div>' : '') +
+    '<small>Typical drive to ' + esc(CITY.drive.hubName) + ' with no traffic: the median across each municipality, on empty roads at posted speeds. Most trips take longer; use it to compare places. Tap a spot for the time from there. Source: OpenStreetMap roads, routed with OSRM.</small></div>';
 }
 function drawLegend(){
   const el = document.getElementById('legend'); if (!el) return;
@@ -438,6 +460,10 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'suburbs'){
+    document.getElementById('drvbox').hidden = !on;
+    if (on && scope === 'inner') map.removeLayer(lyr);   // shown only in the regional view
+  }
   if (kindOf(id) === 'lens'){
     document.getElementById('lensbox').hidden = !on;
     drawLegend();
@@ -516,6 +542,7 @@ function inspect(latlng, title){
     here.hidden = false;
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
       '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
+      driveHere(x, y, m) +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     return;
@@ -548,6 +575,17 @@ function inspect(latlng, title){
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
+}
+// Free-flow drive time from the nearest grid point (about 1.5 km apart), and the municipality's typical time.
+function driveHere(x, y, m){
+  const g = data.driveGrid; if (!g || !CITY.drive) return '';
+  let best = null, bd = Infinity;
+  g.points.forEach(p => { const d = metres([x, y], p); if (d < bd){ bd = d; best = p; } });
+  if (!best || bd > 2000) return '';
+  const t = driveTier(best[2]);
+  return '<div class="live drive"><dl><dt>Drive to ' + esc(CITY.drive.hubName) + '</dt><dd><span class="tier"><i style="background:var(' + t[2] + ')"></i>About ' + best[2] + ' min from here</span>' +
+    (m.drive != null && !m.rest ? '<span>Typical for ' + esc(m.name) + ': ' + m.drive + ' min</span>' : '') +
+    '<span class="caveat">With no traffic, at posted speeds. Most trips take longer.</span></dd></dl></div>';
 }
 function renderEmpty(msg){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
@@ -744,6 +782,12 @@ function setScope(s, move){
   map.getContainer().classList.toggle('mode-inner', s === 'inner');
   if (mask) { if (s === 'inner') mask.addTo(map); else map.removeLayer(mask); }
   ORDER.forEach(it => { if (layers[it.id] && layers[it.id]._scope) layers[it.id]._scope(s); });
+  if (SUBURBS){
+    document.getElementById('row-' + SUBURBS.id).hidden = s === 'inner';
+    document.getElementById('drvbox').hidden = s === 'inner' || !state[SUBURBS.id];
+    const lyr = layers[SUBURBS.id];
+    if (lyr){ if (s === 'outer' && state[SUBURBS.id]) lyr.addTo(map); else map.removeLayer(lyr); }
+  }
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
 }
@@ -755,7 +799,8 @@ const files = ['base', 'regions'];
 LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
-  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; })]))
+  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
+    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
@@ -771,7 +816,8 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   CITY.lens.lenses.filter(L_ => L_.optional).forEach(L_ => {
     if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
   });
-  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : src(it)); });
+  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : it.kind === 'suburbs' ? base : src(it)); });
+  drawDriveLegend();
   ORDER.forEach(it => { if (state[it.id]) layers[it.id].addTo(map); });
   syncStnNames();
   zoomClasses();

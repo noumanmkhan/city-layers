@@ -35,6 +35,7 @@
     "note": "Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."
   },
 
+  "drive": {"hub": [43.6453, -79.3806], "hubName": "Union Station"},
   "units": {"singular": "Neighbourhood", "plural": "neighbourhoods"},
 
   "groups": [
@@ -45,6 +46,7 @@
        "colors": {"Downtown": "--a-downtown", "Midtown": "--a-midtown", "Uptown": "--a-uptown", "West End": "--a-westend", "East End": "--a-eastend"}},
       {"id": "nbhd", "kind": "units", "file": "neighbourhoods", "name": "Neighbourhoods", "note": "The City’s 158 official neighbourhoods", "on": true, "hover": "{name} · #{code}"},
       {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},
+      {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},
       {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"}
     ]],
