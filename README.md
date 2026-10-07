@@ -1,16 +1,23 @@
-# Toronto Layers
+# City Layers
+
+A city is divided up in a dozen ways at once: official neighbourhoods, council wards, state or provincial and federal electoral districts, business districts, the informal names locals actually use, and the transit lines that tie it together. Each of those lives in a different dataset on a different website. City Layers puts them on one interactive map you can switch on and off, then tap any spot (or search an address or place) to see every boundary it falls inside, what it's like to live there and who represents it. It's built for two kinds of people: a resident learning things they probably didn't know about their own city, and a newcomer getting their bearings.
+
+The maps share one engine, with a folder of data and settings per city:
+
+- **Toronto Layers:** https://maps.noumankhan.ca/toronto/
+- **Chicago Layers** (work in progress): https://maps.noumankhan.ca/chicago/
+
+## Toronto Layers
 
 An interactive map of the City of Toronto where you turn civic and cultural boundaries on and off, then tap any spot to see every boundary it falls inside.
 
-**Live site:** https://maps.noumankhan.ca/toronto/
-
 ![Toronto Layers: the whole city with former cities, highways and rapid transit](assets/screenshot.png)
 
-## Why
+### Why
 
 Toronto's geography is described in several overlapping ways at once. A single address can be in Old Toronto, "Downtown", the official neighbourhood of Wellington Place, what everyone calls King West, the Toronto Downtown West BIA, Ward 10, the provincial riding of Spadina—Fort York and the federal riding of Spadina—Harbourfront. Each of those lives in a different dataset on a different website. No public site I could find shows them together on one simple map.
 
-## What it does
+### What it does
 
 | Layer | Count | Notes |
 |---|---|---|
@@ -68,7 +75,9 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 ## Chicago Layers
 
-The second city, under construction, runs on the same engine with its own data and config (`cities/chicago/`). Chicago's layers line up with Toronto's:
+**Live site (work in progress):** https://maps.noumankhan.ca/chicago/
+
+The second city runs on the same engine with its own data and config (`cities/chicago/`). Chicago's layers line up with Toronto's:
 
 | Layer | Count | Notes |
 |---|---|---|
