@@ -1,12 +1,13 @@
 name: Fetch Chicago data
 # Runs a Chicago fetch script and commits what it writes under cities/chicago/raw/
 # back to the branch that ran it. The sandbox can't reach these hosts; Actions can.
+# Pushing a changed fetch script to main runs it there, so no fetch branch is needed.
 on:
   workflow_dispatch:
     inputs:
       script: {description: 'Script in cities/chicago/ to run', default: 'fetch.py'}
   push:
-    branches: [fetch-chicago]
+    branches: [main, fetch-chicago]
     paths: ['cities/chicago/fetch*.py', '.github/workflows/fetch-chicago.yml']
 permissions:
   contents: write
@@ -35,4 +36,5 @@ jobs:
           [ -n "$SCRIPT" ] || exit 0
           git add cities/chicago/raw
           git commit -m "Fetch Chicago data ($SCRIPT)" || echo "no changes"
+          git pull --rebase
           git push
