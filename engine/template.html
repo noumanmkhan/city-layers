@@ -105,6 +105,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf button{font:inherit;color:var(--ink-2);background:none;border:1px solid var(--rule);border-radius:7px;padding:4px 9px;cursor:pointer}
 .pf button:hover{color:var(--ink)}
 .pfb{display:flex;gap:6px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,8px);background:var(--ink);color:var(--panel);font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:2000}
+#toast.on{opacity:1;transform:translate(-50%,0)}
 .pf{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;padding:2px;gap:2px}
 .pf .seg button{border:none;border-radius:6px;padding:4px 8px;font-size:11.5px}
@@ -273,6 +275,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .hh{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:14px 16px 10px}
 .hh small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
 .hh strong{display:block;font-size:15px;font-weight:700;margin-top:2px}
+.hb{display:flex;gap:6px;flex:none}
+.hh .share{display:grid;place-items:center;padding:0}
+.hh .share svg{width:15px;height:15px}
 .hh button{flex:none;font:inherit;font-size:18px;line-height:1;width:28px;height:28px;border-radius:7px;border:none;background:var(--pill-bg);color:var(--ink-2);cursor:pointer}
 .pills{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:var(--pill-bg);font-weight:600;font-size:12.5px}
@@ -331,7 +336,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
     </div>
     <div id="layers"></div>
     <div class="pf">
-      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button></div>
+      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button><button type="button" id="shareView" title="Copy a link to this view">Share</button></div>
       <div class="seg" role="radiogroup" aria-label="Colour theme">
         <button type="button" role="radio" data-theme-choice="auto" title="Match your device">Auto</button>
         <button type="button" role="radio" data-theme-choice="light">Light</button>

@@ -384,9 +384,9 @@ CITY.groups.forEach(([title, items]) => {
         const k = b.dataset.f, v = b.dataset.v;
         if (typeof filt[k] === 'number') filt[k] = filt[k] === +v ? 0 : +v;
         else filt[k].has(v) ? filt[k].delete(v) : filt[k].add(v);
-        applyFilter();
+        applyFilter(); queueHash();
       }));
-      box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); });
+      box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); queueHash(); });
     }
     if (it.kind === 'suburbs'){
       row.classList.add('outer-only'); row.id = 'row-' + it.id;
@@ -397,7 +397,7 @@ CITY.groups.forEach(([title, items]) => {
       const s = document.createElement('label'); s.className = 'sub';
       s.innerHTML = '<input type="checkbox" id="' + it.sub.id + '"' + (it.sub.on ? ' checked' : '') + '> ' + it.sub.label;
       grp.appendChild(s);
-      s.querySelector('input').addEventListener('change', () => syncStnNames());
+      s.querySelector('input').addEventListener('change', () => { syncStnNames(); queueHash(); });
     }
     state[it.id] = !!it.on;
   });
@@ -453,10 +453,11 @@ function setLens(k){
   drawLegend();
   const LL = byKind('lens') && layers[byKind('lens').id];
   if (LL && LL._restyle) LL._restyle();
+  queueHash();
 }
 const kindOf = id => (LAYERS.find(it => it.id === id) || {}).kind;
 function setLayer(id, on){
-  state[id] = on;
+  state[id] = on; queueHash();
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
@@ -481,6 +482,11 @@ document.getElementById('reset').addEventListener('click', () => {
   });
   clearFilters(); applyFilter(); setLens(FIRST_LENS);
   setScope('inner', true);
+  closeHere();
+  // Back to a plain URL; the address bar follows again from the next change.
+  clearTimeout(hashTimer); linkReady = false; lastHash = '';
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  armLink();
 });
 document.getElementById('allOff').addEventListener('click', () => {
   Object.keys(state).forEach(id => { const cb = document.getElementById('lyr-' + id); if (cb.checked){ cb.checked = false; setLayer(id, false); } });
@@ -535,7 +541,9 @@ function representatives(hits){
     }).join('') +
     '</dl><p>' + esc(fill(cfg.note, {date})) + '</p></div>';
 }
-function placePin(latlng){
+let pinName = '';
+function placePin(latlng, name){
+  pinName = name || ''; queueHash();
   if (pin) pin.setLatLng(latlng); else pin = L.marker(latlng, {pane:'pin', interactive:false, keyboard:false, icon: L.divIcon({className:'', iconSize:[20, 20], iconAnchor:[10, 10], html:'<span class="pin"></span>'})}).addTo(map);
 }
 const colorOf = (id, f) => { const it = LAYERS.find(l => l.id === id); return 'var(' + ((it && it.colors && it.colors[f.properties.name]) || '--ink-3') + ')'; };
@@ -555,17 +563,18 @@ function inspect(latlng, title, muniName){
     // shoreline, so a lakeside place can otherwise land just outside them.
     const muni = hit(data.outer, x, y) || (muniName && data.outer.features.find(f => f.properties.name === muniName));
     if (!muni){ here.hidden = false; renderEmpty(CITY.outside.beyond); return; }
-    placePin(latlng);
+    placePin(latlng, title);
     const m = muni.properties;
     here.hidden = false;
-    here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
+    here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
       '<div class="pills">' + nearCommunity(x, y, title) + '<span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
       driveHere(x, y, m) +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
+    here.querySelector('.share').onclick = share;
     return;
   }
-  placePin(latlng);
+  placePin(latlng, title);
   const hits = {};
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { hits[it.id] = hit(data.layers[it.id], x, y); });
   const pillCfg = CITY.card.pills.find(p => p.knownas);
@@ -586,12 +595,13 @@ function inspect(latlng, title, muniName){
   });
   const coords = Math.abs(y).toFixed(4) + '° ' + (y >= 0 ? 'N' : 'S') + ', ' + Math.abs(x).toFixed(4) + '° ' + (x < 0 ? 'W' : 'E');
   here.hidden = false;
-  here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || coords) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
+  here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || coords) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
+  here.querySelector('.share').onclick = share;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
 }
 // Free-flow drive time from the nearest grid point (about 1.5 km apart), and the municipality's typical time.
@@ -609,7 +619,7 @@ function renderEmpty(msg){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
   document.getElementById('hereX').onclick = closeHere;
 }
-function closeHere(){ here.hidden = true; if (pin){ map.removeLayer(pin); pin = null; } }
+function closeHere(){ here.hidden = true; if (pin){ map.removeLayer(pin); pin = null; queueHash(); } }
 
 /* ---------- Theme: Auto (device setting), Light or Dark; remembered in this browser ---------- */
 function applyTheme(choice){
@@ -817,8 +827,115 @@ function setScope(s, move){
   }
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
+  queueHash();
 }
 document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click', () => { if (b.dataset.scope !== scope) setScope(b.dataset.scope, true); }));
+
+
+/* ---------- Shareable links: the view lives in the address bar's #fragment ----------
+   #map=zoom/lat/lng&pin=lat,lng&name=…&view=region&layers=a,b&lens=commute&fit=cost:lower+middle,union:30
+   Anything left out means the starting setting, so old links keep working as defaults change.
+   Layers are named by their short ids in city.json; renaming a layer's label doesn't break links.
+   The fragment never reaches a server, and replaceState keeps the Back button clean. */
+var linkReady = false, hashTimer = 0, lastHash = '';   // var: the panel's handlers can reach these before this line runs
+const SHARE_ICON = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 10V2.5M5 5.2 8 2.2l3 3M4.5 7.5H3.5v6h9v-6h-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const enc = v => encodeURIComponent(v).replace(/%2C/g, ',').replace(/%2F/g, '/').replace(/%3A/g, ':').replace(/%2B/g, '+');
+const SUBS = LAYERS.filter(it => it.sub).map(it => it.sub);
+// Start keeping the address bar in step at the next touch, click, key or scroll, so a plain visit
+// (or one just reset) stays a plain URL until someone actually changes something. Set after this
+// event's own handlers, so the gesture that armed it doesn't count.
+function armLink(){
+  const ev = ['pointerdown', 'keydown', 'wheel'];
+  const start = () => { ev.forEach(e => removeEventListener(e, start, true)); linkReady = true; };
+  setTimeout(() => ev.forEach(e => addEventListener(e, start, true)), 1200);
+}
+function queueHash(){ if (linkReady){ clearTimeout(hashTimer); hashTimer = setTimeout(writeHash, 250); } }
+function linkState(){
+  const c = map.getCenter(), z = map.getZoom();
+  const parts = [['map', (Math.round(z * 4) / 4) + '/' + c.lat.toFixed(5) + '/' + c.lng.toFixed(5)]];
+  if (pin){ const p = pin.getLatLng(); parts.push(['pin', p.lat.toFixed(5) + ',' + p.lng.toFixed(5)]); if (pinName) parts.push(['name', pinName]); }
+  if (scope === 'outer') parts.push(['view', 'region']);
+  const on = LAYERS.filter(it => state[it.id]).map(it => it.id)
+    .concat(SUBS.filter(s => document.getElementById(s.id).checked).map(s => s.id));
+  const dflt = LAYERS.filter(it => it.on).map(it => it.id).concat(SUBS.filter(s => s.on).map(s => s.id));
+  if (on.join() !== dflt.join()) parts.push(['layers', on.length ? on.join(',') : 'none']);
+  if (lens !== FIRST_LENS) parts.push(['lens', lens]);
+  const fit = FILTERS.map(f => f.max ? (filt[f.lens] ? f.lens + ':' + filt[f.lens] : '') : (filt[f.lens].size ? f.lens + ':' + [...filt[f.lens]].join('+') : '')).filter(Boolean);
+  if (fit.length) parts.push(['fit', fit.join(',')]);
+  return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
+}
+function writeHash(){
+  const h = '#' + linkState();
+  if (h === location.hash) return;
+  lastHash = h;
+  try { history.replaceState(null, '', h); } catch (e) {}
+}
+function readHash(h){
+  const out = {};
+  h.replace(/^#/, '').split('&').forEach(kv => { const i = kv.indexOf('='); if (i > 0) { try { out[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1)); } catch (e) {} } });
+  return out;
+}
+// Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
+function applyHash(h){
+  const o = readHash(h);
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit'].some(k => k in o)) return false;
+  const num = s => s.split(/[,/]/).map(Number);
+  setScope(o.view === 'region' ? 'outer' : 'inner', false);
+  if (o.layers){
+    const want = new Set(o.layers === 'none' ? [] : o.layers.split(','));
+    // Area fills first, then the lens: switching the lens on turns fills off, so it must come last to win.
+    LAYERS.slice().sort((a, b) => (a.kind === 'lens') - (b.kind === 'lens')).forEach(it => {
+      const cb = document.getElementById('lyr-' + it.id), w = want.has(it.id);
+      if (cb.checked !== w){ cb.checked = w; setLayer(it.id, w); }
+    });
+    SUBS.forEach(s => { document.getElementById(s.id).checked = want.has(s.id); });
+    syncStnNames();
+  }
+  if (o.lens && LENSES[o.lens] && document.querySelector('[data-lens="' + o.lens + '"]')) setLens(o.lens);
+  if (o.fit){
+    clearFilters();
+    o.fit.split(',').forEach(part => {
+      const [k, v] = part.split(':'), f = FILTERS.find(x => x.lens === k);
+      if (!f || v == null || !document.querySelector('[data-f="' + k + '"]')) return;
+      if (f.max){ if (f.options.some(([ov]) => +ov === +v)) filt[k] = +v; }
+      else v.split('+').forEach(t => { if (f.options.some(([ov]) => String(ov) === t)) filt[k].add(t); });
+    });
+    applyFilter();
+  }
+  const m = o.map ? num(o.map) : null, ok = a => a && a.every(Number.isFinite);
+  const p = o.pin ? num(o.pin) : null;
+  if (ok(m) && m.length === 3) map.setView([m[1], m[2]], m[0], {animate: false});
+  if (ok(p) && p.length === 2){
+    const at = L.latLng(p[0], p[1]);
+    if (ok(m)) inspect(at, o.name || undefined);
+    else goTo(at, o.name || '', false);
+  } else closeHere();
+  if (!ok(m) && !(ok(p) && p.length === 2)) frame(scope === 'inner' ? CITY_BOUNDS : REGION_VIEW);
+  return true;
+}
+// Share: the phone's share sheet where there is one, otherwise copy the link.
+async function share(e){
+  writeHash();
+  const url = location.href;
+  const title = document.title + (pin && pinName ? ' · ' + pinName : '');
+  if (navigator.share && matchMedia('(pointer:coarse)').matches){
+    try { await navigator.share({title, url}); return; } catch (err){ if (err && err.name === 'AbortError') return; }
+  }
+  let copied = false;
+  try { await navigator.clipboard.writeText(url); copied = true; } catch (err) {}
+  if (!copied){ window.prompt('Copy this link:', url); return; }
+  flash('Link copied');
+}
+function flash(msg){
+  let t = document.getElementById('toast');
+  if (!t){ t = document.createElement('div'); t.id = 'toast'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add('on');
+  clearTimeout(flash._t); flash._t = setTimeout(() => t.classList.remove('on'), 1800);
+}
+document.getElementById('shareView').addEventListener('click', share);
+map.on('moveend', queueHash);
+// A link pasted into the same tab (only the #fragment changes) re-applies without a reload.
+window.addEventListener('hashchange', () => { if (location.hash !== lastHash){ linkReady = false; applyHash(location.hash); linkReady = true; } });
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
@@ -849,8 +966,13 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   ORDER.forEach(it => { if (state[it.id]) layers[it.id].addTo(map); });
   syncStnNames();
   zoomClasses();
-  setScope('inner', false);
-  frame(CITY_BOUNDS);
-  inspect(L.latLng(CITY.example.at), CITY.example.name);
+  if (!applyHash(location.hash)){
+    setScope('inner', false);
+    frame(CITY_BOUNDS);
+    inspect(L.latLng(CITY.example.at), CITY.example.name);
+  }
+  lastHash = location.hash;
+  if (location.hash) linkReady = true; else armLink();
+  window.cityMapReady = true;
 }).catch(err => { renderEmpty('The map data didn’t load (' + err.message + '). Reload the page to try again.'); });
 })();
