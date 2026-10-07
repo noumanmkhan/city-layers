@@ -1,11 +1,11 @@
 """Subway and LRT lines + stations from the TTC's GTFS-derived geometry.
 Inputs: raw/ttc_rapid_routes.geojson, raw/ttc_rapid_stops.geojson
-Outputs: tmp/subway_lines.geojson (simplified later), ../docs/toronto/data/subway_stations.geojson
+Outputs: tmp/subway_lines.geojson (simplified later), docs/toronto/data/subway_stations.geojson
 """
 import json, os, re, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RAW = os.path.join(HERE, 'raw'); TMP = os.path.join(HERE, 'tmp'); OUT = os.path.join(HERE, '..', 'docs', 'toronto', 'data')
+RAW = os.path.join(HERE, 'raw'); TMP = os.path.join(HERE, 'tmp'); OUT = os.path.join(HERE, '..', '..', 'docs', 'toronto', 'data')
 os.makedirs(TMP, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 
 r = json.load(open(os.path.join(RAW, 'ttc_rapid_routes.geojson')))

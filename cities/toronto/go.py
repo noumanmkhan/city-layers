@@ -1,6 +1,6 @@
 """GO Transit rail lines and UP Express, plus their stations.
 Inputs: raw/go_routes.geojson, raw/go_stops.geojson (from Metrolinx's GTFS via agcghub/toronto-bus-map)
-Outputs: tmp/go_lines.geojson (simplified later by mapshaper), ../docs/toronto/data/go_stations.geojson
+Outputs: tmp/go_lines.geojson (simplified later by mapshaper), docs/toronto/data/go_stations.geojson
 
 One geometry per line (the full outbound route from Union). Each line gets an 'offset' rank so
 the page can fan out lines that share track near Union instead of drawing them on top of each other.
@@ -9,7 +9,7 @@ a name (Kipling, Kennedy, Eglinton, Mount Pleasant...)."""
 import json, os, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RAW = os.path.join(HERE, 'raw'); TMP = os.path.join(HERE, 'tmp'); OUT = os.path.join(HERE, '..', 'docs', 'toronto', 'data')
+RAW = os.path.join(HERE, 'raw'); TMP = os.path.join(HERE, 'tmp'); OUT = os.path.join(HERE, '..', '..', 'docs', 'toronto', 'data')
 os.makedirs(TMP, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 
 # name shown, colour (Metrolinx), offset rank (lines leaving Union westward, then eastward;

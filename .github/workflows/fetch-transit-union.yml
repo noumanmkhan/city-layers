@@ -1,12 +1,12 @@
 name: Compute transit times to Union
 # Downloads TTC, GO and UP Express schedules plus an OpenStreetMap extract, routes a weekday
 # morning trip to Union Station from points across every neighbourhood with r5py, and commits
-# pipeline/raw/transit_union.json back to the branch that ran it.
+# cities/toronto/raw/transit_union.json back to the branch that ran it.
 on:
   workflow_dispatch:
   push:
     branches: [fetch-transit-union]
-    paths: ['pipeline/fetch_transit_union.py', '.github/workflows/fetch-transit-union.yml']
+    paths: ['cities/toronto/fetch_transit_union.py', '.github/workflows/fetch-transit-union.yml']
 permissions:
   contents: write
 jobs:
@@ -24,10 +24,10 @@ jobs:
           python-version: '3.12'
       - run: sudo apt-get update -q && sudo apt-get install -y -q osmium-tool
       - run: pip install r5py geopandas shapely
-      - run: python3 pipeline/fetch_transit_union.py
+      - run: python3 cities/toronto/fetch_transit_union.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
-          git add pipeline/raw/transit_union.json
+          git add cities/toronto/raw/transit_union.json
           git commit -m "Compute transit times from each neighbourhood to Union Station" || echo "no changes"
           git push
