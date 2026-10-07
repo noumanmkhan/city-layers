@@ -1,0 +1,32 @@
+name: Scout Hyderabad data
+# One-off check of whether Hyderabad's boundary data is current enough to build a map from.
+# Writes a report and any boundaries found to scouting/hyderabad/out/ and commits them to main.
+# Doesn't touch the site. Runs when scout.py changes on main, or by hand from the Actions tab.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scouting/hyderabad/scout.py', '.github/workflows/scout-hyderabad.yml']
+permissions:
+  contents: write
+concurrency: scout-hyderabad
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install shapely pyproj
+      - run: |
+          mkdir -p scouting/hyderabad/out
+          python3 -u scouting/hyderabad/scout.py 2>&1 | tee scouting/hyderabad/out/scout.log || true
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add scouting/hyderabad/out
+          git commit -m "Hyderabad scouting report" || echo "no changes"
+          git pull --rebase
+          git push
