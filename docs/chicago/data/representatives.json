@@ -1,0 +1,536 @@
+{
+"updated": "2026-10-07",
+"wards": {
+"1": {
+"name": "Daniel La Spata",
+"url": "https://www.the1stward.com/"
+},
+"2": {
+"name": "Brian Hopkins",
+"url": "https://www.aldermanhopkins.com/"
+},
+"3": {
+"name": "Pat Dowell",
+"url": "http://www.ward03chicago.com"
+},
+"4": {
+"name": "Lamont J. Robinson",
+"url": "https://www.chicago.gov/city/en/about/wards/04.html"
+},
+"5": {
+"name": "Desmon C. Yancy",
+"url": "https://www.chicago.gov/city/en/about/wards/05.html"
+},
+"6": {
+"name": "William E. Hall",
+"url": "https://www.chicago.gov/city/en/about/wards/06.html"
+},
+"7": {
+"name": "Gregory I. Mitchell",
+"url": "http://www.gregmitchell7thward.org/"
+},
+"8": {
+"name": "Michelle A. Harris",
+"url": "http://www.Aldermanmichelleharris.net"
+},
+"9": {
+"name": "Anthony Beale",
+"url": "http://www.Ward09.com"
+},
+"10": {
+"name": "Peter Chico",
+"url": "https://www.chicago.gov/city/en/about/wards/10.html"
+},
+"11": {
+"name": "Nicole T. Lee",
+"url": "https://www.chicago.gov/city/en/about/wards/11.html"
+},
+"12": {
+"name": "Julia M. Ramirez",
+"url": "https://www.chicago.gov/city/en/about/wards/12.html"
+},
+"13": {
+"name": "Marty Quinn",
+"url": "https://www.chicago.gov/city/en/about/wards/13.html"
+},
+"14": {
+"name": "Jeylu B. Gutierrez",
+"url": "https://www.chicago.gov/city/en/about/wards/14.html"
+},
+"15": {
+"name": "Raymond A. Lopez",
+"url": "http://www.the15thward.org"
+},
+"16": {
+"name": "Stephanie D. Coleman",
+"url": "https://www.16thward.org"
+},
+"17": {
+"name": "David H. Moore",
+"url": "http://www.David.Moore@cityofchicago.org"
+},
+"18": {
+"name": "Derrick G. Curtis",
+"url": "https://www.chicago.gov/city/en/about/wards/18.html"
+},
+"19": {
+"name": "Matthew J. O'Shea",
+"url": "http://the19thward.com/"
+},
+"20": {
+"name": "Jeanette B. Taylor",
+"url": "https://www.chicago.gov/city/en/about/wards/20.html"
+},
+"21": {
+"name": "Ronnie L. Mosley",
+"url": "https://www.chicago.gov/city/en/about/wards/21.html"
+},
+"22": {
+"name": "Michael D. Rodriguez",
+"url": "https://www.chicago.gov/city/en/about/wards/22.html"
+},
+"23": {
+"name": "Silvana Tabares",
+"url": "https://www.chicago.gov/city/en/about/wards/23.html"
+},
+"24": {
+"name": "Monique L. Scott",
+"url": "https://www.chicago.gov/city/en/about/wards/24.html"
+},
+"25": {
+"name": "Byron Sigcho-Lopez",
+"url": "https://www.25thward.org"
+},
+"26": {
+"name": "Jessica L. Fuentes",
+"url": "https://www.chicago.gov/city/en/about/wards/26.html"
+},
+"27": {
+"name": "Walter R. Burnett",
+"url": "http://aldermanburnett.com/"
+},
+"28": {
+"name": "Jason C. Ervin",
+"url": "http://www.AldermanErvin.com/"
+},
+"29": {
+"name": "Chris Taliaferro",
+"url": "http://www.aldtaliaferro.com"
+},
+"30": {
+"name": "Ruth Cruz",
+"url": "https://www.chicago.gov/city/en/about/wards/30.html"
+},
+"31": {
+"name": "Jr., Felix Cardona",
+"url": "https://www.chicago.gov/city/en/about/wards/31.html"
+},
+"32": {
+"name": "Scott Waguespack",
+"url": "http://www.ward32.org"
+},
+"33": {
+"name": "Rossana Rodriguez Sanchez",
+"url": "https://www.chicago.gov/city/en/about/wards/33.html"
+},
+"34": {
+"name": "William Conway",
+"url": "https://www.chicago.gov/city/en/about/wards/34.html"
+},
+"35": {
+"name": "Anthony J. Quezada",
+"url": "https://www.chicago.gov/city/en/about/wards/35.html"
+},
+"36": {
+"name": "Gilbert Villegas",
+"url": "http://www.36thward.org"
+},
+"37": {
+"name": "Emma Mitts",
+"url": "https://www.cityofchicago.org/city/en/about/wards/37.html"
+},
+"38": {
+"name": "Nicholas Sposato",
+"url": "http://aldermansposato.com/"
+},
+"39": {
+"name": "Samantha Nugent",
+"url": "http://www.ward39@cityofchicago.org"
+},
+"40": {
+"name": "Jr., Andre Vasquez",
+"url": "http://www.40thward.org"
+},
+"41": {
+"name": "Anthony V. Napolitano",
+"url": "http://www.chicago41.com"
+},
+"42": {
+"name": "Brendan Reilly",
+"url": "https://www.chicago.gov/city/en/about/wards/42.html"
+},
+"43": {
+"name": "Timothy R. Knudsen",
+"url": "https://ward43.org"
+},
+"44": {
+"name": "Bennett R. Lawson",
+"url": "https://www.chicago.gov/city/en/about/wards/44.html"
+},
+"45": {
+"name": "James M. Gardiner",
+"url": "http://www.aldermangardiner.com"
+},
+"46": {
+"name": "Angela Clay",
+"url": "https://www.chicago.gov/city/en/about/wards/46.html"
+},
+"47": {
+"name": "Matthew J. Martin",
+"url": "http://www.aldermanmartin.com"
+},
+"48": {
+"name": "Leni Manaa-Hoppenworth",
+"url": "https://www.the48thward.org/"
+},
+"49": {
+"name": "Maria E. Hadden",
+"url": "http://www.49thward.org"
+},
+"50": {
+"name": "Debra L. Silverstein",
+"url": "http://50thwardchicago.com"
+}
+},
+"house": {
+"1": {
+"name": "Aarón Ortíz",
+"url": "https://www.ilga.gov/House/Members/Details/3358",
+"party": "Democrat"
+},
+"21": {
+"name": "Abdelnasser Rashid",
+"url": "https://www.ilga.gov/House/Members/Details/3420",
+"party": "Democrat"
+},
+"22": {
+"name": "Angie Guerrero-Cuellar",
+"url": "https://www.ilga.gov/House/Members/Details/3400",
+"party": "Democrat"
+},
+"11": {
+"name": "Ann Williams",
+"url": "https://www.ilga.gov/House/Members/Details/3286",
+"party": "Democrat"
+},
+"20": {
+"name": "Brad Stephens",
+"url": "https://www.ilga.gov/House/Members/Details/3370",
+"party": "Republican"
+},
+"78": {
+"name": "Camille Lilly",
+"url": "https://www.ilga.gov/House/Members/Details/3279",
+"party": "Democrat"
+},
+"25": {
+"name": "Curtis Tarver",
+"url": "https://www.ilga.gov/House/Members/Details/3355",
+"party": "Democrat"
+},
+"23": {
+"name": "Edgar González",
+"url": "https://www.ilga.gov/House/Members/Details/3374",
+"party": "Democrat"
+},
+"3": {
+"name": "Eva-Dina Delgado",
+"url": "https://www.ilga.gov/House/Members/Details/3373",
+"party": "Democrat"
+},
+"13": {
+"name": "Hoan Huynh",
+"url": "https://www.ilga.gov/House/Members/Details/3418",
+"party": "Democrat"
+},
+"40": {
+"name": "Jaime Andrade",
+"url": "https://www.ilga.gov/House/Members/Details/3307",
+"party": "Democrat"
+},
+"10": {
+"name": "Omar Williams",
+"url": "https://www.ilga.gov/House/Members/Details/3368",
+"party": "Democrat"
+},
+"55": {
+"name": "Justin Cochran",
+"url": "https://www.ilga.gov/House/Members/Details/3462",
+"party": "Democrat"
+},
+"27": {
+"name": "Justin Slaughter",
+"url": "https://www.ilga.gov/House/Members/Details/3320",
+"party": "Democrat"
+},
+"26": {
+"name": "Kam Buckner",
+"url": "https://www.ilga.gov/House/Members/Details/3366",
+"party": "Democrat"
+},
+"14": {
+"name": "Kelly Cassidy",
+"url": "https://www.ilga.gov/House/Members/Details/3288",
+"party": "Democrat"
+},
+"16": {
+"name": "Kevin Olickal",
+"url": "https://www.ilga.gov/House/Members/Details/3419",
+"party": "Democrat"
+},
+"5": {
+"name": "Kimberly Du Buclet",
+"url": "https://www.ilga.gov/House/Members/Details/3441",
+"party": "Democrat"
+},
+"8": {
+"name": "La Shawn Ford",
+"url": "https://www.ilga.gov/House/Members/Details/3272",
+"party": "Democrat"
+},
+"4": {
+"name": "Lilian Jiménez",
+"url": "https://www.ilga.gov/House/Members/Details/3417",
+"party": "Democrat"
+},
+"19": {
+"name": "Lindsey LaPointe",
+"url": "https://www.ilga.gov/House/Members/Details/3371",
+"party": "Democrat"
+},
+"32": {
+"name": "Lisa Davis",
+"url": "https://www.ilga.gov/House/Members/Details/3458",
+"party": "Democrat"
+},
+"33": {
+"name": "Marcus Evans",
+"url": "https://www.ilga.gov/House/Members/Details/3289",
+"party": "Democrat"
+},
+"12": {
+"name": "Margaret Croke",
+"url": "https://www.ilga.gov/House/Members/Details/3384",
+"party": "Democrat"
+},
+"35": {
+"name": "Mary Gill",
+"url": "https://www.ilga.gov/House/Members/Details/3440",
+"party": "Democrat"
+},
+"15": {
+"name": "Michael Kelly",
+"url": "https://www.ilga.gov/House/Members/Details/3402",
+"party": "Democrat"
+},
+"31": {
+"name": "Mike Crawford",
+"url": "https://www.ilga.gov/House/Members/Details/3452",
+"party": "Democrat"
+},
+"34": {
+"name": "Nick Smith",
+"url": "https://www.ilga.gov/House/Members/Details/3332",
+"party": "Democrat"
+},
+"77": {
+"name": "Norma Hernandez",
+"url": "https://www.ilga.gov/House/Members/Details/3415",
+"party": "Democrat"
+},
+"36": {
+"name": "Rick Ryan",
+"url": "https://www.ilga.gov/House/Members/Details/3457",
+"party": "Democrat"
+},
+"28": {
+"name": "Bob Rita",
+"url": "https://www.ilga.gov/House/Members/Details/3267",
+"party": "Democrat"
+},
+"6": {
+"name": "Sonya Harper",
+"url": "https://www.ilga.gov/House/Members/Details/3314",
+"party": "Democrat"
+},
+"29": {
+"name": "Thaddeus Jones",
+"url": "https://www.ilga.gov/House/Members/Details/3283",
+"party": "Democrat"
+},
+"24": {
+"name": "Theresa Mah",
+"url": "https://www.ilga.gov/House/Members/Details/3321",
+"party": "Democrat"
+},
+"39": {
+"name": "Will Guzzardi",
+"url": "https://www.ilga.gov/House/Members/Details/3311",
+"party": "Democrat"
+},
+"9": {
+"name": "Yolonda Morris",
+"url": "https://www.ilga.gov/House/Members/Details/3444",
+"party": "Democrat"
+}
+},
+"senate": {
+"12": {
+"name": "Celina Villanueva",
+"url": "https://www.ilga.gov/Senate/Members/Details/3375",
+"party": "Democrat"
+},
+"39": {
+"name": "Don Harmon",
+"url": "https://www.ilga.gov/Senate/Members/Details/3268",
+"party": "Democrat"
+},
+"17": {
+"name": "Elgie Sims",
+"url": "https://www.ilga.gov/Senate/Members/Details/3331",
+"party": "Democrat"
+},
+"14": {
+"name": "Emil Jones",
+"url": "https://www.ilga.gov/Senate/Members/Details/3276",
+"party": "Democrat"
+},
+"20": {
+"name": "Graciela Guzmán",
+"url": "https://www.ilga.gov/Senate/Members/Details/3442",
+"party": "Democrat"
+},
+"1": {
+"name": "Javier Cervantes",
+"url": "https://www.ilga.gov/Senate/Members/Details/3403",
+"party": "Democrat"
+},
+"4": {
+"name": "Kimberly Lightford",
+"url": "https://www.ilga.gov/Senate/Members/Details/3264",
+"party": "Democrat"
+},
+"5": {
+"name": "Lakesia Collins",
+"url": "https://www.ilga.gov/Senate/Members/Details/3443",
+"party": "Democrat"
+},
+"28": {
+"name": "Laura Murphy",
+"url": "https://www.ilga.gov/Senate/Members/Details/3313",
+"party": "Democrat"
+},
+"3": {
+"name": "Mattie Hunter",
+"url": "https://www.ilga.gov/Senate/Members/Details/3269",
+"party": "Democrat"
+},
+"11": {
+"name": "Mike Porfirio",
+"url": "https://www.ilga.gov/Senate/Members/Details/3404",
+"party": "Democrat"
+},
+"7": {
+"name": "Mike Simmons-Gessesse",
+"url": "https://www.ilga.gov/Senate/Members/Details/3398",
+"party": "Democrat"
+},
+"15": {
+"name": "Napoleon Harris",
+"url": "https://www.ilga.gov/Senate/Members/Details/3292",
+"party": "Democrat"
+},
+"2": {
+"name": "Omar Aquino",
+"url": "https://www.ilga.gov/Senate/Members/Details/3316",
+"party": "Democrat"
+},
+"8": {
+"name": "Ram Villivalam",
+"url": "https://www.ilga.gov/Senate/Members/Details/3345",
+"party": "Democrat"
+},
+"10": {
+"name": "Rob Martwick",
+"url": "https://www.ilga.gov/Senate/Members/Details/3369",
+"party": "Democrat"
+},
+"13": {
+"name": "Robert Peters",
+"url": "https://www.ilga.gov/Senate/Members/Details/3343",
+"party": "Democrat"
+},
+"6": {
+"name": "Sara Feigenholtz",
+"url": "https://www.ilga.gov/Senate/Members/Details/3376",
+"party": "Democrat"
+},
+"18": {
+"name": "Bill Cunningham",
+"url": "https://www.ilga.gov/Senate/Members/Details/3291",
+"party": "Democrat"
+},
+"16": {
+"name": "Willie Preston",
+"url": "https://www.ilga.gov/Senate/Members/Details/3405",
+"party": "Democrat"
+}
+},
+"congress": {
+"1": {
+"name": "Jonathan L. Jackson",
+"url": "https://clerk.house.gov/members/J000309",
+"party": "Democrat"
+},
+"2": {
+"name": "Robin L. Kelly",
+"url": "https://clerk.house.gov/members/K000385",
+"party": "Democrat"
+},
+"3": {
+"name": "Delia C. Ramirez",
+"url": "https://clerk.house.gov/members/R000617",
+"party": "Democrat"
+},
+"4": {
+"name": "Jesús G. \"Chuy\" García",
+"url": "https://clerk.house.gov/members/G000586",
+"party": "Democrat"
+},
+"5": {
+"name": "Mike Quigley",
+"url": "https://clerk.house.gov/members/Q000023",
+"party": "Democrat"
+},
+"6": {
+"name": "Sean Casten",
+"url": "https://clerk.house.gov/members/C001117",
+"party": "Democrat"
+},
+"7": {
+"name": "Danny K. Davis",
+"url": "https://clerk.house.gov/members/D000096",
+"party": "Democrat"
+},
+"8": {
+"name": "Raja Krishnamoorthi",
+"url": "https://clerk.house.gov/members/K000391",
+"party": "Democrat"
+},
+"9": {
+"name": "Janice D. Schakowsky",
+"url": "https://clerk.house.gov/members/S001145",
+"party": "Democrat"
+}
+}
+}

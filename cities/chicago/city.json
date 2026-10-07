@@ -1,0 +1,121 @@
+{
+  "id": "chicago",
+  "title": "Chicago Layers",
+  "description": "A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.",
+  "mapLabel": "Map of the City of Chicago",
+  "locale": "en-US",
+
+  "view": {
+    "city": [[41.644, -87.940], [42.023, -87.524]],
+    "region": [[41.20, -88.75], [42.50, -86.95]],
+    "max": [[40.80, -89.40], [42.90, -86.30]]
+  },
+  "scope": {
+    "outer": {"name": "Chicagoland", "sub": "7 counties + NW Indiana"},
+    "inner": {"name": "Chicago", "sub": "city only"}
+  },
+  "footprint": "sides",
+  "water": [
+    {"name": "Lake Michigan", "at": [41.90, -87.50], "cls": "lake-near"},
+    {"name": "Lake Michigan", "at": [42.15, -87.25], "cls": "lake-far"}
+  ],
+  "attribution": "Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim",
+  "example": {"at": [41.8763, -87.6282], "name": "Harold Washington Library (example)"},
+
+  "search": {
+    "label": "Search a Chicago address",
+    "country": "us",
+    "viewbox": "-87.95,42.03,-87.52,41.64",
+    "noMatch": "No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.",
+    "more": "Press Find to search all Chicago addresses"
+  },
+  "outside": {
+    "beyond": "That spot is outside Chicagoland.",
+    "regionPill": "{region}",
+    "note": "Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."
+  },
+
+  "units": {"singular": "Community area", "plural": "community areas"},
+
+  "groups": [
+    ["Places", [
+      {"id": "sides", "kind": "fill", "size": "major", "file": "sides", "name": "The sides", "note": "Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood", "on": true,
+       "colors": {"Far North Side": "--s-farnorth", "Northwest Side": "--s-northwest", "North Side": "--s-north", "Central": "--s-central", "West Side": "--s-west",
+                  "South Side": "--s-south", "Southwest Side": "--s-southwest", "Far Southwest Side": "--s-farsouthwest", "Far Southeast Side": "--s-farsoutheast"}},
+      {"id": "ca", "kind": "units", "file": "community_areas", "name": "Community areas", "note": "The City’s 77 official community areas", "on": true, "hover": "{name} · #{code}"},
+      {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},
+      {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"}
+    ]],
+    ["Representation", [
+      {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "50 wards, one alderperson each", "label": "Ward {num}", "hover": "Ward {num}"},
+      {"id": "house", "kind": "outline", "level": "state", "file": "il_house", "name": "Illinois House districts", "note": "Two House districts make one Senate district", "label": "{num}", "hover": "Illinois House {num} · Senate {senate}"},
+      {"id": "congress", "kind": "outline", "level": "national", "file": "congress", "name": "Congressional districts", "note": "Illinois seats in the U.S. House", "label": "IL-{num}", "hover": "Congressional district IL-{num}"},
+      {"id": "ssa", "kind": "patches", "file": "ssa", "name": "Special Service Areas", "note": "Business districts funded by a local property-tax levy", "label": "{name}", "hover": "SSA #{num} · {name}"}
+    ]],
+    ["Getting around", [
+      {"id": "streets", "kind": "streets", "file": "streets", "name": "Main streets", "note": "The mile grid and the diagonals: Ashland, Western, Milwaukee…", "on": true},
+      {"id": "hwy", "kind": "highways", "files": ["highways", "region_highways", "region_shields"], "name": "Expressways", "note": "Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive", "on": true,
+       "shields": {"LSD": "Lake Shore Dr"}, "tollShield": "Toll"},
+      {"id": "metra", "kind": "rail", "files": ["metra_lines", "metra_stations", "metra_lines_inner"], "name": "Metra trains", "note": "11 commuter lines from four downtown stations", "on": true,
+       "hover": "{name} · downtown – {to}"},
+      {"id": "cta", "kind": "metro", "files": ["cta_lines", "cta_stations"], "name": "The ‘L’", "note": "CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines", "on": true,
+       "stationHover": "{name} · {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}}
+    ]]
+  ],
+
+  "lens": {
+    "label": "Community area lens",
+    "file": "ca_profiles.json",
+    "source": "American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.",
+    "lenses": [
+      {"id": "cost", "short": "Housing cost", "key": "cost",
+       "tiers": [["lower", "Lower housing cost", "--cost-1"], ["middle", "Middle", "--cost-2"], ["higher", "Higher housing cost", "--cost-3"]],
+       "note": "Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},
+      {"id": "commute", "short": "Getting to work", "key": "commute",
+       "tiers": [["transit", "Mostly transit, walk or bike", "--com-1"], ["mixed", "Mixed", "--com-2"], ["car", "Mostly car", "--com-3"]],
+       "note": "Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},
+      {"id": "tenure", "short": "Renters & owners", "key": "tenure",
+       "tiers": [["owners", "Mostly owners", "--ten-1"], ["mix", "A mix", "--ten-2"], ["renters", "Mostly renters", "--ten-3"]],
+       "note": "Share of households that rent: under 35%, 35–60%, over 60%."}
+    ],
+    "filters": [
+      {"lens": "cost", "label": "Housing cost", "options": [["lower", "Lower"], ["middle", "Middle"], ["higher", "Higher"]]},
+      {"lens": "commute", "label": "Getting to work", "options": [["transit", "Transit, walk, bike"], ["mixed", "Mixed"], ["car", "Car"]]},
+      {"lens": "tenure", "label": "Households", "options": [["owners", "Mostly own"], ["mix", "A mix"], ["renters", "Mostly rent"]]}
+    ]
+  },
+
+  "card": {
+    "pills": [
+      {"layer": "sides", "else": "sides"},
+      {"knownas": 2},
+      {"layer": "ssa", "text": "SSA: {name}", "color": "--bia"},
+      {"layer": "congress", "text": "Congress: IL-{num}", "color": "--fed"}
+    ],
+    "facts": [
+      {"label": "Side", "layer": "sides", "text": "{name}"},
+      {"label": "Community area", "layer": "ca", "text": "{name} (#{code})"},
+      {"label": "Known as", "knownas": true},
+      {"label": "SSA", "layer": "ssa", "text": "{name}[ (#{num})]", "empty": "None"},
+      {"label": "City ward", "layer": "wards", "text": "Ward {num}"},
+      {"label": "Illinois House", "layer": "house", "text": "District {num}"},
+      {"label": "Illinois Senate", "layer": "house", "text": "District {senate}"},
+      {"label": "Congress", "layer": "congress", "text": "IL-{num}"}
+    ],
+    "living": {
+      "caveat": "Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.",
+      "footer": "American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."
+    },
+    "reps": {
+      "file": "representatives.json",
+      "offices": [
+        {"role": "Alderperson", "layer": "wards", "table": "wards", "key": "num", "sub": "Ward {f.num}"},
+        {"role": "State representative", "layer": "house", "table": "house", "key": "num", "sub": "{r.party} · District {f.num}"},
+        {"role": "State senator", "layer": "house", "table": "senate", "key": "senate", "sub": "{r.party} · District {f.senate}"},
+        {"role": "U.S. representative", "layer": "congress", "table": "congress", "key": "num", "sub": "{r.party} · IL-{f.num}"}
+      ],
+      "note": "Names open each person’s official page. Chicago’s city council elections are nonpartisan. Last change {date}."
+    }
+  }
+}
