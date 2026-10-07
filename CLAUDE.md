@@ -1,4 +1,4 @@
-# Toronto Layers: notes for Claude sessions
+# City Layers: notes for Claude sessions
 
 This repo is the **map** (live at https://maps.noumankhan.ca/toronto/) and the small
 maps hub page at https://maps.noumankhan.ca/. The landing page for

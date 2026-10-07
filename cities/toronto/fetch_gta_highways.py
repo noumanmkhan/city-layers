@@ -23,7 +23,7 @@ def fetch():
     for attempt in range(6):
         url = ENDPOINTS[attempt % len(ENDPOINTS)]
         try:
-            req = urllib.request.Request(url, data=data, headers={'User-Agent': 'toronto-layers-pipeline (github.com/noumanmkhan/toronto-layers)'})
+            req = urllib.request.Request(url, data=data, headers={'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)'})
             with urllib.request.urlopen(req, timeout=300) as r:
                 return json.load(r)
         except Exception as e:

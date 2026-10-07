@@ -14,7 +14,7 @@ WANT = re.compile(r'(major arterial|minor arterial|collector)', re.I)
 def get(url, tries=4):
     for i in range(tries):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'toronto-layers-pipeline'})
+            req = urllib.request.Request(url, headers={'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)'})
             with urllib.request.urlopen(req, timeout=120) as r:
                 return json.load(r)
         except Exception as e:

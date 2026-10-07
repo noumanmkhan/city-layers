@@ -17,7 +17,7 @@ import datetime as dt, io, json, os, statistics, subprocess, sys, time, urllib.r
 sys.argv += ['--max-memory', '12G']   # r5py reads its JVM settings from the command line
 HERE = os.path.dirname(os.path.abspath(__file__))
 WORK = os.path.join(HERE, 'tmp', 'transit'); os.makedirs(WORK, exist_ok=True)
-UA = {'User-Agent': 'toronto-layers-pipeline (github.com/noumanmkhan/toronto-layers)'}
+UA = {'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)'}
 UNION = (-79.3806, 43.6453)
 TTC_CKAN = 'https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=ttc-routes-and-schedules'
 GO = ['https://assets.metrolinx.com/raw/upload/Documents/Metrolinx/Open%20Data/GO-GTFS.zip']

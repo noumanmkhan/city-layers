@@ -12,7 +12,7 @@ import json, os, re, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'raw', 'representatives'); os.makedirs(OUT, exist_ok=True)
-UA = {'User-Agent': 'toronto-layers-pipeline (github.com/noumanmkhan/toronto-layers)', 'Accept-Language': 'en'}
+UA = {'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)', 'Accept-Language': 'en'}
 WARD = 'https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-{}/'
 
 

@@ -10,7 +10,7 @@ import json, os, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CKAN = 'https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=neighbourhood-profiles'
-UA = {'User-Agent': 'toronto-layers-pipeline (github.com/noumanmkhan/toronto-layers)'}
+UA = {'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)'}
 
 
 def get(url, binary=False, tries=4):
