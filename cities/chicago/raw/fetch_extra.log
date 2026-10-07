@@ -1,20 +1,34 @@
-metra files: ['agency.txt', 'calendar.txt', 'calendar_dates.txt', 'routes.txt', 'shapes.txt', 'stop_times.txt', 'trips.txt', 'stops.txt', 'fare_attributes.txt', 'fare_rules.txt']
-wrote metra.json
-FAILED acs JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+FAILED acs RuntimeError('B25003 gave: <html style="font-size: 14px;">\n\n<head>\n    <title>Missing Key</title>\n    <link rel="icon" type="image/x-icon" href="favicon.ico">\n    <link rel="stylesheet" type="text/css" href="assets/styles.css">\n    <script type="text/javascript" src="assets/jquery-1.4.4.min.js"></script>\n    <script type="text/javascript">\n        $(document).ready(function () {\n            function getCookie(name) {\n      ')
+Traceback (most recent call last):
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_extra.py", line 97, in acs
+    d = json.loads(body)
+        ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_extra.py", line 36, in step
     fn()
-  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_extra.py", line 95, in acs
-    d = json.loads(get(f'{base}?get=group({g})&for=tract:*&in=state:17%20county:031'))
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/decoder.py", line 338, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-wrote tracts.json
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_extra.py", line 99, in acs
+    raise RuntimeError(g + ' gave: ' + body[:400].decode('utf8', 'replace'))
+RuntimeError: B25003 gave: <html style="font-size: 14px;">
+
+<head>
+    <title>Missing Key</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <script type="text/javascript" src="assets/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function getCookie(name) {
+      
 failed: ['acs']
