@@ -45,6 +45,7 @@
                   "South Side": "--s-south", "Southwest Side": "--s-southwest", "Far Southwest Side": "--s-farsouthwest", "Far Southeast Side": "--s-farsoutheast"}},
       {"id": "ca", "kind": "units", "file": "community_areas", "name": "Community areas", "note": "The City’s 77 official community areas", "on": true, "hover": "{name} · #{code}"},
       {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},
+      {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},
       {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"}
     ]],

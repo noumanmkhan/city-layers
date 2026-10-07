@@ -690,6 +690,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
   --ten-1:#8FA7D9; --ten-2:#D8D2E6; --ten-3:#7A56A8;
   --uni-1:#16685E; --uni-2:#3E9E8E; --uni-3:#9CCFC3; --uni-4:#E2E5E9;
+  --drv-1:#35287F; --drv-2:#7563CF; --drv-3:#B9AEEE; --drv-4:#ECE9F8;
   --shield-toll:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -700,7 +701,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }}
@@ -709,7 +710,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }
@@ -856,6 +857,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lens.out{fill-opacity:.1;stroke-opacity:.35}
 .lens.out:hover{fill-opacity:.25}
 #map.z13 .lens{fill-opacity:.5} #map.z13 .lens:hover{fill-opacity:.62} #map.z13 .lens.out{fill-opacity:.06}
+.drv{fill-opacity:.8;stroke:var(--land-out-line);stroke-width:.7}
+.drv:hover{fill-opacity:.85}
+.drv.rest{fill-opacity:0}
+.drv.d1{fill:var(--drv-1)} .drv.d2{fill:var(--drv-2)} .drv.d3{fill:var(--drv-3)} .drv.d4{fill:var(--drv-4)}
+.legend i.rest{background:var(--land-out);border:1px solid var(--land-out-line)}
+.row[hidden],.lensbox[hidden]{display:none}
+.sw.k-suburbs{background:linear-gradient(90deg,var(--drv-1) 0 25%,var(--drv-2) 0 50%,var(--drv-3) 0 75%,var(--drv-4) 0)}
 .sw.k-lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
 .lensbox{margin:-2px 8px 8px 48px;display:grid;gap:8px}
 .lensbox .seg{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}
@@ -1032,7 +1040,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
-const CITY = {"id":"toronto","title":"Toronto Layers","description":"A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.","mapLabel":"Map of the City of Toronto","locale":"en-CA","view":{"city":[[43.581,-79.639],[43.855,-79.115]],"region":[[43.4,-80.05],[44.1,-78.85]],"max":[[43.05,-80.6],[44.75,-78.2]]},"scope":{"outer":{"name":"Greater Toronto Area","sub":"416 + 905"},"inner":{"name":"Toronto","sub":"416 only"}},"footprint":"boroughs","water":[{"name":"Lake Ontario","at":[43.585,-79.4],"cls":"lake-near"},{"name":"Lake Ontario","at":[43.45,-78.75],"cls":"lake-far"}],"attribution":"Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[43.67194,-79.38667],"name":"Toronto Reference Library (example)"},"search":{"label":"Search an address or place","country":"ca","viewbox":"-79.64,43.86,-79.11,43.58","noMatch":"No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.","more":"Or press Find to search Toronto addresses"},"outside":{"beyond":"That spot is outside the Greater Toronto Area.","regionPill":"{region} Region","note":"Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."},"units":{"singular":"Neighbourhood","plural":"neighbourhoods"},"groups":[["Places",[{"id":"boroughs","kind":"fill","size":"major","file":"boroughs","name":"Former cities","place":"Former city","note":"The 6 municipalities merged in 1998","on":true,"colors":{"Old Toronto":"--b-oldtoronto","York":"--b-york","North York":"--b-northyork","East York":"--b-eastyork","Etobicoke":"--b-etobicoke","Scarborough":"--b-scarborough"}},{"id":"areas","kind":"fill","size":"minor","file":"areas","name":"Old Toronto areas","place":"Old Toronto area","note":"Downtown, Midtown, Uptown, West End, East End","on":true,"colors":{"Downtown":"--a-downtown","Midtown":"--a-midtown","Uptown":"--a-uptown","West End":"--a-westend","East End":"--a-eastend"}},{"id":"nbhd","kind":"units","file":"neighbourhoods","name":"Neighbourhoods","note":"The City’s 158 official neighbourhoods","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Neighbourhood lens","note":"Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},{"id":"cultural","kind":"knownas","file":"cultural","name":"Known-as names","note":"King West, Little Italy, the Junction…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Arenas, big parks, music venues, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"25 wards, one councillor each","label":"Ward {num}","hover":"Ward {num} · {name}"},{"id":"prov","kind":"outline","level":"state","file":"wards","name":"Provincial ridings","note":"25 MPPs · same lines as the wards","label":"{prov}","hover":"Provincial: {prov}"},{"id":"fed","kind":"outline","level":"national","file":"federal","name":"Federal ridings","note":"24 MPs · 2023 boundaries","label":"{name}","hover":"Federal: {name}"},{"id":"bia","kind":"patches","file":"bia","name":"Business Improvement Areas","note":"85 BIAs","label":"{name}","hover":"{name} BIA"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"Arterials like King, Queen, Eglinton, Don Mills","on":true},{"id":"hwy","kind":"highways","files":["highways","gta_highways","gta_shields"],"name":"Highways","note":"400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen","on":true,"shields":{"401":"401","400":"400","404":"404","409":"409","427":"427","QEW":"QEW","2A":"2A","DVP":"DVP","Gardiner":"Gardiner","Allen":"Allen Rd"},"repeat":{"401":[0.15,0.5,0.85]},"tollShield":"407 ETR"},{"id":"go","kind":"rail","files":["go_lines","go_stations","go_lines_416"],"name":"GO Transit trains","note":"7 GO lines and UP Express to Pearson","on":true,"hover":"{name} line · Union – {to}","lineHover":{"UP":"{name} (Union – Pearson)"}},{"id":"subway","kind":"metro","files":["subway_lines","subway_stations"],"name":"Subway & LRT","note":"Lines 1, 2, 4, 5 and 6","on":true,"stationHover":"{name} · Line {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Neighbourhood lens","file":"nbhd_profiles.json","source":"2021 Census via City of Toronto Neighbourhood Profiles.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"union","short":"To Union","key":"unionBand","minutes":"union","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.","source":"TTC and Metrolinx schedules, routed with r5py."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"union","label":"To Union by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"areas","else":"boroughs"},{"knownas":2},{"layer":"bia","text":"{name} BIA","color":"--bia"},{"layer":"fed","text":"Votes in {name}","color":"--fed"}],"facts":[{"label":"Former city","layer":"boroughs","text":"{name}"},{"label":"Area","layer":"areas","text":"{name}","empty":"Outside Old Toronto","emptyWithin":{"boroughs":"Old Toronto"}},{"label":"Neighbourhood","layer":"nbhd","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"BIA","layer":"bia","text":"{name}[ (since {since})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num} · {name}"},{"label":"Provincial","layer":"wards","text":"{prov}"},{"label":"Federal","layer":"fed","text":"{name}"}],"living":{"hub":"To Union","hubText":"About {minutes} min by transit, weekday morning","caveat":"Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.","footer":"2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto."},"reps":{"file":"representatives.json","offices":[{"role":"City councillor","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"MPP","layer":"wards","table":"prov","key":"prov","sub":"{r.party}"},{"role":"MP","layer":"fed","table":"fed","key":"name","sub":"{r.party}"}],"note":"Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."}}};
+const CITY = {"id":"toronto","title":"Toronto Layers","description":"A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.","mapLabel":"Map of the City of Toronto","locale":"en-CA","view":{"city":[[43.581,-79.639],[43.855,-79.115]],"region":[[43.4,-80.05],[44.1,-78.85]],"max":[[43.05,-80.6],[44.75,-78.2]]},"scope":{"outer":{"name":"Greater Toronto Area","sub":"416 + 905"},"inner":{"name":"Toronto","sub":"416 only"}},"footprint":"boroughs","water":[{"name":"Lake Ontario","at":[43.585,-79.4],"cls":"lake-near"},{"name":"Lake Ontario","at":[43.45,-78.75],"cls":"lake-far"}],"attribution":"Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[43.67194,-79.38667],"name":"Toronto Reference Library (example)"},"search":{"label":"Search an address or place","country":"ca","viewbox":"-79.64,43.86,-79.11,43.58","noMatch":"No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.","more":"Or press Find to search Toronto addresses"},"outside":{"beyond":"That spot is outside the Greater Toronto Area.","regionPill":"{region} Region","note":"Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."},"drive":{"hub":[43.6453,-79.3806],"hubName":"Union Station"},"units":{"singular":"Neighbourhood","plural":"neighbourhoods"},"groups":[["Places",[{"id":"boroughs","kind":"fill","size":"major","file":"boroughs","name":"Former cities","place":"Former city","note":"The 6 municipalities merged in 1998","on":true,"colors":{"Old Toronto":"--b-oldtoronto","York":"--b-york","North York":"--b-northyork","East York":"--b-eastyork","Etobicoke":"--b-etobicoke","Scarborough":"--b-scarborough"}},{"id":"areas","kind":"fill","size":"minor","file":"areas","name":"Old Toronto areas","place":"Old Toronto area","note":"Downtown, Midtown, Uptown, West End, East End","on":true,"colors":{"Downtown":"--a-downtown","Midtown":"--a-midtown","Uptown":"--a-uptown","West End":"--a-westend","East End":"--a-eastend"}},{"id":"nbhd","kind":"units","file":"neighbourhoods","name":"Neighbourhoods","note":"The City’s 158 official neighbourhoods","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Neighbourhood lens","note":"Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},{"id":"cultural","kind":"knownas","file":"cultural","name":"Known-as names","note":"King West, Little Italy, the Junction…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Arenas, big parks, music venues, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"25 wards, one councillor each","label":"Ward {num}","hover":"Ward {num} · {name}"},{"id":"prov","kind":"outline","level":"state","file":"wards","name":"Provincial ridings","note":"25 MPPs · same lines as the wards","label":"{prov}","hover":"Provincial: {prov}"},{"id":"fed","kind":"outline","level":"national","file":"federal","name":"Federal ridings","note":"24 MPs · 2023 boundaries","label":"{name}","hover":"Federal: {name}"},{"id":"bia","kind":"patches","file":"bia","name":"Business Improvement Areas","note":"85 BIAs","label":"{name}","hover":"{name} BIA"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"Arterials like King, Queen, Eglinton, Don Mills","on":true},{"id":"hwy","kind":"highways","files":["highways","gta_highways","gta_shields"],"name":"Highways","note":"400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen","on":true,"shields":{"401":"401","400":"400","404":"404","409":"409","427":"427","QEW":"QEW","2A":"2A","DVP":"DVP","Gardiner":"Gardiner","Allen":"Allen Rd"},"repeat":{"401":[0.15,0.5,0.85]},"tollShield":"407 ETR"},{"id":"go","kind":"rail","files":["go_lines","go_stations","go_lines_416"],"name":"GO Transit trains","note":"7 GO lines and UP Express to Pearson","on":true,"hover":"{name} line · Union – {to}","lineHover":{"UP":"{name} (Union – Pearson)"}},{"id":"subway","kind":"metro","files":["subway_lines","subway_stations"],"name":"Subway & LRT","note":"Lines 1, 2, 4, 5 and 6","on":true,"stationHover":"{name} · Line {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Neighbourhood lens","file":"nbhd_profiles.json","source":"2021 Census via City of Toronto Neighbourhood Profiles.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"union","short":"To Union","key":"unionBand","minutes":"union","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.","source":"TTC and Metrolinx schedules, routed with r5py."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"union","label":"To Union by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"areas","else":"boroughs"},{"knownas":2},{"layer":"bia","text":"{name} BIA","color":"--bia"},{"layer":"fed","text":"Votes in {name}","color":"--fed"}],"facts":[{"label":"Former city","layer":"boroughs","text":"{name}"},{"label":"Area","layer":"areas","text":"{name}","empty":"Outside Old Toronto","emptyWithin":{"boroughs":"Old Toronto"}},{"label":"Neighbourhood","layer":"nbhd","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"BIA","layer":"bia","text":"{name}[ (since {since})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num} · {name}"},{"label":"Provincial","layer":"wards","text":"{prov}"},{"label":"Federal","layer":"fed","text":"{name}"}],"living":{"hub":"To Union","hubText":"About {minutes} min by transit, weekday morning","caveat":"Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.","footer":"2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto."},"reps":{"file":"representatives.json","offices":[{"role":"City councillor","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"MPP","layer":"wards","table":"prov","key":"prov","sub":"{r.party}"},{"role":"MP","layer":"fed","table":"fed","key":"name","sub":"{r.party}"}],"note":"Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."}}};
 /* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
    inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
@@ -1180,6 +1188,11 @@ const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
 const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
 // Representation layers draw in one of three styles, by level of government.
 const OUTLINE = {city:'ward', state:'prov', national:'fed'};
+
+/* Suburban lens: free-flow drive time to the downtown hub, by municipality, in the regional view only. */
+const DRIVE_TIERS = [['d1', 'Under 30 min', '--drv-1', 30], ['d2', '30–60 min', '--drv-2', 60], ['d3', '60–90 min', '--drv-3', 90], ['d4', '90 min or more', '--drv-4', Infinity]];
+const driveTier = m => m == null ? null : DRIVE_TIERS.find(t => m < t[3]);
+const SUBURBS = LAYERS.find(it => it.kind === 'suburbs');
 
 /* One builder per kind of layer. Each gets its config entry and its loaded data. */
 const KINDS = {
@@ -1360,6 +1373,9 @@ const KINDS = {
     });
     return g;
   },
+  suburbs: (it, base) => polyLayer({type: 'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}, {
+    cls: f => { const t = driveTier(f.properties.drive); return 'drv ' + (f.properties.rest || !t ? 'rest' : t[0]); },
+    hover: f => f.properties.name + (f.properties.drive != null && !f.properties.rest ? ' · about ' + f.properties.drive + ' min' : '')}),
   metro: (it, [lines, stns]) => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? 3 : z < 13 ? 4.5 : 6; };
@@ -1381,7 +1397,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -1415,6 +1431,11 @@ CITY.groups.forEach(([title, items]) => {
       }));
       box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); });
     }
+    if (it.kind === 'suburbs'){
+      row.classList.add('outer-only'); row.id = 'row-' + it.id;
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'drvbox'; box.hidden = true;
+      grp.appendChild(box);
+    }
     if (it.sub){
       const s = document.createElement('label'); s.className = 'sub';
       s.innerHTML = '<input type="checkbox" id="' + it.sub.id + '"' + (it.sub.on ? ' checked' : '') + '> ' + it.sub.label;
@@ -1430,6 +1451,15 @@ function syncStnNames(){
   const want = state[METRO.id] && document.getElementById(METRO.sub.id).checked;
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
+}
+function drawDriveLegend(){
+  const el = document.getElementById('drvbox'); if (!el || !data.layers) return;
+  const subs = (data.outer || {features: []}).features;
+  const used = new Set(subs.filter(f => !f.properties.rest).map(f => (driveTier(f.properties.drive) || [])[0]));
+  const rest = subs.some(f => f.properties.rest);
+  el.innerHTML = '<div class="legend">' + DRIVE_TIERS.filter(t => used.has(t[0])).map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
+    (rest ? '<div><i class="rest"></i>Unincorporated land</div>' : '') +
+    '<small>Typical drive to ' + esc(CITY.drive.hubName) + ' with no traffic: the median across each municipality, on empty roads at posted speeds. Most trips take longer; use it to compare places. Tap a spot for the time from there. Source: OpenStreetMap roads, routed with OSRM.</small></div>';
 }
 function drawLegend(){
   const el = document.getElementById('legend'); if (!el) return;
@@ -1473,6 +1503,10 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'suburbs'){
+    document.getElementById('drvbox').hidden = !on;
+    if (on && scope === 'inner') map.removeLayer(lyr);   // shown only in the regional view
+  }
   if (kindOf(id) === 'lens'){
     document.getElementById('lensbox').hidden = !on;
     drawLegend();
@@ -1551,6 +1585,7 @@ function inspect(latlng, title){
     here.hidden = false;
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
       '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
+      driveHere(x, y, m) +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     return;
@@ -1583,6 +1618,17 @@ function inspect(latlng, title){
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
+}
+// Free-flow drive time from the nearest grid point (about 1.5 km apart), and the municipality's typical time.
+function driveHere(x, y, m){
+  const g = data.driveGrid; if (!g || !CITY.drive) return '';
+  let best = null, bd = Infinity;
+  g.points.forEach(p => { const d = metres([x, y], p); if (d < bd){ bd = d; best = p; } });
+  if (!best || bd > 2000) return '';
+  const t = driveTier(best[2]);
+  return '<div class="live drive"><dl><dt>Drive to ' + esc(CITY.drive.hubName) + '</dt><dd><span class="tier"><i style="background:var(' + t[2] + ')"></i>About ' + best[2] + ' min from here</span>' +
+    (m.drive != null && !m.rest ? '<span>Typical for ' + esc(m.name) + ': ' + m.drive + ' min</span>' : '') +
+    '<span class="caveat">With no traffic, at posted speeds. Most trips take longer.</span></dd></dl></div>';
 }
 function renderEmpty(msg){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
@@ -1779,6 +1825,12 @@ function setScope(s, move){
   map.getContainer().classList.toggle('mode-inner', s === 'inner');
   if (mask) { if (s === 'inner') mask.addTo(map); else map.removeLayer(mask); }
   ORDER.forEach(it => { if (layers[it.id] && layers[it.id]._scope) layers[it.id]._scope(s); });
+  if (SUBURBS){
+    document.getElementById('row-' + SUBURBS.id).hidden = s === 'inner';
+    document.getElementById('drvbox').hidden = s === 'inner' || !state[SUBURBS.id];
+    const lyr = layers[SUBURBS.id];
+    if (lyr){ if (s === 'outer' && state[SUBURBS.id]) lyr.addTo(map); else map.removeLayer(lyr); }
+  }
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
 }
@@ -1790,7 +1842,8 @@ const files = ['base', 'regions'];
 LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
-  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; })]))
+  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
+    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
@@ -1806,7 +1859,8 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   CITY.lens.lenses.filter(L_ => L_.optional).forEach(L_ => {
     if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
   });
-  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : src(it)); });
+  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : it.kind === 'suburbs' ? base : src(it)); });
+  drawDriveLegend();
   ORDER.forEach(it => { if (state[it.id]) layers[it.id].addTo(map); });
   syncStnNames();
   zoomClasses();

@@ -25,6 +25,7 @@
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
   --ten-1:#8FA7D9; --ten-2:#D8D2E6; --ten-3:#7A56A8;
   --uni-1:#16685E; --uni-2:#3E9E8E; --uni-3:#9CCFC3; --uni-4:#E2E5E9;
+  --drv-1:#35287F; --drv-2:#7563CF; --drv-3:#B9AEEE; --drv-4:#ECE9F8;
   --shield-toll:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -35,7 +36,7 @@
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }}
@@ -44,7 +45,7 @@
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }
@@ -191,6 +192,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lens.out{fill-opacity:.1;stroke-opacity:.35}
 .lens.out:hover{fill-opacity:.25}
 #map.z13 .lens{fill-opacity:.5} #map.z13 .lens:hover{fill-opacity:.62} #map.z13 .lens.out{fill-opacity:.06}
+.drv{fill-opacity:.8;stroke:var(--land-out-line);stroke-width:.7}
+.drv:hover{fill-opacity:.85}
+.drv.rest{fill-opacity:0}
+.drv.d1{fill:var(--drv-1)} .drv.d2{fill:var(--drv-2)} .drv.d3{fill:var(--drv-3)} .drv.d4{fill:var(--drv-4)}
+.legend i.rest{background:var(--land-out);border:1px solid var(--land-out-line)}
+.row[hidden],.lensbox[hidden]{display:none}
+.sw.k-suburbs{background:linear-gradient(90deg,var(--drv-1) 0 25%,var(--drv-2) 0 50%,var(--drv-3) 0 75%,var(--drv-4) 0)}
 .sw.k-lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
 .lensbox{margin:-2px 8px 8px 48px;display:grid;gap:8px}
 .lensbox .seg{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}

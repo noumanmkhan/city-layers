@@ -690,6 +690,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
   --ten-1:#8FA7D9; --ten-2:#D8D2E6; --ten-3:#7A56A8;
   --uni-1:#16685E; --uni-2:#3E9E8E; --uni-3:#9CCFC3; --uni-4:#E2E5E9;
+  --drv-1:#35287F; --drv-2:#7563CF; --drv-3:#B9AEEE; --drv-4:#ECE9F8;
   --shield-toll:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -700,7 +701,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }}
@@ -709,7 +710,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
+  --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
   color-scheme:dark;
 }
@@ -856,6 +857,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lens.out{fill-opacity:.1;stroke-opacity:.35}
 .lens.out:hover{fill-opacity:.25}
 #map.z13 .lens{fill-opacity:.5} #map.z13 .lens:hover{fill-opacity:.62} #map.z13 .lens.out{fill-opacity:.06}
+.drv{fill-opacity:.8;stroke:var(--land-out-line);stroke-width:.7}
+.drv:hover{fill-opacity:.85}
+.drv.rest{fill-opacity:0}
+.drv.d1{fill:var(--drv-1)} .drv.d2{fill:var(--drv-2)} .drv.d3{fill:var(--drv-3)} .drv.d4{fill:var(--drv-4)}
+.legend i.rest{background:var(--land-out);border:1px solid var(--land-out-line)}
+.row[hidden],.lensbox[hidden]{display:none}
+.sw.k-suburbs{background:linear-gradient(90deg,var(--drv-1) 0 25%,var(--drv-2) 0 50%,var(--drv-3) 0 75%,var(--drv-4) 0)}
 .sw.k-lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
 .lensbox{margin:-2px 8px 8px 48px;display:grid;gap:8px}
 .lensbox .seg{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}
@@ -1031,7 +1039,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
-const CITY = {"id":"chicago","title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search an address or place","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Or press Find to search Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"drive":{"hub":[41.882,-87.6278],"hubName":"State & Madison"},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","place":"Side of the city","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"}],"living":{"caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
+const CITY = {"id":"chicago","title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search an address or place","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Or press Find to search Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"drive":{"hub":[41.882,-87.6278],"hubName":"State & Madison"},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","place":"Side of the city","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"}],"living":{"caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
 /* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
    inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
@@ -1179,6 +1187,11 @@ const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true
 const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
 // Representation layers draw in one of three styles, by level of government.
 const OUTLINE = {city:'ward', state:'prov', national:'fed'};
+
+/* Suburban lens: free-flow drive time to the downtown hub, by municipality, in the regional view only. */
+const DRIVE_TIERS = [['d1', 'Under 30 min', '--drv-1', 30], ['d2', '30–60 min', '--drv-2', 60], ['d3', '60–90 min', '--drv-3', 90], ['d4', '90 min or more', '--drv-4', Infinity]];
+const driveTier = m => m == null ? null : DRIVE_TIERS.find(t => m < t[3]);
+const SUBURBS = LAYERS.find(it => it.kind === 'suburbs');
 
 /* One builder per kind of layer. Each gets its config entry and its loaded data. */
 const KINDS = {
@@ -1359,6 +1372,9 @@ const KINDS = {
     });
     return g;
   },
+  suburbs: (it, base) => polyLayer({type: 'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}, {
+    cls: f => { const t = driveTier(f.properties.drive); return 'drv ' + (f.properties.rest || !t ? 'rest' : t[0]); },
+    hover: f => f.properties.name + (f.properties.drive != null && !f.properties.rest ? ' · about ' + f.properties.drive + ' min' : '')}),
   metro: (it, [lines, stns]) => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? 3 : z < 13 ? 4.5 : 6; };
@@ -1380,7 +1396,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -1414,6 +1430,11 @@ CITY.groups.forEach(([title, items]) => {
       }));
       box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); });
     }
+    if (it.kind === 'suburbs'){
+      row.classList.add('outer-only'); row.id = 'row-' + it.id;
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'drvbox'; box.hidden = true;
+      grp.appendChild(box);
+    }
     if (it.sub){
       const s = document.createElement('label'); s.className = 'sub';
       s.innerHTML = '<input type="checkbox" id="' + it.sub.id + '"' + (it.sub.on ? ' checked' : '') + '> ' + it.sub.label;
@@ -1429,6 +1450,15 @@ function syncStnNames(){
   const want = state[METRO.id] && document.getElementById(METRO.sub.id).checked;
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
+}
+function drawDriveLegend(){
+  const el = document.getElementById('drvbox'); if (!el || !data.layers) return;
+  const subs = (data.outer || {features: []}).features;
+  const used = new Set(subs.filter(f => !f.properties.rest).map(f => (driveTier(f.properties.drive) || [])[0]));
+  const rest = subs.some(f => f.properties.rest);
+  el.innerHTML = '<div class="legend">' + DRIVE_TIERS.filter(t => used.has(t[0])).map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
+    (rest ? '<div><i class="rest"></i>Unincorporated land</div>' : '') +
+    '<small>Typical drive to ' + esc(CITY.drive.hubName) + ' with no traffic: the median across each municipality, on empty roads at posted speeds. Most trips take longer; use it to compare places. Tap a spot for the time from there. Source: OpenStreetMap roads, routed with OSRM.</small></div>';
 }
 function drawLegend(){
   const el = document.getElementById('legend'); if (!el) return;
@@ -1472,6 +1502,10 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'suburbs'){
+    document.getElementById('drvbox').hidden = !on;
+    if (on && scope === 'inner') map.removeLayer(lyr);   // shown only in the regional view
+  }
   if (kindOf(id) === 'lens'){
     document.getElementById('lensbox').hidden = !on;
     drawLegend();
@@ -1550,6 +1584,7 @@ function inspect(latlng, title){
     here.hidden = false;
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
       '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
+      driveHere(x, y, m) +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     return;
@@ -1582,6 +1617,17 @@ function inspect(latlng, title){
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
+}
+// Free-flow drive time from the nearest grid point (about 1.5 km apart), and the municipality's typical time.
+function driveHere(x, y, m){
+  const g = data.driveGrid; if (!g || !CITY.drive) return '';
+  let best = null, bd = Infinity;
+  g.points.forEach(p => { const d = metres([x, y], p); if (d < bd){ bd = d; best = p; } });
+  if (!best || bd > 2000) return '';
+  const t = driveTier(best[2]);
+  return '<div class="live drive"><dl><dt>Drive to ' + esc(CITY.drive.hubName) + '</dt><dd><span class="tier"><i style="background:var(' + t[2] + ')"></i>About ' + best[2] + ' min from here</span>' +
+    (m.drive != null && !m.rest ? '<span>Typical for ' + esc(m.name) + ': ' + m.drive + ' min</span>' : '') +
+    '<span class="caveat">With no traffic, at posted speeds. Most trips take longer.</span></dd></dl></div>';
 }
 function renderEmpty(msg){
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
@@ -1778,6 +1824,12 @@ function setScope(s, move){
   map.getContainer().classList.toggle('mode-inner', s === 'inner');
   if (mask) { if (s === 'inner') mask.addTo(map); else map.removeLayer(mask); }
   ORDER.forEach(it => { if (layers[it.id] && layers[it.id]._scope) layers[it.id]._scope(s); });
+  if (SUBURBS){
+    document.getElementById('row-' + SUBURBS.id).hidden = s === 'inner';
+    document.getElementById('drvbox').hidden = s === 'inner' || !state[SUBURBS.id];
+    const lyr = layers[SUBURBS.id];
+    if (lyr){ if (s === 'outer' && state[SUBURBS.id]) lyr.addTo(map); else map.removeLayer(lyr); }
+  }
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
 }
@@ -1789,7 +1841,8 @@ const files = ['base', 'regions'];
 LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
-  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; })]))
+  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
+    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
@@ -1805,7 +1858,8 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   CITY.lens.lenses.filter(L_ => L_.optional).forEach(L_ => {
     if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
   });
-  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : src(it)); });
+  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : it.kind === 'suburbs' ? base : src(it)); });
+  drawDriveLegend();
   ORDER.forEach(it => { if (state[it.id]) layers[it.id].addTo(map); });
   syncStnNames();
   zoomClasses();
