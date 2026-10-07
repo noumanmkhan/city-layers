@@ -487,6 +487,13 @@ document.getElementById('allOff').addEventListener('click', () => {
 });
 const panel = document.getElementById('panel');
 document.getElementById('ph').addEventListener('click', () => { if (matchMedia('(max-width:760px)').matches) panel.classList.toggle('collapsed'); });
+// The title's city switcher and the hub link: go there, and don't let the tap fold the phone panel.
+const citySwitch = document.getElementById('citySwitch');
+if (citySwitch){
+  const here0 = citySwitch.value;
+  citySwitch.addEventListener('change', () => { const to = citySwitch.value; citySwitch.value = here0; location.href = to; });
+}
+document.querySelectorAll('.ph .switch, .ph .hub-link').forEach(el => el.addEventListener('click', e => e.stopPropagation()));
 if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
 
 /* ---------- What's here ---------- */

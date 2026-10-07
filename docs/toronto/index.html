@@ -737,6 +737,17 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .ph h1{margin:0;font-size:21px;font-weight:800;letter-spacing:-.02em;text-wrap:balance}
 .ph p{margin:4px 0 0;color:var(--ink-2);font-size:12.5px}
 .ph .grab{display:none}
+/* City switcher: a native dropdown laid invisibly over the title, so phones get their own picker. */
+.hub-link{display:flex;width:max-content;align-items:center;gap:3px;margin:0 0 6px -2px;font-size:11.5px;font-weight:600;color:var(--ink-3);text-decoration:none}
+.hub-link svg{width:13px;height:13px}
+.hub-link:hover{color:var(--accent)}
+.hub-link:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+.switch{position:relative;display:inline-block;max-width:100%}
+.switch h1{display:flex;align-items:center;gap:6px}
+.switch .chev{flex:none;width:16px;height:16px;color:var(--ink-3);transition:transform .15s,color .15s}
+.switch:hover .chev{color:var(--accent);transform:translateY(1px)}
+.switch select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px;appearance:none;border:none}
+.switch:focus-within h1{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
 #layers{overflow:auto;padding:6px 10px 14px;flex:1;min-height:0}
 .grp{margin-top:10px}
 .grp h2{margin:8px 8px 4px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
@@ -955,6 +966,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph .grab{display:block;width:36px;height:4px;border-radius:2px;background:var(--rule);margin:0 auto 8px}
   .ph h1{font-size:17px}
   .ph p{display:none}
+  .ph .hub-link{display:none}
   #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
@@ -1004,7 +1016,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   <aside id="panel" aria-label="Map layers">
     <div class="ph" id="ph">
       <div class="grab" aria-hidden="true"></div>
-      <h1>Toronto Layers</h1>
+      <a class="hub-link" href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>All maps</a>
+      <div class="switch"><h1>Toronto Layers<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h1><select id="citySwitch" aria-label="Switch map"><option value="../chicago/">Chicago Layers</option><option value="../toronto/" selected>Toronto Layers</option><option value="../">All maps</option></select></div>
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
     </div>
     <div class="scope" role="radiogroup" aria-label="Map extent">
@@ -1530,6 +1543,13 @@ document.getElementById('allOff').addEventListener('click', () => {
 });
 const panel = document.getElementById('panel');
 document.getElementById('ph').addEventListener('click', () => { if (matchMedia('(max-width:760px)').matches) panel.classList.toggle('collapsed'); });
+// The title's city switcher and the hub link: go there, and don't let the tap fold the phone panel.
+const citySwitch = document.getElementById('citySwitch');
+if (citySwitch){
+  const here0 = citySwitch.value;
+  citySwitch.addEventListener('change', () => { const to = citySwitch.value; citySwitch.value = here0; location.href = to; });
+}
+document.querySelectorAll('.ph .switch, .ph .hub-link').forEach(el => el.addEventListener('click', e => e.stopPropagation()));
 if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
 
 /* ---------- What's here ---------- */

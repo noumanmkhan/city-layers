@@ -61,6 +61,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 
 The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, time to Union, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
 
+**Moving between maps:** the map's name at the top of the layer panel is a menu. Pick another city to jump straight to its map, or *All maps* to return to the maps hub; an *All maps* link above the name does the same on wider screens. Each city's menu is built from the cities in the repo, so a new city appears in every map's menu on its next build.
+
 **Light or dark:** the page follows your device's setting, or you can pick Light or Dark at the bottom of the layer panel.
 
 **What's here:** click anywhere and a card sums up the spot in a few coloured pills, then breaks it down in sections you can open and close (the page remembers which you keep open):
