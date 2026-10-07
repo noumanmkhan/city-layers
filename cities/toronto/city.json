@@ -55,7 +55,8 @@
       {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},
       {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
-      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"}
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"},
+      {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Heritage districts", "note": "29 Heritage Conservation Districts in force", "label": "{name}", "hover": "{name} Heritage Conservation District"}
     ]],
     ["Representation", [
       {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "25 wards, one councillor each", "label": "Ward {num}", "hover": "Ward {num} · {name}"},
@@ -114,6 +115,7 @@
       {"label": "Area", "layer": "areas", "text": "{name}", "empty": "Outside Old Toronto", "emptyWithin": {"boroughs": "Old Toronto"}},
       {"label": "Neighbourhood", "layer": "nbhd", "text": "{name} (#{code})"},
       {"label": "Known as", "knownas": true},
+      {"label": "Heritage district", "layer": "heritage", "text": "{name}[ (designated {since})]", "onlyInside": true},
       {"label": "BIA", "layer": "bia", "text": "{name}[ (since {since})]", "empty": "None"},
       {"label": "City ward", "layer": "wards", "text": "Ward {num} · {name}"},
       {"label": "Provincial", "layer": "wards", "text": "{prov}"},

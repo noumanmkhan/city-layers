@@ -9,6 +9,7 @@ sandbox these maps are built in can't reach the source servers. Fetched on 2026-
 | `neighborhoods.geojson` | City of Chicago Data Portal, Boundaries - Neighborhoods (`y6yq-dbs2`, 98 areas, 2012). Used only for the known-as names that aren't community areas |
 | `wards.geojson` | City of Chicago Data Portal, Boundaries - Wards (2023-) (`p293-wvbd`) |
 | `ssa.geojson` | City of Chicago Data Portal, Boundaries - Special Service Areas (`cmr6-dn8c`); active SSAs only |
+| `heritage_districts.geojson`, `landmark_districts.json` | City of Chicago Data Portal, Boundaries - Landmark Districts (`t8pq-wu86`, a shapefile last updated in 2012, so districts designated since then are missing) and the Landmark Districts list (`zidz-sdfj`), fetched 2026-10-07 by `.github/workflows/fetch-heritage.yml`. `heritage.py` drops a trailing "District" from names and writes out two names cut short in the shapefile |
 | `city.geojson` | City of Chicago Data Portal, Boundaries - City (`qqq8-j68g`) |
 | `cta_lines.geojson` | City of Chicago Data Portal, CTA - 'L' (Rail) Lines (`xbyr-jnvx`): track segments, each listing the lines that use it |
 | `cta_stops.json` | City of Chicago Data Portal, CTA - System Information - List of 'L' Stops (`8pix-ypme`): platforms grouped into stations by `map_id` |

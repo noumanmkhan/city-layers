@@ -30,6 +30,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
+| Heritage districts | 29 | Heritage Conservation Districts in force;<br>ones under study or appeal are left out |
 | Neighbourhood lens | 158 | Housing cost, time to Union,<br>getting to work, renters and owners |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
@@ -41,6 +42,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 **Address search:** type an address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service across the GTA, with Toronto matches listed first; an address beyond the city limits switches the map to the regional view. Landmarks and place names also suggest themselves as you type, without any network call: landmarks with their old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), plus every neighbourhood, known-as name, former city and surrounding municipality. Choosing a place like Deer Park or Mississauga frames it on the map and fills in the readout, switching to the regional view for places outside the city. Beyond Toronto, the GTA's named communities suggest themselves too (Meadowvale, Port Credit, Woodbridge, Unionville, Brooklin, Kleinburg…, about 470 in all, from OpenStreetMap's place names): choosing one shows where it is, with its municipality and region, and an address in the GTA gets a "Near Meadowvale"-style pill. Most GTA municipalities don't publish neighbourhood boundaries the way Toronto does, so these are named points for finding your way, not drawn areas. On the Chicago map the same works for community areas, the sides and suburbs like Lombard.
 
 **Shareable links:** the address bar keeps up with the map as you use it: the pin and its name, the layers that are on, the lens and any "Narrow it down" picks, the 416 or 416 + 905 view, and where the map is looking. Copy it, or use the Share button (in the readout, and at the foot of the layer panel; on phones it opens the share sheet), and whoever opens the link sees the same map. Everything sits after the `#`, so it never reaches a server, and anything a link leaves out falls back to the starting setting. Layers are named by short ids that don't change when a layer's label does, so old links keep working. Works the same on the Chicago map.
+
+**Heritage districts:** a spot inside a protected district gets a line on the readout saying which one and the year it was designated ("Cabbagetown South (designated 2005)"); elsewhere the line doesn't appear. In Toronto these are the Heritage Conservation Districts in force under the Ontario Heritage Act; districts still under study or under appeal aren't shown, so the map never presents them as protected. Chicago's equivalent is its Landmark Districts.
 
 **Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
 
@@ -94,6 +97,7 @@ The second city runs on the same engine with its own data and config (`cities/ch
 | Illinois House districts | 36 | Each pair makes a Senate district,<br>so one layer gives both |
 | Congressional districts | 9 | Illinois seats in the U.S. House |
 | Special Service Areas | 58 | Chicago's equivalent of BIAs |
+| Landmark districts | 59 | The City's boundary file dates from 2012,<br>so later designations are missing |
 | Expressways | 11 in Chicago | Kennedy, Dan Ryan, Eisenhower,<br>Stevenson, Lake Shore Drive |
 | Metra | 11 lines | From four downtown terminals |
 | The 'L' | 8 lines, 144 stations | CTA rapid transit |
@@ -153,7 +157,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 
 ## Data sources and licences
 
-- City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, Neighbourhood Profiles (2021 Census), BIAs, expressway centrelines and the TTC GTFS feed.
+- City of Toronto Open Data, under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/): former municipalities, wards, neighbourhoods, Neighbourhood Profiles (2021 Census), BIAs, Heritage Conservation Districts, expressway centrelines and the TTC GTFS feed.
 - Elected representatives from [toronto.ca](https://www.toronto.ca/city-government/council/members-of-council/), the [Legislative Assembly of Ontario](https://www.ola.org/en/members/current) and the [House of Commons](https://www.ourcommons.ca/members/en).
 - Electoral boundaries from Elections Canada (2023 Representation Order) and Elections Ontario, via [Open North Represent](https://represent.opennorth.ca/).
 - Subway, LRT and GO/UP geometry derived from TTC and Metrolinx GTFS via [agcghub/toronto-bus-map](https://github.com/Miqell24/toronto-bus-map).
@@ -164,7 +168,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 
 Chicago:
 
-- [City of Chicago Data Portal](https://data.cityofchicago.org/) ([terms](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html)): community areas, neighbourhoods, wards, SSAs, the city boundary, 'L' lines and stations, and ward offices.
+- [City of Chicago Data Portal](https://data.cityofchicago.org/) ([terms](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html)): community areas, neighbourhoods, wards, SSAs, Landmark Districts, the city boundary, 'L' lines and stations, and ward offices.
 - U.S. Census Bureau (public domain): TIGERweb municipalities, counties, legislative districts, tract points and Lake Michigan's shoreline; American Community Survey 2020–2024 five-year tables.
 - [Metra GTFS](https://metra.com/developers) for Metra lines and stations.
 - Illinois legislators from [Open States](https://openstates.org/) (public domain); members of Congress from the [Clerk of the U.S. House](https://clerk.house.gov/).

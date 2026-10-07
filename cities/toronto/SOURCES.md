@@ -9,6 +9,7 @@ All files were fetched on 2026-10-06.
 | `nbhd158.geojson` | City of Toronto Open Data, "Neighbourhoods" (158, 4326 GeoJSON) |
 | `nbhd140.geojson` | City of Toronto Open Data, historical 140-neighbourhood boundaries (used only to define the Old Toronto areas) |
 | `bia.geojson` | City of Toronto Open Data, "Business Improvement Areas" (85 features) |
+| `heritage_districts.geojson` | City of Toronto Open Data, "Heritage Conservation Districts" (shapefile, refreshed quarterly; fetched 2026-10-07 by `.github/workflows/fetch-heritage.yml`). `heritage.py` keeps the 29 with type "Designated District" and drops the ones "Under Study" or "Under Appeal". A designation date of 1899-11-30 means none recorded |
 | `fed2023.geojson` | Open North Represent: `/boundaries/federal-electoral-districts-2023-representation-order/simple_shape`, filtered to the Toronto area |
 | `prov2015.geojson` | Open North Represent: `/boundaries/ontario-electoral-districts-representation-act-2015/simple_shape`, filtered to the Toronto area. Used for riding names; the geometry comes from the wards. |
 | `ttc_rapid_routes.geojson`, `ttc_rapid_stops.geojson` | Lines 1, 2, 4, 5 and 6 extracted from github.com/Miqell24/toronto-bus-map (`docs/data/route.geojson`, `stops.geojson`), which is built from the TTC's Merged GTFS feed |

@@ -47,7 +47,8 @@
       {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},
       {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
-      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"}
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"},
+      {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Landmark districts", "note": "59 Chicago Landmark Districts · boundaries as of 2012", "label": "{name}", "hover": "{name} Landmark District"}
     ]],
     ["Representation", [
       {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "50 wards, one alderperson each", "label": "Ward {num}", "hover": "Ward {num}"},
@@ -99,6 +100,7 @@
       {"label": "Side", "layer": "sides", "text": "{name}"},
       {"label": "Community area", "layer": "ca", "text": "{name} (#{code})"},
       {"label": "Known as", "knownas": true},
+      {"label": "Landmark district", "layer": "heritage", "text": "{name}[ (designated {since})]", "onlyInside": true},
       {"label": "SSA", "layer": "ssa", "text": "{name}[ (#{num})]", "empty": "None"},
       {"label": "City ward", "layer": "wards", "text": "Ward {num}"},
       {"label": "Illinois House", "layer": "house", "text": "District {num}"},

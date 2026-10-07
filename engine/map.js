@@ -24,7 +24,7 @@ function fill(tpl, ctx){
 const LAYERS = CITY.groups.flatMap(([, items]) => items);
 const byKind = k => LAYERS.find(it => it.kind === k);
 const UNITS = byKind('units'), METRO = byKind('metro');
-const AREA_KINDS = ['fill', 'units', 'outline', 'patches'];   // polygon layers the "What's here" card tests against
+const AREA_KINDS = ['fill', 'units', 'outline', 'patches', 'districts'];   // polygon layers the "What's here" card tests against
 
 /* Neighbourhood lenses (tiers from the city's profile data). One shows at a time. */
 const LENSES = {};
@@ -80,7 +80,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia'];
+const LABEL_PRIORITY = ['.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -162,6 +162,8 @@ const KINDS = {
     const c = OUTLINE[it.level];
     return polyLayer(fc, {pane:'civic', cls: () => c, label: f => fill(it.label, f.properties), lcls: () => 'lbl-' + c, hover: f => fill(it.hover, f.properties)});
   },
+  // Protected districts (heritage, landmark): a dashed outline with a light wash, so the streets inside still read.
+  districts: (it, fc) => polyLayer(fc, {pane:'civic', cls: () => 'hd', label: f => fill(it.label, f.properties), lcls: () => 'lbl-hd', hover: f => fill(it.hover, f.properties)}),
   patches: (it, fc) => polyLayer(fc, {pane:'civic', cls: () => 'bia', label: f => fill(it.label, f.properties), lcls: () => 'lbl-bia', hover: f => fill(it.hover, f.properties)}),
   lens: (it, [fc, prof]) => {
     const g = L.geoJSON(fc, {pane:'fill', style: f => {
@@ -354,7 +356,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -586,7 +588,7 @@ function inspect(latlng, title, muniName){
     if (p.else) { if (h) pills.push([colorOf(p.layer, h), h.properties.name]); else if (hits[p.else]) pills.push([colorOf(p.else, hits[p.else]), hits[p.else].properties.name]); return; }
     if (h) pills.push(['var(' + p.color + ')', fill(p.text, h.properties)]);
   });
-  const facts = CITY.card.facts.map(r => {
+  const facts = CITY.card.facts.filter(r => !r.onlyInside || hits[r.layer]).map(r => {
     if (r.knownas) return [r.label, near.length ? near.map(a => a[0].properties.name).join(', ') : '—'];
     const h = hits[r.layer];
     if (h) return [r.label, fill(r.text, h.properties)];

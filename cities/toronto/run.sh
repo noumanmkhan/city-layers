@@ -12,9 +12,10 @@ python3 streets.py
 python3 landmarks.py
 python3 go.py
 python3 profiles.py
+python3 heritage.py
 OUT=../../docs/toronto/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }
-simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10
+simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10; simplify heritage 3
 simplify federal 10; simplify neighbourhoods 10; simplify wards 10
 npx mapshaper -i tmp/highways.geojson -simplify interval=6 -o $OUT/highways.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/streets.geojson -simplify interval=6 keep-shapes -o $OUT/streets.geojson precision=0.00001 -quiet
