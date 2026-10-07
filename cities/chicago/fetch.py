@@ -30,6 +30,19 @@ def get(url, data=None, tries=3):
     raise RuntimeError('failed: ' + url)
 
 
+FAILED = []
+
+
+def step(label, fn):
+    """Run one fetch; log a failure and carry on, so one bad source doesn't lose the rest."""
+    try:
+        fn()
+    except Exception as e:
+        import traceback
+        print('FAILED', label, repr(e)); traceback.print_exc()
+        FAILED.append(label)
+
+
 def save(name, obj):
     with open(os.path.join(RAW, name), 'w') as f:
         json.dump(obj, f, separators=(',', ':'))
@@ -40,10 +53,10 @@ def save(name, obj):
 PORTAL = 'https://data.cityofchicago.org/resource/'
 for name, ds in [('community_areas', 'igwz-8jzy'), ('neighborhoods', 'y6yq-dbs2'), ('wards', 'p293-wvbd'),
                  ('ssa', 'cmr6-dn8c'), ('city', 'qqq8-j68g'), ('cta_lines', 'xbyr-jnvx')]:
-    save(name + '.geojson', json.loads(get(PORTAL + ds + '.geojson?$limit=50000')))
+    step(name, lambda: save(name + '.geojson', json.loads(get(PORTAL + ds + '.geojson?$limit=50000'))))
     time.sleep(2)
 for name, ds in [('cta_stops', '8pix-ypme'), ('ward_offices', 'htai-wnw4'), ('acs_community_areas', 't68z-cikk')]:
-    save(name + '.json', json.loads(get(PORTAL + ds + '.json?$limit=50000')))
+    step(name, lambda: save(name + '.json', json.loads(get(PORTAL + ds + '.json?$limit=50000'))))
     time.sleep(2)
 
 # ---------- Census TIGERweb ----------
@@ -70,7 +83,7 @@ for name, path, where, box, off in [
         ('congress', 'Legislative/MapServer/0', "STATE='17'", CITY, 0.00005),
         ('il_senate', 'Legislative/MapServer/1', "STATE='17'", CITY, 0.00005),
         ('il_house', 'Legislative/MapServer/2', "STATE='17'", CITY, 0.00005)]:
-    save(name + '.geojson', tiger(path, where, box, off))
+    step(name, lambda: save(name + '.geojson', tiger(path, where, box, off)))
     time.sleep(3)
 
 # ---------- OpenStreetMap (Overpass) ----------
@@ -84,40 +97,46 @@ def overpass(query, name):
 
 
 s, w, n, e = REGION[1], REGION[0], REGION[3], REGION[2]
-overpass(f'[out:json][timeout:240];way["highway"~"^(motorway|trunk)$"]({s},{w},{n},{e});out tags geom;', 'osm_expressways.json')
+q1 = f'[out:json][timeout:240];way["highway"~"^(motorway|trunk)$"]({s},{w},{n},{e});out tags geom;'
+step('expressways', lambda: overpass(q1, 'osm_expressways.json'))
 s, w, n, e = CITY[1], CITY[0], CITY[3], CITY[2]
-overpass(f'[out:json][timeout:240];way["highway"~"^(primary|secondary|tertiary)$"]["name"]({s},{w},{n},{e});out tags geom;', 'osm_arterials.json')
+q2 = f'[out:json][timeout:240];way["highway"~"^(primary|secondary|tertiary)$"]["name"]({s},{w},{n},{e});out tags geom;'
+step('arterials', lambda: overpass(q2, 'osm_arterials.json'))
 
 # ---------- Metra GTFS ----------
-z = zipfile.ZipFile(io.BytesIO(get('https://schedules.metrarail.com/gtfs/schedule.zip')))
-rows = lambda f: list(csv.DictReader(io.TextIOWrapper(z.open(f), encoding='utf-8-sig')))
-routes = {r['route_id']: r for r in rows('routes.txt')}
-trips = rows('trips.txt')
-shape_count = defaultdict(Counter)
-trip_route = {}
-for t in trips:
-    trip_route[t['trip_id']] = t['route_id']
-    if t.get('shape_id'):
-        shape_count[(t['route_id'], t.get('direction_id', ''))][t['shape_id']] += 1
-pts = defaultdict(list)
-for r in rows('shapes.txt'):
-    pts[r['shape_id']].append((int(r['shape_pt_sequence']), round(float(r['shape_pt_lon']), 5), round(float(r['shape_pt_lat']), 5)))
-stop_routes = defaultdict(set)
-with z.open('stop_times.txt') as fh:
-    for r in csv.DictReader(io.TextIOWrapper(fh, encoding='utf-8-sig')):
-        rt = trip_route.get(r['trip_id'])
-        if rt: stop_routes[r['stop_id']].add(rt)
-out = {'routes': {}, 'stops': []}
-for rid, r in routes.items():
-    shapes = {}
-    for (route, d), c in shape_count.items():
-        if route != rid: continue
-        for sid, _ in c.most_common(4):   # main patterns and branches
-            shapes[sid] = [[x, y] for _, x, y in sorted(pts[sid])]
-    out['routes'][rid] = {'short': r.get('route_short_name'), 'long': r.get('route_long_name'), 'color': r.get('route_color'), 'shapes': shapes}
-for s_ in rows('stops.txt'):
-    if s_['stop_id'] in stop_routes:
-        out['stops'].append({'id': s_['stop_id'], 'name': s_['stop_name'], 'lon': float(s_['stop_lon']), 'lat': float(s_['stop_lat']),
-                             'routes': sorted(stop_routes[s_['stop_id']])})
-save('metra.json', out)
-print('done')
+def metra():
+    z = zipfile.ZipFile(io.BytesIO(get('https://schedules.metrarail.com/gtfs/schedule.zip')))
+    rows = lambda f: list(csv.DictReader(io.TextIOWrapper(z.open(f), encoding='utf-8-sig')))
+    routes = {r['route_id']: r for r in rows('routes.txt')}
+    trips = rows('trips.txt')
+    shape_count = defaultdict(Counter)
+    trip_route = {}
+    for t in trips:
+        trip_route[t['trip_id']] = t['route_id']
+        if t.get('shape_id'):
+            shape_count[(t['route_id'], t.get('direction_id', ''))][t['shape_id']] += 1
+    pts = defaultdict(list)
+    for r in rows('shapes.txt'):
+        pts[r['shape_id']].append((int(r['shape_pt_sequence']), round(float(r['shape_pt_lon']), 5), round(float(r['shape_pt_lat']), 5)))
+    stop_routes = defaultdict(set)
+    with z.open('stop_times.txt') as fh:
+        for r in csv.DictReader(io.TextIOWrapper(fh, encoding='utf-8-sig')):
+            rt = trip_route.get(r['trip_id'])
+            if rt: stop_routes[r['stop_id']].add(rt)
+    out = {'routes': {}, 'stops': []}
+    for rid, r in routes.items():
+        shapes = {}
+        for (route, d), c in shape_count.items():
+            if route != rid: continue
+            for sid, _ in c.most_common(4):   # main patterns and branches
+                shapes[sid] = [[x, y] for _, x, y in sorted(pts[sid])]
+        out['routes'][rid] = {'short': r.get('route_short_name'), 'long': r.get('route_long_name'), 'color': r.get('route_color'), 'shapes': shapes}
+    for s_ in rows('stops.txt'):
+        if s_['stop_id'] in stop_routes:
+            out['stops'].append({'id': s_['stop_id'], 'name': s_['stop_name'], 'lon': float(s_['stop_lon']), 'lat': float(s_['stop_lat']),
+                                 'routes': sorted(stop_routes[s_['stop_id']])})
+    save('metra.json', out)
+
+
+step('metra', metra)
+print('failed:', FAILED or 'none')
