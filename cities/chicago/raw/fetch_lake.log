@@ -1,0 +1,2 @@
+Hydro layers: [(0, 'Linear Hydrography'), (1, 'Areal Hydrography'), (2, 'Glaciers')]
+wrote lake_michigan.geojson 0 features from layer Areal Hydrography
