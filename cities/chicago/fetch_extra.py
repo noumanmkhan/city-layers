@@ -92,7 +92,11 @@ def acs():
             print('ACS', year, 'not available:', e); continue
         tracts = {}
         for g in GROUPS:
-            d = json.loads(get(f'{base}?get=group({g})&for=tract:*&in=state:17%20county:031'))
+            body = get(f'{base}?get=group({g})&for=tract:*&in=state:17&in=county:031')
+            try:
+                d = json.loads(body)
+            except ValueError:
+                raise RuntimeError(g + ' gave: ' + body[:400].decode('utf8', 'replace'))
             head = d[0]
             for r in d[1:]:
                 row = dict(zip(head, r))
@@ -117,7 +121,5 @@ def tracts():
     save('tracts.json', {f['attributes']['GEOID']: [float(f['attributes']['INTPTLON']), float(f['attributes']['INTPTLAT'])] for f in feats})
 
 
-step('metra', metra)
 step('acs', acs)
-step('tracts', tracts)
 print('failed:', FAILED or 'none')
