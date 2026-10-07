@@ -1,0 +1,129 @@
+{
+  "id": "toronto",
+  "title": "Toronto Layers",
+  "description": "A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.",
+  "mapLabel": "Map of the City of Toronto",
+  "locale": "en-CA",
+
+  "view": {
+    "city": [[43.581, -79.639], [43.855, -79.115]],
+    "region": [[43.40, -80.05], [44.10, -78.85]],
+    "max": [[43.05, -80.6], [44.75, -78.2]]
+  },
+  "scope": {
+    "outer": {"name": "Greater Toronto Area", "sub": "416 + 905"},
+    "inner": {"name": "Toronto", "sub": "416 only"}
+  },
+  "footprint": "boroughs",
+  "water": [
+    {"name": "Lake Ontario", "at": [43.585, -79.40], "cls": "lake-near"},
+    {"name": "Lake Ontario", "at": [43.45, -78.75], "cls": "lake-far"}
+  ],
+  "attribution": "Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim",
+  "example": {"at": [43.67194, -79.38667], "name": "Toronto Reference Library (example)"},
+
+  "search": {
+    "label": "Search a Toronto address",
+    "country": "ca",
+    "viewbox": "-79.64,43.86,-79.11,43.58",
+    "noMatch": "No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.",
+    "more": "Press Find to search all Toronto addresses"
+  },
+  "outside": {
+    "beyond": "That spot is outside the Greater Toronto Area.",
+    "regionPill": "{region} Region",
+    "note": "Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."
+  },
+
+  "units": {"singular": "Neighbourhood", "plural": "neighbourhoods"},
+
+  "groups": [
+    ["Places", [
+      {"id": "boroughs", "kind": "fill", "size": "major", "file": "boroughs", "name": "Former cities", "note": "The 6 municipalities merged in 1998", "on": true,
+       "colors": {"Old Toronto": "--b-oldtoronto", "York": "--b-york", "North York": "--b-northyork", "East York": "--b-eastyork", "Etobicoke": "--b-etobicoke", "Scarborough": "--b-scarborough"}},
+      {"id": "areas", "kind": "fill", "size": "minor", "file": "areas", "name": "Old Toronto areas", "note": "Downtown, Midtown, Uptown, West End, East End", "on": true,
+       "colors": {"Downtown": "--a-downtown", "Midtown": "--a-midtown", "Uptown": "--a-uptown", "West End": "--a-westend", "East End": "--a-eastend"}},
+      {"id": "nbhd", "kind": "units", "file": "neighbourhoods", "name": "Neighbourhoods", "note": "The City’s 158 official neighbourhoods", "on": true, "hover": "{name} · #{code}"},
+      {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},
+      {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"}
+    ]],
+    ["Representation", [
+      {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "25 wards, one councillor each", "label": "Ward {num}", "hover": "Ward {num} · {name}"},
+      {"id": "prov", "kind": "outline", "level": "state", "file": "wards", "name": "Provincial ridings", "note": "25 MPPs · same lines as the wards", "label": "{prov}", "hover": "Provincial: {prov}"},
+      {"id": "fed", "kind": "outline", "level": "national", "file": "federal", "name": "Federal ridings", "note": "24 MPs · 2023 boundaries", "label": "{name}", "hover": "Federal: {name}"},
+      {"id": "bia", "kind": "patches", "file": "bia", "name": "Business Improvement Areas", "note": "85 BIAs", "label": "{name}", "hover": "{name} BIA"}
+    ]],
+    ["Getting around", [
+      {"id": "streets", "kind": "streets", "file": "streets", "name": "Main streets", "note": "Arterials like King, Queen, Eglinton, Don Mills", "on": true},
+      {"id": "hwy", "kind": "highways", "files": ["highways", "gta_highways", "gta_shields"], "name": "Highways", "note": "400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen", "on": true,
+       "shields": {"401": "401", "400": "400", "404": "404", "409": "409", "427": "427", "QEW": "QEW", "2A": "2A", "DVP": "DVP", "Gardiner": "Gardiner", "Allen": "Allen Rd"},
+       "repeat": {"401": [0.15, 0.5, 0.85]}, "tollShield": "407 ETR"},
+      {"id": "go", "kind": "rail", "files": ["go_lines", "go_stations", "go_lines_416"], "name": "GO Transit trains", "note": "7 GO lines and UP Express to Pearson", "on": true,
+       "hover": "{name} line · Union – {to}", "lineHover": {"UP": "{name} (Union – Pearson)"}},
+      {"id": "subway", "kind": "metro", "files": ["subway_lines", "subway_stations"], "name": "Subway & LRT", "note": "Lines 1, 2, 4, 5 and 6", "on": true,
+       "stationHover": "{name} · Line {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}}
+    ]]
+  ],
+
+  "lens": {
+    "label": "Neighbourhood lens",
+    "file": "nbhd_profiles.json",
+    "source": "2021 Census via City of Toronto Neighbourhood Profiles.",
+    "lenses": [
+      {"id": "cost", "short": "Housing cost", "key": "cost",
+       "tiers": [["lower", "Lower housing cost", "--cost-1"], ["middle", "Middle", "--cost-2"], ["higher", "Higher housing cost", "--cost-3"]],
+       "note": "Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},
+      {"id": "commute", "short": "Getting to work", "key": "commute",
+       "tiers": [["transit", "Mostly transit, walk or bike", "--com-1"], ["mixed", "Mixed", "--com-2"], ["car", "Mostly car", "--com-3"]],
+       "note": "Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},
+      {"id": "tenure", "short": "Renters & owners", "key": "tenure",
+       "tiers": [["owners", "Mostly owners", "--ten-1"], ["mix", "A mix", "--ten-2"], ["renters", "Mostly renters", "--ten-3"]],
+       "note": "Share of households that rent: under 35%, 35–60%, over 60%."},
+      {"id": "union", "short": "To Union", "key": "unionBand", "minutes": "union", "optional": true,
+       "tiers": [["under30", "Under 30 min", "--uni-1"], ["30to45", "30–45 min", "--uni-2"], ["45to60", "45–60 min", "--uni-3"], ["over60", "Over an hour", "--uni-4"]],
+       "note": "Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.",
+       "source": "TTC and Metrolinx schedules, routed with r5py."}
+    ],
+    "filters": [
+      {"lens": "cost", "label": "Housing cost", "options": [["lower", "Lower"], ["middle", "Middle"], ["higher", "Higher"]]},
+      {"lens": "union", "label": "To Union by transit", "max": true, "options": [[30, "Up to 30 min"], [45, "45 min"], [60, "60 min"]]},
+      {"lens": "commute", "label": "Getting to work", "options": [["transit", "Transit, walk, bike"], ["mixed", "Mixed"], ["car", "Car"]]},
+      {"lens": "tenure", "label": "Households", "options": [["owners", "Mostly own"], ["mix", "A mix"], ["renters", "Mostly rent"]]}
+    ]
+  },
+
+  "card": {
+    "pills": [
+      {"layer": "areas", "else": "boroughs"},
+      {"knownas": 2},
+      {"layer": "bia", "text": "{name} BIA", "color": "--bia"},
+      {"layer": "fed", "text": "Votes in {name}", "color": "--fed"}
+    ],
+    "facts": [
+      {"label": "Former city", "layer": "boroughs", "text": "{name}"},
+      {"label": "Area", "layer": "areas", "text": "{name}", "empty": "Outside Old Toronto", "emptyWithin": {"boroughs": "Old Toronto"}},
+      {"label": "Neighbourhood", "layer": "nbhd", "text": "{name} (#{code})"},
+      {"label": "Known as", "knownas": true},
+      {"label": "BIA", "layer": "bia", "text": "{name}[ (since {since})]", "empty": "None"},
+      {"label": "City ward", "layer": "wards", "text": "Ward {num} · {name}"},
+      {"label": "Provincial", "layer": "wards", "text": "{prov}"},
+      {"label": "Federal", "layer": "fed", "text": "{name}"}
+    ],
+    "living": {
+      "hub": "To Union",
+      "hubText": "About {minutes} min by transit, weekday morning",
+      "caveat": "Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.",
+      "footer": "2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto."
+    },
+    "reps": {
+      "file": "representatives.json",
+      "offices": [
+        {"role": "City councillor", "layer": "wards", "table": "wards", "key": "num", "sub": "Ward {f.num}"},
+        {"role": "MPP", "layer": "wards", "table": "prov", "key": "prov", "sub": "{r.party}"},
+        {"role": "MP", "layer": "fed", "table": "fed", "key": "name", "sub": "{r.party}"}
+      ],
+      "note": "Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."
+    }
+  }
+}

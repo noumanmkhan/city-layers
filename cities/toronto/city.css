@@ -1,0 +1,28 @@
+/* Toronto's own colours: former cities, Old Toronto areas, subway lines and GO swatch.
+   Everything else (page, civic layers, lenses, streets) comes from the engine. */
+:root{
+  /* former cities */
+  --b-oldtoronto:#EE6E73; --b-york:#B9A5E6; --b-northyork:#95CA7E; --b-eastyork:#6BC4CF; --b-etobicoke:#F0A06E; --b-scarborough:#7DAFE0;
+  /* old toronto areas */
+  --a-downtown:#EE6E73; --a-midtown:#8FD6C0; --a-uptown:#F3A8CB; --a-westend:#F2CE5E; --a-eastend:#F6B98A;
+  /* subway lines (official TTC colours) and the GO swatch */
+  --l1:#FFC425; --l2:#00A64F; --l4:#A8518A; --l5:#F58426; --l6:#959595;
+  --go-a:#98002E; --go-b:#00853E; --go-c:#0099C7; --go-d:#FF0D00;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
+  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
+}}
+:root[data-theme="dark"]{
+  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
+  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
+}
+.sw.boroughs{background:conic-gradient(var(--b-etobicoke) 0 17%,var(--b-northyork) 0 34%,var(--b-scarborough) 0 51%,var(--b-york) 0 68%,var(--b-eastyork) 0 84%,var(--b-oldtoronto) 0)}
+.sw.areas{background:linear-gradient(90deg,var(--a-westend) 0 20%,var(--a-downtown) 0 40%,var(--a-midtown) 0 60%,var(--a-uptown) 0 80%,var(--a-eastend) 0)}
+.sw.subway{background:linear-gradient(var(--l1) 0 25%,var(--l2) 0 50%,var(--l5) 0 75%,var(--l4) 0)}
+.sw.go{background:linear-gradient(var(--go-a) 0 25%,var(--go-b) 0 50%,var(--go-c) 0 75%,var(--go-d) 0)}
+.fill-major.old-toronto{fill:var(--b-oldtoronto)} .fill-major.york{fill:var(--b-york)} .fill-major.north-york{fill:var(--b-northyork)}
+.fill-major.east-york{fill:var(--b-eastyork)} .fill-major.etobicoke{fill:var(--b-etobicoke)} .fill-major.scarborough{fill:var(--b-scarborough)}
+.fill-minor.downtown{fill:var(--a-downtown)} .fill-minor.midtown{fill:var(--a-midtown)} .fill-minor.uptown{fill:var(--a-uptown)}
+.fill-minor.west-end{fill:var(--a-westend)} .fill-minor.east-end{fill:var(--a-eastend)}
+.sub-line.l1{stroke:var(--l1)} .sub-line.l2{stroke:var(--l2)} .sub-line.l4{stroke:var(--l4)} .sub-line.l5{stroke:var(--l5)} .sub-line.l6{stroke:var(--l6)}

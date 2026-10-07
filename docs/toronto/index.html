@@ -680,21 +680,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --bg:#F4F3EE; --panel:#FFFFFF; --ink:#23262B; --ink-2:#5D6168; --ink-3:#8A8E95; --rule:#E2E0D8; --accent:#7A3EC8; --focus:#2F7FD8;
   /* map */
   --water:#CFE7F7; --land-out:#E6E3DA; --land-out-line:#C4C0B4; --land-far:#F2F1EC; --city:#FBFAF6; --city-line:#4A4E55; --muni-label:#8E8B82;
-  /* former cities */
-  --b-oldtoronto:#EE6E73; --b-york:#B9A5E6; --b-northyork:#95CA7E; --b-eastyork:#6BC4CF; --b-etobicoke:#F0A06E; --b-scarborough:#7DAFE0;
-  /* old toronto areas */
-  --a-downtown:#EE6E73; --a-midtown:#8FD6C0; --a-uptown:#F3A8CB; --a-westend:#F2CE5E; --a-eastend:#F6B98A;
   /* civic */
   --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --cult:#23262B; --cult-enclave:#B0306A;
   /* transport */
   --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
-  --l1:#FFC425; --l2:#00A64F; --l4:#A8518A; --l5:#F58426; --l6:#959595; --station:#FFFFFF;
+  --station:#FFFFFF;
   --pill-bg:#F1EFE8;
   --cost-1:#F3E3B3; --cost-2:#E2A64B; --cost-3:#A85A1E;
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
   --ten-1:#8FA7D9; --ten-2:#D8D2E6; --ten-3:#7A56A8;
   --uni-1:#16685E; --uni-2:#3E9E8E; --uni-3:#9CCFC3; --uni-4:#E2E5E9;
-  --shield-etr:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A; --go-a:#98002E; --go-b:#00853E; --go-c:#0099C7; --go-d:#FF0D00;
+  --shield-toll:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --shadow:0 1px 2px rgba(20,22,26,.08),0 8px 24px rgba(20,22,26,.10);
@@ -702,8 +698,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
-  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
-  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
@@ -713,8 +707,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 :root[data-theme="dark"]{
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
-  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
-  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E;
@@ -772,30 +764,24 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf .seg button[aria-checked="true"]{background:var(--pill-bg);color:var(--ink);font-weight:600}
 
 /* swatches */
-.sw.boroughs{background:conic-gradient(var(--b-etobicoke) 0 17%,var(--b-northyork) 0 34%,var(--b-scarborough) 0 51%,var(--b-york) 0 68%,var(--b-eastyork) 0 84%,var(--b-oldtoronto) 0)}
-.sw.areas{background:linear-gradient(90deg,var(--a-westend) 0 20%,var(--a-downtown) 0 40%,var(--a-midtown) 0 60%,var(--a-uptown) 0 80%,var(--a-eastend) 0)}
-.sw.nbhd{background:var(--city);background-image:linear-gradient(var(--nbhd) 1px,transparent 1px),linear-gradient(90deg,var(--nbhd) 1px,transparent 1px);background-size:9px 8px;background-position:3px 3px}
-.sw.cultural{background:var(--city);display:grid;place-items:center;font-size:9px;font-weight:700;color:var(--cult);font-style:italic}
-.sw.wards{background:var(--city);box-shadow:inset 0 0 0 2px var(--ward)}
-.sw.prov{background:var(--city);background-image:repeating-linear-gradient(90deg,var(--prov) 0 4px,transparent 4px 7px);background-size:100% 2px;background-repeat:no-repeat;background-position:0 50%}
-.sw.fed{background:var(--city);box-shadow:inset 0 0 0 2px var(--fed)}
-.sw.bia{background:color-mix(in srgb,var(--bia) 45%,var(--city))}
-.sw.streets{background:var(--city);background-image:linear-gradient(var(--st-case),var(--st-case)),linear-gradient(var(--st),var(--st));background-size:100% 5px,100% 3px;background-position:0 50%,0 50%;background-repeat:no-repeat}
-.sw.hwy{background:var(--city);background-image:linear-gradient(var(--hwy-case),var(--hwy-case)),linear-gradient(var(--hwy),var(--hwy));background-size:100% 6px,100% 2px;background-position:0 50%,0 50%;background-repeat:no-repeat}
-.sw.landmarks{background:var(--panel);display:grid;place-items:center;color:var(--lm-culture)}
-.sw.landmarks svg{width:14px;height:14px}
-.sw.subway{background:linear-gradient(var(--l1) 0 25%,var(--l2) 0 50%,var(--l5) 0 75%,var(--l4) 0)}
+/* each city colours its own fill layers, transit lines and their swatches (cities/<city>/city.css) */
+.sw.k-units{background:var(--city);background-image:linear-gradient(var(--nbhd) 1px,transparent 1px),linear-gradient(90deg,var(--nbhd) 1px,transparent 1px);background-size:9px 8px;background-position:3px 3px}
+.sw.k-knownas{background:var(--city);display:grid;place-items:center;font-size:9px;font-weight:700;color:var(--cult);font-style:italic}
+.sw.k-city{background:var(--city);box-shadow:inset 0 0 0 2px var(--ward)}
+.sw.k-state{background:var(--city);background-image:repeating-linear-gradient(90deg,var(--prov) 0 4px,transparent 4px 7px);background-size:100% 2px;background-repeat:no-repeat;background-position:0 50%}
+.sw.k-national{background:var(--city);box-shadow:inset 0 0 0 2px var(--fed)}
+.sw.k-patches{background:color-mix(in srgb,var(--bia) 45%,var(--city))}
+.sw.k-streets{background:var(--city);background-image:linear-gradient(var(--st-case),var(--st-case)),linear-gradient(var(--st),var(--st));background-size:100% 5px,100% 3px;background-position:0 50%,0 50%;background-repeat:no-repeat}
+.sw.k-highways{background:var(--city);background-image:linear-gradient(var(--hwy-case),var(--hwy-case)),linear-gradient(var(--hwy),var(--hwy));background-size:100% 6px,100% 2px;background-position:0 50%,0 50%;background-repeat:no-repeat}
+.sw.k-landmarks{background:var(--panel);display:grid;place-items:center;color:var(--lm-culture)}
+.sw.k-landmarks svg{width:14px;height:14px}
 
 /* ---------- map styling (CSS overrides Leaflet's SVG attributes, so both themes work) ---------- */
 .base-out{fill:var(--land-out);fill-opacity:1;stroke:var(--land-out-line);stroke-width:1}
 .base-far{fill:var(--land-far);fill-opacity:1;stroke:none}
 .base-city{fill:var(--city);fill-opacity:1;stroke:var(--city-line);stroke-width:1.6}
-.boro{fill-opacity:.55;stroke:var(--city);stroke-width:2}
-.boro.old-toronto{fill:var(--b-oldtoronto)} .boro.york{fill:var(--b-york)} .boro.north-york{fill:var(--b-northyork)}
-.boro.east-york{fill:var(--b-eastyork)} .boro.etobicoke{fill:var(--b-etobicoke)} .boro.scarborough{fill:var(--b-scarborough)}
-.area{fill-opacity:.6;stroke:var(--city);stroke-width:2}
-.area.downtown{fill:var(--a-downtown)} .area.midtown{fill:var(--a-midtown)} .area.uptown{fill:var(--a-uptown)}
-.area.west-end{fill:var(--a-westend)} .area.east-end{fill:var(--a-eastend)}
+.fill-major{fill-opacity:.55;stroke:var(--city);stroke-width:2}
+.fill-minor{fill-opacity:.6;stroke:var(--city);stroke-width:2}
 .nbhd{fill:var(--nbhd-fill);fill-opacity:0;stroke:var(--nbhd);stroke-width:.9;stroke-opacity:.7}
 .nbhd:hover{fill-opacity:.12}
 .ward{fill:var(--ward);fill-opacity:0;stroke:var(--ward);stroke-width:2.2}
@@ -815,7 +801,6 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .hwy-case{stroke:var(--hwy-case);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .hwy-core{stroke:var(--hwy);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .sub-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
-.sub-line.l1{stroke:var(--l1)} .sub-line.l2{stroke:var(--l2)} .sub-line.l4{stroke:var(--l4)} .sub-line.l5{stroke:var(--l5)} .sub-line.l6{stroke:var(--l6)}
 .stn{fill:var(--station);stroke:var(--ink);stroke-width:1.5}
 .stn.x{stroke-width:2.2}
 .pin{display:block;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 28%,transparent),0 2px 8px rgba(0,0,0,.4)}
@@ -850,13 +835,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .shield{display:grid;place-items:center;height:18px;min-width:26px;padding:0 4px;border-radius:5px;background:var(--shield);color:#fff;
   font:700 10.5px/1 var(--font);box-shadow:0 0 0 1.5px #fff;white-space:nowrap}
 .shield.city{background:var(--shield-city)}
-.shield.etr{background:var(--shield-etr)}
+.shield.toll{background:var(--shield-toll)}
 .go-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
 .go-stn{fill:var(--station);stroke:var(--go-ring);stroke-width:1.6}
 .go-stn.hub{stroke-width:2.6}
 .lbl-go{font-size:10px;font-weight:600;color:var(--go-ink)!important}
 .lbl-go.end{font-size:11px;font-weight:700}
-.sw.go{background:linear-gradient(var(--go-a) 0 25%,var(--go-b) 0 50%,var(--go-c) 0 75%,var(--go-d) 0)}
 .scope{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:12px 16px 2px;padding:3px;border:1px solid var(--rule);border-radius:10px}
 .scope button{font:inherit;text-align:left;border:none;border-radius:7px;padding:7px 10px;background:none;color:var(--ink-2);cursor:pointer;min-width:0}
 .scope button b{display:block;font-size:12.5px;font-weight:600;line-height:1.2}
@@ -865,17 +849,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .scope button[aria-checked="true"] b{font-weight:700}
 .scope button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
 .mask{fill:var(--land-out);fill-opacity:.94;stroke:var(--land-out-line);stroke-width:1}
-.mode-416 .shield.gta,.mode-416 .go-out,.mode-416 path.gta,.mode-416 .lbl-region{display:none}
+.mode-inner .shield.outer,.mode-inner .go-out,.mode-inner path.outer,.mode-inner .lbl-region{display:none}
 .lens{fill-opacity:.78;stroke:var(--city);stroke-width:.8}
 .lens:hover{fill-opacity:.92}
-.lens.cost-lower{fill:var(--cost-1)} .lens.cost-middle{fill:var(--cost-2)} .lens.cost-higher{fill:var(--cost-3)}
-.lens.commute-transit{fill:var(--com-1)} .lens.commute-mixed{fill:var(--com-2)} .lens.commute-car{fill:var(--com-3)}
-.lens.tenure-owners{fill:var(--ten-1)} .lens.tenure-mix{fill:var(--ten-2)} .lens.tenure-renters{fill:var(--ten-3)}
-.lens.union-under30{fill:var(--uni-1)} .lens.union-30to45{fill:var(--uni-2)} .lens.union-45to60{fill:var(--uni-3)} .lens.union-over60{fill:var(--uni-4)}
+/* tier fills (.lens.<lens>-<tier>) are written from the city config when the page loads */
 .lens.out{fill-opacity:.1;stroke-opacity:.35}
 .lens.out:hover{fill-opacity:.25}
 #map.z13 .lens{fill-opacity:.5} #map.z13 .lens:hover{fill-opacity:.62} #map.z13 .lens.out{fill-opacity:.06}
-.sw.lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
+.sw.k-lens{background:linear-gradient(90deg,var(--cost-1) 0 33%,var(--cost-2) 0 66%,var(--cost-3) 0)}
 .lensbox{margin:-2px 8px 8px 48px;display:grid;gap:8px}
 .lensbox .seg{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%}
 .lensbox .seg button{font:inherit;font-size:11.5px;border:none;border-radius:6px;padding:5px 4px;background:none;color:var(--ink-2);cursor:pointer}
@@ -906,12 +887,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .live .tier i{width:9px;height:9px;border-radius:50%}
 .live p{margin:8px 0 0;font-size:10.5px;color:var(--ink-3)}
 #here{max-height:calc(100vh - 110px);overflow:auto}
-.gta-note{padding:0 16px 12px;color:var(--ink-2);font-size:12.5px}
+.outside-note{padding:0 16px 12px;color:var(--ink-2);font-size:12.5px}
 .hover-tip{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--rule)!important;box-shadow:var(--shadow)!important;font:600 12px/1.3 var(--font)!important;border-radius:7px!important;padding:4px 8px!important}
 .hover-tip::before{display:none}
 /* zoom-gated labels */
 #map:not(.z11) .lbl-area,#map:not(.z11) .lbl-ward,#map:not(.z11) .lbl-prov,#map:not(.z11) .lbl-fed{display:none}
-#map.z10 .lbl-region,#map:not(.z10) .lbl-muni,#map:not(.z10) .lbl-boro,#map:not(.z10) .shield:not(.gta),#map:not(.z12) .lbl-go:not(.end),#map:not(.z12) .go-stn:not(.end):not(.hub),#map:not(.z10) .poi b,#map:not(.z10) .lake-near,#map.z10 .lake-far{display:none}
+#map.z10 .lbl-region,#map:not(.z10) .lbl-muni,#map:not(.z10) .lbl-boro,#map:not(.z10) .shield:not(.outer),#map:not(.z12) .lbl-go:not(.end),#map:not(.z12) .go-stn:not(.end):not(.hub),#map:not(.z10) .poi b,#map:not(.z10) .lake-near,#map.z10 .lake-far{display:none}
 #map:not(.z12) .lbl-cult,#map:not(.z12) .shield.minor{display:none}
 #map:not(.z13) .lbl-nbhd,#map:not(.z13) .lbl-stn:not(.end){display:none}
 #map:not(.z11) .lbl-stn.end{display:none}
@@ -975,6 +956,37 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<style>
+/* Toronto's own colours: former cities, Old Toronto areas, subway lines and GO swatch.
+   Everything else (page, civic layers, lenses, streets) comes from the engine. */
+:root{
+  /* former cities */
+  --b-oldtoronto:#EE6E73; --b-york:#B9A5E6; --b-northyork:#95CA7E; --b-eastyork:#6BC4CF; --b-etobicoke:#F0A06E; --b-scarborough:#7DAFE0;
+  /* old toronto areas */
+  --a-downtown:#EE6E73; --a-midtown:#8FD6C0; --a-uptown:#F3A8CB; --a-westend:#F2CE5E; --a-eastend:#F6B98A;
+  /* subway lines (official TTC colours) and the GO swatch */
+  --l1:#FFC425; --l2:#00A64F; --l4:#A8518A; --l5:#F58426; --l6:#959595;
+  --go-a:#98002E; --go-b:#00853E; --go-c:#0099C7; --go-d:#FF0D00;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
+  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
+}}
+:root[data-theme="dark"]{
+  --b-oldtoronto:#C2484E; --b-york:#7D68B8; --b-northyork:#5E9A48; --b-eastyork:#3B98A3; --b-etobicoke:#C7703F; --b-scarborough:#4C7FB5;
+  --a-downtown:#C2484E; --a-midtown:#4FA88E; --a-uptown:#C26E96; --a-westend:#B8962E; --a-eastend:#C7844F;
+}
+.sw.boroughs{background:conic-gradient(var(--b-etobicoke) 0 17%,var(--b-northyork) 0 34%,var(--b-scarborough) 0 51%,var(--b-york) 0 68%,var(--b-eastyork) 0 84%,var(--b-oldtoronto) 0)}
+.sw.areas{background:linear-gradient(90deg,var(--a-westend) 0 20%,var(--a-downtown) 0 40%,var(--a-midtown) 0 60%,var(--a-uptown) 0 80%,var(--a-eastend) 0)}
+.sw.subway{background:linear-gradient(var(--l1) 0 25%,var(--l2) 0 50%,var(--l5) 0 75%,var(--l4) 0)}
+.sw.go{background:linear-gradient(var(--go-a) 0 25%,var(--go-b) 0 50%,var(--go-c) 0 75%,var(--go-d) 0)}
+.fill-major.old-toronto{fill:var(--b-oldtoronto)} .fill-major.york{fill:var(--b-york)} .fill-major.north-york{fill:var(--b-northyork)}
+.fill-major.east-york{fill:var(--b-eastyork)} .fill-major.etobicoke{fill:var(--b-etobicoke)} .fill-major.scarborough{fill:var(--b-scarborough)}
+.fill-minor.downtown{fill:var(--a-downtown)} .fill-minor.midtown{fill:var(--a-midtown)} .fill-minor.uptown{fill:var(--a-uptown)}
+.fill-minor.west-end{fill:var(--a-westend)} .fill-minor.east-end{fill:var(--a-eastend)}
+.sub-line.l1{stroke:var(--l1)} .sub-line.l2{stroke:var(--l2)} .sub-line.l4{stroke:var(--l4)} .sub-line.l5{stroke:var(--l5)} .sub-line.l6{stroke:var(--l6)}
+
+</style>
 
 </head>
 <body>
@@ -988,8 +1000,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
     </div>
     <div class="scope" role="radiogroup" aria-label="Map extent">
-      <button type="button" role="radio" data-scope="gta" aria-checked="false"><b>Greater Toronto Area</b><span>416 + 905</span></button>
-      <button type="button" role="radio" data-scope="416" aria-checked="true"><b>Toronto</b><span>416 only</span></button>
+      <button type="button" role="radio" data-scope="outer" aria-checked="false"><b>Greater Toronto Area</b><span>416 + 905</span></button>
+      <button type="button" role="radio" data-scope="inner" aria-checked="true"><b>Toronto</b><span>416 only</span></button>
     </div>
     <div id="layers"></div>
     <div class="pf">
@@ -1016,67 +1028,75 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   </div>
 </div>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
+const CITY = {"id":"toronto","title":"Toronto Layers","description":"A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.","mapLabel":"Map of the City of Toronto","locale":"en-CA","view":{"city":[[43.581,-79.639],[43.855,-79.115]],"region":[[43.4,-80.05],[44.1,-78.85]],"max":[[43.05,-80.6],[44.75,-78.2]]},"scope":{"outer":{"name":"Greater Toronto Area","sub":"416 + 905"},"inner":{"name":"Toronto","sub":"416 only"}},"footprint":"boroughs","water":[{"name":"Lake Ontario","at":[43.585,-79.4],"cls":"lake-near"},{"name":"Lake Ontario","at":[43.45,-78.75],"cls":"lake-far"}],"attribution":"Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[43.67194,-79.38667],"name":"Toronto Reference Library (example)"},"search":{"label":"Search a Toronto address","country":"ca","viewbox":"-79.64,43.86,-79.11,43.58","noMatch":"No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.","more":"Press Find to search all Toronto addresses"},"outside":{"beyond":"That spot is outside the Greater Toronto Area.","regionPill":"{region} Region","note":"Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."},"units":{"singular":"Neighbourhood","plural":"neighbourhoods"},"groups":[["Places",[{"id":"boroughs","kind":"fill","size":"major","file":"boroughs","name":"Former cities","note":"The 6 municipalities merged in 1998","on":true,"colors":{"Old Toronto":"--b-oldtoronto","York":"--b-york","North York":"--b-northyork","East York":"--b-eastyork","Etobicoke":"--b-etobicoke","Scarborough":"--b-scarborough"}},{"id":"areas","kind":"fill","size":"minor","file":"areas","name":"Old Toronto areas","note":"Downtown, Midtown, Uptown, West End, East End","on":true,"colors":{"Downtown":"--a-downtown","Midtown":"--a-midtown","Uptown":"--a-uptown","West End":"--a-westend","East End":"--a-eastend"}},{"id":"nbhd","kind":"units","file":"neighbourhoods","name":"Neighbourhoods","note":"The City’s 158 official neighbourhoods","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Neighbourhood lens","note":"Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},{"id":"cultural","kind":"knownas","file":"cultural","name":"Known-as names","note":"King West, Little Italy, the Junction…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Arenas, big parks, music venues, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"25 wards, one councillor each","label":"Ward {num}","hover":"Ward {num} · {name}"},{"id":"prov","kind":"outline","level":"state","file":"wards","name":"Provincial ridings","note":"25 MPPs · same lines as the wards","label":"{prov}","hover":"Provincial: {prov}"},{"id":"fed","kind":"outline","level":"national","file":"federal","name":"Federal ridings","note":"24 MPs · 2023 boundaries","label":"{name}","hover":"Federal: {name}"},{"id":"bia","kind":"patches","file":"bia","name":"Business Improvement Areas","note":"85 BIAs","label":"{name}","hover":"{name} BIA"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"Arterials like King, Queen, Eglinton, Don Mills","on":true},{"id":"hwy","kind":"highways","files":["highways","gta_highways","gta_shields"],"name":"Highways","note":"400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen","on":true,"shields":{"401":"401","400":"400","404":"404","409":"409","427":"427","QEW":"QEW","2A":"2A","DVP":"DVP","Gardiner":"Gardiner","Allen":"Allen Rd"},"repeat":{"401":[0.15,0.5,0.85]},"tollShield":"407 ETR"},{"id":"go","kind":"rail","files":["go_lines","go_stations","go_lines_416"],"name":"GO Transit trains","note":"7 GO lines and UP Express to Pearson","on":true,"hover":"{name} line · Union – {to}","lineHover":{"UP":"{name} (Union – Pearson)"}},{"id":"subway","kind":"metro","files":["subway_lines","subway_stations"],"name":"Subway & LRT","note":"Lines 1, 2, 4, 5 and 6","on":true,"stationHover":"{name} · Line {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Neighbourhood lens","file":"nbhd_profiles.json","source":"2021 Census via City of Toronto Neighbourhood Profiles.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"union","short":"To Union","key":"unionBand","minutes":"union","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.","source":"TTC and Metrolinx schedules, routed with r5py."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"union","label":"To Union by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"areas","else":"boroughs"},{"knownas":2},{"layer":"bia","text":"{name} BIA","color":"--bia"},{"layer":"fed","text":"Votes in {name}","color":"--fed"}],"facts":[{"label":"Former city","layer":"boroughs","text":"{name}"},{"label":"Area","layer":"areas","text":"{name}","empty":"Outside Old Toronto","emptyWithin":{"boroughs":"Old Toronto"}},{"label":"Neighbourhood","layer":"nbhd","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"BIA","layer":"bia","text":"{name}[ (since {since})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num} · {name}"},{"label":"Provincial","layer":"wards","text":"{prov}"},{"label":"Federal","layer":"fed","text":"{name}"}],"living":{"hub":"To Union","hubText":"About {minutes} min by transit, weekday morning","caveat":"Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.","footer":"2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto."},"reps":{"file":"representatives.json","offices":[{"role":"City councillor","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"MPP","layer":"wards","table":"prov","key":"prov","sub":"{r.party}"},{"role":"MP","layer":"fed","table":"fed","key":"name","sub":"{r.party}"}],"note":"Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."}}};
+/* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
+   inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
 const DATA = 'data/';
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 
-/* Neighbourhood lenses (2021 Census, City of Toronto Neighbourhood Profiles). One shows at a time. */
-const LENSES = {
-  cost: {short:'Housing cost', key:'cost', tiers:[['lower','Lower housing cost','--cost-1'],['middle','Middle','--cost-2'],['higher','Higher housing cost','--cost-3']],
-    note:'Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices.'},
-  commute: {short:'Getting to work', key:'commute', tiers:[['transit','Mostly transit, walk or bike','--com-1'],['mixed','Mixed','--com-2'],['car','Mostly car','--com-3']],
-    note:'Share of commuters who drive: under 50%, 50\u201368%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere.'},
-  tenure: {short:'Renters & owners', key:'tenure', tiers:[['owners','Mostly owners','--ten-1'],['mix','A mix','--ten-2'],['renters','Mostly renters','--ten-3']],
-    note:'Share of households that rent: under 35%, 35\u201360%, over 60%.'},
-  union: {short:'To Union', key:'unionBand', cls:'union', tiers:[['under30','Under 30 min','--uni-1'],['30to45','30\u201345 min','--uni-2'],['45to60','45\u201360 min','--uni-3'],['over60','Over an hour','--uni-4']],
-    note:'Typical transit trip to Union Station leaving 8\u20139 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.', src:'TTC and Metrolinx schedules, routed with r5py.'},
-};
-// The shortlist: tiers picked in any lens, plus a maximum transit time to Union. Empty means "any".
-const filt = {cost:new Set(), commute:new Set(), tenure:new Set(), union:0};
-const filtOn = () => filt.union > 0 || ['cost','commute','tenure'].some(k => filt[k].size);
-const matches = d => !!d && ['cost','commute','tenure'].every(k => !filt[k].size || filt[k].has(d[k])) && (!filt.union || (d.union != null && d.union <= filt.union));
-const lensClass = d => { const L_ = LENSES[lens]; return 'lens ' + (d && d[L_.key] ? (L_.cls || L_.key) + '-' + d[L_.key] : '') + (filtOn() && !matches(d) ? ' out' : ''); };
-let lens = 'cost';
+/* Text templates from the config: "{name}" fills from a feature's properties, "{f.num}" walks into
+   nested objects, a list becomes "a, b". A part in [square brackets] is dropped when a field inside it
+   is missing; a missing field outside brackets blanks the whole text. */
+function fill(tpl, ctx){
+  const val = k => k.split('.').reduce((o, p) => o == null ? undefined : o[p], ctx);
+  const sub = (s, miss) => s.replace(/\{([\w.]+)\}/g, (m, k) => {
+    const v = val(k);
+    if (v == null || v === '') { miss(); return ''; }
+    return Array.isArray(v) ? v.join(', ') : v;
+  });
+  let missing = false;
+  const out = sub(tpl.replace(/\[([^\]]*)\]/g, (m, inner) => { let gone = false; const r = sub(inner, () => { gone = true; }); return gone ? '' : r; }), () => { missing = true; });
+  return missing ? '' : out;
+}
+
+const LAYERS = CITY.groups.flatMap(([, items]) => items);
+const byKind = k => LAYERS.find(it => it.kind === k);
+const UNITS = byKind('units'), METRO = byKind('metro');
+const AREA_KINDS = ['fill', 'units', 'outline', 'patches'];   // polygon layers the "What's here" card tests against
+
+/* Neighbourhood lenses (tiers from the city's profile data). One shows at a time. */
+const LENSES = {};
+CITY.lens.lenses.forEach(L_ => { LENSES[L_.id] = L_; });
+const FILTERS = CITY.lens.filters;
+const FIRST_LENS = CITY.lens.lenses[0].id;
+// Each lens tier's fill colour, written once from the config.
+const tierCss = document.createElement('style');
+tierCss.textContent = CITY.lens.lenses.map(L_ => L_.tiers.map(([k, , v]) => '.lens.' + L_.id + '-' + k + '{fill:var(' + v + ')}').join(' ')).join('\n');
+document.head.appendChild(tierCss);
+// The shortlist: tiers picked in any lens, plus a maximum for a "minutes" lens. Empty means "any".
+const filt = {};
+const clearFilters = () => FILTERS.forEach(f => { filt[f.lens] = f.max ? 0 : new Set(); });
+clearFilters();
+const filtOn = () => FILTERS.some(f => f.max ? filt[f.lens] > 0 : filt[f.lens].size);
+const matches = d => !!d && FILTERS.every(f => {
+  const L_ = LENSES[f.lens];
+  if (f.max) return !filt[f.lens] || (d[L_.minutes] != null && d[L_.minutes] <= filt[f.lens]);
+  return !filt[f.lens].size || filt[f.lens].has(d[L_.key]);
+});
+const lensClass = d => { const L_ = LENSES[lens]; return 'lens ' + (d && d[L_.key] ? L_.id + '-' + d[L_.key] : '') + (filtOn() && !matches(d) ? ' out' : ''); };
+let lens = FIRST_LENS;
 const TIER_LABEL = {};
 Object.values(LENSES).forEach(L_ => L_.tiers.forEach(([k, label, v]) => { TIER_LABEL[L_.key + ':' + k] = [label, v]; }));
 const tierOf = d => d && d[LENSES[lens].key] ? TIER_LABEL[LENSES[lens].key + ':' + d[LENSES[lens].key]][0] : '';
-
-const GROUPS = [
-  ['Places', [
-    {id:'boroughs', name:'Former cities', note:'The 6 municipalities merged in 1998', on:true},
-    {id:'areas', name:'Old Toronto areas', note:'Downtown, Midtown, Uptown, West End, East End', on:true},
-    {id:'nbhd', name:'Neighbourhoods', note:'The City’s 158 official neighbourhoods', on:true},
-    {id:'lens', name:'Neighbourhood lens', note:'Housing cost, time to Union, renters and owners. Narrow it to a shortlist.', lens:true},
-    {id:'cultural', name:'Known-as names', note:'King West, Little Italy, the Junction…', on:true, swatch:'Aa'},
-    {id:'landmarks', name:'Landmarks', note:'Arenas, big parks, music venues, campuses', swatch:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>'},
-  ]],
-  ['Representation', [
-    {id:'wards', name:'City wards', note:'25 wards, one councillor each'},
-    {id:'prov', name:'Provincial ridings', note:'25 MPPs · same lines as the wards'},
-    {id:'fed', name:'Federal ridings', note:'24 MPs · 2023 boundaries'},
-    {id:'bia', name:'Business Improvement Areas', note:'85 BIAs'},
-  ]],
-  ['Getting around', [
-    {id:'streets', name:'Main streets', note:'Arterials like King, Queen, Eglinton, Don Mills', on:true},
-    {id:'hwy', name:'Highways', note:'400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen', on:true},
-    {id:'go', name:'GO Transit trains', note:'7 GO lines and UP Express to Pearson', on:true},
-    {id:'subway', name:'Subway & LRT', note:'Lines 1, 2, 4, 5 and 6', on:true, sub:{id:'stnNames', label:'Show station names', on:true}},
-  ]],
-];
 
 const map = L.map('map', {zoomSnap:.25, zoomDelta:.5, minZoom:8.5, maxZoom:17, attributionControl:true, zoomControl:false, preferCanvas:false});
 // Bottom-left, just beside the layer panel: the panel covers the top-left corner and the What's here card the right side. Phones pinch to zoom, so the buttons are hidden there.
 L.control.zoom({position:'bottomleft'}).addTo(map);
 map.attributionControl.setPrefix(false);
-window.torontoMap = map;
-map.attributionControl.addAttribution('Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim');
-const CITY_BOUNDS = L.latLngBounds([43.581,-79.639],[43.855,-79.115]);
+window.cityMap = map;
+map.attributionControl.addAttribution(CITY.attribution);
+const CITY_BOUNDS = L.latLngBounds(CITY.view.city);
+const REGION_VIEW = L.latLngBounds(CITY.view.region);
 const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
-map.setMaxBounds(L.latLngBounds([43.05,-80.6],[44.75,-78.2]));  // the GTA plus a margin
+map.setMaxBounds(L.latLngBounds(CITY.view.max));  // the region plus a margin
 
 const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['transit',470],['stlbl',475],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
@@ -1084,7 +1104,7 @@ map.getPane('base').style.pointerEvents = 'none';
 map.getPane('stlbl').style.pointerEvents = 'none';
 map.getPane('mask').style.pointerEvents = 'none';
 
-const layers = {}; const data = {};
+const layers = {}; const data = {layers: {}};
 const get = f => fetch(DATA + (f.includes('.') ? f : f + '.geojson')).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
 
 function zoomClasses(){
@@ -1138,17 +1158,12 @@ function hit(fc, x, y){ return fc ? fc.features.find(f => contains(f.geometry, x
 function metres(a, b){ const k = Math.PI/180, dx = (a[0]-b[0])*k*Math.cos(a[1]*k)*6371000, dy = (a[1]-b[1])*k*6371000; return Math.hypot(dx, dy); }
 
 /* ---------- build layers ---------- */
-const BORO_ORDER = ['Etobicoke','York','North York','East York','Old Toronto','Scarborough'];
-const AREA_VAR = {'Downtown':'--a-downtown','Midtown':'--a-midtown','Uptown':'--a-uptown','West End':'--a-westend','East End':'--a-eastend'};
-const BORO_VAR = {'Old Toronto':'--b-oldtoronto','York':'--b-york','North York':'--b-northyork','East York':'--b-eastyork','Etobicoke':'--b-etobicoke','Scarborough':'--b-scarborough'};
-
 function buildBase(fc, regions){
   const g = L.geoJSON(fc, {pane:'base', interactive:false, style: f => ({className: {city:'base-city', neighbour:'base-out', outside:'base-far'}[f.properties.kind]})});
   g.addTo(map);
   fc.features.filter(f => f.properties.kind === 'neighbour').forEach(f => label(f.properties.name, 'lbl-muni', ll(f.properties.lp)).addTo(map));
   regions.features.forEach(f => label(f.properties.name, 'lbl-region', ll(f.geometry.coordinates)).addTo(map));
-  label('Lake Ontario', 'lbl-lake lake-near', [43.585, -79.40]).addTo(map);
-  label('Lake Ontario', 'lbl-lake lake-far', [43.45, -78.75]).addTo(map);
+  (CITY.water || []).forEach(w => label(w.name, 'lbl-lake ' + w.cls, w.at).addTo(map));
   map.on('click', e => inspect(e.latlng));
 }
 
@@ -1162,13 +1177,27 @@ const GLYPH = {
   airport: '<path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/>',
 };
 const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + d + '</svg>';
+const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
+// Representation layers draw in one of three styles, by level of government.
+const OUTLINE = {city:'ward', state:'prov', national:'fed'};
 
-const BUILD = {
-  lens: ([fc, prof]) => {
+/* One builder per kind of layer. Each gets its config entry and its loaded data. */
+const KINDS = {
+  fill: (it, fc) => {
+    const major = it.size === 'major';
+    return polyLayer(fc, {cls: f => (major ? 'fill-major ' : 'fill-minor ') + slug(f.properties.name), label: f => f.properties.name, lcls: () => major ? 'lbl-boro' : 'lbl-area', hover: f => f.properties.name});
+  },
+  units: (it, fc) => polyLayer(fc, {pane:'lines', cls: () => 'nbhd', label: f => f.properties.name, lcls: () => 'lbl-nbhd', hover: f => fill(it.hover || '{name}', f.properties)}),
+  outline: (it, fc) => {
+    const c = OUTLINE[it.level];
+    return polyLayer(fc, {pane:'civic', cls: () => c, label: f => fill(it.label, f.properties), lcls: () => 'lbl-' + c, hover: f => fill(it.hover, f.properties)});
+  },
+  patches: (it, fc) => polyLayer(fc, {pane:'civic', cls: () => 'bia', label: f => fill(it.label, f.properties), lcls: () => 'lbl-bia', hover: f => fill(it.hover, f.properties)}),
+  lens: (it, [fc, prof]) => {
     const g = L.geoJSON(fc, {pane:'fill', style: f => {
       return {className: lensClass(prof[String(f.properties.code)])};
     }, onEachFeature: (f, lyr) => {
-      lyr.bindTooltip(() => { const t = tierOf(prof[String(f.properties.code)]); return f.properties.name + (t ? ' \u00b7 ' + t : ''); },
+      lyr.bindTooltip(() => { const t = tierOf(prof[String(f.properties.code)]); return f.properties.name + (t ? ' · ' + t : ''); },
         {sticky:true, className:'hover-tip', direction:'top', offset:[0,-8]});
       lyr.on('click', e => inspect(e.latlng));
     }});
@@ -1178,65 +1207,58 @@ const BUILD = {
     });
     return g;
   },
-  go: ([lines, stns, lines416]) => {
+  rail: (it, [lines, stns, linesInner]) => {
     const g = L.layerGroup();
-    // Two versions of the lines: the full routes (GTA mode) and clipped at the city limits (Toronto mode).
+    // Two versions of the lines: the full routes (region view) and clipped at the city limits (city view).
     const full = L.layerGroup(), inner = L.layerGroup();
-    // Lines that share track near Union fan out sideways as you zoom in (offset in screen pixels).
+    // Lines that share track near the hub fan out sideways as you zoom in (offset in screen pixels).
     const gap = () => { const z = map.getZoom(); return z < 11 ? 0 : z < 12 ? 2 : z < 13 ? 3 : 4; };
     const w = () => { const z = map.getZoom(); return z < 11 ? 2.2 : z < 13 ? 3 : 3.5; };
     const segs = [];
-    [[lines, full], [lines416, inner]].forEach(([fc, grp]) => fc.features.forEach(f => {
+    [[lines, full], [linesInner, inner]].forEach(([fc, grp]) => fc.features.forEach(f => {
       const parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
       parts.forEach(part => {
         const pl = L.polyline(part.map(ll), {pane:'rail', className:'go-line', color: f.properties.color, weight: w(), offset: f.properties.offset * gap()});
-        hoverTip(pl, f.properties.name + (f.properties.line === 'UP' ? ' (Union \u2013 Pearson)' : ' line \u00b7 Union \u2013 ' + f.properties.to));
+        hoverTip(pl, fill((it.lineHover || {})[f.properties.line] || it.hover, f.properties));
         pl.on('click', e => inspect(e.latlng));
         grp.addLayer(pl); segs.push([pl, f]);
       });
     }));
     g.addLayer(full);
-    g._scope = s => { const [on, off] = s === '416' ? [inner, full] : [full, inner]; g.removeLayer(off); g.addLayer(on); };
+    g._scope = s => { const [on, off] = s === 'inner' ? [inner, full] : [full, inner]; g.removeLayer(off); g.addLayer(on); };
     map.on('zoomend', () => segs.forEach(([pl, f]) => { pl.setStyle({weight: w()}); if (pl.setOffset) pl.setOffset(f.properties.offset * gap()); }));
     // A station is a line end if it is the last stop on any line.
     const ends = lines.features.map(f => f.geometry.coordinates[f.geometry.coordinates.length - 1]);
     stns.features.forEach(f => {
       const c = f.geometry.coordinates, p = f.properties;
       const end = ends.some(e => Math.abs(e[0] - c[0]) < .01 && Math.abs(e[1] - c[1]) < .008);
-      const out = !hit(data.boroughs, c[0], c[1]) ? ' go-out' : '';
+      const out = !hit(data.footprint, c[0], c[1]) ? ' go-out' : '';
       const m = L.circleMarker(ll(c), {pane:'pts', radius: p.hub ? 6 : end ? 4.5 : 3.5, className: 'go-stn' + (p.hub ? ' hub' : '') + (end ? ' end' : '') + out});
-      hoverTip(m, p.name + ' \u00b7 ' + p.lines.join(', '));
+      hoverTip(m, p.name + ' · ' + p.lines.join(', '));
       m.on('click', e => inspect(e.latlng));
       g.addLayer(m);
       g.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6, 0], className:'lbl lbl-go' + (end || p.hub ? ' end' : '') + out, interactive:false}).setLatLng(ll(c)).setContent(esc(p.name)));
     });
     return g;
   },
-  landmarks: fc => {
+  landmarks: (it, fc) => {
     const g = L.layerGroup();
     fc.features.forEach(f => {
       const p = f.properties;
       const m = L.marker(ll(f.geometry.coordinates), {pane:'pts', keyboard:false, riseOnHover:true,
         icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="lm ' + p.cat + ' t' + p.tier + '"><i>' + svg(GLYPH[p.cat]) + '</i><b>' + esc(p.name) + '</b></span>'})});
-      hoverTip(m, p.name + ' \u00b7 ' + p.catLabel);
+      hoverTip(m, p.name + ' · ' + p.catLabel);
       m.on('click', () => goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), p.name, false));
       g.addLayer(m);
     });
     return g;
   },
-  boroughs: fc => polyLayer(fc, {cls: f => 'boro ' + slug(f.properties.name), label: f => f.properties.name, lcls: () => 'lbl-boro', hover: f => f.properties.name}),
-  areas: fc => polyLayer(fc, {cls: f => 'area ' + slug(f.properties.name), label: f => f.properties.name, lcls: () => 'lbl-area', hover: f => f.properties.name}),
-  nbhd: fc => polyLayer(fc, {pane:'lines', cls: () => 'nbhd', label: f => f.properties.name, lcls: () => 'lbl-nbhd', hover: f => f.properties.name + ' · #' + f.properties.code}),
-  wards: fc => polyLayer(fc, {pane:'civic', cls: () => 'ward', label: f => 'Ward ' + f.properties.num, lcls: () => 'lbl-ward', hover: f => 'Ward ' + f.properties.num + ' · ' + f.properties.name}),
-  prov: fc => polyLayer(fc, {pane:'civic', cls: () => 'prov', label: f => f.properties.prov, lcls: () => 'lbl-prov', hover: f => 'Provincial: ' + f.properties.prov}),
-  fed: fc => polyLayer(fc, {pane:'civic', cls: () => 'fed', label: f => f.properties.name, lcls: () => 'lbl-fed', hover: f => 'Federal: ' + f.properties.name}),
-  bia: fc => polyLayer(fc, {pane:'civic', cls: () => 'bia', label: f => f.properties.name, lcls: () => 'lbl-bia', hover: f => f.properties.name + ' BIA'}),
-  cultural: fc => {
+  knownas: (it, fc) => {
     const g = L.layerGroup();
     fc.features.forEach(f => g.addLayer(label(f.properties.name, 'lbl-cult' + (f.properties.kind === 'enclave' ? ' enclave' : ''), ll(f.geometry.coordinates))));
     return g;
   },
-  streets: fc => {
+  streets: (it, fc) => {
     // Arterial roads, with names laid along the line. Labels are re-placed after every
     // move so they never overlap each other; majors win over minors, longer streets first.
     const g = L.layerGroup(), labels = L.layerGroup();
@@ -1247,7 +1269,6 @@ const BUILD = {
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
     map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0] * k(l.feature)})); core.eachLayer(l => l.setStyle({weight: w()[1] * k(l.feature)})); });
     g.addLayer(cas); g.addLayer(core); g.addLayer(labels);
-    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
     const streets = fc.features.map(f => {
       const parts = (f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates).map(p => p.map(c => L.latLng(c[1], c[0])));
       return {name: f.properties.name, cls: f.properties.cls, parts: parts.map(p => ({pts: p, b: L.latLngBounds(p)}))};
@@ -1309,7 +1330,7 @@ const BUILD = {
     map.on('moveend', place); g.on('add', () => setTimeout(place));
     return g;
   },
-  hwy: ([fc, gta, gtaShields]) => {
+  highways: (it, [fc, outer, outerShields]) => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? [5, 2.4] : z < 13 ? [7, 3.6] : [10, 5.5]; };
     const cas = L.geoJSON(fc, {pane:'hwy', interactive:false, style: f => ({className:'hwy-case', weight: w()[0]})});
@@ -1317,30 +1338,29 @@ const BUILD = {
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
     map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w()[0]})); core.eachLayer(l => l.setStyle({weight: w()[1]})); });
     g.addLayer(cas); g.addLayer(core);
-    // Beyond the city limits (OpenStreetMap): same look, shields stay visible when zoomed out to the GTA.
-    const gcas = L.geoJSON(gta, {pane:'hwy', interactive:false, style: () => ({className:'hwy-case gta', weight: w()[0]})});
-    const gcore = L.geoJSON(gta, {pane:'hwy', style: () => ({className:'hwy-core gta', weight: w()[1]}),
+    // Beyond the city limits (OpenStreetMap): same look, shields stay visible when zoomed out to the region.
+    const gcas = L.geoJSON(outer, {pane:'hwy', interactive:false, style: () => ({className:'hwy-case outer', weight: w()[0]})});
+    const gcore = L.geoJSON(outer, {pane:'hwy', style: () => ({className:'hwy-core outer', weight: w()[1]}),
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
     map.on('zoomend', () => { gcas.eachLayer(l => l.setStyle({weight: w()[0]})); gcore.eachLayer(l => l.setStyle({weight: w()[1]})); });
     g.addLayer(gcas); g.addLayer(gcore);
-    gtaShields.features.forEach(f => {
-      const p = f.properties, html = '<span class="shield gta' + (p.toll ? ' etr' : '') + '">' + (p.toll ? '407 ETR' : p.route) + '</span>';
+    outerShields.features.forEach(f => {
+      const p = f.properties, html = '<span class="shield outer' + (p.toll ? ' toll' : '') + '">' + esc(p.toll ? it.tollShield : p.route) + '</span>';
       g.addLayer(L.marker(ll(f.geometry.coordinates), {pane:'pts', interactive:false, keyboard:false, icon: L.divIcon({className:'', html, iconSize:null})}));
     });
-    const SH = {'401':'401','400':'400','404':'404','409':'409','427':'427','QEW':'QEW','2A':'2A','DVP':'DVP','Gardiner':'Gardiner','Allen':'Allen Rd'};
     fc.features.forEach(f => {
       const parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
       const longest = parts.reduce((a, b) => b.length > a.length ? b : a);
-      const at = f.properties.route === '401' ? [.15, .5, .85] : [.5];
+      const at = (it.repeat || {})[f.properties.route] || [.5];
       at.forEach((t, i) => {
         const p = longest[Math.floor((longest.length - 1) * t)];
-        const html = '<span class="shield ' + (f.properties.kind === 'city' ? 'city' : '') + (i ? ' minor' : '') + '">' + SH[f.properties.route] + '</span>';
+        const html = '<span class="shield ' + (f.properties.kind === 'city' ? 'city' : '') + (i ? ' minor' : '') + '">' + esc(it.shields[f.properties.route] || f.properties.route) + '</span>';
         g.addLayer(L.marker(ll(p), {pane:'pts', interactive:false, keyboard:false, icon: L.divIcon({className:'', html, iconSize:null})}));
       });
     });
     return g;
   },
-  subway: ([lines, stns]) => {
+  metro: (it, [lines, stns]) => {
     const g = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? 3 : z < 13 ? 4.5 : 6; };
     const lg = L.geoJSON(lines, {pane:'transit', style: f => ({className:'sub-line l' + f.properties.line, weight: w()}),
@@ -1351,7 +1371,7 @@ const BUILD = {
     stns.features.forEach(f => {
       const x = f.properties.lines.length > 1, end = f.properties.terminus;
       const m = L.circleMarker(ll(f.geometry.coordinates), {pane:'pts', radius: x || end ? 5 : 3.5, className: 'stn' + (x ? ' x' : '') + (end ? ' end' : '')});
-      hoverTip(m, f.properties.name + ' · Line ' + f.properties.lines.join(', '));
+      hoverTip(m, fill(it.stationHover || '{name}', f.properties));
       m.on('click', e => inspect(e.latlng));
       g.addLayer(m);
       names.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6,0], className:'lbl lbl-stn' + (f.properties.terminus ? ' end' : ''), interactive:false}).setLatLng(ll(f.geometry.coordinates)).setContent(f.properties.name));
@@ -1360,42 +1380,40 @@ const BUILD = {
     return g;
   },
 };
-const FILES = {boroughs:'boroughs', areas:'areas', nbhd:'neighbourhoods', cultural:'cultural', wards:'wards', prov:'wards', fed:'federal', bia:'bia', streets:'streets', hwy:'highways', subway:['subway_lines','subway_stations']};
+// Drawing order: the order layers join the map decides which sits on top within a pane.
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, patches: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
 const state = {};
 const host = document.getElementById('layers');
-GROUPS.forEach(([title, items]) => {
+CITY.groups.forEach(([title, items]) => {
   const grp = document.createElement('div'); grp.className = 'grp';
   grp.innerHTML = '<h2>' + title + '</h2>';
   items.forEach(it => {
     const row = document.createElement('label'); row.className = 'row'; row.htmlFor = 'lyr-' + it.id;
-    row.innerHTML = '<span class="sw ' + it.id + '">' + (it.swatch || '') + '</span><span class="tx"><b>' + it.name + '</b><span>' + it.note + '</span></span>' +
+    row.innerHTML = '<span class="sw ' + it.id + ' k-' + (it.kind === 'outline' ? it.level : it.kind) + '">' + (SWATCH[it.kind] || '') + '</span><span class="tx"><b>' + it.name + '</b><span>' + it.note + '</span></span>' +
       '<input type="checkbox" id="lyr-' + it.id + '"' + (it.on ? ' checked' : '') + '><span class="tg" aria-hidden="true"></span>';
     grp.appendChild(row);
     row.querySelector('input').addEventListener('change', e => setLayer(it.id, e.target.checked));
-    if (it.lens){
+    if (it.kind === 'lens'){
       const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'lensbox'; box.hidden = !it.on;
-      box.innerHTML = '<div class="seg" role="radiogroup" aria-label="Neighbourhood lens">' +
+      box.innerHTML = '<div class="seg" role="radiogroup" aria-label="' + esc(CITY.lens.label) + '">' +
         Object.entries(LENSES).map(([k, L_]) => '<button type="button" role="radio" data-lens="' + k + '" aria-checked="' + (k === lens) + '">' + L_.short + '</button>').join('') +
         '</div><div class="legend" id="legend"></div>' +
-        '<div class="finder"><b>Narrow it down</b><span>Pick what you\u2019re looking for. Neighbourhoods that don\u2019t fit fade out.</span>' +
-        [['cost', 'Housing cost', LENSES.cost.tiers.map(t => [t[0], ['Lower', 'Middle', 'Higher'][LENSES.cost.tiers.indexOf(t)]])],
-         ['union', 'To Union by transit', [[30, 'Up to 30 min'], [45, '45 min'], [60, '60 min']]],
-         ['commute', 'Getting to work', [['transit', 'Transit, walk, bike'], ['mixed', 'Mixed'], ['car', 'Car']]],
-         ['tenure', 'Households', [['owners', 'Mostly own'], ['mix', 'A mix'], ['renters', 'Mostly rent']]]]
-          .map(([k, label, opts]) => '<div class="frow"><small>' + label + '</small><div class="chips">' +
-            opts.map(([v, t]) => '<button type="button" aria-pressed="false" data-f="' + k + '" data-v="' + v + '">' + t + '</button>').join('') + '</div></div>').join('') +
+        '<div class="finder"><b>Narrow it down</b><span>Pick what you’re looking for. ' + cap(CITY.units.plural) + ' that don’t fit fade out.</span>' +
+        FILTERS.map(f => '<div class="frow"><small>' + f.label + '</small><div class="chips">' +
+            f.options.map(([v, t]) => '<button type="button" aria-pressed="false" data-f="' + f.lens + '" data-v="' + v + '">' + t + '</button>').join('') + '</div></div>').join('') +
         '<div class="fres" id="fres" hidden><span id="fcount"></span><button type="button" id="fclear">Clear</button></div><div class="flist" id="flist"></div></div>';
       grp.appendChild(box);
       box.querySelectorAll('[data-lens]').forEach(b => b.addEventListener('click', () => setLens(b.dataset.lens)));
       box.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => {
         const k = b.dataset.f, v = b.dataset.v;
-        if (k === 'union') filt.union = filt.union === +v ? 0 : +v;
+        if (typeof filt[k] === 'number') filt[k] = filt[k] === +v ? 0 : +v;
         else filt[k].has(v) ? filt[k].delete(v) : filt[k].add(v);
         applyFilter();
       }));
-      box.querySelector('#fclear').addEventListener('click', () => { ['cost','commute','tenure'].forEach(k => filt[k].clear()); filt.union = 0; applyFilter(); });
+      box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); });
     }
     if (it.sub){
       const s = document.createElement('label'); s.className = 'sub';
@@ -1408,29 +1426,29 @@ GROUPS.forEach(([title, items]) => {
   host.appendChild(grp);
 });
 function syncStnNames(){
-  const L_ = layers.subway; if (!L_) return;
-  const want = state.subway && document.getElementById('stnNames').checked;
+  const L_ = METRO && layers[METRO.id]; if (!L_) return;
+  const want = state[METRO.id] && document.getElementById(METRO.sub.id).checked;
   if (want && !map.hasLayer(L_._names)) L_._names.addTo(map);
   if (!want && map.hasLayer(L_._names)) map.removeLayer(L_._names);
 }
-const ORDER = ['boroughs','areas','lens','bia','nbhd','fed','prov','wards','cultural','streets','hwy','go','subway','landmarks'];
 function drawLegend(){
   const el = document.getElementById('legend'); if (!el) return;
   const L_ = LENSES[lens];
   el.innerHTML = L_.tiers.map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
-    '<small>' + L_.note + ' Source: ' + (L_.src || '2021 Census via City of Toronto Neighbourhood Profiles.') + '</small>';
+    '<small>' + L_.note + ' Source: ' + (L_.source || CITY.lens.source) + '</small>';
 }
 function applyFilter(){
   document.querySelectorAll('[data-f]').forEach(b => {
     const k = b.dataset.f, v = b.dataset.v;
-    b.setAttribute('aria-pressed', String(k === 'union' ? filt.union === +v : filt[k].has(v)));
+    b.setAttribute('aria-pressed', String(typeof filt[k] === 'number' ? filt[k] === +v : filt[k].has(v)));
   });
-  if (layers.lens && layers.lens._restyle) layers.lens._restyle();
+  const LL = byKind('lens') && layers[byKind('lens').id];
+  if (LL && LL._restyle) LL._restyle();
   const on = filtOn(), res = document.getElementById('fres'), list = document.getElementById('flist');
   res.hidden = !on; list.innerHTML = '';
   if (!on || !data.profiles) return;
-  const hits = data.nbhd.features.filter(f => matches(data.profiles[String(f.properties.code)])).sort((a, b) => a.properties.name.localeCompare(b.properties.name));
-  document.getElementById('fcount').textContent = hits.length ? hits.length + ' of 158 neighbourhoods fit' : 'No neighbourhoods fit all of that';
+  const hits = data.units.features.filter(f => matches(data.profiles[String(f.properties.code)])).sort((a, b) => a.properties.name.localeCompare(b.properties.name));
+  document.getElementById('fcount').textContent = hits.length ? hits.length + ' of ' + data.units.features.length + ' ' + CITY.units.plural + ' fit' : 'No ' + CITY.units.plural + ' fit all of that';
   hits.forEach(f => {
     const b = document.createElement('button'); b.type = 'button'; b.textContent = f.properties.name;
     b.addEventListener('click', () => {
@@ -1446,30 +1464,32 @@ function setLens(k){
   lens = k;
   document.querySelectorAll('[data-lens]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.lens === k)));
   drawLegend();
-  if (layers.lens && layers.lens._restyle) layers.lens._restyle();
+  const LL = byKind('lens') && layers[byKind('lens').id];
+  if (LL && LL._restyle) LL._restyle();
 }
+const kindOf = id => (LAYERS.find(it => it.id === id) || {}).kind;
 function setLayer(id, on){
   state[id] = on;
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
-  if (id === 'subway') syncStnNames();
-  if (id === 'lens'){
+  if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'lens'){
     document.getElementById('lensbox').hidden = !on;
     drawLegend();
     // Coloured fills on top of each other turn to mud: the lens replaces the other area fills.
-    if (on) ['boroughs', 'areas'].forEach(o => { const cb = document.getElementById('lyr-' + o); if (cb && cb.checked){ cb.checked = false; setLayer(o, false); } });
+    if (on) LAYERS.filter(it => it.kind === 'fill').forEach(o => { const cb = document.getElementById('lyr-' + o.id); if (cb && cb.checked){ cb.checked = false; setLayer(o.id, false); } });
   }
-  if (on && (id === 'boroughs' || id === 'areas')){ const cb = document.getElementById('lyr-lens'); if (cb && cb.checked){ cb.checked = false; setLayer('lens', false); } }
+  if (on && kindOf(id) === 'fill'){ const LN = byKind('lens'), cb = LN && document.getElementById('lyr-' + LN.id); if (cb && cb.checked){ cb.checked = false; setLayer(LN.id, false); } }
 }
-// Reset: back to the starting view (Toronto only, the default layers, the first lens with no filter).
+// Reset: back to the starting view (city only, the default layers, the first lens with no filter).
 document.getElementById('reset').addEventListener('click', () => {
-  GROUPS.forEach(([, items]) => items.forEach(it => {
+  LAYERS.forEach(it => {
     const cb = document.getElementById('lyr-' + it.id), want = !!it.on;
     if (cb.checked !== want){ cb.checked = want; setLayer(it.id, want); }
     if (it.sub){ const sb = document.getElementById(it.sub.id); if (sb.checked !== !!it.sub.on){ sb.checked = !!it.sub.on; syncStnNames(); } }
-  }));
-  ['cost','commute','tenure'].forEach(k => filt[k].clear()); filt.union = 0; applyFilter(); setLens('cost');
-  setScope('416', true);
+  });
+  clearFilters(); applyFilter(); setLens(FIRST_LENS);
+  setScope('inner', true);
 });
 document.getElementById('allOff').addEventListener('click', () => {
   Object.keys(state).forEach(id => { const cb = document.getElementById('lyr-' + id); if (cb.checked){ cb.checked = false; setLayer(id, false); } });
@@ -1481,18 +1501,19 @@ if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
 /* ---------- What's here ---------- */
 const here = document.getElementById('here');
 let pin = null;
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const money = v => '$' + (v >= 1e6 ? (v / 1e6).toFixed(v % 1e6 ? 1 : 0) + 'M' : Math.round(v / 1e3) + 'K');
-function livingHere(nb){
-  const d = nb && data.profiles ? data.profiles[String(nb.properties.code)] : null;
+function livingHere(unit){
+  const d = unit && data.profiles ? data.profiles[String(unit.properties.code)] : null;
   if (!d) return '';
+  const T = CITY.card.living;
   const tier = (key, v) => { const [label, col] = TIER_LABEL[key + ':' + v]; return '<span class="tier"><i style="background:var(' + col + ')"></i>' + esc(label) + '</span>'; };
+  const hub = CITY.lens.lenses.find(L_ => L_.minutes);
   return '<div class="live"><dl>' +
-    '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' \u00b7 rent $' + d.rent.toLocaleString('en-CA') + '/mo</span><span class="caveat">Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.</span></dd>' +
-    (d.union != null ? '<dt>To Union</dt><dd>' + tier('unionBand', d.unionBand) + '<span>About ' + d.union + ' min by transit, weekday morning</span></dd>' : '') +
-    '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive \u00b7 ' + d.transitPct + '% transit \u00b7 ' + d.walkBikePct + '% walk or bike</span></dd>' +
+    '<dt>Housing</dt><dd>' + tier('cost', d.cost) + '<span>Median home ' + money(d.value) + ' · rent $' + d.rent.toLocaleString(CITY.locale) + '/mo</span><span class="caveat">' + esc(T.caveat) + '</span></dd>' +
+    (hub && d[hub.minutes] != null ? '<dt>' + esc(T.hub) + '</dt><dd>' + tier(hub.key, d[hub.key]) + '<span>' + esc(fill(T.hubText, {minutes: d[hub.minutes]})) + '</span></dd>' : '') +
+    '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive · ' + d.transitPct + '% transit · ' + d.walkBikePct + '% walk or bike</span></dd>' +
     '<dt>Households</dt><dd>' + tier('tenure', d.tenure) + '<span>' + d.renterPct + '% rent</span></dd>' +
-    '</dl><p>2021 Census and TTC/GO schedules, ' + esc(d.name) + '. Tiers compare neighbourhoods across Toronto.</p></div>';
+    '</dl><p>' + esc(fill(T.footer, {name: d.name})) + '</p></div>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
 const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, reps:false} : {bounds:true, live:true, reps:false};
@@ -1502,62 +1523,64 @@ function section(id, title, body){
   if (!body) return '';
   return '<details class="sec" data-sec="' + id + '"' + (secOpen[id] ? ' open' : '') + '><summary>' + title + '</summary>' + body + '</details>';
 }
-// Who represents this spot. Names link to their official pages (toronto.ca, ola.org, ourcommons.ca).
-function representatives(ward, fed){
-  const R = data.reps; if (!R || !ward) return '';
+// Who represents this spot. Names link to their official pages.
+function representatives(hits){
+  const R = data.reps, cfg = CITY.card.reps; if (!R || !cfg || !hits[cfg.offices[0].layer]) return '';
   const link = r => r && r.name ? '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.name) + '</a>' : '<span class="vacant">Seat currently vacant</span>';
-  const c = R.wards[String(ward.properties.num)], p = R.prov[ward.properties.prov], f = fed ? R.fed[fed.properties.name] : null;
   const row = (role, r, sub) => '<dt>' + role + '</dt><dd>' + link(r) + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</dd>';
+  const date = new Date(...R.updated.split('-').map((v, i) => +v - (i === 1))).toLocaleDateString(CITY.locale, {month:'long', day:'numeric', year:'numeric'});
   return '<div class="live reps"><dl>' +
-    row('City councillor', c, 'Ward ' + ward.properties.num) +
-    row('MPP', p, p && p.party) +
-    (fed ? row('MP', f, f && f.party) : '') +
-    '</dl><p>Names open each person\u2019s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change ' + esc(new Date(...R.updated.split('-').map((v, i) => +v - (i === 1))).toLocaleDateString('en-CA', {month:'long', day:'numeric', year:'numeric'})) + '.</p></div>';
+    cfg.offices.map(o => {
+      const h = hits[o.layer]; if (!h) return '';
+      const r = R[o.table][String(h.properties[o.key])];
+      return row(o.role, r, fill(o.sub, {f: h.properties, r: r || {}}));
+    }).join('') +
+    '</dl><p>' + esc(fill(cfg.note, {date})) + '</p></div>';
 }
 function placePin(latlng){
   if (pin) pin.setLatLng(latlng); else pin = L.marker(latlng, {pane:'pin', interactive:false, keyboard:false, icon: L.divIcon({className:'', iconSize:[20, 20], iconAnchor:[10, 10], html:'<span class="pin"></span>'})}).addTo(map);
 }
+const colorOf = (id, f) => { const it = LAYERS.find(l => l.id === id); return 'var(' + ((it && it.colors && it.colors[f.properties.name]) || '--ink-3') + ')'; };
 function inspect(latlng, title){
   const x = latlng.lng, y = latlng.lat;
-  const boro = hit(data.boroughs, x, y);
-  if (!boro){
-    const muni = hit(data.gta, x, y);
-    if (!muni){ here.hidden = false; renderEmpty('That spot is outside the Greater Toronto Area.'); return; }
+  if (!hit(data.footprint, x, y)){
+    const muni = hit(data.outer, x, y);
+    if (!muni){ here.hidden = false; renderEmpty(CITY.outside.beyond); return; }
     placePin(latlng);
     const m = muni.properties;
     here.hidden = false;
-    here.innerHTML = '<div class="hh"><div><small>What\u2019s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">\u00d7</button></div>' +
-      '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(m.region) + ' Region</span></div>' +
-      '<p class="gta-note">Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only.</p>';
+    here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
+      '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
+      '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     return;
   }
   placePin(latlng);
-  const area = hit(data.areas, x, y), nb = hit(data.nbhd, x, y), ward = hit(data.wards, x, y), fed = hit(data.fed, x, y), bia = hit(data.bia, x, y);
-  const near = (data.cultural ? data.cultural.features : []).map(f => [f, metres([x, y], f.geometry.coordinates)]).filter(a => a[1] < 650).sort((a, b) => a[1] - b[1]).slice(0, 2);
-  const bn = boro.properties.name;
+  const hits = {};
+  LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { hits[it.id] = hit(data.layers[it.id], x, y); });
+  const pillCfg = CITY.card.pills.find(p => p.knownas);
+  const near = (data.knownas ? data.knownas.features : []).map(f => [f, metres([x, y], f.geometry.coordinates)]).filter(a => a[1] < 650).sort((a, b) => a[1] - b[1]).slice(0, pillCfg ? pillCfg.knownas : 2);
   const pills = [];
-  if (area) pills.push(['var(' + AREA_VAR[area.properties.name] + ')', area.properties.name]);
-  else pills.push(['var(' + BORO_VAR[bn] + ')', bn]);
-  near.forEach(([f]) => pills.push(['var(--cult-enclave)', f.properties.name]));
-  if (bia) pills.push(['var(--bia)', bia.properties.name + ' BIA']);
-  if (fed) pills.push(['var(--fed)', 'Votes in ' + fed.properties.name]);
-  const facts = [
-    ['Former city', bn],
-    ['Area', area ? area.properties.name : (bn === 'Old Toronto' ? '—' : 'Outside Old Toronto')],
-    ['Neighbourhood', nb ? nb.properties.name + ' (#' + nb.properties.code + ')' : '—'],
-    ['Known as', near.length ? near.map(a => a[0].properties.name).join(', ') : '—'],
-    ['BIA', bia ? bia.properties.name + (bia.properties.since ? ' (since ' + bia.properties.since + ')' : '') : 'None'],
-    ['City ward', ward ? 'Ward ' + ward.properties.num + ' · ' + ward.properties.name : '—'],
-    ['Provincial', ward ? ward.properties.prov : '—'],
-    ['Federal', fed ? fed.properties.name : '—'],
-  ];
+  CITY.card.pills.forEach(p => {
+    if (p.knownas) { near.forEach(([f]) => pills.push(['var(--cult-enclave)', f.properties.name])); return; }
+    const h = hits[p.layer];
+    if (p.else) { if (h) pills.push([colorOf(p.layer, h), h.properties.name]); else if (hits[p.else]) pills.push([colorOf(p.else, hits[p.else]), hits[p.else].properties.name]); return; }
+    if (h) pills.push(['var(' + p.color + ')', fill(p.text, h.properties)]);
+  });
+  const facts = CITY.card.facts.map(r => {
+    if (r.knownas) return [r.label, near.length ? near.map(a => a[0].properties.name).join(', ') : '—'];
+    const h = hits[r.layer];
+    if (h) return [r.label, fill(r.text, h.properties)];
+    if (r.emptyWithin && Object.entries(r.emptyWithin).some(([id, name]) => hits[id] && hits[id].properties.name === name)) return [r.label, '—'];
+    return [r.label, r.empty || '—'];
+  });
+  const coords = Math.abs(y).toFixed(4) + '° ' + (y >= 0 ? 'N' : 'S') + ', ' + Math.abs(x).toFixed(4) + '° ' + (x < 0 ? 'W' : 'E');
   here.hidden = false;
-  here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || (y.toFixed(4) + '° N, ' + Math.abs(x).toFixed(4) + '° W')) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
+  here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || coords) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
-    section('live', 'Living here', livingHere(nb)) +
-    section('reps', 'Representatives', representatives(ward, fed));
+    section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
+    section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
 }
@@ -1626,28 +1649,28 @@ async function geocode(url){
 qf.addEventListener('submit', async e => {
   e.preventDefault();
   const text = q.value.trim();
-  if (!text || !data.boroughs || busy) return;
+  if (!text || !data.footprint || busy) return;
   const exact = landmarkMatches(text).filter(x => x.s === 0);
   if (exact.length === 1){ goLandmark(exact[0].f); return; }
   busy = true;
   const wait = 1100 - (Date.now() - lastSearch);
   if (wait > 0) await new Promise(r => setTimeout(r, wait));
   lastSearch = Date.now();
-  go.disabled = true; go.textContent = '\u2026';
-  const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=6&countrycodes=ca&bounded=1' +
-    '&viewbox=-79.64,43.86,-79.11,43.58&q=' + encodeURIComponent(text);
+  go.disabled = true; go.textContent = '…';
+  const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=6&countrycodes=' + CITY.search.country + '&bounded=1' +
+    '&viewbox=' + CITY.search.viewbox + '&q=' + encodeURIComponent(text);
   try {
     let list;
     try { list = await geocode(url); }
-    catch (err){ showResults('<li class="msg">Address search isn\u2019t responding right now. Try again in a moment, or tap the map instead.</li>'); return; }
+    catch (err){ showResults('<li class="msg">Address search isn’t responding right now. Try again in a moment, or tap the map instead.</li>'); return; }
     // Keep matches inside the city, and merge repeats of the same address (one per entrance/postcode).
     const inCity = [];
-    list.filter(r => hit(data.boroughs, +r.lon, +r.lat)).forEach(r => {
+    list.filter(r => hit(data.footprint, +r.lon, +r.lat)).forEach(r => {
       const dup = inCity.some(k => placeLabel(k) === placeLabel(r) && metres([+k.lon, +k.lat], [+r.lon, +r.lat]) < 150);
       if (!dup) inCity.push(r);
     });
     if (!inCity.length){
-      showResults('<li class="msg">No match inside the City of Toronto for “' + esc(text) + '”. Try the full street name, like “789 Yonge Street”.</li>');
+      showResults('<li class="msg">' + esc(fill(CITY.search.noMatch, {q: text})) + '</li>');
     } else if (inCity.length === 1){
       choose(inCity[0]);
     } else {
@@ -1664,7 +1687,7 @@ qf.addEventListener('submit', async e => {
 q.addEventListener('keydown', e => { if (e.key === 'Escape'){ showResults(''); q.blur(); } });
 /* Landmark suggestions: instant, local, no network (Nominatim's policy rules out
    autocomplete-as-you-type, so live suggestions come only from our own curated list). */
-const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 function landmarkMatches(text){
   const qq = norm(text);
   if (qq.length < 2 || !data.landmarks) return [];
@@ -1686,8 +1709,8 @@ q.addEventListener('input', () => {
   if (!m.length){ showResults(''); return; }
   window.__lm = m;
   showResults(m.map((x, i) => '<li><button type="button" data-lm="' + i + '">' + esc(x.f.properties.name) +
-    '<span>' + esc(x.f.properties.catLabel) + (x.alias ? ' \u00b7 also called ' + esc(x.alias) : '') + '</span></button></li>').join('') +
-    '<li class="msg">Press Find to search all Toronto addresses</li>');
+    '<span>' + esc(x.f.properties.catLabel) + (x.alias ? ' · also called ' + esc(x.alias) : '') + '</span></button></li>').join('') +
+    '<li class="msg">' + esc(CITY.search.more) + '</li>');
   results.querySelectorAll('[data-lm]').forEach(b => b.addEventListener('click', () => goLandmark(window.__lm[+b.dataset.lm].f)));
 });
 q.addEventListener('keydown', e => { if (e.key === 'ArrowDown'){ const b = results.querySelector('button'); if (b){ e.preventDefault(); b.focus(); } } });
@@ -1698,9 +1721,8 @@ results.addEventListener('keydown', e => {
   if (e.key === 'Escape'){ showResults(''); q.focus(); }
 });
 
-/* ---------- Scope: Greater Toronto Area (416 + 905) or Toronto only (416) ---------- */
-const GTA_VIEW = L.latLngBounds([43.40,-80.05],[44.10,-78.85]);
-let mask = null, scope = 'gta';
+/* ---------- Scope: the wider region ("outer") or the city alone ("inner") ---------- */
+let mask = null, scope = 'outer';
 function frame(bounds){
   const opts = wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]};
   const size = map.getSize(), calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1710,36 +1732,45 @@ function frame(bounds){
 function setScope(s, move){
   scope = s;
   document.querySelectorAll('[data-scope]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.scope === s)));
-  map.getContainer().classList.toggle('mode-416', s === '416');
-  if (mask) { if (s === '416') mask.addTo(map); else map.removeLayer(mask); }
-  if (layers.go && layers.go._scope) layers.go._scope(s);
-  if (move) frame(s === '416' ? CITY_BOUNDS : GTA_VIEW);
+  map.getContainer().classList.toggle('mode-inner', s === 'inner');
+  if (mask) { if (s === 'inner') mask.addTo(map); else map.removeLayer(mask); }
+  ORDER.forEach(it => { if (layers[it.id] && layers[it.id]._scope) layers[it.id]._scope(s); });
+  if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
 }
 document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click', () => { if (b.dataset.scope !== scope) setScope(b.dataset.scope, true); }));
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
-Promise.all([get('base'), get('boroughs'), get('areas'), get('neighbourhoods'), get('cultural'), get('wards'), get('federal'), get('bia'), get('streets'), get('highways'), get('subway_lines'), get('subway_stations'), get('regions'), get('landmarks'), get('gta_highways'), get('gta_shields'), get('go_lines'), get('go_stations'), get('go_lines_416'), get('nbhd_profiles.json'), get('representatives.json').catch(() => null)])
-.then(([base, boroughs, areas, nbhd, cultural, wards, fed, bia, streets, hwy, sl, ss, regions, landmarks, gtaHwy, gtaShields, goLines, goStns, goLines416, profiles, reps]) => {
-  Object.assign(data, {boroughs, areas, nbhd, cultural, wards, fed, bia, landmarks, profiles, reps,
-    gta: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
-  buildBase(base, regions);
-  // Toronto-only mode: cover every other municipality and the land beyond the GTA (the lake stays visible).
+const files = ['base', 'regions'];
+LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
+const loaded = {};
+Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
+  .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; })]))
+.then(() => {
+  const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
+  LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
+  Object.assign(data, {footprint: data.layers[CITY.footprint], units: UNITS && loaded[UNITS.file],
+    knownas: byKind('knownas') && loaded[byKind('knownas').file], landmarks: byKind('landmarks') && loaded[byKind('landmarks').file],
+    outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
+  buildBase(base, loaded.regions);
+  // City-only mode: cover every other municipality and the land beyond the region (water stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});
-  // Older data without transit times: hide the Union lens and its filter row.
-  if (!Object.values(profiles).some(d => d.union != null)) document.querySelectorAll('[data-lens="union"], .frow:has([data-f="union"])').forEach(e => e.remove());
-  const src = {boroughs, areas, nbhd, cultural, wards, prov: wards, fed, bia, streets, hwy: [hwy, gtaHwy, gtaShields], go: [goLines, goStns, goLines416], lens: [nbhd, profiles], subway: [sl, ss], landmarks};
-  ORDER.forEach(id => { layers[id] = BUILD[id](src[id]); });
-  ORDER.forEach(id => { if (state[id]) layers[id].addTo(map); });
+  // A lens with no figures in this build's data (e.g. transit times not fetched yet) is hidden, with its filter row.
+  CITY.lens.lenses.filter(L_ => L_.optional).forEach(L_ => {
+    if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
+  });
+  ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : src(it)); });
+  ORDER.forEach(it => { if (state[it.id]) layers[it.id].addTo(map); });
   syncStnNames();
   zoomClasses();
-  setScope('416', false);
+  setScope('inner', false);
   frame(CITY_BOUNDS);
-  inspect(L.latLng(43.67194, -79.38667), 'Toronto Reference Library (example)');
+  inspect(L.latLng(CITY.example.at), CITY.example.name);
 }).catch(err => { renderEmpty('The map data didn’t load (' + err.message + '). Reload the page to try again.'); });
 })();
+
 </script>
 
 </body>
