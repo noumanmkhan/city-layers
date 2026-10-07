@@ -104,7 +104,25 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf{padding:10px 18px 14px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink-3)}
 .pf button{font:inherit;color:var(--ink-2);background:none;border:1px solid var(--rule);border-radius:7px;padding:4px 9px;cursor:pointer}
 .pf button:hover{color:var(--ink)}
-.pfb{display:flex;gap:6px}
+.pfb{display:flex;gap:6px;flex-wrap:wrap}
+.pf{position:relative}
+.imgmenu{position:absolute;left:12px;right:12px;bottom:calc(100% + 6px);background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--shadow);padding:12px;display:grid;gap:4px;font-size:12px;color:var(--ink-2);z-index:5}
+.imgmenu[hidden]{display:none}
+.imgmenu b{color:var(--ink);font-size:12.5px}
+.imgmenu div{display:flex;gap:6px;margin-top:6px}
+.pf .imgmenu button{flex:1;padding:6px 8px;font-weight:600;color:var(--ink)}
+/* Desktop: the layer panel folds away to a small "Layers" button, leaving the whole map. */
+.ph{position:relative}
+.fold{position:absolute;top:12px;right:12px;width:28px;height:28px;display:grid;place-items:center;border:none;border-radius:7px;background:none;color:var(--ink-3);cursor:pointer}
+.fold:hover{background:var(--pill-bg);color:var(--ink)}
+.fold svg{width:15px;height:15px}
+#panel.folded{display:none}
+#unfold{position:absolute;z-index:1000;top:16px;left:16px;display:flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:var(--panel);border:none;border-radius:10px;box-shadow:var(--shadow);padding:9px 13px;cursor:pointer}
+#unfold[hidden]{display:none}
+#unfold svg{width:15px;height:15px}
+#busy{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:var(--bg)}
+#busy[hidden]{display:none}
+#busy span{font-size:14px;font-weight:600;color:var(--ink-2)}
 #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,8px);background:var(--ink);color:var(--panel);font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:2000}
 #toast.on{opacity:1;transform:translate(-50%,0)}
 .pf{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
@@ -315,6 +333,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph h1{font-size:17px}
   .ph p{display:none}
   .ph .hub-link{display:none}
+  .fold,#unfold{display:none!important}
+  #panel.folded{display:flex}
   #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
@@ -334,6 +354,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   <aside id="panel" aria-label="Map layers">
     <div class="ph" id="ph">
       <div class="grab" aria-hidden="true"></div>
+      <button type="button" class="fold" id="fold" aria-label="Hide the layer panel" title="Hide the panel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <a class="hub-link" href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>All maps</a>
       <!--CITY_SWITCH-->
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
@@ -344,7 +365,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
     </div>
     <div id="layers"></div>
     <div class="pf">
-      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button><button type="button" id="shareView" title="Copy a link to this view">Share</button></div>
+      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button><button type="button" id="shareView" title="Copy a link to this view">Share</button><button type="button" id="saveImg" aria-haspopup="true" aria-expanded="false" title="Save the map as a 4K image">Image</button></div>
+      <div class="imgmenu" id="imgMenu" hidden><b>Save the map as a 4K image</b><span>Just the map, without the panels. 3840 × 2160 PNG.</span><div><button type="button" data-img="labels">With labels</button><button type="button" data-img="plain">Without labels</button></div></div>
       <div class="seg" role="radiogroup" aria-label="Colour theme">
         <button type="button" role="radio" data-theme-choice="auto" title="Match your device">Auto</button>
         <button type="button" role="radio" data-theme-choice="light">Light</button>
@@ -352,6 +374,9 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
       </div>
     </div>
   </aside>
+
+  <button type="button" id="unfold" hidden aria-label="Show the layer panel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Layers</button>
+  <div id="busy" hidden role="status"><span></span></div>
 
   <div id="side">
     <div id="search" role="search">

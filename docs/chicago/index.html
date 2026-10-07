@@ -769,7 +769,25 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .pf{padding:10px 18px 14px;border-top:1px solid var(--rule);font-size:11px;color:var(--ink-3)}
 .pf button{font:inherit;color:var(--ink-2);background:none;border:1px solid var(--rule);border-radius:7px;padding:4px 9px;cursor:pointer}
 .pf button:hover{color:var(--ink)}
-.pfb{display:flex;gap:6px}
+.pfb{display:flex;gap:6px;flex-wrap:wrap}
+.pf{position:relative}
+.imgmenu{position:absolute;left:12px;right:12px;bottom:calc(100% + 6px);background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--shadow);padding:12px;display:grid;gap:4px;font-size:12px;color:var(--ink-2);z-index:5}
+.imgmenu[hidden]{display:none}
+.imgmenu b{color:var(--ink);font-size:12.5px}
+.imgmenu div{display:flex;gap:6px;margin-top:6px}
+.pf .imgmenu button{flex:1;padding:6px 8px;font-weight:600;color:var(--ink)}
+/* Desktop: the layer panel folds away to a small "Layers" button, leaving the whole map. */
+.ph{position:relative}
+.fold{position:absolute;top:12px;right:12px;width:28px;height:28px;display:grid;place-items:center;border:none;border-radius:7px;background:none;color:var(--ink-3);cursor:pointer}
+.fold:hover{background:var(--pill-bg);color:var(--ink)}
+.fold svg{width:15px;height:15px}
+#panel.folded{display:none}
+#unfold{position:absolute;z-index:1000;top:16px;left:16px;display:flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:var(--panel);border:none;border-radius:10px;box-shadow:var(--shadow);padding:9px 13px;cursor:pointer}
+#unfold[hidden]{display:none}
+#unfold svg{width:15px;height:15px}
+#busy{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:var(--bg)}
+#busy[hidden]{display:none}
+#busy span{font-size:14px;font-weight:600;color:var(--ink-2)}
 #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,8px);background:var(--ink);color:var(--panel);font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:2000}
 #toast.on{opacity:1;transform:translate(-50%,0)}
 .pf{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
@@ -980,6 +998,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph h1{font-size:17px}
   .ph p{display:none}
   .ph .hub-link{display:none}
+  .fold,#unfold{display:none!important}
+  #panel.folded{display:flex}
   #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
@@ -1028,6 +1048,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   <aside id="panel" aria-label="Map layers">
     <div class="ph" id="ph">
       <div class="grab" aria-hidden="true"></div>
+      <button type="button" class="fold" id="fold" aria-label="Hide the layer panel" title="Hide the panel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <a class="hub-link" href="../"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>All maps</a>
       <div class="switch"><h1>Chicago Layers<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></h1><select id="citySwitch" aria-label="Switch map"><option value="../chicago/" selected>Chicago Layers</option><option value="../toronto/">Toronto Layers</option><option value="../">All maps</option></select></div>
       <p>Turn layers on and off. Search an address or tap anywhere on the map to see every boundary that spot falls inside.</p>
@@ -1038,7 +1059,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
     </div>
     <div id="layers"></div>
     <div class="pf">
-      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button><button type="button" id="shareView" title="Copy a link to this view">Share</button></div>
+      <div class="pfb"><button type="button" id="reset" title="Back to the starting view">Reset</button><button type="button" id="allOff">Hide all</button><button type="button" id="shareView" title="Copy a link to this view">Share</button><button type="button" id="saveImg" aria-haspopup="true" aria-expanded="false" title="Save the map as a 4K image">Image</button></div>
+      <div class="imgmenu" id="imgMenu" hidden><b>Save the map as a 4K image</b><span>Just the map, without the panels. 3840 × 2160 PNG.</span><div><button type="button" data-img="labels">With labels</button><button type="button" data-img="plain">Without labels</button></div></div>
       <div class="seg" role="radiogroup" aria-label="Colour theme">
         <button type="button" role="radio" data-theme-choice="auto" title="Match your device">Auto</button>
         <button type="button" role="radio" data-theme-choice="light">Light</button>
@@ -1046,6 +1068,9 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
       </div>
     </div>
   </aside>
+
+  <button type="button" id="unfold" hidden aria-label="Show the layer panel"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Layers</button>
+  <div id="busy" hidden role="status"><span></span></div>
 
   <div id="side">
     <div id="search" role="search">
@@ -1600,6 +1625,16 @@ if (citySwitch){
 }
 document.querySelectorAll('.ph .switch, .ph .hub-link').forEach(el => el.addEventListener('click', e => e.stopPropagation()));
 if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+// Desktop: fold the panel away for a full view of the map; remembered in this browser.
+const unfold = document.getElementById('unfold');
+function setFolded(on){
+  panel.classList.toggle('folded', on); unfold.hidden = !on;
+  try { if (on) localStorage.setItem('panelFolded', '1'); else localStorage.removeItem('panelFolded'); } catch (e) {}
+  (on ? unfold : document.getElementById('fold')).focus({preventScroll: true});
+}
+document.getElementById('fold').addEventListener('click', e => { e.stopPropagation(); setFolded(true); });
+unfold.addEventListener('click', () => setFolded(false));
+try { if (localStorage.getItem('panelFolded') && wide()){ panel.classList.add('folded'); unfold.hidden = false; } } catch (e) {}
 
 /* ---------- What's here ---------- */
 const here = document.getElementById('here');
@@ -2059,6 +2094,105 @@ document.getElementById('shareView').addEventListener('click', share);
 map.on('moveend', queueHash);
 // A link pasted into the same tab (only the #fragment changes) re-applies without a reload.
 window.addEventListener('hashchange', () => { if (location.hash !== lastHash){ linkReady = false; applyHash(location.hash); linkReady = true; } });
+
+
+/* ---------- Save the map as a 4K image (all in the browser) ----------
+   The map is drawn from the site's own shapes, with no tiles from other sites, so html-to-image (loaded
+   only when first used) can turn it into a picture. The map is briefly redrawn in a 16:9 frame that
+   covers what's on screen, rendered at 3840 x 2160, and stamped with the data credits the licences
+   ask for. The panels, the pin and the controls are left out; "Without labels" also drops every name. */
+const IMG_LIB = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js';
+let imgLib = null;
+const loadImgLib = () => imgLib || (imgLib = new Promise((res, rej) => {
+  const sc = document.createElement('script'); sc.src = IMG_LIB;
+  sc.onload = () => window.htmlToImage ? res(window.htmlToImage) : rej(new Error('missing'));
+  sc.onerror = () => { imgLib = null; rej(new Error('load')); };
+  document.head.appendChild(sc);
+}));
+const imgBtn = document.getElementById('saveImg'), imgMenu = document.getElementById('imgMenu');
+function imgMenuOpen(on){ imgMenu.hidden = !on; imgBtn.setAttribute('aria-expanded', String(on)); if (on) loadImgLib().catch(() => {}); }
+imgBtn.addEventListener('click', e => { e.stopPropagation(); imgMenuOpen(imgMenu.hidden); });
+imgMenu.querySelectorAll('[data-img]').forEach(b => b.addEventListener('click', () => saveImage(b.dataset.img === 'labels')));
+document.addEventListener('click', e => { if (!imgMenu.hidden && !imgMenu.contains(e.target)) imgMenuOpen(false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !imgMenu.hidden){ imgMenuOpen(false); imgBtn.focus(); } });
+// html-to-image copies each SVG whole without the page's stylesheet, and the map's shapes take their
+// colours from CSS classes. So, for the moment of capture, the computed look is written onto each shape.
+const SVG_PROPS = ['fill', 'fill-opacity', 'fill-rule', 'stroke', 'stroke-width', 'stroke-opacity', 'stroke-dasharray',
+  'stroke-linecap', 'stroke-linejoin', 'opacity', 'display', 'visibility', 'paint-order'];
+function inlineSvgStyles(root){
+  const saved = [];
+  root.querySelectorAll('svg *').forEach(n => {
+    const cs = getComputedStyle(n);
+    saved.push([n, n.getAttribute('style')]);
+    n.setAttribute('style', SVG_PROPS.map(k => k + ':' + cs.getPropertyValue(k)).join(';'));
+  });
+  return () => saved.forEach(([n, v]) => { if (v == null) n.removeAttribute('style'); else n.setAttribute('style', v); });
+}
+const frames = n => new Promise(r => { const step = k => k ? requestAnimationFrame(() => step(k - 1)) : r(); step(n); });
+let saving = false;
+async function saveImage(labels){
+  if (saving) return; saving = true;
+  imgMenuOpen(false);
+  const W = 3840, H = 2160, el = map.getContainer(), busy = document.getElementById('busy');
+  const center = map.getCenter(), zoom = map.getZoom(), before = el.getAttribute('style') || '';
+  // A 16:9 frame at least as big as the screen's map, so the picture shows what's on screen (and a bit more on the short side).
+  const cw = Math.round(Math.max(el.clientWidth, el.clientHeight * 16 / 9)), ch = Math.round(cw * 9 / 16);
+  busy.firstElementChild.textContent = 'Making your image…'; busy.hidden = false;
+  let canvas = null, restoreSvg = null;
+  try {
+    const lib = await loadImgLib();
+    el.style.right = 'auto'; el.style.bottom = 'auto'; el.style.width = cw + 'px'; el.style.height = ch + 'px';
+    map.invalidateSize({pan: false}); map.setView(center, zoom, {animate: false, reset: true});   // reset: redraw every shape for the new frame
+    await new Promise(r => setTimeout(r, 400)); declutter(); await frames(2);
+    const has = (n, c) => n.classList && n.classList.contains(c);
+    const skip = n => has(n, 'leaflet-control-container') || has(n, 'leaflet-pin-pane') || has(n, 'hover-tip') ||
+      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') ||
+        (n.tagName === 'B' && n.parentElement && has(n.parentElement, 'lm'))));
+    restoreSvg = inlineSvgStyles(el);
+    canvas = await lib.toCanvas(el, {width: cw, height: ch, canvasWidth: W, canvasHeight: H, pixelRatio: 1,
+      backgroundColor: getComputedStyle(el).backgroundColor, filter: n => !skip(n)});
+    stampCredits(canvas);
+  } catch (err){
+    console.error(err);
+  } finally {
+    if (restoreSvg) restoreSvg();
+    el.setAttribute('style', before);
+    map.invalidateSize({pan: false}); map.setView(center, zoom, {animate: false, reset: true});   // reset: redraw every shape for the new frame
+    busy.hidden = true; saving = false;
+  }
+  if (!canvas){ flash('The image couldn’t be made. Check your connection and try again.'); return; }
+  canvas.toBlob(async blob => {
+    if (!blob){ flash('The image couldn’t be made.'); return; }
+    const name = slug(document.title) + (pin && pinName ? '-' + slug(pinName) : '') + (labels ? '' : '-no-labels') + '.png';
+    const file = new File([blob], name, {type: 'image/png'});
+    if (matchMedia('(pointer:coarse)').matches && navigator.canShare && navigator.canShare({files: [file]})){
+      try { await navigator.share({files: [file], title: document.title}); return; } catch (e){ if (e && e.name === 'AbortError') return; }
+    }
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    flash('Image saved');
+  }, 'image/png');
+}
+// Bottom-right: the map's name and address, then the data credits (the licences ask for them wherever the map goes).
+function stampCredits(canvas){
+  const ctx = canvas.getContext('2d'), cs = getComputedStyle(document.documentElement);
+  const ink = cs.getPropertyValue('--ink').trim() || '#23262B', bg = cs.getPropertyValue('--panel').trim() || '#fff';
+  const font = cs.getPropertyValue('--font').trim() || 'sans-serif';
+  const credit = (() => { const d = document.createElement('div'); d.innerHTML = CITY.attribution; return d.textContent.replace(/\s+/g, ' ').trim(); })();
+  const title = document.title + ' · ' + location.host + location.pathname.replace(/\/$/, '');
+  const pad = 22, x = canvas.width - 36, y = canvas.height - 36, maxW = canvas.width - 200;
+  ctx.font = '400 24px ' + font; const w2 = Math.min(ctx.measureText(credit).width, maxW);
+  ctx.font = '700 30px ' + font; const w1 = ctx.measureText(title).width;
+  const bw = Math.max(w1, w2) + pad * 2, bh = 30 + 24 + 14 + pad * 2;
+  ctx.globalAlpha = .88; ctx.fillStyle = bg;
+  ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(x - bw, y - bh, bw, bh, 14); else ctx.rect(x - bw, y - bh, bw, bh); ctx.fill();
+  ctx.globalAlpha = 1; ctx.fillStyle = ink; ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText(title, x - pad, y - bh + pad + 28);
+  ctx.font = '400 24px ' + font; ctx.globalAlpha = .75;
+  ctx.fillText(credit, x - pad, y - pad, maxW);
+  ctx.globalAlpha = 1;
+}
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');

@@ -532,6 +532,16 @@ if (citySwitch){
 }
 document.querySelectorAll('.ph .switch, .ph .hub-link').forEach(el => el.addEventListener('click', e => e.stopPropagation()));
 if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+// Desktop: fold the panel away for a full view of the map; remembered in this browser.
+const unfold = document.getElementById('unfold');
+function setFolded(on){
+  panel.classList.toggle('folded', on); unfold.hidden = !on;
+  try { if (on) localStorage.setItem('panelFolded', '1'); else localStorage.removeItem('panelFolded'); } catch (e) {}
+  (on ? unfold : document.getElementById('fold')).focus({preventScroll: true});
+}
+document.getElementById('fold').addEventListener('click', e => { e.stopPropagation(); setFolded(true); });
+unfold.addEventListener('click', () => setFolded(false));
+try { if (localStorage.getItem('panelFolded') && wide()){ panel.classList.add('folded'); unfold.hidden = false; } } catch (e) {}
 
 /* ---------- What's here ---------- */
 const here = document.getElementById('here');
@@ -991,6 +1001,105 @@ document.getElementById('shareView').addEventListener('click', share);
 map.on('moveend', queueHash);
 // A link pasted into the same tab (only the #fragment changes) re-applies without a reload.
 window.addEventListener('hashchange', () => { if (location.hash !== lastHash){ linkReady = false; applyHash(location.hash); linkReady = true; } });
+
+
+/* ---------- Save the map as a 4K image (all in the browser) ----------
+   The map is drawn from the site's own shapes, with no tiles from other sites, so html-to-image (loaded
+   only when first used) can turn it into a picture. The map is briefly redrawn in a 16:9 frame that
+   covers what's on screen, rendered at 3840 x 2160, and stamped with the data credits the licences
+   ask for. The panels, the pin and the controls are left out; "Without labels" also drops every name. */
+const IMG_LIB = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js';
+let imgLib = null;
+const loadImgLib = () => imgLib || (imgLib = new Promise((res, rej) => {
+  const sc = document.createElement('script'); sc.src = IMG_LIB;
+  sc.onload = () => window.htmlToImage ? res(window.htmlToImage) : rej(new Error('missing'));
+  sc.onerror = () => { imgLib = null; rej(new Error('load')); };
+  document.head.appendChild(sc);
+}));
+const imgBtn = document.getElementById('saveImg'), imgMenu = document.getElementById('imgMenu');
+function imgMenuOpen(on){ imgMenu.hidden = !on; imgBtn.setAttribute('aria-expanded', String(on)); if (on) loadImgLib().catch(() => {}); }
+imgBtn.addEventListener('click', e => { e.stopPropagation(); imgMenuOpen(imgMenu.hidden); });
+imgMenu.querySelectorAll('[data-img]').forEach(b => b.addEventListener('click', () => saveImage(b.dataset.img === 'labels')));
+document.addEventListener('click', e => { if (!imgMenu.hidden && !imgMenu.contains(e.target)) imgMenuOpen(false); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !imgMenu.hidden){ imgMenuOpen(false); imgBtn.focus(); } });
+// html-to-image copies each SVG whole without the page's stylesheet, and the map's shapes take their
+// colours from CSS classes. So, for the moment of capture, the computed look is written onto each shape.
+const SVG_PROPS = ['fill', 'fill-opacity', 'fill-rule', 'stroke', 'stroke-width', 'stroke-opacity', 'stroke-dasharray',
+  'stroke-linecap', 'stroke-linejoin', 'opacity', 'display', 'visibility', 'paint-order'];
+function inlineSvgStyles(root){
+  const saved = [];
+  root.querySelectorAll('svg *').forEach(n => {
+    const cs = getComputedStyle(n);
+    saved.push([n, n.getAttribute('style')]);
+    n.setAttribute('style', SVG_PROPS.map(k => k + ':' + cs.getPropertyValue(k)).join(';'));
+  });
+  return () => saved.forEach(([n, v]) => { if (v == null) n.removeAttribute('style'); else n.setAttribute('style', v); });
+}
+const frames = n => new Promise(r => { const step = k => k ? requestAnimationFrame(() => step(k - 1)) : r(); step(n); });
+let saving = false;
+async function saveImage(labels){
+  if (saving) return; saving = true;
+  imgMenuOpen(false);
+  const W = 3840, H = 2160, el = map.getContainer(), busy = document.getElementById('busy');
+  const center = map.getCenter(), zoom = map.getZoom(), before = el.getAttribute('style') || '';
+  // A 16:9 frame at least as big as the screen's map, so the picture shows what's on screen (and a bit more on the short side).
+  const cw = Math.round(Math.max(el.clientWidth, el.clientHeight * 16 / 9)), ch = Math.round(cw * 9 / 16);
+  busy.firstElementChild.textContent = 'Making your image…'; busy.hidden = false;
+  let canvas = null, restoreSvg = null;
+  try {
+    const lib = await loadImgLib();
+    el.style.right = 'auto'; el.style.bottom = 'auto'; el.style.width = cw + 'px'; el.style.height = ch + 'px';
+    map.invalidateSize({pan: false}); map.setView(center, zoom, {animate: false, reset: true});   // reset: redraw every shape for the new frame
+    await new Promise(r => setTimeout(r, 400)); declutter(); await frames(2);
+    const has = (n, c) => n.classList && n.classList.contains(c);
+    const skip = n => has(n, 'leaflet-control-container') || has(n, 'leaflet-pin-pane') || has(n, 'hover-tip') ||
+      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') ||
+        (n.tagName === 'B' && n.parentElement && has(n.parentElement, 'lm'))));
+    restoreSvg = inlineSvgStyles(el);
+    canvas = await lib.toCanvas(el, {width: cw, height: ch, canvasWidth: W, canvasHeight: H, pixelRatio: 1,
+      backgroundColor: getComputedStyle(el).backgroundColor, filter: n => !skip(n)});
+    stampCredits(canvas);
+  } catch (err){
+    console.error(err);
+  } finally {
+    if (restoreSvg) restoreSvg();
+    el.setAttribute('style', before);
+    map.invalidateSize({pan: false}); map.setView(center, zoom, {animate: false, reset: true});   // reset: redraw every shape for the new frame
+    busy.hidden = true; saving = false;
+  }
+  if (!canvas){ flash('The image couldn’t be made. Check your connection and try again.'); return; }
+  canvas.toBlob(async blob => {
+    if (!blob){ flash('The image couldn’t be made.'); return; }
+    const name = slug(document.title) + (pin && pinName ? '-' + slug(pinName) : '') + (labels ? '' : '-no-labels') + '.png';
+    const file = new File([blob], name, {type: 'image/png'});
+    if (matchMedia('(pointer:coarse)').matches && navigator.canShare && navigator.canShare({files: [file]})){
+      try { await navigator.share({files: [file], title: document.title}); return; } catch (e){ if (e && e.name === 'AbortError') return; }
+    }
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    flash('Image saved');
+  }, 'image/png');
+}
+// Bottom-right: the map's name and address, then the data credits (the licences ask for them wherever the map goes).
+function stampCredits(canvas){
+  const ctx = canvas.getContext('2d'), cs = getComputedStyle(document.documentElement);
+  const ink = cs.getPropertyValue('--ink').trim() || '#23262B', bg = cs.getPropertyValue('--panel').trim() || '#fff';
+  const font = cs.getPropertyValue('--font').trim() || 'sans-serif';
+  const credit = (() => { const d = document.createElement('div'); d.innerHTML = CITY.attribution; return d.textContent.replace(/\s+/g, ' ').trim(); })();
+  const title = document.title + ' · ' + location.host + location.pathname.replace(/\/$/, '');
+  const pad = 22, x = canvas.width - 36, y = canvas.height - 36, maxW = canvas.width - 200;
+  ctx.font = '400 24px ' + font; const w2 = Math.min(ctx.measureText(credit).width, maxW);
+  ctx.font = '700 30px ' + font; const w1 = ctx.measureText(title).width;
+  const bw = Math.max(w1, w2) + pad * 2, bh = 30 + 24 + 14 + pad * 2;
+  ctx.globalAlpha = .88; ctx.fillStyle = bg;
+  ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(x - bw, y - bh, bw, bh, 14); else ctx.rect(x - bw, y - bh, bw, bh); ctx.fill();
+  ctx.globalAlpha = 1; ctx.fillStyle = ink; ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText(title, x - pad, y - bh + pad + 28);
+  ctx.font = '400 24px ' + font; ctx.globalAlpha = .75;
+  ctx.fillText(credit, x - pad, y - pad, maxW);
+  ctx.globalAlpha = 1;
+}
 
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
