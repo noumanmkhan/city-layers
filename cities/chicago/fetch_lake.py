@@ -23,19 +23,13 @@ def get(url, tries=3):
 layers = json.loads(get(SVC + '?f=json'))['layers']
 print('Hydro layers:', [(l['id'], l['name']) for l in layers])
 area = next(l for l in layers if 'area' in l['name'].lower())
-# What the layer holds just offshore of downtown, and under which field names.
-probe = {'geometry': '-87.58,41.88', 'geometryType': 'esriGeometryPoint', 'inSR': 4326, 'spatialRel': 'esriSpatialRelIntersects',
-         'outFields': '*', 'returnGeometry': 'false', 'f': 'json'}
-hits = json.loads(get(f"{SVC}/{area['id']}/query?" + urllib.parse.urlencode(probe))).get('features', [])
-print('offshore probe:', [h['attributes'] for h in hits])
-ids = ','.join(str(h['attributes']['OBJECTID']) for h in hits)
-name = next((h['attributes'].get(k) for h in hits for k in ('NAME', 'BASENAME', 'FULLNAME') if h['attributes'].get(k)), None)
-where = f"OBJECTID IN ({ids})" if not name else "NAME = '%s'" % name.replace("'", "''")
-print('where:', where)
+# TIGER cuts Lake Michigan into tiles along grid lines (with odd names, e.g. "North Shore Chnnl"),
+# so take every large lake-or-pond area along the shore rather than one name.
+where = "MTFCC = 'H2030' AND AREAWATER > 2000000"
 feats, off = [], 0
 while True:
-    q = {'where': where, 'outFields': 'NAME,MTFCC,OBJECTID', 'outSR': 4326, 'f': 'geojson', 'geometryPrecision': 5,
-         'maxAllowableOffset': 0.00004, 'geometry': '-89.4,40.8,-86.3,42.9', 'geometryType': 'esriGeometryEnvelope', 'inSR': 4326,
+    q = {'where': where, 'outFields': 'NAME,MTFCC,AREAWATER,OBJECTID', 'outSR': 4326, 'f': 'geojson', 'geometryPrecision': 5,
+         'maxAllowableOffset': 0.00004, 'geometry': '-87.95,41.55,-86.80,42.55', 'geometryType': 'esriGeometryEnvelope', 'inSR': 4326,
          'spatialRel': 'esriSpatialRelIntersects', 'resultOffset': off, 'resultRecordCount': 200}
     d = json.loads(get(f"{SVC}/{area['id']}/query?" + urllib.parse.urlencode(q)))
     feats += d.get('features', [])
