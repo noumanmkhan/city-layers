@@ -150,7 +150,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 
 - Known-as names are approximate centre points, not areas.
 - Federal riding shapes are simplified, so a point within a few metres of a riding edge can be misattributed. Wards and provincial ridings use the City's detailed lines.
-- There is no street basemap yet, just land and water.
+- There's no detailed street basemap: the map draws main streets, highways and transit, but not every local street. That's on purpose, to keep it readable; for street-level detail, use Google Maps or OpenStreetMap.
 - The neighbourhood lens uses the 2021 Census, so prices are a few years old, and commuting was counted in May 2021, during the pandemic, when transit use was unusually low. The tiers are relative to the rest of Toronto, which is what they're meant to show.
 - Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
 - Representatives are refreshed weekly, so for a few days after an election or by-election the card can lag. Vacant seats say so.
@@ -160,7 +160,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 ## Roadmap
 
 - Known-as names as drawn areas instead of points.
-- An optional street basemap.
+- An optional detailed street basemap (every local street), off by default.
 
 ## Data sources and licences
 
