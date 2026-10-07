@@ -1,0 +1,27 @@
+wrote community_areas.geojson
+wrote neighborhoods.geojson
+wrote wards.geojson
+wrote ssa.geojson
+wrote city.geojson
+wrote cta_lines.geojson
+wrote cta_stops.json
+wrote ward_offices.json
+wrote acs_community_areas.json
+wrote places.geojson
+wrote counties.geojson
+wrote congress.geojson
+wrote il_senate.geojson
+wrote il_house.geojson
+  retry 1 https://overpass-api.de/api/interpreter HTTP Error 504: Gateway Timeout
+  retry 2 https://overpass-api.de/api/interpreter HTTP Error 504: Gateway Timeout
+wrote osm_expressways.json
+wrote osm_arterials.json
+FAILED metra KeyError('trip_id')
+Traceback (most recent call last):
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch.py", line 39, in step
+    fn()
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch.py", line 115, in metra
+    trip_route[t['trip_id']] = t['route_id']
+               ~^^^^^^^^^^^
+KeyError: 'trip_id'
+failed: ['metra']
