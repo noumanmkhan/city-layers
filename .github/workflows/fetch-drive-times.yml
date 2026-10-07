@@ -1,0 +1,35 @@
+name: Fetch drive times
+# Times each city's suburban grid (cities/<city>/raw/drive_points.json) to its downtown hub with OSRM,
+# free-flow, and commits cities/<city>/raw/drive_times.json back to the branch that ran it.
+# Runs on a push that changes a grid or this job, or by hand for one city.
+on:
+  workflow_dispatch:
+    inputs:
+      city: {description: 'City folder (e.g. toronto); empty for all with a grid', default: ''}
+  push:
+    branches: [fetch-drive]
+    paths: ['cities/*/raw/drive_points.json', 'engine/fetch_drive_times.py', '.github/workflows/fetch-drive-times.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          CITIES="${{ inputs.city }}"
+          [ -n "$CITIES" ] || CITIES=$(ls cities/*/raw/drive_points.json | cut -d/ -f2)
+          for c in $CITIES; do
+            echo "== $c"
+            python3 -u engine/fetch_drive_times.py "$c" 2>&1 | tee "cities/$c/raw/drive_times.log"
+          done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/*/raw/drive_times.json cities/*/raw/drive_times.log
+          git commit -m "Fetch free-flow drive times to downtown" || echo "no changes"
+          git push

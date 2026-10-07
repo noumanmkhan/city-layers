@@ -35,6 +35,7 @@
     "note": "Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."
   },
 
+  "drive": {"hub": [41.882, -87.6278], "hubName": "State & Madison"},
   "units": {"singular": "Community area", "plural": "community areas"},
 
   "groups": [
