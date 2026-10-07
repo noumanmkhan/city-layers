@@ -16,13 +16,22 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: mkdir -p cities/chicago/raw && python3 -u cities/chicago/${{ inputs.script || 'fetch.py' }} 2>&1 | tee cities/chicago/raw/fetch.log
+      # A manual run names its script; a push runs whichever fetch script it changed (fetch.py if none).
+      - run: |
+          S="${{ inputs.script }}"
+          [ -n "$S" ] || S=$(git diff --name-only HEAD~1 HEAD -- 'cities/chicago/fetch*.py' | head -1 | xargs -r basename)
+          [ -n "$S" ] || S=fetch.py
+          echo "SCRIPT=$S" >> "$GITHUB_ENV"
+          mkdir -p cities/chicago/raw
+          python3 -u "cities/chicago/$S" 2>&1 | tee "cities/chicago/raw/${S%.py}.log"
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
           git add cities/chicago/raw
-          git commit -m "Fetch Chicago data (${{ inputs.script || 'fetch.py' }})" || echo "no changes"
+          git commit -m "Fetch Chicago data ($SCRIPT)" || echo "no changes"
           git push
