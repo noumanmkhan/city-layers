@@ -615,8 +615,10 @@ qf.addEventListener('submit', async e => {
   e.preventDefault();
   const text = q.value.trim();
   if (!text || !data.footprint || busy) return;
-  const exact = landmarkMatches(text).filter(x => x.s === 0);
-  if (exact.length === 1){ goLandmark(exact[0].f); return; }
+  // A place or landmark typed in full goes straight there, without a network search.
+  const sugg = suggestions(text), exact = sugg.filter(x => x.s === 0);
+  if (exact.length === 1){ exact[0].go(); return; }
+  if (exact.length > 1){ showSuggestions(exact, false); return; }
   busy = true;
   const wait = 1100 - (Date.now() - lastSearch);
   if (wait > 0) await new Promise(r => setTimeout(r, wait));
@@ -634,7 +636,9 @@ qf.addEventListener('submit', async e => {
       const dup = inCity.some(k => placeLabel(k) === placeLabel(r) && metres([+k.lon, +k.lat], [+r.lon, +r.lat]) < 150);
       if (!dup) inCity.push(r);
     });
-    if (!inCity.length){
+    if (!inCity.length && sugg.length){
+      showSuggestions(sugg, false);   // e.g. a misspelt or partial place name
+    } else if (!inCity.length){
       showResults('<li class="msg">' + esc(fill(CITY.search.noMatch, {q: text})) + '</li>');
     } else if (inCity.length === 1){
       choose(inCity[0]);
@@ -650,33 +654,73 @@ qf.addEventListener('submit', async e => {
   } finally { busy = false; go.disabled = false; go.textContent = 'Find'; }
 });
 q.addEventListener('keydown', e => { if (e.key === 'Escape'){ showResults(''); q.blur(); } });
-/* Landmark suggestions: instant, local, no network (Nominatim's policy rules out
-   autocomplete-as-you-type, so live suggestions come only from our own curated list). */
-const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-function landmarkMatches(text){
-  const qq = norm(text);
-  if (qq.length < 2 || !data.landmarks) return [];
-  const out = [];
-  data.landmarks.features.forEach(f => {
+/* Suggestions as you type: landmarks plus place names (neighbourhoods, known-as names, the city's big
+   areas and the municipalities around it). All from data already loaded: instant, no network. Nominatim's
+   policy rules out autocomplete-as-you-type, so live suggestions never come from it. */
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+let PLACES = [];
+function indexPlaces(base){
+  const seen = new Set();
+  const add = (f, sub, outside) => {
+    const key = f.properties.name + '|' + sub;
+    if (!f.properties.name || seen.has(key)) return;
+    seen.add(key); PLACES.push({f, name: f.properties.name, sub, outside});
+  };
+  LAYERS.filter(it => it.kind === 'fill').forEach(it => data.layers[it.id].features.forEach(f => add(f, it.place || it.name, false)));
+  if (UNITS) data.units.features.forEach(f => add(f, CITY.units.singular + (f.properties.code != null ? ' #' + f.properties.code : ''), false));
+  if (data.knownas) data.knownas.features.forEach(f => add(f, 'Known-as name', false));
+  base.features.filter(f => f.properties.kind === 'neighbour').forEach(f => add(f, fill(CITY.outside.regionPill, f.properties) || 'Nearby', true));
+}
+function suggestions(text){
+  const qq = norm(text), qs = qq.replace(/ /g, '');
+  if (qq.length < 2) return [];
+  // Spacing and punctuation don't count: "Yonge-St. Clair" finds "Yonge-St.Clair".
+  const score = names => {
     let best = null;
-    [f.properties.name].concat(f.properties.aliases).forEach((n, i) => {
-      const nn = norm(n);
-      const s = nn === qq ? 0 : nn.startsWith(qq) ? 1 : (' ' + nn).includes(' ' + qq) ? 2 : null;
-      if (s !== null && (!best || s < best.s)) best = {s, alias: i ? n : null};
+    names.forEach((n, i) => {
+      const nn = norm(n), ns = nn.replace(/ /g, '');
+      const sc = ns === qs ? 0 : ns.startsWith(qs) ? 1 : (' ' + nn).includes(' ' + qq) ? 2 : null;
+      if (sc !== null && (!best || sc < best.s)) best = {s: sc, alias: i ? n : null};
     });
-    if (best) out.push({f, ...best});
+    return best;
+  };
+  const out = [];
+  (data.landmarks ? data.landmarks.features : []).forEach(f => {
+    const b = score([f.properties.name].concat(f.properties.aliases || []));
+    if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
-  return out.sort((a, b) => a.s - b.s || a.f.properties.tier - b.f.properties.tier || a.f.properties.name.localeCompare(b.f.properties.name)).slice(0, 5);
+  PLACES.forEach(p => {
+    const b = score([p.name]);
+    if (b) out.push({s: b.s, rank: p.outside ? 4 : 3, name: p.name, sub: p.sub, go: () => goPlace(p)});
+  });
+  return out.sort((a, b) => a.s - b.s || a.rank - b.rank || a.name.localeCompare(b.name)).slice(0, 6);
+}
+function showSuggestions(list, more){
+  window.__sg = list;
+  showResults(list.map((x, i) => '<li><button type="button" data-sg="' + i + '">' + esc(x.name) + '<span>' + esc(x.sub) + '</span></button></li>').join('') +
+    (more ? '<li class="msg">' + esc(CITY.search.more) + '</li>' : ''));
+  results.querySelectorAll('[data-sg]').forEach(b => b.addEventListener('click', () => window.__sg[+b.dataset.sg].go()));
 }
 function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), f.properties.name, true); }
+// A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
+function goPlace(p){
+  const g = p.f.geometry;
+  if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true); return; }
+  showResults(''); q.value = p.name;
+  if (p.outside && scope === 'inner') setScope('outer', false);
+  const lp = p.f.properties.lp, bounds = L.geoJSON(p.f).getBounds();
+  inspect(lp ? L.latLng(lp[1], lp[0]) : bounds.getCenter(), p.name);
+  const opts = Object.assign(wide() ? {paddingTopLeft:[330,40], paddingBottomRight:[350,40]} : {paddingTopLeft:[20,170], paddingBottomRight:[20,110]}, {maxZoom: 15});
+  const size = map.getSize(), calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try {
+    if (calm || !size.x || !size.y) map.fitBounds(bounds, Object.assign({animate: false}, opts));
+    else map.flyToBounds(bounds, Object.assign({duration: .8}, opts));
+  } catch (err){ try { map.fitBounds(bounds, Object.assign({animate: false}, opts)); } catch (e2){} }
+}
 q.addEventListener('input', () => {
-  const m = landmarkMatches(q.value);
+  const m = suggestions(q.value);
   if (!m.length){ showResults(''); return; }
-  window.__lm = m;
-  showResults(m.map((x, i) => '<li><button type="button" data-lm="' + i + '">' + esc(x.f.properties.name) +
-    '<span>' + esc(x.f.properties.catLabel) + (x.alias ? ' · also called ' + esc(x.alias) : '') + '</span></button></li>').join('') +
-    '<li class="msg">' + esc(CITY.search.more) + '</li>');
-  results.querySelectorAll('[data-lm]').forEach(b => b.addEventListener('click', () => goLandmark(window.__lm[+b.dataset.lm].f)));
+  showSuggestions(m, true);
 });
 q.addEventListener('keydown', e => { if (e.key === 'ArrowDown'){ const b = results.querySelector('button'); if (b){ e.preventDefault(); b.focus(); } } });
 results.addEventListener('keydown', e => {
@@ -719,6 +763,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     knownas: byKind('knownas') && loaded[byKind('knownas').file], landmarks: byKind('landmarks') && loaded[byKind('landmarks').file],
     outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, loaded.regions);
+  indexPlaces(base);
   // City-only mode: cover every other municipality and the land beyond the region (water stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});

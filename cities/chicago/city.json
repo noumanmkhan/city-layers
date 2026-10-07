@@ -23,11 +23,11 @@
   "example": {"at": [41.8763, -87.6282], "name": "Harold Washington Library (example)"},
 
   "search": {
-    "label": "Search a Chicago address",
+    "label": "Search an address or place",
     "country": "us",
     "viewbox": "-87.95,42.03,-87.52,41.64",
     "noMatch": "No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.",
-    "more": "Press Find to search all Chicago addresses"
+    "more": "Or press Find to search Chicago addresses"
   },
   "outside": {
     "beyond": "That spot is outside Chicagoland.",
@@ -39,7 +39,7 @@
 
   "groups": [
     ["Places", [
-      {"id": "sides", "kind": "fill", "size": "major", "file": "sides", "name": "The sides", "note": "Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood", "on": true,
+      {"id": "sides", "kind": "fill", "size": "major", "file": "sides", "name": "The sides", "place": "Side of the city", "note": "Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood", "on": true,
        "colors": {"Far North Side": "--s-farnorth", "Northwest Side": "--s-northwest", "North Side": "--s-north", "Central": "--s-central", "West Side": "--s-west",
                   "South Side": "--s-south", "Southwest Side": "--s-southwest", "Far Southwest Side": "--s-farsouthwest", "Far Southeast Side": "--s-farsoutheast"}},
       {"id": "ca", "kind": "units", "file": "community_areas", "name": "Community areas", "note": "The City’s 77 official community areas", "on": true, "hover": "{name} · #{code}"},

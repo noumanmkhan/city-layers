@@ -23,11 +23,11 @@
   "example": {"at": [43.67194, -79.38667], "name": "Toronto Reference Library (example)"},
 
   "search": {
-    "label": "Search a Toronto address",
+    "label": "Search an address or place",
     "country": "ca",
     "viewbox": "-79.64,43.86,-79.11,43.58",
     "noMatch": "No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.",
-    "more": "Press Find to search all Toronto addresses"
+    "more": "Or press Find to search Toronto addresses"
   },
   "outside": {
     "beyond": "That spot is outside the Greater Toronto Area.",
@@ -39,9 +39,9 @@
 
   "groups": [
     ["Places", [
-      {"id": "boroughs", "kind": "fill", "size": "major", "file": "boroughs", "name": "Former cities", "note": "The 6 municipalities merged in 1998", "on": true,
+      {"id": "boroughs", "kind": "fill", "size": "major", "file": "boroughs", "name": "Former cities", "place": "Former city", "note": "The 6 municipalities merged in 1998", "on": true,
        "colors": {"Old Toronto": "--b-oldtoronto", "York": "--b-york", "North York": "--b-northyork", "East York": "--b-eastyork", "Etobicoke": "--b-etobicoke", "Scarborough": "--b-scarborough"}},
-      {"id": "areas", "kind": "fill", "size": "minor", "file": "areas", "name": "Old Toronto areas", "note": "Downtown, Midtown, Uptown, West End, East End", "on": true,
+      {"id": "areas", "kind": "fill", "size": "minor", "file": "areas", "name": "Old Toronto areas", "place": "Old Toronto area", "note": "Downtown, Midtown, Uptown, West End, East End", "on": true,
        "colors": {"Downtown": "--a-downtown", "Midtown": "--a-midtown", "Uptown": "--a-uptown", "West End": "--a-westend", "East End": "--a-eastend"}},
       {"id": "nbhd", "kind": "units", "file": "neighbourhoods", "name": "Neighbourhoods", "note": "The City’s 158 official neighbourhoods", "on": true, "hover": "{name} · #{code}"},
       {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},

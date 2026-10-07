@@ -1017,8 +1017,8 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
     <div id="search" role="search">
       <form id="qf" autocomplete="off">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4.5 4.5" stroke-linecap="round"/></svg>
-        <label for="q" class="vh">Search a Chicago address</label>
-        <input id="q" type="search" placeholder="Search a Chicago address" enterkeyhint="search">
+        <label for="q" class="vh">Search an address or place</label>
+        <input id="q" type="search" placeholder="Search an address or place" enterkeyhint="search">
         <button id="go" type="submit">Find</button>
       </form>
       <ul id="results" hidden></ul>
@@ -1031,7 +1031,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
-const CITY = {"id":"chicago","title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search a Chicago address","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Press Find to search all Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"}],"living":{"caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
+const CITY = {"id":"chicago","title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search an address or place","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Or press Find to search Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","place":"Side of the city","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums, campuses"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"}],"living":{"caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
 /* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
    inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
@@ -1649,8 +1649,10 @@ qf.addEventListener('submit', async e => {
   e.preventDefault();
   const text = q.value.trim();
   if (!text || !data.footprint || busy) return;
-  const exact = landmarkMatches(text).filter(x => x.s === 0);
-  if (exact.length === 1){ goLandmark(exact[0].f); return; }
+  // A place or landmark typed in full goes straight there, without a network search.
+  const sugg = suggestions(text), exact = sugg.filter(x => x.s === 0);
+  if (exact.length === 1){ exact[0].go(); return; }
+  if (exact.length > 1){ showSuggestions(exact, false); return; }
   busy = true;
   const wait = 1100 - (Date.now() - lastSearch);
   if (wait > 0) await new Promise(r => setTimeout(r, wait));
@@ -1668,7 +1670,9 @@ qf.addEventListener('submit', async e => {
       const dup = inCity.some(k => placeLabel(k) === placeLabel(r) && metres([+k.lon, +k.lat], [+r.lon, +r.lat]) < 150);
       if (!dup) inCity.push(r);
     });
-    if (!inCity.length){
+    if (!inCity.length && sugg.length){
+      showSuggestions(sugg, false);   // e.g. a misspelt or partial place name
+    } else if (!inCity.length){
       showResults('<li class="msg">' + esc(fill(CITY.search.noMatch, {q: text})) + '</li>');
     } else if (inCity.length === 1){
       choose(inCity[0]);
@@ -1684,33 +1688,73 @@ qf.addEventListener('submit', async e => {
   } finally { busy = false; go.disabled = false; go.textContent = 'Find'; }
 });
 q.addEventListener('keydown', e => { if (e.key === 'Escape'){ showResults(''); q.blur(); } });
-/* Landmark suggestions: instant, local, no network (Nominatim's policy rules out
-   autocomplete-as-you-type, so live suggestions come only from our own curated list). */
-const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-function landmarkMatches(text){
-  const qq = norm(text);
-  if (qq.length < 2 || !data.landmarks) return [];
-  const out = [];
-  data.landmarks.features.forEach(f => {
+/* Suggestions as you type: landmarks plus place names (neighbourhoods, known-as names, the city's big
+   areas and the municipalities around it). All from data already loaded: instant, no network. Nominatim's
+   policy rules out autocomplete-as-you-type, so live suggestions never come from it. */
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+let PLACES = [];
+function indexPlaces(base){
+  const seen = new Set();
+  const add = (f, sub, outside) => {
+    const key = f.properties.name + '|' + sub;
+    if (!f.properties.name || seen.has(key)) return;
+    seen.add(key); PLACES.push({f, name: f.properties.name, sub, outside});
+  };
+  LAYERS.filter(it => it.kind === 'fill').forEach(it => data.layers[it.id].features.forEach(f => add(f, it.place || it.name, false)));
+  if (UNITS) data.units.features.forEach(f => add(f, CITY.units.singular + (f.properties.code != null ? ' #' + f.properties.code : ''), false));
+  if (data.knownas) data.knownas.features.forEach(f => add(f, 'Known-as name', false));
+  base.features.filter(f => f.properties.kind === 'neighbour').forEach(f => add(f, fill(CITY.outside.regionPill, f.properties) || 'Nearby', true));
+}
+function suggestions(text){
+  const qq = norm(text), qs = qq.replace(/ /g, '');
+  if (qq.length < 2) return [];
+  // Spacing and punctuation don't count: "Yonge-St. Clair" finds "Yonge-St.Clair".
+  const score = names => {
     let best = null;
-    [f.properties.name].concat(f.properties.aliases).forEach((n, i) => {
-      const nn = norm(n);
-      const s = nn === qq ? 0 : nn.startsWith(qq) ? 1 : (' ' + nn).includes(' ' + qq) ? 2 : null;
-      if (s !== null && (!best || s < best.s)) best = {s, alias: i ? n : null};
+    names.forEach((n, i) => {
+      const nn = norm(n), ns = nn.replace(/ /g, '');
+      const sc = ns === qs ? 0 : ns.startsWith(qs) ? 1 : (' ' + nn).includes(' ' + qq) ? 2 : null;
+      if (sc !== null && (!best || sc < best.s)) best = {s: sc, alias: i ? n : null};
     });
-    if (best) out.push({f, ...best});
+    return best;
+  };
+  const out = [];
+  (data.landmarks ? data.landmarks.features : []).forEach(f => {
+    const b = score([f.properties.name].concat(f.properties.aliases || []));
+    if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
-  return out.sort((a, b) => a.s - b.s || a.f.properties.tier - b.f.properties.tier || a.f.properties.name.localeCompare(b.f.properties.name)).slice(0, 5);
+  PLACES.forEach(p => {
+    const b = score([p.name]);
+    if (b) out.push({s: b.s, rank: p.outside ? 4 : 3, name: p.name, sub: p.sub, go: () => goPlace(p)});
+  });
+  return out.sort((a, b) => a.s - b.s || a.rank - b.rank || a.name.localeCompare(b.name)).slice(0, 6);
+}
+function showSuggestions(list, more){
+  window.__sg = list;
+  showResults(list.map((x, i) => '<li><button type="button" data-sg="' + i + '">' + esc(x.name) + '<span>' + esc(x.sub) + '</span></button></li>').join('') +
+    (more ? '<li class="msg">' + esc(CITY.search.more) + '</li>' : ''));
+  results.querySelectorAll('[data-sg]').forEach(b => b.addEventListener('click', () => window.__sg[+b.dataset.sg].go()));
 }
 function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), f.properties.name, true); }
+// A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
+function goPlace(p){
+  const g = p.f.geometry;
+  if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true); return; }
+  showResults(''); q.value = p.name;
+  if (p.outside && scope === 'inner') setScope('outer', false);
+  const lp = p.f.properties.lp, bounds = L.geoJSON(p.f).getBounds();
+  inspect(lp ? L.latLng(lp[1], lp[0]) : bounds.getCenter(), p.name);
+  const opts = Object.assign(wide() ? {paddingTopLeft:[330,40], paddingBottomRight:[350,40]} : {paddingTopLeft:[20,170], paddingBottomRight:[20,110]}, {maxZoom: 15});
+  const size = map.getSize(), calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try {
+    if (calm || !size.x || !size.y) map.fitBounds(bounds, Object.assign({animate: false}, opts));
+    else map.flyToBounds(bounds, Object.assign({duration: .8}, opts));
+  } catch (err){ try { map.fitBounds(bounds, Object.assign({animate: false}, opts)); } catch (e2){} }
+}
 q.addEventListener('input', () => {
-  const m = landmarkMatches(q.value);
+  const m = suggestions(q.value);
   if (!m.length){ showResults(''); return; }
-  window.__lm = m;
-  showResults(m.map((x, i) => '<li><button type="button" data-lm="' + i + '">' + esc(x.f.properties.name) +
-    '<span>' + esc(x.f.properties.catLabel) + (x.alias ? ' · also called ' + esc(x.alias) : '') + '</span></button></li>').join('') +
-    '<li class="msg">' + esc(CITY.search.more) + '</li>');
-  results.querySelectorAll('[data-lm]').forEach(b => b.addEventListener('click', () => goLandmark(window.__lm[+b.dataset.lm].f)));
+  showSuggestions(m, true);
 });
 q.addEventListener('keydown', e => { if (e.key === 'ArrowDown'){ const b = results.querySelector('button'); if (b){ e.preventDefault(); b.focus(); } } });
 results.addEventListener('keydown', e => {
@@ -1753,6 +1797,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     knownas: byKind('knownas') && loaded[byKind('knownas').file], landmarks: byKind('landmarks') && loaded[byKind('landmarks').file],
     outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, loaded.regions);
+  indexPlaces(base);
   // City-only mode: cover every other municipality and the land beyond the region (water stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});

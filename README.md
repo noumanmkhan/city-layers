@@ -31,7 +31,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 
 **Landmarks:** a short, curated list of the places Torontonians give directions by (Scotiabank Arena, High Park, Massey Hall, City Hall, U of T, Exhibition Place…), not an exhaustive points-of-interest database. Big, spread-out anchors appear city-wide; dense downtown venues appear as you zoom in, and overlapping labels are hidden automatically.
 
-**Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto. Landmarks also suggest themselves as you type, including old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), without any network call.
+**Address search:** type a Toronto address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service, limited to the City of Toronto. Landmarks and place names also suggest themselves as you type, without any network call: landmarks with their old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), plus every neighbourhood, known-as name, former city and surrounding municipality. Choosing a place like Deer Park or Mississauga frames it on the map and fills in the readout, switching to the regional view for places outside the city. On the Chicago map the same works for community areas, the sides and suburbs like Lombard.
 
 **Around the city:** zoom out to see every municipality in the Greater Toronto Area (Halton, Peel, York and Durham regions) as plain grey shapes, for context.
 
