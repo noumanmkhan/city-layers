@@ -1,12 +1,9 @@
 name: Scout Hyderabad data
 # One-off check of whether Hyderabad's boundary data is current enough to build a map from.
 # Writes a report and any boundaries found to scouting/hyderabad/out/ and commits them to main.
-# Doesn't touch the site. Runs when scout.py changes on main, or by hand from the Actions tab.
+# Doesn't touch the site. Run it by hand from the Actions tab to check again.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['scouting/hyderabad/scout.py', '.github/workflows/scout-hyderabad.yml']
 permissions:
   contents: write
 concurrency: scout-hyderabad

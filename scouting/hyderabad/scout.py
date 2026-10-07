@@ -90,9 +90,9 @@ def bbox(b):
 
 def km2(geom):
     from pyproj import Transformer
-    from shapely.ops import transform
-    t = Transformer.from_crs('EPSG:4326', 'EPSG:32644', always_xy=True).transform
-    return round(transform(t, geom).area / 1e6, 1)
+    import shapely
+    t = Transformer.from_crs('EPSG:4326', 'EPSG:32644', always_xy=True)
+    return round(shapely.transform(geom, lambda xy: __import__('numpy').column_stack(t.transform(xy[:, 0], xy[:, 1]))).area / 1e6, 1)
 
 
 def rel_polygon(el):
@@ -425,7 +425,7 @@ def write_report():
     op = REPORT.get('osm_places')
     if op:
         L.append(f"\n## Place names\n\nPlace nodes inside the ORR box: {op['counts']}. Checklist missing: {', '.join(op['missing']) or 'none'}.\n")
-    for key in [k for k in REPORT if k == 'opencity' or k.startswith('telangana_portal_')]:
+    for key in [k for k in REPORT if isinstance(REPORT[k], dict) and 'relevant' in REPORT[k]]:
         L.append(f'\n## Catalogue: {key}\n')
         for r in REPORT[key]['relevant'][:60]:
             fm = ', '.join(sorted({(x['format'] or '?') for x in r['resources']}))
