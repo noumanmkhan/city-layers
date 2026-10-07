@@ -127,14 +127,16 @@ base, munis = [feat(CITY, {'kind': 'city', 'name': 'City of Chicago'})], []
 cutout = CITY.buffer(0.0003)
 
 
-def neighbour(g, name, gid):
+def neighbour(g, name, gid, rest=False):
     g = polys(g.difference(WATER).difference(cutout))
     if g.is_empty: return
     if g.geom_type == 'MultiPolygon':   # drop slivers left in the lake or along the city limits
         big = max(p.area for p in g.geoms)
         g = unary_union([p for p in g.geoms if p.area > big * 0.01])
     munis.append(g)
-    base.append(feat(g, {'kind': 'neighbour', 'name': name, 'region': county_name(gid), 'lp': label_pt(g)}))
+    p = {'kind': 'neighbour', 'name': name, 'region': county_name(gid), 'lp': label_pt(g)}
+    if rest: p['rest'] = True   # unincorporated land: part of the region, but not a place to colour by town
+    base.append(feat(g, p))
 
 
 places = defaultdict(list)
@@ -157,7 +159,7 @@ print('lakefront harbours shown as water:', len(extra))
 # What's left of each county is unincorporated land, still part of the region.
 for gid, cg in counties.items():
     rest = cg.difference(unary_union(places[gid]).buffer(0.0002)) if places[gid] else cg
-    neighbour(rest, 'Unincorporated ' + county_name(gid).replace(', Indiana', ''), gid)
+    neighbour(rest, 'Unincorporated ' + county_name(gid).replace(', Indiana', ''), gid, rest=True)
 # Land beyond the region: the frame minus the lake and the region's counties (which hold every municipality
 # and the city), so it's one simple shape rather than a lacework of gaps between suburbs.
 outside = FRAME.difference(WATER).difference(unary_union(list(counties.values()) + [CITY]).buffer(0.0005))
