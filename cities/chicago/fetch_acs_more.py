@@ -3,7 +3,8 @@ Runs in GitHub Actions (.github/workflows/fetch-chicago.yml); the sandbox can't 
 
 - B25036 Tenure by year structure built (occupied homes; Toronto's Census counts occupied dwellings too)
 - B25032 Tenure by units in structure (occupied homes)
-- B16001 Language spoken at home by ability to speak English (population 5 years and over), detailed languages
+- C16001 Language spoken at home by ability to speak English (population 5 years and over). The detailed
+  table (B16001, which separates Polish, Hindi, Urdu...) isn't published for tracts, only these 12 broad groups
 
 Writes raw/acs_more.json: {year, source, labels: {var: label}, tracts: {GEOID: {var: count}}}. Labels come
 from the Census API's variable list (no key needed for metadata); the build reads bracket and language
@@ -13,7 +14,7 @@ import json, os, time, urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, 'raw')
 UA = {'User-Agent': 'city-layers/1.0 (https://maps.noumankhan.ca)'}
-GROUPS = ['B25036', 'B25032', 'B16001']
+GROUPS = ['B25036', 'B25032', 'C16001']
 SF = 'https://www2.census.gov/programs-surveys/acs/summary_file/{y}/table-based-SF/'
 
 
