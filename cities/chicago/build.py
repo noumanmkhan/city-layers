@@ -158,7 +158,9 @@ print('lakefront harbours shown as water:', len(extra))
 for gid, cg in counties.items():
     rest = cg.difference(unary_union(places[gid]).buffer(0.0002)) if places[gid] else cg
     neighbour(rest, 'Unincorporated ' + county_name(gid).replace(', Indiana', ''), gid)
-outside = FRAME.difference(WATER).difference(unary_union(munis + [CITY] + extra).buffer(0.0005))
+# Land beyond the region: the frame minus the lake and the region's counties (which hold every municipality
+# and the city), so it's one simple shape rather than a lacework of gaps between suburbs.
+outside = FRAME.difference(WATER).difference(unary_union(list(counties.values()) + [CITY]).buffer(0.0005))
 base.insert(0, feat(outside, {'kind': 'outside', 'name': ''}))
 dump('base', base)
 write('regions', [{'type': 'Feature', 'properties': {'name': county_name(gid)},
