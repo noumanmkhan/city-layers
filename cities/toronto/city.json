@@ -52,7 +52,7 @@
       {"id": "areas", "kind": "fill", "size": "minor", "file": "areas", "name": "Old Toronto areas", "place": "Old Toronto area", "note": "Downtown, Midtown, Uptown, West End, East End", "on": true,
        "colors": {"Downtown": "--a-downtown", "Midtown": "--a-midtown", "Uptown": "--a-uptown", "West End": "--a-westend", "East End": "--a-eastend"}},
       {"id": "nbhd", "kind": "units", "file": "neighbourhoods", "name": "Neighbourhoods", "note": "The City’s 158 official neighbourhoods", "on": true, "hover": "{name} · #{code}"},
-      {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners. Narrow it to a shortlist."},
+      {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners, housing type. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},
       {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"},
@@ -93,7 +93,8 @@
       {"id": "union", "short": "To Union", "key": "unionBand", "minutes": "union", "optional": true,
        "tiers": [["under30", "Under 30 min", "--uni-1"], ["30to45", "30–45 min", "--uni-2"], ["45to60", "45–60 min", "--uni-3"], ["over60", "Over an hour", "--uni-4"]],
        "note": "Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.",
-       "source": "TTC and Metrolinx schedules, routed with r5py."}
+       "source": "TTC and Metrolinx schedules, routed with r5py."},
+      {"id": "homes", "short": "Housing type", "key": "homesTier", "field": "homes", "pick": [["detached", "Detached", "detached houses"], ["attached", "Semi & row", "semi-detached or row houses"], ["lowrise", "Low-rise", "flats in duplexes and buildings under five storeys"], ["tower", "Towers", "apartments in buildings of five or more storeys"]], "cuts": [10, 30, 60], "tiers": [["t1", "Under 10%", "--hty-1"], ["t2", "10–30%", "--hty-2"], ["t3", "30–60%", "--hty-3"], ["t4", "60% or more", "--hty-4"]], "note": "Share of each neighbourhood's occupied homes that are {type}."}
     ],
     "filters": [
       {"lens": "cost", "label": "Housing cost", "options": [["lower", "Lower"], ["middle", "Middle"], ["higher", "Higher"]]},
@@ -125,7 +126,10 @@
       "hub": "To Union",
       "hubText": "About {minutes} min by transit, weekday morning",
       "caveat": "Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.",
-      "footer": "2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto."
+      "footer": "2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto.",
+      "homes": {"label": "Home types", "types": [["detached", "Detached"], ["attached", "Semi & row"], ["lowrise", "Low-rise"], ["tower", "Towers"]]},
+      "built": {"label": "Built", "bands": ["1960 or before", "1961–80", "1981–2000", "2001–21"]},
+      "lang": {"label": "Language at home", "floor": 5, "note": "The language each person speaks most often at home.[ Another {multi}% name two or more equally.]"}
     },
     "reps": {
       "file": "representatives.json",

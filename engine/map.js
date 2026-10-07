@@ -30,6 +30,19 @@ const AREA_KINDS = ['fill', 'units', 'outline', 'patches', 'districts'];   // po
 const LENSES = {};
 CITY.lens.lenses.forEach(L_ => { LENSES[L_.id] = L_; });
 const FILTERS = CITY.lens.filters;
+/* A "pick a type" lens (e.g. housing type) shades units by the share of one category the viewer picks:
+   d[L_.field] is a list of shares, L_.pick names the categories in the same order, L_.cuts splits a
+   share into the lens's tiers. Every other lens reads a precomputed tier, d[L_.key]. */
+const pick = {};
+CITY.lens.lenses.forEach(L_ => { if (L_.pick) pick[L_.id] = L_.pick[0][0]; });
+function keyOf(L_, d){
+  if (!d) return null;
+  if (!L_.pick) return d[L_.key];
+  const i = L_.pick.findIndex(p => p[0] === pick[L_.id]), v = d[L_.field] && d[L_.field][i];
+  if (v == null) return null;
+  const t = L_.cuts.findIndex(c => v < c);
+  return L_.tiers[t < 0 ? L_.tiers.length - 1 : t][0];
+}
 const FIRST_LENS = CITY.lens.lenses[0].id;
 // Each lens tier's fill colour, written once from the config.
 const tierCss = document.createElement('style');
@@ -43,13 +56,16 @@ const filtOn = () => FILTERS.some(f => f.max ? filt[f.lens] > 0 : filt[f.lens].s
 const matches = d => !!d && FILTERS.every(f => {
   const L_ = LENSES[f.lens];
   if (f.max) return !filt[f.lens] || (d[L_.minutes] != null && d[L_.minutes] <= filt[f.lens]);
-  return !filt[f.lens].size || filt[f.lens].has(d[L_.key]);
+  return !filt[f.lens].size || filt[f.lens].has(keyOf(L_, d));
 });
-const lensClass = d => { const L_ = LENSES[lens]; return 'lens ' + (d && d[L_.key] ? L_.id + '-' + d[L_.key] : '') + (filtOn() && !matches(d) ? ' out' : ''); };
+const lensClass = d => { const L_ = LENSES[lens], k = keyOf(L_, d); return 'lens ' + (k ? L_.id + '-' + k : '') + (filtOn() && !matches(d) ? ' out' : ''); };
 let lens = FIRST_LENS;
 const TIER_LABEL = {};
 Object.values(LENSES).forEach(L_ => L_.tiers.forEach(([k, label, v]) => { TIER_LABEL[L_.key + ':' + k] = [label, v]; }));
-const tierOf = d => d && d[LENSES[lens].key] ? TIER_LABEL[LENSES[lens].key + ':' + d[LENSES[lens].key]][0] : '';
+const tierOf = d => { const L_ = LENSES[lens], k = keyOf(L_, d); if (!k) return '';
+  return L_.pick ? pickLabel(L_) + ': ' + TIER_LABEL[L_.key + ':' + k][0] : TIER_LABEL[L_.key + ':' + k][0]; };
+const pickOf = L_ => L_.pick.find(p => p[0] === pick[L_.id]) || L_.pick[0];
+const pickLabel = L_ => pickOf(L_)[1], pickLong = L_ => pickOf(L_)[2] || pickOf(L_)[1].toLowerCase();
 
 const map = L.map('map', {zoomSnap:.25, zoomDelta:.5, minZoom:8.5, maxZoom:17, attributionControl:true, zoomControl:false, preferCanvas:false});
 // Bottom-left, just beside the layer panel: the panel covers the top-left corner and the What's here card the right side. Phones pinch to zoom, so the buttons are hidden there.
@@ -423,8 +439,19 @@ function drawDriveLegend(){
 function drawLegend(){
   const el = document.getElementById('legend'); if (!el) return;
   const L_ = LENSES[lens];
-  el.innerHTML = L_.tiers.map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
-    '<small>' + L_.note + ' Source: ' + (L_.source || CITY.lens.source) + '</small>';
+  const picker = L_.pick ? '<div class="chips pick" role="radiogroup" aria-label="' + esc(L_.short) + '">' + L_.pick.map(([v, t]) =>
+    '<button type="button" role="radio" data-pick="' + v + '" aria-checked="' + (pick[L_.id] === v) + '">' + esc(t) + '</button>').join('') + '</div>' : '';
+  el.innerHTML = picker + L_.tiers.map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
+    '<small>' + (L_.pick ? fill(L_.note, {type: pickLong(L_)}) : L_.note) + ' Source: ' + (L_.source || CITY.lens.source) + '</small>';
+  el.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => setPick(L_.id, b.dataset.pick)));
+}
+function setPick(id, v){
+  const L_ = LENSES[id]; if (!L_ || !L_.pick || !L_.pick.some(p => p[0] === v)) return;
+  pick[id] = v;
+  drawLegend();
+  const LL = byKind('lens') && layers[byKind('lens').id];
+  if (LL && LL._restyle) LL._restyle();
+  queueHash();
 }
 function applyFilter(){
   document.querySelectorAll('[data-f]').forEach(b => {
@@ -482,7 +509,9 @@ document.getElementById('reset').addEventListener('click', () => {
     if (cb.checked !== want){ cb.checked = want; setLayer(it.id, want); }
     if (it.sub){ const sb = document.getElementById(it.sub.id); if (sb.checked !== !!it.sub.on){ sb.checked = !!it.sub.on; syncStnNames(); } }
   });
-  clearFilters(); applyFilter(); setLens(FIRST_LENS);
+  clearFilters(); applyFilter();
+  Object.keys(pick).forEach(id => { pick[id] = LENSES[id].pick[0][0]; });
+  setLens(FIRST_LENS);
   setScope('inner', true);
   closeHere();
   // Back to a plain URL; the address bar follows again from the next change.
@@ -519,7 +548,30 @@ function livingHere(unit){
     (hub && d[hub.minutes] != null ? '<dt>' + esc(T.hub) + '</dt><dd>' + tier(hub.key, d[hub.key]) + '<span>' + esc(fill(T.hubText, {minutes: d[hub.minutes]})) + '</span></dd>' : '') +
     '<dt>Getting to work</dt><dd>' + tier('commute', d.commute) + '<span>' + d.carPct + '% drive · ' + d.transitPct + '% transit · ' + d.walkBikePct + '% walk or bike</span></dd>' +
     '<dt>Households</dt><dd>' + tier('tenure', d.tenure) + '<span>' + d.renterPct + '% rent</span></dd>' +
+    mixRow(T.homes, d.homes, T.homes && T.homes.types.map(t => t[1])) +
+    mixRow(T.built, d.built, T.built && T.built.bands) +
+    langRow(T.lang, d) +
     '</dl><p>' + esc(fill(T.footer, {name: d.name})) + '</p></div>';
+}
+/* Description rows (no tiers, never ranked): how homes split by type or by when they were built, as a
+   small stacked bar and the shares in words. Shares under 1% are left out of the words. */
+function mixRow(cfg, shares, names){
+  if (!cfg || !shares || !names) return '';
+  const bar = shares.map((v, i) => v > 0 ? '<i style="width:' + v + '%;background:var(--mix-' + (i + 1) + ')"></i>' : '').join('');
+  const words = shares.map((v, i) => [names[i], v, i]).filter(x => x[1] >= 1).map(x => '<b class="dot" style="background:var(--mix-' + (x[2] + 1) + ')"></b>' + esc(x[0]) + ' ' + x[1] + '%').join(' · ');
+  return '<dt>' + esc(cfg.label) + '</dt><dd><span class="mix" aria-hidden="true">' + bar + '</span><span>' + words + '</span>' +
+    (cfg.caveat ? '<span class="caveat">' + esc(cfg.caveat) + '</span>' : '') + '</dd>';
+}
+/* Home language: the top three, the first always shown and the next two only at 5% or more (the
+   config's floor), so a 1% language never reads as a feature of the place. Card only: never a lens,
+   a filter or a ranking. */
+function langRow(cfg, d){
+  if (!cfg || !d.lang || !d.lang.length) return '';
+  const floor = cfg.floor == null ? 5 : cfg.floor;
+  const top = d.lang.filter((x, i) => i === 0 || x[1] >= floor).slice(0, 3);
+  const more = top.length < 2 ? '<span>' + esc(cfg.none || 'No other language above ' + floor + '%') + '</span>' : '';
+  return '<dt>' + esc(cfg.label) + '</dt><dd>' + top.map(x => esc(x[0]) + ' ' + x[1] + '%').join(' · ') + more +
+    (cfg.note ? '<span class="caveat">' + esc(fill(cfg.note, {multi: d.langMulti})) + '</span>' : '') + '</dd>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
 const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, reps:false} : {bounds:true, live:true, reps:false};
@@ -861,7 +913,7 @@ function linkState(){
     .concat(SUBS.filter(s => document.getElementById(s.id).checked).map(s => s.id));
   const dflt = LAYERS.filter(it => it.on).map(it => it.id).concat(SUBS.filter(s => s.on).map(s => s.id));
   if (on.join() !== dflt.join()) parts.push(['layers', on.length ? on.join(',') : 'none']);
-  if (lens !== FIRST_LENS) parts.push(['lens', lens]);
+  if (lens !== FIRST_LENS || (LENSES[lens].pick && pick[lens] !== LENSES[lens].pick[0][0])) parts.push(['lens', lens + (LENSES[lens].pick ? ':' + pick[lens] : '')]);
   const fit = FILTERS.map(f => f.max ? (filt[f.lens] ? f.lens + ':' + filt[f.lens] : '') : (filt[f.lens].size ? f.lens + ':' + [...filt[f.lens]].join('+') : '')).filter(Boolean);
   if (fit.length) parts.push(['fit', fit.join(',')]);
   return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
@@ -893,7 +945,8 @@ function applyHash(h){
     SUBS.forEach(s => { document.getElementById(s.id).checked = want.has(s.id); });
     syncStnNames();
   }
-  if (o.lens && LENSES[o.lens] && document.querySelector('[data-lens="' + o.lens + '"]')) setLens(o.lens);
+  const [lk, lp] = (o.lens || '').split(':');
+  if (lk && LENSES[lk] && document.querySelector('[data-lens="' + lk + '"]')){ if (lp) setPick(lk, lp); setLens(lk); }
   if (o.fit){
     clearFilters();
     o.fit.split(',').forEach(part => {
@@ -961,7 +1014,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});
   // A lens with no figures in this build's data (e.g. transit times not fetched yet) is hidden, with its filter row.
   CITY.lens.lenses.filter(L_ => L_.optional).forEach(L_ => {
-    if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
+    if (!Object.values(data.profiles).some(d => d[L_.minutes || L_.field || L_.key] != null)) document.querySelectorAll('[data-lens="' + L_.id + '"], .frow:has([data-f="' + L_.id + '"])').forEach(e => e.remove());
   });
   ORDER.forEach(it => { layers[it.id] = KINDS[it.kind](it, it.kind === 'lens' ? [data.units, data.profiles] : it.kind === 'suburbs' ? base : src(it)); });
   drawDriveLegend();

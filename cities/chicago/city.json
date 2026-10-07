@@ -44,7 +44,7 @@
        "colors": {"Far North Side": "--s-farnorth", "Northwest Side": "--s-northwest", "North Side": "--s-north", "Central": "--s-central", "West Side": "--s-west",
                   "South Side": "--s-south", "Southwest Side": "--s-southwest", "Far Southwest Side": "--s-farsouthwest", "Far Southeast Side": "--s-farsoutheast"}},
       {"id": "ca", "kind": "units", "file": "community_areas", "name": "Community areas", "note": "The City’s 77 official community areas", "on": true, "hover": "{name} · #{code}"},
-      {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners. Narrow it to a shortlist."},
+      {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners, housing type. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},
       {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"},
@@ -80,7 +80,8 @@
        "note": "Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},
       {"id": "tenure", "short": "Renters & owners", "key": "tenure",
        "tiers": [["owners", "Mostly owners", "--ten-1"], ["mix", "A mix", "--ten-2"], ["renters", "Mostly renters", "--ten-3"]],
-       "note": "Share of households that rent: under 35%, 35–60%, over 60%."}
+       "note": "Share of households that rent: under 35%, 35–60%, over 60%."},
+      {"id": "homes", "short": "Housing type", "key": "homesTier", "field": "homes", "pick": [["detached", "Detached", "detached houses"], ["attached", "Attached", "attached houses (rowhouses and townhouses)"], ["flats", "2–19 units", "in buildings of 2 to 19 units, from two-flats to courtyard buildings"], ["large", "20+ units", "in buildings of 20 or more units"]], "cuts": [10, 30, 60], "tiers": [["t1", "Under 10%", "--hty-1"], ["t2", "10–30%", "--hty-2"], ["t3", "30–60%", "--hty-3"], ["t4", "60% or more", "--hty-4"]], "note": "Share of each community area's occupied homes that are {type}."}
     ],
     "filters": [
       {"lens": "cost", "label": "Housing cost", "options": [["lower", "Lower"], ["middle", "Middle"], ["higher", "Higher"]]},
@@ -109,7 +110,10 @@
     ],
     "living": {
       "caveat": "Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.",
-      "footer": "American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago."
+      "footer": "American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago.",
+      "homes": {"label": "Home types", "types": [["detached", "Detached"], ["attached", "Attached"], ["flats", "2–19 units"], ["large", "20+ units"]]},
+      "built": {"label": "Built", "bands": ["1939 or earlier", "1940–79", "1980–99", "2000 or later"]},
+      "lang": {"label": "Language at home", "floor": 5, "note": "English only, or the language besides English that each person 5 or older speaks at home. For small areas the Census groups some languages: Polish shares a group with Russian and other Slavic languages."}
     },
     "reps": {
       "file": "representatives.json",

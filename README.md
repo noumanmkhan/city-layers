@@ -31,7 +31,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
 | Heritage districts | 29 | Heritage Conservation Districts in force;<br>ones under study or appeal are left out |
-| Neighbourhood lens | 158 | Housing cost, time to Union,<br>getting to work, renters and owners |
+| Neighbourhood lens | 158 | Housing cost, time to Union,<br>getting to work, renters and owners,<br>housing type |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
@@ -59,12 +59,15 @@ Toronto's geography is described in several overlapping ways at once. A single a
 - *Getting to work:* mostly transit, walk or bike; mixed; or mostly car, from the share of commuters who drive.
 - *Renters and owners:* mostly owners, a mix, or mostly renters.
 - *To Union:* the typical transit trip to Union Station on a weekday morning: under 30 minutes, 30–45, 45–60, or over an hour. Computed ahead of time from the TTC, GO and UP Express schedules with [r5py](https://r5py.readthedocs.io/), from points about 400 m apart across each neighbourhood (about 4,000 in all), leaving any time between 8 and 9 am. Walking to the stop and waiting count. Each neighbourhood shows the median of its points.
+- *Housing type:* pick a type (detached, semi and row, low-rise apartments or towers of five storeys and up) and the neighbourhoods are shaded by its share of their homes: under 10%, 10–30%, 30–60%, or 60% and more.
 
 **Suburban lens:** in the Greater Toronto Area view, each municipality is shaded by its typical drive to Union Station with no traffic: under 30 minutes, 30–60, 60–90, or 90 and over. A grid of points about 1.5 km apart covers the suburbs (about 2,900 in the GTA); each is timed with [OSRM](https://project-osrm.org/) on OpenStreetMap roads at posted speeds, and each municipality shows the median of its points. Tapping a spot outside the city adds the time from there, so someone in a big municipality like Caledon sees their own area, not an average. The times are best case on purpose: they compare places, and anyone can add their own rush hour.
 
 **Narrow it down:** under the lens legend, pick what you're looking for (say, middle housing cost and up to 45 minutes to Union) and the neighbourhoods that don't fit fade out. The ones that do are listed by name; tap one to fly there. It answers the question a newcomer actually asks: "where should I be looking?"
 
 The What's here card adds a *Living here* section with the same tiers and the figures behind them (median home value and rent, time to Union, how people get to work, share of households renting). The point is the feel of a place relative to the rest of Toronto, not a price list.
+
+Three more rows describe the place without ranking it: *Home types* (the mix of detached, semi and row, low-rise and tower homes), *Built* (when its homes went up: 1960 or before, 1961–80, 1981–2000, 2001–21) and *Language at home* (the top three languages people speak most often at home; the second and third show only at 5% or more, so a 1% language never reads as a feature of the place). Language is description only: it never shades the map, filters a shortlist or feeds a ranking. On the Chicago map the same rows come from the American Community Survey: buildings by number of units (detached, attached, 2–19 units, 20 or more), year built (1939 or earlier through 2000 and later), and language at home in the Census's 12 broad groups, which is all it publishes for areas this small.
 
 **Moving between maps:** the map's name at the top of the layer panel is a menu. Pick another city to jump straight to its map, or *All maps* to return to the maps hub; an *All maps* link above the name does the same on wider screens. Each city's menu is built from the cities in the repo, so a new city appears in every map's menu on its next build.
 
