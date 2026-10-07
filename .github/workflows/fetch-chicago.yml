@@ -7,7 +7,7 @@ on:
       script: {description: 'Script in cities/chicago/ to run', default: 'fetch.py'}
   push:
     branches: [fetch-chicago]
-    paths: ['cities/chicago/discover.py', 'cities/chicago/fetch*.py', '.github/workflows/fetch-chicago.yml']
+    paths: ['cities/chicago/fetch*.py', '.github/workflows/fetch-chicago.yml']
 permissions:
   contents: write
 jobs:
@@ -19,10 +19,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 cities/chicago/${{ inputs.script || 'discover.py' }}
+      - run: python3 cities/chicago/${{ inputs.script || 'fetch.py' }}
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
           git add cities/chicago/raw
-          git commit -m "Fetch Chicago data (${{ inputs.script || 'discover.py' }})" || echo "no changes"
+          git commit -m "Fetch Chicago data (${{ inputs.script || 'fetch.py' }})" || echo "no changes"
           git push
