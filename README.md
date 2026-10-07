@@ -68,7 +68,7 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 ## Chicago Layers
 
-The second city, at [maps.noumankhan.ca/chicago](https://maps.noumankhan.ca/chicago/), runs on the same engine with its own data and config (`cities/chicago/`). Chicago's layers line up with Toronto's:
+The second city, under construction, runs on the same engine with its own data and config (`cities/chicago/`). Chicago's layers line up with Toronto's:
 
 | Layer | Count | Notes |
 |---|---|---|
