@@ -1,0 +1,67 @@
+59 districts in the list; fields: ['designation_date', 'district_name']
+   {'district_name': 'Old Town Triangle', 'designation_date': '1977-09-28T07:00:00.000Z'}
+   {'district_name': 'Milwaukee Avenue', 'designation_date': '2008-04-09T07:00:00.000Z'}
+   {'district_name': 'Astor Street', 'designation_date': '1975-12-19T08:00:00.000Z'}
+   {'district_name': 'Beverly/Morgan Park Railroad Stations', 'designation_date': '1995-04-15T07:00:00.000Z'}
+   {'district_name': 'Black Metropolis-Bronzeville', 'designation_date': '1998-09-09T07:00:00.000Z'}
+   {'district_name': 'Surf-Pine Grove', 'designation_date': '2007-07-19T07:00:00.000Z'}
+   {'district_name': 'Five Houses on Avers Avenue', 'designation_date': '1994-03-02T08:00:00.000Z'}
+   {'district_name': 'Hawthorne Place', 'designation_date': '1996-03-26T08:00:00.000Z'}
+   {'district_name': 'Historic Michigan Boulevard', 'designation_date': '2002-02-27T08:00:00.000Z'}
+   {'district_name': 'Hutchinson Street', 'designation_date': '1977-08-31T07:00:00.000Z'}
+   {'district_name': 'Ukrainian Village Extension II', 'designation_date': '2007-04-11T07:00:00.000Z'}
+   {'district_name': 'Motor Row', 'designation_date': '2000-12-13T08:00:00.000Z'}
+   {'district_name': 'Arlington & Roslyn', 'designation_date': '1989-11-15T08:00:00.000Z'}
+   {'district_name': 'Old Edgebrook', 'designation_date': '1989-10-24T07:00:00.000Z'}
+   {'district_name': 'East Village', 'designation_date': '2006-01-11T08:00:00.000Z'}
+   {'district_name': 'Printing House Row', 'designation_date': '1996-05-09T07:00:00.000Z'}
+   {'district_name': 'Pullman', 'designation_date': '1993-06-09T07:00:00.000Z'}
+   {'district_name': 'Villa', 'designation_date': '1983-11-23T08:00:00.000Z'}
+   {'district_name': 'Jewelers Row', 'designation_date': '2003-07-09T07:00:00.000Z'}
+   {'district_name': 'Milwaukee-Diversey-Kimball', 'designation_date': '2005-02-09T08:00:00.000Z'}
+   {'district_name': 'Old Chicago Water Tower', 'designation_date': '1971-10-06T07:00:00.000Z'}
+   {'district_name': 'Old Chicago Water Tower Extension', 'designation_date': '1981-06-10T07:00:00.000Z'}
+   {'district_name': 'Wicker Park', 'designation_date': '1991-04-12T07:00:00.000Z'}
+   {'district_name': 'Burling Row House', 'designation_date': '2000-11-15T08:00:00.000Z'}
+   {'district_name': 'North Kenwood Multiple Resource', 'designation_date': '1993-06-09T07:00:00.000Z'}
+   {'district_name': 'Mid-North Extension', 'designation_date': '2004-09-29T07:00:00.000Z'}
+   {'district_name': 'Washington Square Extension (Isaac Maynard Rowhouses)', 'designation_date': '2005-05-11T07:00:00.000Z'}
+   {'district_name': 'Newport Avenue', 'designation_date': '2005-02-09T08:00:00.000Z'}
+   {'district_name': 'Oakdale Avenue', 'designation_date': '2006-03-29T08:00:00.000Z'}
+   {'district_name': 'East Lake Shore Drive', 'designation_date': '1985-04-18T08:00:00.000Z'}
+   {'district_name': 'McCormick Row House', 'designation_date': '1977-05-04T07:00:00.000Z'}
+   {'district_name': 'Washington Square', 'designation_date': '1990-05-16T07:00:00.000Z'}
+   {'district_name': 'Giles Calumet', 'designation_date': '2009-07-29T07:00:00.000Z'}
+   {'district_name': 'Lincoln Ave Row House', 'designation_date': '2009-11-18T08:00:00.000Z'}
+   {'district_name': 'Oakland', 'designation_date': '1992-03-25T08:00:00.000Z'}
+   {'district_name': 'Ukrainian Village', 'designation_date': '2002-12-04T08:00:00.000Z'}
+   {'district_name': 'Prairie Avenue', 'designation_date': '1979-12-27T08:00:00.000Z'}
+   {'district_name': 'Greenwood Row House', 'designation_date': '2004-12-08T08:00:00.000Z'}
+   {'district_name': 'Walter Burley Griffin Place', 'designation_date': '1981-11-13T08:00:00.000Z'}
+   {'district_name': 'Fremont Row House', 'designation_date': '2004-03-10T08:00:00.000Z'}
+   {'district_name': 'Terra Cotta Row', 'designation_date': '2005-09-14T07:00:00.000Z'}
+   {'district_name': 'Bissell Street', 'designation_date': '2007-09-05T07:00:00.000Z'}
+   {'district_name': 'Alta Vista Terrace', 'designation_date': '1971-09-15T07:00:00.000Z'}
+   {'district_name': 'Seven Houses on Lake Shore Drive', 'designation_date': '1989-06-28T07:00:00.000Z'}
+   {'district_name': 'Cermak Road Bridge', 'designation_date': '2006-04-26T07:00:00.000Z'}
+   {'district_name': 'Washington Park Court', 'designation_date': '1991-10-02T07:00:00.000Z'}
+   {'district_name': 'Washington Square Extension', 'designation_date': '2002-07-10T07:00:00.000Z'}
+   {'district_name': 'Dover Street', 'designation_date': '2007-12-12T08:00:00.000Z'}
+   {'district_name': 'Calumet-Giles-Prairie', 'designation_date': '1988-07-13T07:00:00.000Z'}
+   {'district_name': 'Chatham-Greater Grand Crossing Commercial', 'designation_date': '2008-10-08T07:00:00.000Z'}
+   {'district_name': 'Logan Square Boulevards ', 'designation_date': '2005-11-01T08:00:00.000Z'}
+   {'district_name': 'Jackson Park Highlands', 'designation_date': '2007-07-19T07:00:00.000Z'}
+   {'district_name': 'Jackson Boulevard', 'designation_date': '1977-07-30T07:00:00.000Z'}
+   {'district_name': 'Ukrainian Village District Extension', 'designation_date': '2005-07-27T07:00:00.000Z'}
+   {'district_name': 'Mid North', 'designation_date': '1977-08-31T07:00:00.000Z'}
+   {'district_name': 'Arlington-Deming', 'designation_date': '2007-09-27T07:00:00.000Z'}
+   {'district_name': 'Armitage-Halsted', 'designation_date': '2003-02-05T08:00:00.000Z'}
+   {'district_name': 'Longwood Drive', 'designation_date': '1981-11-13T08:00:00.000Z'}
+   {'district_name': 'Kenwood', 'designation_date': '1979-06-29T07:00:00.000Z'}
+Zip contents: ['LandmarkDistricts_nov2012.sbn', 'LandmarkDistricts_nov2012.shp', 'LandmarkDistricts_nov2012.sbx', 'LandmarkDistricts_nov2012.shx', 'LandmarkDistricts_nov2012.prj', 'LandmarkDistricts_nov2012.dbf']
+[o] Wrote /home/runner/work/city-layers/city-layers/cities/chicago/raw/heritage_districts.geojson
+59 features
+  NUMBER_: ['HD- 1', 'HD- 2', 'HD- 3', 'HD- 4', 'HD- 5', 'HD- 6', 'HD- 7', 'HD- 8', 'HD- 9', 'HD-10', 'HD-11', 'HD-12', 'HD-13', 'HD-14', 'HD-15', 'HD-16', 'HD-17', 'HD-18', 'HD-19', 'HD-20', 'HD-21', 'HD-22', 'HD-23', 'HD-24', 'HD-25', 'HD-26', 'HD-27', 'HD-28', 'HD-29', 'HD-30', 'HD-31', 'HD-32', 'HD-33', 'HD-34', 'HD-35', 'HD-36', 'HD-37', 'HD-38', 'HD-39', 'HD-40', 'HD-41', 'HD-42', 'HD-43', 'HD-44', 'HD-45', 'HD-46', 'HD-47', 'HD-48', 'HD-49', 'HD-50', 'HD-51', 'HD-52', 'HD-53', 'HD-54', 'HD-55', 'HD-56', 'HD-57', 'HD-58', 'HD-59']
+  NAME: ['Alta Vista Terrace', 'Arlington & Roslyn', 'Arlington-Deming District', 'Armitage-Halsted', 'Astor Street', 'Beverly/Morgan Park Railroad Station', 'Bissell Street District', 'Black Metropolis-Bronzeville', 'Burling Row House', 'Calumet-Giles-Prairie', 'Cermak Road Bridge District', 'Chatham-Greater Grand Crossing Com', 'Dover Street District', 'East Lake Shore Drive', 'East Village District', 'Five Houses on Avers Avenue', 'Fremont Row House District', 'Giles Calumet', 'Greenwood Row House District', 'Hawthorne Place', 'Historic Michigan Boulevard', 'Hutchinson Street', 'Jackson Boulevard', 'Jackson Park Highlands', 'Jewelers Row District', 'Kenwood', 'Lincoln Ave Row House District', 'Logan Square Boulevards District', 'Longwood Drive', 'McCormick Row House', 'Mid North', 'Mid-North District Extension', 'Milwaukee Avenue District', 'Milwaukee-Diversey-Kimball District', 'Motor Row', 'Newport Avenue District', 'North Kenwood Multiple Resource', 'Oakdale Avenue District', 'Oakland', 'Old Chicago Water Tower', 'Old Chicago Water Tower Extension', 'Old Edgebrook', 'Old Town Triangle', 'Prairie Avenue', 'Printing House Row', 'Pullman', 'Seven Houses on Lake Shore Drive', 'Surf-Pine District', 'Terra Cotta Row District', 'Ukrainian Village', 'Ukrainian Village District Ext II', 'Ukrainian Village District Extension', 'Villa', 'Walter Burley Griffin Place', 'Washington Park Court', 'Washington Square', 'Washington Square Extension', 'Washington Square Extension, III', 'Wicker Park']
+  DATE_: ['1971-09-15T00:00:00.000Z', '1971-10-06T00:00:00.000Z', '1975-12-19T00:00:00.000Z', '1977-05-04T00:00:00.000Z', '1977-07-30T00:00:00.000Z', '1977-08-31T00:00:00.000Z', '1977-09-28T00:00:00.000Z', '1979-06-29T00:00:00.000Z', '1979-12-27T00:00:00.000Z', '1981-06-10T00:00:00.000Z', '1981-11-13T00:00:00.000Z', '1983-11-23T00:00:00.000Z', '1985-04-18T00:00:00.000Z', '1988-07-13T00:00:00.000Z', '1989-06-28T00:00:00.000Z', '1989-10-24T00:00:00.000Z', '1989-11-15T00:00:00.000Z', '1990-05-16T00:00:00.000Z', '1991-04-12T00:00:00.000Z', '1991-10-02T00:00:00.000Z', '1992-03-25T00:00:00.000Z', '1993-06-09T00:00:00.000Z', '1994-03-02T00:00:00.000Z', '1995-04-15T00:00:00.000Z', '1996-03-26T00:00:00.000Z', '1996-05-09T00:00:00.000Z', '1998-09-09T00:00:00.000Z', '2000-11-15T00:00:00.000Z', '2000-12-13T00:00:00.000Z', '2002-02-27T00:00:00.000Z', '2002-07-10T00:00:00.000Z', '2002-12-04T00:00:00.000Z', '2003-02-05T00:00:00.000Z', '2003-07-09T00:00:00.000Z', '2004-03-10T00:00:00.000Z', '2004-09-29T00:00:00.000Z', '2004-12-08T00:00:00.000Z', '2005-02-09T00:00:00.000Z', '2005-05-11T00:00:00.000Z', '2005-07-27T00:00:00.000Z', '2005-09-14T00:00:00.000Z', '2005-11-01T00:00:00.000Z', '2006-01-11T00:00:00.000Z', '2006-03-29T00:00:00.000Z', '2006-04-26T00:00:00.000Z', '2007-04-11T00:00:00.000Z', '2007-07-19T00:00:00.000Z', '2007-09-05T00:00:00.000Z', '2007-09-27T00:00:00.000Z', '2007-12-12T00:00:00.000Z', '2008-04-09T00:00:00.000Z', '2008-10-08T00:00:00.000Z', '2009-07-29T00:00:00.000Z', '2009-11-18T00:00:00.000Z']
+  REGISTER: ['', 'N', 'P', 'Y']
