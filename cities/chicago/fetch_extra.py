@@ -77,33 +77,38 @@ def metra():
 
 
 GROUPS = ['B25003', 'B08301', 'B25075', 'B25063']
+SF = 'https://www2.census.gov/programs-surveys/acs/summary_file/{y}/table-based-SF/'
 
 
 def acs():
+    """ACS 5-year table-based summary files (no API key needed): one pipe-delimited file per table
+    covering every geography; keep Cook County tracts (GEO_ID 1400000US17031...)."""
     for year in (2024, 2023):
-        base = f'https://api.census.gov/data/{year}/acs/acs5'
+        root = SF.format(y=year)
         try:
-            labels = {}
-            for g in GROUPS:
-                v = json.loads(get(f'{base}/groups/{g}.json', tries=1))['variables']
-                labels.update({k: x['label'] for k, x in v.items() if k.endswith('E')})
-                time.sleep(1)
+            get(root + 'data/5YRData/', tries=1)
         except Exception as e:
             print('ACS', year, 'not available:', e); continue
-        tracts = {}
+        tracts, labels = {}, {}
         for g in GROUPS:
-            body = get(f'{base}?get=group({g})&for=tract:*&in=state:17&in=county:031')
-            try:
-                d = json.loads(body)
-            except ValueError:
-                raise RuntimeError(g + ' gave: ' + body[:400].decode('utf8', 'replace'))
-            head = d[0]
-            for r in d[1:]:
-                row = dict(zip(head, r))
-                t = tracts.setdefault(row['state'] + row['county'] + row['tract'], {})
-                t.update({k: (int(float(v)) if v not in (None, '') and float(v) >= 0 else None) for k, v in row.items() if k in labels})
+            body = get(root + f'data/5YRData/acsdt5y{year}-{g.lower()}.dat').decode('utf8', 'replace').splitlines()
+            head = body[0].split('|')
+            for line in body[1:]:
+                if not line.startswith('1400000US17031'): continue
+                row = dict(zip(head, line.split('|')))
+                t = tracts.setdefault(row['GEO_ID'][9:], {})
+                for k, v in row.items():
+                    if k.endswith(tuple(f'_E{n:03d}' for n in range(1, 60))):
+                        try: t[k] = int(float(v)) if float(v) >= 0 else None
+                        except ValueError: t[k] = None
+            print(g, 'tracts so far', len(tracts))
             time.sleep(2)
-        save('acs_tracts.json', {'year': year, 'source': base, 'labels': labels, 'tracts': tracts})
+        try:
+            shells = get(root + f'documentation/ACS{year}5YR_Table_Shells.txt' if False else root + 'documentation/', tries=1)
+            open(os.path.join(RAW, 'acs_documentation_listing.html'), 'wb').write(shells)
+        except Exception as e:
+            print('no documentation listing', e)
+        save('acs_tracts.json', {'year': year, 'source': root, 'tracts': tracts})
         return
     raise RuntimeError('no ACS year available')
 
