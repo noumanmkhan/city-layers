@@ -103,11 +103,6 @@ def acs():
                         except ValueError: t[k] = None
             print(g, 'tracts so far', len(tracts))
             time.sleep(2)
-        try:
-            shells = get(root + f'documentation/ACS{year}5YR_Table_Shells.txt' if False else root + 'documentation/', tries=1)
-            open(os.path.join(RAW, 'acs_documentation_listing.html'), 'wb').write(shells)
-        except Exception as e:
-            print('no documentation listing', e)
         save('acs_tracts.json', {'year': year, 'source': root, 'tracts': tracts})
         return
     raise RuntimeError('no ACS year available')
