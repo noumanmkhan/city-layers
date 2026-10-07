@@ -1,0 +1,26 @@
+name: Fetch GTA places
+# Downloads the GTA's named communities (towns, villages, suburbs, neighbourhoods) from
+# OpenStreetMap (Overpass API) into cities/toronto/raw/gta_places.json and commits the file
+# back to the branch that ran it.
+on:
+  workflow_dispatch:
+  push:
+    branches: [fetch-gta-places]
+    paths: ['cities/toronto/fetch_gta_places.py', '.github/workflows/fetch-gta-places.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 cities/toronto/fetch_gta_places.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/gta_places.json
+          git commit -m "Fetch GTA place names from OpenStreetMap" || echo "no changes"
+          git push
