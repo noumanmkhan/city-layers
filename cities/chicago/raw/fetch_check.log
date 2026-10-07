@@ -1,0 +1,4 @@
+USLandmass layers: [(0, 'States')]
+wrote landmass.geojson 4 features
+wrote point_check.json 50
+failed: none

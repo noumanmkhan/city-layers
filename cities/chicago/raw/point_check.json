@@ -1,0 +1,635 @@
+{
+ "Wrigley Field": [
+  {
+   "name": "Wrigley Field, 1060, West Addison Street, Wrigleyville, Lake View, Chicago, Lake View Town",
+   "type": "stadium",
+   "lat": 41.9481846,
+   "lon": -87.655559
+  }
+ ],
+ "Rate Field": [
+  {
+   "name": "Rate Field, 333, West 35th Street, Armour Square, Chicago, South Chicago Township, Cook Co",
+   "type": "stadium",
+   "lat": 41.829692,
+   "lon": -87.6337919
+  }
+ ],
+ "United Center": [
+  {
+   "name": "United Center, 1901, West Madison Street, West Haven, Near West Side, Chicago, West Chicag",
+   "type": "stadium",
+   "lat": 41.8806831,
+   "lon": -87.6741851
+  }
+ ],
+ "Soldier Field": [
+  {
+   "name": "Soldier Field, 425, East McFetridge Drive, Central Station, South Loop, Near South Side, C",
+   "type": "stadium",
+   "lat": 41.8623356,
+   "lon": -87.6176477
+  },
+  {
+   "name": "Soldier Field, 1410, South Special Olympics Drive, South Loop, Near South Side, Chicago, S",
+   "type": "stadium",
+   "lat": 41.8624515,
+   "lon": -87.6167151
+  }
+ ],
+ "Millennium Park": [
+  {
+   "name": "Millennium Park, 201, Loop, Chicago, South Chicago Township, Cook County, Illinois, 60601,",
+   "type": "park",
+   "lat": 41.8825754,
+   "lon": -87.6225361
+  },
+  {
+   "name": "Millennium Park, Northlake, Leyden Township, Cook County, Illinois, United States",
+   "type": "park",
+   "lat": 41.912775,
+   "lon": -87.9027094
+  }
+ ],
+ "Grant Park": [
+  {
+   "name": "Grant Park, 331, Loop, Chicago, South Chicago Township, Cook County, Illinois, 60601, Unit",
+   "type": "park",
+   "lat": 41.8827266,
+   "lon": -87.6187299
+  }
+ ],
+ "Lincoln Park Zoo": [
+  {
+   "name": "Lincoln Park Zoo, 2001, North Clark Street, Old Town Triangle, Lincoln Park, Chicago, Nort",
+   "type": "zoo",
+   "lat": 41.9212558,
+   "lon": -87.6337656
+  },
+  {
+   "name": "Lincoln Park Zoo, North Cannon Drive, Lincoln Park, Chicago, North Chicago Township, Cook ",
+   "type": "bicycle_rental",
+   "lat": 41.9227867,
+   "lon": -87.632076
+  },
+  {
+   "name": "Lincoln Park Zoo, West Fullerton Parkway, Lincoln Park, Chicago, North Chicago Township, C",
+   "type": "board",
+   "lat": 41.9255725,
+   "lon": -87.6338811
+  }
+ ],
+ "North Avenue Beach": [
+  {
+   "name": "North Avenue Beach, Lincoln Park, Chicago, North Chicago Township, Cook County, Illinois, ",
+   "type": "beach",
+   "lat": 41.9185066,
+   "lon": -87.6280266
+  },
+  {
+   "name": "North Avenue Beach, Lakefront Trail, Lincoln Park, Chicago, North Chicago Township, Cook C",
+   "type": "parking",
+   "lat": 41.9128034,
+   "lon": -87.6250323
+  },
+  {
+   "name": "North Avenue Beach, Lakefront Trail, Lincoln Park, Chicago, North Chicago Township, Cook C",
+   "type": "bicycle_rental",
+   "lat": 41.9139788,
+   "lon": -87.6253581
+  }
+ ],
+ "Montrose Beach": [
+  {
+   "name": "Montrose Beach, 4400, Uptown, Chicago, Lake View Township, Cook County, Illinois, 60640, U",
+   "type": "beach",
+   "lat": 41.9661163,
+   "lon": -87.635419
+  }
+ ],
+ "The 606": [
+  {
+   "name": "Bloomingdale Trail Park, 1600-3750, Wicker Park, West Town, Chicago, West Chicago Township",
+   "type": "park",
+   "lat": 41.9139597,
+   "lon": -87.6859721
+  }
+ ],
+ "Garfield Park Conservatory": [
+  {
+   "name": "Garfield Park Conservatory, 300, East Garfield Park, Chicago, West Chicago Township, Cook ",
+   "type": "garden",
+   "lat": 41.886827,
+   "lon": -87.7185852
+  }
+ ],
+ "Jackson Park": [
+  {
+   "name": "Jackson Park, 6401, Woodlawn, Chicago, Hyde Park Township, Cook County, Illinois, 60637, U",
+   "type": "park",
+   "lat": 41.774704,
+   "lon": -87.5803531
+  },
+  {
+   "name": "Jackson Park, South Stony Island Avenue, Hyde Park, Chicago, Hyde Park Township, Cook Coun",
+   "type": "board",
+   "lat": 41.787028,
+   "lon": -87.5867937
+  }
+ ],
+ "Northerly Island": [
+  {
+   "name": "Northerly Island, 1521, Near South Side, Chicago, South Chicago Township, Cook County, Ill",
+   "type": "park",
+   "lat": 41.8602009,
+   "lon": -87.6082797
+  }
+ ],
+ "Chicago Theatre": [
+  {
+   "name": "Chicago Theatre, 175, North State Street, Theatre District, Loop, Chicago, South Chicago T",
+   "type": "theatre",
+   "lat": 41.8854968,
+   "lon": -87.6271883
+  }
+ ],
+ "Symphony Center": [
+  {
+   "name": "Symphony Center, 220, South Michigan Avenue, Jewelers Row, Loop, Chicago, South Chicago To",
+   "type": "theatre",
+   "lat": 41.8789844,
+   "lon": -87.625093
+  }
+ ],
+ "Lyric Opera House": [],
+ "Auditorium Theatre": [
+  {
+   "name": "Auditorium Theatre, 50, East Ida B. Wells Drive, Printer's Row, Loop, Chicago, South Chica",
+   "type": "theatre",
+   "lat": 41.8760769,
+   "lon": -87.6252708
+  }
+ ],
+ "Metro": [
+  {
+   "name": "Metro, 3728-3730, North Clark Street, Wrigleyville, Lake View, Chicago, Lake View Township",
+   "type": "commercial",
+   "lat": 41.949842,
+   "lon": -87.6589453
+  },
+  {
+   "name": "Metro, 3730, North Clark Street, Wrigleyville, Lake View, Chicago, Lake View Township, Coo",
+   "type": "theatre",
+   "lat": 41.9497837,
+   "lon": -87.6590034
+  },
+  {
+   "name": "Ashland Branch, South Lowe Avenue, Englewood, Chicago, Lake Township, Cook County, Illinoi",
+   "type": "subway",
+   "lat": 41.779092,
+   "lon": -87.638246
+  }
+ ],
+ "Aragon Ballroom": [
+  {
+   "name": "Byline Bank Aragon Ballroom, 1106, West Lawrence Avenue, Uptown Square, Uptown, Chicago, L",
+   "type": "events_venue",
+   "lat": 41.9694312,
+   "lon": -87.658026
+  }
+ ],
+ "City Hall": [
+  {
+   "name": "City Hall, 838, West Kinzie Street, Fulton Market District, West Loop, West Town, Chicago,",
+   "type": "events_venue",
+   "lat": 41.8892101,
+   "lon": -87.6492839
+  }
+ ],
+ "Union Station": [
+  {
+   "name": "Chicago Union Station, 210, South Canal Street, West Loop Gate, Near West Side, Chicago, W",
+   "type": "building",
+   "lat": 41.878701,
+   "lon": -87.6404084
+  },
+  {
+   "name": "Chicago Union Station, 225, South Canal Street, West Loop Gate, Near West Side, Chicago, W",
+   "type": "train_station",
+   "lat": 41.8786908,
+   "lon": -87.6392607
+  },
+  {
+   "name": "Chicago Union Station, 225, South Canal Street, West Loop Gate, Near West Side, Chicago, W",
+   "type": "station",
+   "lat": 41.8786411,
+   "lon": -87.6390928
+  }
+ ],
+ "Ogilvie Transportation Center": [
+  {
+   "name": "Ogilvie Transportation Center, 500, West Madison Street, West Loop Gate, Near West Side, C",
+   "type": "train_station",
+   "lat": 41.8825674,
+   "lon": -87.6404921
+  },
+  {
+   "name": "Ogilvie Transportation Center, 500, West Madison Street, West Loop Gate, Near West Side, C",
+   "type": "station",
+   "lat": 41.8837873,
+   "lon": -87.6405272
+  },
+  {
+   "name": "Ogilvie Transportation Center, West Washington Street, West Loop Gate, West Loop, Near Wes",
+   "type": "stop",
+   "lat": 41.882921,
+   "lon": -87.6409546
+  }
+ ],
+ "McCormick Place": [
+  {
+   "name": "McCormick Place, East 23rd Street, Motor Row, Near South Side, Chicago, South Chicago Town",
+   "type": "station",
+   "lat": 41.851689,
+   "lon": -87.6164754
+  },
+  {
+   "name": "McCormick Place, 2301, South Doctor Martin Luther King Junior Drive, Motor Row, Near South",
+   "type": "stop",
+   "lat": 41.8513333,
+   "lon": -87.6163999
+  },
+  {
+   "name": "McCormick Place, South Doctor Martin Luther King Junior Drive, Motor Row, Near South Side,",
+   "type": "bus_stop",
+   "lat": 41.8511088,
+   "lon": -87.6191193
+  }
+ ],
+ "University of Chicago": [
+  {
+   "name": "The University of Chicago, 5801, South Ellis Avenue, Hyde Park, Chicago, Hyde Park Townshi",
+   "type": "university",
+   "lat": 41.7913274,
+   "lon": -87.6008421
+  },
+  {
+   "name": "University of Illinois Chicago, 1200, West Harrison Street, Greektown, West Loop, Near Wes",
+   "type": "university",
+   "lat": 41.8748613,
+   "lon": -87.6519866
+  },
+  {
+   "name": "University of Illinois Chicago West Campus, West Harrison Street, Illinois Medical Distric",
+   "type": "university",
+   "lat": 41.8662587,
+   "lon": -87.6737617
+  }
+ ],
+ "University of Illinois Chicago": [
+  {
+   "name": "University of Illinois Chicago, 1200, West Harrison Street, Greektown, West Loop, Near Wes",
+   "type": "university",
+   "lat": 41.8748613,
+   "lon": -87.6519866
+  }
+ ],
+ "Loyola University": [
+  {
+   "name": "Loyola University Chicago, 1032, West Sheridan Road, Edgewater, Chicago, Lake View Townshi",
+   "type": "university",
+   "lat": 41.9990955,
+   "lon": -87.6572748
+  },
+  {
+   "name": "Loyola University Water Tower Campus, 820, North Michigan Avenue, Streeterville, Gold Coas",
+   "type": "university",
+   "lat": 41.8972965,
+   "lon": -87.627541
+  }
+ ],
+ "DePaul University": [
+  {
+   "name": "DePaul University, 2400, North Sheffield Avenue, Wrightwood Neighbors, Lincoln Park, Chica",
+   "type": "university",
+   "lat": 41.9245803,
+   "lon": -87.6507223
+  }
+ ],
+ "Northwestern (Chicago campus)": [
+  {
+   "name": "Northwestern University Chicago Campus, East Ontario Street, Streeterville, Near North Sid",
+   "type": "university",
+   "lat": 41.8954392,
+   "lon": -87.618244
+  }
+ ],
+ "Illinois Tech": [
+  {
+   "name": "Chicago Tech Academy, 1301, West 14th Street, Roosevelt Square, Little Italy, Near West Si",
+   "type": "school",
+   "lat": 41.8629186,
+   "lon": -87.6602401
+  },
+  {
+   "name": "35th-Bronzeville-IIT, 16, East 35th Street, Bronzeville, Douglas, Chicago, South Chicago T",
+   "type": "station",
+   "lat": 41.8320387,
+   "lon": -87.6258861
+  },
+  {
+   "name": "Lane Tech Memorial Garden, North Center, Chicago, Jefferson Township, Cook County, Illinoi",
+   "type": "garden",
+   "lat": 41.9456263,
+   "lon": -87.6907628
+  }
+ ],
+ "Art Institute": [
+  {
+   "name": "The Art Institute of Chicago, 111, South Michigan Avenue, Jewelers Row, Loop, Chicago, Sou",
+   "type": "museum",
+   "lat": 41.879605,
+   "lon": -87.6230716
+  },
+  {
+   "name": "School of The Art Institute of Chicago, 36, South Wabash Avenue, Jewelers Row, Loop, Chica",
+   "type": "college",
+   "lat": 41.8812522,
+   "lon": -87.6269745
+  },
+  {
+   "name": "Ukrainian Institute of Modern Art, 2320, West Chicago Avenue, Ukrainian Village, West Town",
+   "type": "museum",
+   "lat": 41.8959799,
+   "lon": -87.6851653
+  }
+ ],
+ "Field Museum": [
+  {
+   "name": "Field Museum, 1400, East McFetridge Drive, Central Station, South Loop, Near South Side, C",
+   "type": "museum",
+   "lat": 41.8662215,
+   "lon": -87.6168913
+  }
+ ],
+ "Shedd Aquarium": [
+  {
+   "name": "Shedd Aquarium, 1200, Sick Family Lakefront Terrace, Near South Side, Chicago, South Chica",
+   "type": "aquarium",
+   "lat": 41.8676361,
+   "lon": -87.6136789
+  },
+  {
+   "name": "Shedd Aquarium, Lakefront Trail, Central Station, South Loop, Near South Side, Chicago, So",
+   "type": "bicycle_rental",
+   "lat": 41.8672407,
+   "lon": -87.61532
+  }
+ ],
+ "Adler Planetarium": [
+  {
+   "name": "Adler Planetarium, 1300, East Solidarity Drive, Near South Side, Chicago, South Chicago To",
+   "type": "planetarium",
+   "lat": 41.8663656,
+   "lon": -87.6066259
+  },
+  {
+   "name": "Adler Planetarium, East Solidarity Drive, Near South Side, Chicago, South Chicago Township",
+   "type": "bicycle_rental",
+   "lat": 41.8661261,
+   "lon": -87.6073314
+  }
+ ],
+ "Museum of Science and Industry": [
+  {
+   "name": "Griffin Museum of Science and Industry, 5700, South Lake Shore Drive, Indian Village, Kenw",
+   "type": "museum",
+   "lat": 41.7907492,
+   "lon": -87.582931
+  }
+ ],
+ "Navy Pier": [
+  {
+   "name": "Navy Pier, 600, East Grand Avenue, Near North Side, Chicago, North Chicago Township, Cook ",
+   "type": "attraction",
+   "lat": 41.8917999,
+   "lon": -87.6041447
+  },
+  {
+   "name": "Navy Pier (River Route), Lakefront Trail Connector, Near North Side, Chicago, North Chicag",
+   "type": "ferry_terminal",
+   "lat": 41.8905809,
+   "lon": -87.6122081
+  },
+  {
+   "name": "Navy Pier (Lake Route), Dock Street, Near North Side, Chicago, North Chicago Township, Coo",
+   "type": "ferry_terminal",
+   "lat": 41.8909667,
+   "lon": -87.6092189
+  }
+ ],
+ "Willis Tower": [
+  {
+   "name": "Willis Tower, 233, South Wacker Drive, Financial District, Loop, Chicago, South Chicago To",
+   "type": "commercial",
+   "lat": 41.878738,
+   "lon": -87.6359612
+  }
+ ],
+ "875 North Michigan": [
+  {
+   "name": "875 N Michigan, 875, North Michigan Avenue, Streeterville, Gold Coast, Near North Side, Ch",
+   "type": "commercial",
+   "lat": 41.8988813,
+   "lon": -87.6230962
+  }
+ ],
+ "Merchandise Mart": [
+  {
+   "name": "Merchandise Mart, 222, North Orleans Street, River North, Near North Side, Chicago, North ",
+   "type": "mall",
+   "lat": 41.8885435,
+   "lon": -87.6353813
+  },
+  {
+   "name": "Merchandise Mart, 350, North Wells Street, River North, Near North Side, Chicago, North Ch",
+   "type": "station",
+   "lat": 41.8888417,
+   "lon": -87.6340039
+  },
+  {
+   "name": "Merchandise Mart, North Wells Street, River North, Near North Side, Chicago, North Chicago",
+   "type": "stop",
+   "lat": 41.8893197,
+   "lon": -87.634004
+  }
+ ],
+ "O'Hare Airport": [
+  {
+   "name": "FAA Airport Beacon, O'Hare, Chicago, Jefferson Township, Cook County, Illinois, United Sta",
+   "type": "industrial",
+   "lat": 42.0058644,
+   "lon": -87.9133358
+  },
+  {
+   "name": "O'Hare International Airport, 10000, South York Road, Chicago, Addison Township, DuPage Co",
+   "type": "aerodrome",
+   "lat": 41.9799743,
+   "lon": -87.909816
+  },
+  {
+   "name": "O'Hare Airport Transit System, Kennedy Expressway, O'Hare, Chicago, Jefferson Township, Co",
+   "type": "light_rail",
+   "lat": 41.978711,
+   "lon": -87.8934024
+  }
+ ],
+ "Midway Airport": [
+  {
+   "name": "Chicago Midway International Airport, 5700, South Cicero Avenue, Garfield Ridge, Chicago, ",
+   "type": "aerodrome",
+   "lat": 41.7855142,
+   "lon": -87.7517243
+  },
+  {
+   "name": "Midway Airport Terminal, 5600-5800, South Cicero Avenue, Garfield Ridge, Chicago, Lake Tow",
+   "type": "terminal",
+   "lat": 41.7881878,
+   "lon": -87.7409533
+  }
+ ],
+ "Pilsen": [
+  {
+   "name": "Pilsen, Lower West Side, Chicago, West Chicago Township, Cook County, Illinois, 60608, Uni",
+   "type": "quarter",
+   "lat": 41.8570402,
+   "lon": -87.6618834
+  }
+ ],
+ "Bronzeville": [
+  {
+   "name": "Bronzeville, South Doctor Martin Luther King Junior Drive, Bronzeville, Douglas, Chicago, ",
+   "type": "board",
+   "lat": 41.8313386,
+   "lon": -87.6171492
+  },
+  {
+   "name": "Bronzeville, Douglas, Chicago, South Chicago Township, Cook County, Illinois, 60653, Unite",
+   "type": "quarter",
+   "lat": 41.8238533,
+   "lon": -87.6169814
+  }
+ ],
+ "South Loop": [
+  {
+   "name": "South Loop, Near South Side, Chicago, South Chicago Township, Cook County, Illinois, 60605",
+   "type": "quarter",
+   "lat": 41.8657843,
+   "lon": -87.6257625
+  },
+  {
+   "name": "Chicago Fire Stadium, South Loop, Near South Side, Chicago, South Chicago Township, Cook C",
+   "type": "construction",
+   "lat": 41.8650342,
+   "lon": -87.631998
+  },
+  {
+   "name": "South Loop, South Kilpatrick Avenue, Garfield Ridge, Chicago, Lake Township, Cook County, ",
+   "type": "subway",
+   "lat": 41.7871482,
+   "lon": -87.7386907
+  }
+ ],
+ "Fulton Market": [
+  {
+   "name": "Fulton Market, West Fulton Market, Fulton Market District, West Loop, Near West Side, Chic",
+   "type": "bicycle_rental",
+   "lat": 41.8868648,
+   "lon": -87.64811
+  }
+ ],
+ "River West": [
+  {
+   "name": "Chicago, 800, North Milwaukee Avenue, River West, West Town, Chicago, West Chicago Townshi",
+   "type": "station",
+   "lat": 41.8962116,
+   "lon": -87.6553278
+  },
+  {
+   "name": "River West, West Town, Chicago, West Chicago Township, Cook County, Illinois, 60642, Unite",
+   "type": "neighbourhood",
+   "lat": 41.8952575,
+   "lon": -87.6519358
+  },
+  {
+   "name": "Chicago, North Milwaukee Avenue, River West, West Town, Chicago, West Chicago Township, Co",
+   "type": "stop",
+   "lat": 41.896454,
+   "lon": -87.6556739
+  }
+ ],
+ "Roscoe Village": [
+  {
+   "name": "Roscoe Village, North Center, Chicago, Lake View Township, Cook County, Illinois, 60618, U",
+   "type": "neighbourhood",
+   "lat": 41.9432315,
+   "lon": -87.6784359
+  }
+ ],
+ "Ravenswood": [
+  {
+   "name": "Ravenswood, 4751, North Ravenswood Avenue, Ravenswood, Lincoln Square, Chicago, Lake View ",
+   "type": "station",
+   "lat": 41.9679199,
+   "lon": -87.6744751
+  },
+  {
+   "name": "Ravenswood, Lincoln Square, Chicago, Lake View Township, Cook County, Illinois, 60640, Uni",
+   "type": "quarter",
+   "lat": 41.9687674,
+   "lon": -87.6791716
+  }
+ ],
+ "Back of the Yards": [
+  {
+   "name": "Back of the Yards, New City, Chicago, Lake Township, Cook County, Illinois, 60609, United ",
+   "type": "quarter",
+   "lat": 41.8047789,
+   "lon": -87.6648733
+  }
+ ],
+ "Canaryville": [
+  {
+   "name": "Canaryville, New City, Chicago, Lake Township, Cook County, Illinois, 60609, United States",
+   "type": "neighbourhood",
+   "lat": 41.8147556,
+   "lon": -87.6403288
+  },
+  {
+   "name": "Canaryville, South Halsted Street, Stockyards Industrial Corridor, New City, Chicago, Lake",
+   "type": "artwork",
+   "lat": 41.8221465,
+   "lon": -87.6458986
+  }
+ ],
+ "Old Irving Park": [
+  {
+   "name": "Basecamp Old Irving Park, Irving Park, Chicago, Jefferson Township, Cook County, Illinois,",
+   "type": "residential",
+   "lat": 41.9476899,
+   "lon": -87.7387911
+  },
+  {
+   "name": "Old Irving Village, Irving Park, Chicago, Jefferson Township, Cook County, Illinois, Unite",
+   "type": "residential",
+   "lat": 41.9508024,
+   "lon": -87.7419002
+  },
+  {
+   "name": "Old Irving Park Plaza, Irving Park, Chicago, Jefferson Township, Cook County, Illinois, Un",
+   "type": "retail",
+   "lat": 41.9532634,
+   "lon": -87.7357912
+  }
+ ]
+}
