@@ -1574,16 +1574,27 @@ function placePin(latlng){
   if (pin) pin.setLatLng(latlng); else pin = L.marker(latlng, {pane:'pin', interactive:false, keyboard:false, icon: L.divIcon({className:'', iconSize:[20, 20], iconAnchor:[10, 10], html:'<span class="pin"></span>'})}).addTo(map);
 }
 const colorOf = (id, f) => { const it = LAYERS.find(l => l.id === id); return 'var(' + ((it && it.colors && it.colors[f.properties.name]) || '--ink-3') + ')'; };
-function inspect(latlng, title){
+// Outside the city: the nearest named community (a town, village or larger community, not a small
+// neighbourhood), if one is close, as a "Near ..." pill. Skipped when the card is already titled with it.
+function nearCommunity(x, y, title){
+  if (!data.regionPlaces) return '';
+  const big = CITY.regionPlaces.near || [];
+  const c = data.regionPlaces.filter(p => big.includes(p.kind)).map(p => [p, metres([x, y], p.at)]).filter(a => a[1] < 2500).sort((a, b) => a[1] - b[1])[0];
+  if (!c || c[0].name === title) return '';
+  return '<span class="pill"><i style="background:var(--cult-enclave)"></i>Near ' + esc(c[0].name) + '</span>';
+}
+function inspect(latlng, title, muniName){
   const x = latlng.lng, y = latlng.lat;
   if (!hit(data.footprint, x, y)){
-    const muni = hit(data.outer, x, y);
+    // A named community already knows its municipality: the map's shapes are trimmed to a coarse
+    // shoreline, so a lakeside place can otherwise land just outside them.
+    const muni = hit(data.outer, x, y) || (muniName && data.outer.features.find(f => f.properties.name === muniName));
     if (!muni){ here.hidden = false; renderEmpty(CITY.outside.beyond); return; }
     placePin(latlng);
     const m = muni.properties;
     here.hidden = false;
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div>' +
-      '<div class="pills"><span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
+      '<div class="pills">' + nearCommunity(x, y, title) + '<span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
       driveHere(x, y, m) +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
@@ -1660,14 +1671,17 @@ function placeLabel(r){
 function placeSub(r){
   const a = r.address || {};
   const name = r.name && r.name !== placeLabel(r) ? r.name : '';
-  return [name, a.neighbourhood || a.suburb || a.quarter, a.postcode].filter(Boolean).join(' · ');
+  const town = data.footprint && !hit(data.footprint, +r.lon, +r.lat) ? (a.city || a.town || a.village || a.municipality) : '';
+  return [name, a.neighbourhood || a.suburb || a.quarter, town, a.postcode].filter(Boolean).join(' · ');
 }
 function choose(r){ goTo(L.latLng(+r.lat, +r.lon), placeLabel(r), true); }
-function goTo(latlng, name, fromSearch){
+function goTo(latlng, name, fromSearch, minZoom, muniName){
   showResults('');
   if (fromSearch) q.value = name;
-  inspect(latlng, name);  // fill the card first, so a map-move problem can't hide the result
-  const zoom = Math.max(map.getZoom(), 15);
+  // A spot beyond the city limits isn't visible in city-only mode: switch to the region view.
+  if (scope === 'inner' && data.footprint && !hit(data.footprint, latlng.lng, latlng.lat)) setScope('outer', false);
+  inspect(latlng, name, muniName);  // fill the card first, so a map-move problem can't hide the result
+  const zoom = minZoom || Math.max(map.getZoom(), 15);
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
   try {
     const size = map.getSize();
@@ -1705,14 +1719,16 @@ qf.addEventListener('submit', async e => {
   lastSearch = Date.now();
   go.disabled = true; go.textContent = '…';
   const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=6&countrycodes=' + CITY.search.country + '&bounded=1' +
-    '&viewbox=' + CITY.search.viewbox + '&q=' + encodeURIComponent(text);
+    '&viewbox=' + (CITY.search.regionViewbox || CITY.search.viewbox) + '&q=' + encodeURIComponent(text);
   try {
     let list;
     try { list = await geocode(url); }
     catch (err){ showResults('<li class="msg">Address search isn’t responding right now. Try again in a moment, or tap the map instead.</li>'); return; }
-    // Keep matches inside the city, and merge repeats of the same address (one per entrance/postcode).
-    const inCity = [];
-    list.filter(r => hit(data.footprint, +r.lon, +r.lat)).forEach(r => {
+    // Keep matches inside the city (and, if the city searches its region too, the municipalities around it,
+    // listed after the city's own), and merge repeats of the same address (one per entrance/postcode).
+    const inCity = [], inside = r => hit(data.footprint, +r.lon, +r.lat);
+    list.filter(r => inside(r) || (CITY.search.regionViewbox && hit(data.outer, +r.lon, +r.lat)))
+      .sort((a, b) => inside(b) - inside(a)).forEach(r => {
       const dup = inCity.some(k => placeLabel(k) === placeLabel(r) && metres([+k.lon, +k.lat], [+r.lon, +r.lat]) < 150);
       if (!dup) inCity.push(r);
     });
@@ -1750,6 +1766,10 @@ function indexPlaces(base){
   if (UNITS) data.units.features.forEach(f => add(f, CITY.units.singular + (f.properties.code != null ? ' #' + f.properties.code : ''), false));
   if (data.knownas) data.knownas.features.forEach(f => add(f, 'Known-as name', false));
   base.features.filter(f => f.properties.kind === 'neighbour').forEach(f => add(f, fill(CITY.outside.regionPill, f.properties) || 'Nearby', true));
+  // Named communities in the municipalities around the city (cities/<city> builds region_places.json).
+  (data.regionPlaces || []).forEach(p => PLACES.push({name: p.name, alt: p.alt, sub: fill(CITY.regionPlaces.sub, p), outside: true, muni: p.muni,
+    community: (CITY.regionPlaces.near || []).includes(p.kind) ? 5 : 6,
+    zoom: CITY.regionPlaces.zoom[p.kind] || 13, f: {type: 'Feature', properties: {name: p.name}, geometry: {type: 'Point', coordinates: p.at}}}));
 }
 function suggestions(text){
   const qq = norm(text), qs = qq.replace(/ /g, '');
@@ -1770,8 +1790,8 @@ function suggestions(text){
     if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
   PLACES.forEach(p => {
-    const b = score([p.name]);
-    if (b) out.push({s: b.s, rank: p.outside ? 4 : 3, name: p.name, sub: p.sub, go: () => goPlace(p)});
+    const b = score([p.name].concat(p.alt || []));
+    if (b) out.push({s: b.s, rank: p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
   });
   return out.sort((a, b) => a.s - b.s || a.rank - b.rank || a.name.localeCompare(b.name)).slice(0, 6);
 }
@@ -1785,7 +1805,7 @@ function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coor
 // A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
 function goPlace(p){
   const g = p.f.geometry;
-  if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true); return; }
+  if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true, p.zoom, p.muni); return; }
   showResults(''); q.value = p.name;
   if (p.outside && scope === 'inner') setScope('outer', false);
   const lp = p.f.properties.lp, bounds = L.geoJSON(p.f).getBounds();
@@ -1842,6 +1862,7 @@ LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!fi
 const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
+    CITY.regionPlaces ? get(CITY.regionPlaces.file).then(d => { data.regionPlaces = d; }).catch(() => { data.regionPlaces = null; }) : null,
     CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);

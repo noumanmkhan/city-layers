@@ -26,8 +26,15 @@
     "label": "Search an address or place",
     "country": "ca",
     "viewbox": "-79.64,43.86,-79.11,43.58",
-    "noMatch": "No match inside the City of Toronto for “{q}”. Try the full street name, like “789 Yonge Street”.",
-    "more": "Or press Find to search Toronto addresses"
+    "regionViewbox": "-80.25,44.45,-78.60,43.28",
+    "noMatch": "No match in the GTA for “{q}”. Try the full street name, like “789 Yonge Street”.",
+    "more": "Or press Find to search addresses across the GTA"
+  },
+  "regionPlaces": {
+    "file": "region_places.json",
+    "sub": "{kind} in {muni} · {region} Region",
+    "zoom": {"Town": 11, "Village": 12, "Community": 12, "Neighbourhood": 13, "Hamlet": 12},
+    "near": ["Town", "Village", "Community"]
   },
   "outside": {
     "beyond": "That spot is outside the Greater Toronto Area.",
