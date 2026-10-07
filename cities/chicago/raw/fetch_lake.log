@@ -1,4 +1,2 @@
 Hydro layers: [(0, 'Linear Hydrography'), (1, 'Areal Hydrography'), (2, 'Glaciers')]
-offshore probe: [{'AREALAND': 0, 'AREAWATER': 208463771, 'BASENAME': 'North Shore', 'CENTLAT': '+41.9831923', 'CENTLON': '-87.5928416', 'FUNCSTAT': None, 'INTPTLAT': '+41.9831923', 'INTPTLON': '-87.5928416', 'LNDMRKNS': None, 'LSADC': None, 'MTFCC': 'H2030', 'NAME': 'North Shore Chnnl', 'OBJECTID': 1653944, 'OID': '110380385584', 'PRETYP': None, 'PRETYPEABRV': None, 'SUFTYP': 179, 'SUFTYPEABRV': 'Chnnl'}]
-where: NAME = 'North Shore Chnnl'
-wrote lake_michigan.geojson 1 features from layer Areal Hydrography
+wrote lake_michigan.geojson 14 features from layer Areal Hydrography
