@@ -1,0 +1,587 @@
+
+== OSM boundary relations
+   relations by boundary/admin_level: {"administrative/10": 149, "administrative/4": 2, "administrative/5": 18, "administrative/6": 223, "administrative/8": 1, "administrative/9": 42, "local_authority/7": 1, "local_authority/8": 1, "political/9": 1}
+   administrative  L10  Ward 1 Kapra                                                 edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 10 Uppal                                                edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 100 Sanath Nagar                                        edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 101 Erragadda                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 102 Rahmath Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 103 Borabanda                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 104 Kondapur                                            edited 2023-10-11T12:43:23Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 105 Gachibowli                                          edited 2026-09-22T08:03:45Z v9 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 106 Serilingampally                                     edited 2026-09-22T08:03:45Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 107 Madhapur                                            edited 2023-10-11T11:54:46Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 108 Miyapur                                             edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 109 Hafeezpet                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 11 Nagole                                               edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 110 Chandanagar                                         edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 111 Bharati Nagar                                       edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 112 Ramachandrapuram                                    edited 2023-10-11T11:51:38Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 113 Patancheruvu                                        edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 114 KPHB Colony                                         edited 2024-09-19T08:40:18Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 115 Balaji Nagar                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 116 Allapur                                             edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 117 Moosapet                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 118 Fateh Nagar                                         edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 12 Mansoorabad                                          edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 120 Balanagar                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 121 Kukatpally                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 122 Vivekananda Nagar Colony                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 123 Hydernagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 124 Alwyn Colony                                        edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 125 Gajularamaram                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 126 Jagathgirigutta                                     edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 127 Rangareddy Nagar                                    edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 128 Chintal                                             edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 129 Suraram                                             edited 2023-10-09T14:54:37Z v1 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 13 Hayath Nagar                                         edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 130 Subash Nagar                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 131 Quthbullapur                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 132 Jeedimetla                                          edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 133 Macha Bolarum                                       edited 2024-01-10T05:46:48Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 134 Alwal                                               edited 2024-01-10T05:46:48Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 135 Venkatapuram                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 136 Neredmet                                            edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 137 Vinayak Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 138 Moula Ali                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 139 East Anand Bagh                                     edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 14 BN Reddy Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 140 Malkajgiri                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 141 Gautham Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 142 Addagutta                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 143 Tarnaka                                             edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 144 Mettuguda                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 145 Seethaphalmandi                                     edited 2023-10-09T14:54:37Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 146 Boudha Nagar                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 147 Bansilapet                                          edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 148 Ramgopalpet                                         edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 149 Begumpet                                            edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 15 Vanasthalipuram                                      edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 150 Monda Market                                        edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 16 Hasthinapuram                                        edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 17 Champapet                                            edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 18 Lingojiguda                                          edited 2023-10-11T12:43:23Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 19 Saroornagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 2 Dr A S Rao Nagar                                      edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 20 RK Puram                                             edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 21 Kothapet                                             edited 2023-10-11T12:43:23Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 22 Chaitanyapuri                                        edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 23 Gaddiannaram                                         edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 24 Saidabad                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 25 Moosarambagh                                         edited 2023-10-11T12:07:12Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 26 Old Malakpet                                         edited 2023-10-11T12:07:12Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 27 Akbarbagh                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 28 Azampura                                             edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 29 Chawni                                               edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 3 Cherlapally                                           edited 2023-10-09T14:54:37Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 30 Dabeerpura                                           edited 2023-10-11T12:43:23Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 31 Rein Bazar                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 32 Patthergatti                                         edited 2023-10-11T12:43:23Z v7 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 33 Moghalpura                                           edited 2024-01-16T08:37:58Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 34 Talab Chanchalam                                     edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 35 Gowlipura                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 36 Lalithabagh                                          edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 37 Kurmaguda                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 38 IS Sadan                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 39 Santhosh Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 4 Meerpet H.B Colony                                    edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 40 Riyasat Nagar                                        edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 41 Kanchanbagh                                          edited 2023-10-11T12:43:23Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 42 Barkas                                               edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 43 Chandrayangutta                                      edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 44 Uppuguda                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 45 Jangammet                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 46 Falaknuma                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 47 Nawab Saheb Kunta                                    edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 48 Shah Ali Banda                                       edited 2025-01-09T19:20:33Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info);local knowledge;https://www.google.com/maps/place/Shah+Ali+Banda;+Hyderabad;+Telangana/@17.349155;78.4699604;16z/data=!3m1!4b1!4m6!3m5!1s0x3bcb97f132260af7:0x59b59', 'wikidata': 'Q7487202'}
+   administrative  L10  Ward 49 Ghansi Bazar                                         edited 2024-01-16T08:37:58Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 5 Mallapur                                              edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 50 Begum Bazar                                          edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 51 Goshamahal                                           edited 2025-12-09T12:04:24Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 52 Puranapool                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 53 Doodh Bowli                                          edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 54 Jahanuma                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 55 Ramnaspura                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 56 Kishanbagh                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 57 Suleman Nagar                                        edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 58 Shastripuram                                         edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 59 Mailardevpally                                       edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 6 Nacharam                                              edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 60 Rajendra Nagar                                       edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 61 Attapur                                              edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 62 Ziaguda                                              edited 2025-12-09T12:04:24Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 63 Mangalhat                                            edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 64 Dattatreya Nagar                                     edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 65 Karwan                                               edited 2023-10-11T12:43:23Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 66 Langar Houz                                          edited 2023-10-11T12:43:23Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 67 Golconda                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 68 Tolichowki                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 69 Nanal Nagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 7 Chilka Nagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 70 Mehdipatnam                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 71 Gudimalkapur                                         edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 72 Asif Nagar                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 73 Vijay Nagar Colony                                   edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 74 Ahmed Nagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 75 Red Hills                                            edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 76 Mallepally                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 77 Jambagh                                              edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 78 Gunfoundry                                           edited 2023-10-11T12:43:23Z v7 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 79 Himayath Nagar                                       edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 8 Habsiguda                                             edited 2023-10-09T14:54:37Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 80 Kachiguda                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 81 Nallakunta                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 82 Golnaka                                              edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 83 Amberpet                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 84 Bagh Amberpet                                        edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 85 Adikmet                                              edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 86 Musheerabad                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 87 Ramnagar                                             edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 88 Bholakpur                                            edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 89 Gandhinagar                                          edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 9 Ramanthapur                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 90 Kavadiguda                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 91 Khairatabad                                          edited 2023-10-09T14:54:37Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 92 Venkateshwara Colony                                 edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 93 Banjara Hills                                        edited 2023-10-09T14:54:37Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 94 Shaikpet                                             edited 2023-10-11T12:43:23Z v4 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 95 Jubilee Hills                                        edited 2023-10-09T14:54:37Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 96 Yousufguda                                           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 97 Somajiguda                                           edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 98 Ameerpet                                             edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L10  Ward 99 Vengal Rao Nagar                                     edited 2023-10-09T14:54:37Z v2 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L4   Karnataka                                                    edited 2026-07-15T17:47:15Z v260 {'ref': 'KA', 'wikidata': 'Q1185'}
+   administrative  L4   Telangana                                                    edited 2026-01-18T20:04:44Z v208 {'ref': 'TG', 'wikidata': 'Q677037'}
+   administrative  L5   Bidar                                                        edited 2026-07-15T17:47:15Z v36 {'official_name': 'Bidar District', 'wikidata': 'Q1790568'}
+   administrative  L5   Hanumakonda                                                  edited 2025-12-16T18:41:25Z v56 {'official_name': 'Hanumakonda District', 'wikidata': 'Q213077'}
+   administrative  L5   Hyderabad                                                    edited 2026-01-18T19:28:29Z v42 {'official_name': 'Hyderabad District', 'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q15340'}
+   administrative  L5   Jangaon                                                      edited 2025-12-16T18:41:25Z v49 {'official_name': 'Jangaon District', 'wikidata': 'Q28170170'}
+   administrative  L5   Kalaburagi                                                   edited 2025-12-16T18:41:25Z v37 {'official_name': 'Kalaburagi District', 'wikidata': 'Q2641873'}
+   administrative  L5   Kamareddy                                                    edited 2025-12-16T18:41:25Z v49 {'official_name': 'Kamareddy District', 'wikidata': 'Q27956125'}
+   administrative  L5   Karimnagar                                                   edited 2025-12-16T18:41:25Z v69 {'official_name': 'Karimnagar District', 'wikidata': 'Q15373'}
+   administrative  L5   Mahabubnagar                                                 edited 2025-12-16T18:41:25Z v65 {'official_name': 'Mahabubnagar District', 'wikidata': 'Q15380'}
+   administrative  L5   Medak                                                        edited 2025-12-16T18:41:25Z v66 {'official_name': 'Medak District', 'wikidata': 'Q15386'}
+   administrative  L5   Medchal–Malkajgiri                                           edited 2025-12-16T18:41:25Z v52 {'official_name': 'Medchal–Malkajgiri District', 'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q27614841'}
+   administrative  L5   Nalgonda                                                     edited 2025-12-16T18:41:25Z v73 {'official_name': 'Nalgonda District', 'wikidata': 'Q15384'}
+   administrative  L5   Narayanpet                                                   edited 2025-12-16T18:41:25Z v30 {'official_name': 'Narayanpet District', 'wikidata': 'Q61746013'}
+   administrative  L5   Ranga Reddy                                                  edited 2025-12-16T18:41:25Z v83 {'official_name': 'Ranga Reddy District', 'wikidata': 'Q15388'}
+   administrative  L5   Sangareddy                                                   edited 2025-12-16T18:41:25Z v58 {'official_name': 'Sangareddy District', 'wikidata': 'Q28169753'}
+   administrative  L5   Siddipet                                                     edited 2025-12-16T18:41:25Z v62 {'official_name': 'Siddipet District', 'wikidata': 'Q28169756'}
+   administrative  L5   Suryapet                                                     edited 2025-12-16T18:41:25Z v55 {'official_name': 'Suryapet District', 'wikidata': 'Q28169770'}
+   administrative  L5   Vikarabad                                                    edited 2025-12-16T18:41:25Z v44 {'official_name': 'Vikarabad District', 'wikidata': 'Q28170173'}
+   administrative  L5   Yadadri Bhuvanagiri                                          edited 2025-12-16T18:41:25Z v50 {'official_name': 'Yadadri Bhuvanagiri District', 'wikidata': 'Q28169764'}
+   administrative  L6   Abdullapurmet mandal                                         edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q4666150'}
+   administrative  L6   Addagudur mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260311'}
+   administrative  L6   Akkannapet mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65316955'}
+   administrative  L6   Alair mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59259864'}
+   administrative  L6   Alladurg mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58495646'}
+   administrative  L6   Alwal mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65318954'}
+   administrative  L6   Amangal mandal                                               edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q3420592'}
+   administrative  L6   Amberpet mandal                                              edited 2025-12-16T18:09:53Z v5 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q4741369'}
+   administrative  L6   Ameenpur mandal                                              edited 2026-02-25T11:52:41Z v6 {'wikidata': 'Q65316966'}
+   administrative  L6   Ameerpet mandal                                              edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607257'}
+   administrative  L6   Andole mandal                                                edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q58495590'}
+   administrative  L6   Anumula_Haliya mandal                                        edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260667'}
+   administrative  L6   Asif Nagar mandal                                            edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q4806922'}
+   administrative  L6   Athmakur (M) mandal                                          edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59259915'}
+   administrative  L6   Aurad taluku                                                 edited 2026-07-15T17:47:15Z v15 {'wikidata': 'Q25566229'}
+   administrative  L6   B. Pochampally mandal                                        edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260354'}
+   administrative  L6   Bachannapet mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317574'}
+   administrative  L6   Bachupally mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q4838923'}
+   administrative  L6   Bahadurpura mandal                                           edited 2025-12-16T18:09:53Z v5 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607265'}
+   administrative  L6   Balanagar mandal                                             edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q28182711'}
+   administrative  L6   Balanagar mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317593'}
+   administrative  L6   Balapur mandal                                               edited 2026-01-26T09:01:57Z v11 {'wikidata': 'Q59075222'}
+   administrative  L6   Bandlaguda mandal                                            edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607266'}
+   administrative  L6   Bantwaram mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q11104989'}
+   administrative  L6   Bheemadevarapalli mandal                                     edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q61761671'}
+   administrative  L6   Bhiknoor mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65318466'}
+   administrative  L6   Bhongiri mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59124159'}
+   administrative  L6   Bibinagar mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q4903058'}
+   administrative  L6   Bidar taluku                                                 edited 2025-12-16T18:09:53Z v14 {'wikidata': 'Q19600480'}
+   administrative  L6   Bommalaramaram mandal                                        edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q59259804'}
+   administrative  L6   Bommaraspeta mandal                                          edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q3416755'}
+   administrative  L6   Chandur mandal                                               edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q59125300'}
+   administrative  L6   Charminar mandal                                             edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607271'}
+   administrative  L6   Chegunta mandal                                              edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q59058358'}
+   administrative  L6   Cherial mandal                                               edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q65317052'}
+   administrative  L6   Chevella mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3412847'}
+   administrative  L6   Chilipched mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58496375'}
+   administrative  L6   Chilpur mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317418'}
+   administrative  L6   Chincholi taluku                                             edited 2025-12-16T18:09:53Z v17 {'wikidata': 'Q12923302'}
+   administrative  L6   Chinnakodur mandal                                           edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q3418884'}
+   administrative  L6   Chinthapally mandal                                          edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59260488'}
+   administrative  L6   Chityal mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59124775'}
+   administrative  L6   Choutkur mandal                                              edited 2025-12-16T18:09:53Z v3 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'start_date': '2020-07-13', 'wikidata': 'Q111777765'}
+   administrative  L6   Choutuppal mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59124466'}
+   administrative  L6   Chowdergudem mandal                                          edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q57330236'}
+   administrative  L6   Damargidda mandal                                            edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q65317472'}
+   administrative  L6   Devaruppula mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317488'}
+   administrative  L6   Dharmasagar mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317495'}
+   administrative  L6   Dharoor mandal                                               edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q15704766'}
+   administrative  L6   Doma mandal                                                  edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q5289785'}
+   administrative  L6   Doultabad mandal                                             edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58507393'}
+   administrative  L6   Doulthabad mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65318254'}
+   administrative  L6   Dubbak mandal                                                edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q58496907'}
+   administrative  L6   Dundigal mandal                                              edited 2025-12-16T18:09:53Z v11 {'official_name': 'Dundigal Gandimaisamma mandal', 'wikidata': 'Q59127085'}
+   administrative  L6   Elkathurthi mandal                                           edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q61761733'}
+   administrative  L6   Farooqnagar mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59099477'}
+   administrative  L6   Gajwel mandal                                                edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q5517641'}
+   administrative  L6   Gandeed mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317371'}
+   administrative  L6   Gandipet mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q15697387'}
+   administrative  L6   Gattuppal mandal                                             edited 2025-12-16T18:09:53Z v3 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'start_date': '2022-09-26', 'wikidata': 'Q135553542'}
+   administrative  L6   Ghanpur (Stn) mandal                                         edited 2025-12-18T01:19:21Z v6 {'wikidata': 'Q11106717'}
+   administrative  L6   Ghatkesar mandal                                             edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q16891632'}
+   administrative  L6   Golconda mandal                                              edited 2025-12-16T18:09:53Z v5 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607263'}
+   administrative  L6   Gummadidala mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q58496267'}
+   administrative  L6   Gundala mandal                                               edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q59259888'}
+   administrative  L6   Gurrampode mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3425954'}
+   administrative  L6   Hanwada mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317747'}
+   administrative  L6   Hasanparthy mandal                                           edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q11008571'}
+   administrative  L6   Hathnoora mandal                                             edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q25563979'}
+   administrative  L6   Havelighanpur mandal                                         edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58498997'}
+   administrative  L6   Hayathnagar mandal                                           edited 2026-05-21T10:08:51Z v7 {'wikidata': 'Q3416791'}
+   administrative  L6   Himayatnagar mandal                                          edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q16341850'}
+   administrative  L6   Husnabad mandal                                              edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q61761522'}
+   administrative  L6   Huzurabad mandal                                             edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q61761578'}
+   administrative  L6   Ibrahimpatnam mandal                                         edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q15690307'}
+   administrative  L6   Jadcherla mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59099799'}
+   administrative  L6   Jagdevpur mandal                                             edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58496475'}
+   administrative  L6   Jangoan mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59118902'}
+   administrative  L6   Jharasangam mandal                                           edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58496802'}
+   administrative  L6   Jinnaram mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q58496524'}
+   administrative  L6   Kadthal mandal                                               edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q65319040'}
+   administrative  L6   Kalher mandal                                                edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3420601'}
+   administrative  L6   Kanagal mandal                                               edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q11107855'}
+   administrative  L6   Kandi mandal                                                 edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58393521'}
+   administrative  L6   Kandukur mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q11105948'}
+   administrative  L6   Kangti mandal                                                edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q3416983'}
+   administrative  L6   Kapra mandal                                                 edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59126062'}
+   administrative  L6   Kattangur mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260370'}
+   administrative  L6   Keesara mandal                                               edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65319060'}
+   administrative  L6   Keshampeta mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65319075'}
+   administrative  L6   Kethepally mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59260374'}
+   administrative  L6   Khaazipet mandal                                             edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65317915'}
+   administrative  L6   Khairatabad mandal                                           edited 2025-12-16T18:09:53Z v9 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607262'}
+   administrative  L6   Kodakandla mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317353'}
+   administrative  L6   Kodangal mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65317974'}
+   administrative  L6   Koheda mandal                                                edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q61761496'}
+   administrative  L6   Kohir mandal                                                 edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3418888'}
+   administrative  L6   Koilkonda mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q122678127'}
+   administrative  L6   Komuravelli mandal                                           edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q106498009'}
+   administrative  L6   Kondapak mandal                                              edited 2025-12-16T18:09:53Z v5 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58496018'}
+   administrative  L6   Kondapur mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q11107929'}
+   administrative  L6   Kondurg mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3420783'}
+   administrative  L6   Kosgi mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317366'}
+   administrative  L6   Kotepally mandal                                             edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q12994488'}
+   administrative  L6   Kothur mandal                                                edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59099757'}
+   administrative  L6   Kowdipally mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58496193'}
+   administrative  L6   Kukatpally mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65319064'}
+   administrative  L6   Kukunoorpally mandal                                         edited 2025-12-16T18:09:53Z v3 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'start_date': '2022-09-26', 'wikidata': 'Q135553524'}
+   administrative  L6   Kulcharam mandal                                             edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q58495977'}
+   administrative  L6   Kulkacharla mandal                                           edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q3418822'}
+   administrative  L6   Lingalaghanpur mandal                                        edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q11106387'}
+   administrative  L6   Lingampet mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65318751'}
+   administrative  L6   Maddur mandal                                                edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317163'}
+   administrative  L6   Maddur mandal                                                edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q65317614'}
+   administrative  L6   Madgul mandal                                                edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65319445'}
+   administrative  L6   Madugulapally mandal                                         edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260418'}
+   administrative  L6   Maheswaram mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65319441'}
+   administrative  L6   Malkajgiri mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q30593441'}
+   administrative  L6   Manchal mandal                                               edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q6747206'}
+   administrative  L6   Manoharabad mandal                                           edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q16343092'}
+   administrative  L6   Manoor mandal                                                edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q24906570'}
+   administrative  L6   Markook mandal                                               edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q58497935'}
+   administrative  L6   Marpalle mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q11104425'}
+   administrative  L6   Marredpally mandal                                           edited 2025-12-16T18:09:53Z v5 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q6772802'}
+   administrative  L6   Marriguda mandal                                             edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q59260481'}
+   administrative  L6   Masaipet mandal                                              edited 2025-12-16T18:09:53Z v3 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'start_date': '2021-04-07', 'wikidata': 'Q111777409'}
+   administrative  L6   Medak mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q13564974'}
+   administrative  L6   Medchal mandal                                               edited 2025-12-16T18:09:53Z v10 {'wikidata': 'Q59125870'}
+   administrative  L6   Medipally mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q31493212'}
+   administrative  L6   Mirdoddi mandal                                              edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q10961063'}
+   administrative  L6   Mogudampally mandal                                          edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58498279'}
+   administrative  L6   Moinabad mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q30596075'}
+   administrative  L6   Mominpet mandal                                              edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q10948627'}
+   administrative  L6   Motakondur mandal                                            edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q59259861'}
+   administrative  L6   Mothkur mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65318631'}
+   administrative  L6   Muduchinthalapally                                           edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65316885'}
+   administrative  L6   Mulug mandal                                                 edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q58481066'}
+   administrative  L6   Munipally mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q3420758'}
+   administrative  L6   Munugode mandal                                              edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q59260466'}
+   administrative  L6   Musheerabad mandal                                           edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607261'}
+   administrative  L6   Nagalgidda mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58497120'}
+   administrative  L6   Nagaram mandal                                               edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q59259957'}
+   administrative  L6   Nagi Reddypet mandal                                         edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65318307'}
+   administrative  L6   Nakrekal mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q59124889'}
+   administrative  L6   Nalgonda mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q5593586'}
+   administrative  L6   Nampally mandal                                              edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q6962019'}
+   administrative  L6   Nampally mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260561'}
+   administrative  L6   Nandigama mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65319306'}
+   administrative  L6   Nangnoor mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q58497063'}
+   administrative  L6   Narayanapoor mandal                                          edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q59260474'}
+   administrative  L6   Narayankhed mandal                                           edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q10962828'}
+   administrative  L6   Narketpally mandal                                           edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q59260365'}
+   administrative  L6   Narmetta mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65317501'}
+   administrative  L6   Narsapur mandal                                              edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q3422551'}
+   administrative  L6   Narsingi mandal                                              edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q65317105'}
+   administrative  L6   Nawabpet mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q10948734'}
+   administrative  L6   Nawabpet mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q6982799'}
+   administrative  L6   Nidamanoor mandal                                            edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q59260680'}
+   administrative  L6   Nizampet mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q15705581'}
+   administrative  L6   Nizamsagar mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q11104242'}
+   administrative  L6   Nyalkal mandal                                               edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q3425907'}
+   administrative  L6   Palakurthy mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317549'}
+   administrative  L6   Papannapet mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q3424160'}
+   administrative  L6   Pargi mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q13001717'}
+   administrative  L6   Patancheruvu mandal                                          edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q122765687'}
+   administrative  L6   Peddemul mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q7159062'}
+   administrative  L6   Pudur mandal                                                 edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q11105954'}
+   administrative  L6   Pulkal mandal                                                edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q3422554'}
+   administrative  L6   Quthbullapur mandal                                          edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65319062'}
+   administrative  L6   Ragunathpally mandal                                         edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q65317665'}
+   administrative  L6   Raikode mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q10948701'}
+   administrative  L6   Raipole mandal                                               edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58498486'}
+   administrative  L6   Rajampet mandal                                              edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65318654'}
+   administrative  L6   Rajapeta mandal                                              edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59259821'}
+   administrative  L6   Rajapur mandal                                               edited 2025-12-16T18:09:53Z v3 {'wikidata': 'Q65317670'}
+   administrative  L6   Rajendranagar mandal                                         edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q2732987'}
+   administrative  L6   Ramachandrapuram mandal                                      edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65317189'}
+   administrative  L6   Ramannapet mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59124704'}
+   administrative  L6   Ramayampet mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q58498379'}
+   administrative  L6   Regode mandal                                                edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58498543'}
+   administrative  L6   Sadasivpet mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q11039205'}
+   administrative  L6   Saidabad mandal                                              edited 2025-12-16T18:09:53Z v4 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q7399933'}
+   administrative  L6   Sangareddy mandal                                            edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q2341381'}
+   administrative  L6   Saroornagar mandal                                           edited 2025-12-16T18:09:53Z v9 {'wikidata': 'Q65319620'}
+   administrative  L6   Secunderabad mandal                                          edited 2025-12-16T18:09:53Z v8 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q61607258'}
+   administrative  L6   Serilingampalle mandal                                       edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q65319583'}
+   administrative  L6   Shabad mandal                                                edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q13010781'}
+   administrative  L6   Shaikpet mandal                                              edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q65065478'}
+   administrative  L6   Shaligouraram mandal                                         edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q3428266'}
+   administrative  L6   Shamirpet mandal                                             edited 2025-12-16T18:09:53Z v13 {'wikidata': 'Q3415143'}
+   administrative  L6   Shamshabad mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q7487753'}
+   administrative  L6   Shankarampet_A mandal                                        edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q58498846'}
+   administrative  L6   Shankarampet_R mandal                                        edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q58498770'}
+   administrative  L6   Shankarpalle mandal                                          edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q30588045'}
+   administrative  L6   Shivampet mandal                                             edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58454693'}
+   administrative  L6   Siddipet Rural mandal                                        edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q13011423'}
+   administrative  L6   Siddipet Urban mandal                                        edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q106497972'}
+   administrative  L6   Sirgapoor mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65319635'}
+   administrative  L6   Talakondapally mandal                                        edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q65319241'}
+   administrative  L6   Tandur mandal                                                edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59099185'}
+   administrative  L6   Tekmal mandal                                                edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58496570'}
+   administrative  L6   Tharigoppula mandal                                          edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317440'}
+   administrative  L6   Thoguta mandal                                               edited 2025-12-16T18:09:53Z v9 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58496739'}
+   administrative  L6   Tipparthy mandal                                             edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59260449'}
+   administrative  L6   Tirumalagiri mandal                                          edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59259938'}
+   administrative  L6   Tirumalagiri mandal                                          edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q65319262'}
+   administrative  L6   Toorpran mandal                                              edited 2025-12-16T18:09:53Z v7 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q58496624'}
+   administrative  L6   Tripuraram mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59260195'}
+   administrative  L6   Turkapalle (M) mandal                                        edited 2025-12-18T01:19:21Z v6 {'wikidata': 'Q59259811'}
+   administrative  L6   Uppal mandal                                                 edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q65319004'}
+   administrative  L6   V_Saidapur mandal                                            edited 2025-12-18T01:19:21Z v4 {'wikidata': 'Q61761541'}
+   administrative  L6   Valigonda mandal                                             edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q59260336'}
+   administrative  L6   Vatpally mandal                                              edited 2025-12-16T18:09:53Z v7 {'wikidata': 'Q58498612'}
+   administrative  L6   Velair mandal                                                edited 2025-12-16T18:09:53Z v8 {'wikidata': 'Q65317725'}
+   administrative  L6   Vikarabad mandal                                             edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q59099031'}
+   administrative  L6   Wargal mandal                                                edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q58498706'}
+   administrative  L6   Yacharam mandal                                              edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q65319482'}
+   administrative  L6   Yadagirigutta mandal                                         edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q59124034'}
+   administrative  L6   Yelal mandal                                                 edited 2025-12-16T18:09:53Z v5 {'wikidata': 'Q106114301'}
+   administrative  L6   Yeldurthy mandal                                             edited 2025-12-16T18:09:53Z v6 {'source': 'Government Of Telangana (2023-10-09, GODL, https://data.telangana.gov.in/telangana-district-and-mandal-shape-files)', 'wikidata': 'Q3426087'}
+   administrative  L6   Yellareddy mandal                                            edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q58932052'}
+   administrative  L6   Zaffergadh mandal                                            edited 2025-12-16T18:09:53Z v4 {'wikidata': 'Q65317425'}
+   administrative  L6   Zahirabad mandal                                             edited 2025-12-16T18:09:53Z v6 {'wikidata': 'Q2577644'}
+   administrative  L8   Hyderabad                                                    edited 2026-03-31T05:20:53Z v16 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)', 'wikidata': 'Q1361'}
+   administrative  L9   Greater Hyderabad Municipal Corporation Central Zone         edited 2023-10-11T12:43:23Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L9   Greater Hyderabad Municipal Corporation East Zone            edited 2023-10-11T12:07:12Z v5 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L9   Greater Hyderabad Municipal Corporation North Zone           edited 2023-10-09T14:54:37Z v3 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L9   Greater Hyderabad Municipal Corporation South Zone           edited 2023-10-11T12:43:23Z v8 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   administrative  L9   Greater Hyderabad Municipal Corporation West Zone            edited 2026-07-15T16:46:03Z v6 {'source': 'OpenCity (2023-10-09, Public Domain, https://data.opencity.in/dataset/hyderabad-wards-info)'}
+   local_authority L7   Hyderabad Metropolitan Region                                edited 2025-07-30T12:00:10Z v8 {'official_name': 'Hyderabad Metropolitan Development Authority', 'wikidata': 'Q24949051'}
+   local_authority L8   Bidar                                                        edited 2025-08-21T13:35:22Z v3 {'note': 'Relation area corrections needed, OpenStreetMap: 90.815 sq.km, Official area as per Gazette Notification: 91.96 sq.km.', 'official_name': 'Corporation of the City of Bidar', 'source': 'https://erajyapatra.karnataka.gov.in/WriteReadData/2025/8461.pdf', 'wikidata': 'Q461922'}
+   political       L9   Ward 129 Suraram                                             edited 2019-10-05T17:40:38Z v2 {}
+
+== OSM candidate geometries
+   fetching geometry for 17 candidates
+/home/runner/work/city-layers/city-layers/scouting/hyderabad/scout.py:95: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  return round(transform(t, geom).area / 1e6, 1)
+   Ward 127 Rangareddy Nagar                               L10  area 2.8 km²  closed=True  edited 2023-10-09T14:54:37Z
+   Ward 140 Malkajgiri                                     L10  area 2.1 km²  closed=True  edited 2023-10-09T14:54:37Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Hyderabad                                               L5   area 182.7 km²  closed=True  edited 2026-01-18T19:28:29Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Medchal–Malkajgiri                                      L5   area 1088.4 km²  closed=True  edited 2025-12-16T18:41:25Z
+   Ranga Reddy                                             L5   area 4997.6 km²  closed=True  edited 2025-12-16T18:41:25Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   overpass https://overpass-api.de/api/interpreter attempt 2: HTTP Error 504: Gateway Timeout
+   overpass https://overpass.kumi.systems/api/interpreter attempt 1: HTTP Error 500: Internal Server Error
+   overpass https://overpass.kumi.systems/api/interpreter attempt 2: HTTP Error 500: Internal Server Error
+   overpass https://maps.mail.ru/osm/tools/overpass/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   overpass https://maps.mail.ru/osm/tools/overpass/api/interpreter attempt 2: HTTP Error 504: Gateway Time-out
+   Sangareddy: geometry failed: HTTP Error 504: Gateway Time-out
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   overpass https://overpass-api.de/api/interpreter attempt 2: HTTP Error 504: Gateway Timeout
+   overpass https://overpass.kumi.systems/api/interpreter attempt 1: HTTP Error 500: Internal Server Error
+   Malkajgiri mandal                                       L6   area 32.2 km²  closed=True  edited 2025-12-16T18:09:53Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Medchal mandal                                          L6   area 188.4 km²  closed=True  edited 2025-12-16T18:09:53Z
+   Sangareddy mandal                                       L6   area 84.2 km²  closed=True  edited 2025-12-16T18:09:53Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Secunderabad mandal                                     L6   area 3.5 km²  closed=True  edited 2025-12-16T18:09:53Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Hyderabad                                               L8   area 609.6 km²  closed=True  edited 2026-03-31T05:20:53Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   overpass https://overpass-api.de/api/interpreter attempt 2: HTTP Error 504: Gateway Timeout
+   Greater Hyderabad Municipal Corporation Central Zone    L9   area 101.8 km²  closed=True  edited 2023-10-11T12:43:23Z
+   Greater Hyderabad Municipal Corporation East Zone       L9   area 126.3 km²  closed=True  edited 2023-10-11T12:07:12Z
+   Greater Hyderabad Municipal Corporation North Zone      L9   area 110.4 km²  closed=True  edited 2023-10-09T14:54:37Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   Greater Hyderabad Municipal Corporation South Zone      L9   area 97.3 km²  closed=True  edited 2023-10-11T12:43:23Z
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 504: Gateway Timeout
+   overpass https://overpass-api.de/api/interpreter attempt 2: HTTP Error 504: Gateway Timeout
+   overpass https://overpass.kumi.systems/api/interpreter attempt 1: HTTP Error 500: Internal Server Error
+   Greater Hyderabad Municipal Corporation West Zone       L9   area 169.5 km²  closed=True  edited 2026-07-15T16:46:03Z
+   Hyderabad Metropolitan Region                           L7   area 7649.4 km²  closed=True  edited 2025-07-30T12:00:10Z
+
+== OSM place names
+   place nodes inside the ORR box: {'village': 242, 'suburb': 170, 'city': 2, 'locality': 46, 'town': 5, 'neighbourhood': 1434, 'hamlet': 75}
+   checklist found 32/39; missing: ['Hitech City', 'Charminar', 'Tarnaka', 'Kompally', 'Dilsukhnagar', 'Lakdikapul', 'Tellapur']
+   overpass https://overpass-api.de/api/interpreter attempt 1: HTTP Error 429: Too Many Requests
+   overpass https://overpass-api.de/api/interpreter attempt 2: HTTP Error 504: Gateway Timeout
+   overpass https://overpass.kumi.systems/api/interpreter attempt 1: HTTP Error 500: Internal Server Error
+   overpass https://overpass.kumi.systems/api/interpreter attempt 2: HTTP Error 500: Internal Server Error
+   overpass https://maps.mail.ru/osm/tools/overpass/api/interpreter attempt 1: HTTP Error 504: Gateway Time-out
+   node 349017544 JNTU Bus Stop toward Hitech City {'highway': 'bus_stop'}
+   node 349267492 Cyberabad Post Office {'amenity': 'post_office'}
+   node 655158856 Cyber Towers {'highway': 'bus_stop'}
+   node 655158870 Cyber Towers Bus Stop {'highway': 'bus_stop'}
+   node 708303182 Hi-Tech Bawarchi {'amenity': 'fast_food'}
+   node 1425916857 HITEC City {'railway': 'station'}
+   node 2170579980 Cyberabad Police Commissionerate {'highway': 'bus_stop'}
+   node 2170766680 Cyberabad Police Commissionerate {'highway': 'bus_stop'}
+   node 2210776927 hitech city - kondapur main road {}
+   node 2422172983 HITEC City {'railway': 'stop'}
+   node 2528181954 Hitech City {'railway': 'stop'}
+   node 2709019413 hitech garden {}
+   node 2926946739 HITEC City {'place': 'suburb'}
+   node 5578115622 Murthy & Manyam , Architect and Engineers {'office': 'company'}
+   node 5787787852 HITEC City {'railway': 'stop'}
+   node 6151537449 Apollo Dental Clinic, Hitech City {'amenity': 'hospital'}
+   node 6191414053 Hi-Tech Leather and Luggage {}
+   node 6444553239 HITEC City {'railway': 'station'}
+   node 6594683311 Hitech City {'railway': 'stop'}
+   node 6850830314 FAI Designers, Architects and Interior designers {}
+   node 6864399992 Hi-Tech Bawarchi Multi Cuisine Restaurant {'amenity': 'restaurant'}
+   node 7021303628 Sep Architects Pvt Ltd. {'office': 'company'}
+   node 7021303728 Hi-Tech Bawarchi {'amenity': 'restaurant'}
+   node 7021303745 Kingdom Hall of JW, HiTech City Congregation {'amenity': 'place_of_worship'}
+   node 7025820771 Envision Landscape architects {'office': 'architect'}
+   node 7025820809 Treebo Hitec City {}
+   node 7025820853 Design DNA : Architecture & Interior Designer {}
+   node 7246803482 Hitech Furnishing World {}
+   node 8386697006 Hi-tech fast food center {'amenity': 'fast_food'}
+   node 9917006217 Hitech Bawarchi {'amenity': 'restaurant'}
+   node 10724816503 Financial District {'place': 'suburb'}
+   node 10789525449 BR Hitech Theatre {'amenity': 'cinema'}
+   node 11448994810 Zero40 Financial District {'amenity': 'pub'}
+   node 11630416513 hitech city - kondapur main road {}
+   node 11736426755 Jntu To Hitech City {'amenity': 'fixme'}
+   node 13308035368 Madhapur traffic police booth Cyberabad {'amenity': 'police'}
+   node 13308091901 Hitech City 'X' Roads {'highway': 'bus_stop'}
+   way 28656749 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 29048638 Hitec - Kukatpally Main Road {'highway': 'tertiary'}
+   way 29050825 Hitec - Kukatpally Main Road {'highway': 'tertiary'}
+   way 29251830 Hitec - Kukatpally Main Road {'highway': 'primary'}
+   way 29253113 HITEC City Road {'highway': 'primary'}
+   way 31521331 Cyber Towers - Madhapur Main Road {'highway': 'primary'}
+   way 32002539 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 68871414 Inorbit Mall Cyberabad {'building': 'retail'}
+   way 89912965 HITEC City–Madhapur Road {'highway': 'secondary'}
+   way 89912970 Hitech city Madhapur road {'highway': 'secondary'}
+   way 105577031 Hafeezpet Hitec Link Road {'highway': 'secondary'}
+   way 116231406 HITEC City–Kukatpally Main Road {'highway': 'secondary'}
+   way 129208713 Hitec - Kukatpally Main Road {'highway': 'tertiary'}
+   way 129208947 HITEC City Railway Station {'building': 'yes'}
+   way 129290549 Hitec - Kukatpally Main Road {'highway': 'primary'}
+   way 172812678 Cyber Towers - Madhapur Main Road {'highway': 'primary'}
+   way 172813072 HITEC City Road {'highway': 'primary_link'}
+   way 233495771 HITEC City Flyover {'highway': 'primary'}
+   way 233495773 HITEC City Flyover {'highway': 'primary'}
+   way 286574735 Hitech Pearl {'building': 'apartments'}
+   way 310896041 HITEC City–Madhapur Road {'highway': 'secondary'}
+   way 311522764 Cyber Towers–Madhapur Main Road {'highway': 'primary'}
+   way 311684374 HITEC City Road {'highway': 'primary_link'}
+   way 311684620 HITEC City–Kukatpally Main Road {'highway': 'primary'}
+   way 311684621 HITEC City–Kukatpally Main Road {'highway': 'primary'}
+   way 311704571 Cyber Towers - Madhapur Main Road {'highway': 'primary'}
+   way 313207552 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313207553 HITEC City–Madhapur Road {'highway': 'secondary'}
+   way 313207554 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313351524 HITEC City–Kukatpally Main Road {'highway': 'primary'}
+   way 313351525 HITEC City–Kukatpally Main Road {'highway': 'primary'}
+   way 313351526 HITEC City–Kukatpally Main Road {'highway': 'secondary'}
+   way 313352130 HITEC City Road {'highway': 'primary'}
+   way 313352846 HITEC City Road {'highway': 'primary'}
+   way 313353057 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313353059 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313353060 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313354156 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313354157 HITEC City–Kondapur Main Road {'highway': 'primary'}
+   way 313354158 Hitec City - Kondapur Main Road {'highway': 'primary'}
+   way 313354159 Hitec City - Kondapur Main Road {'highway': 'primary'}
+   way 313355354 Hitec City - Kondapur Main Road {'highway': 'primary'}
+   way 314808459 HITEC City Road {'highway': 'primary'}
+
+== OpenCity catalogue
+   2026-08-17  UDISE+ 2025-26 - District level Reports  [CSV, PDF]
+   2026-07-09  Hyderabad UDISE+ 2024-25  [CSV, PDF]
+   2026-02-16  Telangana Elections 2023 Results  [XLSX]
+   2026-02-11  Hyderabad Revised Development Plan for Core Area  [PDF]
+   2026-02-03  Hyderabad - Wards Info  [KML]
+   2026-01-28  Hyderabad Aviation Traffic Data  [CSV]
+   2025-11-27  Hyderabad Monthly Trade Licenses Data  [CSV]
+   2025-11-27  Hyderabad Master Plan 2031  [JPEG]
+   2025-11-27  Pincode maps of cities  [KML]
+   2025-11-27  Telangana Assembly Elections 2018  [CSV]
+   2025-11-27  Telangana Assembly Elections 2014  [CSV]
+   2025-11-27  Telangana and Hyderabad Assembly Constituencies Maps  [KML]
+   2025-11-27  Telangana and Hyderabad DISE Data 2017-18  [CSV]
+   2025-11-27  Telangana Education Data  [CSV]
+   2025-11-27  Hyderabad UDISE+ 2021-22  [CSV, PDF]
+   2025-11-27  Hyderabad UDISE+ 2023-24  [CSV, PDF]
+   2025-11-27  Telangana Socio-Economic Outlook 2023  [CSV, PDF]
+   2025-11-27  Telangana Socio Economic Outlook 2024  [CSV, PDF]
+   2025-11-27  Hyderabad Household Consumption Expenditure Survey - 2022-23  [CSV, PDF, XLSX]
+   2025-11-25  India Pincode Maps - 2025  [KML, KMZ]
+
+== Telangana open data portal
+   https://data.telangana.gov.in: {'ckan': False, 'error': '<urlopen error timed out>', 'homepage_error': '<urlopen error timed out>'}
+   https://opendata.telangana.gov.in: {'ckan': False, 'error': '<urlopen error [Errno -2] Name or service not known>', 'homepage_error': '<urlopen error [Errno -2] Name or service not known>'}
+
+== Wikidata websites
+   Cyberabad Municipal Corporation: {'wikidata': ['Q138308024'], 'links': ['https://cmc.telangana.gov.in/']}
+   Malkajgiri Municipal Corporation: {'wikidata': ['Q138743299'], 'links': ['https://cmc.telangana.gov.in/']}
+   Greater Hyderabad Municipal Corporation: {'wikidata': ['Q5259597', 'Q58954617'], 'links': ['http://ghmc.gov.in']}
+   Secunderabad Cantonment Board: {'wikidata': ['Q7444803'], 'links': []}
+   Hyderabad Metropolitan Development Authority: {'wikidata': ['Q5953911'], 'links': ['http://www.hmda.gov.in/']}
+
+== Official websites
+   page ERR http://ghmc.gov.in HTTP Error 403: Forbidden
+   page ERR https://cmc.telangana.gov.in/ <urlopen error timed out>
+   page ERR https://cmc.telangana.gov.in/ <urlopen error timed out>
+   page ERR https://scb.cantt.gov.in/ <urlopen error [Errno -2] Name or service not known>
+   page ERR http://www.hmda.gov.in/ <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl
+
+== PIN codes
+   https://www.data.gov.in/resource/delivery-post-office-pincode-boundary: {'error': 'HTTP Error 403: Forbidden'}
+   https://www.data.gov.in/catalog/all-india-pincode-boundary-geo-json: {'error': 'HTTP Error 403: Forbidden'}
+   datameet: [{'path': 'Ahmedabad', 'size': 0}, {'path': 'Bangalore', 'size': 0}, {'path': 'Chennai', 'size': 0}, {'path': 'Hyderabad', 'size': 0}, {'path': 'Kolkata', 'size': 0}, {'path': 'Mumbai', 'size': 0}, {'path': 'Readme.md', 'size': 912}]
+Traceback (most recent call last):
+  File "/home/runner/work/city-layers/city-layers/scouting/hyderabad/scout.py", line 457, in <module>
+    write_report()
+  File "/home/runner/work/city-layers/city-layers/scouting/hyderabad/scout.py", line 430, in write_report
+    for r in REPORT[key]['relevant'][:60]:
+             ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'relevant'
