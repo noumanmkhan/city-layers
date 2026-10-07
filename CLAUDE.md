@@ -18,13 +18,20 @@ the landing page, stop and say so; don't change this repo.
   - `docs/index.html`, `docs/fonts/` and the icons are the **maps hub**, hand-written and
     styled to match the noumankhan.ca landing page. Edit them directly. Print maps get
     added there as cards (a template is commented out in the HTML), with images in `docs/prints/`.
-  - `docs/toronto/` is the **Toronto Layers map**. Don't hand-edit `docs/toronto/index.html`
-    or `docs/toronto/data/*`; they are build output.
-- Edit `pipeline/template.html` for the page, and the Python scripts in `pipeline/` for data.
-- Rebuild with `pipeline/run.sh` (needs Python with shapely, and Node; it runs
-  `npm install` for mapshaper and Leaflet). After a page-only change,
-  `python3 pipeline/assemble.py` is enough.
-- Raw inputs live in `pipeline/raw/`; `pipeline/SOURCES.md` records where each one came from.
+  - `docs/<city>/` is each city's map (Toronto Layers is `docs/toronto/`). Don't hand-edit
+    `docs/<city>/index.html` or `docs/<city>/data/*`; they are build output.
+- The map is one engine with a folder per city:
+  - `engine/template.html` (page and styles) and `engine/map.js` (behaviour) are shared by every
+    city. Keep them free of city names, places and data sources.
+  - `cities/<city>/city.json` holds everything city-specific on the page: text, layer list and
+    files, lenses, "What's here" rows, representatives, search area. `city.css` holds the city's
+    own colours (fill layers, transit lines, their swatches).
+  - `cities/<city>/` also holds that city's fetch and build scripts, `raw/` inputs, `run.sh` and
+    `SOURCES.md`.
+- Rebuild a city with `cities/<city>/run.sh` (needs Python with shapely, and Node; it runs
+  `npm install` at the repo root for mapshaper and Leaflet). After a page-only or config-only
+  change, `python3 engine/assemble.py <city>` is enough.
+- An engine change affects every city: rebuild and check each one.
 - The City of Toronto GIS server (gis.toronto.ca) can't be reached from most sandboxes.
   `.github/workflows/fetch-streets.yml` shows the pattern: fetch it in GitHub Actions and
   commit the raw file. It also rejects bursts of parallel requests, so fetch one layer at a time.

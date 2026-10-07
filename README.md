@@ -68,8 +68,9 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 ## How it's built
 
-- **Front end:** one static HTML page using [Leaflet](https://leafletjs.com/), with no framework and no build step for the page itself. Colours come from CSS variables, so the map follows the viewer's light or dark setting. The layout works on phones.
-- **Data pipeline** (`pipeline/`): Python with Shapely and Node with mapshaper.
+- **One engine, one folder per city.** The map page is a shared engine (`engine/`) that knows how to draw kinds of layer: filled areas, official neighbourhoods, representation boundaries, business areas, streets, highways, regional rail and rapid transit. Everything about Toronto lives in `cities/toronto/`: `city.json` holds the layer list, labels, lenses and the rows of the "What's here" card, and `city.css` holds Toronto's colours. Adding a city means adding its data and config, not changing the engine.
+- **Front end:** one static HTML page using [Leaflet](https://leafletjs.com/), with no framework. `engine/assemble.py` inlines the city's config and colours into the engine page, so each city's map is a single file. Colours come from CSS variables, so the map follows the viewer's light or dark setting. The layout works on phones.
+- **Data pipeline** (`cities/toronto/`): Python with Shapely and Node with mapshaper.
   - `regions.py` defines the informal Old Toronto areas on the City's older 140-neighbourhood map, then carries them over to the current 158 by largest overlap.
   - `build.py` cleans every source. It drops ramps from the expressway centrelines and merges what's left into named routes. It clips federal ridings to the city's shoreline, matches each ward to its provincial riding, and computes a label point inside each polygon.
   - mapshaper simplifies the shapes so the site loads quickly. All the data comes to about 800 KB.
@@ -78,11 +79,12 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 Rebuild the data:
 
 ```bash
-cd pipeline
 pip install shapely
-./run.sh            # writes docs/toronto/data/*.geojson and docs/toronto/index.html
-cd ../docs && python3 -m http.server 8000
+cities/toronto/run.sh    # writes docs/toronto/data/*.geojson and docs/toronto/index.html
+cd docs && python3 -m http.server 8000
 ```
+
+After a change to the page or the config alone, `python3 engine/assemble.py toronto` is enough.
 
 ## Built with AI
 
@@ -123,4 +125,4 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
-`pipeline/SOURCES.md` lists the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.
+`cities/toronto/SOURCES.md` lists the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.
