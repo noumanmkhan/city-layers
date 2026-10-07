@@ -1,0 +1,38 @@
+name: Fetch Chicago data
+# Runs a Chicago fetch script and commits what it writes under cities/chicago/raw/
+# back to the branch that ran it. The sandbox can't reach these hosts; Actions can.
+on:
+  workflow_dispatch:
+    inputs:
+      script: {description: 'Script in cities/chicago/ to run', default: 'fetch.py'}
+  push:
+    branches: [fetch-chicago]
+    paths: ['cities/chicago/fetch*.py', '.github/workflows/fetch-chicago.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # A manual run names its script; a push runs whichever fetch script its last commit changed (none: nothing to do).
+      - run: |
+          S="${{ inputs.script }}"
+          [ -n "$S" ] || S=$(git diff --name-only HEAD~1 HEAD -- 'cities/chicago/fetch*.py' | head -1 | xargs -r basename)
+          if [ -z "$S" ]; then echo "No fetch script changed in the last commit; nothing to fetch."; exit 0; fi
+          echo "SCRIPT=$S" >> "$GITHUB_ENV"
+          mkdir -p cities/chicago/raw
+          python3 -u "cities/chicago/$S" 2>&1 | tee "cities/chicago/raw/${S%.py}.log"
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          [ -n "$SCRIPT" ] || exit 0
+          git add cities/chicago/raw
+          git commit -m "Fetch Chicago data ($SCRIPT)" || echo "no changes"
+          git push

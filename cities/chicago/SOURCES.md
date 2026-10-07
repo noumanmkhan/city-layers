@@ -1,0 +1,29 @@
+# Raw data: where each file in `raw/` came from
+
+Everything here is fetched in GitHub Actions (`.github/workflows/fetch-chicago.yml`), because the
+sandbox these maps are built in can't reach the source servers. Fetched on 2026-10-07 unless noted.
+
+| File | Source |
+|---|---|
+| `community_areas.geojson` | City of Chicago Data Portal, Boundaries - Community Areas (`igwz-8jzy`), the 77 community areas |
+| `neighborhoods.geojson` | City of Chicago Data Portal, Boundaries - Neighborhoods (`y6yq-dbs2`, 98 areas, 2012). Used only for the known-as names that aren't community areas |
+| `wards.geojson` | City of Chicago Data Portal, Boundaries - Wards (2023-) (`p293-wvbd`) |
+| `ssa.geojson` | City of Chicago Data Portal, Boundaries - Special Service Areas (`cmr6-dn8c`); active SSAs only |
+| `city.geojson` | City of Chicago Data Portal, Boundaries - City (`qqq8-j68g`) |
+| `cta_lines.geojson` | City of Chicago Data Portal, CTA - 'L' (Rail) Lines (`xbyr-jnvx`): track segments, each listing the lines that use it |
+| `cta_stops.json` | City of Chicago Data Portal, CTA - System Information - List of 'L' Stops (`8pix-ypme`): platforms grouped into stations by `map_id` |
+| `ward_offices.json`, `acs_community_areas.json` | City of Chicago Data Portal, Ward Offices (`htai-wnw4`) and ACS 5 Year Data by Community Area (`t68z-cikk`). The second has no housing or commuting figures, so the lens uses the tract tables below instead |
+| `places.geojson`, `counties.geojson` | U.S. Census Bureau TIGERweb: Incorporated Places and Counties in Illinois and Indiana around Chicagoland. Used for the neighbouring municipalities and their counties |
+| `congress.geojson`, `il_senate.geojson`, `il_house.geojson` | U.S. Census Bureau TIGERweb, Legislative service: 120th Congressional Districts and 2026 State Legislative Districts (upper and lower), Illinois |
+| `lake_michigan.geojson` | U.S. Census Bureau TIGERweb, Areal Hydrography: the Lake Michigan tiles along Chicagoland's shore (fetched by `fetch_lake.py`). Enclosed harbours aren't in them; `build.py` treats lakefront land no municipality claims as harbour water |
+| `lakes.geojson` | Natural Earth 10m lakes: Lake Michigan, used away from Chicagoland's shore |
+| `osm_expressways.json` | OpenStreetMap (ODbL) via the Overpass API: `highway=motorway` and `trunk` ways across Chicagoland |
+| `osm_arterials.json` | OpenStreetMap (ODbL) via the Overpass API: named `primary`, `secondary` and `tertiary` roads inside the city (tertiary is fetched but not drawn) |
+| `metra.json` | Metra's GTFS feed (`schedules.metrarail.com/gtfs/schedule.zip`), reduced by `fetch_extra.py` to each line's busiest outbound patterns, its stations and the lines stopping at each |
+| `acs_tracts.json` | U.S. Census Bureau, American Community Survey 2020-2024 5-year table-based summary files (`www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/`): B25003 tenure, B08301 means of transportation to work, B25075 home value and B25063 gross rent, for every Cook County tract. The Census API now requires a key from GitHub's runners; the bulk files don't |
+| `tracts.json` | U.S. Census Bureau TIGERweb: each Cook County tract's internal point, used to place it in a community area |
+| `point_check.json` | OpenStreetMap Nominatim positions for the curated landmarks and added known-as names (`fetch_check.py`), to compare against the lists in `landmarks.py` and `names.py` |
+| `representatives/` | Fetched by `fetch_representatives.py`: `ward_offices.json` (City Data Portal, alderpersons and ward websites), `il.csv` (Open States, current Illinois legislators), `house.xml` (Clerk of the U.S. House member list). `representatives.py` matches them to the map's wards and districts |
+| `discovery/` | One-off listing of candidate sources (`discover.py`), kept as a record of what was available |
+
+Hand-kept lists, in code: the nine sides, the known-as additions and the major streets (`names.py`), and the landmarks (`landmarks.py`).

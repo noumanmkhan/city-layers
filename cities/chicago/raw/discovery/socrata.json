@@ -1,0 +1,1042 @@
+{
+ "community areas": [
+  [
+   "cauq-8yn6",
+   "Boundaries - Community Areas - Map",
+   "map",
+   "2025-04-22T23:06:37.000Z"
+  ],
+  [
+   "igwz-8jzy",
+   "Boundaries - Community Areas",
+   "dataset",
+   "2025-04-22T23:06:37.000Z"
+  ],
+  [
+   "yvj4-y3fb",
+   "Affordable Housing Units by Community Area",
+   "map",
+   "2024-12-30T22:11:37.000Z"
+  ],
+  [
+   "t68z-cikk",
+   "ACS 5 Year Data by Community Area",
+   "dataset",
+   "2025-01-23T16:10:00.000Z"
+  ],
+  [
+   "qjr3-bm53",
+   "Public Health Statistics - Life Expectancy By Community Area - Historical",
+   "dataset",
+   "2014-06-16T17:02:37.000Z"
+  ],
+  [
+   "iqnk-2tcu",
+   "Public Health Statistics - Selected public health indicators by Chicago community area - Historical",
+   "dataset",
+   "2013-05-30T14:08:57.000Z"
+  ],
+  [
+   "smqg-b5t3",
+   "Additional Dwelling Unit Preapproval Applications - Map by Community Area",
+   "map",
+   "2026-04-02T00:01:41.000Z"
+  ],
+  [
+   "7umk-8dtw",
+   "ACS 5 Year Data by Community Area - Most Recent Year",
+   "filter",
+   "2025-01-23T16:10:00.000Z"
+  ],
+  [
+   "s6ha-ppgi",
+   "Affordable Rental Housing Developments",
+   "dataset",
+   "2024-12-30T22:11:37.000Z"
+  ],
+  [
+   "wrvz-psew",
+   "Taxi Trips (2013-2023)",
+   "dataset",
+   "2024-02-07T20:40:12.000Z"
+  ],
+  [
+   "m6dm-c72p",
+   "Transportation Network Providers - Trips (2018 - 2022)",
+   "dataset",
+   "2023-03-29T22:57:23.000Z"
+  ],
+  [
+   "kn9c-c2s2",
+   "Census Data - Selected socioeconomic indicators in Chicago, 2008 \u2013 2012",
+   "dataset",
+   "2014-09-12T20:53:38.000Z"
+  ]
+ ],
+ "neighborhoods boundaries": [
+  [
+   "bbvz-uum9",
+   "Boundaries - Neighborhoods",
+   "map",
+   "2012-12-18T23:31:06.000Z"
+  ],
+  [
+   "9wp7-iasj",
+   "Boundaries - Neighborhoods",
+   "file",
+   "2010-12-22T01:00:04.000Z"
+  ],
+  [
+   "buma-fjbv",
+   "Boundaries - Neighborhoods - KML",
+   "file",
+   "2011-06-24T18:59:53.000Z"
+  ],
+  [
+   "y6yq-dbs2",
+   "Neighborhoods_2012b",
+   "dataset",
+   "2012-12-18T23:31:06.000Z"
+  ],
+  [
+   "64xf-pyvh",
+   "Boundaries - Enterprise Zones",
+   "map",
+   "2026-02-23T22:28:06.000Z"
+  ],
+  [
+   "m6ef-sjkj",
+   "Boundaries - Empowerment Zones",
+   "file",
+   "2010-12-22T15:26:55.000Z"
+  ],
+  [
+   "mw69-m6xi",
+   "Neighborhood Health Clinics - Historical",
+   "dataset",
+   "2013-07-23T19:18:28.000Z"
+  ],
+  [
+   "fuz2-7vqu",
+   "Boundaries - Enterprise Communities (Deprecated October 2013)",
+   "file",
+   "2010-12-22T15:28:43.000Z"
+  ],
+  [
+   "pkd8-233g",
+   "Boundaries - Empowerment Zones - KML",
+   "file",
+   "2011-06-24T19:12:35.000Z"
+  ],
+  [
+   "55e9-8pfn",
+   "Boundaries - Enterprise Communities - KML (Deprecated October 2013)",
+   "file",
+   "2011-06-24T19:13:58.000Z"
+  ],
+  [
+   "et95-m34q",
+   "Boundaries - Enterprise Zones (Deprecated February 2016)",
+   "map",
+   "2016-02-04T20:34:04.000Z"
+  ],
+  [
+   "6mci-28cz",
+   "Chicago Public Schools - Local School Council Voting Districts 2018-2020",
+   "map",
+   "2018-01-18T22:34:26.000Z"
+  ]
+ ],
+ "wards 2023": [
+  [
+   "cdf7-bgn3",
+   "Boundaries - Wards (2023-) - Map",
+   "map",
+   "2022-06-15T22:33:09.000Z"
+  ],
+  [
+   "p293-wvbd",
+   "Boundaries - Wards (2023-)",
+   "dataset",
+   "2022-06-15T22:33:09.000Z"
+  ],
+  [
+   "v6vf-nfxy",
+   "311 Service Requests",
+   "dataset",
+   "2026-10-07T09:06:40.000Z"
+  ],
+  [
+   "ijzp-q8t2",
+   "Crimes - 2001 to Present",
+   "dataset",
+   "2026-10-06T11:00:01.000Z"
+  ],
+  [
+   "we8h-apcf",
+   "Mural Registry",
+   "dataset",
+   "2026-09-16T19:00:38.000Z"
+  ],
+  [
+   "bbyy-e7gq",
+   "Divvy Bicycle Stations",
+   "dataset",
+   "2026-10-06T11:20:01.000Z"
+  ],
+  [
+   "h243-v2q5",
+   "Warming Centers",
+   "dataset",
+   "2026-03-17T14:57:42.000Z"
+  ],
+  [
+   "3tzw-cg4m",
+   "CTA - 'L' (Rail) Stations",
+   "dataset",
+   "2024-08-16T21:02:54.000Z"
+  ],
+  [
+   "awnk-6fvc",
+   "ACS 5 Year Data by Ward",
+   "dataset",
+   "2025-01-23T16:13:44.000Z"
+  ],
+  [
+   "sp34-6z76",
+   "Boundaries - Wards (2015-2023)",
+   "map",
+   "2015-04-01T16:02:29.000Z"
+  ],
+  [
+   "utjc-493b",
+   "Libraries - 2024 Circulation by Location",
+   "dataset",
+   "2025-06-16T20:14:03.000Z"
+  ],
+  [
+   "dx99-mui6",
+   "Libraries - 2024 Visitors by Location",
+   "dataset",
+   "2025-01-27T18:21:05.000Z"
+  ]
+ ],
+ "special service areas": [
+  [
+   "kjav-iyuj",
+   "Boundaries - Special Service Areas - Map",
+   "map",
+   "2025-12-08T19:38:21.000Z"
+  ],
+  [
+   "cmr6-dn8c",
+   "Boundaries - Special Service Areas",
+   "dataset",
+   "2025-12-08T19:38:21.000Z"
+  ],
+  [
+   "dbvs-iaa4",
+   "Boundaries - Special Service Areas (deprecated November 2013)",
+   "file",
+   "2011-06-27T16:02:57.000Z"
+  ],
+  [
+   "x9du-wfiv",
+   "Boundaries - Special Service Areas (deprecated October 2014)",
+   "map",
+   "2014-10-23T17:01:45.000Z"
+  ],
+  [
+   "uvpn-q65m",
+   "Boundaries - Special Service Areas (deprecated January 2024)",
+   "dataset",
+   "2024-01-12T22:36:37.000Z"
+  ],
+  [
+   "5pr3-hwde",
+   "Boundaries - Special Service Areas (deprecated July 2017)",
+   "map",
+   "2018-02-06T18:20:08.000Z"
+  ],
+  [
+   "uhab-t2hm",
+   "Boundaries - Special Service Areas (deprecated January 2023)",
+   "dataset",
+   "2023-02-10T21:22:07.000Z"
+  ],
+  [
+   "i35c-ftqu",
+   "Boundaries - Special Service Areas (deprecated January 2022)",
+   "dataset",
+   "2022-08-23T20:45:16.000Z"
+  ],
+  [
+   "c4sc-3f6n",
+   "Boundaries - Special Service Areas (deprecated January 2022) - Map",
+   "map",
+   "2022-08-23T20:45:16.000Z"
+  ],
+  [
+   "9fit-fndz",
+   "Boundaries - Special Service Areas (deprecated January 2020)",
+   "dataset",
+   "2020-01-13T23:00:37.000Z"
+  ],
+  [
+   "vqvu-rchz",
+   "Boundaries - Special Service Areas (deprecated January 2024) - Map",
+   "map",
+   "2024-01-12T22:36:37.000Z"
+  ],
+  [
+   "ch5p-gxrk",
+   "Boundaries - Special Service Areas - KML (deprecated November 2013)",
+   "file",
+   "2011-06-24T20:20:54.000Z"
+  ]
+ ],
+ "city boundary": [
+  [
+   "q38j-zgre",
+   "Boundaries - City - Outdated Format",
+   "file",
+   "2010-12-22T00:56:55.000Z"
+  ],
+  [
+   "qqq8-j68g",
+   "Boundaries - City",
+   "dataset",
+   "2017-06-30T21:59:34.000Z"
+  ],
+  [
+   "u23m-pa73",
+   "Green Roofs - Map",
+   "map",
+   "2012-10-16T18:08:16.000Z"
+  ],
+  [
+   "gdcf-axmw",
+   "Boundaries - ZIP Codes - Map",
+   "map",
+   "2025-04-28T21:28:21.000Z"
+  ],
+  [
+   "cauq-8yn6",
+   "Boundaries - Community Areas - Map",
+   "map",
+   "2025-04-22T23:06:37.000Z"
+  ],
+  [
+   "ewy2-6yfk",
+   "Boundaries - City - Map",
+   "map",
+   "2017-06-30T21:59:34.000Z"
+  ],
+  [
+   "cdf7-bgn3",
+   "Boundaries - Wards (2023-) - Map",
+   "map",
+   "2022-06-15T22:33:09.000Z"
+  ],
+  [
+   "sp34-6z76",
+   "Boundaries - Wards (2015-2023)",
+   "map",
+   "2015-04-01T16:02:29.000Z"
+  ],
+  [
+   "5jrd-6zik",
+   "Boundaries - Census Tracts - 2010 - Map",
+   "map",
+   "2013-05-23T15:31:57.000Z"
+  ],
+  [
+   "bbvz-uum9",
+   "Boundaries - Neighborhoods",
+   "map",
+   "2012-12-18T23:31:06.000Z"
+  ],
+  [
+   "q3z3-udcz",
+   "Green Roofs",
+   "dataset",
+   "2012-10-16T18:08:16.000Z"
+  ],
+  [
+   "fthy-xz3r",
+   "Boundaries - Police Districts (current)",
+   "map",
+   "2013-02-13T05:50:39.000Z"
+  ]
+ ],
+ "CTA L rail lines": [
+  [
+   "xbyr-jnvx",
+   "CTA - 'L' (Rail) Lines",
+   "dataset",
+   "2024-07-23T22:38:55.000Z"
+  ],
+  [
+   "t9su-47fb",
+   "CTA - 'L' (Rail) Lines - Map",
+   "map",
+   "2024-07-23T22:38:55.000Z"
+  ],
+  [
+   "m3d6-pubu",
+   "CTA - 'L' (Rail) Lines - KML (Deprecated February 2015)",
+   "file",
+   "2011-08-11T21:53:49.000Z"
+  ],
+  [
+   "vmyy-m9qj",
+   "CTA-L-Rail-Stations-Shapefile",
+   "file",
+   "2011-08-31T14:17:33.000Z"
+  ],
+  [
+   "4qtv-9w43",
+   "CTA-L-Rail-Stations-kml",
+   "file",
+   "2012-02-13T16:18:09.000Z"
+  ],
+  [
+   "dytv-z5nm",
+   "CTA - 'L' (Rail) Stations - Map",
+   "map",
+   "2024-08-16T21:02:54.000Z"
+  ],
+  [
+   "bs96-uama",
+   "CTA - 'L' (Rail) Stations - KML (Deprecated February 2015)",
+   "file",
+   "2011-08-11T21:54:53.000Z"
+  ],
+  [
+   "8pix-ypme",
+   "CTA - System Information - List of 'L' Stops",
+   "dataset",
+   "2025-11-19T18:14:37.000Z"
+  ],
+  [
+   "6iiy-9s97",
+   "CTA - Ridership - Daily Boarding Totals",
+   "dataset",
+   "2026-09-28T18:07:24.000Z"
+  ],
+  [
+   "3tzw-cg4m",
+   "CTA - 'L' (Rail) Stations",
+   "dataset",
+   "2024-08-16T21:02:54.000Z"
+  ],
+  [
+   "w8km-9pzd",
+   "CTA - Ridership - Annual Boarding Totals",
+   "dataset",
+   "2026-05-15T18:28:16.000Z"
+  ],
+  [
+   "2cys-9ux7",
+   "CTA - Park & Ride Locations- kml",
+   "file",
+   "2012-02-13T16:16:25.000Z"
+  ]
+ ],
+ "L stops": [
+  [
+   "8pix-ypme",
+   "CTA - System Information - List of 'L' Stops",
+   "dataset",
+   "2025-11-19T18:14:37.000Z"
+  ],
+  [
+   "zbnc-zirh",
+   "CTA - System Information - List of 'L' Stops - Map",
+   "map",
+   "2025-11-19T18:14:37.000Z"
+  ]
+ ],
+ "major streets": [
+  [
+   "ueqs-5wr6",
+   "Major Streets",
+   "file",
+   "2010-12-22T18:47:20.000Z"
+  ],
+  [
+   "mcad-r2g5",
+   "Winter Overnight Parking Restrictions",
+   "dataset",
+   "2021-12-06T21:56:50.000Z"
+  ],
+  [
+   "u9xt-hiju",
+   "Parking Permit Zones",
+   "dataset",
+   "2026-10-03T05:33:19.000Z"
+  ],
+  [
+   "qqqh-hgyw",
+   "Life Safety Evaluations (Deprecated 2015)",
+   "dataset",
+   "2015-04-17T19:24:45.000Z"
+  ],
+  [
+   "kpim-yiyf",
+   "Winter Overnight Parking Restrictions (Deprecated December 2021)",
+   "file",
+   "2011-11-23T21:30:52.000Z"
+  ],
+  [
+   "fr3e-nxk2",
+   "Winter Overnight Parking Restrictions - KML",
+   "file",
+   "2011-11-23T21:56:39.000Z"
+  ],
+  [
+   "gzaz-isa6",
+   "Traffic Crashes - Vision Zero Chicago Traffic Fatalities",
+   "dataset",
+   "2026-09-02T17:27:53.000Z"
+  ],
+  [
+   "jvps-6v8h",
+   "Liquor Moratorium Districts - Taverns - Historical",
+   "file",
+   "2011-11-02T14:15:52.000Z"
+  ],
+  [
+   "kas8-436q",
+   "Liquor Moratorium Districts - Taverns - KML - Historical",
+   "file",
+   "2011-11-24T00:13:44.000Z"
+  ],
+  [
+   "ds8w-gykc",
+   "Liquor Moratorium Districts - Packaged Goods - Historical",
+   "file",
+   "2011-11-02T14:14:10.000Z"
+  ],
+  [
+   "ivsh-5css",
+   "Liquor Moratorium Districts - Packaged Goods - KML - Historical",
+   "file",
+   "2011-11-24T00:09:54.000Z"
+  ],
+  [
+   "gumc-mgzr",
+   "Violence Reduction - Victims of Homicides and Non-Fatal Shootings",
+   "dataset",
+   "2026-10-06T12:54:05.000Z"
+  ]
+ ],
+ "street center lines": [
+  [
+   "6imu-meau",
+   "Street Center Lines",
+   "map",
+   "2021-06-11T21:55:49.000Z"
+  ],
+  [
+   "xy4z-b6aa",
+   "Street Center Lines  (Deprecated July 2013)",
+   "file",
+   "2010-12-22T18:45:36.000Z"
+  ],
+  [
+   "sz6q-f34c",
+   "Street Center Lines (Deprecated August 2016)",
+   "map",
+   "2017-07-11T17:30:18.000Z"
+  ],
+  [
+   "bcxz-rc3r",
+   "Street Center Lines - KML (Deprecated July 2013)",
+   "file",
+   "2011-06-27T16:31:10.000Z"
+  ],
+  [
+   "fiya-x94p",
+   "Street Center Lines (deprecated October 2014)",
+   "map",
+   "2014-10-23T18:15:56.000Z"
+  ],
+  [
+   "n4j6-wkkf",
+   "Chicago Traffic Tracker - Congestion Estimates by Segments - Deprecated",
+   "dataset",
+   "2026-04-30T06:33:30.000Z"
+  ],
+  [
+   "pr57-gg9e",
+   "transportation",
+   "dataset",
+   "2021-06-11T21:55:49.000Z"
+  ],
+  [
+   "9p6u-2jwe",
+   "Transportation",
+   "dataset",
+   "2014-10-23T18:15:56.000Z"
+  ],
+  [
+   "7ez8-272k",
+   "transportation",
+   "dataset",
+   "2017-07-11T17:30:18.000Z"
+  ],
+  [
+   "cf2f-mmzv",
+   "Micro-Market Recovery Program - Addresses",
+   "dataset",
+   "2026-09-25T05:00:22.000Z"
+  ],
+  [
+   "ujwc-724r",
+   "Micro-Market Recovery Program - Violations and Inspections",
+   "dataset",
+   "2026-10-07T05:10:27.000Z"
+  ],
+  [
+   "4dpw-9rts",
+   "Micro-Market Recovery Program - Permits",
+   "dataset",
+   "2026-10-07T05:05:51.000Z"
+  ]
+ ],
+ "ward offices": [
+  [
+   "htai-wnw4",
+   "Ward Offices",
+   "dataset",
+   "2026-10-07T03:12:24.000Z"
+  ],
+  [
+   "8yti-tif4",
+   "Ward Offices - Map",
+   "map",
+   "2026-10-07T03:12:24.000Z"
+  ],
+  [
+   "f4sz-sn2p",
+   "Ward Offices and Boundaries Map",
+   "map",
+   "2026-10-07T03:12:24.000Z"
+  ],
+  [
+   "fwns-qqic",
+   "Ward Offices - Map - Exportable (Deprecated 2015)",
+   "map",
+   "2015-07-16T18:09:51.000Z"
+  ],
+  [
+   "6mw6-krd4",
+   "Ward Offices (Deprecated May 2015)",
+   "dataset",
+   "2015-07-10T18:21:23.000Z"
+  ],
+  [
+   "6pkd-zfe4",
+   "Ward Offices - Shapefiles (Deprecated May 2015)",
+   "file",
+   "2011-08-01T19:39:51.000Z"
+  ],
+  [
+   "dfjs-8rrk",
+   "Ward Offices - KML (Deprecated May 2015)",
+   "file",
+   "2011-08-01T19:37:29.000Z"
+  ],
+  [
+   "97t6-zrhs",
+   "311 Service Requests - Rodent Baiting - Historical",
+   "dataset",
+   "2019-03-06T09:25:27.000Z"
+  ],
+  [
+   "uqhs-j723",
+   "311 Service Requests - Rodent Baiting - No Duplicates",
+   "filter",
+   "2019-03-06T09:25:27.000Z"
+  ],
+  [
+   "m4mk-9bzx",
+   "2015_Ward_Offices",
+   "dataset",
+   "2015-07-16T18:09:51.000Z"
+  ],
+  [
+   "5hda-ha8b",
+   "4th Ward Alderman Applicants - 2016",
+   "dataset",
+   "2016-05-05T20:58:58.000Z"
+  ],
+  [
+   "3e26-zek2",
+   "Grocery Store Status - Historical",
+   "dataset",
+   "2020-06-18T17:56:42.000Z"
+  ]
+ ],
+ "aldermen": [
+  [
+   "fwns-qqic",
+   "Ward Offices - Map - Exportable (Deprecated 2015)",
+   "map",
+   "2015-07-16T18:09:51.000Z"
+  ],
+  [
+   "6pkd-zfe4",
+   "Ward Offices - Shapefiles (Deprecated May 2015)",
+   "file",
+   "2011-08-01T19:39:51.000Z"
+  ],
+  [
+   "dfjs-8rrk",
+   "Ward Offices - KML (Deprecated May 2015)",
+   "file",
+   "2011-08-01T19:37:29.000Z"
+  ],
+  [
+   "m4mk-9bzx",
+   "2015_Ward_Offices",
+   "dataset",
+   "2015-07-16T18:09:51.000Z"
+  ],
+  [
+   "6mw6-krd4",
+   "Ward Offices (Deprecated May 2015)",
+   "dataset",
+   "2015-07-10T18:21:23.000Z"
+  ]
+ ],
+ "metra": [
+  [
+   "q8wx-dznq",
+   "Metra Lines",
+   "file",
+   "2011-07-19T23:11:34.000Z"
+  ],
+  [
+   "nqm8-q2ym",
+   "Metra Stations",
+   "file",
+   "2011-07-19T23:09:06.000Z"
+  ],
+  [
+   "e7du-96jw",
+   "Metra Lines - KML",
+   "file",
+   "2011-06-24T19:21:28.000Z"
+  ],
+  [
+   "8mcs-gt4w",
+   "Metra Stations - KML",
+   "file",
+   "2011-06-24T19:55:43.000Z"
+  ],
+  [
+   "bmus-hp7e",
+   "Connect Chicago Locations - Historical",
+   "dataset",
+   "2016-07-06T19:05:28.000Z"
+  ]
+ ],
+ "park district parks": [
+  [
+   "ej32-qgdr",
+   "Parks - Chicago Park District Park Boundaries (current)",
+   "map",
+   "2022-05-18T15:39:49.000Z"
+  ],
+  [
+   "wrvx-zpw5",
+   "Performance Metrics - Chicago Park District - Park Security Checks",
+   "dataset",
+   "2012-08-03T19:16:57.000Z"
+  ],
+  [
+   "7edu-s3u7",
+   "Beach Weather Stations - Automated Sensors - 2016 - Humidity",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "4hjh-s3cn",
+   "Outdoor Swimming Pools",
+   "filter",
+   "2012-09-18T19:30:14.000Z"
+  ],
+  [
+   "y7qa-tvqx",
+   "Parks - Facilities & Features (deprecated November 2016)",
+   "dataset",
+   "2012-09-18T19:30:14.000Z"
+  ],
+  [
+   "5yyk-qt9y",
+   "Parks - Chicago Park District Facilities (current)",
+   "map",
+   "2022-05-18T15:53:30.000Z"
+  ],
+  [
+   "qmqz-2xku",
+   "Beach Water Quality - Automated Sensors",
+   "dataset",
+   "2026-10-07T08:50:03.000Z"
+  ],
+  [
+   "pk66-w54g",
+   "Chicago Park District - Outdoor Event Permits",
+   "dataset",
+   "2026-10-05T15:24:44.000Z"
+  ],
+  [
+   "2eaw-bdhe",
+   "Parks - Map (deprecated November 2016)",
+   "map",
+   "2012-02-08T21:40:11.000Z"
+  ],
+  [
+   "xvsz-3xcj",
+   "Beach E. coli Predictions",
+   "dataset",
+   "2025-09-02T04:55:07.000Z"
+  ],
+  [
+   "t62e-8nvc",
+   "Beach Swim Advisories",
+   "dataset",
+   "2026-10-06T15:18:53.000Z"
+  ],
+  [
+   "5msb-wbxn",
+   "Parks - Shapefiles (deprecated November 2016)",
+   "file",
+   "2011-07-19T23:13:13.000Z"
+  ]
+ ],
+ "libraries locations": [
+  [
+   "wa2i-tm5d",
+   "Libraries - Locations, Hours and Contact Information - Map",
+   "map",
+   "2026-09-17T16:26:32.000Z"
+  ],
+  [
+   "x8fc-8rcq",
+   "Libraries - Locations,  Contact Information, and Usual Hours of Operation",
+   "dataset",
+   "2026-09-17T16:26:32.000Z"
+  ],
+  [
+   "vbts-zqt4",
+   "Libraries - WiFi Usage (2011-2014)",
+   "dataset",
+   "2015-01-12T19:41:20.000Z"
+  ],
+  [
+   "6vqr-kbji",
+   "Libraries - 2014 Wi Fi Usage",
+   "dataset",
+   "2015-01-12T19:46:44.000Z"
+  ],
+  [
+   "na9v-sdk2",
+   "Chicago Public Library Events - Search",
+   "story",
+   "2026-06-02T16:05:28.655Z"
+  ],
+  [
+   "cpc6-pxmp",
+   "Libraries - 2016 Visitors by Location",
+   "dataset",
+   "2017-01-13T17:14:04.000Z"
+  ],
+  [
+   "si8n-dg3u",
+   "Libraries - 2014 Visitors by Location",
+   "dataset",
+   "2015-08-14T15:58:17.000Z"
+  ],
+  [
+   "vuf2-qfik",
+   "Libraries - 2011 Children's Summer Reading Program",
+   "dataset",
+   "2012-02-23T15:49:27.000Z"
+  ],
+  [
+   "ykhx-yxn9",
+   "Libraries - 2022 Visitors by Location",
+   "dataset",
+   "2023-03-02T14:51:44.000Z"
+  ],
+  [
+   "7imc-umy4",
+   "Libraries - 2015 Visitors by Location",
+   "dataset",
+   "2016-01-11T19:12:21.000Z"
+  ],
+  [
+   "w7uw-j3pp",
+   "Libraries - 2016 Computer Sessions by Location",
+   "dataset",
+   "2017-01-13T17:16:41.000Z"
+  ],
+  [
+   "6uah-qehh",
+   "Libraries - 2011 Computer Sessions by Location",
+   "dataset",
+   "2012-01-18T03:17:51.000Z"
+  ]
+ ],
+ "chicago landmarks": [
+  [
+   "zidz-sdfj",
+   "Landmark Districts",
+   "dataset",
+   "2011-08-21T02:47:29.000Z"
+  ],
+  [
+   "habu-n236",
+   "Individual Landmarks - Map",
+   "map",
+   "2012-08-22T23:10:06.000Z"
+  ],
+  [
+   "tdab-kixi",
+   "Individual Landmarks (Deprecated January 2024)",
+   "dataset",
+   "2012-08-22T23:10:06.000Z"
+  ],
+  [
+   "g5sm-atjv",
+   "Individual Landmarks - KML  (Deprecated December 2013)",
+   "file",
+   "2011-07-18T21:06:48.000Z"
+  ],
+  [
+   "ty7a-2bxt",
+   "Chicago Historic Resources Survey - Red and Orange Buildings - Deprecated",
+   "file",
+   "2012-03-09T17:40:26.000Z"
+  ],
+  [
+   "2wk4-c5se",
+   "Performance Metrics - Housing & Economic Development - Landmark Permitting Review",
+   "dataset",
+   "2014-10-03T05:27:52.000Z"
+  ],
+  [
+   "cmb2-8jw8",
+   "Chicago Historic Resources Survey - Red and Orange Buildings - KML - Deprecated",
+   "file",
+   "2012-03-09T17:43:50.000Z"
+  ],
+  [
+   "2u8t-236p",
+   "Chicago Historic Resources Survey - Red and Orange Buildings",
+   "dataset",
+   "2026-08-21T17:18:31.000Z"
+  ],
+  [
+   "t8pq-wu86",
+   "Boundaries - Landmark Districts",
+   "file",
+   "2011-04-07T14:26:40.000Z"
+  ],
+  [
+   "bddq-yxar",
+   "Individual Landmarks - Map",
+   "map",
+   "2026-09-08T18:55:07.000Z"
+  ],
+  [
+   "2h6e-2yk6",
+   "Individual Landmarks - Shapefiles (Deprecated December 2013)",
+   "file",
+   "2011-06-24T20:27:25.000Z"
+  ],
+  [
+   "yw5d-szpx",
+   "National Register of Historic Places",
+   "file",
+   "2012-03-09T17:29:54.000Z"
+  ]
+ ],
+ "lakefront": [
+  [
+   "cpnw-m943",
+   "TIF Balance Sheets - Lakefront",
+   "filter",
+   "2011-08-30T14:00:02.000Z"
+  ],
+  [
+   "7edu-s3u7",
+   "Beach Weather Stations - Automated Sensors - 2016 - Humidity",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "dayf-zcvp",
+   "Beach Weather Stations - Automated Sensors - 2015 - Wind Speed",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "5rxc-uczg",
+   "Beach Weather Stations - Automated Sensors - 2015 - Solar Radiation",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "y9ux-e3hc",
+   "Beach Weather Stations - Automated Sensors - 2017 - Humidity",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "qmad-u7r3",
+   "Beach Weather Stations - Automated Sensors - 2016 - Barometric Pressure",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "3u3d-crsd",
+   "Beach Weather Stations - Automated Sensors - 2017 - Wet Bulb Temperature",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "mf7j-mc8j",
+   "Clear Water Map",
+   "map",
+   "2025-09-02T04:55:07.000Z"
+  ],
+  [
+   "2vjn-t5ef",
+   "Beach Weather Stations - Automated Sensors - 2016 - Wind Speed",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "yqsm-bsvd",
+   "Beach Water Quality - Automated Sensors - 2014 - Turbidity",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "rsk3-iyyk",
+   "Beach Weather Stations - Automated Sensors - 2015 - Air Temperature",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ],
+  [
+   "55ak-3wnn",
+   "Beach Weather Stations - Automated Sensors - 2017 - Wind Speed",
+   "chart",
+   "2026-10-07T07:58:52.000Z"
+  ]
+ ]
+}

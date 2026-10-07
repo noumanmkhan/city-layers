@@ -1,0 +1,27 @@
+/* Chicago's own colours: the nine sides, 'L' lines (official CTA colours) and the Metra swatch.
+   Everything else (page, civic layers, lenses, streets) comes from the engine. */
+:root{
+  --s-farnorth:#7DAFE0; --s-northwest:#95CA7E; --s-north:#6BC4CF; --s-central:#EE6E73; --s-west:#F0A06E;
+  --s-south:#B9A5E6; --s-southwest:#F2CE5E; --s-farsouthwest:#F3A8CB; --s-farsoutheast:#8FD6C0;
+  --l-red:#C60C30; --l-blue:#00A1DE; --l-brown:#62361B; --l-green:#009B3A; --l-orange:#F9461C;
+  --l-pink:#E27EA6; --l-purple:#522398; --l-yellow:#F9E300;
+  --m-a:#005DAA; --m-b:#008000; --m-c:#E02400; --m-d:#EB5C00;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --s-farnorth:#4C7FB5; --s-northwest:#5E9A48; --s-north:#3B98A3; --s-central:#C2484E; --s-west:#C7703F;
+  --s-south:#7D68B8; --s-southwest:#B8962E; --s-farsouthwest:#C26E96; --s-farsoutheast:#4FA88E;
+  --l-brown:#9A6A4A; --l-purple:#8A63C9;
+}}
+:root[data-theme="dark"]{
+  --s-farnorth:#4C7FB5; --s-northwest:#5E9A48; --s-north:#3B98A3; --s-central:#C2484E; --s-west:#C7703F;
+  --s-south:#7D68B8; --s-southwest:#B8962E; --s-farsouthwest:#C26E96; --s-farsoutheast:#4FA88E;
+  --l-brown:#9A6A4A; --l-purple:#8A63C9;
+}
+.sw.sides{background:conic-gradient(var(--s-farnorth) 0 11%,var(--s-northwest) 0 22%,var(--s-north) 0 33%,var(--s-central) 0 44%,var(--s-west) 0 55%,var(--s-south) 0 66%,var(--s-southwest) 0 77%,var(--s-farsouthwest) 0 88%,var(--s-farsoutheast) 0)}
+.sw.cta{background:linear-gradient(var(--l-red) 0 25%,var(--l-blue) 0 50%,var(--l-green) 0 75%,var(--l-brown) 0)}
+.sw.metra{background:linear-gradient(var(--m-a) 0 25%,var(--m-b) 0 50%,var(--m-c) 0 75%,var(--m-d) 0)}
+.fill-major.far-north-side{fill:var(--s-farnorth)} .fill-major.northwest-side{fill:var(--s-northwest)} .fill-major.north-side{fill:var(--s-north)}
+.fill-major.central{fill:var(--s-central)} .fill-major.west-side{fill:var(--s-west)} .fill-major.south-side{fill:var(--s-south)}
+.fill-major.southwest-side{fill:var(--s-southwest)} .fill-major.far-southwest-side{fill:var(--s-farsouthwest)} .fill-major.far-southeast-side{fill:var(--s-farsoutheast)}
+.sub-line.lred{stroke:var(--l-red)} .sub-line.lblue{stroke:var(--l-blue)} .sub-line.lbrown{stroke:var(--l-brown)} .sub-line.lgreen{stroke:var(--l-green)}
+.sub-line.lorange{stroke:var(--l-orange)} .sub-line.lpink{stroke:var(--l-pink)} .sub-line.lpurple{stroke:var(--l-purple)} .sub-line.lyellow{stroke:var(--l-yellow)}

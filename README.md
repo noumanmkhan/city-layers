@@ -66,6 +66,25 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
 
+## Chicago Layers
+
+The second city, under construction, runs on the same engine with its own data and config (`cities/chicago/`). Chicago's layers line up with Toronto's:
+
+| Layer | Count | Notes |
+|---|---|---|
+| The sides | 9 | Far North Side to Far Southeast Side,<br>the informal split Chicagoans use |
+| Community areas | 77 | The City's official areas |
+| Known-as names | 31 | Wicker Park, Gold Coast, Pilsen… |
+| City wards | 50 | One alderperson each |
+| Illinois House districts | 36 | Each pair makes a Senate district,<br>so one layer gives both |
+| Congressional districts | 9 | Illinois seats in the U.S. House |
+| Special Service Areas | 58 | Chicago's equivalent of BIAs |
+| Expressways | 11 in Chicago | Kennedy, Dan Ryan, Eisenhower,<br>Stevenson, Lake Shore Drive |
+| Metra | 11 lines | From four downtown terminals |
+| The 'L' | 8 lines, 144 stations | CTA rapid transit |
+
+The community area lens uses the American Community Survey (2020–2024 five-year estimates): Census tracts are grouped into community areas, and median home values and rents are read from the summed price brackets. Its tiers use the same cut-offs as Toronto's, so the two maps read alike. Representatives are the alderperson, state representative, state senator and member of Congress, refreshed weekly from the City's data portal, Open States and the Clerk of the House.
+
 ## How it's built
 
 - **One engine, one folder per city.** The map page is a shared engine (`engine/`) that knows how to draw kinds of layer: filled areas, official neighbourhoods, representation boundaries, business areas, streets, highways, regional rail and rapid transit. Everything about Toronto lives in `cities/toronto/`: `city.json` holds the layer list, labels, lenses and the rows of the "What's here" card, and `city.css` holds Toronto's colours. Adding a city means adding its data and config, not changing the engine.
@@ -81,6 +100,7 @@ Rebuild the data:
 ```bash
 pip install shapely
 cities/toronto/run.sh    # writes docs/toronto/data/*.geojson and docs/toronto/index.html
+cities/chicago/run.sh    # the same for docs/chicago/
 cd docs && python3 -m http.server 8000
 ```
 
@@ -109,6 +129,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
 - Representatives are refreshed weekly, so for a few days after an election or by-election the card can lag. Vacant seats say so.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
+- Chicago: the sides are a convention, not an official boundary, and the main streets come from OpenStreetMap plus a hand-kept list of the mile-grid arterials and diagonals. The lens has no "time to the Loop" yet.
 
 ## Roadmap
 
@@ -125,4 +146,12 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
-`cities/toronto/SOURCES.md` lists the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.
+Chicago:
+
+- [City of Chicago Data Portal](https://data.cityofchicago.org/) ([terms](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html)): community areas, neighbourhoods, wards, SSAs, the city boundary, 'L' lines and stations, and ward offices.
+- U.S. Census Bureau (public domain): TIGERweb municipalities, counties, legislative districts, tract points and Lake Michigan's shoreline; American Community Survey 2020–2024 five-year tables.
+- [Metra GTFS](https://metra.com/developers) for Metra lines and stations.
+- Illinois legislators from [Open States](https://openstates.org/) (public domain); members of Congress from the [Clerk of the U.S. House](https://clerk.house.gov/).
+- Streets and expressways © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
+
+`cities/toronto/SOURCES.md` and `cities/chicago/SOURCES.md` list the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.
