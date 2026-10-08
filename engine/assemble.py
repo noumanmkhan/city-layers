@@ -1,5 +1,5 @@
 """Build one city's map page: engine/template.html + engine/map.js + cities/<city>/city.json and city.css
--> docs/<city>/index.html.
+-> docs/<city>/index.html, plus a copy of the config at docs/<city>/data/city.json.
 
 Usage: python3 engine/assemble.py <city>
 
@@ -49,3 +49,10 @@ out = os.path.join(ROOT, 'docs', city, 'index.html')
 os.makedirs(os.path.dirname(out), exist_ok=True)
 open(out, 'w', encoding='utf-8').write(t)
 print('assembled docs/%s/index.html' % city, len(t), 'bytes')
+
+# The config is also published on its own, beside the data, for apps that read the map's data
+# (see DATA_CONTRACT.md). Its "schema" number goes up only on a breaking change.
+cfg_out = os.path.join(ROOT, 'docs', city, 'data', 'city.json')
+os.makedirs(os.path.dirname(cfg_out), exist_ok=True)
+open(cfg_out, 'w', encoding='utf-8').write(json.dumps(cfg, ensure_ascii=False, separators=(',', ':')) + '\n')
+print('published docs/%s/data/city.json' % city)

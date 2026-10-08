@@ -1,5 +1,6 @@
 {
   "id": "toronto",
+  "schema": 1,
   "title": "Toronto Layers",
   "description": "A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.",
   "mapLabel": "Map of the City of Toronto",

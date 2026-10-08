@@ -1,5 +1,6 @@
 {
   "id": "chicago",
+  "schema": 1,
   "title": "Chicago Layers",
   "description": "A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.",
   "mapLabel": "Map of the City of Chicago",
