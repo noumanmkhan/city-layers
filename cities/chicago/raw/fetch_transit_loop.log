@@ -1,0 +1,11 @@
+  got https://www.transitchicago.com/downloads/sch_data/google_transit.zip 67127 KB
+  leaving out empty frequencies.txt from cta.zip
+  got https://schedules.metrarail.com/gtfs/schedule.zip 699 KB
+  got http://www.mysouthshoreline.com/google/google_transit.zip 34 KB
+  got https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf 100128 KB
+feed ranges [('20260911', '20261130'), ('20250101', '20261231'), ('20260101', '20301231')]
+departure 2026-10-20 08:00:00
+Traceback (most recent call last):
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_transit_loop.py", line 128, in <module>
+    import geopandas as gpd
+ModuleNotFoundError: No module named 'geopandas'
