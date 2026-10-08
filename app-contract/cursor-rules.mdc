@@ -1,0 +1,36 @@
+---
+description: City Layers iOS app — boundaries, data source and display rules
+alwaysApply: true
+---
+
+# City Layers iOS app
+
+This repo is the iOS app (SwiftUI app + WidgetKit extension) for City Layers, the map at
+https://maps.noumankhan.ca/. The website lives in a separate repo that this project must never
+change, clone or fetch from.
+
+## Where the data comes from
+- Read `DATA_CONTRACT.md` in this repo before writing any code that loads or shows map data.
+  It is the source of truth for file names, fields and how the "What's here" card is built.
+- Load data only over HTTPS from `https://maps.noumankhan.ca/<city>/data/<file>`.
+  Never from github.com, raw.githubusercontent.com or a local copy of the website repo.
+- Start from each city's `city.json`. Read layer ids, files, card rows and labels from it;
+  don't hard-code them. Check `"schema"`: if it isn't a version the app knows, keep the last
+  good cached copy and show an "update the app" message.
+- Ignore unknown keys and files. New ones are not errors.
+- Ship a bundled copy of each city's data for offline use and refresh it in the background.
+
+## Display rules (from the website; keep them)
+- Describe, don't rank. Language at home and any other demographic field is shown on the card
+  only. Never use it for colours, sorting, filters, rankings, comparisons or notifications.
+- Always show the caveat and footer lines from `city.json` next to census figures, including
+  in widgets (a shortened form is fine).
+- No crime data, school scores or other evaluative data.
+- Show the `attribution` from `city.json` in the app (an About screen is fine).
+- Real-time data (weather, air quality, traffic, beach water) comes from its own sources, is
+  labelled with its source, and is kept visually separate from the census and boundary card.
+
+## Working style
+- Small, focused changes; explain what changed and why in each commit message.
+- If the contract seems wrong or missing something, stop and say so instead of guessing or
+  working around it. Changes to the data are made on the website side, not here.

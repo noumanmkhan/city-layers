@@ -36,6 +36,15 @@ the landing page, stop and say so; don't change this repo.
   `.github/workflows/fetch-streets.yml` shows the pattern: fetch it in GitHub Actions and
   commit the raw file. It also rejects bursts of parallel requests, so fetch one layer at a time.
 
+## Apps that read this data
+- An iOS app (separate repo, built in Cursor) reads the published `docs/<city>/data/` files and
+  `docs/<city>/data/city.json` (written by `engine/assemble.py`). `app-contract/DATA_CONTRACT.md`
+  describes them.
+- When a change alters a published file, field or card row, update the contract in the same
+  commit. Adding things is fine. Renaming, removing or changing the meaning or units of a field or
+  file is a breaking change: bump `"schema"` in every `cities/*/city.json` and add a migration
+  note at the top of the contract.
+
 ## Conventions
 - One change per commit, with a plain-English message saying what changed and why.
 - Test in a browser at desktop and phone widths, and in light and dark themes, before pushing.
