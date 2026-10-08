@@ -20,5 +20,6 @@ for f in metra_lines metra_lines_inner; do npx mapshaper -i tmp/$f.geojson -simp
 npx mapshaper -i tmp/cta_lines.geojson -simplify interval=5 -o $OUT/cta_lines.geojson precision=0.00001 -quiet
 [ -d raw/representatives ] && python3 representatives.py   # after the boundaries above: it matches them
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build chicago   # after base is simplified: adds drive times to it
+python3 ../../engine/regions.py chicago   # outlines for Focus on a county / region
 python3 ../../engine/assemble.py chicago
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

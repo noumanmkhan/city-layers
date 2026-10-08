@@ -26,5 +26,6 @@ npx mapshaper -i tmp/subway_lines.geojson -simplify interval=5 -o $OUT/subway_li
 python3 representatives.py   # after the boundaries above: it matches names against them
 python3 gta_places.py        # likewise: names each community's municipality from base
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build toronto   # after base is simplified: adds drive times to it
+python3 ../../engine/regions.py toronto   # outlines for Focus on a county / region
 python3 ../../engine/assemble.py toronto
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

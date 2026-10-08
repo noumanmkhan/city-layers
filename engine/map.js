@@ -79,11 +79,12 @@ const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
 map.setMaxBounds(L.latLngBounds(CITY.view.max));  // the region plus a margin
 
-const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['transit',470],['stlbl',475],['pts',480],['pin',620]];
+const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['focus',468],['transit',470],['stlbl',475],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
 map.getPane('base').style.pointerEvents = 'none';
 map.getPane('stlbl').style.pointerEvents = 'none';
 map.getPane('mask').style.pointerEvents = 'none';
+map.getPane('focus').style.pointerEvents = 'none';
 
 const layers = {}; const data = {layers: {}};
 const get = f => fetch(DATA + (f.includes('.') ? f : f + '.geojson')).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
@@ -96,7 +97,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -633,9 +634,11 @@ function inspect(latlng, title, muniName){
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
       '<div class="pills">' + nearCommunity(x, y, title) + '<span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
       driveHere(x, y, m) +
+      (regionFeature(m.region) && focusKey !== m.region ? '<button type="button" class="focus-go">' + esc(fill(CITY.focus.show, {name: regionName(m.region)})) + '</button>' : '') +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     here.querySelector('.share').onclick = share;
+    const fg = here.querySelector('.focus-go'); if (fg) fg.onclick = () => setFocus(m.region, true);
     return;
   }
   placePin(latlng, title);
@@ -805,6 +808,10 @@ function indexPlaces(base){
   if (UNITS) data.units.features.forEach(f => add(f, CITY.units.singular + (f.properties.code != null ? ' #' + f.properties.code : ''), false));
   if (data.knownas) data.knownas.features.forEach(f => add(f, 'Known-as name', false));
   base.features.filter(f => f.properties.kind === 'neighbour').forEach(f => add(f, fill(CITY.outside.regionPill, f.properties) || 'Nearby', true));
+  // The counties or regions themselves: choosing one focuses on it.
+  // "DuPage" or "Peel" alone is as good as the full name ("Lake" matches two, so it lists both).
+  if (data.regionAreas) data.regionAreas.features.forEach(f => PLACES.push({name: regionName(f.properties.region), sub: CITY.focus.noun, outside: true, focus: f.properties.region, rank: 3.5, f,
+    alt: [f.properties.region, regionName(f.properties.region).split(/ (?:county|region)\b/i)[0]]}));
   // Named communities in the municipalities around the city (cities/<city> builds region_places.json).
   (data.regionPlaces || []).forEach(p => PLACES.push({name: p.name, alt: p.alt, sub: fill(CITY.regionPlaces.sub, p), outside: true, muni: p.muni,
     community: (CITY.regionPlaces.near || []).includes(p.kind) ? 5 : 6,
@@ -830,7 +837,7 @@ function suggestions(text){
   });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));
-    if (b) out.push({s: b.s, rank: p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
+    if (b) out.push({s: b.s, rank: p.rank || p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
   });
   return out.sort((a, b) => a.s - b.s || a.rank - b.rank || a.name.localeCompare(b.name)).slice(0, 6);
 }
@@ -843,6 +850,7 @@ function showSuggestions(list, more){
 function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), f.properties.name, true); }
 // A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
 function goPlace(p){
+  if (p.focus){ showResults(''); q.value = p.name; setFocus(p.focus, true); return; }
   const g = p.f.geometry;
   if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true, p.zoom, p.muni); return; }
   showResults(''); q.value = p.name;
@@ -889,9 +897,79 @@ function setScope(s, move){
     const lyr = layers[SUBURBS.id];
     if (lyr){ if (s === 'outer' && state[SUBURBS.id]) lyr.addTo(map); else map.removeLayer(lyr); }
   }
+  const fb = document.getElementById('focusBox');
+  if (fb) fb.hidden = s === 'inner';
+  if (s === 'inner' && focusKey) setFocus(null, false);
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
   queueHash();
+}
+
+/* ---------- Focus on one county or region (regional view) ----------
+   Picking one (from the panel, search, or a spot's card) outlines it, dims everything outside it, frames
+   the map on it, labels every municipality inside and lists them in the panel. Outlines come from
+   region_areas.geojson (engine/regions.py); municipalities belong to the region named on them in base. */
+let focusKey = null, focusLayer = null;
+const regionName = k => fill(CITY.outside.regionPill, {region: k}) || k;
+const regionFeature = k => k && CITY.focus && data.regionAreas ? data.regionAreas.features.find(f => f.properties.region === k) : null;
+function buildFocusUI(){
+  if (!CITY.focus || !data.regionAreas) return;
+  const keys = data.regionAreas.features.map(f => f.properties.region).sort((a, b) => regionName(a).localeCompare(regionName(b)));
+  const box = document.createElement('div'); box.className = 'focus'; box.id = 'focusBox'; box.hidden = scope !== 'outer';
+  box.innerHTML = '<label for="focusSel">' + esc(CITY.focus.label) + '</label><select id="focusSel"><option value="">' + esc(CITY.focus.all) + '</option>' +
+    keys.map(k => '<option value="' + esc(k) + '">' + esc(regionName(k)) + '</option>').join('') + '</select>' +
+    '<div class="focus-res" id="focusRes" hidden><span id="focusCount"></span><button type="button" id="focusClear">Show all</button></div><div class="flist focus-list" id="focusList" hidden></div>';
+  document.querySelector('.scope').after(box);
+  box.querySelector('select').addEventListener('change', e => setFocus(e.target.value || null, true));
+  box.querySelector('#focusClear').addEventListener('click', () => setFocus(null, true));
+}
+function setFocus(key, move){
+  const f = regionFeature(key);
+  if (key && !f) return;
+  if (f && scope === 'inner') setScope('outer', false);
+  focusKey = f ? key : null;
+  if (focusLayer){ map.removeLayer(focusLayer); focusLayer = null; }
+  map.getContainer().classList.toggle('focused', !!f);
+  const sel = document.getElementById('focusSel'); if (sel) sel.value = focusKey || '';
+  const list = document.getElementById('focusList'), res = document.getElementById('focusRes');
+  if (!f){
+    if (list){ list.hidden = true; res.hidden = true; list.innerHTML = ''; }
+    if (move) frame(REGION_VIEW);
+    queueDeclutter(); queueHash(); return;
+  }
+  focusLayer = L.layerGroup();
+  // Dim everything outside: a sheet over the whole map with the region cut out of it.
+  const v = CITY.view.max, sheet = [[v[0][0] - 5, v[0][1] - 5], [v[0][0] - 5, v[1][1] + 5], [v[1][0] + 5, v[1][1] + 5], [v[1][0] + 5, v[0][1] - 5]];
+  const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+  focusLayer.addLayer(L.polygon([sheet].concat(polys.map(p => p[0].map(ll))), {pane: 'mask', interactive: false, className: 'focus-dim'}));
+  focusLayer.addLayer(L.geoJSON(f, {pane: 'focus', interactive: false, style: () => ({className: 'focus-line'})}));
+  // Every municipality in it, biggest first so they win the label declutter.
+  const size = g => { const b = L.geoJSON(g).getBounds(); return (b.getEast() - b.getWest()) * (b.getNorth() - b.getSouth()); };
+  const towns = data.outer.features.filter(t => t.properties.region === key && !t.properties.rest);
+  towns.slice().sort((a, b) => size(b) - size(a)).forEach(t => focusLayer.addLayer(label(esc(t.properties.name), 'lbl-focus', ll(t.properties.lp))));
+  focusLayer.addTo(map);
+  // The list in the panel: tap a name to go there.
+  const sorted = towns.slice().sort((a, b) => a.properties.name.localeCompare(b.properties.name));
+  document.getElementById('focusCount').textContent = fill(CITY.focus.count, {n: sorted.length, name: regionName(key)});
+  list.innerHTML = '';
+  sorted.forEach(t => {
+    const b = document.createElement('button'); b.type = 'button';
+    b.innerHTML = esc(t.properties.name) + (t.properties.drive != null ? '<span>' + t.properties.drive + ' min</span>' : '');
+    b.title = t.properties.drive != null ? 'About ' + t.properties.drive + ' min to ' + CITY.drive.hubName + ' with no traffic' : '';
+    b.addEventListener('click', () => {
+      const p = PLACES.find(x => x.f === t);
+      if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+      if (p) goPlace(p);
+    });
+    list.appendChild(b);
+  });
+  list.hidden = false; res.hidden = false;
+  if (move){
+    frame(L.geoJSON(f).getBounds());
+    // On a phone, clear the way: fold the panel (the picker stays) and close the card.
+    if (matchMedia('(max-width:760px)').matches){ panel.classList.add('collapsed'); closeHere(); }
+  }
+  queueDeclutter(); queueHash();
 }
 document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click', () => { if (b.dataset.scope !== scope) setScope(b.dataset.scope, true); }));
 
@@ -919,6 +997,7 @@ function linkState(){
   const parts = [['map', (Math.round(z * 4) / 4) + '/' + c.lat.toFixed(5) + '/' + c.lng.toFixed(5)]];
   if (pin){ const p = pin.getLatLng(); parts.push(['pin', p.lat.toFixed(5) + ',' + p.lng.toFixed(5)]); if (pinName) parts.push(['name', pinName]); }
   if (scope === 'outer') parts.push(['view', 'region']);
+  if (focusKey) parts.push(['focus', focusKey]);
   const on = LAYERS.filter(it => state[it.id]).map(it => it.id)
     .concat(SUBS.filter(s => document.getElementById(s.id).checked).map(s => s.id));
   const dflt = LAYERS.filter(it => it.on).map(it => it.id).concat(SUBS.filter(s => s.on).map(s => s.id));
@@ -942,9 +1021,10 @@ function readHash(h){
 // Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
 function applyHash(h){
   const o = readHash(h);
-  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit'].some(k => k in o)) return false;
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus'].some(k => k in o)) return false;
   const num = s => s.split(/[,/]/).map(Number);
-  setScope(o.view === 'region' ? 'outer' : 'inner', false);
+  setScope(o.view === 'region' || regionFeature(o.focus) ? 'outer' : 'inner', false);
+  setFocus(regionFeature(o.focus) ? o.focus : null, false);
   if (o.layers){
     const want = new Set(o.layers === 'none' ? [] : o.layers.split(','));
     // Area fills first, then the lens: switching the lens on turns fills off, so it must come last to win.
@@ -975,7 +1055,7 @@ function applyHash(h){
     if (ok(m)) inspect(at, o.name || undefined);
     else goTo(at, o.name || '', false);
   } else closeHere();
-  if (!ok(m) && !(ok(p) && p.length === 2)) frame(scope === 'inner' ? CITY_BOUNDS : REGION_VIEW);
+  if (!ok(m) && !(ok(p) && p.length === 2)) frame(scope === 'inner' ? CITY_BOUNDS : focusKey ? L.geoJSON(regionFeature(focusKey)).getBounds() : REGION_VIEW);
   return true;
 }
 // Share: the phone's share sheet where there is one, otherwise copy the link.
@@ -1109,7 +1189,8 @@ const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
     CITY.regionPlaces ? get(CITY.regionPlaces.file).then(d => { data.regionPlaces = d; }).catch(() => { data.regionPlaces = null; }) : null,
-    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
+    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null,
+    CITY.focus ? get('region_areas').then(d => { data.regionAreas = d; }).catch(() => { data.regionAreas = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
@@ -1118,6 +1199,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, loaded.regions);
   indexPlaces(base);
+  buildFocusUI();
   // City-only mode: cover every other municipality and the land beyond the region (water stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});

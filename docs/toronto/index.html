@@ -883,6 +883,22 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .scope button span{display:block;font-size:11px;color:var(--ink-3);margin-top:1px}
 .scope button[aria-checked="true"]{background:var(--pill-bg);color:var(--ink)}
 .scope button[aria-checked="true"] b{font-weight:700}
+.focus{margin:8px 16px 2px;display:grid;gap:6px}
+.focus[hidden]{display:none}
+.focus label{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3)}
+.focus select{font:inherit;font-size:13px;padding:7px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--panel);color:var(--ink);width:100%}
+.focus select:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.focus-res{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:600}
+.focus-res[hidden]{display:none}
+.focus-res button{font:inherit;font-size:11.5px;font-weight:500;border:none;background:none;color:var(--accent);cursor:pointer;padding:2px 0}
+.focus-list{max-height:210px}
+.focus-list button span{color:var(--ink-3);margin-left:5px;font-size:10.5px}
+.focus-dim{fill:var(--land-out);fill-opacity:.72;stroke:none}
+.focus-line{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round}
+.lbl-focus{font-size:11.5px;font-weight:600;color:var(--ink-2)!important}
+#map.focused .lbl-muni,#map.focused .lbl-region{display:none}
+.focus-go{display:block;margin:0 16px 10px;font:inherit;font-size:12px;font-weight:600;border:1px solid var(--rule);border-radius:8px;padding:6px 10px;background:none;color:var(--accent);cursor:pointer}
+.focus-go:hover{border-color:var(--accent)}
 .scope button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
 .mask{fill:var(--land-out);fill-opacity:.94;stroke:var(--land-out-line);stroke-width:1}
 .mode-inner .shield.outer,.mode-inner .go-out,.mode-inner path.outer,.mode-inner .lbl-region{display:none}
@@ -993,6 +1009,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 @media (max-width:760px){
   #panel{top:auto;left:0;right:0;bottom:0;width:auto;max-height:46%;border-radius:16px 16px 0 0;padding-bottom:env(safe-area-inset-bottom,0px)}
   #panel.collapsed #layers,#panel.collapsed .pf{display:none}
+  #panel.collapsed .focus-list,#panel.collapsed .focus-res{display:none}
   .ph{padding:8px 16px 10px;cursor:pointer}
   .ph .grab{display:block;width:36px;height:4px;border-radius:2px;background:var(--rule);margin:0 auto 8px}
   .ph h1{font-size:17px}
@@ -1091,7 +1108,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
-const CITY = {"id":"toronto","title":"Toronto Layers","description":"A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.","mapLabel":"Map of the City of Toronto","locale":"en-CA","view":{"city":[[43.581,-79.639],[43.855,-79.115]],"region":[[43.4,-80.05],[44.1,-78.85]],"max":[[43.05,-80.6],[44.75,-78.2]]},"scope":{"outer":{"name":"Greater Toronto Area","sub":"416 + 905"},"inner":{"name":"Toronto","sub":"416 only"}},"footprint":"boroughs","water":[{"name":"Lake Ontario","at":[43.585,-79.4],"cls":"lake-near"},{"name":"Lake Ontario","at":[43.45,-78.75],"cls":"lake-far"}],"attribution":"Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[43.67194,-79.38667],"name":"Toronto Reference Library (example)"},"search":{"label":"Search an address or place","country":"ca","viewbox":"-79.64,43.86,-79.11,43.58","regionViewbox":"-80.25,44.45,-78.60,43.28","noMatch":"No match in the GTA for “{q}”. Try the full street name, like “789 Yonge Street”.","more":"Or press Find to search addresses across the GTA"},"regionPlaces":{"file":"region_places.json","sub":"{kind} in {muni} · {region} Region","zoom":{"Town":11,"Village":12,"Community":12,"Neighbourhood":13,"Hamlet":12},"near":["Town","Village","Community"]},"outside":{"beyond":"That spot is outside the Greater Toronto Area.","regionPill":"{region} Region","note":"Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."},"drive":{"hub":[43.6453,-79.3806],"hubName":"Union Station"},"units":{"singular":"Neighbourhood","plural":"neighbourhoods"},"groups":[["Places",[{"id":"boroughs","kind":"fill","size":"major","file":"boroughs","name":"Former cities","place":"Former city","note":"The 6 municipalities merged in 1998","on":true,"colors":{"Old Toronto":"--b-oldtoronto","York":"--b-york","North York":"--b-northyork","East York":"--b-eastyork","Etobicoke":"--b-etobicoke","Scarborough":"--b-scarborough"}},{"id":"areas","kind":"fill","size":"minor","file":"areas","name":"Old Toronto areas","place":"Old Toronto area","note":"Downtown, Midtown, Uptown, West End, East End","on":true,"colors":{"Downtown":"--a-downtown","Midtown":"--a-midtown","Uptown":"--a-uptown","West End":"--a-westend","East End":"--a-eastend"}},{"id":"nbhd","kind":"units","file":"neighbourhoods","name":"Neighbourhoods","note":"The City’s 158 official neighbourhoods","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Neighbourhood lens","note":"Housing cost, time to Union, renters and owners, housing type. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},{"id":"cultural","kind":"knownas","file":"cultural","name":"Known-as names","note":"King West, Little Italy, the Junction…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Arenas, big parks, music venues, campuses"},{"id":"heritage","kind":"districts","file":"heritage","name":"Heritage districts","note":"29 Heritage Conservation Districts in force","label":"{name}","hover":"{name} Heritage Conservation District"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"25 wards, one councillor each","label":"Ward {num}","hover":"Ward {num} · {name}"},{"id":"prov","kind":"outline","level":"state","file":"wards","name":"Provincial ridings","note":"25 MPPs · same lines as the wards","label":"{prov}","hover":"Provincial: {prov}"},{"id":"fed","kind":"outline","level":"national","file":"federal","name":"Federal ridings","note":"24 MPs · 2023 boundaries","label":"{name}","hover":"Federal: {name}"},{"id":"bia","kind":"patches","file":"bia","name":"Business Improvement Areas","note":"85 BIAs","label":"{name}","hover":"{name} BIA"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"Arterials like King, Queen, Eglinton, Don Mills","on":true},{"id":"hwy","kind":"highways","files":["highways","gta_highways","gta_shields"],"name":"Highways","note":"400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen","on":true,"shields":{"401":"401","400":"400","404":"404","409":"409","427":"427","QEW":"QEW","2A":"2A","DVP":"DVP","Gardiner":"Gardiner","Allen":"Allen Rd"},"repeat":{"401":[0.15,0.5,0.85]},"tollShield":"407 ETR"},{"id":"go","kind":"rail","files":["go_lines","go_stations","go_lines_416"],"name":"GO Transit trains","note":"7 GO lines and UP Express to Pearson","on":true,"hover":"{name} line · Union – {to}","lineHover":{"UP":"{name} (Union – Pearson)"}},{"id":"subway","kind":"metro","files":["subway_lines","subway_stations"],"name":"Subway & LRT","note":"Lines 1, 2, 4, 5 and 6","on":true,"stationHover":"{name} · Line {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Neighbourhood lens","file":"nbhd_profiles.json","source":"2021 Census via City of Toronto Neighbourhood Profiles.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"union","short":"To Union","key":"unionBand","minutes":"union","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.","source":"TTC and Metrolinx schedules, routed with r5py."},{"id":"homes","short":"Housing type","key":"homesTier","field":"homes","pick":[["detached","Detached","detached houses"],["attached","Semi & row","semi-detached or row houses"],["lowrise","Low-rise","flats in duplexes and buildings under five storeys"],["tower","Towers","apartments in buildings of five or more storeys"]],"cuts":[10,30,60],"tiers":[["t1","Under 10%","--hty-1"],["t2","10–30%","--hty-2"],["t3","30–60%","--hty-3"],["t4","60% or more","--hty-4"]],"note":"Share of each neighbourhood's occupied homes that are {type}."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"union","label":"To Union by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"areas","else":"boroughs"},{"knownas":2},{"layer":"bia","text":"{name} BIA","color":"--bia"},{"layer":"fed","text":"Votes in {name}","color":"--fed"}],"facts":[{"label":"Former city","layer":"boroughs","text":"{name}"},{"label":"Area","layer":"areas","text":"{name}","empty":"Outside Old Toronto","emptyWithin":{"boroughs":"Old Toronto"}},{"label":"Neighbourhood","layer":"nbhd","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"Heritage district","layer":"heritage","text":"{name}[ (designated {since})]","onlyInside":true},{"label":"BIA","layer":"bia","text":"{name}[ (since {since})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num} · {name}"},{"label":"Provincial","layer":"wards","text":"{prov}"},{"label":"Federal","layer":"fed","text":"{name}"}],"living":{"hub":"To Union","hubText":"About {minutes} min by transit, weekday morning","caveat":"Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.","footer":"2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto.","homes":{"label":"Home types","types":[["detached","Detached"],["attached","Semi & row"],["lowrise","Low-rise"],["tower","Towers"]]},"built":{"label":"Built","bands":["1960 or before","1961–80","1981–2000","2001–21"]},"lang":{"label":"Language at home","floor":5,"note":"The language each person speaks most often at home.[ Another {multi}% name two or more equally.]"}},"reps":{"file":"representatives.json","offices":[{"role":"City councillor","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"MPP","layer":"wards","table":"prov","key":"prov","sub":"{r.party}"},{"role":"MP","layer":"fed","table":"fed","key":"name","sub":"{r.party}"}],"note":"Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."}}};
+const CITY = {"id":"toronto","title":"Toronto Layers","description":"A map of the City of Toronto with toggleable layers: former cities, Old Toronto areas, 158 neighbourhoods, known-as names, wards, ridings, BIAs, main streets, highways and rapid transit.","mapLabel":"Map of the City of Toronto","locale":"en-CA","view":{"city":[[43.581,-79.639],[43.855,-79.115]],"region":[[43.4,-80.05],[44.1,-78.85]],"max":[[43.05,-80.6],[44.75,-78.2]]},"scope":{"outer":{"name":"Greater Toronto Area","sub":"416 + 905"},"inner":{"name":"Toronto","sub":"416 only"}},"footprint":"boroughs","water":[{"name":"Lake Ontario","at":[43.585,-79.4],"cls":"lake-near"},{"name":"Lake Ontario","at":[43.45,-78.75],"cls":"lake-far"}],"attribution":"Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim","example":{"at":[43.67194,-79.38667],"name":"Toronto Reference Library (example)"},"search":{"label":"Search an address or place","country":"ca","viewbox":"-79.64,43.86,-79.11,43.58","regionViewbox":"-80.25,44.45,-78.60,43.28","noMatch":"No match in the GTA for “{q}”. Try the full street name, like “789 Yonge Street”.","more":"Or press Find to search addresses across the GTA"},"regionPlaces":{"file":"region_places.json","sub":"{kind} in {muni} · {region} Region","zoom":{"Town":11,"Village":12,"Community":12,"Neighbourhood":13,"Hamlet":12},"near":["Town","Village","Community"]},"outside":{"beyond":"That spot is outside the Greater Toronto Area.","regionPill":"{region} Region","note":"Outside the City of Toronto. Wards, ridings, neighbourhoods and BIAs on this map cover Toronto only."},"drive":{"hub":[43.6453,-79.3806],"hubName":"Union Station"},"focus":{"label":"Focus on a region","all":"All of the GTA","noun":"Regional municipality","count":"{n} municipalities in {name}","show":"Show all of {name}"},"units":{"singular":"Neighbourhood","plural":"neighbourhoods"},"groups":[["Places",[{"id":"boroughs","kind":"fill","size":"major","file":"boroughs","name":"Former cities","place":"Former city","note":"The 6 municipalities merged in 1998","on":true,"colors":{"Old Toronto":"--b-oldtoronto","York":"--b-york","North York":"--b-northyork","East York":"--b-eastyork","Etobicoke":"--b-etobicoke","Scarborough":"--b-scarborough"}},{"id":"areas","kind":"fill","size":"minor","file":"areas","name":"Old Toronto areas","place":"Old Toronto area","note":"Downtown, Midtown, Uptown, West End, East End","on":true,"colors":{"Downtown":"--a-downtown","Midtown":"--a-midtown","Uptown":"--a-uptown","West End":"--a-westend","East End":"--a-eastend"}},{"id":"nbhd","kind":"units","file":"neighbourhoods","name":"Neighbourhoods","note":"The City’s 158 official neighbourhoods","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Neighbourhood lens","note":"Housing cost, time to Union, renters and owners, housing type. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},{"id":"cultural","kind":"knownas","file":"cultural","name":"Known-as names","note":"King West, Little Italy, the Junction…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Arenas, big parks, music venues, campuses"},{"id":"heritage","kind":"districts","file":"heritage","name":"Heritage districts","note":"29 Heritage Conservation Districts in force","label":"{name}","hover":"{name} Heritage Conservation District"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"25 wards, one councillor each","label":"Ward {num}","hover":"Ward {num} · {name}"},{"id":"prov","kind":"outline","level":"state","file":"wards","name":"Provincial ridings","note":"25 MPPs · same lines as the wards","label":"{prov}","hover":"Provincial: {prov}"},{"id":"fed","kind":"outline","level":"national","file":"federal","name":"Federal ridings","note":"24 MPs · 2023 boundaries","label":"{name}","hover":"Federal: {name}"},{"id":"bia","kind":"patches","file":"bia","name":"Business Improvement Areas","note":"85 BIAs","label":"{name}","hover":"{name} BIA"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"Arterials like King, Queen, Eglinton, Don Mills","on":true},{"id":"hwy","kind":"highways","files":["highways","gta_highways","gta_shields"],"name":"Highways","note":"400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen","on":true,"shields":{"401":"401","400":"400","404":"404","409":"409","427":"427","QEW":"QEW","2A":"2A","DVP":"DVP","Gardiner":"Gardiner","Allen":"Allen Rd"},"repeat":{"401":[0.15,0.5,0.85]},"tollShield":"407 ETR"},{"id":"go","kind":"rail","files":["go_lines","go_stations","go_lines_416"],"name":"GO Transit trains","note":"7 GO lines and UP Express to Pearson","on":true,"hover":"{name} line · Union – {to}","lineHover":{"UP":"{name} (Union – Pearson)"}},{"id":"subway","kind":"metro","files":["subway_lines","subway_stations"],"name":"Subway & LRT","note":"Lines 1, 2, 4, 5 and 6","on":true,"stationHover":"{name} · Line {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}}]]],"lens":{"label":"Neighbourhood lens","file":"nbhd_profiles.json","source":"2021 Census via City of Toronto Neighbourhood Profiles.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Toronto. 2021 figures, not current prices."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more. Counted in May 2021, when transit use was unusually low everywhere."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"union","short":"To Union","key":"unionBand","minutes":"union","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to Union Station leaving 8–9 am on a weekday, walking to the stop included (TTC, GO and UP Express schedules). Median across each neighbourhood.","source":"TTC and Metrolinx schedules, routed with r5py."},{"id":"homes","short":"Housing type","key":"homesTier","field":"homes","pick":[["detached","Detached","detached houses"],["attached","Semi & row","semi-detached or row houses"],["lowrise","Low-rise","flats in duplexes and buildings under five storeys"],["tower","Towers","apartments in buildings of five or more storeys"]],"cuts":[10,30,60],"tiers":[["t1","Under 10%","--hty-1"],["t2","10–30%","--hty-2"],["t3","30–60%","--hty-3"],["t4","60% or more","--hty-4"]],"note":"Share of each neighbourhood's occupied homes that are {type}."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"union","label":"To Union by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"areas","else":"boroughs"},{"knownas":2},{"layer":"bia","text":"{name} BIA","color":"--bia"},{"layer":"fed","text":"Votes in {name}","color":"--fed"}],"facts":[{"label":"Former city","layer":"boroughs","text":"{name}"},{"label":"Area","layer":"areas","text":"{name}","empty":"Outside Old Toronto","emptyWithin":{"boroughs":"Old Toronto"}},{"label":"Neighbourhood","layer":"nbhd","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"Heritage district","layer":"heritage","text":"{name}[ (designated {since})]","onlyInside":true},{"label":"BIA","layer":"bia","text":"{name}[ (since {since})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num} · {name}"},{"label":"Provincial","layer":"wards","text":"{prov}"},{"label":"Federal","layer":"fed","text":"{name}"}],"living":{"hub":"To Union","hubText":"About {minutes} min by transit, weekday morning","caveat":"Representative 2021 Census figures, not current prices. Use them to compare neighbourhoods, not to budget.","footer":"2021 Census and TTC/GO schedules, {name}. Tiers compare neighbourhoods across Toronto.","homes":{"label":"Home types","types":[["detached","Detached"],["attached","Semi & row"],["lowrise","Low-rise"],["tower","Towers"]]},"built":{"label":"Built","bands":["1960 or before","1961–80","1981–2000","2001–21"]},"lang":{"label":"Language at home","floor":5,"note":"The language each person speaks most often at home.[ Another {multi}% name two or more equally.]"}},"reps":{"file":"representatives.json","offices":[{"role":"City councillor","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"MPP","layer":"wards","table":"prov","key":"prov","sub":"{r.party}"},{"role":"MP","layer":"fed","table":"fed","key":"name","sub":"{r.party}"}],"note":"Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."}}};
 /* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
    inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
@@ -1173,11 +1190,12 @@ const wide = () => !matchMedia('(max-width:760px)').matches;
 map.fitBounds(CITY_BOUNDS, wide() ? {paddingTopLeft:[330,20], paddingBottomRight:[350,20]} : {paddingTopLeft:[0,150], paddingBottomRight:[0,90]});
 map.setMaxBounds(L.latLngBounds(CITY.view.max));  // the region plus a margin
 
-const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['transit',470],['stlbl',475],['pts',480],['pin',620]];
+const panes = [['base',200],['fill',350],['lines',420],['streets',400],['civic',430],['hwy',450],['rail',460],['mask',465],['focus',468],['transit',470],['stlbl',475],['pts',480],['pin',620]];
 panes.forEach(([n,z]) => { map.createPane(n); map.getPane(n).style.zIndex = z; });
 map.getPane('base').style.pointerEvents = 'none';
 map.getPane('stlbl').style.pointerEvents = 'none';
 map.getPane('mask').style.pointerEvents = 'none';
+map.getPane('focus').style.pointerEvents = 'none';
 
 const layers = {}; const data = {layers: {}};
 const get = f => fetch(DATA + (f.includes('.') ? f : f + '.geojson')).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
@@ -1190,7 +1208,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -1727,9 +1745,11 @@ function inspect(latlng, title, muniName){
     here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || m.name) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
       '<div class="pills">' + nearCommunity(x, y, title) + '<span class="pill"><i style="background:var(--land-out-line)"></i>' + esc(m.name) + '</span><span class="pill"><i style="background:var(--muni-label)"></i>' + esc(fill(CITY.outside.regionPill, m)) + '</span></div>' +
       driveHere(x, y, m) +
+      (regionFeature(m.region) && focusKey !== m.region ? '<button type="button" class="focus-go">' + esc(fill(CITY.focus.show, {name: regionName(m.region)})) + '</button>' : '') +
       '<p class="outside-note">' + esc(CITY.outside.note) + '</p>';
     document.getElementById('hereX').onclick = closeHere;
     here.querySelector('.share').onclick = share;
+    const fg = here.querySelector('.focus-go'); if (fg) fg.onclick = () => setFocus(m.region, true);
     return;
   }
   placePin(latlng, title);
@@ -1899,6 +1919,10 @@ function indexPlaces(base){
   if (UNITS) data.units.features.forEach(f => add(f, CITY.units.singular + (f.properties.code != null ? ' #' + f.properties.code : ''), false));
   if (data.knownas) data.knownas.features.forEach(f => add(f, 'Known-as name', false));
   base.features.filter(f => f.properties.kind === 'neighbour').forEach(f => add(f, fill(CITY.outside.regionPill, f.properties) || 'Nearby', true));
+  // The counties or regions themselves: choosing one focuses on it.
+  // "DuPage" or "Peel" alone is as good as the full name ("Lake" matches two, so it lists both).
+  if (data.regionAreas) data.regionAreas.features.forEach(f => PLACES.push({name: regionName(f.properties.region), sub: CITY.focus.noun, outside: true, focus: f.properties.region, rank: 3.5, f,
+    alt: [f.properties.region, regionName(f.properties.region).split(/ (?:county|region)\b/i)[0]]}));
   // Named communities in the municipalities around the city (cities/<city> builds region_places.json).
   (data.regionPlaces || []).forEach(p => PLACES.push({name: p.name, alt: p.alt, sub: fill(CITY.regionPlaces.sub, p), outside: true, muni: p.muni,
     community: (CITY.regionPlaces.near || []).includes(p.kind) ? 5 : 6,
@@ -1924,7 +1948,7 @@ function suggestions(text){
   });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));
-    if (b) out.push({s: b.s, rank: p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
+    if (b) out.push({s: b.s, rank: p.rank || p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
   });
   return out.sort((a, b) => a.s - b.s || a.rank - b.rank || a.name.localeCompare(b.name)).slice(0, 6);
 }
@@ -1937,6 +1961,7 @@ function showSuggestions(list, more){
 function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), f.properties.name, true); }
 // A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
 function goPlace(p){
+  if (p.focus){ showResults(''); q.value = p.name; setFocus(p.focus, true); return; }
   const g = p.f.geometry;
   if (g.type === 'Point'){ goTo(L.latLng(g.coordinates[1], g.coordinates[0]), p.name, true, p.zoom, p.muni); return; }
   showResults(''); q.value = p.name;
@@ -1983,9 +2008,79 @@ function setScope(s, move){
     const lyr = layers[SUBURBS.id];
     if (lyr){ if (s === 'outer' && state[SUBURBS.id]) lyr.addTo(map); else map.removeLayer(lyr); }
   }
+  const fb = document.getElementById('focusBox');
+  if (fb) fb.hidden = s === 'inner';
+  if (s === 'inner' && focusKey) setFocus(null, false);
   if (move) frame(s === 'inner' ? CITY_BOUNDS : REGION_VIEW);
   queueDeclutter();
   queueHash();
+}
+
+/* ---------- Focus on one county or region (regional view) ----------
+   Picking one (from the panel, search, or a spot's card) outlines it, dims everything outside it, frames
+   the map on it, labels every municipality inside and lists them in the panel. Outlines come from
+   region_areas.geojson (engine/regions.py); municipalities belong to the region named on them in base. */
+let focusKey = null, focusLayer = null;
+const regionName = k => fill(CITY.outside.regionPill, {region: k}) || k;
+const regionFeature = k => k && CITY.focus && data.regionAreas ? data.regionAreas.features.find(f => f.properties.region === k) : null;
+function buildFocusUI(){
+  if (!CITY.focus || !data.regionAreas) return;
+  const keys = data.regionAreas.features.map(f => f.properties.region).sort((a, b) => regionName(a).localeCompare(regionName(b)));
+  const box = document.createElement('div'); box.className = 'focus'; box.id = 'focusBox'; box.hidden = scope !== 'outer';
+  box.innerHTML = '<label for="focusSel">' + esc(CITY.focus.label) + '</label><select id="focusSel"><option value="">' + esc(CITY.focus.all) + '</option>' +
+    keys.map(k => '<option value="' + esc(k) + '">' + esc(regionName(k)) + '</option>').join('') + '</select>' +
+    '<div class="focus-res" id="focusRes" hidden><span id="focusCount"></span><button type="button" id="focusClear">Show all</button></div><div class="flist focus-list" id="focusList" hidden></div>';
+  document.querySelector('.scope').after(box);
+  box.querySelector('select').addEventListener('change', e => setFocus(e.target.value || null, true));
+  box.querySelector('#focusClear').addEventListener('click', () => setFocus(null, true));
+}
+function setFocus(key, move){
+  const f = regionFeature(key);
+  if (key && !f) return;
+  if (f && scope === 'inner') setScope('outer', false);
+  focusKey = f ? key : null;
+  if (focusLayer){ map.removeLayer(focusLayer); focusLayer = null; }
+  map.getContainer().classList.toggle('focused', !!f);
+  const sel = document.getElementById('focusSel'); if (sel) sel.value = focusKey || '';
+  const list = document.getElementById('focusList'), res = document.getElementById('focusRes');
+  if (!f){
+    if (list){ list.hidden = true; res.hidden = true; list.innerHTML = ''; }
+    if (move) frame(REGION_VIEW);
+    queueDeclutter(); queueHash(); return;
+  }
+  focusLayer = L.layerGroup();
+  // Dim everything outside: a sheet over the whole map with the region cut out of it.
+  const v = CITY.view.max, sheet = [[v[0][0] - 5, v[0][1] - 5], [v[0][0] - 5, v[1][1] + 5], [v[1][0] + 5, v[1][1] + 5], [v[1][0] + 5, v[0][1] - 5]];
+  const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+  focusLayer.addLayer(L.polygon([sheet].concat(polys.map(p => p[0].map(ll))), {pane: 'mask', interactive: false, className: 'focus-dim'}));
+  focusLayer.addLayer(L.geoJSON(f, {pane: 'focus', interactive: false, style: () => ({className: 'focus-line'})}));
+  // Every municipality in it, biggest first so they win the label declutter.
+  const size = g => { const b = L.geoJSON(g).getBounds(); return (b.getEast() - b.getWest()) * (b.getNorth() - b.getSouth()); };
+  const towns = data.outer.features.filter(t => t.properties.region === key && !t.properties.rest);
+  towns.slice().sort((a, b) => size(b) - size(a)).forEach(t => focusLayer.addLayer(label(esc(t.properties.name), 'lbl-focus', ll(t.properties.lp))));
+  focusLayer.addTo(map);
+  // The list in the panel: tap a name to go there.
+  const sorted = towns.slice().sort((a, b) => a.properties.name.localeCompare(b.properties.name));
+  document.getElementById('focusCount').textContent = fill(CITY.focus.count, {n: sorted.length, name: regionName(key)});
+  list.innerHTML = '';
+  sorted.forEach(t => {
+    const b = document.createElement('button'); b.type = 'button';
+    b.innerHTML = esc(t.properties.name) + (t.properties.drive != null ? '<span>' + t.properties.drive + ' min</span>' : '');
+    b.title = t.properties.drive != null ? 'About ' + t.properties.drive + ' min to ' + CITY.drive.hubName + ' with no traffic' : '';
+    b.addEventListener('click', () => {
+      const p = PLACES.find(x => x.f === t);
+      if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+      if (p) goPlace(p);
+    });
+    list.appendChild(b);
+  });
+  list.hidden = false; res.hidden = false;
+  if (move){
+    frame(L.geoJSON(f).getBounds());
+    // On a phone, clear the way: fold the panel (the picker stays) and close the card.
+    if (matchMedia('(max-width:760px)').matches){ panel.classList.add('collapsed'); closeHere(); }
+  }
+  queueDeclutter(); queueHash();
 }
 document.querySelectorAll('[data-scope]').forEach(b => b.addEventListener('click', () => { if (b.dataset.scope !== scope) setScope(b.dataset.scope, true); }));
 
@@ -2013,6 +2108,7 @@ function linkState(){
   const parts = [['map', (Math.round(z * 4) / 4) + '/' + c.lat.toFixed(5) + '/' + c.lng.toFixed(5)]];
   if (pin){ const p = pin.getLatLng(); parts.push(['pin', p.lat.toFixed(5) + ',' + p.lng.toFixed(5)]); if (pinName) parts.push(['name', pinName]); }
   if (scope === 'outer') parts.push(['view', 'region']);
+  if (focusKey) parts.push(['focus', focusKey]);
   const on = LAYERS.filter(it => state[it.id]).map(it => it.id)
     .concat(SUBS.filter(s => document.getElementById(s.id).checked).map(s => s.id));
   const dflt = LAYERS.filter(it => it.on).map(it => it.id).concat(SUBS.filter(s => s.on).map(s => s.id));
@@ -2036,9 +2132,10 @@ function readHash(h){
 // Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
 function applyHash(h){
   const o = readHash(h);
-  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit'].some(k => k in o)) return false;
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus'].some(k => k in o)) return false;
   const num = s => s.split(/[,/]/).map(Number);
-  setScope(o.view === 'region' ? 'outer' : 'inner', false);
+  setScope(o.view === 'region' || regionFeature(o.focus) ? 'outer' : 'inner', false);
+  setFocus(regionFeature(o.focus) ? o.focus : null, false);
   if (o.layers){
     const want = new Set(o.layers === 'none' ? [] : o.layers.split(','));
     // Area fills first, then the lens: switching the lens on turns fills off, so it must come last to win.
@@ -2069,7 +2166,7 @@ function applyHash(h){
     if (ok(m)) inspect(at, o.name || undefined);
     else goTo(at, o.name || '', false);
   } else closeHere();
-  if (!ok(m) && !(ok(p) && p.length === 2)) frame(scope === 'inner' ? CITY_BOUNDS : REGION_VIEW);
+  if (!ok(m) && !(ok(p) && p.length === 2)) frame(scope === 'inner' ? CITY_BOUNDS : focusKey ? L.geoJSON(regionFeature(focusKey)).getBounds() : REGION_VIEW);
   return true;
 }
 // Share: the phone's share sheet where there is one, otherwise copy the link.
@@ -2203,7 +2300,8 @@ const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
     CITY.regionPlaces ? get(CITY.regionPlaces.file).then(d => { data.regionPlaces = d; }).catch(() => { data.regionPlaces = null; }) : null,
-    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null]))
+    CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null,
+    CITY.focus ? get('region_areas').then(d => { data.regionAreas = d; }).catch(() => { data.regionAreas = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
@@ -2212,6 +2310,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});
   buildBase(base, loaded.regions);
   indexPlaces(base);
+  buildFocusUI();
   // City-only mode: cover every other municipality and the land beyond the region (water stays visible).
   mask = L.geoJSON({type:'FeatureCollection', features: base.features.filter(f => f.properties.kind !== 'city')},
     {pane:'mask', interactive:false, style: () => ({className:'mask'})});

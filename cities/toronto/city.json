@@ -43,6 +43,7 @@
   },
 
   "drive": {"hub": [43.6453, -79.3806], "hubName": "Union Station"},
+  "focus": {"label": "Focus on a region", "all": "All of the GTA", "noun": "Regional municipality", "count": "{n} municipalities in {name}", "show": "Show all of {name}"},
   "units": {"singular": "Neighbourhood", "plural": "neighbourhoods"},
 
   "groups": [

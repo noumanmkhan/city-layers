@@ -36,6 +36,7 @@
   },
 
   "drive": {"hub": [41.882, -87.6278], "hubName": "State & Madison"},
+  "focus": {"label": "Focus on a county", "all": "All of Chicagoland", "noun": "County", "count": "{n} towns in {name}", "show": "Show all of {name}"},
   "units": {"singular": "Community area", "plural": "community areas"},
 
   "groups": [

@@ -169,6 +169,8 @@ write('regions', [{'type': 'Feature', 'properties': {'name': county_name(gid)},
                    'geometry': {'type': 'Point', 'coordinates': label_pt(cg.difference(CITY.buffer(0.01)))}}
                   for gid, cg in counties.items()])
 REGION = unary_union(list(counties.values())).buffer(0.01)
+# Real county lines for "Focus on a county" (engine/regions.py): clipped to land, since Cook and Lake run out into the lake.
+dump('region_areas', [feat(polys(cg.difference(WATER)), {'region': county_name(gid)}) for gid, cg in counties.items()])
 
 # ---------- Expressways: inside the city by name, across the region by route ----------
 EXPRESSWAYS = {  # the names Chicagoans use, by OpenStreetMap name fragment
