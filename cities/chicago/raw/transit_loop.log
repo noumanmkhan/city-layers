@@ -1,8 +1,9 @@
   got https://www.transitchicago.com/downloads/sch_data/google_transit.zip 67127 KB
   leaving out empty frequencies.txt from cta.zip
   got https://schedules.metrarail.com/gtfs/schedule.zip 699 KB
+  got http://www.mysouthshoreline.com/google/google_transit.zip 34 KB
   got https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf 100128 KB
-feed ranges [('20260911', '20261130'), ('20250101', '20261231')]
+feed ranges [('20260911', '20261130'), ('20250101', '20261231'), ('20260101', '20301231')]
 departure 2026-10-20 08:00:00
 3741 origin points, 5 Loop destinations
-wrote raw/transit_loop.json: 77 community areas; minutes min/median/max 10 46 103 · quickest via {'Union Station & Ogilvie (Canal & Madison)': 164, 'State & Madison': 1161, 'Clark/Lake': 1257, 'LaSalle/Van Buren': 879, 'Millennium Station (Randolph & Michigan)': 203}
+wrote raw/transit_loop.json: 77 community areas; minutes min/median/max 10 46 93 · quickest via {'Union Station & Ogilvie (Canal & Madison)': 164, 'State & Madison': 1111, 'Clark/Lake': 1257, 'LaSalle/Van Buren': 879, 'Millennium Station (Randolph & Michigan)': 253}
