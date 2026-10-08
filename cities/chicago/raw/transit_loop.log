@@ -1,0 +1,38 @@
+  got https://www.transitchicago.com/downloads/sch_data/google_transit.zip 67127 KB
+  got https://schedules.metrarail.com/gtfs/schedule.zip 699 KB
+  got https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf 100128 KB
+feed ranges [('20260911', '20261130'), ('20250101', '20261231')]
+departure 2026-10-20 08:00:00
+3741 origin points, 5 Loop destinations
+Traceback (most recent call last):
+  File "KryoNetworkSerializer.java", line 129, in com.conveyal.r5.kryo.KryoNetworkSerializer.read
+Exception: Java Exception
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/r5py/r5/transport_network.py", line 260, in _load_pickled_transport_network
+    transport_network = com.conveyal.r5.kryo.KryoNetworkSerializer.read(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+java.io.java.io.FileNotFoundException: java.io.FileNotFoundException: /home/runner/.cache/r5py/caf0c8732fe15ccd75f91c940ca2a8b272445297c1bfd64a64eaafe7b67b1270.transport_network (No such file or directory)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/r5py/r5/transport_network.py", line 97, in __init__
+    transport_network = self._load_pickled_transport_network(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/r5py/r5/transport_network.py", line 277, in _load_pickled_transport_network
+    raise FileNotFoundError from exception
+FileNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/city-layers/city-layers/cities/chicago/fetch_transit_loop.py", line 145, in <module>
+    net = TransportNetwork(pbf, feeds)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/r5py/r5/transport_network.py", line 144, in __init__
+    raise GtfsFileError(
+r5py.util.exceptions.GtfsFileError: Could not load GTFS file cta.zip. 
+EmptyTableError: frequencies line 0: Table is present in zip file, but it has no entries.
