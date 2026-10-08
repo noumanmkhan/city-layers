@@ -113,6 +113,8 @@ The second city runs on the same engine with its own data and config (`cities/ch
 
 The community area lens uses the American Community Survey (2020–2024 five-year estimates): Census tracts are grouped into community areas, and median home values and rents are read from the summed price brackets. Its tiers use the same cut-offs as Toronto's, so the two maps read alike. In the Chicagoland view, *Focus on a county* does the same for the seven Illinois counties and Lake and Porter in Indiana, using the Census Bureau's county lines: pick DuPage and its 29 towns are outlined, labelled and listed. Chicagoland residents tend to place themselves by county first, so this came straight from a Chicagoan's feedback. The suburban lens works the same way in the Chicagoland view, timed to State & Madison, the zero point of Chicago's address grid, from about 5,300 points; unincorporated county land stays grey but still gets a time on the card. Representatives are the alderperson, state representative, state senator and member of Congress, refreshed weekly from the City's data portal, Open States and the Clerk of the House.
 
+*To the Loop* is Chicago's version of Toronto's time to Union: the typical transit trip on a weekday morning, from about 3,700 points 400 m apart across the 77 community areas, routed with r5py on the CTA, Metra and South Shore Line schedules. Because the Loop is a district rather than one station, each point counts its quickest arrival at any of five spots: Union Station or Ogilvie, LaSalle/Van Buren, Clark/Lake, State & Madison, or Millennium Station. It's banded like Toronto's (under 30 minutes, 30–45, 45–60, over an hour) and works with *Narrow it down*.
+
 ## How it's built
 
 - **One engine, one folder per city.** The map page is a shared engine (`engine/`) that knows how to draw kinds of layer: filled areas, official neighbourhoods, representation boundaries, business areas, streets, highways, regional rail and rapid transit. Everything about Toronto lives in `cities/toronto/`: `city.json` holds the layer list, labels, lenses and the rows of the "What's here" card, and `city.css` holds Toronto's colours. Adding a city means adding its data and config, not changing the engine.
@@ -157,7 +159,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
 - Representatives are refreshed weekly, so for a few days after an election or by-election the card can lag. Vacant seats say so.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
-- Chicago: the sides are a convention, not an official boundary, and the main streets come from OpenStreetMap plus a hand-kept list of the mile-grid arterials and diagonals. The lens has no "time to the Loop" yet.
+- Chicago: the sides are a convention, not an official boundary, and the main streets come from OpenStreetMap plus a hand-kept list of the mile-grid arterials and diagonals. Times to the Loop come from published schedules, like Toronto's times to Union.
 
 ## Roadmap
 

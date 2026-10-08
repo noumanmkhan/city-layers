@@ -77,6 +77,10 @@
       {"id": "cost", "short": "Housing cost", "key": "cost",
        "tiers": [["lower", "Lower housing cost", "--cost-1"], ["middle", "Middle", "--cost-2"], ["higher", "Higher housing cost", "--cost-3"]],
        "note": "Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},
+      {"id": "loop", "short": "To the Loop", "key": "loopBand", "minutes": "loop", "optional": true,
+       "tiers": [["under30", "Under 30 min", "--uni-1"], ["30to45", "30–45 min", "--uni-2"], ["45to60", "45–60 min", "--uni-3"], ["over60", "Over an hour", "--uni-4"]],
+       "note": "Typical transit trip to the Loop leaving 8–9 am on a weekday, walking to the stop included (CTA ‘L’ and buses, Metra and the South Shore Line). Each spot counts its quickest arrival in the Loop: Union or Ogilvie, LaSalle/Van Buren, Clark/Lake, State & Madison or Millennium Station. Median across each community area.",
+       "source": "CTA, Metra and South Shore Line schedules, routed with r5py."},
       {"id": "commute", "short": "Getting to work", "key": "commute",
        "tiers": [["transit", "Mostly transit, walk or bike", "--com-1"], ["mixed", "Mixed", "--com-2"], ["car", "Mostly car", "--com-3"]],
        "note": "Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},
@@ -87,6 +91,7 @@
     ],
     "filters": [
       {"lens": "cost", "label": "Housing cost", "options": [["lower", "Lower"], ["middle", "Middle"], ["higher", "Higher"]]},
+      {"lens": "loop", "label": "To the Loop by transit", "max": true, "options": [[30, "Up to 30 min"], [45, "45 min"], [60, "60 min"]]},
       {"lens": "commute", "label": "Getting to work", "options": [["transit", "Transit, walk, bike"], ["mixed", "Mixed"], ["car", "Car"]]},
       {"lens": "tenure", "label": "Households", "options": [["owners", "Mostly own"], ["mix", "A mix"], ["renters", "Mostly rent"]]}
     ]
@@ -111,8 +116,10 @@
       {"label": "Congress", "layer": "congress", "text": "IL-{num}"}
     ],
     "living": {
+      "hub": "To the Loop",
+      "hubText": "About {minutes} min by transit, weekday morning",
       "caveat": "Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.",
-      "footer": "American Community Survey 2020–2024, {name}. Tiers compare community areas across Chicago.",
+      "footer": "American Community Survey 2020–2024 and CTA/Metra schedules, {name}. Tiers compare community areas across Chicago.",
       "homes": {"label": "Home types", "types": [["detached", "Detached"], ["attached", "Attached"], ["flats", "2–19 units"], ["large", "20+ units"]]},
       "built": {"label": "Built", "bands": ["1939 or earlier", "1940–79", "1980–99", "2000 or later"]},
       "lang": {"label": "Language at home", "floor": 5, "note": "English only, or the language besides English that each person 5 or older speaks at home. For small areas the Census groups some languages: Polish shares a group with Russian and other Slavic languages."}

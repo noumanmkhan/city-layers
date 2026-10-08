@@ -13,6 +13,9 @@ Housing cost: median home value and median rent ranked against all 77; the two r
 Getting to work: share of commuters (people who don't work from home) who drive: mostly car 68%+,
   mixed 50-68%, mostly transit / walk / bike under 50%.
 Renters and owners: share of households that rent: mostly owners under 35%, a mix 35-60%, mostly renters over 60%.
+To the Loop by transit: if raw/transit_loop.json is present (computed by fetch_transit_loop.py in GitHub
+  Actions), each community area also gets its typical weekday-morning transit time to the Loop, banded
+  under 30, 30-45, 45-60 and over 60 minutes, the same bands as Toronto's time to Union.
 
 Card-only descriptions (no tiers, never ranked), from raw/acs_more.json (fetch_acs_more.py), read by label:
 - Homes by building size (B25032, occupied homes, owners and renters together): detached houses; attached
@@ -155,10 +158,18 @@ for d in data.values():
     d['commute'] = 'car' if d['carPct'] >= 68 else 'mixed' if d['carPct'] >= 50 else 'transit'
     d['tenure'] = 'owners' if d['renterPct'] < 35 else 'mix' if d['renterPct'] <= 60 else 'renters'
 
+TL = os.path.join(RAW, 'transit_loop.json')
+if os.path.exists(TL):
+    tl = json.load(open(TL))['areas']
+    for k, d in data.items():
+        m = (tl.get(k) or {}).get('minutes')
+        d['loop'] = m
+        d['loopBand'] = None if m is None else 'under30' if m < 30 else '30to45' if m < 45 else '45to60' if m <= 60 else 'over60'
+
 json.dump(data, open(OUT, 'w'), separators=(',', ':'))
 for k in ('24', '31', '8'):
     print('example', k, data[k]['name'], data[k]['homes'], data[k]['built'], data[k]['lang'])
 print('languages ever in a top 3:', sorted({l[0] for d in data.values() for l in d.get('lang', [])[:3]}))
 print('profiles:', len(data), 'community areas from', sum(placed.values()), 'tracts, ACS', acs['year'], ';',
       dict(Counter(d['cost'] for d in data.values())), dict(Counter(d['commute'] for d in data.values())),
-      dict(Counter(d['tenure'] for d in data.values())))
+      dict(Counter(d['tenure'] for d in data.values())), dict(Counter(d.get('loopBand') for d in data.values())))
