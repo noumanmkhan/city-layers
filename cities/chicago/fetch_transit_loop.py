@@ -4,7 +4,8 @@ access); writes raw/transit_loop.json. Chicago's version of cities/toronto/fetch
 
 How it works:
   1. Download the schedules (GTFS) for the CTA ('L' and buses) and Metra, and an OpenStreetMap
-     extract for walking. Metra pads its GTFS fields with spaces, so its feed is rewritten trimmed.
+     extract for walking. Both feeds are rewritten tidied for R5: Metra pads its fields with spaces,
+     and the CTA ships an empty frequencies.txt, which R5 refuses.
   2. Scatter origin points about 400 m apart inside each of the 77 community areas
      (raw/community_areas.geojson), so a big area isn't judged by one spot.
   3. Route every point with r5py (Conveyal R5): walk + any transit, leaving between 8:00 and 9:00 on
@@ -57,26 +58,28 @@ def gtfs_ok(path):
         return False
 
 
-def trimmed(path):
-    """Rewrite a GTFS zip with every header and value stripped of surrounding spaces."""
+def tidied(path):
+    """Rewrite a GTFS zip with every header and value stripped of surrounding spaces, leaving out
+    tables that have a header but no rows (R5 rejects those)."""
     out = path.replace('.zip', '-clean.zip')
     with zipfile.ZipFile(path) as zi, zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as zo:
         for n in zi.namelist():
             if not n.endswith('.txt'):
                 zo.writestr(n, zi.read(n)); continue
-            buf = io.StringIO(); w = csv.writer(buf, lineterminator='\n')
-            for row in csv.reader(io.TextIOWrapper(zi.open(n), encoding='utf-8-sig')):
-                w.writerow([v.strip() for v in row])
+            rows = [[v.strip() for v in row] for row in csv.reader(io.TextIOWrapper(zi.open(n), encoding='utf-8-sig')) if any(v.strip() for v in row)]
+            if len(rows) < 2:
+                print('  leaving out empty', n, 'from', os.path.basename(path)); continue
+            buf = io.StringIO(); csv.writer(buf, lineterminator='\n').writerows(rows)
             zo.writestr(n, buf.getvalue())
     return out
 
 
 feeds, log = [], []
-for name, urls, clean in (('cta', CTA, False), ('metra', METRA, True)):
+for name, urls in (('cta', CTA), ('metra', METRA)):
     for u in urls:
         p = download(u, os.path.join(WORK, name + '.zip'))
         if p and gtfs_ok(p):
-            feeds.append(trimmed(p) if clean else p); log.append(name.upper() + ': ' + u); break
+            feeds.append(tidied(p)); log.append(name.upper() + ': ' + u); break
     else:
         raise SystemExit('No ' + name + ' GTFS found')
 
