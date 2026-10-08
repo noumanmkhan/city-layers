@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 8, 2026.
+a read-only consumer. Last updated October 8, 2026 (search: landmark and known-as fields).
 
 ## 1. Ground rules
 
@@ -53,6 +53,31 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
 (a unit number), `num` (a ward or district number).
+
+### Point layers used for search
+
+- **Landmarks** (the `landmarks`-kind layer; file `landmarks.geojson`): ~40 curated points per
+  city. Properties: `name`, `cat` (`park`, `music`, `culture`, `sports`, `campus`, `civic`,
+  `airport`), `catLabel` (display text, e.g. "Sports venue"), `tier` (display priority; 1 is
+  most prominent), `aliases` (other names people search for, e.g. "Air Canada Centre" for
+  Scotiabank Arena; may be empty).
+- **Known-as names** (the `knownas`-kind layer; `cultural.geojson` in Toronto,
+  `knownas.geojson` in Chicago): `name` and `kind` (`district`, `village`, `enclave`).
+- **Units** (the `units`-kind layer): `name` and `code`.
+- **`region_places.json`** (Toronto only): see the table above; an entry may also have `alt`,
+  a list of other names.
+
+How the website's search does it, for an app that wants to match:
+
+- Searched locally as you type: landmarks (name and `aliases`), the names in `fill` layers
+  (former cities, Old Toronto areas, Chicago's sides), units, known-as names, neighbouring
+  municipalities (`base.geojson` `neighbour` features), and `region_places` (name and `alt`).
+- Matching ignores case, spacing and punctuation ("Yonge-St. Clair" finds "Yonge-St.Clair").
+  An exact match ranks above a prefix match, which ranks above a match at the start of any word.
+  At most 6 results.
+- A result found through an alias shows its canonical `name`, with "also called {alias}"
+  beneath. Choosing it titles the card with the canonical name.
+- Street addresses are looked up only when the user presses Find, never as they type.
 
 ## 4. city.json: the parts an app uses
 
