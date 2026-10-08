@@ -3,7 +3,8 @@ Run from GitHub Actions (.github/workflows/fetch-transit-loop.yml: needs Java 21
 access); writes raw/transit_loop.json. Chicago's version of cities/toronto/fetch_transit_union.py.
 
 How it works:
-  1. Download the schedules (GTFS) for the CTA ('L' and buses) and Metra, and an OpenStreetMap
+  1. Download the schedules (GTFS) for the CTA ('L' and buses), Metra and the South Shore Line (NICTD,
+     the commuter railroad from Hegewisch and Indiana into Millennium Station), and an OpenStreetMap
      extract for walking. Both feeds are rewritten tidied for R5: Metra pads its fields with spaces,
      and the CTA ships an empty frequencies.txt, which R5 refuses.
   2. Scatter origin points about 400 m apart inside each of the 77 community areas
@@ -29,6 +30,8 @@ LOOP = [  # (name, lon, lat): the Loop's main arrival points, west to east
 ]
 CTA = ['https://www.transitchicago.com/downloads/sch_data/google_transit.zip']
 METRA = ['https://schedules.metrarail.com/gtfs/schedule.zip']
+SOUTH_SHORE = ['http://www.mysouthshoreline.com/google/google_transit.zip',
+               'https://files.mobilitydatabase.org/mdb-585/mdb-585-202604240015/mdb-585-202604240015.zip']   # Mobility Database copy
 OSM = 'https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf'
 ILLINOIS = 'https://download.geofabrik.de/north-america/us/illinois-latest.osm.pbf'
 BBOX = '-88.00,41.60,-87.50,42.08'    # west,south,east,north: the city plus a margin
@@ -75,13 +78,14 @@ def tidied(path):
 
 
 feeds, log = [], []
-for name, urls in (('cta', CTA), ('metra', METRA)):
+for name, urls, needed in (('cta', CTA, True), ('metra', METRA, True), ('southshore', SOUTH_SHORE, False)):
     for u in urls:
         p = download(u, os.path.join(WORK, name + '.zip'))
         if p and gtfs_ok(p):
             feeds.append(tidied(p)); log.append(name.upper() + ': ' + u); break
     else:
-        raise SystemExit('No ' + name + ' GTFS found')
+        if needed: raise SystemExit('No ' + name + ' GTFS found')
+        print('WARNING: no', name, 'feed; going on without it')
 
 # Walking network.
 pbf = os.path.join(WORK, 'chicago.osm.pbf')
@@ -168,7 +172,7 @@ for code, grp in origins.groupby('code'):
     out[str(code)] = {'minutes': round(statistics.median(vals)) if vals else None,
                       'best': round(min(vals)) if vals else None, 'points': len(grp), 'reached': len(vals)}
 json.dump({'to': 'the Loop (quickest of %d points)' % len(LOOP), 'destinations': [[n, x, y] for n, x, y in LOOP],
-           'departure': depart.isoformat(), 'window_minutes': 60, 'modes': "walk + transit (CTA 'L' and buses, Metra)",
+           'departure': depart.isoformat(), 'window_minutes': 60, 'modes': "walk + transit (CTA 'L' and buses, Metra" + (', South Shore Line' if any(l.startswith('SOUTHSHORE') for l in log) else '') + ')',
            'sources': log, 'quickest_via': used, 'areas': out, 'points': points},
           open(os.path.join(HERE, 'raw', 'transit_loop.json'), 'w'), separators=(',', ':'))
 mins = sorted(v['minutes'] for v in out.values() if v['minutes'] is not None)
