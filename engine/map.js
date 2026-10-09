@@ -25,6 +25,19 @@ const LAYERS = CITY.groups.flatMap(([, items]) => items);
 const byKind = k => LAYERS.find(it => it.kind === k);
 const UNITS = byKind('units'), METRO = byKind('metro');
 const AREA_KINDS = ['fill', 'units', 'outline', 'patches', 'districts'];   // polygon layers the "What's here" card tests against
+/* School board wards ("boards" kind): one file holds every board's wards, each feature tagged with its
+   board. The panel shows one board at a time (it.boards: [id, short, long], the first is the default);
+   the card looks up the spot's ward in every board. */
+const BOARDS = LAYERS.filter(it => it.kind === 'boards');
+const boardPick = {};
+BOARDS.forEach(it => { boardPick[it.id] = it.boards[0][0]; });
+const boardOf = (it, id) => it.boards.find(b => b[0] === id);
+const boardCtx = (it, f) => { const b = boardOf(it, f.properties.board) || []; return Object.assign({}, f.properties, {short: b[1], long: b[2]}); };
+function boardHits(it, x, y){
+  const out = {}, fc = data.layers[it.id]; if (!fc) return out;
+  fc.features.forEach(f => { if (!out[f.properties.board] && contains(f.geometry, x, y)) out[f.properties.board] = f; });
+  return out;
+}
 
 /* Neighbourhood lenses (tiers from the city's profile data). One shows at a time. */
 const LENSES = {};
@@ -97,7 +110,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -181,6 +194,15 @@ const KINDS = {
   },
   // Protected districts (heritage, landmark): a dashed outline with a light wash, so the streets inside still read.
   districts: (it, fc) => polyLayer(fc, {pane:'civic', cls: () => 'hd', label: f => fill(it.label, f.properties), lcls: () => 'lbl-hd', hover: f => fill(it.hover, f.properties)}),
+  // Trustee wards: only the picked board's wards are drawn; g._pick swaps boards.
+  boards: (it, fc) => {
+    const g = L.layerGroup(), per = {};
+    it.boards.forEach(([b]) => { per[b] = polyLayer({type: 'FeatureCollection', features: fc.features.filter(f => f.properties.board === b)},
+      {pane:'civic', cls: () => 'sbw', label: f => fill(it.label, boardCtx(it, f)), lcls: () => 'lbl-sbw', hover: f => fill(it.hover, boardCtx(it, f))}); });
+    g.addLayer(per[boardPick[it.id]]);
+    g._pick = b => { Object.values(per).forEach(l => g.removeLayer(l)); g.addLayer(per[b]); };
+    return g;
+  },
   patches: (it, fc) => polyLayer(fc, {pane:'civic', cls: () => 'bia', label: f => fill(it.label, f.properties), lcls: () => 'lbl-bia', hover: f => fill(it.hover, f.properties)}),
   lens: (it, [fc, prof]) => {
     const g = L.geoJSON(fc, {pane:'fill', style: f => {
@@ -373,7 +395,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -406,6 +428,14 @@ CITY.groups.forEach(([title, items]) => {
         applyFilter(); queueHash();
       }));
       box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); queueHash(); });
+    }
+    if (it.kind === 'boards'){
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'brd-' + it.id; box.hidden = !it.on;
+      box.innerHTML = '<div class="chips pick" role="radiogroup" aria-label="' + esc(it.name) + '">' + it.boards.map(([b, short, long]) =>
+        '<button type="button" role="radio" data-board="' + b + '" data-layer="' + it.id + '" title="' + esc(long) + '" aria-checked="' + (b === boardPick[it.id]) + '">' + esc(short) + '</button>').join('') +
+        '</div><div class="legend"><small id="brdnote-' + it.id + '"></small></div>';
+      grp.appendChild(box);
+      box.querySelectorAll('[data-board]').forEach(b => b.addEventListener('click', () => setBoard(it.id, b.dataset.board)));
     }
     if (it.kind === 'suburbs'){
       row.classList.add('outer-only'); row.id = 'row-' + it.id;
@@ -445,6 +475,14 @@ function drawLegend(){
   el.innerHTML = picker + L_.tiers.map(([k, label, v]) => '<div><i style="background:var(' + v + ')"></i>' + label + '</div>').join('') +
     '<small>' + (L_.pick ? fill(L_.note, {type: pickLong(L_)}) : L_.note) + ' Source: ' + (L_.source || CITY.lens.source) + '</small>';
   el.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => setPick(L_.id, b.dataset.pick)));
+}
+function setBoard(id, b){
+  const it = LAYERS.find(l => l.id === id); if (!it || !boardOf(it, b)) return;
+  boardPick[id] = b;
+  document.querySelectorAll('[data-layer="' + id + '"][data-board]').forEach(el => el.setAttribute('aria-checked', String(el.dataset.board === b)));
+  const n = document.getElementById('brdnote-' + id); if (n) n.textContent = boardOf(it, b)[2] + '. ' + (it.boardNote || '');
+  if (layers[id] && layers[id]._pick) layers[id]._pick(b);
+  queueHash();
 }
 function setPick(id, v){
   const L_ = LENSES[id]; if (!L_ || !L_.pick || !L_.pick.some(p => p[0] === v)) return;
@@ -491,6 +529,7 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'boards'){ document.getElementById('brd-' + id).hidden = !on; if (on) setBoard(id, boardPick[id]); }
   if (kindOf(id) === 'suburbs'){
     document.getElementById('drvbox').hidden = !on;
     if (on && scope === 'inner') map.removeLayer(lyr);   // shown only in the regional view
@@ -512,6 +551,7 @@ document.getElementById('reset').addEventListener('click', () => {
   });
   clearFilters(); applyFilter();
   Object.keys(pick).forEach(id => { pick[id] = LENSES[id].pick[0][0]; });
+  BOARDS.forEach(it => setBoard(it.id, it.boards[0][0]));
   setLens(FIRST_LENS);
   setScope('inner', true);
   closeHere();
@@ -603,8 +643,30 @@ function representatives(hits){
       const h = hits[o.layer]; if (!h) return '';
       const r = R[o.table][String(h.properties[o.key])];
       return row(o.role, r, fill(o.sub, {f: h.properties, r: r || {}}));
-    }).join('') +
-    '</dl><p>' + esc(fill(cfg.note, {date})) + '</p></div>';
+    }).join('') + trustees(hits) +
+    '</dl><p>' + esc(fill(cfg.note, {date})) + (cfg.trustees && R[cfg.trustees.table] ? ' ' + esc(cfg.trustees.note) : '') + '</p></div>';
+}
+/* School board trustees: one row per board that covers the spot. Before the election the row lists the
+   candidates; once the results file names a winner (or one candidate was acclaimed), the winner, marked
+   as taking office on the start date; from that date, just the trustee. Dates come from city.json. */
+const isoDate = s => new Date(...s.split('-').map((v, i) => +v - (i === 1)));
+const longDate = s => isoDate(s).toLocaleDateString(CITY.locale, {month:'short', day:'numeric'});
+function trustees(hits){
+  const T = CITY.card.reps.trustees, R = data.reps; if (!T || !R || !R[T.table]) return '';
+  const it = LAYERS.find(l => l.id === T.layer), bh = hits[T.layer]; if (!it || !bh) return '';
+  const today = new Date(), started = today >= isoDate(T.starts);
+  const dates = {election: longDate(T.election), starts: longDate(T.starts)};
+  return it.boards.filter(([b]) => bh[b]).map(([b]) => {
+    const ctx = boardCtx(it, bh[b]), r = (R[T.table][b] || {})[String(ctx.num)], ward = fill(T.ward, ctx);
+    let dd;
+    if (!r) dd = '<span>' + esc(ward) + '</span>';
+    else if (r.winner) dd = '<b>' + esc(r.winner) + '</b><span>' + esc(ward + (started ? '' : ' · ' + fill(r.acclaimed ? T.acclaimed : T.elected, dates))) + '</span>';
+    else {
+      const head = fill(today >= isoDate(T.election) ? T.counting : T.race, Object.assign({n: r.candidates.length}, dates));
+      dd = '<details class="cands"><summary>' + esc(head) + '</summary><span>' + r.candidates.map(esc).join(' · ') + '</span></details><span>' + esc(ward) + '</span>';
+    }
+    return '<dt>' + esc(fill(T.role, ctx)) + '</dt><dd>' + dd + '</dd>';
+  }).join('');
 }
 let pinName = '';
 function placePin(latlng, name){
@@ -644,6 +706,7 @@ function inspect(latlng, title, muniName){
   placePin(latlng, title);
   const hits = {};
   LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { hits[it.id] = hit(data.layers[it.id], x, y); });
+  BOARDS.forEach(it => { hits[it.id] = boardHits(it, x, y); });
   const pillCfg = CITY.card.pills.find(p => p.knownas);
   const near = (data.knownas ? data.knownas.features : []).map(f => [f, metres([x, y], f.geometry.coordinates)]).filter(a => a[1] < 650).sort((a, b) => a[1] - b[1]).slice(0, pillCfg ? pillCfg.knownas : 2);
   const pills = [];
@@ -655,6 +718,9 @@ function inspect(latlng, title, muniName){
   });
   const facts = CITY.card.facts.filter(r => !r.onlyInside || hits[r.layer]).map(r => {
     if (r.knownas) return [r.label, near.length ? near.map(a => a[0].properties.name).join(', ') : '—'];
+    if (r.boards){ const it = LAYERS.find(l => l.id === r.boards), bh = hits[r.boards] || {};
+      const t = it.boards.filter(([b]) => bh[b]).map(([b]) => fill(r.text, boardCtx(it, bh[b]))).join(' · ');
+      return [r.label, t || r.empty || '—']; }
     const h = hits[r.layer];
     if (h) return [r.label, fill(r.text, h.properties)];
     if (r.emptyWithin && Object.entries(r.emptyWithin).some(([id, name]) => hits[id] && hits[id].properties.name === name)) return [r.label, '—'];
@@ -1022,6 +1088,8 @@ function linkState(){
   if (lens !== FIRST_LENS || (LENSES[lens].pick && pick[lens] !== LENSES[lens].pick[0][0])) parts.push(['lens', lens + (LENSES[lens].pick ? ':' + pick[lens] : '')]);
   const fit = FILTERS.map(f => f.max ? (filt[f.lens] ? f.lens + ':' + filt[f.lens] : '') : (filt[f.lens].size ? f.lens + ':' + [...filt[f.lens]].join('+') : '')).filter(Boolean);
   if (fit.length) parts.push(['fit', fit.join(',')]);
+  const brd = BOARDS.filter(it => state[it.id] && boardPick[it.id] !== it.boards[0][0]).map(it => it.id + ':' + boardPick[it.id]);
+  if (brd.length) parts.push(['board', brd.join(',')]);
   return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
 }
 function writeHash(){
@@ -1038,7 +1106,7 @@ function readHash(h){
 // Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
 function applyHash(h){
   const o = readHash(h);
-  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus'].some(k => k in o)) return false;
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus', 'board'].some(k => k in o)) return false;
   const num = s => s.split(/[,/]/).map(Number);
   setScope(o.view === 'region' || regionFeature(o.focus) ? 'outer' : 'inner', false);
   setFocus(regionFeature(o.focus) ? o.focus : null, false);
@@ -1052,6 +1120,7 @@ function applyHash(h){
     SUBS.forEach(s => { document.getElementById(s.id).checked = want.has(s.id); });
     syncStnNames();
   }
+  (o.board || '').split(',').forEach(part => { const [id, b] = part.split(':'); if (b) setBoard(id, b); });
   const [lk, lp] = (o.lens || '').split(':');
   if (lk && LENSES[lk] && document.querySelector('[data-lens="' + lk + '"]')){ if (lp) setPick(lk, lp); setLens(lk); }
   if (o.fit){
@@ -1210,7 +1279,7 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
     CITY.focus ? get('region_areas').then(d => { data.regionAreas = d; }).catch(() => { data.regionAreas = null; }) : null]))
 .then(() => {
   const base = loaded.base, src = it => it.file ? loaded[it.file] : it.files.map(f => loaded[f]);
-  LAYERS.filter(it => AREA_KINDS.includes(it.kind)).forEach(it => { data.layers[it.id] = loaded[it.file]; });
+  LAYERS.filter(it => AREA_KINDS.includes(it.kind) || it.kind === 'boards').forEach(it => { data.layers[it.id] = loaded[it.file]; });
   Object.assign(data, {footprint: data.layers[CITY.footprint], units: UNITS && loaded[UNITS.file],
     knownas: byKind('knownas') && loaded[byKind('knownas').file], landmarks: byKind('landmarks') && loaded[byKind('landmarks').file],
     outer: {type:'FeatureCollection', features: base.features.filter(f => f.properties.kind === 'neighbour')}});

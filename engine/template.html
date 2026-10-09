@@ -16,7 +16,7 @@
   /* map */
   --water:#CFE7F7; --land-out:#E6E3DA; --land-out-line:#C4C0B4; --land-far:#F2F1EC; --city:#FBFAF6; --city-line:#4A4E55; --muni-label:#8E8B82;
   /* civic */
-  --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --hd:#7B5B3A; --cult:#23262B; --cult-enclave:#B0306A;
+  --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --hd:#7B5B3A; --sbw:#0E7F6E; --cult:#23262B; --cult-enclave:#B0306A;
   /* transport */
   --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#FFFFFF;
@@ -34,7 +34,7 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
-  --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --cult:#ECEDEF; --cult-enclave:#F07AAE;
+  --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E; --hty-1:#2C333C; --hty-2:#2F5272; --hty-3:#4C86BA; --hty-4:#9CC8EE; --mix-1:#34506B; --mix-2:#4C78A3; --mix-3:#78A8D6; --mix-4:#B6D6F2;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
@@ -43,7 +43,7 @@
 :root[data-theme="dark"]{
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
-  --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --cult:#ECEDEF; --cult-enclave:#F07AAE;
+  --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E; --hty-1:#2C333C; --hty-2:#2F5272; --hty-3:#4C86BA; --hty-4:#9CC8EE; --mix-1:#34506B; --mix-2:#4C78A3; --mix-3:#78A8D6; --mix-4:#B6D6F2;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
@@ -138,6 +138,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .sw.k-state{background:var(--city);background-image:repeating-linear-gradient(90deg,var(--prov) 0 4px,transparent 4px 7px);background-size:100% 2px;background-repeat:no-repeat;background-position:0 50%}
 .sw.k-national{background:var(--city);box-shadow:inset 0 0 0 2px var(--fed)}
 .sw.k-districts{background:color-mix(in srgb,var(--hd) 16%,var(--city));box-shadow:inset 0 0 0 1.5px var(--hd)}
+.sw.k-boards{background:var(--city);box-shadow:inset 0 0 0 2px var(--sbw)}
 .sw.k-patches{background:color-mix(in srgb,var(--bia) 45%,var(--city))}
 .sw.k-streets{background:var(--city);background-image:linear-gradient(var(--st-case),var(--st-case)),linear-gradient(var(--st),var(--st));background-size:100% 5px,100% 3px;background-position:0 50%,0 50%;background-repeat:no-repeat}
 .sw.k-highways{background:var(--city);background-image:linear-gradient(var(--hwy-case),var(--hwy-case)),linear-gradient(var(--hwy),var(--hwy));background-size:100% 6px,100% 2px;background-position:0 50%,0 50%;background-repeat:no-repeat}
@@ -158,6 +159,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .prov:hover{fill-opacity:.08}
 .fed{fill:var(--fed);fill-opacity:0;stroke:var(--fed);stroke-width:2.2;stroke-dasharray:1 0}
 .fed:hover{fill-opacity:.08}
+.sbw{fill:var(--sbw);fill-opacity:0;stroke:var(--sbw);stroke-width:2.6;stroke-dasharray:9 4}
+.sbw:hover{fill-opacity:.08}
 .bia{fill:var(--bia);fill-opacity:.45;stroke:var(--bia);stroke-width:1.2}
 .bia:hover{fill-opacity:.7}
 .hd{fill:var(--hd);fill-opacity:.14;stroke:var(--hd);stroke-width:1.6;stroke-dasharray:4 3}
@@ -187,6 +190,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lbl-ward{font-size:11px;font-weight:700;color:var(--ward)!important}
 .lbl-prov{font-size:11px;font-weight:700;color:var(--prov)!important}
 .lbl-fed{font-size:11px;font-weight:700;color:var(--fed)!important}
+.lbl-sbw{font-size:11px;font-weight:700;color:var(--sbw)!important}
 .lbl-bia{font-size:10px;font-weight:600;color:var(--bia)!important}
 .lbl-hd{font-size:10px;font-weight:600;font-style:italic;color:var(--hd)!important}
 .lbl-stn{font-size:10px;font-weight:600}
@@ -293,7 +297,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .hover-tip{background:var(--panel)!important;color:var(--ink)!important;border:1px solid var(--rule)!important;box-shadow:var(--shadow)!important;font:600 12px/1.3 var(--font)!important;border-radius:7px!important;padding:4px 8px!important}
 .hover-tip::before{display:none}
 /* zoom-gated labels */
-#map:not(.z11) .lbl-area,#map:not(.z11) .lbl-ward,#map:not(.z11) .lbl-prov,#map:not(.z11) .lbl-fed{display:none}
+#map:not(.z11) .lbl-area,#map:not(.z11) .lbl-ward,#map:not(.z11) .lbl-prov,#map:not(.z11) .lbl-fed,#map:not(.z11) .lbl-sbw{display:none}
 #map.z10 .lbl-region,#map:not(.z10) .lbl-muni,#map:not(.z10) .lbl-boro,#map:not(.z10) .shield:not(.outer),#map:not(.z12) .lbl-go:not(.end),#map:not(.z12) .go-stn:not(.end):not(.hub),#map:not(.z10) .poi b,#map:not(.z10) .lake-near,#map.z10 .lake-far{display:none}
 #map:not(.z12) .lbl-cult,#map:not(.z12) .shield.minor{display:none}
 #map:not(.z13) .lbl-nbhd,#map:not(.z13) .lbl-stn:not(.end){display:none}
@@ -342,6 +346,9 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 .reps a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
 .reps a:hover{text-decoration-color:currentColor}
 .reps a::after{content:' \2197';font-size:10px;color:var(--ink-3)}
+.reps dd b{font-weight:600}
+.reps details.cands summary{cursor:pointer;color:var(--ink);font-weight:600}
+.reps details.cands > span{margin:2px 0 3px;color:var(--ink-2)}
 .reps .vacant{color:var(--ink-2);font-weight:500;font-style:italic}
 .hint{padding:12px 16px 14px;color:var(--ink-2);font-size:12.5px;border-top:1px solid var(--rule)}
 

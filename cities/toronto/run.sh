@@ -24,6 +24,7 @@ npx mapshaper -i tmp/gta_highways.geojson -simplify interval=15 -o $OUT/gta_high
 npx mapshaper -i tmp/go_lines.geojson -simplify interval=40 -o $OUT/go_lines.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/go_lines_416.geojson -simplify interval=40 -o $OUT/go_lines_416.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/subway_lines.geojson -simplify interval=5 -o $OUT/subway_lines.geojson precision=0.00001 -quiet
+python3 school_wards.py      # after wards are simplified: trustee wards are unions of City wards
 python3 representatives.py   # after the boundaries above: it matches names against them
 python3 gta_places.py        # likewise: names each community's municipality from base
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build toronto   # after base is simplified: adds drive times to it

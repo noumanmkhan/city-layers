@@ -5,6 +5,9 @@ Run from GitHub Actions (weekly, and on demand); writes raw/representatives/.
   ola.html         Legislative Assembly of Ontario, current members (ola.org/en/members/current)
   toronto.json     City of Toronto: the <title> of each ward councillor's page on toronto.ca
                    (councillor-ward-1 ... councillor-ward-25), which names the current councillor
+  results.json     City of Toronto election results file (mediaresults.toronto.ca). Lists every
+                   2026 candidate by office and ward; on election night it fills in the votes.
+                   Used for the school board trustee rows. Optional: a failed fetch keeps the last copy.
 
 Open North's Represent API was considered and not used: its House of Commons list lagged a
 by-election by months. Taking names from the same pages the site links to keeps them in step."""
@@ -14,6 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'raw', 'representatives'); os.makedirs(OUT, exist_ok=True)
 UA = {'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)', 'Accept-Language': 'en'}
 WARD = 'https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-{}/'
+RESULTS = 'https://mediaresults.toronto.ca/results/unofficialresult.json'
 
 
 def get(url, tries=4):
@@ -36,4 +40,10 @@ for n in range(1, 26):
     print(n, wards[n]['title'])
     time.sleep(1.5)   # one page at a time; the City's servers dislike bursts
 json.dump(wards, open(os.path.join(OUT, 'toronto.json'), 'w'), indent=1, ensure_ascii=False)
+try:
+    res = json.loads(get(RESULTS, tries=3))
+    json.dump(res, open(os.path.join(OUT, 'results.json'), 'w'), indent=1, ensure_ascii=False)
+    print('results:', res.get('electionDesc'), [o['name'] for o in res['office']])
+except (SystemExit, ValueError, KeyError) as e:
+    print('  ! election results not fetched; keeping the last copy:', e)
 print('done')

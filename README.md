@@ -30,6 +30,7 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
 | Business Improvement Areas | 85 | |
+| School board wards | 29 across 4 boards | Trustee wards for TDSB (12), TCDSB (12),<br>Viamonde (3) and MonAvenir (2), one board at a time |
 | Heritage districts | 29 | Heritage Conservation Districts in force;<br>ones under study or appeal are left out |
 | Neighbourhood lens | 158 | Housing cost, time to Union,<br>getting to work, renters and owners,<br>housing type |
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
@@ -83,11 +84,13 @@ Three more rows describe the place without ranking it: *Home types* (the mix of 
 
 **What's here:** click anywhere and a card sums up the spot in a few coloured pills, then breaks it down in sections you can open and close (the page remembers which you keep open):
 
-- *Boundaries:* former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding and federal riding.
+- *Boundaries:* former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding, federal riding and the spot's ward on each of the four school boards.
 - *Living here:* the neighbourhood lens tiers and the figures behind them.
-- *Representatives:* the city councillor, MPP and MP for that spot, each name linking to their official page on toronto.ca, ola.org or ourcommons.ca, with party for the MPP and MP (Toronto councillors run without party labels).
+- *Representatives:* the city councillor, MPP and MP for that spot, each name linking to their official page on toronto.ca, ola.org or ourcommons.ca, with party for the MPP and MP (Toronto councillors run without party labels). Then a school trustee row for each board: before the October 26, 2026 election it lists the candidates; once the City's results file has a winner it names them, marked as taking office November 15; from then on, just the trustee.
 
 The boundary lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.
+
+**School board wards:** in April 2026 Ontario capped school boards at 12 trustees, so the TDSB's 22 wards became 12 and the City's open trustee-ward file (2018 lines) went out of date. The City Clerk's reference chart defines every 2026 trustee ward, for all four boards, as a group of whole City wards, so the map builds them by merging City wards rather than waiting for a new file. Which school a given address is zoned for isn't shown: none of the boards publishes its attendance boundaries as open data.
 
 **Keeping representatives current:** a GitHub Action runs every Monday, reads the current members straight from the City, the Legislative Assembly and the House of Commons, and republishes the site only if something changed, so by-elections and the new council after an election show up within a week. Names come from the same pages they link to. Open North's representatives data was tried first and dropped: it still listed an MP six months after her by-election.
 

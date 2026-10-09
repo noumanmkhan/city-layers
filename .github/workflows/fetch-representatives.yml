@@ -1,11 +1,17 @@
 name: Refresh representatives
 # Weekly: fetches the current councillors, MPPs and MPs from toronto.ca, ola.org and
-# ourcommons.ca and rebuilds docs/toronto/data/representatives.json. Commits to main only when a
+# ourcommons.ca, and the City's election results file (school trustee candidates and results), and rebuilds docs/toronto/data/representatives.json. Commits to main only when a
 # name, party or link changed (a by-election, a new council after an election); GitHub Pages
 # then republishes the site. Can also be run by hand from the Actions tab.
 on:
   schedule:
     - cron: '17 9 * * 1'   # Mondays 09:17 UTC
+    # Around Toronto's municipal election (October 26) the City's results file also feeds the school
+    # trustee rows: hourly on election night (polls close 8 pm Toronto time, 00:00 UTC), then daily
+    # until the new term starts on November 15. These dates repeat yearly; off-season runs find no change.
+    - cron: '7 0-6 27 10 *'
+    - cron: '17 9 27-31 10 *'
+    - cron: '17 9 1-16 11 *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -28,6 +34,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
           git add cities/toronto/raw/representatives docs/toronto/data/representatives.json
-          git commit -m "Refresh Toronto councillors, MPPs and MPs"
+          git commit -m "Refresh Toronto councillors, MPPs, MPs and school trustees"
           git pull --rebase origin main
           git push origin HEAD:main

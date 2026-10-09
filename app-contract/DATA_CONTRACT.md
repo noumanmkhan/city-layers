@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 9, 2026 (map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (Toronto school board trustee wards: the `boards` layer kind, a School wards row and trustee rows; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -90,8 +90,15 @@ How the website's search does it, for an app that wants to match:
   "outside the city" card.
 - `groups`: `[[groupName, [layer, …]], …]`. Each layer has `id`, `kind`, `name`, `note`, and
   `file` (one file, add `.geojson`) or `files` (several). Kinds the card tests a point against:
-  `fill`, `units`, `outline`, `patches`, `districts`. The `knownas` kind is a point layer used by
-  distance (step 4 below). Other kinds are map drawing only.
+  `fill`, `units`, `outline`, `patches`, `districts`, and `boards` (below). The `knownas` kind is a
+  point layer used by distance (step 4 below). Other kinds are map drawing only.
+- A `boards` layer (Toronto's `school`, file `school_wards`) holds several overlapping sets of
+  wards in one file, one set per school board. Each feature has `board` (an id), `num` (the
+  board's ward number, a string), `area` (a ward name, French boards only, e.g. "Est"), `wards`
+  (the City wards it is made of) and `lp`. The layer's `boards` lists `[id, short, long]` per board
+  in display order (`["tdsb", "TDSB", "Toronto District School Board"]`); the first is the one the
+  map shows by default. Templates on this layer can use `{short}` and `{long}` as well as the
+  feature's fields.
 - `card`: `pills`, `facts`, `living`, `reps` (section 6).
 - `lens.file` (the profiles file) and `lens.lenses`: each has `key` (the profile field holding a
   tier id) and `tiers: [[tierId, label, colourVariable], …]`. Use the label; the colour variable
@@ -143,7 +150,8 @@ first matching feature in file order wins.
        `{region}`. Then the drive row (section 6) and `outside.note`. Done.
    - **Yes:** carry on.
 3. **Hits.** For every layer whose kind is `fill`, `units`, `outline`, `patches` or `districts`,
-   find the feature containing the point. Store as `hits[layerId]` (may be empty).
+   find the feature containing the point. Store as `hits[layerId]` (may be empty). For a `boards`
+   layer, find one feature per board instead: `hits[layerId][board]`.
 4. **Known-as names.** From the `knownas`-kind layer (points), take those within 650 m, nearest
    first, at most N, where N is the `knownas` number in the pill config (`{"knownas": 2}`).
 5. **Pills** (`card.pills`, in order):
@@ -153,6 +161,9 @@ first matching feature in file order wins.
 6. **Boundaries** (`card.facts`, in order), each a label and a value:
    - Skip a row with `onlyInside: true` unless its layer has a hit.
    - `knownas: true`: the known-as names from step 4, comma-separated, or `—`.
+   - `boards: layerId`: for each board in that layer's `boards` order that has a hit, `text` filled
+     from the hit plus `{short}`/`{long}`, joined with " · " ("TDSB 7 · TCDSB 9 · Viamonde 3 ·
+     MonAvenir 3"); `—` if none.
    - Hit: `text` filled from the hit.
    - No hit: if `emptyWithin` is `{layerId: name}` and that layer's hit has that name, `—`;
      otherwise `empty`, or `—`.
@@ -167,6 +178,18 @@ first matching feature in file order wins.
    value `r.name` linking to `r.url` (no record or no name: "Seat currently vacant"); subline
    `office.sub` filled with `{f: h.properties, r: r}`. Footer `card.reps.note` with `{date}` =
    `representatives.updated` written as a long date.
+   **Trustees** (`card.reps.trustees`, Toronto only, after the offices): skip if
+   `representatives[trustees.table]` is missing. For each board of layer `trustees.layer` with a
+   hit `h` (in `boards` order): `r = representatives.trustees[board][h.num]`; label `role` filled
+   from `h` plus `{short}`; `ward` = `trustees.ward` filled the same way. Value, by date (dates are
+   `trustees.election` and `trustees.starts`, `YYYY-MM-DD`, Toronto time):
+   - `r.winner` and today ≥ `starts`: the winner's name; subline `ward`.
+   - `r.winner` before `starts`: the name; subline `ward` · `acclaimed` (if `r.acclaimed`) or
+     `elected`, filled with `{election}` and `{starts}` as short dates ("Oct 26").
+   - No winner: `race` (before `election`) or `counting` (from `election` on), filled with
+     `{n}` = number of candidates and the dates; the candidate names (`r.candidates`) on expand;
+     subline `ward`.
+   Names are plain text (no official page yet). Append `trustees.note` to the footer.
 10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
    `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
    layer's hit; coordinates (`43.6681° N, 79.3669° W`) only for a spot no layer covers.
@@ -183,7 +206,8 @@ Computed from the October 8, 2026 data. Use it as a first test case.
 - **Boundaries:** Former city: Old Toronto · Area: Downtown · Neighbourhood:
   Cabbagetown-South St.James Town (#71) · Known as: Cabbagetown, St. James Town (263 m and
   609 m away) · Heritage district: Cabbagetown (Metcalfe) (designated 2002) · BIA: None ·
-  City ward: Ward 13 · Toronto Centre · Provincial: Toronto Centre · Federal: Toronto Centre.
+  City ward: Ward 13 · Toronto Centre · Provincial: Toronto Centre · Federal: Toronto Centre ·
+  School wards: TDSB 7 · TCDSB 9 · Viamonde 3 · MonAvenir 3.
 - **Living here** (profile `"71"`): Housing: Middle housing cost, median home $950K · rent
   $1,330/mo · To Union: 30–45 min, about 32 min by transit · Getting to work: Mostly transit,
   walk or bike, 31% drive · 27% transit · 38% walk or bike · Households: A mix, 55% rent ·
@@ -191,7 +215,8 @@ Computed from the October 8, 2026 data. Use it as a first test case.
   41% · 1961–80 27% · 1981–2000 23% · 2001–21 9% · Language at home: English 84%, no other
   language above 5%, "Another 3% name two or more equally."
 - **Representatives:** read from `representatives.json` (`wards["13"]`, `prov["Toronto Centre"]`,
-  `fed["Toronto Centre"]`).
+  `fed["Toronto Centre"]`), then trustees from `trustees.tdsb["7"]`, `trustees.tcdsb["9"]`,
+  `trustees.viamonde["3"]`, `trustees.monavenir["3"]`.
 
 Note the unit's map name (`Cabbagetown-South St.James Town`) and its profile `name`
 (`Cabbagetown-South St. James Town`) differ slightly; the Neighbourhood row uses the map's, the
@@ -253,6 +278,14 @@ Chicago: `wards`, `house`, `senate`, `congress` (by number). A missing record me
 Checked weekly. Toronto's municipal election is October 26, 2026; new councillors appear within a
 week of taking office (November 15).
 
+Toronto also has `trustees: {board: {wardNum: {candidates: [name, …], winner?, acclaimed?}}}` for
+the four school boards (`tdsb`, `tcdsb`, `viamonde`, `monavenir`), from the City's election results
+file. `winner` appears once every poll in that ward has reported, or straight away for a ward with
+one candidate (`acclaimed: true`). Results are unofficial until the City Clerk certifies them.
+Around the election the file is refreshed hourly on election night and daily until November 16.
+There are no incumbent trustees in this data: TDSB's wards were redrawn for 2026, so the trustees
+in office until November 15 sat on different lines.
+
 ## 9. Not in this data
 
 Real-time data (weather, air quality, traffic, beach water quality, transit arrivals) is not
@@ -274,8 +307,8 @@ landmarks and the lenses are not covered here yet.
 
 ### Which layers
 
-Every layer in `groups` whose `kind` is `fill`, `units`, `districts`, `outline`, `patches` or
-`knownas`. Keep the group order and use `name` and `note` for the layer list. A layer with
+Every layer in `groups` whose `kind` is `fill`, `units`, `districts`, `outline`, `boards`, `patches`
+or `knownas`. Keep the group order and use `name` and `note` for the layer list. A layer with
 `"on": true` starts switched on. Today that gives:
 
 | City | Layer (`id`, kind) | File |
@@ -288,6 +321,7 @@ Every layer in `groups` whose `kind` is `fill`, `units`, `districts`, `outline`,
 | | City wards (`wards`, outline city) | `wards` |
 | | Provincial ridings (`prov`, outline state) | `wards` (see below) |
 | | Federal ridings (`fed`, outline national) | `federal` |
+| | School board wards (`school`, boards) | `school_wards` (one board at a time, see below) |
 | | Business Improvement Areas (`bia`, patches) | `bia` |
 | Chicago | The sides (`sides`, fill major) | `sides` |
 | | Community areas (`ca`, units) | `community_areas` |
@@ -330,8 +364,12 @@ order, bottom to top, is the table's order.
 | `outline`, level `national` | none | `--fed`, 2.2 | `label` template, 11 pt bold, `--fed` | 11 |
 | `outline`, level `state` | none | `--prov`, 2, dashed 6 on / 4 off | `label` template, 11 pt bold, `--prov` | 11 |
 | `outline`, level `city` | none | `--ward`, 2.2 | `label` template, 11 pt bold, `--ward` | 11 |
+| `boards` | none | `--sbw`, 2.6, dashed 9 on / 4 off | `label` template, 11 pt bold, `--sbw` | 11 |
 | `knownas` | (points: label only) | | `name`, 11.5 pt semibold italic, `--cult`; `kind: "enclave"` uses `--cult-enclave` | 12 |
 
+- A `boards` layer draws only the features of one board at a time, chosen by the user (a row of
+  `short` names under the layer; the default is the first). The website keeps the choice in links
+  as `board=school:tcdsb`.
 - Fill colours come from the layer's `colors` map by feature `name` (the same map that colours the
   first pill on the card). A name missing from the map uses `--ink-3`.
 - Labels have no box; the website gives them a soft halo in `--city` so they read over lines.
@@ -339,7 +377,7 @@ order, bottom to top, is the table's order.
   `zoom = log2(360 × mapWidthInPoints / (256 × region.span.longitudeDelta))`.
   On a 390 pt-wide phone, zoom 11 ≈ 0.27° of longitude across, 13 ≈ 0.067°, 14 ≈ 0.034°.
 - **Label collisions.** When labels overlap, the website keeps them in this order and hides the
-  later one: known-as names, Old Toronto area names, unit names, ward / riding / district numbers,
+  later one: known-as names, Old Toronto area names, unit names, ward / riding / district / school ward numbers,
   BIA / SSA names, heritage / landmark district names. (Former-city / side names are not in the
   list: they always show.) In MapKit, map this order onto annotation `displayPriority`.
 - Tapping anywhere still opens the "What's here" card for that point (section 5); the drawn

@@ -65,6 +65,10 @@
       {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "25 wards, one councillor each", "label": "Ward {num}", "hover": "Ward {num} · {name}"},
       {"id": "prov", "kind": "outline", "level": "state", "file": "wards", "name": "Provincial ridings", "note": "25 MPPs · same lines as the wards", "label": "{prov}", "hover": "Provincial: {prov}"},
       {"id": "fed", "kind": "outline", "level": "national", "file": "federal", "name": "Federal ridings", "note": "24 MPs · 2023 boundaries", "label": "{name}", "hover": "Federal: {name}"},
+      {"id": "school", "kind": "boards", "file": "school_wards", "name": "School board wards", "note": "Trustee wards for the 4 public school boards · 2026 lines",
+       "boards": [["tdsb", "TDSB", "Toronto District School Board"], ["tcdsb", "TCDSB", "Toronto Catholic District School Board"], ["viamonde", "Viamonde", "Conseil scolaire Viamonde (French public)"], ["monavenir", "MonAvenir", "Conseil scolaire catholique MonAvenir (French Catholic)"]],
+       "boardNote": "Each trustee ward is a group of whole City wards. Source: City Clerk, 2026 school board reference chart.",
+       "label": "{short} {num}", "hover": "{short} Ward {num}[ {area}] · City wards {wards}"},
       {"id": "bia", "kind": "patches", "file": "bia", "name": "Business Improvement Areas", "note": "85 BIAs", "label": "{name}", "hover": "{name} BIA"}
     ]],
     ["Getting around", [
@@ -123,7 +127,8 @@
       {"label": "BIA", "layer": "bia", "text": "{name}[ (since {since})]", "empty": "None"},
       {"label": "City ward", "layer": "wards", "text": "Ward {num} · {name}"},
       {"label": "Provincial", "layer": "wards", "text": "{prov}"},
-      {"label": "Federal", "layer": "fed", "text": "{name}"}
+      {"label": "Federal", "layer": "fed", "text": "{name}"},
+      {"label": "School wards", "boards": "school", "text": "{short} {num}"}
     ],
     "living": {
       "hub": "To Union",
@@ -141,6 +146,11 @@
         {"role": "MPP", "layer": "wards", "table": "prov", "key": "prov", "sub": "{r.party}"},
         {"role": "MP", "layer": "fed", "table": "fed", "key": "name", "sub": "{r.party}"}
       ],
+      "trustees": {"layer": "school", "table": "trustees", "role": "{short} trustee", "ward": "Ward {num}[ {area}]",
+        "election": "2026-10-26", "starts": "2026-11-15",
+        "race": "{n} candidates · election {election}", "counting": "{n} candidates · results to come",
+        "elected": "elected {election} · takes office {starts}", "acclaimed": "acclaimed · takes office {starts}",
+        "note": "Trustee candidates and results come from the City’s election results file and are unofficial until the City Clerk certifies them."},
       "note": "Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."
     }
   }
