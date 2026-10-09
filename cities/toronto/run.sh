@@ -12,6 +12,7 @@ python3 streets.py
 python3 landmarks.py
 python3 go.py
 python3 profiles.py
+python3 ../../engine/facts.py toronto   # after profiles: what makes each unit stand out
 python3 heritage.py
 OUT=../../docs/toronto/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }

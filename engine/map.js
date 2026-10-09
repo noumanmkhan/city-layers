@@ -664,12 +664,22 @@ function inspect(latlng, title, muniName){
   here.hidden = false;
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(title || coords) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
+    standout(UNITS && hits[UNITS.id]) +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelector('.share').onclick = share;
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
+}
+// What makes the unit stand out among its peers (engine/facts.py, built ahead of time): the strongest fact.
+function standout(unit){
+  const d = unit && data.profiles ? data.profiles[String(unit.properties.code)] : null;
+  const f = d && d.facts && d.facts[0];
+  if (!f) return '';
+  // "West Town: among the highest home values in Chicago": the fact is about the unit, which a pin's pills may not name.
+  return '<p class="standout"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m8 1.5 1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1l-3.9 2.2.9-4.3-3.3-3 4.4-.5z"/></svg><span><b>' +
+    esc(d.name) + ':</b> ' + esc(f.text.charAt(0).toLowerCase() + f.text.slice(1)) + ' <small>' + esc(f.value) + '</small></span></p>';
 }
 // Free-flow drive time from the nearest grid point (about 1.5 km apart), and the municipality's typical time.
 function driveHere(x, y, m){

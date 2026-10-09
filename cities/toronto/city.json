@@ -45,6 +45,7 @@
 
   "drive": {"hub": [43.6453, -79.3806], "hubName": "Union Station"},
   "focus": {"label": "Focus on a region", "all": "All of the GTA", "noun": "Regional municipality", "count": "{n} municipalities in {name}", "show": "Show all of {name}"},
+  "facts": {"peers": ["areas", "boroughs"], "in": "in {name}", "inNames": {"West End": "in the West End", "East End": "in the East End"}, "city": "in Toronto", "hub": "Union"},
   "units": {"singular": "Neighbourhood", "plural": "neighbourhoods"},
 
   "groups": [

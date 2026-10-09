@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 8, 2026 (search: landmark and known-as fields).
+a read-only consumer. Last updated October 9, 2026 (profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -26,8 +26,10 @@ a read-only consumer. Last updated October 8, 2026 (search: landmark and known-a
 - **Describe, don't rank.** The card describes the place the user picked. Demographic fields
   (language at home, and anything similar added later) never feed rankings, colours, filters,
   "best/worst" lists, notifications or comparisons.
-- The lens tiers (`cost`, `commute`, `tenure`, `unionBand`, `loopBand`) are the only precomputed comparisons,
-  and they are shown with their labels and notes from `city.json`.
+- The lens tiers (`cost`, `commute`, `tenure`, `unionBand`, `loopBand`) and the profile `facts`
+  (section 7) are the only precomputed comparisons. Show tiers with their labels and notes from
+  `city.json`, and facts with their own text. Don't compute other rankings or superlatives in the
+  app; facts never use demographic fields, and the app shouldn't either.
 - Always show the caveat lines from `city.json` (`card.living.caveat`, `footer`, the language
   `note`) wherever the figures appear, including widgets, even if shortened.
 - Show `attribution` from `city.json` somewhere in the app (an About screen is fine).
@@ -143,19 +145,22 @@ first matching feature in file order wins.
    - Hit: `text` filled from the hit.
    - No hit: if `emptyWithin` is `{layerId: name}` and that layer's hit has that name, `—`;
      otherwise `empty`, or `—`.
-7. **Living here**: look up the profile by `hits[unitsLayerId].properties.code` (as a string key).
+7. **Standout** (optional line under the pills): if the unit's profile has `facts`, show the first
+   one as "{profile name}: {text, first letter lower-cased}" followed by its `value` in smaller
+   type. Section 7.
+8. **Living here**: look up the profile by `hits[unitsLayerId].properties.code` (as a string key).
    Section 7.
-8. **Representatives** (`card.reps.offices`, in order). Skip the whole section if the first
+9. **Representatives** (`card.reps.offices`, in order). Skip the whole section if the first
    office's layer has no hit. For each office: `h = hits[office.layer]`;
    `r = representatives[office.table][String(h.properties[office.key])]`. Row label `role`;
    value `r.name` linking to `r.url` (no record or no name: "Seat currently vacant"); subline
    `office.sub` filled with `{f: h.properties, r: r}`. Footer `card.reps.note` with `{date}` =
    `representatives.updated` written as a long date.
-9. **Title**: the searched place's name if there is one, otherwise the coordinates
+10. **Title**: the searched place's name if there is one, otherwise the coordinates
    (`43.6681° N, 79.3669° W`).
 
-The website shows three collapsible sections in this order: Boundaries, Living here,
-Representatives, under the pills.
+The website shows the standout line under the pills, then three collapsible sections in this
+order: Boundaries, Living here, Representatives.
 
 ### Worked example (Toronto, 43.66810, -79.36690)
 
@@ -207,6 +212,7 @@ Keyed by unit code as a string (`"71"`). Fields:
 | `lang` | Up to 5 `[language, pct]`, largest first. Demographic: card only. |
 | `langMulti` | Toronto only: % naming two or more languages equally. |
 | `homesTier` | Not stored; the website computes it. Apps don't need it. |
+| `facts` | Optional. Up to 3 ways the unit stands out among its peers, strongest first: `[{text, field, end, scope, rank, of, value}]`. `text` is a finished sentence fragment ("Highest rents in North York", "Among the most affordable homes on the South Side"); `value` is the figure behind it ("median $1,660/mo"). `field` is one of `value`, `rent`, `renterPct`, `transitPct`, `walkBikePct`, `carPct`, `detached`, `large`, `oldest`, `newest`, `hub`; `end` `high`/`low`; `scope` `city` or `peers` (the unit's former city, Old Toronto area or side); `rank` (1–3) of `of` units. Built by `engine/facts.py` from non-demographic fields only. Units that don't stand out have no `facts`. |
 
 Rows, in order (labels from `card.living`):
 

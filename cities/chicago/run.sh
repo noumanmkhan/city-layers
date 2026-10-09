@@ -8,6 +8,7 @@ mkdir -p tmp ../../docs/chicago/data
 python3 build.py
 python3 landmarks.py
 python3 profiles.py
+python3 ../../engine/facts.py chicago   # after profiles: what makes each unit stand out
 python3 heritage.py
 OUT=../../docs/chicago/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }
