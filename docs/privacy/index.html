@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Maps · Nouman Khan</title>
+<meta name="description" content="Privacy policy for the City Layers iOS app and the maps on maps.noumankhan.ca.">
+<link rel="canonical" href="https://maps.noumankhan.ca/privacy/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maps.noumankhan.ca/privacy/">
+<meta property="og:title" content="Privacy · Maps · Nouman Khan">
+<meta property="og:description" content="Privacy policy for the City Layers iOS app and the maps on maps.noumankhan.ca.">
+<meta property="og:image" content="https://noumankhan.ca/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nouman Khan, noumankhan.ca">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#F2F4F3">
+
+<link rel="preload" href="/fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Archivo';font-weight:700;font-display:swap;src:url(/fonts/archivo-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-weight:800;font-display:swap;src:url(/fonts/archivo-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-weight:500;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-weight:500;font-display:swap;src:url(/fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2')}
+
+:root{
+  --bg:#F2F4F3; --card:#FFFFFF; --ink:#16201C; --ink-2:#3A4641; --ink-3:#4A5651; --rule:#C9D0CD;
+  --accent:#0B5F55; --accent-soft:rgba(11,95,85,.15); --grid:rgba(22,32,28,.06);
+  --display:'Archivo',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:64px 64px}
+a{color:inherit;text-decoration:none}
+.page{min-height:100vh;display:flex;flex-direction:column}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
+
+header{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:.08em}
+.mark .sub{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.08em;color:var(--accent)}
+.mark .sep{width:1.5px;height:16px;background:var(--rule)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.pill{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;font-weight:500;font-size:15px;background:var(--card);border:1.5px solid var(--rule)}
+.pill .short{display:none}
+.pill.dark{background:var(--ink);border-color:var(--ink);color:#fff}
+
+main{flex-grow:1;padding-top:72px;padding-bottom:64px;display:flex;flex-direction:column;gap:56px}
+.hero{display:flex;flex-direction:column;gap:20px;max-width:760px}
+.coords{font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--accent)}
+h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.02em}
+.lede{margin:0;font-size:clamp(18px,2vw,22px);line-height:1.5;color:var(--ink-2)}
+
+.line{display:flex;align-items:center}
+.line span{width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);background:var(--bg)}
+.line s{flex-grow:1;height:4px;background:var(--accent)}
+
+.group{display:flex;flex-direction:column;gap:20px}
+.label{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.12em;color:var(--ink-3)}
+.label::after{content:"";flex-grow:1;height:1px;background:var(--rule)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px}
+.card{display:flex;flex-direction:column;gap:20px;background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:32px}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.icon{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;background:var(--accent);flex:none}
+.icon.dark{background:var(--ink)}
+.host{font-family:var(--mono);font-size:13px;color:var(--ink-3);overflow-wrap:break-word;text-align:right}
+.card h2{margin:0 0 10px;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.01em}
+.card p{margin:0;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.go{margin-top:auto;display:flex;align-items:center;gap:8px;font-weight:500;font-size:16px;color:var(--accent)}
+.go.dark{color:var(--ink)}
+
+/* Print-map card: a thumbnail on top, then the same text layout */
+.card.print{padding:0;overflow:hidden;gap:0}
+.card.print .thumb{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bg);border-bottom:1.5px solid var(--rule)}
+.card.print .body{display:flex;flex-direction:column;gap:16px;padding:28px 32px 32px;flex-grow:1}
+.card.print h2{font-size:24px}
+
+/* Placeholder shown until the first print map is published */
+.soon{display:flex;flex-direction:column;gap:14px;border:1.5px dashed var(--rule);border-radius:14px;padding:32px;background:rgba(255,255,255,.5)}
+.card .tag{display:inline-block;margin-bottom:12px}
+.soon .tag,.card .tag{align-self:flex-start;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:5px 12px}
+.soon h2{margin:0;font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.01em}
+.soon p{margin:0;font-size:17px;line-height:1.6;color:var(--ink-2)}
+
+.pill,.card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.pill:hover,.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(22,32,28,.10);border-color:var(--ink)}
+.pill:focus-visible,.card:focus-visible,.mark a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pill,.card{transition:none}.pill:hover,.card:hover{transform:none}}
+
+footer{padding-top:24px;padding-bottom:24px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+footer a:hover{color:var(--ink)}
+.made{display:flex;align-items:center;gap:8px}
+@media (max-width:520px){.pill .full{display:none}.pill .short{display:inline}main{padding-top:40px;gap:40px}.card,.soon{padding:24px}.card.print .body{padding:22px 24px 24px}}
+
+/* Privacy page */
+main.doc{padding-top:56px;gap:40px}
+.doc .hero{gap:16px}
+.toc{display:flex;flex-wrap:wrap;gap:10px}
+.toc a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;font-weight:500;font-size:15px;background:var(--card);border:1.5px solid var(--rule)}
+.toc a:hover{border-color:var(--ink)}
+.summary{background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:28px 32px}
+.summary h2,.policy h2{margin:0 0 6px;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.01em}
+.policy{background:var(--card);border:1.5px solid var(--rule);border-radius:14px;padding:32px;max-width:860px;scroll-margin-top:24px}
+.policy h3{margin:28px 0 8px;font-family:var(--display);font-weight:700;font-size:19px}
+.policy p,.policy li,.summary p,.summary li{font-size:17px;line-height:1.6;color:var(--ink-2)}
+.policy p,.summary p{margin:0 0 12px}
+.policy ul,.summary ul{margin:0 0 12px;padding-left:22px}
+.policy li,.summary li{margin-bottom:6px}
+.policy a,.summary a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.policy code{font-family:var(--mono);font-size:15px}
+.dated{font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--ink-3)}
+@media (max-width:520px){.policy,.summary{padding:24px}main.doc{padding-top:32px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="wrap">
+    <div class="mark">
+      <a href="https://noumankhan.ca">NOUMAN KHAN</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a class="sub" href="/">MAPS</a>
+    </div>
+    <nav class="links" aria-label="Elsewhere">
+      <a class="pill" href="/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 8 12 13l9.5-5L12 3Z"/><path d="m2.5 12 9.5 5 9.5-5"/><path d="m2.5 16 9.5 5 9.5-5"/></svg>
+        <span class="full">All maps</span><span class="short">Maps</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="wrap doc">
+    <section class="hero">
+      <div class="coords">LAST UPDATED · OCTOBER 9, 2026</div>
+      <h1>Privacy</h1>
+      <p class="lede">How the City Layers app and the maps on this site handle your information. The short version: no accounts, no analytics, no ads, and nothing about you is sold.</p>
+      <nav class="toc" aria-label="On this page">
+        <a href="#app">City Layers app (iOS)</a>
+        <a href="#website">This website</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </section>
+
+    <section class="summary" aria-labelledby="short">
+      <h2 id="short">In short</h2>
+      <ul>
+        <li>There are no accounts, no sign-ups and no tracking. The app and the website don’t use analytics tools, advertising, or tracking cookies.</li>
+        <li>Your location is optional, is only used when you ask for it, and stays on your device.</li>
+        <li>Searching for an address sends what you type to a search service (Apple in the app, OpenStreetMap on the website) so it can find the place.</li>
+        <li>Your settings are saved on your own device, not on a server run by me.</li>
+        <li>I don’t sell, rent or share personal information, because I don’t collect it.</li>
+      </ul>
+    </section>
+
+    <section class="policy" id="app" aria-labelledby="app-h">
+      <h2 id="app-h">City Layers app (iOS)</h2>
+      <p class="dated">LAST UPDATED · OCTOBER 9, 2026</p>
+
+      <h3>What the app is</h3>
+      <p>City Layers shows neighbourhood and community-area map layers, and a “What’s here” card describing a spot you pick, for Toronto and Chicago. It is made by Nouman Khan, an individual developer.</p>
+
+      <h3>Your location</h3>
+      <p>Location access is optional. The app only uses it when you tap the button to find your location, to place the map pin near you. Working out which neighbourhood, ward or district you’re in happens on your device. Your location is not sent to me, not stored on a server, not sold, and not used for advertising or tracking. You can turn location access off at any time in iOS Settings, and the app still works: you can drop a pin or search instead.</p>
+
+      <h3>Address and place search</h3>
+      <p>When you search for an address, the app uses Apple’s maps and search services (MapKit), so what you type is sent to Apple to find the place. Apple handles that under its own <a href="https://www.apple.com/legal/privacy/">privacy policy</a>. Map display also comes from Apple Maps.</p>
+
+      <h3>Map and census data</h3>
+      <p>The map layers and neighbourhood facts are public open data (from the City of Toronto, the City of Chicago, Statistics Canada, the U.S. Census Bureau, OpenStreetMap and others, credited in the app’s About screen). The app comes with a copy of this data so it works offline, and it downloads updates from <code>maps.noumankhan.ca</code>. Those downloads are ordinary file requests: they don’t include your location, searches or any identifier, though, as with any web request, the server that delivers the files sees your device’s IP address (see <a href="#website">the website section</a>).</p>
+
+      <h3>What’s stored on your device</h3>
+      <p>The app saves your preferences (such as your preferred city), your last pin, and a snapshot of the “What’s here” card so the home-screen widget can show it. These stay on your device, in storage shared only between the app and its own widget. Deleting the app deletes them.</p>
+
+      <h3>What the app doesn’t do</h3>
+      <ul>
+        <li>No accounts or sign-in.</li>
+        <li>No analytics or tracking tools, and no advertising.</li>
+        <li>No collection of contacts, photos, health data or other personal information.</li>
+        <li>No selling or sharing of personal data with anyone.</li>
+      </ul>
+      <p>If you choose to share something from the app (for example a link to a spot on the map), it goes only where you send it, through the iOS share sheet.</p>
+    </section>
+
+    <section class="policy" id="website" aria-labelledby="web-h">
+      <h2 id="web-h">This website</h2>
+      <p class="dated">LAST UPDATED · OCTOBER 9, 2026</p>
+      <p>This covers <code>maps.noumankhan.ca</code>, including Toronto Layers and Chicago Layers.</p>
+
+      <h3>No accounts, analytics or ads</h3>
+      <p>The maps don’t use analytics tools, advertising or tracking cookies, and you don’t need an account.</p>
+
+      <h3>Hosting and the services the page loads</h3>
+      <p>The site is hosted on GitHub Pages. Like any website, loading it means your browser connects to some outside services, which receive your IP address and basic browser details as part of that connection:</p>
+      <ul>
+        <li><strong>GitHub</strong>, which hosts the pages and map data (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>).</li>
+        <li><strong>Google Fonts</strong>, for the map’s typeface (<a href="https://policies.google.com/privacy">Google’s privacy policy</a>).</li>
+        <li><strong>cdnjs</strong> (Cloudflare) and <strong>jsDelivr</strong>, which serve the open-source map libraries.</li>
+      </ul>
+      <p>I don’t receive or keep these logs.</p>
+
+      <h3>Address search</h3>
+      <p>When you search for an address, what you type is sent to OpenStreetMap’s Nominatim service to find it (<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation privacy policy</a>). Suggestions for landmarks and place names come from the map’s own data, in your browser, and aren’t sent anywhere.</p>
+
+      <h3>Your location and pins</h3>
+      <p>The website doesn’t ask for your location. When you drop a pin, working out what it falls in happens in your browser. Shareable links keep the map position and pin in the part of the link after the <code>#</code>, which browsers don’t send to the server; it only goes to whoever you share the link with.</p>
+
+      <h3>Saving images</h3>
+      <p>The “Image” button creates the picture in your browser. The first time you use it, a small open-source library is loaded from jsDelivr.</p>
+
+      <h3>What’s stored in your browser</h3>
+      <p>The site saves a few display settings in your browser’s local storage: light or dark theme, whether the side panel is folded, and which card sections are open. These are not cookies, aren’t sent anywhere, and you can clear them by clearing your browser’s site data.</p>
+    </section>
+
+    <section class="policy" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact and changes</h2>
+      <p>Questions about privacy: <a href="mailto:hello@noumankhan.ca">hello@noumankhan.ca</a>.</p>
+      <p>If this policy changes, the updated version will be posted on this page with a new date. Material changes will be noted at the top.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a href="https://noumankhan.ca">© 2026 Nouman Khan</a>
+    <a href="/">All maps</a>
+  </footer>
+</div>
+</body>
+</html>
