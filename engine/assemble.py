@@ -52,7 +52,17 @@ print('assembled docs/%s/index.html' % city, len(t), 'bytes')
 
 # The config is also published on its own, beside the data, for apps that read the map's data
 # (see DATA_CONTRACT.md). Its "schema" number goes up only on a breaking change.
+# The published copy also carries "palette": every colour variable the page defines (engine and city),
+# with its light and dark value, so an app can resolve "--bia" or "--b-oldtoronto" without reading CSS.
+def colours(css, selector):
+    out = {}
+    for block in re.findall(re.escape(selector) + r'\{([^{}]*)\}', css):
+        out.update(re.findall(r'(--[\w-]+)\s*:\s*(#[0-9A-Fa-f]{3,8})\b', block))
+    return out
+styles = read(HERE, 'template.html') + '\n' + read(CITY_DIR, 'city.css')
+light, dark = colours(styles, ':root'), colours(styles, ':root[data-theme="dark"]')
+pub = dict(cfg, palette={k: {'light': v.upper(), 'dark': dark.get(k, v).upper()} for k, v in light.items()})
 cfg_out = os.path.join(ROOT, 'docs', city, 'data', 'city.json')
 os.makedirs(os.path.dirname(cfg_out), exist_ok=True)
-open(cfg_out, 'w', encoding='utf-8').write(json.dumps(cfg, ensure_ascii=False, separators=(',', ':')) + '\n')
+open(cfg_out, 'w', encoding='utf-8').write(json.dumps(pub, ensure_ascii=False, separators=(',', ':')) + '\n')
 print('published docs/%s/data/city.json' % city)

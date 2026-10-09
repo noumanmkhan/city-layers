@@ -19,6 +19,11 @@ change, clone or fetch from.
   good cached copy and show an "update the app" message.
 - Ignore unknown keys and files. New ones are not errors.
 - Ship a bundled copy of each city's data for offline use and refresh it in the background.
+- Colours come from `palette` in `city.json` (light and dark per CSS variable name). Don't copy
+  hex values into the app.
+- Map layers: section 11 of `DATA_CONTRACT.md` says which layers to draw, how the website styles
+  and labels them, and how to adapt that to Apple's map. Polygons have holes; use
+  `MKGeoJSONDecoder` and keep `interiorPolygons`.
 
 ## Display rules (from the website; keep them)
 - Describe, don't rank. Language at home and any other demographic field is shown on the card

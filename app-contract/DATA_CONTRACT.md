@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 9, 2026 (card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 9, 2026 (map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -95,12 +95,23 @@ How the website's search does it, for an app that wants to match:
 - `card`: `pills`, `facts`, `living`, `reps` (section 6).
 - `lens.file` (the profiles file) and `lens.lenses`: each has `key` (the profile field holding a
   tier id) and `tiers: [[tierId, label, colourVariable], …]`. Use the label; the colour variable
-  is a website CSS name and can be ignored or mapped to the app's own palette.
+  resolves through `palette`.
+- `palette`: every colour the website uses, keyed by its CSS variable name with the leading `--`
+  (`"--bia": {"light": "#E0791A", "dark": "#F39A45"}`). Every colour reference elsewhere in
+  `city.json` (a fill layer's `colors`, a pill's `color`, a lens tier) is a key here. Only the
+  published copy has it; the website builds it from its stylesheets. Use it rather than copying
+  hex values into the app, so a colour change on the website reaches the app with the data.
 - `drive`: `hub` (`[lat, lon]`) and `hubName` ("Union Station", "State & Madison").
 - `outside`: `beyond` (message when the point is outside the whole region), `regionPill`
   (template for the region name), `note` (shown on outside cards).
 - `regionPlaces` (Toronto only): `file`, and `near`, the place kinds used for a "Near …" pill.
 - `attribution`.
+
+Pill colours on the card: a `{"layer": A, "else": B}` pill takes the colour of whichever layer
+matched, from that layer's `colors[name]`; a `{"layer", "text", "color"}` pill uses its `color`;
+a known-as pill is `--cult-enclave`; anything without a colour is `--ink-3`. Outside the city:
+"Near …" is `--cult-enclave`, the municipality `--land-out-line`, the region `--muni-label`.
+Pill background `--pill-bg`, text `--ink`.
 
 ### Text templates
 
@@ -253,3 +264,106 @@ card's census and boundary data, with its own source line.
 The website's maintainer updates this file whenever the published data changes shape. A breaking
 change bumps `schema` in `city.json` and gets a new section at the top of this file saying what
 changed and how to migrate.
+
+## 11. Drawing the boundary layers on a map
+
+The website draws its layers with Leaflet on a plain base. This section gives what an app needs
+to draw the same boundary layers on another map (Apple's MapKit, for the iOS app): which layers,
+their geometry, and how the website styles and labels them. Transit lines, streets, highways,
+landmarks and the lenses are not covered here yet.
+
+### Which layers
+
+Every layer in `groups` whose `kind` is `fill`, `units`, `districts`, `outline`, `patches` or
+`knownas`. Keep the group order and use `name` and `note` for the layer list. A layer with
+`"on": true` starts switched on. Today that gives:
+
+| City | Layer (`id`, kind) | File |
+|---|---|---|
+| Toronto | Former cities (`boroughs`, fill major) | `boroughs` |
+| | Old Toronto areas (`areas`, fill minor) | `areas` |
+| | Neighbourhoods (`nbhd`, units) | `neighbourhoods` |
+| | Known-as names (`cultural`, knownas) | `cultural` |
+| | Heritage districts (`heritage`, districts) | `heritage` |
+| | City wards (`wards`, outline city) | `wards` |
+| | Provincial ridings (`prov`, outline state) | `wards` (see below) |
+| | Federal ridings (`fed`, outline national) | `federal` |
+| | Business Improvement Areas (`bia`, patches) | `bia` |
+| Chicago | The sides (`sides`, fill major) | `sides` |
+| | Community areas (`ca`, units) | `community_areas` |
+| | Known-as names (`knownas`, knownas) | `knownas` |
+| | Landmark districts (`heritage`, districts) | `heritage` |
+| | City wards (`wards`, outline city) | `wards` |
+| | Illinois House districts (`house`, outline state) | `il_house` |
+| | Congressional districts (`congress`, outline national) | `congress` |
+| | Special Service Areas (`ssa`, patches) | `ssa` |
+
+Read these from `city.json`; the table is a snapshot, not a list to hard-code.
+
+### Geometry
+
+- Each layer's `file` plus `.geojson`. Polygons are `Polygon` or `MultiPolygon`, **with holes**
+  in every file above (Toronto's `areas` has 10, Chicago's `ssa` 23). Drawing an outer ring alone
+  fills the holes and puts the wrong colour over the place inside. In MapKit, `MKGeoJSONDecoder`
+  returns `MKPolygon` / `MKMultiPolygon` with `interiorPolygons` set, and each feature's
+  properties as JSON `Data`. SwiftUI's `MapPolygon(coordinates:)` takes one ring and cannot
+  draw holes.
+- Toronto's provincial ridings reuse `wards.geojson`: in Toronto each ward is exactly one
+  provincial riding. Same shapes as the ward layer, labelled with `{prov}` and styled as `state`.
+- Several layers share edges (wards, ridings, neighbourhoods). The website just strokes each
+  polygon; there is no separate line file.
+- Sizes: 2,000–13,000 vertices per layer, 4–280 KB. Decode once per city off the main thread
+  and keep the shapes; switching a layer on or off adds or removes them, it doesn't re-read.
+
+### How the website draws them
+
+Colours are `palette` keys (light / dark resolved there). Widths are in screen points. Drawing
+order, bottom to top, is the table's order.
+
+| Kind | Fill | Stroke | Label (at `lp`) | Label shows from zoom |
+|---|---|---|---|---|
+| `fill`, size `major` | `colors[name]`, opacity 0.55 | `--city`, 2 (a pale gap between areas) | `name`, 15 pt heavy, `--ink` | 10; fades to 35% from 13 |
+| `fill`, size `minor` | `colors[name]`, opacity 0.6 | `--city`, 2 | `name`, 13 pt bold, `--ink` | 11 |
+| `patches` | `--bia`, opacity 0.45 | `--bia`, 1.2 | `label` template, 10 pt semibold, `--bia` | 14 |
+| `districts` | `--hd`, opacity 0.14 | `--hd`, 1.6, dashed 4 on / 3 off | `label` template, 10 pt semibold italic, `--hd` | 14 |
+| `units` | none | `--nbhd`, 0.9, at 70% opacity | `name`, 10.5 pt medium, `--ink-2`, wraps at ~120 pt | 13 |
+| `outline`, level `national` | none | `--fed`, 2.2 | `label` template, 11 pt bold, `--fed` | 11 |
+| `outline`, level `state` | none | `--prov`, 2, dashed 6 on / 4 off | `label` template, 11 pt bold, `--prov` | 11 |
+| `outline`, level `city` | none | `--ward`, 2.2 | `label` template, 11 pt bold, `--ward` | 11 |
+| `knownas` | (points: label only) | | `name`, 11.5 pt semibold italic, `--cult`; `kind: "enclave"` uses `--cult-enclave` | 12 |
+
+- Fill colours come from the layer's `colors` map by feature `name` (the same map that colours the
+  first pill on the card). A name missing from the map uses `--ink-3`.
+- Labels have no box; the website gives them a soft halo in `--city` so they read over lines.
+- **Zoom** is the web-map zoom. From a MapKit region:
+  `zoom = log2(360 × mapWidthInPoints / (256 × region.span.longitudeDelta))`.
+  On a 390 pt-wide phone, zoom 11 ≈ 0.27° of longitude across, 13 ≈ 0.067°, 14 ≈ 0.034°.
+- **Label collisions.** When labels overlap, the website keeps them in this order and hides the
+  later one: known-as names, Old Toronto area names, unit names, ward / riding / district numbers,
+  BIA / SSA names, heritage / landmark district names. (Former-city / side names are not in the
+  list: they always show.) In MapKit, map this order onto annotation `displayPriority`.
+- Tapping anywhere still opens the "What's here" card for that point (section 5); the drawn
+  layers never change what the card says.
+
+### Adapting to Apple's map
+
+The website draws on its own pale base; Apple's map has roads, labels and points of interest of
+its own. The values above are the website's. These adjustments are the app's to make and tune on
+a real phone:
+
+- Add overlays at the `aboveRoads` level so Apple's place and street names stay on top and
+  readable. Use the muted map style and hide Apple's points of interest.
+- The fill opacities (0.55, 0.6, 0.45) assume a blank base. Over Apple's map, start near 0.25 for
+  `fill` and `patches`, and keep strokes as they are.
+- Apple already labels many neighbourhoods. Draw unit labels only when the units layer is on,
+  give them the lowest priority, and drop any whose text matches the place name Apple shows there,
+  if that can be detected; otherwise accept occasional doubles and test.
+- Rebuild or redraw overlay renderers when the appearance switches between light and dark, so the
+  colours follow; renderers don't always pick up a dynamic colour change on their own.
+
+### Check
+
+Toronto, 43.66810, -79.36690 (the worked example in section 5) sits inside the Downtown fill
+(`--a-downtown`), in Ward 13, inside the Cabbagetown (Metcalfe) heritage district, and outside
+any BIA. `https://maps.noumankhan.ca/toronto/#pin=43.66810,-79.36690` shows the same; turn the
+layers on there to compare.
