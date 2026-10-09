@@ -26,7 +26,7 @@ a read-only consumer. Last updated October 8, 2026 (search: landmark and known-a
 - **Describe, don't rank.** The card describes the place the user picked. Demographic fields
   (language at home, and anything similar added later) never feed rankings, colours, filters,
   "best/worst" lists, notifications or comparisons.
-- The lens tiers (`cost`, `commute`, `tenure`, `unionBand`) are the only precomputed comparisons,
+- The lens tiers (`cost`, `commute`, `tenure`, `unionBand`, `loopBand`) are the only precomputed comparisons,
   and they are shown with their labels and notes from `city.json`.
 - Always show the caveat lines from `city.json` (`card.living.caveat`, `footer`, the language
   `note`) wherever the figures appear, including widgets, even if shortened.
@@ -201,6 +201,7 @@ Keyed by unit code as a string (`"71"`). Fields:
 | `renterPct`, `carPct`, `transitPct`, `walkBikePct` | Whole-number percentages. |
 | `cost`, `commute`, `tenure` | Tier ids; labels come from `lens.lenses` (match `key`). |
 | `union`, `unionBand` | Toronto only: transit minutes to Union, weekday 8–9 am, and its tier. |
+| `loop`, `loopBand` | Chicago only: transit minutes to the Loop (quickest of five Loop arrival points), weekday 8–9 am, and its tier. Same tier ids as `unionBand`. |
 | `homes` | 4 shares (%) of home types, in the order of `card.living.homes.types`. |
 | `built` | 4 shares (%) by period built, in the order of `card.living.built.bands`. |
 | `lang` | Up to 5 `[language, pct]`, largest first. Demographic: card only. |
@@ -210,8 +211,9 @@ Keyed by unit code as a string (`"71"`). Fields:
 Rows, in order (labels from `card.living`):
 
 1. **Housing**: cost tier label · "Median home $800K · rent $1,320/mo" · `caveat`.
-2. **`hub`** (Toronto only, when `union` is present): `unionBand` tier label · `hubText` with
-   `{minutes}`.
+2. **`hub`** (when the city's transit-time field is present): its tier label · `hubText` with
+   `{minutes}`. The field is the lens in `lens.lenses` that has `minutes` (`union` in Toronto,
+   `loop` in Chicago); its `key` names the tier field.
 3. **Getting to work**: commute tier label · "72% drive · 24% transit · 3% walk or bike".
 4. **Households**: tenure tier label · "35% rent".
 5. **Home types** and **Built**: a small stacked bar, then each share of 1% or more in words
