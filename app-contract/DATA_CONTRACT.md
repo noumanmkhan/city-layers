@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 9, 2026 (profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 9, 2026 (card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -156,8 +156,10 @@ first matching feature in file order wins.
    value `r.name` linking to `r.url` (no record or no name: "Seat currently vacant"); subline
    `office.sub` filled with `{f: h.properties, r: r}`. Footer `card.reps.note` with `{date}` =
    `representatives.updated` written as a long date.
-10. **Title**: the searched place's name if there is one, otherwise the coordinates
-   (`43.6681° N, 79.3669° W`).
+10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
+   `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
+   layer's hit; coordinates (`43.6681° N, 79.3669° W`) only for a spot no layer covers.
+   The standout line (step 7) drops its "{profile name}: " prefix when the title is that name.
 
 The website shows the standout line under the pills, then three collapsible sections in this
 order: Boundaries, Living here, Representatives.
