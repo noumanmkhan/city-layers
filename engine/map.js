@@ -643,7 +643,7 @@ function langRow(cfg, d){
     (cfg.note ? '<span class="caveat">' + esc(fill(cfg.note, {multi: d.langMulti})) + '</span>' : '') + '</dd>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
-const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, near:false, reps:false} : {bounds:true, live:true, near:true, reps:false};
+const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, schools:false, near:false, reps:false} : {bounds:true, live:true, schools:true, near:true, reps:false};
 let secOpen = Object.assign({}, SEC_DEFAULT);
 try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || '{}')); } catch (e) {}
 function section(id, title, body){
@@ -665,6 +665,20 @@ function nearby(x, y){
     return n + ' ' + (n === 1 ? one : many);
   });
   return '<div class="live"><dl>' + rows + '<dt>' + esc(N.within) + '</dt><dd>' + esc(counts.join(' · ')) + '</dd></dl><p>' + esc(N.note) + '</p></div>';
+}
+/* Schools (card only, nothing drawn on the map): the school whose attendance area holds the spot, for
+   each level the city config lists (e.g. elementary, middle, high), with its grades and the straight-line
+   distance to the building. One file, each area tagged with its level. Describe only: no ratings or scores.
+   The file is large, so it loads after the map; the open card is redrawn when it arrives. */
+function schools(x, y){
+  const S = CITY.card.schools, D = data.schools; if (!S || !D) return '';
+  const rows = S.levels.map(([lv, label]) => {
+    const f = D.features.find(f => f.properties.level === lv && contains(f.geometry, x, y)); if (!f) return '';
+    const p = f.properties, at = p.x != null ? [p.x, p.y] : null;
+    const name = p.url ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' : esc(p.name);
+    return '<dt>' + esc(label) + '</dt><dd>' + name + '<span>' + esc(fill(at ? S.sub : S.subNoDist, {grades: p.grades, dist: at ? dist(metres([x, y], at)) : ''})) + '</span></dd>';
+  }).join('');
+  return rows ? '<div class="live reps"><dl>' + rows + '</dl><p>' + esc(fill(S.note, {year: D.year || ''})) + '</p></div>' : '';
 }
 // Who represents this spot. Names link to their official pages.
 function representatives(hits){
@@ -727,7 +741,9 @@ function nearCommunity(x, y, title){
   if (!c || c[0].name === title) return '';
   return '<span class="pill"><i style="background:var(--cult-enclave)"></i>Near ' + esc(c[0].name) + '</span>';
 }
+let lastInspect = null;
 function inspect(latlng, title, muniName){
+  lastInspect = [latlng, title, muniName];
   const x = latlng.lng, y = latlng.lat;
   if (!hit(data.footprint, x, y)){
     // A named community already knows its municipality: the map's shapes are trimmed to a coarse
@@ -782,6 +798,7 @@ function inspect(latlng, title, muniName){
     standout(unit, heading) +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
+    section('schools', (CITY.card.schools && CITY.card.schools.title) || 'Schools', schools(x, y)) +
     section('near', 'Nearby', nearby(x, y)) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
@@ -1358,5 +1375,10 @@ Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   lastHash = location.hash;
   if (location.hash) linkReady = true; else armLink();
   window.cityMapReady = true;
+  // Attendance areas are big: fetched after the map is up, then the open card is redrawn with them.
+  if (CITY.card.schools) get(CITY.card.schools.file).then(d => {
+    data.schools = d;
+    if (!here.hidden && lastInspect && hit(data.footprint, lastInspect[0].lng, lastInspect[0].lat)) inspect(...lastInspect);
+  }).catch(() => { data.schools = null; });
 }).catch(err => { renderEmpty('The map data didn’t load (' + err.message + '). Reload the page to try again.'); });
 })();

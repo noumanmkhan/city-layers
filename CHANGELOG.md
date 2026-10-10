@@ -1,5 +1,14 @@
 # Changelog
 
+## Since 1.1
+
+### Chicago
+- **Schools** section on the card: the CPS elementary, middle (where one has its own area) and high
+  school whose attendance area holds the spot, with grades, straight-line distance and a link to
+  the CPS profile. CPS 2025–26 boundaries from the City's Data Portal. Names and grades only.
+- For the iOS app: new file `attendance.geojson`; new `card.schools` in `city.json`; contract
+  sections 3 and 5. Additive, schema stays 1.
+
 ## Version 1.1 (October 10, 2026)
 
 Everything up to commit `b69c3a0` (the iOS app section on the maps hub) is version 1.0. Version 1.1

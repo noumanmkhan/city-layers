@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (Chicago's Schools section and `attendance.geojson`; Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -53,6 +53,7 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 | `region_places.json` | Toronto only: ~470 named GTA communities. `[{name, muni, region, kind, at:[lon,lat]}]`. |
 | `region_areas.geojson` | Region/county outlines for the regional view. Not needed for the card. |
 | `nearby.json` | Points for the card's Nearby section: `{groups: {key: [[lon, lat, name?], …]}}`. Keys and labels come from `card.nearby` (section 5). Named kinds (`library`, `centre`, `er`) carry a name; counted kinds (`park`, `playground`, …) are bare points. |
+| `attendance.geojson` | Chicago only: CPS attendance areas for the card's Schools section. One polygon per school and grade range, all levels in one file. `properties`: `level` (`es` elementary, `ms` middle, `hs` high), `grades` ("K–8", "7–8", "9–12"), `name` (the school's full name), `url` (its CPS profile page, may be empty), `x`, `y` (the building, lon/lat; absent when unknown, then `addr` may name the street). Top-level `year` ("2025–26"). Areas of one level don't overlap. Describe only: no ratings, scores or enrolment. |
 | `institutions.geojson` | Universities, colleges and hospitals (points) for the `places` layers. `properties`: `name`, `cat` (`university`, `college`, `hospital`), `sub` (campus, network or ownership, optional), `ed` (true for a hospital with an emergency department). Curated by fixed rules (public or nonprofit only; see each city's `institutions.py`). Describe only: no ratings. |
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
@@ -207,14 +208,21 @@ first matching feature in file order wins.
    label `within`, value the count of points of each `[key, one, many]` in `counts` within
    `radius` metres, "19 parks · 7 playgrounds …" (`one` when the count is 1). Footer `note`, always
    shown. Counts only: never a score, ranking or "best". The website shows this section between
-   Living here and Representatives.
+   Schools and Representatives.
+   **Schools** (`card.schools`, Chicago only): load `card.schools.file` (`attendance.geojson`). For
+   each `[level, label]` in `levels`, the feature of that `level` containing the coordinate: row
+   `label`, value its `name` (linked to `url` when set), subline `sub` filled with `{grades}` and
+   `{dist}` (straight-line distance to `[x, y]`, same format as Nearby), or `subNoDist` when the
+   feature has no `x`. Levels with no hit are skipped (most of the city has no middle-school row).
+   Footer `note` with `{year}` from the file. Section title `title`. No hits at all: no section.
+   The website shows it between Living here and Nearby, and loads the file after the map is up.
 10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
    `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
    layer's hit; coordinates (`43.6681° N, 79.3669° W`) only for a spot no layer covers.
    The standout line (step 7) drops its "{profile name}: " prefix when the title is that name.
 
 The website shows the standout line under the pills, then four collapsible sections in this
-order: Boundaries, Living here, Nearby, Representatives.
+order: Boundaries, Living here, Schools (Chicago), Nearby, Representatives.
 
 ### Worked example (Toronto, 43.66810, -79.36690)
 

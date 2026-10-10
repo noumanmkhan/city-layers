@@ -132,6 +132,12 @@
       "built": {"label": "Built", "bands": ["1939 or earlier", "1940–79", "1980–99", "2000 or later"]},
       "lang": {"label": "Language at home", "floor": 5, "note": "English only, or the language besides English that each person 5 or older speaks at home. For small areas the Census groups some languages: Polish shares a group with Russian and other Slavic languages."}
     },
+    "schools": {
+      "file": "attendance.geojson", "title": "Schools",
+      "levels": [["es", "Elementary"], ["ms", "Middle school"], ["hs", "High school"]],
+      "sub": "Grades {grades} · {dist} away", "subNoDist": "Grades {grades}",
+      "note": "The Chicago Public Schools whose attendance area this spot is in, from CPS’s {year} boundaries. Distances are straight-line to the school building. Boundaries change; CPS’s school locator has the final word."
+    },
     "nearby": {
       "file": "nearby.json", "radius": 1000,
       "nearest": [["library", "Library"], ["centre", "Community centre"], ["er", "Emergency dept."]],
