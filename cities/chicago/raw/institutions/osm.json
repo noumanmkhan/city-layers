@@ -1,0 +1,1861 @@
+[
+{
+"osm": "w317136445",
+"at": [
+-87.81674,
+41.90845
+],
+"name": "Loyola Center for Health",
+"amenity": "clinic",
+"operator": "Loyola University",
+"emergency": null
+},
+{
+"osm": "w186115681",
+"at": [
+-87.83458,
+41.85633
+],
+"name": "Loyola Outpatient Center",
+"amenity": "clinic",
+"operator": "Loyola University Health System",
+"emergency": null
+},
+{
+"osm": "w1205327626",
+"at": [
+-87.60692,
+41.80694
+],
+"name": "Northwestern Medicine Bronzeville Outpatient Center",
+"amenity": "clinic",
+"operator": "Northwestern Medicine",
+"emergency": null
+},
+{
+"osm": "w366251192",
+"at": [
+-87.68295,
+41.91367
+],
+"name": "Northwestern Medicine Bucktown",
+"amenity": "clinic",
+"operator": "Northwestern Medicine",
+"emergency": null
+},
+{
+"osm": "w1027568316",
+"at": [
+-87.74011,
+41.95316
+],
+"name": "Northwestern Medicine Outpatient Center",
+"amenity": "clinic",
+"operator": "Northwestern Medicine",
+"emergency": null
+},
+{
+"osm": "n354235500",
+"at": [
+-87.64579,
+41.95493
+],
+"name": "American Islamic College",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w231522030",
+"at": [
+-87.68638,
+41.84067
+],
+"name": "Arturo Velasquez Institute",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "n354233221",
+"at": [
+-87.70476,
+41.99766
+],
+"name": "Brisk Rabbinical College",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r19755367",
+"at": [
+-87.62614,
+41.8675
+],
+"name": "Columbia College Chicago",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n354237105",
+"at": [
+-87.67116,
+41.87225
+],
+"name": "Cook County Graduate School of Medicine",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n2819245981",
+"at": [
+-87.62652,
+41.88268
+],
+"name": "Cortiva Institute",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w1042100470",
+"at": [
+-87.62559,
+41.82283
+],
+"name": "Dawson Technical Institute of Kennedy-King College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "w1053110476",
+"at": [
+-87.62681,
+41.88606
+],
+"name": "Harold Washington College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "w24861150",
+"at": [
+-87.76092,
+42.01009
+],
+"name": "Hebrew Theological College",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w1258014701",
+"at": [
+-87.69666,
+41.91136
+],
+"name": "Humboldt Park Vocational Education Center",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "w225532817",
+"at": [
+-87.62224,
+41.83558
+],
+"name": "Illinois College of Optometry",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r21545206",
+"at": [
+-87.6434,
+41.77883
+],
+"name": "Kennedy-King College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "n354246399",
+"at": [
+-87.62716,
+41.89715
+],
+"name": "Loyola Law School",
+"amenity": "college",
+"operator": "Loyola University Chicago",
+"emergency": null
+},
+{
+"osm": "n14259330773",
+"at": [
+-87.62665,
+41.89739
+],
+"name": "Loyola School of Communications",
+"amenity": "college",
+"operator": "Loyola University Chicago",
+"emergency": null
+},
+{
+"osm": "w218662509",
+"at": [
+-87.67411,
+41.87815
+],
+"name": "Malcolm X College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "w1258014700",
+"at": [
+-87.74103,
+41.88122
+],
+"name": "Malcolm X College Westside Learning Center",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "r18278111",
+"at": [
+-87.6347,
+41.8986
+],
+"name": "Moody Bible Institute",
+"amenity": "college",
+"operator": "Moody Global Ministries",
+"emergency": null
+},
+{
+"osm": "w127999832",
+"at": [
+-87.83863,
+41.69263
+],
+"name": "Moraine Valley Community College",
+"amenity": "college",
+"operator": "Moraine Valley Community College District 524",
+"emergency": null
+},
+{
+"osm": "w443325103",
+"at": [
+-87.68049,
+41.65779
+],
+"name": "Moraine Valley Community College Education Center at Blue Island",
+"amenity": "college",
+"operator": "Moraine Valley Community College",
+"emergency": null
+},
+{
+"osm": "w499771912",
+"at": [
+-87.76146,
+41.82361
+],
+"name": "Morton College",
+"amenity": "college",
+"operator": "Morton Community College District 527",
+"emergency": null
+},
+{
+"osm": "w162704928",
+"at": [
+-87.7596,
+41.96865
+],
+"name": "Northwestern College",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n12312622414",
+"at": [
+-87.61724,
+41.89611
+],
+"name": "Northwestern University Feinberg School of Medicine",
+"amenity": "college",
+"operator": "Northwestern University",
+"emergency": null
+},
+{
+"osm": "n13256534950",
+"at": [
+-87.6175,
+41.8964
+],
+"name": "Northwestern Univertsity Pritzker School of Law",
+"amenity": "college",
+"operator": "Northwestern University",
+"emergency": null
+},
+{
+"osm": "w26131388",
+"at": [
+-87.7496,
+42.02129
+],
+"name": "Oakton Community College Skokie Campus",
+"amenity": "college",
+"operator": "Oakton Community College District 535",
+"emergency": null
+},
+{
+"osm": "w1101859022",
+"at": [
+-87.54912,
+41.72778
+],
+"name": "Olive Harvey College South Chicago Learning Center",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "w217203535",
+"at": [
+-87.58943,
+41.71062
+],
+"name": "Olive-Harvey College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "n11353411261",
+"at": [
+-87.62799,
+41.89772
+],
+"name": "Quinlan School of Business",
+"amenity": "college",
+"operator": "Loyola University Chicago",
+"emergency": null
+},
+{
+"osm": "r19872335",
+"at": [
+-87.72441,
+41.75568
+],
+"name": "Richard J. Daley College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "n13905481314",
+"at": [
+-87.63753,
+41.89714
+],
+"name": "SAE Institutue Chicago",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w134579190",
+"at": [
+-87.66309,
+41.97217
+],
+"name": "Saint Augustine College",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r15903194",
+"at": [
+-87.62427,
+41.8802
+],
+"name": "School of The Art Institute of Chicago",
+"amenity": "college",
+"operator": "Art Institute of Chicago",
+"emergency": null
+},
+{
+"osm": "w1123265765",
+"at": [
+-87.64815,
+41.94684
+],
+"name": "The Salvation Army College for Officer Training",
+"amenity": "college",
+"operator": "The Salvation Army",
+"emergency": null
+},
+{
+"osm": "w391078772",
+"at": [
+-87.84168,
+41.91526
+],
+"name": "Triton College",
+"amenity": "college",
+"operator": "Triton Community College District 504",
+"emergency": null
+},
+{
+"osm": "r20271100",
+"at": [
+-87.65889,
+41.96419
+],
+"name": "Truman College",
+"amenity": "college",
+"operator": "City of Chicago Colleges",
+"emergency": null
+},
+{
+"osm": "n14152710964",
+"at": [
+-87.67124,
+41.90661
+],
+"name": "University of Aesthetics & Cosmetology",
+"amenity": "college",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w90770743",
+"at": [
+-87.78892,
+41.95875
+],
+"name": "Wilbur Wright College",
+"amenity": "college",
+"operator": "City Colleges of Chicago",
+"emergency": null
+},
+{
+"osm": "n5276572197",
+"at": [
+-87.73209,
+41.72357
+],
+"name": "Advocate Children's Hospital - Oak Lawn",
+"amenity": "hospital",
+"operator": "Advocate Health Care",
+"emergency": "yes"
+},
+{
+"osm": "w440555192",
+"at": [
+-87.7305,
+41.72215
+],
+"name": "Advocate Christ Medical Center",
+"amenity": "hospital",
+"operator": "Advocate Health Care",
+"emergency": "yes"
+},
+{
+"osm": "r18239404",
+"at": [
+-87.6516,
+41.93721
+],
+"name": "Advocate Illinois Masonic Hospital",
+"amenity": "hospital",
+"operator": "Advocate Health Care",
+"emergency": "yes"
+},
+{
+"osm": "w241870223",
+"at": [
+-87.56697,
+41.72631
+],
+"name": "Advocate Trinity Hospital",
+"amenity": "hospital",
+"operator": "Advocate Health Care",
+"emergency": "yes"
+},
+{
+"osm": "w47055764",
+"at": [
+-87.62203,
+41.89626
+],
+"name": "Ann & Robert H. Lurie Children's Hospital",
+"amenity": "hospital",
+"operator": "Northwestern Medicine",
+"emergency": "yes"
+},
+{
+"osm": "w231185703",
+"at": [
+-87.65069,
+41.97033
+],
+"name": "Chicago Lakeshore Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "no"
+},
+{
+"osm": "w1566883243",
+"at": [
+-87.79993,
+41.95522
+],
+"name": "Chicago-Read Mental Health Center",
+"amenity": "hospital",
+"operator": "Illinois Department of Human Services' Division of Mental Health",
+"emergency": "no"
+},
+{
+"osm": "n14103626839",
+"at": [
+-87.62419,
+41.88536
+],
+"name": "Cityscape Counseling",
+"amenity": "hospital",
+"operator": "Cityscape Counseling",
+"emergency": null
+},
+{
+"osm": "w428373899",
+"at": [
+-87.76797,
+41.94568
+],
+"name": "Community First Medical Center",
+"amenity": "hospital",
+"operator": "Community First Healthcare",
+"emergency": "yes"
+},
+{
+"osm": "r18292356",
+"at": [
+-87.83807,
+41.8577
+],
+"name": "Edward Hines, Jr. VA Hospital",
+"amenity": "hospital",
+"operator": "Veterans Health Administration",
+"emergency": "yes"
+},
+{
+"osm": "w273290677",
+"at": [
+-87.93531,
+41.86423
+],
+"name": "Elmhurst Hospital",
+"amenity": "hospital",
+"operator": "Edward-Elmhurst Health",
+"emergency": "yes"
+},
+{
+"osm": "w1083665117",
+"at": [
+-87.84717,
+41.74377
+],
+"name": "Forest Med-Surg Center",
+"amenity": "hospital",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w551092377",
+"at": [
+-87.72043,
+41.89062
+],
+"name": "Garfield Park Behavioral Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "no"
+},
+{
+"osm": "w551057998",
+"at": [
+-87.84292,
+41.91025
+],
+"name": "Gottlieb Memorial Hospital",
+"amenity": "hospital",
+"operator": "Loyola University Health System",
+"emergency": "yes"
+},
+{
+"osm": "w384156599",
+"at": [
+-87.76747,
+41.86634
+],
+"name": "Hartgrove Behavioral Health System",
+"amenity": "hospital",
+"operator": null,
+"emergency": "no"
+},
+{
+"osm": "w228663039",
+"at": [
+-87.69222,
+41.76912
+],
+"name": "Holy Cross Hospital",
+"amenity": "hospital",
+"operator": "Sinai Health System",
+"emergency": "yes"
+},
+{
+"osm": "r18907604",
+"at": [
+-87.69992,
+41.90133
+],
+"name": "Humboldt Park Health",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w210570610",
+"at": [
+-87.62251,
+41.84658
+],
+"name": "Insight Hospital & Medical Center",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w222831338",
+"at": [
+-87.58481,
+41.75695
+],
+"name": "Jackson Park Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w537392585",
+"at": [
+-87.67779,
+41.87028
+],
+"name": "Jesse Brown VA Medical Center",
+"amenity": "hospital",
+"operator": "Veterans Health Administration",
+"emergency": "yes"
+},
+{
+"osm": "r20590371",
+"at": [
+-87.67388,
+41.87329
+],
+"name": "John H. Stroger, Jr. Hospital of Cook County",
+"amenity": "hospital",
+"operator": "Cook County Department of Public Health",
+"emergency": "yes"
+},
+{
+"osm": "w209479030",
+"at": [
+-87.69297,
+41.96155
+],
+"name": "Kindred Hospital Chicago (North Campus)",
+"amenity": "hospital",
+"operator": "Kindred Healthcare",
+"emergency": "no"
+},
+{
+"osm": "w1331761639",
+"at": [
+-87.8905,
+41.9069
+],
+"name": "Kindred Hospital Chicago Northlake",
+"amenity": "hospital",
+"operator": "Kindred Healthcare",
+"emergency": null
+},
+{
+"osm": "w1446950437",
+"at": [
+-87.57129,
+41.77733
+],
+"name": "La Rabida Children's Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "no"
+},
+{
+"osm": "w551168052",
+"at": [
+-87.69287,
+41.72269
+],
+"name": "Little Company of Mary Hospital",
+"amenity": "hospital",
+"operator": "OSF HealthCare",
+"emergency": "yes"
+},
+{
+"osm": "w162513176",
+"at": [
+-87.76353,
+41.87213
+],
+"name": "Loretto Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w211323371",
+"at": [
+-87.64999,
+41.96715
+],
+"name": "Louis A. Weiss Memorial Hospital",
+"amenity": "hospital",
+"operator": "Resilience Healthcare",
+"emergency": "yes"
+},
+{
+"osm": "w186117715",
+"at": [
+-87.83506,
+41.86039
+],
+"name": "Loyola University Hospital",
+"amenity": "hospital",
+"operator": "Loyola Medicine",
+"emergency": "yes"
+},
+{
+"osm": "r18292358",
+"at": [
+-87.83521,
+41.85818
+],
+"name": "Loyola University Medical Center",
+"amenity": "hospital",
+"operator": "Loyola University Health System",
+"emergency": "yes"
+},
+{
+"osm": "w406072957",
+"at": [
+-87.79218,
+41.8321
+],
+"name": "MacNeal Hospital",
+"amenity": "hospital",
+"operator": "Loyola Medicine",
+"emergency": "yes"
+},
+{
+"osm": "r18292357",
+"at": [
+-87.83625,
+41.86298
+],
+"name": "Madden Mental Health Center",
+"amenity": "hospital",
+"operator": "Illinois Department of Human Services",
+"emergency": "no"
+},
+{
+"osm": "w242228765",
+"at": [
+-87.6942,
+41.86181
+],
+"name": "Mount Sinai Hospital",
+"amenity": "hospital",
+"operator": "Sinai Health System",
+"emergency": "yes"
+},
+{
+"osm": "r17607255",
+"at": [
+-87.62192,
+41.89508
+],
+"name": "Northwestern Memorial Hospital",
+"amenity": "hospital",
+"operator": "Northwestern Medicine",
+"emergency": "yes"
+},
+{
+"osm": "w551182671",
+"at": [
+-87.81312,
+41.66914
+],
+"name": "Palos Hospital",
+"amenity": "hospital",
+"operator": "Northwestern Medicine",
+"emergency": "yes"
+},
+{
+"osm": "w244945457",
+"at": [
+-87.61377,
+41.80306
+],
+"name": "Provident Hospital of Cook County",
+"amenity": "hospital",
+"operator": "Cook County Health",
+"emergency": "yes"
+},
+{
+"osm": "w208808881",
+"at": [
+-87.71194,
+41.87562
+],
+"name": "RML Specialty Hospital",
+"amenity": "hospital",
+"operator": "RML Specialty Hospital",
+"emergency": "no"
+},
+{
+"osm": "w551352443",
+"at": [
+-87.91552,
+41.78639
+],
+"name": "RML Specialty Hospital Hinsdale",
+"amenity": "hospital",
+"operator": "RML Specialty Hospital",
+"emergency": "no"
+},
+{
+"osm": "w28755306",
+"at": [
+-87.8143,
+41.98828
+],
+"name": "Resurrection Medical Center",
+"amenity": "hospital",
+"operator": "Prime Healthcare Services",
+"emergency": "yes"
+},
+{
+"osm": "w551055084",
+"at": [
+-87.82907,
+41.86539
+],
+"name": "Riveredge Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "no"
+},
+{
+"osm": "w239938453",
+"at": [
+-87.62555,
+41.69256
+],
+"name": "Roseland Community Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w406075701",
+"at": [
+-87.80308,
+41.87849
+],
+"name": "Rush Oak Park Hospital",
+"amenity": "hospital",
+"operator": "Rush University",
+"emergency": "yes"
+},
+{
+"osm": "r20590975",
+"at": [
+-87.66671,
+41.87342
+],
+"name": "Rush University Medical Center",
+"amenity": "hospital",
+"operator": "Rush University",
+"emergency": "yes"
+},
+{
+"osm": "w551141105",
+"at": [
+-87.69738,
+41.85505
+],
+"name": "Saint Anthony Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "r21467109",
+"at": [
+-87.63339,
+41.7786
+],
+"name": "Saint Bernard Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w692254839",
+"at": [
+-87.68533,
+41.90746
+],
+"name": "Saint Elizabeth Hospital",
+"amenity": "hospital",
+"operator": "Prime Healthcare Services",
+"emergency": "no"
+},
+{
+"osm": "w32052949",
+"at": [
+-87.68342,
+42.02447
+],
+"name": "Saint Francis Hospital Evanston",
+"amenity": "hospital",
+"operator": "Prime Healthcare Services",
+"emergency": "yes"
+},
+{
+"osm": "w211090327",
+"at": [
+-87.63781,
+41.93451
+],
+"name": "Saint Joseph Hospital",
+"amenity": "hospital",
+"operator": "Ascension",
+"emergency": "yes"
+},
+{
+"osm": "w31125521",
+"at": [
+-87.68337,
+41.90308
+],
+"name": "Saint Mary of Nazareth Hospital",
+"amenity": "hospital",
+"operator": "Prime Healthcare Services",
+"emergency": "yes"
+},
+{
+"osm": "w551141093",
+"at": [
+-87.69514,
+41.86206
+],
+"name": "Schwab Rehabilitation Hospital",
+"amenity": "hospital",
+"operator": "Sinai Health System",
+"emergency": "no"
+},
+{
+"osm": "w217925219",
+"at": [
+-87.79335,
+41.91973
+],
+"name": "Shriners Hospitals for Children",
+"amenity": "hospital",
+"operator": "Shriners Hospitals for Children",
+"emergency": "no"
+},
+{
+"osm": "w551155326",
+"at": [
+-87.56924,
+41.74898
+],
+"name": "South Shore Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w209730046",
+"at": [
+-87.69941,
+41.97537
+],
+"name": "Swedish Covenant Hospital",
+"amenity": "hospital",
+"operator": "NorthShore University HealthSystem",
+"emergency": "yes"
+},
+{
+"osm": "r14685787",
+"at": [
+-87.65229,
+41.95456
+],
+"name": "Thorek Memorial Hospital",
+"amenity": "hospital",
+"operator": null,
+"emergency": "yes"
+},
+{
+"osm": "w134578632",
+"at": [
+-87.67105,
+41.97314
+],
+"name": "Thorek Memorial Hospital Andersonville",
+"amenity": "hospital",
+"operator": "Thorek Memorial Hospital",
+"emergency": "yes"
+},
+{
+"osm": "w225179700",
+"at": [
+-87.92053,
+41.80547
+],
+"name": "UChicago Medicine AdventHealth Hinsdale",
+"amenity": "hospital",
+"operator": "UChicago Medicine",
+"emergency": "yes"
+},
+{
+"osm": "w279274162",
+"at": [
+-87.88601,
+41.79671
+],
+"name": "UChicago Medicine AdventHealth La Grange",
+"amenity": "hospital",
+"operator": "UChicago Medicine",
+"emergency": "yes"
+},
+{
+"osm": "w229438623",
+"at": [
+-87.60369,
+41.79019
+],
+"name": "University of Chicago Medicine Campus",
+"amenity": "hospital",
+"operator": "University of Chicago Medicine",
+"emergency": "yes"
+},
+{
+"osm": "r20600200",
+"at": [
+-87.67045,
+41.8697
+],
+"name": "University of Illinois at Chicago Hospital",
+"amenity": "hospital",
+"operator": "University of Illinois Hospital & Health Sciences System",
+"emergency": "yes"
+},
+{
+"osm": "w551062630",
+"at": [
+-87.77627,
+41.89162
+],
+"name": "West Suburban Medical Center",
+"amenity": "hospital",
+"operator": "Resilience Healthcare",
+"emergency": "yes"
+},
+{
+"osm": "w1274988586",
+"at": [
+-87.63884,
+41.88866
+],
+"name": "Chicago & Northwestern Railway Bridgehouse",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w35601478",
+"at": [
+-87.62723,
+41.87754
+],
+"name": "DePaul Center",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209463960",
+"at": [
+-87.692,
+41.94224
+],
+"name": "DePaul College Prep",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w210318477",
+"at": [
+-87.64833,
+41.92334
+],
+"name": "DePaul University College of Education",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w561571931",
+"at": [
+-87.64947,
+41.92511
+],
+"name": "DePaul University School of Music",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w207256165",
+"at": [
+-87.65498,
+41.92565
+],
+"name": "DePaul University Welcome Center",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w783488240",
+"at": [
+-87.66123,
+42.00224
+],
+"name": "Hampton Inn Chicago North-Loyola Station",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w815377353",
+"at": [
+-87.66117,
+42.00117
+],
+"name": "Loyola",
+"amenity": "other",
+"operator": "Chicago Transit Authority",
+"emergency": null
+},
+{
+"osm": "w186109130",
+"at": [
+-87.83593,
+41.85758
+],
+"name": "Loyola Center for Fitness",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w210395828",
+"at": [
+-87.65918,
+42.00183
+],
+"name": "Loyola Hall",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w210395829",
+"at": [
+-87.65898,
+42.00183
+],
+"name": "Loyola Hall-Institue Of Pastoral Studies",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209956900",
+"at": [
+-87.66156,
+42.01086
+],
+"name": "Loyola Park Fieldhouse",
+"amenity": "other",
+"operator": "Chicago Park District",
+"emergency": null
+},
+{
+"osm": "w210395854",
+"at": [
+-87.65792,
+42.00097
+],
+"name": "Loyola Univeristy Steam Chiller Plant",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w144153224",
+"at": [
+-87.62721,
+41.89713
+],
+"name": "Loyola University Tower",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209950685",
+"at": [
+-87.66106,
+41.99997
+],
+"name": "Morgan at Loyola Station",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209487353",
+"at": [
+-87.69003,
+41.98955
+],
+"name": "Napleton's Northwestern Chrysler, Jeep, Dodge & Ram",
+"amenity": "other",
+"operator": "Napleton",
+"emergency": null
+},
+{
+"osm": "w162704591",
+"at": [
+-87.76068,
+41.96829
+],
+"name": "Northwestern College Administrative Building",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209881201",
+"at": [
+-87.67168,
+41.92771
+],
+"name": "Northwestern Terra Cotta Company Building",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w210317809",
+"at": [
+-87.64803,
+41.92139
+],
+"name": "Saint Vincent DePaul Center",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209942973",
+"at": [
+-87.66806,
+41.97667
+],
+"name": "Swedish American Museum",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209485688",
+"at": [
+-87.69817,
+41.97523
+],
+"name": "Swedish Covenant Hospital",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209487538",
+"at": [
+-87.69797,
+41.97608
+],
+"name": "Swedish Covenant Professional Plaza",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209946519",
+"at": [
+-87.66856,
+41.97999
+],
+"name": "Swedish State Bank Building",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w439634496",
+"at": [
+-87.66158,
+42.00059
+],
+"name": "The Flats at Loyola Station",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w384914053",
+"at": [
+-87.66118,
+42.00174
+],
+"name": "The Montserrat at Loyola Station",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w237984814",
+"at": [
+-87.65879,
+41.92477
+],
+"name": "Theatre School at DePaul University",
+"amenity": "other",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w210395834",
+"at": [
+-87.65909,
+41.99889
+],
+"name": "Loyola Parking Structure",
+"amenity": "parking",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w173328366",
+"at": [
+-87.61721,
+41.89401
+],
+"name": "Northwestern Medical  Employee Parking Garage",
+"amenity": "parking",
+"operator": "Northwestern University",
+"emergency": null
+},
+{
+"osm": "w209487537",
+"at": [
+-87.69977,
+41.97441
+],
+"name": "Swedish Covenant Hospital",
+"amenity": "parking",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w209947307",
+"at": [
+-87.66802,
+41.98096
+],
+"name": "Philadelphia Swedish Pentecostal Church",
+"amenity": "place_of_worship",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w1466838045",
+"at": [
+-87.65899,
+41.9944
+],
+"name": "Loyola Campus Police",
+"amenity": "police",
+"operator": "Loyola University Chicago Police Department",
+"emergency": null
+},
+{
+"osm": "w145096478",
+"at": [
+-87.58601,
+41.79776
+],
+"name": "Academic Conference Center - Catholic Theological Union",
+"amenity": "university",
+"operator": "Catholic Theological Union",
+"emergency": null
+},
+{
+"osm": "n13482107013",
+"at": [
+-87.62917,
+41.88241
+],
+"name": "Adler University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n9272791654",
+"at": [
+-87.6773,
+41.96896
+],
+"name": "Advantage Academy of DeVry University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w138758717",
+"at": [
+-87.60918,
+41.71788
+],
+"name": "Chicago State University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n354233512",
+"at": [
+-87.6421,
+41.87886
+],
+"name": "Chicago-Kent College of Law",
+"amenity": "university",
+"operator": "Illinois Institute of Technology",
+"emergency": null
+},
+{
+"osm": "w196592047",
+"at": [
+-87.80947,
+41.89963
+],
+"name": "Concordia University Chicago",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r2527861",
+"at": [
+-87.65394,
+41.92405
+],
+"name": "DePaul University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n13265441615",
+"at": [
+-87.65816,
+41.92564
+],
+"name": "DePaul University - The Art School",
+"amenity": "university",
+"operator": "DePaul University",
+"emergency": null
+},
+{
+"osm": "r15979377",
+"at": [
+-87.62642,
+41.87783
+],
+"name": "DePaul University – Loop Campus",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n354102023",
+"at": [
+-87.73057,
+41.93883
+],
+"name": "DeVry University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w196590777",
+"at": [
+-87.82261,
+41.90272
+],
+"name": "Dominican University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w598999595",
+"at": [
+-87.8074,
+41.90322
+],
+"name": "Dominican University Priory Campus",
+"amenity": "university",
+"operator": "Dominican University",
+"emergency": null
+},
+{
+"osm": "w1052556791",
+"at": [
+-87.62507,
+41.87123
+],
+"name": "East West University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n354153319",
+"at": [
+-87.94709,
+41.89612
+],
+"name": "Elmhurst University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w186595095",
+"at": [
+-87.94876,
+41.89699
+],
+"name": "Elmhurst University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w184697467",
+"at": [
+-87.71667,
+41.70551
+],
+"name": "Graham School of Management",
+"amenity": "university",
+"operator": "Saint Xavier University",
+"emergency": null
+},
+{
+"osm": "n1924394912",
+"at": [
+-87.63281,
+41.88883
+],
+"name": "IIT Institute of Design",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n1619741019",
+"at": [
+-87.64211,
+41.8791
+],
+"name": "IIT Stuart School of Business",
+"amenity": "university",
+"operator": "Illinois Institute of Technology",
+"emergency": null
+},
+{
+"osm": "r21277281",
+"at": [
+-87.62647,
+41.83592
+],
+"name": "Illinois Institute of Technology",
+"amenity": "university",
+"operator": "Illinois Institute of Technology",
+"emergency": null
+},
+{
+"osm": "w225071837",
+"at": [
+-87.60949,
+41.82332
+],
+"name": "Jacob H. Carruthers Center for Inner City Studies",
+"amenity": "university",
+"operator": "Northeastern Illinois University",
+"emergency": null
+},
+{
+"osm": "r11191827",
+"at": [
+-87.65798,
+41.99922
+],
+"name": "Loyola University Chicago",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r17594942",
+"at": [
+-87.62653,
+41.89738
+],
+"name": "Loyola University Water Tower Campus",
+"amenity": "university",
+"operator": "Loyola University Chicago",
+"emergency": null
+},
+{
+"osm": "w182197318",
+"at": [
+-87.5989,
+41.79607
+],
+"name": "Lutheran School of Theology",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "n13191528312",
+"at": [
+-87.58462,
+41.7612
+],
+"name": "Muhammad University of Islam",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w1179832216",
+"at": [
+-87.6249,
+41.87989
+],
+"name": "National Louis University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r5233840",
+"at": [
+-87.70893,
+41.97389
+],
+"name": "North Park University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w27826763",
+"at": [
+-87.71846,
+41.97931
+],
+"name": "Northeastern Illinois University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w351463808",
+"at": [
+-87.71486,
+41.94308
+],
+"name": "Northeastern Illinois University - El Centro Campus",
+"amenity": "university",
+"operator": "Northeastern Illinois University",
+"emergency": null
+},
+{
+"osm": "r17607254",
+"at": [
+-87.61949,
+41.89511
+],
+"name": "Northwestern University Chicago Campus",
+"amenity": "university",
+"operator": "Northwestern University",
+"emergency": null
+},
+{
+"osm": "r17427583",
+"at": [
+-87.62518,
+41.87549
+],
+"name": "Roosevelt University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r15652551",
+"at": [
+-87.66912,
+41.87457
+],
+"name": "Rush University",
+"amenity": "university",
+"operator": "Rush University Medical Center",
+"emergency": null
+},
+{
+"osm": "w184722799",
+"at": [
+-87.71464,
+41.70875
+],
+"name": "Saint Xavier University",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r13117436",
+"at": [
+-87.59779,
+41.78919
+],
+"name": "The University of Chicago",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "w322648605",
+"at": [
+-87.78297,
+41.66907
+],
+"name": "Trinity Christian College",
+"amenity": "university",
+"operator": null,
+"emergency": null
+},
+{
+"osm": "r19755400",
+"at": [
+-87.65036,
+41.86948
+],
+"name": "University of Illinois Chicago",
+"amenity": "university",
+"operator": "University of Illinois System",
+"emergency": null
+},
+{
+"osm": "w1053110425",
+"at": [
+-87.62824,
+41.87783
+],
+"name": "University of Illinois Chicago School of Law",
+"amenity": "university",
+"operator": "University of Illinois Chicago",
+"emergency": null
+},
+{
+"osm": "r17687555",
+"at": [
+-87.67516,
+41.87
+],
+"name": "University of Illinois Chicago West Campus",
+"amenity": "university",
+"operator": "University of Illinois System",
+"emergency": null
+},
+{
+"osm": "n10822457190",
+"at": [
+-87.59609,
+41.73511
+],
+"name": "University of Illinois Extension - Cook County Office",
+"amenity": "university",
+"operator": "University of Illinois",
+"emergency": null
+}
+]
