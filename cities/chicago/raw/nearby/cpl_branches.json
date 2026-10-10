@@ -1,0 +1,1887 @@
+[
+{
+"branch_": "Albany Park",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3401 W. Foster Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60625",
+"phone": "(773) 539-5450",
+"website": {
+"url": "https://www.chipublib.org/locations/3/"
+},
+"branch_email": "albanypark@chipublib.org",
+"location": {
+"latitude": "41.97557881655979",
+"longitude": "-87.71361314512697",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "20",
+":@computed_region_vrxf_vc4k": "13",
+":@computed_region_6mkv_f3dw": "21849",
+":@computed_region_bdys_3d7i": "167",
+":@computed_region_43wa_7qmu": "38"
+},
+{
+"branch_": "Altgeld",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "955 E. 131st St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60827",
+"phone": "(312) 747-3270",
+"website": {
+"url": "https://www.chipublib.org/locations/4/"
+},
+"branch_email": "altgeld@chipublib.org",
+"location": {
+"latitude": "41.65719847558056",
+"longitude": "-87.59883829075173",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "47",
+":@computed_region_vrxf_vc4k": "51",
+":@computed_region_6mkv_f3dw": "4460",
+":@computed_region_bdys_3d7i": "10",
+":@computed_region_43wa_7qmu": "43"
+},
+{
+"branch_": "Archer Heights",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5055 S. Archer Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60632",
+"phone": "(312) 747-9241",
+"website": {
+"url": "https://www.chipublib.org/locations/5/"
+},
+"branch_email": "archerheights@chipublib.org",
+"location": {
+"latitude": "41.80110836194246",
+"longitude": "-87.72648385568911",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "56",
+":@computed_region_vrxf_vc4k": "54",
+":@computed_region_6mkv_f3dw": "22248",
+":@computed_region_bdys_3d7i": "697",
+":@computed_region_43wa_7qmu": "8"
+},
+{
+"branch_": "Austin",
+"service_hours": "Mon. & Wed., Noon-8; Tues. & Thurs., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5615 W. Race Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60644",
+"phone": "(312) 746-5038",
+"website": {
+"url": "https://www.chipublib.org/locations/6/"
+},
+"branch_email": "austin@chipublib.org",
+"location": {
+"latitude": "41.88917312206642",
+"longitude": "-87.7658203582574",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "32",
+":@computed_region_vrxf_vc4k": "26",
+":@computed_region_6mkv_f3dw": "22216",
+":@computed_region_bdys_3d7i": "672",
+":@computed_region_43wa_7qmu": "7"
+},
+{
+"branch_": "Austin-Irving",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6100 W. Irving Park Rd.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60634",
+"phone": "(312) 744-6222",
+"website": {
+"url": "https://www.chipublib.org/locations/7/"
+},
+"branch_email": "austin-irving@chipublib.org",
+"location": {
+"latitude": "41.95312267684315",
+"longitude": "-87.77928489355646",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "52",
+":@computed_region_vrxf_vc4k": "15",
+":@computed_region_6mkv_f3dw": "22254",
+":@computed_region_bdys_3d7i": "131",
+":@computed_region_43wa_7qmu": "19"
+},
+{
+"branch_": "Avalon",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "8148 S. Stony Island Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60617",
+"phone": "(312) 747-5234",
+"website": {
+"url": "https://www.chipublib.org/locations/8/"
+},
+"branch_email": "avalon@chipublib.org",
+"location": {
+"latitude": "41.746393038286826",
+"longitude": "-87.5860053710736",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "61",
+":@computed_region_vrxf_vc4k": "41",
+":@computed_region_6mkv_f3dw": "21202",
+":@computed_region_bdys_3d7i": "133",
+":@computed_region_43wa_7qmu": "35"
+},
+{
+"branch_": "Back of the Yards",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2111 W. 47th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60609",
+"phone": "(312) 747-9595",
+"website": {
+"url": "https://www.chipublib.org/locations/9/"
+},
+"branch_email": "backoftheyards@chipublib.org",
+"location": {
+"latitude": "41.808384423666354",
+"longitude": "-87.67756963874196",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "37",
+":@computed_region_vrxf_vc4k": "59",
+":@computed_region_6mkv_f3dw": "14924",
+":@computed_region_bdys_3d7i": "788",
+":@computed_region_43wa_7qmu": "3"
+},
+{
+"branch_": "Beverly",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1962 W. 95th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60643",
+"phone": "(312) 747-9673",
+"website": {
+"url": "https://www.chipublib.org/locations/10/"
+},
+"branch_email": "beverly@chipublib.org",
+"location": {
+"latitude": "41.72118978926962",
+"longitude": "-87.67214620967468",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "59",
+":@computed_region_vrxf_vc4k": "71",
+":@computed_region_6mkv_f3dw": "22212",
+":@computed_region_bdys_3d7i": "627",
+":@computed_region_43wa_7qmu": "42"
+},
+{
+"branch_": "Bezazian",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1226 W. Ainslie St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60640",
+"phone": "(312) 744-0019",
+"website": {
+"url": "https://www.chipublib.org/locations/11/"
+},
+"branch_email": "bezazian@chipublib.org",
+"location": {
+"latitude": "41.97155143669217",
+"longitude": "-87.66095347964183",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "15",
+":@computed_region_vrxf_vc4k": "31",
+":@computed_region_6mkv_f3dw": "22616",
+":@computed_region_bdys_3d7i": "633",
+":@computed_region_43wa_7qmu": "39"
+},
+{
+"branch_": "Blackstone",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4904 S. Lake Park Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60615",
+"phone": "(312) 747-0511",
+"website": {
+"url": "https://www.chipublib.org/locations/12/"
+},
+"branch_email": "blackstone@chipublib.org",
+"location": {
+"latitude": "41.80549277198318",
+"longitude": "-87.58923748614112",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "10",
+":@computed_region_vrxf_vc4k": "5",
+":@computed_region_6mkv_f3dw": "21192",
+":@computed_region_bdys_3d7i": "400",
+":@computed_region_43wa_7qmu": "10"
+},
+{
+"branch_": "Brainerd",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1350 W. 89th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60620",
+"phone": "(312) 747-6291",
+"website": {
+"url": "https://www.chipublib.org/locations/13/"
+},
+"branch_email": "brainerd@chipublib.org",
+"location": {
+"latitude": "41.73244482025524",
+"longitude": "-87.65772892721816",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "59",
+":@computed_region_vrxf_vc4k": "70",
+":@computed_region_6mkv_f3dw": "21554",
+":@computed_region_bdys_3d7i": "533",
+":@computed_region_43wa_7qmu": "13"
+},
+{
+"branch_": "Brighton Park",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4314 S. Archer Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60632",
+"phone": "(312) 747-0666",
+"website": {
+"url": "https://www.chipublib.org/locations/14/"
+},
+"branch_email": "brightonpark@chipublib.org",
+"location": {
+"latitude": "41.81516027827089",
+"longitude": "-87.70273371160454",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "56",
+":@computed_region_vrxf_vc4k": "55",
+":@computed_region_6mkv_f3dw": "22248",
+":@computed_region_bdys_3d7i": "156",
+":@computed_region_43wa_7qmu": "3"
+},
+{
+"branch_": "Bucktown-Wicker Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun.,  1-5",
+"address": "1701 N. Milwaukee Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60647",
+"phone": "(312) 744-6022",
+"website": {
+"url": "https://www.chipublib.org/locations/15/"
+},
+"branch_email": "bucktown-wickerpark@chipublib.org",
+"location": {
+"latitude": "41.91235487836141",
+"longitude": "-87.68029967133904",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "1",
+":@computed_region_vrxf_vc4k": "25",
+":@computed_region_6mkv_f3dw": "22535",
+":@computed_region_bdys_3d7i": "179",
+":@computed_region_43wa_7qmu": "40"
+},
+{
+"branch_": "Budlong Woods",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5630 N. Lincoln Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60659",
+"phone": "(312) 742-9590",
+"website": {
+"url": "https://www.chipublib.org/locations/16/"
+},
+"branch_email": "budlongwoods@chipublib.org",
+"location": {
+"latitude": "41.98369797603738",
+"longitude": "-87.69631576617253",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "50",
+":@computed_region_vrxf_vc4k": "20",
+":@computed_region_6mkv_f3dw": "4450",
+":@computed_region_bdys_3d7i": "15",
+":@computed_region_43wa_7qmu": "24"
+},
+{
+"branch_": "Canaryville",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "642 W. 43rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60609",
+"phone": "(312) 747-0644",
+"website": {
+"url": "https://www.chipublib.org/locations/17/"
+},
+"branch_email": "canaryville@chipublib.org",
+"location": {
+"latitude": "41.81634394084193",
+"longitude": "-87.64256827550598",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "37",
+":@computed_region_vrxf_vc4k": "59",
+":@computed_region_6mkv_f3dw": "14924",
+":@computed_region_bdys_3d7i": "123",
+":@computed_region_43wa_7qmu": "48"
+},
+{
+"branch_": "Chicago Bee",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3647 S. State St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60609",
+"phone": "(312) 747-6872",
+"website": {
+"url": "https://www.chipublib.org/locations/18/"
+},
+"branch_email": "chicagobee@chipublib.org",
+"location": {
+"latitude": "41.82824306445502",
+"longitude": "-87.6263495444489",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "36",
+":@computed_region_vrxf_vc4k": "1",
+":@computed_region_6mkv_f3dw": "14924",
+":@computed_region_bdys_3d7i": "446",
+":@computed_region_43wa_7qmu": "9"
+},
+{
+"branch_": "Chicago Lawn",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6120 S. Kedzie Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60629",
+"phone": "(312) 747-0639",
+"website": {
+"url": "https://www.chipublib.org/locations/19/"
+},
+"branch_email": "chicagolawn@chipublib.org",
+"location": {
+"latitude": "41.7819767986214",
+"longitude": "-87.7033680880769",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "58",
+":@computed_region_vrxf_vc4k": "64",
+":@computed_region_6mkv_f3dw": "21867",
+":@computed_region_bdys_3d7i": "344",
+":@computed_region_43wa_7qmu": "6"
+},
+{
+"branch_": "Chinatown",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2100 S. Wentworth Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60616",
+"phone": "(312) 747-8013",
+"website": {
+"url": "https://www.chipublib.org/locations/20/"
+},
+"branch_email": "chinatown@chipublib.org",
+"location": {
+"latitude": "41.85412074173438",
+"longitude": "-87.63195792246246",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "40",
+":@computed_region_vrxf_vc4k": "35",
+":@computed_region_6mkv_f3dw": "21194",
+":@computed_region_bdys_3d7i": "3",
+":@computed_region_43wa_7qmu": "26"
+},
+{
+"branch_": "Clearing",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6423 W. 63rd Pl.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60638",
+"phone": "(312) 747-5657",
+"website": {
+"url": "https://www.chipublib.org/locations/21/"
+},
+"branch_email": "clearing@chipublib.org",
+"location": {
+"latitude": "41.776652677565934",
+"longitude": "-87.78218757614671",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "7",
+":@computed_region_vrxf_vc4k": "62",
+":@computed_region_6mkv_f3dw": "22268",
+":@computed_region_bdys_3d7i": "336",
+":@computed_region_43wa_7qmu": "6"
+},
+{
+"branch_": "Coleman",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "731 E. 63rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60637",
+"phone": "(312) 747-7760",
+"website": {
+"url": "https://www.chipublib.org/locations/22/"
+},
+"branch_email": "coleman@chipublib.org",
+"location": {
+"latitude": "41.78028267185317",
+"longitude": "-87.60712228979007",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "60",
+":@computed_region_vrxf_vc4k": "9",
+":@computed_region_6mkv_f3dw": "22260",
+":@computed_region_bdys_3d7i": "332",
+":@computed_region_43wa_7qmu": "4"
+},
+{
+"branch_": "Daley, Richard J.",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3400 S. Halsted St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60608",
+"phone": "(312) 747-8990",
+"website": {
+"url": "https://www.chipublib.org/locations/23/"
+},
+"branch_email": "daley@chipublib.org",
+"location": {
+"latitude": "41.8327976771251",
+"longitude": "-87.64629980794813",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "43",
+":@computed_region_vrxf_vc4k": "58",
+":@computed_region_6mkv_f3dw": "14920",
+":@computed_region_bdys_3d7i": "171",
+":@computed_region_43wa_7qmu": "48"
+},
+{
+"branch_": "Daley, Richard M.",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "733 N. Kedzie Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60612",
+"phone": "(312) 743-0555",
+"website": {
+"url": "https://www.chipublib.org/locations/24/"
+},
+"branch_email": "richardmdaley@chipublib.org",
+"location": {
+"latitude": "41.894726658545295",
+"longitude": "-87.7063841773407",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "28",
+":@computed_region_vrxf_vc4k": "24",
+":@computed_region_6mkv_f3dw": "21184",
+":@computed_region_bdys_3d7i": "177",
+":@computed_region_43wa_7qmu": "46"
+},
+{
+"branch_": "Douglass",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3353 W. 13th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60623",
+"phone": "(312) 747-3725",
+"website": {
+"url": "https://www.chipublib.org/locations/25/"
+},
+"branch_email": "douglass@chipublib.org",
+"location": {
+"latitude": "41.86441239309047",
+"longitude": "-87.71017465670012",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "57",
+":@computed_region_vrxf_vc4k": "30",
+":@computed_region_6mkv_f3dw": "21569",
+":@computed_region_bdys_3d7i": "34",
+":@computed_region_43wa_7qmu": "14"
+},
+{
+"branch_": "Dunning",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "7455 W. Cornelia Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60634",
+"phone": "(312) 743-0480",
+"website": {
+"url": "https://www.chipublib.org/locations/26/"
+},
+"branch_email": "dunning@chipublib.org",
+"location": {
+"latitude": "41.94319949471892",
+"longitude": "-87.81395164414246",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "52",
+":@computed_region_vrxf_vc4k": "17",
+":@computed_region_6mkv_f3dw": "22254",
+":@computed_region_bdys_3d7i": "458",
+":@computed_region_43wa_7qmu": "19"
+},
+{
+"branch_": "Edgebrook",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5331 W. Devon Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60646",
+"phone": "(312) 744-8313",
+"website": {
+"url": "https://www.chipublib.org/locations/27/"
+},
+"branch_email": "edgebrook@chipublib.org",
+"location": {
+"latitude": "41.997213372156295",
+"longitude": "-87.76211751799003",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "18",
+":@computed_region_vrxf_vc4k": "12",
+":@computed_region_6mkv_f3dw": "22532",
+":@computed_region_bdys_3d7i": "782",
+":@computed_region_43wa_7qmu": "38"
+},
+{
+"branch_": "Edgewater",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6000 N. Broadway St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60660",
+"phone": "(312) 742-1945",
+"website": {
+"url": "https://www.chipublib.org/locations/28/"
+},
+"branch_email": "edgewater@chipublib.org",
+"location": {
+"latitude": "41.99095923823291",
+"longitude": "-87.660442745415",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "14",
+":@computed_region_vrxf_vc4k": "76",
+":@computed_region_6mkv_f3dw": "4451",
+":@computed_region_bdys_3d7i": "536",
+":@computed_region_43wa_7qmu": "16"
+},
+{
+"branch_": "Gage Park",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2807 W. 55th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60632",
+"phone": "(312) 747-0032",
+"website": {
+"url": "https://www.chipublib.org/locations/29/"
+},
+"branch_email": "gagepark@chipublib.org",
+"location": {
+"latitude": "41.79357525220078",
+"longitude": "-87.69413004003073",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "58",
+":@computed_region_vrxf_vc4k": "61",
+":@computed_region_6mkv_f3dw": "22248",
+":@computed_region_bdys_3d7i": "764",
+":@computed_region_43wa_7qmu": "2"
+},
+{
+"branch_": "Galewood-Mont Clare",
+"service_hours": "Closed until further notice",
+"address": "6871 W. Belden Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60707",
+"website": {
+"url": "https://www.chipublib.org/locations/30/"
+},
+"branch_email": "galewood-montclare@chipublib.org",
+"location": {
+"latitude": "41.9210332601157",
+"longitude": "-87.79791005523576",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "3",
+":@computed_region_vrxf_vc4k": "18",
+":@computed_region_6mkv_f3dw": "4454",
+":@computed_region_bdys_3d7i": "136",
+":@computed_region_43wa_7qmu": "7"
+},
+{
+"branch_": "Garfield Ridge",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6348 S. Archer Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60638",
+"phone": "(312) 747-6094",
+"website": {
+"url": "https://www.chipublib.org/locations/31/"
+},
+"branch_email": "garfieldridge@chipublib.org",
+"location": {
+"latitude": "41.792915800399726",
+"longitude": "-87.78013459023622",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "7",
+":@computed_region_vrxf_vc4k": "53",
+":@computed_region_6mkv_f3dw": "22268",
+":@computed_region_bdys_3d7i": "587",
+":@computed_region_43wa_7qmu": "6"
+},
+{
+"branch_": "Greater Grand Crossing",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1000 E. 73rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60619",
+"phone": "(312) 745-1608",
+"website": {
+"url": "https://www.chipublib.org/locations/32/"
+},
+"branch_email": "greatergrandcrossing@chipublib.org",
+"location": {
+"latitude": "41.76239541819689",
+"longitude": "-87.60051216643727",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "61",
+":@computed_region_vrxf_vc4k": "67",
+":@computed_region_6mkv_f3dw": "21546",
+":@computed_region_bdys_3d7i": "121",
+":@computed_region_43wa_7qmu": "33"
+},
+{
+"branch_": "Hall",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4801 S. Michigan Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60615",
+"phone": "(312) 747-2541",
+"website": {
+"url": "https://www.chipublib.org/locations/33/"
+},
+"branch_email": "hall@chipublib.org",
+"location": {
+"latitude": "41.807377846345496",
+"longitude": "-87.62263720177272",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "10",
+":@computed_region_vrxf_vc4k": "4",
+":@computed_region_6mkv_f3dw": "21192",
+":@computed_region_bdys_3d7i": "448",
+":@computed_region_43wa_7qmu": "9"
+},
+{
+"branch_": "Harold Washtington Library Center",
+"service_hours": "Mon. - Thurs., 9-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "400 S. State St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60605",
+"phone": "(312) 747-4300",
+"website": {
+"url": "https://www.chipublib.org/locations/34/"
+},
+"branch_email": "hwlc@chipublib.org",
+"location": {
+"latitude": "41.87686252958797",
+"longitude": "-87.62779697013237",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "35",
+":@computed_region_vrxf_vc4k": "38",
+":@computed_region_6mkv_f3dw": "14913",
+":@computed_region_bdys_3d7i": "92",
+":@computed_region_43wa_7qmu": "10"
+},
+{
+"branch_": "Hegewisch",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3048 E. 130th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60633",
+"phone": "(312) 747-0046",
+"website": {
+"url": "https://www.chipublib.org/locations/35/"
+},
+"branch_email": "hegewisch@chipublib.org",
+"location": {
+"latitude": "41.65927659861025",
+"longitude": "-87.54881978393514",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "26",
+":@computed_region_vrxf_vc4k": "52",
+":@computed_region_6mkv_f3dw": "22250",
+":@computed_region_bdys_3d7i": "787",
+":@computed_region_43wa_7qmu": "47"
+},
+{
+"branch_": "Humboldt Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1605 N. Troy St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60647",
+"phone": "(312) 744-2244",
+"website": {
+"url": "https://www.chipublib.org/locations/36/"
+},
+"branch_email": "humboldtpark@chipublib.org",
+"location": {
+"latitude": "41.910332307504966",
+"longitude": "-87.70551941016132",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "1",
+":@computed_region_vrxf_vc4k": "24",
+":@computed_region_6mkv_f3dw": "22535",
+":@computed_region_bdys_3d7i": "389",
+":@computed_region_43wa_7qmu": "49"
+},
+{
+"branch_": "Independence",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4024 N. Elston Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60618",
+"phone": "(312) 744-0900",
+"website": {
+"url": "https://www.chipublib.org/locations/37/"
+},
+"branch_email": "independence@chipublib.org",
+"location": {
+"latitude": "41.95413885986087",
+"longitude": "-87.7200155607629",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "39",
+":@computed_region_vrxf_vc4k": "16",
+":@computed_region_6mkv_f3dw": "21538",
+":@computed_region_bdys_3d7i": "364",
+":@computed_region_43wa_7qmu": "50"
+},
+{
+"branch_": "Jefferson Park",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5363 W. Lawrence Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60630",
+"phone": "(312) 744-1998",
+"website": {
+"url": "https://www.chipublib.org/locations/38/"
+},
+"branch_email": "jeffersonpark@chipublib.org",
+"location": {
+"latitude": "41.96750826032374",
+"longitude": "-87.76176748220928",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "48",
+":@computed_region_vrxf_vc4k": "15",
+":@computed_region_6mkv_f3dw": "21869",
+":@computed_region_bdys_3d7i": "260",
+":@computed_region_43wa_7qmu": "50"
+},
+{
+"branch_": "Jeffery Manor",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2401 E. 100th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60617",
+"phone": "(312) 747-6479",
+"website": {
+"url": "https://www.chipublib.org/locations/39/"
+},
+"branch_email": "jefferymanor@chipublib.org",
+"location": {
+"latitude": "41.71340053892868",
+"longitude": "-87.56573413765888",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "25",
+":@computed_region_vrxf_vc4k": "48",
+":@computed_region_6mkv_f3dw": "21202",
+":@computed_region_bdys_3d7i": "252",
+":@computed_region_43wa_7qmu": "37"
+},
+{
+"branch_": "Kelly",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6151 S. Normal Blvd.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60621",
+"phone": "(312) 747-8418",
+"website": {
+"url": "https://www.chipublib.org/locations/40/"
+},
+"branch_email": "kellylibrary@chipublib.org",
+"location": {
+"latitude": "41.78202569697298",
+"longitude": "-87.63738794358196",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "11",
+":@computed_region_vrxf_vc4k": "66",
+":@computed_region_6mkv_f3dw": "21559",
+":@computed_region_bdys_3d7i": "166",
+":@computed_region_43wa_7qmu": "4"
+},
+{
+"branch_": "King",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3436 S. King Dr.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60616",
+"phone": "(312) 747-7543",
+"website": {
+"url": "https://www.chipublib.org/locations/41/"
+},
+"branch_email": "king@chipublib.org",
+"location": {
+"latitude": "41.83175130060517",
+"longitude": "-87.61747228078738",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "40",
+":@computed_region_vrxf_vc4k": "1",
+":@computed_region_6mkv_f3dw": "21194",
+":@computed_region_bdys_3d7i": "190",
+":@computed_region_43wa_7qmu": "10"
+},
+{
+"branch_": "Legler Regional",
+"service_hours": "Mon. - Thurs., 9-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "115 S. Pulaski Rd.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60624",
+"phone": "(312) 746-7730",
+"website": {
+"url": "https://www.chipublib.org/locations/42/"
+},
+"branch_email": "legler@chipublib.org",
+"location": {
+"latitude": "41.87934542742433",
+"longitude": "-87.72547641315548",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "30",
+":@computed_region_vrxf_vc4k": "27",
+":@computed_region_6mkv_f3dw": "21572",
+":@computed_region_bdys_3d7i": "736",
+":@computed_region_43wa_7qmu": "23"
+},
+{
+"branch_": "Lincoln Belmont",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1659 W. Melrose St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60657",
+"phone": "(312) 744-0166",
+"website": {
+"url": "https://www.chipublib.org/locations/43/"
+},
+"branch_email": "lincolnbelmont@chipublib.org",
+"location": {
+"latitude": "41.94046531149621",
+"longitude": "-87.67102536129381",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "22",
+":@computed_region_vrxf_vc4k": "57",
+":@computed_region_6mkv_f3dw": "4449",
+":@computed_region_bdys_3d7i": "742",
+":@computed_region_43wa_7qmu": "18"
+},
+{
+"branch_": "Lincoln Park",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1150 W. Fullerton Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60614",
+"phone": "(312) 744-1926",
+"website": {
+"url": "https://www.chipublib.org/locations/44/"
+},
+"branch_email": "lincolnpark@chipublib.org",
+"location": {
+"latitude": "41.92540663614013",
+"longitude": "-87.65806218385674",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "16",
+":@computed_region_vrxf_vc4k": "68",
+":@computed_region_6mkv_f3dw": "21190",
+":@computed_region_bdys_3d7i": "795",
+":@computed_region_43wa_7qmu": "34"
+},
+{
+"branch_": "Little Italy",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1336 W. Taylor St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60607",
+"phone": "(312) 746-5656",
+"website": {
+"url": "https://www.chipublib.org/locations/62/"
+},
+"branch_email": "littleitaly@chipublib.org",
+"location": {
+"latitude": "41.86946341218242",
+"longitude": "-87.66072612668584",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "44",
+":@computed_region_vrxf_vc4k": "29",
+":@computed_region_6mkv_f3dw": "14917",
+":@computed_region_bdys_3d7i": "759",
+":@computed_region_43wa_7qmu": "23"
+},
+{
+"branch_": "Little Village",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2311 S. Kedzie Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60623",
+"phone": "(312) 745-1862",
+"website": {
+"url": "https://www.chipublib.org/locations/45/"
+},
+"branch_email": "littlevillage@chipublib.org",
+"location": {
+"latitude": "41.84959155873184",
+"longitude": "-87.70504118331108",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "57",
+":@computed_region_vrxf_vc4k": "32",
+":@computed_region_6mkv_f3dw": "21569",
+":@computed_region_bdys_3d7i": "261",
+":@computed_region_43wa_7qmu": "1"
+},
+{
+"branch_": "Logan Square",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3030 W. Fullerton Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60647",
+"phone": "(312) 744-5295",
+"website": {
+"url": "https://www.chipublib.org/locations/46/"
+},
+"branch_email": "logansquare@chipublib.org",
+"location": {
+"latitude": "41.924860376546214",
+"longitude": "-87.7035190503226",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "1",
+":@computed_region_vrxf_vc4k": "23",
+":@computed_region_6mkv_f3dw": "22535",
+":@computed_region_bdys_3d7i": "549",
+":@computed_region_43wa_7qmu": "40"
+},
+{
+"branch_": "Lozano",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1805 S. Loomis St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60608",
+"phone": "(312) 746-4329",
+"website": {
+"url": "https://www.chipublib.org/locations/47/"
+},
+"branch_email": "lozano@chipublib.org",
+"location": {
+"latitude": "41.857601233304614",
+"longitude": "-87.66116376475367",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "43",
+":@computed_region_vrxf_vc4k": "33",
+":@computed_region_6mkv_f3dw": "14920",
+":@computed_region_bdys_3d7i": "365",
+":@computed_region_43wa_7qmu": "26"
+},
+{
+"branch_": "Manning",
+"service_hours": "Mon. & Wed., Noon-8; Tues. & Thurs., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6 S. Hoyne Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60612",
+"phone": "(312) 746-6800",
+"website": {
+"url": "https://www.chipublib.org/locations/48/"
+},
+"branch_email": "manning@chipublib.org",
+"location": {
+"latitude": "41.88108555559726",
+"longitude": "-87.67923504553734",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "28",
+":@computed_region_vrxf_vc4k": "29",
+":@computed_region_6mkv_f3dw": "21184",
+":@computed_region_bdys_3d7i": "89",
+":@computed_region_43wa_7qmu": "46"
+},
+{
+"branch_": "Mayfair",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4400 W. Lawrence Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60630",
+"phone": "(312) 744-1254",
+"website": {
+"url": "https://www.chipublib.org/locations/49/"
+},
+"branch_email": "mayfair@chipublib.org",
+"location": {
+"latitude": "41.968242773953044",
+"longitude": "-87.737968778247",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "48",
+":@computed_region_vrxf_vc4k": "14",
+":@computed_region_6mkv_f3dw": "21869",
+":@computed_region_bdys_3d7i": "751",
+":@computed_region_43wa_7qmu": "38"
+},
+{
+"branch_": "McKinley Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1915 W. 35th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60609",
+"phone": "(312) 747-6082",
+"website": {
+"url": "https://www.chipublib.org/locations/50/"
+},
+"branch_email": "mckinleypark@chipublib.org",
+"location": {
+"latitude": "41.83030074817219",
+"longitude": "-87.67349098124289",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "37",
+":@computed_region_vrxf_vc4k": "56",
+":@computed_region_6mkv_f3dw": "14924",
+":@computed_region_bdys_3d7i": "720",
+":@computed_region_43wa_7qmu": "1"
+},
+{
+"branch_": "Merlo",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "644 W. Belmont Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60657",
+"phone": "(312) 744-1139",
+"website": {
+"url": "https://www.chipublib.org/locations/51/"
+},
+"branch_email": "merlo@chipublib.org",
+"location": {
+"latitude": "41.940131637508564",
+"longitude": "-87.64602857926714",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "22",
+":@computed_region_vrxf_vc4k": "57",
+":@computed_region_6mkv_f3dw": "4449",
+":@computed_region_bdys_3d7i": "730",
+":@computed_region_43wa_7qmu": "25"
+},
+{
+"branch_": "Mount Greenwood",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "11010 S. Kedzie Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60655",
+"phone": "(312) 747-2805",
+"website": {
+"url": "https://www.chipublib.org/locations/52/"
+},
+"branch_email": "mountgreenwood@chipublib.org",
+"location": {
+"latitude": "41.693015814018004",
+"longitude": "-87.70102477600602",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "33",
+":@computed_region_vrxf_vc4k": "73",
+":@computed_region_6mkv_f3dw": "4447",
+":@computed_region_bdys_3d7i": "369",
+":@computed_region_43wa_7qmu": "42"
+},
+{
+"branch_": "Near North",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "310 W. Division St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60610",
+"phone": "(312) 744-0991",
+"website": {
+"url": "https://www.chipublib.org/locations/53/"
+},
+"branch_email": "nearnorth@chipublib.org",
+"location": {
+"latitude": "41.90393142178499",
+"longitude": "-87.63660775555267",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "54",
+":@computed_region_vrxf_vc4k": "37",
+":@computed_region_6mkv_f3dw": "14926",
+":@computed_region_bdys_3d7i": "290",
+":@computed_region_43wa_7qmu": "11"
+},
+{
+"branch_": "North Austin",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5724 W. North Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60639",
+"phone": "(312) 746-4233",
+"website": {
+"url": "https://www.chipublib.org/locations/54/"
+},
+"branch_email": "northaustin@chipublib.org",
+"location": {
+"latitude": "41.909444834238485",
+"longitude": "-87.76898326931509",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "2",
+":@computed_region_vrxf_vc4k": "26",
+":@computed_region_6mkv_f3dw": "22615",
+":@computed_region_bdys_3d7i": "597",
+":@computed_region_43wa_7qmu": "7"
+},
+{
+"branch_": "North Pulaski",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4300 W. North Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60639",
+"phone": "(312) 744-9573",
+"website": {
+"url": "https://www.chipublib.org/locations/55/"
+},
+"branch_email": "northpulaski@chipublib.org",
+"location": {
+"latitude": "41.90989766464456",
+"longitude": "-87.73376822625004",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "2",
+":@computed_region_vrxf_vc4k": "24",
+":@computed_region_6mkv_f3dw": "22615",
+":@computed_region_bdys_3d7i": "285",
+":@computed_region_43wa_7qmu": "49"
+},
+{
+"branch_": "Northtown",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6800 N. Western Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60645",
+"phone": "(312) 744-2292",
+"website": {
+"url": "https://www.chipublib.org/locations/56/"
+},
+"branch_email": "northtown@chipublib.org",
+"location": {
+"latitude": "42.00507612272344",
+"longitude": "-87.69021903022175",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "12",
+":@computed_region_vrxf_vc4k": "20",
+":@computed_region_6mkv_f3dw": "22528",
+":@computed_region_bdys_3d7i": "42",
+":@computed_region_43wa_7qmu": "27"
+},
+{
+"branch_": "Obama Presidential Center Library",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6021 S. Stony Island Avenue",
+"city": "Chicago",
+"state": "IL",
+"zip": "60637",
+"phone": "(312) 742-2280",
+"website": {
+"url": "https://www.chipublib.org/locations/90/"
+},
+"branch_email": "obama@chipublib.org",
+"location": {
+"latitude": "41.78546828946382",
+"longitude": "-87.58643205397061",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "60",
+":@computed_region_vrxf_vc4k": "9",
+":@computed_region_6mkv_f3dw": "22260",
+":@computed_region_bdys_3d7i": "469",
+":@computed_region_43wa_7qmu": "33"
+},
+{
+"branch_": "Oriole Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun.,  1-5",
+"address": "7454 W. Balmoral Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60656",
+"phone": "(312) 744-1965",
+"website": {
+"url": "https://www.chipublib.org/locations/57/"
+},
+"branch_email": "oriolepark@chipublib.org",
+"location": {
+"latitude": "41.978098111742476",
+"longitude": "-87.81420029973704",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "31",
+":@computed_region_vrxf_vc4k": "36",
+":@computed_region_6mkv_f3dw": "4448",
+":@computed_region_bdys_3d7i": "735",
+":@computed_region_43wa_7qmu": "29"
+},
+{
+"branch_": "Portage-Cragin",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5108 W. Belmont Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60641",
+"phone": "(312) 744-0152",
+"website": {
+"url": "https://www.chipublib.org/locations/58/"
+},
+"branch_email": "portage-cragin@chipublib.org",
+"location": {
+"latitude": "41.93883597361448",
+"longitude": "-87.75467117455794",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "21",
+":@computed_region_vrxf_vc4k": "15",
+":@computed_region_6mkv_f3dw": "22618",
+":@computed_region_bdys_3d7i": "114",
+":@computed_region_43wa_7qmu": "17"
+},
+{
+"branch_": "Pullman",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "11001 S. Indiana Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60628",
+"phone": "(312) 747-2033",
+"website": {
+"url": "https://www.chipublib.org/locations/59/"
+},
+"branch_email": "pullman@chipublib.org",
+"location": {
+"latitude": "41.69436481773882",
+"longitude": "-87.6181414059763",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "19",
+":@computed_region_vrxf_vc4k": "45",
+":@computed_region_6mkv_f3dw": "21861",
+":@computed_region_bdys_3d7i": "237",
+":@computed_region_43wa_7qmu": "43"
+},
+{
+"branch_": "Roden",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6083 N. Northwest Hwy.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60631",
+"phone": "(312) 744-1478",
+"website": {
+"url": "https://www.chipublib.org/locations/60/"
+},
+"branch_email": "roden@chipublib.org",
+"location": {
+"latitude": "41.99199760467718",
+"longitude": "-87.79820642998901",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "17",
+":@computed_region_vrxf_vc4k": "36",
+":@computed_region_6mkv_f3dw": "22243",
+":@computed_region_bdys_3d7i": "657",
+":@computed_region_43wa_7qmu": "29"
+},
+{
+"branch_": "Rogers Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "6907 N. Clark St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60626",
+"phone": "(312) 744-0156",
+"website": {
+"url": "https://www.chipublib.org/locations/61/"
+},
+"branch_email": "rogerspark@chipublib.org",
+"location": {
+"latitude": "42.00682227244734",
+"longitude": "-87.67330813329413",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "9",
+":@computed_region_vrxf_vc4k": "10",
+":@computed_region_6mkv_f3dw": "21853",
+":@computed_region_bdys_3d7i": "49",
+":@computed_region_43wa_7qmu": "5"
+},
+{
+"branch_": "Scottsdale",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4101 W. 79th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60652",
+"phone": "(312) 747-0193",
+"website": {
+"url": "https://www.chipublib.org/locations/63/"
+},
+"branch_email": "scottsdale@chipublib.org",
+"location": {
+"latitude": "41.74928543110801",
+"longitude": "-87.72440869132882",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "8",
+":@computed_region_vrxf_vc4k": "69",
+":@computed_region_6mkv_f3dw": "4300",
+":@computed_region_bdys_3d7i": "235",
+":@computed_region_43wa_7qmu": "30"
+},
+{
+"branch_": "Sherman Park",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "5440 S. Racine Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60609",
+"phone": "(312) 747-0477",
+"website": {
+"url": "https://www.chipublib.org/locations/64/"
+},
+"branch_email": "shermanpark@chipublib.org",
+"location": {
+"latitude": "41.79476901885989",
+"longitude": "-87.65502837616037",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "37",
+":@computed_region_vrxf_vc4k": "59",
+":@computed_region_6mkv_f3dw": "14924",
+":@computed_region_bdys_3d7i": "790",
+":@computed_region_43wa_7qmu": "4"
+},
+{
+"branch_": "South Chicago",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "9055 S. Houston Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60617",
+"phone": "(312) 747-8065",
+"website": {
+"url": "https://www.chipublib.org/locations/65/"
+},
+"branch_email": "southchicago@chipublib.org",
+"location": {
+"latitude": "41.73029771500594",
+"longitude": "-87.54972658730712",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "25",
+":@computed_region_vrxf_vc4k": "42",
+":@computed_region_6mkv_f3dw": "21202",
+":@computed_region_bdys_3d7i": "175",
+":@computed_region_43wa_7qmu": "47"
+},
+{
+"branch_": "South Shore",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2505 E. 73rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60649",
+"phone": "(312) 747-5281",
+"website": {
+"url": "https://www.chipublib.org/locations/66/"
+},
+"branch_email": "southshore@chipublib.org",
+"location": {
+"latitude": "41.76254141905116",
+"longitude": "-87.56387694448408",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "24",
+":@computed_region_vrxf_vc4k": "39",
+":@computed_region_6mkv_f3dw": "22538",
+":@computed_region_bdys_3d7i": "245",
+":@computed_region_43wa_7qmu": "37"
+},
+{
+"branch_": "Sulzer Regional Library",
+"service_hours": "Mon. - Thurs., 9-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4455 N. Lincoln Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60625",
+"phone": "(312) 744-7616",
+"website": {
+"url": "https://www.chipublib.org/locations/67/"
+},
+"branch_email": "sulzerregional@chipublib.org",
+"location": {
+"latitude": "41.962966859427524",
+"longitude": "-87.68469465366664",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "20",
+":@computed_region_vrxf_vc4k": "6",
+":@computed_region_6mkv_f3dw": "21849",
+":@computed_region_bdys_3d7i": "667",
+":@computed_region_43wa_7qmu": "18"
+},
+{
+"branch_": "Thurgood Marshall",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "7506 S. Racine Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60620",
+"phone": "(312) 747-5927",
+"website": {
+"url": "https://www.chipublib.org/locations/68/"
+},
+"branch_email": "thurgoodmarshall@chipublib.org",
+"location": {
+"latitude": "41.757343880012456",
+"longitude": "-87.6540643783153",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "59",
+":@computed_region_vrxf_vc4k": "70",
+":@computed_region_6mkv_f3dw": "21554",
+":@computed_region_bdys_3d7i": "572",
+":@computed_region_43wa_7qmu": "31"
+},
+{
+"branch_": "Toman",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "2708 S. Pulaski Rd.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60623",
+"phone": "(312) 745-1660",
+"website": {
+"url": "https://www.chipublib.org/locations/69/"
+},
+"branch_email": "toman@chipublib.org",
+"location": {
+"latitude": "41.842086096760674",
+"longitude": "-87.72463965526215",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "57",
+":@computed_region_vrxf_vc4k": "32",
+":@computed_region_6mkv_f3dw": "21569",
+":@computed_region_bdys_3d7i": "248",
+":@computed_region_43wa_7qmu": "28"
+},
+{
+"branch_": "Uptown",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "929 W. Buena Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60613",
+"phone": "(312) 744-8400",
+"website": {
+"url": "https://www.chipublib.org/locations/70/"
+},
+"branch_email": "uptown@chipublib.org",
+"location": {
+"latitude": "41.95832305807637",
+"longitude": "-87.65424744448335",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "53",
+":@computed_region_vrxf_vc4k": "31",
+":@computed_region_6mkv_f3dw": "21186",
+":@computed_region_bdys_3d7i": "577",
+":@computed_region_43wa_7qmu": "39"
+},
+{
+"branch_": "Vodak-East Side",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3710 E. 106th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60617",
+"phone": "(312) 747-5500",
+"website": {
+"url": "https://www.chipublib.org/locations/71/"
+},
+"branch_email": "vodak-eastside@chipublib.org",
+"location": {
+"latitude": "41.70283443594318",
+"longitude": "-87.53359880675659",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "25",
+":@computed_region_vrxf_vc4k": "49",
+":@computed_region_6mkv_f3dw": "21202",
+":@computed_region_bdys_3d7i": "715",
+":@computed_region_43wa_7qmu": "47"
+},
+{
+"branch_": "Walker",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "11071 S. Hoyne Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60643",
+"phone": "(312) 747-1920",
+"website": {
+"url": "https://www.chipublib.org/locations/72/"
+},
+"branch_email": "walker@chipublib.org",
+"location": {
+"latitude": "41.69198346617567",
+"longitude": "-87.6739093032301",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "13",
+":@computed_region_vrxf_vc4k": "74",
+":@computed_region_6mkv_f3dw": "22212",
+":@computed_region_bdys_3d7i": "380",
+":@computed_region_43wa_7qmu": "42"
+},
+{
+"branch_": "Water Works",
+"service_hours": "Mon.- Thurs., 10-6 Fri. & Sat., 9-5; Sun., 1-5",
+"address": "163 E. Pearson St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60611",
+"phone": "(312) 742-8811",
+"website": {
+"url": "https://www.chipublib.org/locations/73/"
+},
+"branch_email": "waterworks@chipublib.org",
+"location": {
+"latitude": "41.897484072390675",
+"longitude": "-87.62337776811282",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "6",
+":@computed_region_vrxf_vc4k": "37",
+":@computed_region_6mkv_f3dw": "21182",
+":@computed_region_bdys_3d7i": "233",
+":@computed_region_43wa_7qmu": "11"
+},
+{
+"branch_": "West Belmont",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "3104 N. Narragansett Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60611",
+"phone": "(312) 746-5142",
+"website": {
+"url": "https://www.chipublib.org/locations/74/"
+},
+"branch_email": "westbelmont@chipublib.org",
+"location": {
+"latitude": "41.9366521886413",
+"longitude": "-87.78602401236114",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "52",
+":@computed_region_vrxf_vc4k": "19",
+":@computed_region_6mkv_f3dw": "22254",
+":@computed_region_bdys_3d7i": "137",
+":@computed_region_43wa_7qmu": "44"
+},
+{
+"branch_": "West Chicago Avenue",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4856 W. Chicago Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60634",
+"phone": "(312) 743-0260",
+"website": {
+"url": "https://www.chipublib.org/locations/75/"
+},
+"branch_email": "westchicago@chipublib.org",
+"location": {
+"latitude": "41.8950961032908",
+"longitude": "-87.74806072822989",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "5",
+":@computed_region_vrxf_vc4k": "26",
+":@computed_region_6mkv_f3dw": "4299",
+":@computed_region_bdys_3d7i": "578",
+":@computed_region_43wa_7qmu": "45"
+},
+{
+"branch_": "West Englewood",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1745 W. 63rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60651",
+"phone": "(312) 747-3481",
+"website": {
+"url": "https://www.chipublib.org/locations/76/"
+},
+"branch_email": "westenglewood@chipublib.org",
+"location": {
+"latitude": "41.77928203936906",
+"longitude": "-87.66843344429459",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "23",
+":@computed_region_vrxf_vc4k": "65",
+":@computed_region_6mkv_f3dw": "22257",
+":@computed_region_bdys_3d7i": "280",
+":@computed_region_43wa_7qmu": "3"
+},
+{
+"branch_": "West Lawn",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "4020 W. 63rd St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60636",
+"phone": "(312) 747-7381",
+"website": {
+"url": "https://www.chipublib.org/locations/77/"
+},
+"branch_email": "westlawn@chipublib.org",
+"location": {
+"latitude": "41.77875389246921",
+"longitude": "-87.72374295317714",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "58",
+":@computed_region_vrxf_vc4k": "63",
+":@computed_region_6mkv_f3dw": "21867",
+":@computed_region_bdys_3d7i": "292",
+":@computed_region_43wa_7qmu": "6"
+},
+{
+"branch_": "West Loop",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "122 N. Aberdeen St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60607",
+"phone": "(312) 744-2995",
+"website": {
+"url": "https://www.chipublib.org/locations/88/"
+},
+"branch_email": "westloop@chipublib.org",
+"location": {
+"latitude": "41.8837105009142",
+"longitude": "-87.6545650515331",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "44",
+":@computed_region_vrxf_vc4k": "29",
+":@computed_region_6mkv_f3dw": "14917",
+":@computed_region_bdys_3d7i": "63",
+":@computed_region_43wa_7qmu": "46"
+},
+{
+"branch_": "West Pullman",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "830 W. 119th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60643",
+"phone": "(312) 747-1425",
+"website": {
+"url": "https://www.chipublib.org/locations/78/"
+},
+"branch_email": "westpullman@chipublib.org",
+"location": {
+"latitude": "41.67790647382097",
+"longitude": "-87.6431683153105",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "13",
+":@computed_region_vrxf_vc4k": "50",
+":@computed_region_6mkv_f3dw": "22212",
+":@computed_region_bdys_3d7i": "642",
+":@computed_region_43wa_7qmu": "22"
+},
+{
+"branch_": "West Town",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "1625 W. Chicago Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60622",
+"phone": "(312) 743-0450",
+"website": {
+"url": "https://www.chipublib.org/locations/79/"
+},
+"branch_email": "westtown@chipublib.org",
+"location": {
+"latitude": "41.89594730478282",
+"longitude": "-87.66829305460979",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "4",
+":@computed_region_vrxf_vc4k": "25",
+":@computed_region_6mkv_f3dw": "21560",
+":@computed_region_bdys_3d7i": "520",
+":@computed_region_43wa_7qmu": "41"
+},
+{
+"branch_": "Whitney M. Young, Jr.",
+"service_hours": "Mon. & Wed., 10-6; Tues. & Thurs., Noon-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "415 East 79th St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60619",
+"phone": "(312) 747-0039",
+"website": {
+"url": "https://www.chipublib.org/locations/80/"
+},
+"branch_email": "whitneyyoung@chipublib.org",
+"location": {
+"latitude": "41.7510184591363",
+"longitude": "-87.61495065361933",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "61",
+":@computed_region_vrxf_vc4k": "40",
+":@computed_region_6mkv_f3dw": "21546",
+":@computed_region_bdys_3d7i": "11",
+":@computed_region_43wa_7qmu": "32"
+},
+{
+"branch_": "Woodson Regional Library",
+"service_hours": "Mon. - Thurs., 9-8; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "9525 S. Halsted St.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60628",
+"phone": "(312) 747-6900",
+"website": {
+"url": "https://www.chipublib.org/locations/81/"
+},
+"branch_email": "woodsonregional@chipublib.org",
+"location": {
+"latitude": "41.720694885749005",
+"longitude": "-87.64304817213312",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "19",
+":@computed_region_vrxf_vc4k": "72",
+":@computed_region_6mkv_f3dw": "21861",
+":@computed_region_bdys_3d7i": "593",
+":@computed_region_43wa_7qmu": "13"
+},
+{
+"branch_": "Wrightwood-Ashburn",
+"service_hours": "Mon. & Wed., Noon-8; Tue. & Thu., 10-6; Fri. & Sat., 9-5; Sun., 1-5",
+"address": "8530 S. Kedzie Ave.",
+"city": "Chicago",
+"state": "IL",
+"zip": "60652",
+"phone": "(312) 747-2696",
+"website": {
+"url": "https://www.chipublib.org/locations/82/"
+},
+"branch_email": "wrightwood-ashburn@chipublib.org",
+"location": {
+"latitude": "41.73795704970435",
+"longitude": "-87.70221598421591",
+"human_address": "{\"address\": \"\", \"city\": \"\", \"state\": \"\", \"zip\": \"\"}"
+},
+":@computed_region_rpca_8um6": "8",
+":@computed_region_vrxf_vc4k": "69",
+":@computed_region_6mkv_f3dw": "4300",
+":@computed_region_bdys_3d7i": "198",
+":@computed_region_43wa_7qmu": "30"
+}
+]
