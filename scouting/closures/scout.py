@@ -105,7 +105,9 @@ TRANSIT_WORDS = re.compile(r'METROLINX|ONTARIO LINE|ONTARIO TRANSIT GROUP|EGLINT
 def toronto():
     print('Toronto: road restrictions feed')
     raw, hdr = retry(lambda: http('https://secure.toronto.ca/opendata/cart/road_restrictions/v3?format=json'), label='toronto feed')
-    data = json.loads(raw)
+    # The feed isn't strict JSON: some text fields hold stray backslashes. Escape them before parsing.
+    text = re.sub(r'\\(["\\/bfnrtu]?)', lambda m: m.group(0) if m.group(1) else '\\\\', raw.decode('utf-8', 'replace'))
+    data = json.loads(text, strict=False)
     recs = [r for k, v in data.items() if isinstance(v, list) for r in v]
     print('  groups:', {k: len(v) for k, v in data.items() if isinstance(v, list)}, 'records', len(recs))
     streets, proj = load_streets('toronto')
