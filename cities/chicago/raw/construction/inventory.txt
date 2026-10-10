@@ -1,0 +1,8 @@
+   1  node     station      87th Street (Woodruff) | op=Metra
+   1  way      platform     (unnamed) | op=
+   1  way      rail         NICTD Monon Corridor | op=Northern Indiana Commuter Transportation District
+   1  way      rail         NICTD South Shore Line | op=NICTD
+   1  way      rail         NICTD | op=NICTD
+   2  way      railway      (unnamed) | op=
+  16  way      subway       Red Line Extension | op=Chicago Transit Authority
+   7  way      subway       Red Line Extention | op=Chicago Transit Authority
