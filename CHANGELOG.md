@@ -3,6 +3,13 @@
 ## Since 1.1
 
 ### Both cities
+- **Collector streets** (October 10): a toggle under Main streets, off by default,
+  drawing the next tier of roads (Toronto's Collector class, 989 streets; Chicago's OSM tertiary
+  roads, 272) thinner than the main streets from zoom 13, named from 15. Most bus streets that aren't
+  arterials are collectors, so bus lines stop floating: 93% of the TTC's network and 88% of the
+  CTA's now sits on a drawn street. Also: at zoom 15 only the stops of routes being drawn show.
+  For the iOS app: new file `collectors.geojson`, `labelZoom` and `yieldLabels` on a `streets`
+  layer; contract section 3. Additive, schema stays 1.
 - **Streetcars and buses** (October 10), from the TTC and CTA schedules (GTFS), refreshed monthly
   by a new Action (`fetch-surface.yml`).
   - Toronto: a **Streetcars** layer after Subway & LRT, off by default: the 11 daytime routes in

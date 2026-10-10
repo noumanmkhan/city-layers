@@ -23,6 +23,7 @@ simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10; simpl
 simplify federal 10; simplify neighbourhoods 10; simplify wards 10
 npx mapshaper -i tmp/highways.geojson -simplify interval=6 -o $OUT/highways.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/streets.geojson -simplify interval=6 keep-shapes -o $OUT/streets.geojson precision=0.00001 -quiet
+npx mapshaper -i tmp/collectors.geojson -simplify interval=6 -o $OUT/collectors.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/gta_highways.geojson -simplify interval=15 -o $OUT/gta_highways.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/go_lines.geojson -simplify interval=40 -o $OUT/go_lines.geojson precision=0.00001 -quiet
 npx mapshaper -i tmp/go_lines_416.geojson -simplify interval=40 -o $OUT/go_lines_416.geojson precision=0.00001 -quiet

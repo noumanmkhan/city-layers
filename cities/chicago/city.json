@@ -69,6 +69,7 @@
     ]],
     ["Getting around", [
       {"id": "streets", "kind": "streets", "file": "streets", "name": "Main streets", "note": "The mile grid and the diagonals: Ashland, Western, Milwaukee…", "on": true},
+      {"id": "coll", "kind": "streets", "file": "collectors", "under": "streets", "labelZoom": 15, "yieldLabels": true, "name": "Collector streets", "note": "Collector streets between the main ones; from zoom 13"},
       {"id": "hwy", "kind": "highways", "files": ["highways", "region_highways", "region_shields"], "name": "Expressways", "note": "Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive", "on": true,
        "shields": {"LSD": "Lake Shore Dr"}, "tollShield": "Toll"},
       {"id": "metra", "kind": "rail", "files": ["metra_lines", "metra_stations", "metra_lines_inner"], "name": "Metra trains", "note": "11 commuter lines from four downtown stations", "on": true,

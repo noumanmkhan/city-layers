@@ -311,7 +311,8 @@ const KINDS = {
     // move so they never overlap each other; majors win over minors, longer streets first.
     const g = L.layerGroup(), labels = L.layerGroup();
     const w = () => { const z = map.getZoom(); return z < 11 ? [2, 1] : z < 12 ? [3, 1.6] : z < 13 ? [4.2, 2.6] : z < 14 ? [6, 4] : [8, 5.6]; };
-    const k = f => f.properties.cls === 'major' ? 1 : .75;
+    // Collectors (their own layer, under Main streets) draw thinner, from zoom 13, named from 15.
+    const k = f => f.properties.cls === 'major' ? 1 : f.properties.cls === 'coll' ? .55 : .75;
     const cas = L.geoJSON(fc, {pane:'streets', interactive:false, style: f => ({className:'st-case ' + f.properties.cls, weight: w()[0] * k(f)})});
     const core = L.geoJSON(fc, {pane:'streets', style: f => ({className:'st-core ' + f.properties.cls, weight: w()[1] * k(f)}),
       onEachFeature: (f, lyr) => { hoverTip(lyr, f.properties.name); lyr.on('click', e => inspect(e.latlng)); }});
@@ -331,19 +332,20 @@ const KINDS = {
     function place(){
       labels.clearLayers();
       const z = map.getZoom();
-      if (!map.hasLayer(g) || z < 12) return;
+      if (!map.hasLayer(g) || z < (it.labelZoom || 12)) return;
       const size = map.getSize(), view = map.getBounds(), boxes = [], seen = {}, fam = getComputedStyle(document.body).fontFamily;
       const SP = z < 13 ? 420 : z < 14 ? 340 : 280;
       // Keep clear of other labels, shields and the panels floating over the map.
       const mr = map.getContainer().getBoundingClientRect();
-      document.querySelectorAll('#search, #here, #panel, .leaflet-tooltip.lbl, .shield, .lm i, .lm b, .stn, .leaflet-pin-pane > *').forEach(el => {
+      // A layer that yields (collectors) also keeps clear of the main streets' names, placed just before.
+      document.querySelectorAll('#search, #here, #panel, .leaflet-tooltip.lbl, .shield, .lm i, .lm b, .stn, .leaflet-pin-pane > *' + (it.yieldLabels ? ', .st-lbl:not(.coll)' : '')).forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.width && r.height) boxes.push(rect((r.left + r.right) / 2 - mr.left, (r.top + r.bottom) / 2 - mr.top, r.width / 2 + 3, r.height / 2 + 3, 0));
       });
       let count = 0;
       for (const s of streets){
         if ((s.cls === 'minor' && z < 13) || count >= 90) continue;
-        ctx.font = (s.cls === 'major' ? '600 11.5px ' : '500 10.5px ') + fam;
+        ctx.font = (s.cls === 'major' ? '600 11.5px ' : s.cls === 'coll' ? '500 10px ' : '500 10.5px ') + fam;
         const tw = ctx.measureText(s.name).width + 8, th = s.cls === 'major' ? 15 : 14;
         const mine = seen[s.name] || (seen[s.name] = []);
         for (const part of s.parts){
@@ -375,7 +377,8 @@ const KINDS = {
         }
       }
     }
-    map.on('moveend', place); g.on('add', () => setTimeout(place));
+    // A yielding layer places its names after the main streets' (their handler may be registered later).
+    map.on('moveend', () => it.yieldLabels ? setTimeout(place) : place()); g.on('add', () => setTimeout(place));
     return g;
   },
   highways: (it, [fc, outer, outerShields]) => {
@@ -679,7 +682,7 @@ function transitHere(x, y){
   return '<div class="live transit"><dl>' + rows + '</dl><p>' + esc(fill(TR.note, {week: niceDate(T.week)})) + '</p></div>';
 }
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, buses: 11.5, streetcars: 11.6, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: it.under ? 8.9 : 9, highways: 10, rail: 11, buses: 11.5, streetcars: 11.6, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */

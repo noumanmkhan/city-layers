@@ -77,6 +77,7 @@
     ]],
     ["Getting around", [
       {"id": "streets", "kind": "streets", "file": "streets", "name": "Main streets", "note": "Arterials like King, Queen, Eglinton, Don Mills", "on": true},
+      {"id": "coll", "kind": "streets", "file": "collectors", "under": "streets", "labelZoom": 15, "yieldLabels": true, "name": "Collector streets", "note": "Collector roads like Dovercourt, Greenwood, Davisville; from zoom 13"},
       {"id": "hwy", "kind": "highways", "files": ["highways", "gta_highways", "gta_shields"], "name": "Highways", "note": "400-series, QEW, 407 ETR across the GTA; DVP, Gardiner, Allen", "on": true,
        "shields": {"401": "401", "400": "400", "404": "404", "409": "409", "427": "427", "QEW": "QEW", "2A": "2A", "DVP": "DVP", "Gardiner": "Gardiner", "Allen": "Allen Rd"},
        "repeat": {"401": [0.15, 0.5, 0.85]}, "tollShield": "407 ETR"},
