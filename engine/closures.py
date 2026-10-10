@@ -79,7 +79,7 @@ def load(name):
 
 lines = load('construction')
 LINES = index([f for f in lines if f['properties'].get('part') != 'station'], lambda f: f['properties']['id'])
-NAMES = {f['properties']['id']: f['properties']['name'] for f in lines}
+NAMES = {f['properties']['id']: f['properties']['name'] for f in lines if f['properties'].get('part') != 'station'}
 up = cfg.get('upgrades')
 UPG = index([f for f in load(up['file']) if not up.get('only') or f['properties'][up['field']] in up['only']],
             lambda f: f['properties'][up['field']]) if up else []
