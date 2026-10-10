@@ -10,7 +10,8 @@ Writes into docs/<city>/data/:
 Families, all described from the schedule, never ranked (thresholds in cities/<city>/surface.json):
   - freq: a weekday trip every 10 minutes or better from 7 am to 7 pm, in each direction;
   - exp: routes the agency names as express;
-  - night: at least one trip each way in every hour from 2 to 4 am on a weekday night.
+  - night: at least one trip each way in every hour from 2 to 4 am on a weekday night;
+  - reg: every other route with daytime service (neither frequent nor express), e.g. community and branch routes.
 
 Usage: python3 engine/surface.py <city>
 """
@@ -68,31 +69,27 @@ def midday(r):
 
 
 def geometry(r):
-    """One line set per route: the main direction's shapes, plus the other direction where it runs on
-    different streets (one-way pairs, loops), simplified to about 8 m."""
-    by = {'0': [], '1': []}
-    for s in r['shapes']:
-        by.setdefault(s['dir'], []).append(LineString(s['coords']))
-    main = by['0'] or by['1']
-    other = by['1'] if by['0'] else []
-    base = unary_union(main)
-    near = base.buffer(0.0004)   # ~35 m
-    extra = []
-    for ln in other:
-        d = ln.difference(near)
-        parts = getattr(d, 'geoms', [d])
-        extra += [p for p in parts if p.length > 0.0012]   # ~100 m
-    u = unary_union([base] + extra)
-    g = linemerge(u) if u.geom_type == 'MultiLineString' else u
+    """One line set per route: its busiest pattern whole, then, from the other patterns and the other
+    direction (busiest first), only the stretches more than ~35 m from what's already drawn and longer than
+    ~100 m (branches, one-way pairs, loops). Overlapping patterns are never unioned: their tiny offsets
+    would split the line at every crossing into dozens of pieces. Simplified to about 8 m."""
+    shapes = sorted(r['shapes'], key=lambda s: (s['dir'] != '0', -s['trips']))
+    lines = [LineString(shapes[0]['coords'])]
+    for s in shapes[1:]:
+        near = unary_union(lines).buffer(0.0004)
+        d = LineString(s['coords']).difference(near)
+        lines += [p for p in getattr(d, 'geoms', [d]) if p.geom_type == 'LineString' and p.length > 0.0012]
+    g = linemerge(lines) if len(lines) > 1 else lines[0]
     g = g.simplify(0.00008, preserve_topology=False)
-    lines = list(getattr(g, 'geoms', [g]))
-    return MultiLineString([[(round(x, 5), round(y, 5)) for x, y in l.coords] for l in lines if l.length > 0])
+    parts = [l for l in getattr(g, 'geoms', [g]) if l.length > 0]
+    return MultiLineString([[(round(x, 5), round(y, 5)) for x, y in l.coords] for l in parts])
 
 
 routes, feats, cars = [], [], []
 for r in R['routes']:
     fam = [k for k, ok in (('freq', frequent(r)), ('exp', bool(EXPRESS.search(r['long']))), ('night', overnight(r))) if ok]
     day = daytime(r)
+    if day and 'freq' not in fam and 'exp' not in fam: fam.append('reg')
     g = geometry(r)
     minx, miny, maxx, maxy = g.bounds
     entry = {'r': r['short'], 'n': r['long'], 'm': r['mode'], 'f': fam, 'day': day, 'h': midday(r),
@@ -118,7 +115,7 @@ meta = {'asof': R['fetched'], 'week': R['week']}
 dump('transit_routes.geojson', dict(meta, type='FeatureCollection', features=feats))
 if cars: dump('streetcars.geojson', dict(meta, type='FeatureCollection', features=cars))
 dump('transit.json', dict(meta, routes=routes, stops=stops))
-fams = {k: sum(k in e['f'] for e in routes) for k in ('freq', 'exp', 'night')}
+fams = {k: sum(k in e['f'] for e in routes) for k in ('freq', 'exp', 'reg', 'night')}
 print(f'{city}: {len(routes)} routes ({len(cars)} streetcar routes in daytime) · {len(stops)} stops · families {fams}')
 for k in fams:
     print(f'  {k}:', ' '.join(e['r'] for e in routes if k in e['f']))
