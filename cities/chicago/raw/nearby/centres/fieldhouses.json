@@ -1,0 +1,2227 @@
+[
+ {
+  "link": "/parks-facilities/abbott-fieldhouse",
+  "name": "Abbott Fieldhouse",
+  "address": "49 E. 95th St.,Chicago,60619",
+  "at": [
+   -87.62141,
+   41.72171
+  ],
+  "matched": "49 E 95TH ST, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/ada-fieldhouse",
+  "name": "Ada Fieldhouse",
+  "address": "11250 S. Ada St.,Chicago,60643"
+ },
+ {
+  "link": "/parks-facilities/adams-playground-fieldhouse",
+  "name": "Adams Playground Fieldhouse",
+  "address": "1919 N. Seminary Ave.,Chicago,60614",
+  "at": [
+   -87.6553,
+   41.91659
+  ],
+  "matched": "1919 N SEMINARY AVE, CHICAGO, IL, 60614"
+ },
+ {
+  "link": "/parks-facilities/altgeld-fieldhouse",
+  "name": "Altgeld Fieldhouse",
+  "address": "515 S. Washtenaw Ave.,Chicago,60612",
+  "at": [
+   -87.69409,
+   41.89341
+  ],
+  "matched": "515 N WASHTENAW AVE, CHICAGO, IL, 60612"
+ },
+ {
+  "link": "/parks-facilities/amundsen-fieldhouse",
+  "name": "Amundsen Fieldhouse",
+  "address": "6200 W. Bloomingdale Ave.,Chicago,60639",
+  "at": [
+   -87.78062,
+   41.9129
+  ],
+  "matched": "6200 W BLOOMINGDALE AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/anderson-fieldhouse",
+  "name": "Anderson Fieldhouse",
+  "address": "3748 S. Prairie Ave.,Chicago,60653",
+  "at": [
+   -87.62054,
+   41.82711
+  ],
+  "matched": "3748 S PRAIRIE AVE, CHICAGO, IL, 60653"
+ },
+ {
+  "link": "/parks-facilities/archer-fieldhouse",
+  "name": "Archer Fieldhouse",
+  "address": "4901 S. Kilbourn Ave.,Chicago,60632",
+  "at": [
+   -87.73563,
+   41.80385
+  ],
+  "matched": "4901 S KILBOURN AVE, CHICAGO, IL, 60632"
+ },
+ {
+  "link": "/parks-facilities/armour-square-fieldhouse",
+  "name": "Armour Square Fieldhouse",
+  "address": "3309 S. Shields Ave.,Chicago,60616",
+  "at": [
+   -87.63515,
+   41.83435
+  ],
+  "matched": "3309 S SHIELDS AVE, CHICAGO, IL, 60616"
+ },
+ {
+  "link": "/parks-facilities/athletic-field-park-fieldhouse",
+  "name": "Athletic Field Park - Fieldhouse",
+  "address": "3546 W. Addison St.,Chicago,60618",
+  "at": [
+   -87.71694,
+   41.94657
+  ],
+  "matched": "3546 W ADDISON ST, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/augusta-fieldhouse",
+  "name": "Augusta Fieldhouse",
+  "address": "4433 W. Augusta Blvd.,Chicago,60651",
+  "at": [
+   -87.73769,
+   41.89877
+  ],
+  "matched": "4433 W AUGUSTA BLVD, CHICAGO, IL, 60651"
+ },
+ {
+  "link": "/parks-facilities/austin-town-hall-cultural-centerfieldhouse",
+  "name": "Austin Town Hall Cultural Center/Fieldhouse",
+  "address": "5610 W. Lake St.,Chicago,60644",
+  "at": [
+   -87.76632,
+   41.88782
+  ],
+  "matched": "5610 W LAKE ST, CHICAGO, IL, 60644"
+ },
+ {
+  "link": "/parks-facilities/avalon-fieldhouse",
+  "name": "Avalon Fieldhouse",
+  "address": "1215 E 83rd St.,Chicago,60619",
+  "at": [
+   -87.59696,
+   41.74401
+  ],
+  "matched": "1215 E 83RD ST, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/avondale-fieldhouse",
+  "name": "Avondale Fieldhouse",
+  "address": "3516 W. School St.,Chicago,60618",
+  "at": [
+   -87.71404,
+   41.94114
+  ],
+  "matched": "3516 W SCHOOL ST, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/bell-fieldhouse",
+  "name": "Bell Fieldhouse",
+  "address": "3020 N. Oak Park Ave.,Chicago,60634",
+  "at": [
+   -87.79567,
+   41.93493
+  ],
+  "matched": "3020 N OAK PARK AVE, CHICAGO, IL, 60634"
+ },
+ {
+  "link": "/parks-facilities/berger-park-cultural-center",
+  "name": "Berger Park Cultural Center",
+  "address": "6205 N. Sheridan Rd.,Chicago,60660",
+  "at": [
+   -87.65545,
+   41.99473
+  ],
+  "matched": "6205 N SHERIDAN RD, CHICAGO, IL, 60660"
+ },
+ {
+  "link": "/parks-facilities/berger-park-fieldhouse",
+  "name": "Berger Park Fieldhouse",
+  "address": "6205 N. Sheridan Rd.,Chicago,60660",
+  "at": [
+   -87.65545,
+   41.99473
+  ],
+  "matched": "6205 N SHERIDAN RD, CHICAGO, IL, 60660"
+ },
+ {
+  "link": "/parks-facilities/bessemer-fieldhouse",
+  "name": "Bessemer Fieldhouse",
+  "address": "8930 S. Muskegon Ave.,Chicago,60617",
+  "at": [
+   -87.55556,
+   41.7331
+  ],
+  "matched": "8930 S MUSKEGON AVE, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/beverly-fieldhouse",
+  "name": "Beverly Fieldhouse",
+  "address": "2460 W. 102nd St.,Chicago,60642",
+  "at": [
+   -87.68348,
+   41.70826
+  ],
+  "matched": "2460 W 102ND ST, CHICAGO, IL, 60655"
+ },
+ {
+  "link": "/parks-facilities/blackhawk-fieldhouse",
+  "name": "Blackhawk Fieldhouse",
+  "address": "2318 N. Lavergne Ave.,Chicago,60639",
+  "at": [
+   -87.75127,
+   41.92295
+  ],
+  "matched": "2318 N LAVERGNE AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/bogan-fieldhouse-junior",
+  "name": "Bogan Fieldhouse Junior",
+  "address": "3939 W. 79th St.,Chicago,60652",
+  "at": [
+   -87.72037,
+   41.74947
+  ],
+  "matched": "3939 W 79TH ST, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/bosley-fieldhouse",
+  "name": "Bosley Fieldhouse",
+  "address": "3044 S. Bonfield St.,Chicago,60608",
+  "at": [
+   -87.65362,
+   41.8392
+  ],
+  "matched": "3044 S BONFIELD ST, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/bradley-fieldhouse",
+  "name": "Bradley Fieldhouse",
+  "address": "9729 S. Yates Ave.,Chicago,60617",
+  "at": [
+   -87.56457,
+   41.71806
+  ],
+  "matched": "9729 S YATES AVE, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/brainerd-fieldhouse",
+  "name": "Brainerd Fieldhouse",
+  "address": "1246 W. 92nd St.,Chicago,60620",
+  "at": [
+   -87.6552,
+   41.72685
+  ],
+  "matched": "1246 W 92ND ST, CHICAGO, IL, 60620"
+ },
+ {
+  "link": "/parks-facilities/brands-fieldhouse",
+  "name": "Brands Fieldhouse",
+  "address": "3285 North Elston Avenue,Chicago,60618",
+  "at": [
+   -87.69999,
+   41.94061
+  ],
+  "matched": "3285 N ELSTON AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/brighton-park-community-campus-park-no-596-fieldhouse",
+  "name": "Brighton Park Community Campus (Park No. 596) Fieldhouse",
+  "address": "4830 S. Western Ave.,Chicago,60609",
+  "at": [
+   -87.68444,
+   41.8063
+  ],
+  "matched": "4830 S WESTERN AVE, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/broadway-armory-fieldhouse",
+  "name": "Broadway Armory Fieldhouse",
+  "address": "5917 N. Broadway,Chicago,60660",
+  "at": [
+   -87.66017,
+   41.98953
+  ],
+  "matched": "5917 N BROADWAY ST, CHICAGO, IL, 60660"
+ },
+ {
+  "link": "/parks-facilities/brooks-fieldhouse",
+  "name": "Brooks Fieldhouse",
+  "address": "7100 N Harlem Ave,Chicago,60631",
+  "at": [
+   -87.80672,
+   42.01076
+  ],
+  "matched": "7100 N HARLEM AVE, CHICAGO, IL, 60631"
+ },
+ {
+  "link": "/parks-facilities/carver-fieldhouse",
+  "name": "Carver Fieldhouse",
+  "address": "939 E. 132nd St.,Chicago,60827",
+  "at": [
+   -87.59936,
+   41.65592
+  ],
+  "matched": "939 E 132ND ST, CHICAGO, IL, 60827"
+ },
+ {
+  "link": "/parks-facilities/chase-fieldhouse",
+  "name": "Chase Fieldhouse",
+  "address": "4701 N. Ashland Ave.,Chicago,60640",
+  "at": [
+   -87.66932,
+   41.96711
+  ],
+  "matched": "4701 N ASHLAND AVE, CHICAGO, IL, 60640"
+ },
+ {
+  "link": "/parks-facilities/chicago-womens-fieldhouse",
+  "name": "Chicago Women's Fieldhouse",
+  "address": "1801 S Indiana Ave,Chicago,60616",
+  "at": [
+   -87.62217,
+   41.85784
+  ],
+  "matched": "1801 INDIANA AVE, CHICAGO, IL, 60616"
+ },
+ {
+  "link": "/parks-facilities/chippewa-fieldhouse",
+  "name": "Chippewa Fieldhouse",
+  "address": "6748 N. Sacramento Ave.,Chicago,60645",
+  "at": [
+   -87.70468,
+   42.00404
+  ],
+  "matched": "6748 N SACRAMENTO AVE, CHICAGO, IL, 60645"
+ },
+ {
+  "link": "/parks-facilities/chopin-fieldhouse",
+  "name": "Chopin Fieldhouse",
+  "address": "3420 N. Long Ave.,Chicago,60641",
+  "at": [
+   -87.76183,
+   41.94333
+  ],
+  "matched": "3420 N LONG AVE, CHICAGO, IL, 60641"
+ },
+ {
+  "link": "/parks-facilities/clarendon-fieldhouse",
+  "name": "Clarendon Fieldhouse",
+  "address": "4501 N. Clarendon Ave.,Chicago,60640",
+  "at": [
+   -87.64989,
+   41.96373
+  ],
+  "matched": "4501 N CLARENDON AVE, CHICAGO, IL, 60640"
+ },
+ {
+  "link": "/parks-facilities/clark-john-fieldhouse",
+  "name": "Clark (John) Fieldhouse",
+  "address": "4615 W. Jackson Blvd.,Chicago,60644",
+  "at": [
+   -87.74086,
+   41.87684
+  ],
+  "matched": "4615 W JACKSON BLVD, CHICAGO, IL, 60644"
+ },
+ {
+  "link": "/parks-facilities/columbus-fieldhouse",
+  "name": "Columbus Fieldhouse",
+  "address": "500 S. Central Ave.,Chicago,60644",
+  "at": [
+   -87.7647,
+   41.87377
+  ],
+  "matched": "500 S CENTRAL AVE, CHICAGO, IL, 60644"
+ },
+ {
+  "link": "/node/22846",
+  "name": "ComEd Recreation Center at Addams Park",
+  "address": "1434 S. Loomis Street,Chicago,60608",
+  "at": [
+   -87.66151,
+   41.8621
+  ],
+  "matched": "1434 S LOOMIS ST, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/commercial-club-fieldhouse",
+  "name": "Commercial Club Fieldhouse",
+  "address": "1845 W. Rice St.,Chicago,60622",
+  "at": [
+   -87.67431,
+   41.89681
+  ],
+  "matched": "1845 W RICE ST, CHICAGO, IL, 60622"
+ },
+ {
+  "link": "/parks-facilities/cooper-fieldhouse",
+  "name": "Cooper Fieldhouse",
+  "address": "11712 S. Ada Street,Chicago,60643"
+ },
+ {
+  "link": "/parks-facilities/cornell-square-fieldhouse",
+  "name": "Cornell Square Fieldhouse",
+  "address": "1809 W. 50th St.,Chicago,60609",
+  "at": [
+   -87.6698,
+   41.80304
+  ],
+  "matched": "1809 W 50TH ST, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/cragin-park-fieldhouse",
+  "name": "Cragin Park - Fieldhouse",
+  "address": "2611 N. Lockwood Ave.,Chicago,60639",
+  "at": [
+   -87.75867,
+   41.92784
+  ],
+  "matched": "2611 N LOCKWOOD AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/davis-square-fieldhouse",
+  "name": "Davis Square Fieldhouse",
+  "address": "4430 S. Marshfield Ave.,Chicago,60609",
+  "at": [
+   -87.6664,
+   41.81346
+  ],
+  "matched": "4430 S MARSHFIELD AVE, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/dawes-fieldhouse",
+  "name": "Dawes Fieldhouse",
+  "address": "8052 S. Damen Ave.,Chicago,60620",
+  "at": [
+   -87.67314,
+   41.74729
+  ],
+  "matched": "8052 S DAMEN AVE, CHICAGO, IL, 60620"
+ },
+ {
+  "link": "/parks-facilities/don-nash-fieldhouse",
+  "name": "Don Nash Fieldhouse",
+  "address": "1833 E. 71st,Chicago,60649",
+  "at": [
+   -87.57991,
+   41.76598
+  ],
+  "matched": "1833 E 71ST ST, CHICAGO, IL, 60649"
+ },
+ {
+  "link": "/parks-facilities/donovan-fieldhouse",
+  "name": "Donovan Fieldhouse",
+  "address": "3620 S. Lituanica Ave.,Chicago,60609",
+  "at": [
+   -87.64776,
+   41.82851
+  ],
+  "matched": "3620 S LITUANICA AVE, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/dooley-fieldhouse",
+  "name": "Dooley Fieldhouse",
+  "address": "3402 W. 77th St.,Chicago,60652",
+  "at": [
+   -87.70808,
+   41.75344
+  ],
+  "matched": "3402 W 77TH ST, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/douglass-cultural-centerfieldhouse",
+  "name": "Douglass Cultural Center/Fieldhouse",
+  "address": "1401 S. Sacramento Dr.,Chicago,60623",
+  "at": [
+   -87.70204,
+   41.86512
+  ],
+  "matched": "1401 S SACRAMENTO DR, CHICAGO, IL, 60623"
+ },
+ {
+  "link": "/parks-facilities/dunham-fieldhouse",
+  "name": "Dunham Fieldhouse",
+  "address": "4638 N. Melvina Ave.,Chicago,60630",
+  "at": [
+   -87.78205,
+   41.96508
+  ],
+  "matched": "4638 N MELVINA AVE, CHICAGO, IL, 60630"
+ },
+ {
+  "link": "/parks-facilities/durkin-fieldhouse",
+  "name": "Durkin Fieldhouse",
+  "address": "8445 S. Kolin Ave.,Chicago,60652",
+  "at": [
+   -87.73001,
+   41.73938
+  ],
+  "matched": "8445 S KOLIN AVE, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/dvorak-fieldhouse",
+  "name": "Dvorak Fieldhouse",
+  "address": "1119 W. Cullerton St.,Chicago,60608",
+  "at": [
+   -87.65469,
+   41.85517
+  ],
+  "matched": "1119 W CULLERTON ST, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/eckhart-fieldhouse",
+  "name": "Eckhart Fieldhouse",
+  "address": "1330 W. Chicago Ave.,Chicago,60642",
+  "at": [
+   -87.66075,
+   41.89623
+  ],
+  "matched": "1330 W CHICAGO AVE, CHICAGO, IL, 60642"
+ },
+ {
+  "link": "/parks-facilities/edgebrook-fieldhouse",
+  "name": "Edgebrook Fieldhouse",
+  "address": "6525 N. Hiawatha Ave.,Chicago,60646",
+  "at": [
+   -87.76226,
+   41.9996
+  ],
+  "matched": "6525 N HIAWATHA AVE, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/edison-fieldhouse",
+  "name": "Edison Fieldhouse",
+  "address": "6755 N. Northwest Hwy.,Chicago,60631",
+  "at": [
+   -87.81726,
+   42.00355
+  ],
+  "matched": "6755 N NORTHWEST HWY, CHICAGO, IL, 60631"
+ },
+ {
+  "link": "/parks-facilities/ellis-arts-and-recreation-center",
+  "name": "Ellis Arts and Recreation Center",
+  "address": "3520 S. Cottage Grove Avenue,Chicago,60653",
+  "at": [
+   -87.61045,
+   41.83071
+  ],
+  "matched": "3520 S COTTAGE GROVE AVE, CHICAGO, IL, 60653"
+ },
+ {
+  "link": "/parks-facilities/emmerson-fieldhouse",
+  "name": "Emmerson FIeldhouse",
+  "address": "1820 W. Granville Ave.,Chicago,60660"
+ },
+ {
+  "link": "/parks-facilities/euclid-fieldhouse",
+  "name": "Euclid Fieldhouse",
+  "address": "9800 S. Parnell Ave.,Chicago,60628",
+  "at": [
+   -87.63707,
+   41.71583
+  ],
+  "matched": "9800 S PARNELL AVE, CHICAGO, IL, 60628"
+ },
+ {
+  "link": "/parks-facilities/eugene-field-fieldhouse",
+  "name": "Eugene Field Fieldhouse",
+  "address": "5100 N. Ridgeway Ave.,Chicago,60625",
+  "at": [
+   -87.72214,
+   41.97379
+  ],
+  "matched": "5100 N RIDGEWAY AVE, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/fernwood-fieldhouse",
+  "name": "Fernwood Fieldhouse",
+  "address": "10436 S. Wallace St.,Chicago,60628",
+  "at": [
+   -87.63798,
+   41.70447
+  ],
+  "matched": "10436 S WALLACE ST, CHICAGO, IL, 60628"
+ },
+ {
+  "link": "/parks-facilities/ford-calumet-environmental-center-fcec",
+  "name": "Ford Calumet Environmental Center (FCEC)",
+  "address": "11555 S. Stony Island Ave.,Chicago,60617",
+  "at": [
+   -87.57639,
+   41.68596
+  ],
+  "matched": "11555 S STONY ISLAND AVE, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/fosco-fieldhouse",
+  "name": "Fosco Fieldhouse",
+  "address": "1312 S. Racine Ave.,Chicago,60608",
+  "at": [
+   -87.6567,
+   41.86508
+  ],
+  "matched": "1312 S RACINE AVE, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/foster-fieldhouse",
+  "name": "Foster Fieldhouse",
+  "address": "1440 W 84th St,Chicago,60620"
+ },
+ {
+  "link": "/parks-facilities/franklin-fieldhouse",
+  "name": "Franklin Fieldhouse",
+  "address": "4320 W. 15th St.,Chicago,60623",
+  "at": [
+   -87.73288,
+   41.86064
+  ],
+  "matched": "4320 W 15TH ST, CHICAGO, IL, 60623"
+ },
+ {
+  "link": "/parks-facilities/fuller-fieldhouse",
+  "name": "Fuller Fieldhouse",
+  "address": "331 W. 45th St,Chicago,60609",
+  "at": [
+   -87.63481,
+   41.81244
+  ],
+  "matched": "331 W 45TH ST, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/gage-fieldhouse",
+  "name": "Gage Fieldhouse",
+  "address": "2411 W. 55th St.,Chicago,60609",
+  "at": [
+   -87.68428,
+   41.79381
+  ],
+  "matched": "2411 W 55TH ST, CHICAGO, IL, 60632"
+ },
+ {
+  "link": "/parks-facilities/galewood-fieldhouse",
+  "name": "Galewood Fieldhouse",
+  "address": "5729 W. Bloomingdale Ave.,Chicago,60639",
+  "at": [
+   -87.76926,
+   41.91256
+  ],
+  "matched": "5729 W BLOOMINGDALE AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/garfield-fieldhouse",
+  "name": "Garfield Fieldhouse",
+  "address": "100 N. Central Park Ave.,Chicago,60624",
+  "at": [
+   -87.7159,
+   41.88161
+  ],
+  "matched": "100 N CENTRAL PARK AVE, CHICAGO, IL, 60624"
+ },
+ {
+  "link": "/parks-facilities/gately-fieldhouse",
+  "name": "Gately Fieldhouse",
+  "address": "10201 S. Cottage Grove,Chicago,60628",
+  "at": [
+   -87.60606,
+   41.70916
+  ],
+  "matched": "10201 S COTTAGE GROVE AVE, CHICAGO, IL, 60628"
+ },
+ {
+  "link": "/parks-facilities/gill-fieldhouse",
+  "name": "Gill Fieldhouse",
+  "address": "825 W. Sheridan Rd.,Chicago,60613",
+  "at": [
+   -87.65014,
+   41.95268
+  ],
+  "matched": "825 W SHERIDAN RD, CHICAGO, IL, 60613"
+ },
+ {
+  "link": "/parks-facilities/gladstone-fieldhouse",
+  "name": "Gladstone Fieldhouse",
+  "address": "5421 N. Menard Ave.,Chicago,60630",
+  "at": [
+   -87.77316,
+   41.97994
+  ],
+  "matched": "5421 N MENARD AVE, CHICAGO, IL, 60630"
+ },
+ {
+  "link": "/parks-facilities/gompers-park-fieldhouse",
+  "name": "Gompers Park | Fieldhouse",
+  "address": "4222 W. Foster Ave.,Chicago,60630"
+ },
+ {
+  "link": "/parks-facilities/grand-crossing-fieldhouse",
+  "name": "Grand Crossing Fieldhouse",
+  "address": "7655 S. Ingleside Ave.,Chicago,60619",
+  "at": [
+   -87.60157,
+   41.7556
+  ],
+  "matched": "7655 S INGLESIDE AVE, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/graver-fieldhouse",
+  "name": "Graver Fieldhouse",
+  "address": "1518 W. 102nd Pl.,Chicago,60643",
+  "at": [
+   -87.66126,
+   41.70733
+  ],
+  "matched": "1518 W 102ND PL, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/green-briar-fieldhouse",
+  "name": "Green Briar Fieldhouse",
+  "address": "2650 W. Peterson Ave.,Chicago,60659",
+  "at": [
+   -87.69583,
+   41.99052
+  ],
+  "matched": "2650 W PETERSON AVE, CHICAGO, IL, 60659"
+ },
+ {
+  "link": "/parks-facilities/gross-fieldhouse",
+  "name": "Gross Fieldhouse",
+  "address": "2708 W. Lawrence Ave.,Chicago,60625",
+  "at": [
+   -87.69663,
+   41.96861
+  ],
+  "matched": "2708 W LAWRENCE AVE, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/haas-fieldhouse",
+  "name": "Haas Fieldhouse",
+  "address": "2402 N. Washtenaw Ave.,Chicago,60647",
+  "at": [
+   -87.69506,
+   41.92531
+  ],
+  "matched": "2402 N WASHTENAW AVE, CHICAGO, IL, 60647"
+ },
+ {
+  "link": "/parks-facilities/hale-fieldhouse",
+  "name": "Hale Fieldhouse",
+  "address": "6258 W. 62nd St.,Chicago,60638",
+  "at": [
+   -87.7768,
+   41.77965
+  ],
+  "matched": "6258 W 62ND ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/hamlin-fieldhouse",
+  "name": "Hamlin Fieldhouse",
+  "address": "3035 N. Hoyne Ave.,Chicago,60618",
+  "at": [
+   -87.68062,
+   41.93656
+  ],
+  "matched": "3035 N HOYNE AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/harris-fieldhouse",
+  "name": "Harris Fieldhouse",
+  "address": "6200 S. Drexel Ave.,Chicago,60637",
+  "at": [
+   -87.60442,
+   41.78221
+  ],
+  "matched": "6200 S DREXEL AVE, CHICAGO, IL, 60637"
+ },
+ {
+  "link": "/parks-facilities/harrison-fieldhouse",
+  "name": "Harrison Fieldhouse",
+  "address": "1824 S. Wood St.,Chicago,60608",
+  "at": [
+   -87.67116,
+   41.85713
+  ],
+  "matched": "1824 S WOOD ST, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/hayes-fieldhouse",
+  "name": "Hayes Fieldhouse",
+  "address": "2936 W. 85th St.,Chicago,60652",
+  "at": [
+   -87.69646,
+   41.73871
+  ],
+  "matched": "2936 W 85TH ST, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/hermitage-fieldhouse",
+  "name": "Hermitage Fieldhouse",
+  "address": "5839 S. Wood St.,Chicago,60636",
+  "at": [
+   -87.66919,
+   41.78749
+  ],
+  "matched": "5839 S WOOD ST, CHICAGO, IL, 60636"
+ },
+ {
+  "link": "/parks-facilities/hermosa-fieldhouse",
+  "name": "Hermosa Fieldhouse",
+  "address": "2240 N. Kilbourn Ave.,Chicago,60639",
+  "at": [
+   -87.739,
+   41.92197
+  ],
+  "matched": "2240 N KILBOURN AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/hiawatha-fieldhouse",
+  "name": "Hiawatha Fieldhouse",
+  "address": "8029 W. Forest Preserve Ave.,Chicago,60634",
+  "at": [
+   -87.8272,
+   41.94421
+  ],
+  "matched": "8029 W FOREST PRESERVE AVE, CHICAGO, IL, 60634"
+ },
+ {
+  "link": "/parks-facilities/hollywood-park-fieldhouse",
+  "name": "Hollywood Park Fieldhouse",
+  "address": "3312 W. Thorndale Ave.,Chicago,60659",
+  "at": [
+   -87.71168,
+   41.98854
+  ],
+  "matched": "3312 W THORNDALE AVE, CHICAGO, IL, 60659"
+ },
+ {
+  "link": "/parks-facilities/holstein-fieldhouse",
+  "name": "Holstein Fieldhouse",
+  "address": "2200 N. Oakley Ave.,Chicago,60647"
+ },
+ {
+  "link": "/parks-facilities/homan-square-fieldhouse",
+  "name": "Homan Square Fieldhouse",
+  "address": "3559 W. Arthington St.,Chicago,60624",
+  "at": [
+   -87.71452,
+   41.8699
+  ],
+  "matched": "3559 W ARTHINGTON ST, CHICAGO, IL, 60624"
+ },
+ {
+  "link": "/parks-facilities/horan-fieldhouse",
+  "name": "Horan Fieldhouse",
+  "address": "3035 W. Van Buren St.,Chicago,60612",
+  "at": [
+   -87.70274,
+   41.87585
+  ],
+  "matched": "3035 W VAN BUREN ST, CHICAGO, IL, 60612"
+ },
+ {
+  "link": "/parks-facilities/horner-fieldhouse",
+  "name": "Horner Fieldhouse",
+  "address": "2741 W. Montrose Ave.,Chicago,60618",
+  "at": [
+   -87.69776,
+   41.9612
+  ],
+  "matched": "2741 W MONTROSE AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/horner-fieldhouse-jr",
+  "name": "Horner Fieldhouse - Jr",
+  "address": "2741 W. Montrose Ave.,Chicago,60618",
+  "at": [
+   -87.69776,
+   41.9612
+  ],
+  "matched": "2741 W MONTROSE AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/hoyne-fieldhouse",
+  "name": "Hoyne Fieldhouse",
+  "address": "3417 South Hamilton Avenue,Chicago,60608",
+  "at": [
+   -87.67892,
+   41.83193
+  ],
+  "matched": "3417 S HAMILTON AVE, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/independence-park-fieldhouse",
+  "name": "Independence Park - Fieldhouse",
+  "address": "3945 N. Springfield Ave.,Chicago,60618",
+  "at": [
+   -87.72499,
+   41.95227
+  ],
+  "matched": "3945 N SPRINGFIELD AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/indian-boundary-cultural-centerfieldhouse",
+  "name": "Indian Boundary Cultural Center/Fieldhouse",
+  "address": "2500 W. Lunt Ave.,Chicago,60645",
+  "at": [
+   -87.69264,
+   42.00866
+  ],
+  "matched": "2500 W LUNT AVE, CHICAGO, IL, 60645"
+ },
+ {
+  "link": "/parks-facilities/indian-road-fieldhouse",
+  "name": "Indian Road Fieldhouse",
+  "address": "6010 W. Matson Ave.,Chicago,60646",
+  "at": [
+   -87.77848,
+   41.99273
+  ],
+  "matched": "6010 W MATSON AVE, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/jackie-robinson-fieldhouse",
+  "name": "Jackie Robinson Fieldhouse",
+  "address": "10540 S. Morgan St. 0C,Chicago,60643",
+  "at": [
+   -87.64764,
+   41.70266
+  ],
+  "matched": "10540 S MORGAN ST, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/jackson-fieldhouse",
+  "name": "Jackson Fieldhouse",
+  "address": "6401 S. Stony Island Ave.,Chicago,60637",
+  "at": [
+   -87.58637,
+   41.77969
+  ],
+  "matched": "6401 S STONY ISLAND AVE, CHICAGO, IL, 60637"
+ },
+ {
+  "link": "/parks-facilities/jefferson-memorial-fieldhouse",
+  "name": "Jefferson Memorial Fieldhouse",
+  "address": "4822 N. Long Ave.,Chicago,60630",
+  "at": [
+   -87.76254,
+   41.96839
+  ],
+  "matched": "4822 N LONG AVE, CHICAGO, IL, 60630"
+ },
+ {
+  "link": "/parks-facilities/jensen-fieldhouse",
+  "name": "Jensen Fieldhouse",
+  "address": "4650 N. Lawndale Ave.,Chicago,60625",
+  "at": [
+   -87.72069,
+   41.96561
+  ],
+  "matched": "4650 N LAWNDALE AVE, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/jesse-white-community-center",
+  "name": "Jesse White Community Center",
+  "address": "410 W Chicago Ave,Chicago,60654",
+  "at": [
+   -87.63885,
+   41.89659
+  ],
+  "matched": "410 W CHICAGO AVE, CHICAGO, IL, 60654"
+ },
+ {
+  "link": "/parks-facilities/kathy-osterman-beach-house",
+  "name": "Kathy Osterman Beach House",
+  "address": "5800 N. Jean-Baptiste Pointe DuSable Lake Shore Drive,Chicago ,60660"
+ },
+ {
+  "link": "/parks-facilities/kedvale-fieldhouse",
+  "name": "Kedvale Fieldhouse",
+  "address": "4134 W. Hirsch St.,Chicago,60651",
+  "at": [
+   -87.73015,
+   41.90629
+  ],
+  "matched": "4134 W HIRSCH ST, CHICAGO, IL, 60651"
+ },
+ {
+  "link": "/parks-facilities/kelly-fieldhouse",
+  "name": "Kelly Fieldhouse",
+  "address": "2725 W. 41st St.,Chicago,60632",
+  "at": [
+   -87.69412,
+   41.81923
+  ],
+  "matched": "2725 W 41ST ST, CHICAGO, IL, 60632"
+ },
+ {
+  "link": "/parks-facilities/kelvyn-fieldhouse",
+  "name": "Kelvyn Fieldhouse",
+  "address": "4438 W. Wrightwood Ave.,Chicago,60639",
+  "at": [
+   -87.73768,
+   41.92853
+  ],
+  "matched": "4438 W WRIGHTWOOD AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/ken-well-fieldhouse",
+  "name": "Ken-Well Fieldhouse",
+  "address": "2945 N. Kenosha Ave.,Chicago,60641",
+  "at": [
+   -87.73378,
+   41.93465
+  ],
+  "matched": "2945 N KENOSHA AVE, CHICAGO, IL, 60641"
+ },
+ {
+  "link": "/parks-facilities/kennedy-fieldhouse",
+  "name": "Kennedy Fieldhouse",
+  "address": "11320 S. Western Ave.,Chicago,60655",
+  "at": [
+   -87.68111,
+   41.68791
+  ],
+  "matched": "11320 S WESTERN AVE, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/kennicott-fieldhouse",
+  "name": "Kennicott Fieldhouse",
+  "address": "4434 S. Lake Park Ave.,Chicago,60653",
+  "at": [
+   -87.59688,
+   41.81407
+  ],
+  "matched": "4434 S LAKE PARK AVE, CHICAGO, IL, 60653"
+ },
+ {
+  "link": "/parks-facilities/kenwood-fieldhouse",
+  "name": "Kenwood Fieldhouse",
+  "address": "1330 E. 50th St.,Chicago,60615",
+  "at": [
+   -87.59432,
+   41.80426
+  ],
+  "matched": "1330 E 50TH ST, CHICAGO, IL, 60615"
+ },
+ {
+  "link": "/parks-facilities/kilbourn-fieldhouse",
+  "name": "Kilbourn Fieldhouse",
+  "address": "3501 N. Kilbourn Ave.,Chicago,60641",
+  "at": [
+   -87.73958,
+   41.94447
+  ],
+  "matched": "3501 N KILBOURN AVE, CHICAGO, IL, 60641"
+ },
+ {
+  "link": "/parks-facilities/kosciuszko-park-fieldhouse",
+  "name": "Kosciuszko Park - Fieldhouse",
+  "address": "2732 N. Avers Ave.,Chicago,60647",
+  "at": [
+   -87.72335,
+   41.9305
+  ],
+  "matched": "2732 N AVERS AVE, CHICAGO, IL, 60647"
+ },
+ {
+  "link": "/parks-facilities/la-follette-fieldhouse",
+  "name": "La Follette Fieldhouse",
+  "address": "1333 N. Laramie Ave.,Chicago,60651",
+  "at": [
+   -87.75575,
+   41.90467
+  ],
+  "matched": "1333 N LARAMIE AVE, CHICAGO, IL, 60651"
+ },
+ {
+  "link": "/parks-facilities/lake-shore-fieldhouse",
+  "name": "Lake Shore Fieldhouse",
+  "address": "808 N. Lake Shore Drive,Chicago,60611",
+  "at": [
+   -87.61767,
+   41.8976
+  ],
+  "matched": "808 N LAKE SHORE DR, CHICAGO, IL, 60611"
+ },
+ {
+  "link": "/parks-facilities/lawler-fieldhouse",
+  "name": "Lawler Fieldhouse",
+  "address": "5210 W. 64th St.,Chicago,60638",
+  "at": [
+   -87.75223,
+   41.77606
+  ],
+  "matched": "5210 W 64TH ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/leclaire-hearst-club-rooms",
+  "name": "LeClaire-Hearst Club Rooms",
+  "address": "5120 W. 44th St.,Chicago,60638",
+  "at": [
+   -87.75224,
+   41.81304
+  ],
+  "matched": "5120 W 44TH ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/leclaire-hearst-community-center",
+  "name": "LeClaire-Hearst Community Center",
+  "address": "5120 West 44th Street,Chicago,60638",
+  "at": [
+   -87.75224,
+   41.81304
+  ],
+  "matched": "5120 W 44TH ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/leonard-m-louie-fieldhouse",
+  "name": "Leonard M. Louie Fieldhouse",
+  "address": "1700 S. Wentworth Ave.,Chicago,60616",
+  "at": [
+   -87.63203,
+   41.85853
+  ],
+  "matched": "1700 S WENTWORTH AVE, CHICAGO, IL, 60616"
+ },
+ {
+  "link": "/parks-facilities/levin-fieldhouse",
+  "name": "Levin Fieldhouse",
+  "address": "5458 W. Kinzie Parkway,Chicago,60644",
+  "at": [
+   -87.76209,
+   41.88778
+  ],
+  "matched": "5458 W KINZIE ST, CHICAGO, IL, 60644"
+ },
+ {
+  "link": "/parks-facilities/lincoln-park-southfield",
+  "name": "Lincoln Park Southfield",
+  "address": "1650 N. Stockton Drive,Chicago,60614"
+ },
+ {
+  "link": "/parks-facilities/lindblom-fieldhouse",
+  "name": "Lindblom Fieldhouse",
+  "address": "6054 S. Damen Ave.,Chicago,60636",
+  "at": [
+   -87.6741,
+   41.78381
+  ],
+  "matched": "6054 S DAMEN AVE, CHICAGO, IL, 60636"
+ },
+ {
+  "link": "/parks-facilities/lowe-fieldhouse",
+  "name": "Lowe Fieldhouse",
+  "address": "5203 S. Lowe Ave.,Chicago,60609",
+  "at": [
+   -87.64157,
+   41.79974
+  ],
+  "matched": "5203 S LOWE AVE, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/loyola-fieldhouse",
+  "name": "Loyola Fieldhouse",
+  "address": "1230 W. Greenleaf Ave.,Chicago,60626",
+  "at": [
+   -87.66196,
+   42.01046
+  ],
+  "matched": "1230 W GREENLEAF AVE, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/maggie-daley-fieldhouse",
+  "name": "Maggie Daley Fieldhouse",
+  "address": "337 E. Randolph St.,Chicago,60601",
+  "at": [
+   -87.62027,
+   41.88425
+  ],
+  "matched": "337 E RANDOLPH ST, CHICAGO, IL, 60601"
+ },
+ {
+  "link": "/parks-facilities/mahalia-jackson-school-park",
+  "name": "Mahalia Jackson School Park",
+  "address": "8407 S. Kerfoot Ave.,Chicago,60620",
+  "at": [
+   -87.64025,
+   41.74135
+  ],
+  "matched": "8407 S KERFOOT AVE, CHICAGO, IL, 60620"
+ },
+ {
+  "link": "/parks-facilities/mandrake-park-fieldhouse",
+  "name": "Mandrake Park Fieldhouse",
+  "address": "3858 S. Cottage Grove,Chicago,60653",
+  "at": [
+   -87.60737,
+   41.82471
+  ],
+  "matched": "3858 S COTTAGE GROVE AVE, CHICAGO, IL, 60653"
+ },
+ {
+  "link": "/parks-facilities/mann-fieldhouse",
+  "name": "Mann Fieldhouse",
+  "address": "3035 E. 130th St.,Chicago,60633",
+  "at": [
+   -87.54941,
+   41.65911
+  ],
+  "matched": "3035 E 130TH ST, CHICAGO, IL, 60633"
+ },
+ {
+  "link": "/parks-facilities/maplewood-fieldhouse",
+  "name": "Maplewood Fieldhouse",
+  "address": "1640 N. Maplewood Ave.,Chicago,60647",
+  "at": [
+   -87.69097,
+   41.9105
+  ],
+  "matched": "1640 N MAPLEWOOD AVE, CHICAGO, IL, 60647"
+ },
+ {
+  "link": "/parks-facilities/margate-fieldhouse",
+  "name": "Margate Fieldhouse",
+  "address": "4921 N. Marine Drive,Chicago,60640",
+  "at": [
+   -87.65042,
+   41.97186
+  ],
+  "matched": "4921 N MARINE DR, CHICAGO, IL, 60640"
+ },
+ {
+  "link": "/parks-facilities/marquette-fieldhouse",
+  "name": "Marquette Fieldhouse",
+  "address": "6743 S. Kedzie Ave.,Chicago,60629",
+  "at": [
+   -87.70288,
+   41.77087
+  ],
+  "matched": "6743 S KEDZIE AVE, CHICAGO, IL, 60629"
+ },
+ {
+  "link": "/parks-facilities/mather-fieldhouse",
+  "name": "Mather Fieldhouse",
+  "address": "5941 N. Richmond St.,Chicago,60659",
+  "at": [
+   -87.70295,
+   41.99014
+  ],
+  "matched": "5941 N RICHMOND ST, CHICAGO, IL, 60659"
+ },
+ {
+  "link": "/parks-facilities/mayfair-fieldhouse",
+  "name": "Mayfair Fieldhouse",
+  "address": "4550 W. Sunnyside Ave.,Chicago,60630",
+  "at": [
+   -87.74199,
+   41.96267
+  ],
+  "matched": "4550 W SUNNYSIDE AVE, CHICAGO, IL, 60630"
+ },
+ {
+  "link": "/parks-facilities/mcfetridge-sports-center",
+  "name": "McFetridge Sports Center",
+  "address": "3843 N. California Ave.,Chicago,60618",
+  "at": [
+   -87.69808,
+   41.95112
+  ],
+  "matched": "3843 N CALIFORNIA AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/mcguane-fieldhouse",
+  "name": "McGuane Fieldhouse",
+  "address": "2901 S. Poplar Ave.,Chicago,60608",
+  "at": [
+   -87.64962,
+   41.84136
+  ],
+  "matched": "2901 S POPLAR AVE, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/mckiernan-fieldhouse",
+  "name": "McKiernan Fieldhouse",
+  "address": "10714 S. Sawyer Ave.,Chicago,60655",
+  "at": [
+   -87.70236,
+   41.6986
+  ],
+  "matched": "10714 S SAWYER AVE, CHICAGO, IL, 60655"
+ },
+ {
+  "link": "/parks-facilities/mckinley-fieldhouse",
+  "name": "McKinley Fieldhouse",
+  "address": "2210 W. Pershing Rd.,Chicago,60609",
+  "at": [
+   -87.68179,
+   41.82309
+  ],
+  "matched": "2210 W PERSHING RD, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/merrimac-fieldhouse",
+  "name": "Merrimac Fieldhouse",
+  "address": "6343 W. Irving Park Rd.,Chicago,60634",
+  "at": [
+   -87.78517,
+   41.95288
+  ],
+  "matched": "6343 W IRVING PARK RD, CHICAGO, IL, 60634"
+ },
+ {
+  "link": "/parks-facilities/meyering-fieldhouse",
+  "name": "Meyering Fieldhouse",
+  "address": "7140 S. Martin Luther King Dr.,Chicago,60619",
+  "at": [
+   -87.61533,
+   41.76495
+  ],
+  "matched": "7140 S MARTIN L KING JR DR, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/midway-plaisance-fieldhouse",
+  "name": "Midway Plaisance Fieldhouse",
+  "address": "1130 Midway Plaisance North,Chicago,60637"
+ },
+ {
+  "link": "/parks-facilities/minuteman-fieldhouse",
+  "name": "Minuteman Fieldhouse",
+  "address": "5940 S. Central Ave.,Chicago,60638",
+  "at": [
+   -87.76206,
+   41.78441
+  ],
+  "matched": "5940 S CENTRAL AVE, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/moore-fieldhouse",
+  "name": "Moore Fieldhouse",
+  "address": "5085 W. Adams St.,Chicago,60644",
+  "at": [
+   -87.75152,
+   41.87846
+  ],
+  "matched": "5085 W ADAMS ST, CHICAGO, IL, 60644"
+ },
+ {
+  "link": "/parks-facilities/moran-fieldhouse",
+  "name": "Moran Fieldhouse",
+  "address": "5727 S. Racine Ave.,Chicago,60621",
+  "at": [
+   -87.65469,
+   41.79002
+  ],
+  "matched": "5727 S RACINE AVE, CHICAGO, IL, 60636"
+ },
+ {
+  "link": "/parks-facilities/morgan-park-sports-center-fieldhouse",
+  "name": "Morgan Park Sports Center Fieldhouse",
+  "address": "11505 S. Western Ave.,Chicago,60643",
+  "at": [
+   -87.68085,
+   41.68438
+  ],
+  "matched": "11505 S WESTERN AVE, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/mozart-fieldhouse",
+  "name": "Mozart Fieldhouse",
+  "address": "2036 N. Avers Ave.,Chicago,60647",
+  "at": [
+   -87.723,
+   41.91818
+  ],
+  "matched": "2036 N AVERS AVE, CHICAGO, IL, 60647"
+ },
+ {
+  "link": "/parks-facilities/mt-greenwood-fieldhouse",
+  "name": "Mt. Greenwood Fieldhouse",
+  "address": "3721 W. 111th St,Chicago,60655",
+  "at": [
+   -87.71325,
+   41.69131
+  ],
+  "matched": "3721 W 111TH ST, CHICAGO, IL, 60655"
+ },
+ {
+  "link": "/parks-facilities/munroe-fieldhouse",
+  "name": "Munroe Fieldhouse",
+  "address": "2617 W. 105th St.,Chicago,60655",
+  "at": [
+   -87.68679,
+   41.70263
+  ],
+  "matched": "2617 W 105TH ST, CHICAGO, IL, 60655"
+ },
+ {
+  "link": "/parks-facilities/murray-fieldhouse",
+  "name": "Murray Fieldhouse",
+  "address": "1743 W. 73rd St.,Chicago,60636",
+  "at": [
+   -87.66763,
+   41.76117
+  ],
+  "matched": "1743 W 73RD ST, CHICAGO, IL, 60636"
+ },
+ {
+  "link": "/parks-facilities/nat-king-cole-fieldhouse",
+  "name": "Nat King Cole Fieldhouse",
+  "address": "361 E. 85th St.,Chicago,60619",
+  "at": [
+   -87.61566,
+   41.74008
+  ],
+  "matched": "361 E 85TH ST, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/nichols-fieldhouse",
+  "name": "Nichols Fieldhouse",
+  "address": "1355 E. 53rd St.,Chicago,60615",
+  "at": [
+   -87.59261,
+   41.79944
+  ],
+  "matched": "1355 E 53RD ST, CHICAGO, IL, 60615"
+ },
+ {
+  "link": "/parks-facilities/normandy-fieldhouse",
+  "name": "Normandy  Fieldhouse",
+  "address": "6660 W. 52nd St.,Chicago,60638",
+  "at": [
+   -87.78843,
+   41.79782
+  ],
+  "matched": "6660 W 52ND ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/north-avenue-beach-house",
+  "name": "North Avenue Beach House",
+  "address": "1501 N. Jean-Baptiste Pointe DuSable Lake Shore Drive,Chicago,60610"
+ },
+ {
+  "link": "/parks-facilities/northerly-island-visitor-center",
+  "name": "Northerly Island Visitor Center",
+  "address": "1521 S. Linn White Dr.,Chicago,60605",
+  "at": [
+   -87.61002,
+   41.8614
+  ],
+  "matched": "1521 S LINN WHITE DR, CHICAGO, IL, 60605"
+ },
+ {
+  "link": "/parks-facilities/norwood-fieldhouse",
+  "name": "Norwood Fieldhouse",
+  "address": "5801 N. Natoma Ave.,Chicago,60631",
+  "at": [
+   -87.79374,
+   41.98578
+  ],
+  "matched": "5801 N NATOMA AVE, CHICAGO, IL, 60631"
+ },
+ {
+  "link": "/parks-facilities/ohallaren-fieldhouse",
+  "name": "O'Hallaren Fieldhouse",
+  "address": "8335 S. Honore St.,Chicago,60620"
+ },
+ {
+  "link": "/parks-facilities/oakdale-fieldhouse",
+  "name": "Oakdale Fieldhouse",
+  "address": "965 W. 95th St.,Chicago,60643",
+  "at": [
+   -87.64755,
+   41.72128
+  ],
+  "matched": "965 W 95TH ST, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/ogden-fieldhouse",
+  "name": "Ogden Fieldhouse",
+  "address": "6500 S. Racine Ave.,Chicago,60636",
+  "at": [
+   -87.65448,
+   41.77592
+  ],
+  "matched": "6500 S RACINE AVE, CHICAGO, IL, 60636"
+ },
+ {
+  "link": "/parks-facilities/olympia-fieldhouse",
+  "name": "Olympia Fieldhouse",
+  "address": "6566 N. Avondale Ave.,Chicago,60631",
+  "at": [
+   -87.81524,
+   41.99979
+  ],
+  "matched": "6566 N AVONDALE AVE, CHICAGO, IL, 60631"
+ },
+ {
+  "link": "/parks-facilities/oriole-fieldhouse",
+  "name": "Oriole Fieldhouse",
+  "address": "5430 N. Olcott Ave.,Chicago,60656",
+  "at": [
+   -87.67662,
+   41.98101
+  ],
+  "matched": "5430 N WOLCOTT AVE, CHICAGO, IL, 60640"
+ },
+ {
+  "link": "/parks-facilities/owens-fieldhouse",
+  "name": "Owens Fieldhouse",
+  "address": "8800 S. Clyde Ave.,Chicago,60617",
+  "at": [
+   -87.57335,
+   41.73609
+  ],
+  "matched": "8800 S CLYDE AVE, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/oz-fieldhouse",
+  "name": "Oz Fieldhouse",
+  "address": "2021 N. Burling St.,Chicago,60614",
+  "at": [
+   -87.64725,
+   41.91905
+  ],
+  "matched": "2021 N BURLING ST, CHICAGO, IL, 60614"
+ },
+ {
+  "link": "/parks-facilities/palmer-cultural-centerfieldhouse",
+  "name": "Palmer Cultural Center/Fieldhouse",
+  "address": "201 E. 111th,Chicago,60628",
+  "at": [
+   -87.61818,
+   41.6926
+  ],
+  "matched": "201 E 111TH ST, CHICAGO, IL, 60628"
+ },
+ {
+  "link": "/parks-facilities/paschen-fieldhouse",
+  "name": "Paschen Fieldhouse",
+  "address": "1932 W. Lunt Ave.,Chicago,60626",
+  "at": [
+   -87.67877,
+   42.00896
+  ],
+  "matched": "1932 W LUNT AVE, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/pasteur-fieldhouse",
+  "name": "Pasteur Fieldhouse",
+  "address": "5825 S. Kostner Ave.,Chicago,60629",
+  "at": [
+   -87.73271,
+   41.7873
+  ],
+  "matched": "5825 S KOSTNER AVE, CHICAGO, IL, 60629"
+ },
+ {
+  "link": "/parks-facilities/peterson-fieldhouse",
+  "name": "Peterson Fieldhouse",
+  "address": "5801 N. Pulaski Rd.,Chicago,60646",
+  "at": [
+   -87.72842,
+   41.98497
+  ],
+  "matched": "5801 N PULASKI RD, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/piotrowski-fieldhouse",
+  "name": "Piotrowski Fieldhouse",
+  "address": "4247 W. 31st St.,Chicago,60623",
+  "at": [
+   -87.731,
+   41.83675
+  ],
+  "matched": "4247 W 31ST ST, CHICAGO, IL, 60623"
+ },
+ {
+  "link": "/parks-facilities/portage-fieldhouse",
+  "name": "Portage Fieldhouse",
+  "address": "4100 N. Long Ave.,Chicago,60641",
+  "at": [
+   -87.76221,
+   41.95512
+  ],
+  "matched": "4100 N LONG AVE, CHICAGO, IL, 60641"
+ },
+ {
+  "link": "/parks-facilities/pottawattomie-fieldhouse",
+  "name": "Pottawattomie Fieldhouse",
+  "address": "7340 N. Rogers Ave.,Chicago,60626",
+  "at": [
+   -87.67893,
+   42.01436
+  ],
+  "matched": "7340 N ROGERS AVE, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/pulaski-fieldhouse",
+  "name": "Pulaski Fieldhouse",
+  "address": "1419 W. Blackhawk St.,Chicago,60622",
+  "at": [
+   -87.66326,
+   41.907
+  ],
+  "matched": "1419 W BLACKHAWK ST, CHICAGO, IL, 60642"
+ },
+ {
+  "link": "/parks-facilities/rainbow-beach-fieldhouse",
+  "name": "Rainbow Beach Fieldhouse",
+  "address": "3111 E. 77th St.,Chicago,60649",
+  "at": [
+   -87.55233,
+   41.75772
+  ],
+  "matched": "3111 E 77TH ST, CHICAGO, IL, 60649"
+ },
+ {
+  "link": "/parks-facilities/rainey-fieldhouse",
+  "name": "Rainey Fieldhouse",
+  "address": "4350 W. 79th St.,Chicago,60652",
+  "at": [
+   -87.73049,
+   41.7494
+  ],
+  "matched": "4350 W 79TH ST, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/revere-fieldhouse",
+  "name": "Revere Fieldhouse",
+  "address": "2509 W. Irving Park Rd,Chicago,60618",
+  "at": [
+   -87.69104,
+   41.95395
+  ],
+  "matched": "2509 W IRVING PARK RD, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/ridge-fieldhouse",
+  "name": "Ridge Fieldhouse",
+  "address": "1817 W. 96th St.,Chicago,60643"
+ },
+ {
+  "link": "/parks-facilities/riis-fieldhouse",
+  "name": "Riis Fieldhouse",
+  "address": "6100 W. Fullerton Ave.,Chicago,60639",
+  "at": [
+   -87.77823,
+   41.92384
+  ],
+  "matched": "6100 W FULLERTON AVE, CHICAGO, IL, 60639"
+ },
+ {
+  "link": "/parks-facilities/river-fieldhouse",
+  "name": "River Fieldhouse",
+  "address": "5100 N. Francisco Ave.,Chicago,60625",
+  "at": [
+   -87.70138,
+   41.97404
+  ],
+  "matched": "5100 N FRANCISCO AVE, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/robichaux-fieldhouse",
+  "name": "Robichaux Fieldhouse",
+  "address": "9247 S. Eggleston Ave.,Chicago,60620",
+  "at": [
+   -87.63478,
+   41.7255
+  ],
+  "matched": "9247 S EGGLESTON AVE, CHICAGO, IL, 60620"
+ },
+ {
+  "link": "/parks-facilities/rogers-fieldhouse",
+  "name": "Rogers Fieldhouse",
+  "address": "7345 N Washtenaw Ave,Chicago,60645",
+  "at": [
+   -87.69721,
+   42.01551
+  ],
+  "matched": "7345 N WASHTENAW AVE, CHICAGO, IL, 60645"
+ },
+ {
+  "link": "/parks-facilities/rosedale-fieldhouse",
+  "name": "Rosedale Fieldhouse",
+  "address": "6312 W. Rosedale Ave.,Chicago,60646",
+  "at": [
+   -87.78534,
+   41.98848
+  ],
+  "matched": "6312 W ROSEDALE AVE, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/rosenblum-fieldhouse",
+  "name": "Rosenblum Fieldhouse",
+  "address": "7547 S. Euclid  Ave.,Chicago,60649"
+ },
+ {
+  "link": "/parks-facilities/rowan-fieldhouse",
+  "name": "Rowan Fieldhouse",
+  "address": "11546 S. Avenue L,Chicago,60617",
+  "at": [
+   -87.53655,
+   41.68553
+  ],
+  "matched": "11546 S AVE L, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/russell-square-fieldhouse",
+  "name": "Russell Square Fieldhouse",
+  "address": "3045 E. 83rd St.,Chicago,60617",
+  "at": [
+   -87.55025,
+   41.74462
+  ],
+  "matched": "3045 E 83RD ST, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/rutherford-sayre-fieldhouse",
+  "name": "Rutherford Sayre Fieldhouse",
+  "address": "6871 W. Belden Ave.,Chicago,60707"
+ },
+ {
+  "link": "/parks-facilities/sauganash-fieldhouse",
+  "name": "Sauganash Fieldhouse",
+  "address": "5861 N. Kostner Ave.,Chicago,60646",
+  "at": [
+   -87.73823,
+   41.9875
+  ],
+  "matched": "5861 N KOSTNER AVE, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/schreiber-fieldhouse",
+  "name": "Schreiber Fieldhouse",
+  "address": "1552 W. Schreiber Ave.,Chicago,60626",
+  "at": [
+   -87.66928,
+   41.99905
+  ],
+  "matched": "1552 W SCHREIBER AVE, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/scottsdale-fieldhouse",
+  "name": "Scottsdale Fieldhouse",
+  "address": "4637 W. 83rd St.,Chicago,60652",
+  "at": [
+   -87.7362,
+   41.74197
+  ],
+  "matched": "4637 W 83RD ST, CHICAGO, IL, 60652"
+ },
+ {
+  "link": "/parks-facilities/senka-fieldhouse",
+  "name": "Senka Fieldhouse",
+  "address": "5656 S. St. Louis Ave.,Chicago,60629",
+  "at": [
+   -87.7109,
+   41.79055
+  ],
+  "matched": "5656 S ST LOUIS AVE, CHICAGO, IL, 60629"
+ },
+ {
+  "link": "/parks-facilities/senn-fieldhouse",
+  "name": "Senn Fieldhouse",
+  "address": "5887 N. Ridge Ave.,Chicago,60660",
+  "at": [
+   -87.66709,
+   41.988
+  ],
+  "matched": "5887 N RIDGE AVE, CHICAGO, IL, 60660"
+ },
+ {
+  "link": "/parks-facilities/seward-fieldhouse",
+  "name": "Seward Fieldhouse",
+  "address": "375 W. Elm St.,Chicago,60610",
+  "at": [
+   -87.6397,
+   41.90265
+  ],
+  "matched": "375 W ELM ST, CHICAGO, IL, 60610"
+ },
+ {
+  "link": "/parks-facilities/shabbona-fieldhouse",
+  "name": "Shabbona Fieldhouse",
+  "address": "6935 W. Addison St.,Chicago,60634",
+  "at": [
+   -87.79883,
+   41.94536
+  ],
+  "matched": "6935 W ADDISON ST, CHICAGO, IL, 60634"
+ },
+ {
+  "link": "/parks-facilities/shedd-fieldhouse",
+  "name": "Shedd Fieldhouse",
+  "address": "3660 W. 23rd St.,Chicago,60623",
+  "at": [
+   -87.71652,
+   41.84989
+  ],
+  "matched": "3660 W 23RD ST, CHICAGO, IL, 60623"
+ },
+ {
+  "link": "/parks-facilities/sheil-fieldhouse",
+  "name": "Sheil Fieldhouse",
+  "address": "3505 N. Southport Ave.,Chicago,60657",
+  "at": [
+   -87.66389,
+   41.94541
+  ],
+  "matched": "3505 N SOUTHPORT AVE, CHICAGO, IL, 60657"
+ },
+ {
+  "link": "/parks-facilities/sheridan-fieldhouse",
+  "name": "Sheridan Fieldhouse",
+  "address": "910 S. Aberdeen St.,Chicago,60607",
+  "at": [
+   -87.65429,
+   41.87153
+  ],
+  "matched": "910 S ABERDEEN ST, CHICAGO, IL, 60607"
+ },
+ {
+  "link": "/parks-facilities/sherman-fieldhouse",
+  "name": "Sherman Fieldhouse",
+  "address": "1301 W. 52nd St.,Chicago,60609",
+  "at": [
+   -87.65752,
+   41.79954
+  ],
+  "matched": "1301 W 52ND ST, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/sherwood-fieldhouse",
+  "name": "Sherwood Fieldhouse",
+  "address": "5701 S. Shields Ave,Chicago,60621",
+  "at": [
+   -87.63398,
+   41.7908
+  ],
+  "matched": "5701 S SHIELDS AVE, CHICAGO, IL, 60621"
+ },
+ {
+  "link": "/parks-facilities/simons-fieldhouse",
+  "name": "Simons Fieldhouse",
+  "address": "1640 N. Drake Ave.,Chicago,60647",
+  "at": [
+   -87.71504,
+   41.91108
+  ],
+  "matched": "1640 N DRAKE AVE, CHICAGO, IL, 60647"
+ },
+ {
+  "link": "/parks-facilities/skinner-fieldhouse",
+  "name": "Skinner Fieldhouse",
+  "address": "1331 W. Adams St.,Chicago,60607",
+  "at": [
+   -87.66026,
+   41.87895
+  ],
+  "matched": "1331 W ADAMS ST, CHICAGO, IL, 60607"
+ },
+ {
+  "link": "/parks-facilities/smith-wendell-fieldhouse",
+  "name": "Smith (Wendell) Fieldhouse",
+  "address": "9912 S. Princeton Ave.,Chicago,60628",
+  "at": [
+   -87.63095,
+   41.7135
+  ],
+  "matched": "9912 S PRINCETON AVE, CHICAGO, IL, 60628"
+ },
+ {
+  "link": "/parks-facilities/smith-fieldhouse",
+  "name": "Smith Fieldhouse",
+  "address": "2526 W. Grand Ave.,Chicago,60612",
+  "at": [
+   -87.68983,
+   41.89167
+  ],
+  "matched": "2526 W GRAND AVE, CHICAGO, IL, 60612"
+ },
+ {
+  "link": "/parks-facilities/south-shore-cultural-centerfieldhouse",
+  "name": "South Shore Cultural Center/Fieldhouse",
+  "address": "7059 S. South Shore Dr.,Chicago,60649",
+  "at": [
+   -87.56642,
+   41.76754
+  ],
+  "matched": "7059 S SOUTH SHORE DR, CHICAGO, IL, 60649"
+ },
+ {
+  "link": "/parks-facilities/stanton-fieldhouse",
+  "name": "Stanton Fieldhouse",
+  "address": "618 W. Scott St.,Chicago,60610",
+  "at": [
+   -87.64496,
+   41.90508
+  ],
+  "matched": "618 W SCOTT ST, CHICAGO, IL, 60610"
+ },
+ {
+  "link": "/parks-facilities/strohacker-fieldhouse",
+  "name": "Strohacker Fieldhouse",
+  "address": "4347 W. 54th St,Chicago,60632",
+  "at": [
+   -87.73208,
+   41.7949
+  ],
+  "matched": "4347 W 54TH ST, CHICAGO, IL, 60632"
+ },
+ {
+  "link": "/parks-facilities/sumner-fieldhouse",
+  "name": "Sumner Fieldhouse",
+  "address": "4320 W. 5th Ave.,Chicago,60624",
+  "at": [
+   -87.73324,
+   41.87088
+  ],
+  "matched": "4320 W 5TH AVE, CHICAGO, IL, 60624"
+ },
+ {
+  "link": "/parks-facilities/tarkington-fieldhouse",
+  "name": "Tarkington Fieldhouse",
+  "address": "3344 W. 71st St.,Chicago,60629",
+  "at": [
+   -87.70672,
+   41.76438
+  ],
+  "matched": "3344 W 71ST ST, CHICAGO, IL, 60629"
+ },
+ {
+  "link": "/parks-facilities/taylor-fieldhouse",
+  "name": "Taylor Fieldhouse",
+  "address": "39 W. 47th St.,Chicago,60609",
+  "at": [
+   -87.62758,
+   41.80915
+  ],
+  "matched": "39 W 47TH ST, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/taylor-lauridsen-fieldhouse",
+  "name": "Taylor-Lauridsen Fieldhouse",
+  "address": "704 W. 42nd St.,Chicago,60609",
+  "at": [
+   -87.64404,
+   41.81765
+  ],
+  "matched": "704 W 42ND ST, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/park-nta-fieldhouse",
+  "name": "The Park at NTA Fieldhouse",
+  "address": "55 W Cermak Rd.,Chicago,60616",
+  "at": [
+   -87.62914,
+   41.8529
+  ],
+  "matched": "55 W CERMAK RD, CHICAGO, IL, 60616"
+ },
+ {
+  "link": "/parks-facilities/tilton-2-point-0-fieldhouse",
+  "name": "Tilton 2-Point 0 Fieldhouse",
+  "address": "230 N. Kolmar,Chicago,60624",
+  "at": [
+   -87.73929,
+   41.8842
+  ],
+  "matched": "230 N KOLMAR AVE, CHICAGO, IL, 60624"
+ },
+ {
+  "link": "/parks-facilities/touhy-fieldhouse",
+  "name": "Touhy Fieldhouse",
+  "address": "7348 N. Paulina St.,Chicago,60626",
+  "at": [
+   -87.67252,
+   42.01494
+  ],
+  "matched": "7348 N PAULINA ST, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/touhy-herbert-park-fieldhouse",
+  "name": "Touhy-Herbert Park Fieldhouse",
+  "address": "2106 W. Adams St.,Chicago,60612",
+  "at": [
+   -87.6804,
+   41.87873
+  ],
+  "matched": "2106 W ADAMS ST, CHICAGO, IL, 60612"
+ },
+ {
+  "link": "/parks-facilities/trumbull-fieldhouse",
+  "name": "Trumbull Fieldhouse",
+  "address": "2400 E. 105th St.,Chicago,60617",
+  "at": [
+   -87.56556,
+   41.70463
+  ],
+  "matched": "2400 E 105TH ST, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/tuley-cultural-centerfieldhouse",
+  "name": "Tuley Cultural Center/Fieldhouse",
+  "address": "501 E. 90th Pl.,Chicago,60619",
+  "at": [
+   -87.61188,
+   41.73101
+  ],
+  "matched": "501 E 90TH ST, CHICAGO, IL, 60619"
+ },
+ {
+  "link": "/parks-facilities/union-fieldhouse",
+  "name": "Union Fieldhouse",
+  "address": "1501 W. Randolph St.,Chicago,60607",
+  "at": [
+   -87.66473,
+   41.88493
+  ],
+  "matched": "1501 W RANDOLPH ST, CHICAGO, IL, 60607"
+ },
+ {
+  "link": "/parks-facilities/valley-forge-fieldhouse",
+  "name": "Valley Forge Fieldhouse",
+  "address": "7001 W. 59th St.,Chicago,60638",
+  "at": [
+   -87.79626,
+   41.78472
+  ],
+  "matched": "7001 W 59TH ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/veterans-memorial-fieldhouse",
+  "name": "Veterans' Memorial Fieldhouse",
+  "address": "2820 E. 98th St.,Chicago,60617",
+  "at": [
+   -87.55522,
+   41.71735
+  ],
+  "matched": "2820 E 98TH ST, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/vittum-fieldhouse",
+  "name": "Vittum Fieldhouse",
+  "address": "5010 W. 50th St.,Chicago,60638",
+  "at": [
+   -87.74807,
+   41.80214
+  ],
+  "matched": "5010 W 50TH ST, CHICAGO, IL, 60638"
+ },
+ {
+  "link": "/parks-facilities/warren-park-fieldhouse",
+  "name": "Warren Park Fieldhouse",
+  "address": "6601 N. Western Ave.,Chicago,60645",
+  "at": [
+   -87.6899,
+   42.00143
+  ],
+  "matched": "6601 N WESTERN AVE, CHICAGO, IL, 60645"
+ },
+ {
+  "link": "/parks-facilities/washington-fieldhouse",
+  "name": "Washington Fieldhouse",
+  "address": "5531 S. King Dr.,Chicago,60637",
+  "at": [
+   -87.61587,
+   41.79362
+  ],
+  "matched": "5531 S KING DR, CHICAGO, IL, 60637"
+ },
+ {
+  "link": "/parks-facilities/washtenaw-fieldhouse",
+  "name": "Washtenaw Fieldhouse",
+  "address": "2521 South Washtenaw Ave.,Chicago,60608",
+  "at": [
+   -87.69275,
+   41.84592
+  ],
+  "matched": "2521 S WASHTENAW AVE, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/welles-fieldhouse",
+  "name": "Welles Fieldhouse",
+  "address": "2333 W. Sunnyside Ave.,Chicago,60625",
+  "at": [
+   -87.68683,
+   41.96311
+  ],
+  "matched": "2333 W SUNNYSIDE AVE, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/wentworth-fieldhouse",
+  "name": "Wentworth Fieldhouse",
+  "address": "5625 S. Mobile Ave.,Chicago,60638"
+ },
+ {
+  "link": "/parks-facilities/wentworth-gardens-fieldhouse",
+  "name": "Wentworth Gardens Fieldhouse",
+  "address": "3770 S.  Wentworth Ave.,Chicago,60609",
+  "at": [
+   -87.63145,
+   41.82599
+  ],
+  "matched": "3770 S WENTWORTH AVE, CHICAGO, IL, 60609"
+ },
+ {
+  "link": "/parks-facilities/west-chatham-fieldhouse",
+  "name": "West Chatham Fieldhouse",
+  "address": "8223 S. Princeton Ave.,Chicago,60620",
+  "at": [
+   -87.63163,
+   41.74423
+  ],
+  "matched": "8223 S PRINCETON AVE, CHICAGO, IL, 60620"
+ },
+ {
+  "link": "/parks-facilities/west-lawn-fieldhouse",
+  "name": "West Lawn Fieldhouse",
+  "address": "4233 W. 65th St.,Chicago,60629",
+  "at": [
+   -87.72836,
+   41.77489
+  ],
+  "matched": "4233 W 65TH ST, CHICAGO, IL, 60629"
+ },
+ {
+  "link": "/parks-facilities/white-edward-h-fieldhouse",
+  "name": "White (Edward H.) Fieldhouse",
+  "address": "1120 W. 122nd Street,Chicago,60643",
+  "at": [
+   -87.65005,
+   41.67229
+  ],
+  "matched": "1120 W 122ND ST, CHICAGO, IL, 60643"
+ },
+ {
+  "link": "/parks-facilities/white-willye-b-park-fieldhouse",
+  "name": "White (Willye B.) Park - Fieldhouse",
+  "address": "1610 W. Howard,Chicago,60626",
+  "at": [
+   -87.67184,
+   42.01943
+  ],
+  "matched": "1610 W HOWARD ST, CHICAGO, IL, 60626"
+ },
+ {
+  "link": "/parks-facilities/wicker-fieldhouse",
+  "name": "Wicker Fieldhouse",
+  "address": "1425 N. Damen Ave.,Chicago,60622",
+  "at": [
+   -87.6773,
+   41.90745
+  ],
+  "matched": "1425 N DAMEN AVE, CHICAGO, IL, 60622"
+ },
+ {
+  "link": "/parks-facilities/wildwood-fieldhouse",
+  "name": "Wildwood Fieldhouse",
+  "address": "6950 N. Hiawatha Ave.,Chicago,60646",
+  "at": [
+   -87.77792,
+   42.00703
+  ],
+  "matched": "6950 N HIAWATHA AVE, CHICAGO, IL, 60646"
+ },
+ {
+  "link": "/parks-facilities/williams-daniel-hale-fieldhouse",
+  "name": "Williams (Daniel Hale) Fieldhouse",
+  "address": "2850 S. State St.,Chicago,60616",
+  "at": [
+   -87.62696,
+   41.84255
+  ],
+  "matched": "2850 S STATE ST, CHICAGO, IL, 60616"
+ },
+ {
+  "link": "/parks-facilities/wilson-frank-j-fieldhouse",
+  "name": "Wilson (Frank J.) Fieldhouse",
+  "address": "4630 N. Milwaukee Ave.,Chicago,60630",
+  "at": [
+   -87.75807,
+   41.96468
+  ],
+  "matched": "4630 N MILWAUKEE AVE, CHICAGO, IL, 60630"
+ },
+ {
+  "link": "/parks-facilities/wilson-john-p-fieldhouse",
+  "name": "Wilson (John P.) Fieldhouse",
+  "address": "1122 W. 34th Pl. C,Chicago,60608",
+  "at": [
+   -87.65432,
+   41.83162
+  ],
+  "matched": "1122 W 34TH PL, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/wilson-community-center-fieldhouse",
+  "name": "Wilson Community Center Fieldhouse",
+  "address": "3225 S. Racine Ave.,Chicago,60608",
+  "at": [
+   -87.65587,
+   41.83536
+  ],
+  "matched": "3225 S RACINE AVE, CHICAGO, IL, 60608"
+ },
+ {
+  "link": "/parks-facilities/winnemac-fieldhouse",
+  "name": "Winnemac Fieldhouse",
+  "address": "5101 N. Leavitt St.,Chicago,60625",
+  "at": [
+   -87.68415,
+   41.9742
+  ],
+  "matched": "5101 N LEAVITT ST, CHICAGO, IL, 60625"
+ },
+ {
+  "link": "/parks-facilities/wolfe-fieldhouse",
+  "name": "Wolfe Fieldhouse",
+  "address": "3325 E. 108th St.,Chicago,60617",
+  "at": [
+   -87.54359,
+   41.69908
+  ],
+  "matched": "3325 E 108TH ST, CHICAGO, IL, 60617"
+ },
+ {
+  "link": "/parks-facilities/womens-bungalow",
+  "name": "Women's Bungalow",
+  "address": "3945 North Springfield Avenue,Chicago,60618",
+  "at": [
+   -87.72499,
+   41.95227
+  ],
+  "matched": "3945 N SPRINGFIELD AVE, CHICAGO, IL, 60618"
+ },
+ {
+  "link": "/parks-facilities/woodhull-fieldhouse",
+  "name": "Woodhull Fieldhouse",
+  "address": "7340 S. East End Ave.,Chicago,60649",
+  "at": [
+   -87.58364,
+   41.76168
+  ],
+  "matched": "7340 S EAST END AVE, CHICAGO, IL, 60649"
+ },
+ {
+  "link": "/parks-facilities/wrightwood-fieldhouse",
+  "name": "Wrightwood Fieldhouse",
+  "address": "2534 N. Greenview Ave.,Chicago,60614",
+  "at": [
+   -87.66591,
+   41.92796
+  ],
+  "matched": "2534 N GREENVIEW AVE, CHICAGO, IL, 60614"
+ }
+]

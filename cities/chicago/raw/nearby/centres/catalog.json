@@ -19,22 +19,16 @@
    "dataset"
   ],
   [
-   "qhfc-4cw2",
-   "Senior Centers",
-   "2019-03-07T19:04:18.000Z",
-   "dataset"
-  ],
-  [
    "2usn-w2nz",
    "Map - Public Health Services - Chicago Primary Care Community Health Centers",
    "2014-04-22T20:30:13.000Z",
    "map"
   ],
   [
-   "5a76-tqs9",
-   "Warming Centers - Map",
-   "2026-03-17T14:57:42.000Z",
-   "map"
+   "qhfc-4cw2",
+   "Senior Centers",
+   "2019-03-07T19:04:18.000Z",
+   "dataset"
   ],
   [
    "bmus-hp7e",
@@ -43,15 +37,21 @@
    "dataset"
   ],
   [
-   "cs4s-nsna",
-   "Workforce Centers",
-   "2011-08-21T02:47:32.000Z",
-   "dataset"
-  ],
-  [
    "cjg8-dbka",
    "Public Health Services- Chicago Primary Care Community Health Centers",
    "2014-04-22T20:30:13.000Z",
+   "dataset"
+  ],
+  [
+   "5a76-tqs9",
+   "Warming Centers - Map",
+   "2026-03-17T14:57:42.000Z",
+   "map"
+  ],
+  [
+   "cs4s-nsna",
+   "Workforce Centers",
+   "2011-08-21T02:47:32.000Z",
    "dataset"
   ],
   [
@@ -73,15 +73,15 @@
    "dataset"
   ],
   [
-   "vcv6-95ym",
-   "CDPH Mental Health Resources (Deprecated November 2023)",
-   "2023-01-26T16:37:24.000Z",
-   "dataset"
-  ],
-  [
    "9zqv-3uhs",
    "Public Health Services - Licensed Substance Abuse Treatment Providers in Chicago, 2011",
    "2012-01-24T20:58:49.000Z",
+   "dataset"
+  ],
+  [
+   "vcv6-95ym",
+   "CDPH Mental Health Resources (Deprecated November 2023)",
+   "2023-01-26T16:37:24.000Z",
    "dataset"
   ],
   [
@@ -91,27 +91,33 @@
    "dataset"
   ],
   [
-   "vpma-swyi",
-   "Libraries - 2014 Holds Filled by Location",
-   "2015-01-12T19:32:59.000Z",
-   "dataset"
-  ],
-  [
    "hr6z-8bf2",
    "Libraries - 2014 Circulation by Location",
    "2015-01-12T19:26:01.000Z",
    "dataset"
   ],
   [
-   "x74m-smqb",
-   "Libraries - 2013 Visitors by Location",
-   "2014-01-15T22:21:24.000Z",
+   "vpma-swyi",
+   "Libraries - 2014 Holds Filled by Location",
+   "2015-01-12T19:32:59.000Z",
    "dataset"
   ],
   [
    "f3he-c6sv",
    "COVID-19 Hospital Capacity Metrics - Historical",
    "2023-05-10T21:51:22.000Z",
+   "dataset"
+  ],
+  [
+   "ti44-vee7",
+   "Libraries - 2013 Circulation by Location",
+   "2014-01-15T22:18:57.000Z",
+   "dataset"
+  ],
+  [
+   "x74m-smqb",
+   "Libraries - 2013 Visitors by Location",
+   "2014-01-15T22:21:24.000Z",
    "dataset"
   ],
   [
@@ -125,12 +131,6 @@
    "311 Service Requests - Pot Holes Reported - No Duplicates",
    "2019-03-05T10:35:45.000Z",
    "filter"
-  ],
-  [
-   "ti44-vee7",
-   "Libraries - 2013 Circulation by Location",
-   "2014-01-15T22:18:57.000Z",
-   "dataset"
   ],
   [
    "5sc6-ey97",
@@ -251,15 +251,15 @@
    "chart"
   ],
   [
-   "vjbu-ywct",
-   "Performance Metrics - Family & Support Services - Childen Services Program Monthly Utilization",
-   "2016-09-30T20:48:56.000Z",
-   "dataset"
-  ],
-  [
    "vg8w-2w9y",
    "Performance Metrics - Family & Support Services - Homeless Shelter System Monthly Utilization",
    "2016-11-09T18:12:18.000Z",
+   "dataset"
+  ],
+  [
+   "vjbu-ywct",
+   "Performance Metrics - Family & Support Services - Childen Services Program Monthly Utilization",
+   "2016-09-30T20:48:56.000Z",
    "dataset"
   ],
   [
@@ -295,16 +295,16 @@
    "dataset"
   ],
   [
-   "xtdn-h9nk",
-   "Family and Support Services Delegate Agencies - Map",
-   "2015-10-07T21:47:48.000Z",
-   "map"
-  ],
-  [
    "yfhi-bd8g",
    "FOIA Request Log - Family and Support Services",
    "2021-06-03T20:24:15.000Z",
    "dataset"
+  ],
+  [
+   "xtdn-h9nk",
+   "Family and Support Services Delegate Agencies - Map",
+   "2015-10-07T21:47:48.000Z",
+   "map"
   ],
   [
    "8xas-7ipx",
@@ -313,16 +313,16 @@
    "map"
   ],
   [
-   "tyd3-k85v",
-   "Community Service Centers Map",
-   "2016-02-17T16:59:26.000Z",
-   "map"
-  ],
-  [
    "qhfc-4cw2",
    "Senior Centers",
    "2019-03-07T19:04:18.000Z",
    "dataset"
+  ],
+  [
+   "tyd3-k85v",
+   "Community Service Centers Map",
+   "2016-02-17T16:59:26.000Z",
+   "map"
   ],
   [
    "bspy-6mw8",
@@ -337,15 +337,15 @@
    "map"
   ],
   [
-   "cs4s-nsna",
-   "Workforce Centers",
-   "2011-08-21T02:47:32.000Z",
-   "dataset"
-  ],
-  [
    "a4p3-hxgg",
    "Emergency Temporary Shelters - Census - Historical",
    "2025-03-14T17:17:52.000Z",
+   "dataset"
+  ],
+  [
+   "cs4s-nsna",
+   "Workforce Centers",
+   "2011-08-21T02:47:32.000Z",
    "dataset"
   ],
   [
@@ -355,16 +355,16 @@
    "story"
   ],
   [
-   "r4km-25r6",
-   "Emergency Temporary Shelters - Biweekly Report - Historical",
-   "2025-11-05T19:49:53.275Z",
-   "story"
-  ],
-  [
    "h243-v2q5",
    "Warming Centers",
    "2026-03-17T14:57:42.000Z",
    "dataset"
+  ],
+  [
+   "r4km-25r6",
+   "Emergency Temporary Shelters - Biweekly Report - Historical",
+   "2025-11-05T19:49:53.275Z",
+   "story"
   ],
   [
    "hfse-pzih",
@@ -385,18 +385,6 @@
    "dataset"
   ],
   [
-   "w2sz-4tcr",
-   "Emergency Temporary Shelters - Grievances Resolved - Historical",
-   "2025-03-14T17:24:28.000Z",
-   "dataset"
-  ],
-  [
-   "q93m-i3ga",
-   "Emergency Temporary Shelters - Limited Stay Exits - By Gender Identity - Historical",
-   "2025-03-14T17:07:30.000Z",
-   "dataset"
-  ],
-  [
    "hd2g-5c43",
    "Emergency Temporary Shelters - Intake From Landing Zone - Historical",
    "2025-03-14T15:39:03.000Z",
@@ -409,9 +397,27 @@
    "dataset"
   ],
   [
+   "w2sz-4tcr",
+   "Emergency Temporary Shelters - Grievances Resolved - Historical",
+   "2025-03-14T17:24:28.000Z",
+   "dataset"
+  ],
+  [
+   "q93m-i3ga",
+   "Emergency Temporary Shelters - Limited Stay Exits - By Gender Identity - Historical",
+   "2025-03-14T17:07:30.000Z",
+   "dataset"
+  ],
+  [
    "n3b3-xajz",
    "Emergency Temporary Shelters - Limited Stay Extensions - Historical",
    "2025-03-14T09:40:54.000Z",
+   "dataset"
+  ],
+  [
+   "7tk2-dsc8",
+   "Emergency Temporary Shelters - Limited Stay Exits - By Original  Exit Date - Historical",
+   "2025-03-14T09:36:07.000Z",
    "dataset"
   ],
   [
@@ -421,21 +427,27 @@
    "dataset"
   ],
   [
+   "vg8w-2w9y",
+   "Performance Metrics - Family & Support Services - Homeless Shelter System Monthly Utilization",
+   "2016-11-09T18:12:18.000Z",
+   "dataset"
+  ],
+  [
    "8ayb-6mjs",
    "Senior Centers - Map",
    "2019-03-07T19:04:18.000Z",
    "map"
   ],
   [
-   "7tk2-dsc8",
-   "Emergency Temporary Shelters - Limited Stay Exits - By Original  Exit Date - Historical",
-   "2025-03-14T09:36:07.000Z",
+   "vjbu-ywct",
+   "Performance Metrics - Family & Support Services - Childen Services Program Monthly Utilization",
+   "2016-09-30T20:48:56.000Z",
    "dataset"
   ],
   [
-   "vg8w-2w9y",
-   "Performance Metrics - Family & Support Services - Homeless Shelter System Monthly Utilization",
-   "2016-11-09T18:12:18.000Z",
+   "hbuv-eka5",
+   "Performance Metrics - Family & Support Services - Domestic Violence Service Help Line Monthly Utilization",
+   "2016-11-09T18:15:59.000Z",
    "dataset"
   ],
   [
@@ -445,33 +457,21 @@
    "map"
   ],
   [
+   "uava-8jbh",
+   "Performance Metrics - Family & Support Services - Workforce Services Monthly Utilization",
+   "2016-09-30T20:47:33.000Z",
+   "dataset"
+  ],
+  [
    "2cn6-nmx6",
    "Performance Metrics - Family & Support Services - Senior Services Nutrition Monthly Utilization",
    "2016-11-09T18:13:19.000Z",
    "chart"
   ],
   [
-   "hbuv-eka5",
-   "Performance Metrics - Family & Support Services - Domestic Violence Service Help Line Monthly Utilization",
-   "2016-11-09T18:15:59.000Z",
-   "dataset"
-  ],
-  [
    "xczi-kmtf",
    "Performance Metrics - Family & Support Services - Youth Services Program Monthly Utilization",
    "2016-09-30T20:58:29.000Z",
-   "dataset"
-  ],
-  [
-   "vjbu-ywct",
-   "Performance Metrics - Family & Support Services - Childen Services Program Monthly Utilization",
-   "2016-09-30T20:48:56.000Z",
-   "dataset"
-  ],
-  [
-   "uava-8jbh",
-   "Performance Metrics - Family & Support Services - Workforce Services Monthly Utilization",
-   "2016-09-30T20:47:33.000Z",
    "dataset"
   ],
   [
