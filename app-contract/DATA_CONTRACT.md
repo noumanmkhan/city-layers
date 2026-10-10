@@ -127,10 +127,14 @@ How the website's search does it, for an app that wants to match:
   step 5a.
 - A `streetcars` layer (Toronto, id `tram`, file `streetcars`) draws its routes in `--tram`, each numbered
   along the line; stops (from `transit.json`, those served by a daytime streetcar) from zoom 15.
-- A `buses` layer (id `bus`, file `transit_routes`, `lazy: true`: load it only when needed) draws one
-  family at a time: `families` lists `[id, short, note]` (`freq`, `exp`, `night`), the first being the
-  default. Routes are drawn in their mode's colour (`--bus`, `--tram`), stops from zoom 15. Text:
-  `countText` (`{n}` routes), `hint`, `pickText`, `unpickText` (`{r}`), `clearText`. Any route can also
+- A `buses` layer (id `bus`, file `transit_routes`, `lazy: true`: load it only when needed) draws the
+  routes in the families picked: `families` lists `[id, short, note]` (`freq`, `exp`, `night`), the first
+  being the default. Any mix may be on except the ids in `solo` (`["night"]`), which show alone. When a
+  city has a `streetcars` layer, daytime streetcar routes (`m: "tram"`, `day: true`) are left to that
+  layer; streetcars that run only overnight show in `night`. Routes are drawn in their mode's colour
+  (`--bus`, `--tram`); with more than one family on, routes in `exp` are dashed (`comboText` says so).
+  Stops from zoom 15. Text: `countText` (`{n}` routes), `hint`, `pickText`, `unpickText` (`{r}`),
+  `clearText`. The website's links write the families as `bus=freq+exp`. Any route can also
   be picked (from the card, search or a link) and is then drawn in `--ink` over a `--city` casing with
   its stops, whichever layers are on.
 - `under` (optional, any layer): the id of the layer it sits under in the panel (the institution

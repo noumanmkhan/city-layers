@@ -438,7 +438,9 @@ const KINDS = {
     g._draw = () => {
       if (cur){ g.removeLayer(cur); cur = null; }
       if (!routeGeo) return;
-      cur = routeLines(routeGeo.features.filter(f => f.properties.f.includes(busFam)), false);
+      // With two families on, the express routes are dashed so they read apart from the locals they shadow.
+      const mixed = busFams.size > 1;
+      cur = routeLines(routeGeo.features.filter(f => busShows(f.properties)), false, p => mixed && p.f.includes('exp') ? ' exp' : '');
       g.addLayer(cur);
     };
     g.on('add', () => ensureRoutes().then(() => { g._draw(); drawBusBox(); }));
@@ -529,8 +531,14 @@ function clPopup(it, p, latlng, soon, asof){
    search, a link or a tap on its line: it's drawn in ink with its stops, whichever layers are on. */
 const TRAMS = byKind('streetcars'), BUSES = byKind('buses'), TR = CITY.card.transit;
 const picked = new Set();
-const BUS_DEFAULT = BUSES ? BUSES.families[0][0] : null;
-let busFam = BUS_DEFAULT, routeGeo = null, routeGeoP = null;
+/* Bus families on show: any mix of the combinable ones (frequent, express), or one listed in the layer's
+   "solo" (overnight) on its own. Daytime streetcars stay on the Streetcars layer, so turning that off
+   clears them; streetcars that run only overnight show in the overnight family. */
+const BUS_DEFAULT = BUSES ? [BUSES.families[0][0]] : [];
+const busFams = new Set(BUS_DEFAULT);
+let routeGeo = null, routeGeoP = null;
+const busShows = r => [...busFams].some(k => r.f.includes(k)) && (!TRAMS || r.m !== 'tram' || r.day === false);
+const busKey = () => BUSES ? BUSES.families.map(f => f[0]).filter(k => busFams.has(k)).join('+') : '';
 function ensureRoutes(){
   if (!TR) return Promise.resolve(null);
   return routeGeoP || (routeGeoP = get(TR.routes).then(d => { routeGeo = d; return d; }).catch(() => { routeGeoP = null; return null; }));
@@ -548,7 +556,7 @@ function along(c, t){
 }
 const span = c => c.reduce((a, p, i) => i ? a + Math.hypot((p[0] - c[i - 1][0]) * .72, p[1] - c[i - 1][1]) : 0, 0);
 // Route lines with number badges. Line widths follow the zoom through CSS (.z12, .z14 on the map).
-function routeLines(feats, pick){
+function routeLines(feats, pick, extra){
   // Every casing goes in before any line, or a casing's rounded end would nick the line drawn before it.
   const g = L.layerGroup(), cases = L.layerGroup(), lines = L.layerGroup();
   g.addLayer(cases); g.addLayer(lines);
@@ -556,7 +564,7 @@ function routeLines(feats, pick){
     const p = f.properties, parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
     parts.forEach(c => {
       cases.addLayer(L.polyline(c.map(ll), {pane:'transit', className:'rt-case ' + p.m + (pick ? ' pick' : ''), interactive:false}));
-      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt ' + p.m + (pick ? ' pick' : ''), bubblingMouseEvents:false});
+      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt ' + p.m + (pick ? ' pick' : '') + (extra ? extra(p) : ''), bubblingMouseEvents:false});
       hoverTip(pl, routeTip(p));
       pl.on('click', e => { if (!pick) pickRoute(p.r, true); inspect(e.latlng); });
       lines.addLayer(pl);
@@ -609,9 +617,10 @@ map.on('moveend', drawStops);
 function drawBusBox(){
   if (!BUSES) return;
   const box = document.getElementById('busbox'); if (!box) return;
-  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.fam === busFam)));
-  const fam = BUSES.families.find(f => f[0] === busFam), n = data.transit ? data.transit.routes.filter(r => r.f.includes(busFam)).length : null;
-  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + fam[2] + ' ' + BUSES.hint;
+  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-pressed', String(busFams.has(b.dataset.fam))));
+  const fams = BUSES.families.filter(f => busFams.has(f[0])), n = data.transit ? data.transit.routes.filter(busShows).length : null;
+  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + fams.map(f => f[2]).join(' ') +
+    (fams.length > 1 && BUSES.comboText ? ' ' + BUSES.comboText : '') + ' ' + BUSES.hint;
   const pk = document.getElementById('buspick');
   pk.hidden = !picked.size;
   pk.innerHTML = picked.size ? '<small>' + esc(BUSES.pickText) + '</small><div class="chips">' + [...picked].map(r =>
@@ -621,9 +630,20 @@ function drawBusBox(){
     if (b.dataset.unpick) pickRoute(b.dataset.unpick, false); else { picked.clear(); ensureRoutes().then(drawPicks); queueHash(); }
   }));
 }
-function setBusFam(f){
-  if (!BUSES || !BUSES.families.some(x => x[0] === f)) return;
-  busFam = f;
+// A chip tap: a solo family replaces the rest; a combinable one toggles (and replaces a solo one).
+// At least one family stays on.
+function tapBusFam(f){
+  const solo = BUSES.solo || [];
+  if (solo.includes(f) || [...busFams].some(k => solo.includes(k))) setBusFams([f]);
+  else if (!busFams.has(f)) setBusFams([...busFams, f]);
+  else if (busFams.size > 1) setBusFams([...busFams].filter(k => k !== f));
+}
+function setBusFams(list){
+  if (!BUSES) return;
+  const ok = list.filter(f => BUSES.families.some(x => x[0] === f)), solo = BUSES.solo || [];
+  const pickd = ok.some(f => solo.includes(f)) ? [ok.find(f => solo.includes(f))] : ok;
+  if (!pickd.length) return;
+  busFams.clear(); pickd.forEach(f => busFams.add(f));
   if (layers[BUSES.id] && layers[BUSES.id]._draw) layers[BUSES.id]._draw();
   drawBusBox(); queueHash();
 }
@@ -702,11 +722,11 @@ CITY.groups.forEach(([title, items]) => {
     }
     if (it.kind === 'buses'){   // one family at a time, plus any routes picked from the card or search
       const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'busbox'; box.hidden = !it.on;
-      box.innerHTML = '<div class="chips pick" role="radiogroup" aria-label="' + esc(it.name) + '">' + it.families.map(([f, short]) =>
-        '<button type="button" role="radio" data-fam="' + f + '" aria-checked="' + (f === busFam) + '">' + esc(short) + '</button>').join('') +
+      box.innerHTML = '<div class="chips pick" role="group" aria-label="' + esc(it.name) + '">' + it.families.map(([f, short]) =>
+        '<button type="button" data-fam="' + f + '" aria-pressed="' + busFams.has(f) + '">' + esc(short) + '</button>').join('') +
         '</div><div class="legend"><small id="busnote"></small></div><div class="buspick" id="buspick" hidden></div>';
       grp.appendChild(box);
-      box.querySelectorAll('[data-fam]').forEach(b => b.addEventListener('click', () => setBusFam(b.dataset.fam)));
+      box.querySelectorAll('[data-fam]').forEach(b => b.addEventListener('click', () => tapBusFam(b.dataset.fam)));
     }
     if (it.kind === 'towers'){   // key to the badges, shown while the layer is on
       const box = document.createElement('div'); box.className = 'lensbox child'; box.id = 'twkey-' + it.id; box.hidden = !it.on;
@@ -833,7 +853,7 @@ document.getElementById('reset').addEventListener('click', () => {
   clearFilters(); applyFilter();
   Object.keys(pick).forEach(id => { pick[id] = LENSES[id].pick[0][0]; });
   BOARDS.forEach(it => setBoard(it.id, it.boards[0][0]));
-  if (BUSES) setBusFam(BUS_DEFAULT);
+  if (BUSES) setBusFams(BUS_DEFAULT);
   if (picked.size){ picked.clear(); drawPicks(); }
   setLens(FIRST_LENS);
   setScope('inner', true);
@@ -1495,7 +1515,7 @@ function linkState(){
   if (fit.length) parts.push(['fit', fit.join(',')]);
   const brd = BOARDS.filter(it => state[it.id] && boardPick[it.id] !== it.boards[0][0]).map(it => it.id + ':' + boardPick[it.id]);
   if (brd.length) parts.push(['board', brd.join(',')]);
-  if (BUSES && state[BUSES.id] && busFam !== BUS_DEFAULT) parts.push(['bus', busFam]);
+  if (BUSES && state[BUSES.id] && busKey() !== BUS_DEFAULT.join('+')) parts.push(['bus', busKey()]);
   if (picked.size) parts.push(['routes', [...picked].join(',')]);
   return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
 }
@@ -1528,7 +1548,7 @@ function applyHash(h){
     syncStnNames();
   }
   (o.board || '').split(',').forEach(part => { const [id, b] = part.split(':'); if (b) setBoard(id, b); });
-  if (o.bus) setBusFam(o.bus);
+  if (o.bus) setBusFams(o.bus.split('+'));
   picked.clear(); (o.routes || '').split(',').filter(Boolean).forEach(r => picked.add(r));
   if (TR && (picked.size || pickLayer.getLayers().length)) ensureRoutes().then(drawPicks);
   const [lk, lp] = (o.lens || '').split(':');
