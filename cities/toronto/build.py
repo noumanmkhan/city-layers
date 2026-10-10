@@ -196,7 +196,13 @@ GTA = {
     '333748': ('Oshawa', 'Durham'), '2408839': ('Clarington', 'Durham'), '2408842': ('Uxbridge', 'Durham'),
     '2408840': ('Scugog', 'Durham'), '2408841': ('Brock', 'Durham'),
 }
-WATER = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(R + 'lakes.geojson'))['features']])
+# Lakes: OpenStreetMap's outlines of Lake Ontario, Simcoe and Scugog (raw/gta_lakes.geojson, clipped to
+# GTA_LAKES_BOX) follow the real shore; Natural Earth's 10m lakes, used beyond that box, are continent-scale
+# and put Port Credit and other lakeside places in the water.
+GTA_LAKES_BOX = box(-80.8, 42.9, -78.0, 44.9)   # the box fetch_gta_shoreline.py clipped to
+NE_WATER = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(R + 'lakes.geojson'))['features']])
+OSM_WATER = unary_union([shape(f['geometry']).buffer(0) for f in json.load(open(R + 'gta_lakes.geojson'))['features']])
+WATER = unary_union([NE_WATER.difference(GTA_LAKES_BOX), OSM_WATER]).buffer(0)
 FRAME = box(-82.5, 41.5, -75.5, 46.5)  # far beyond the map's pan limits, so no edge ever shows
 base = [feat(LAND, {'kind': 'city', 'name': 'City of Toronto'})]
 munis = []

@@ -180,7 +180,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Travel times to Union computed from the TTC schedules and from Metrolinx's GO and UP Express GTFS ([Metrolinx Open Data](https://www.metrolinx.com/en/about-us/open-data)), with walking routes from OpenStreetMap.
 - Suburban drive times (both cities) routed with [OSRM](https://project-osrm.org/) on © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors' roads (ODbL).
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
-- Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
+- Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario, Lake Simcoe and Lake Scugog shorelines around the GTA from OpenStreetMap; lakes farther out from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
 Chicago:
 
