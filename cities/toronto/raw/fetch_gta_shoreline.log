@@ -1,0 +1,9 @@
+  retry 1 https://overpass-api.de/api/interpreter HTTP Error 504: Gateway Timeout
+  retry 2 https://overpass.kumi.systems/api/interpreter HTTP Error 500: Internal Server Error
+  retry 3 https://overpass-api.de/api/interpreter HTTP Error 504: Gateway Timeout
+  retry 4 https://overpass.kumi.systems/api/interpreter HTTP Error 500: Internal Server Error
+  retry 5 https://overpass-api.de/api/interpreter HTTP Error 504: Gateway Timeout
+Lake Ontario r1206310 outer ways 453 inner 248 area deg2 0.8709
+Lake Scugog r6518392 outer ways 3 inner 12 area deg2 0.0075
+Lake Simcoe r9984807 outer ways 10 inner 21 area deg2 0.0816
+wrote /home/runner/work/city-layers/city-layers/cities/toronto/raw/gta_lakes.geojson 297 KB
