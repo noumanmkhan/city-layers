@@ -32,7 +32,8 @@
     "tz": "America/Toronto",
     "near": 500,
     "otherLabel": "Other Metrolinx work",
-    "contractors": ["Ontario Transit Group", "Trillium Guideway", "Green Infrastructure Partners", "Pape North Connect", "Leaside Valley Builders",
-                    "Leaside Vallley Builders", "West End Connectors", "Scarborough Transit Connect", "ONxpress", "Mosaic Transit Group"]
+    "_contractors": "Consortiums that only build transit; their permits count even when not filed as Metrolinx. General contractors (e.g. Green Infrastructure Partners, which also does City sewer work) are left out: their Metrolinx permits still come in by tag.",
+    "contractors": ["Ontario Transit Group", "Trillium Guideway", "Pape North Connect", "Leaside Valley Builders", "Leaside Vallley Builders",
+                    "West End Connectors", "Scarborough Transit Connect", "ONxpress"]
   }
 }

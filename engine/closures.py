@@ -134,7 +134,7 @@ for p in src['permits']:
     if not art and p['kind'] != 'closed':
         dropped['local lane work'] += 1
         continue
-    key = (norm(p['street']), p['kind'], tuple(tuple(round(v, 4) for v in c) for c in p['coords'][:1] + p['coords'][-1:]))
+    key = (norm(p['street']), p['kind'], tuple(sorted(tuple(round(v, 4) for v in c) for c in p['coords'][:1] + p['coords'][-1:])))   # either direction
     props = {'proj': proj, 'name': pname, 'street': p['street'], 'extent': p['extent'], 'kind': p['kind'], 'art': art,
              'start': p['start'], 'end': p['end'], 'hours': p.get('hours'), 'days': p.get('days'), 'both': p.get('both', False),
              'who': p.get('who'), 'desc': (p.get('desc') or '')[:220]}
