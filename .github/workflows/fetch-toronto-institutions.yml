@@ -1,0 +1,30 @@
+name: Fetch Toronto institutions
+# Downloads universities, colleges and hospitals in and around Toronto from OpenStreetMap (Overpass)
+# into cities/toronto/raw/institutions_osm.json, used to place and check the curated list in
+# cities/toronto/institutions.py. Runs when the fetch script changes on main, or by hand.
+# (Chicago's institution data is fetched by the Fetch Chicago data workflow.)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['cities/toronto/fetch_institutions.py', '.github/workflows/fetch-toronto-institutions.yml']
+permissions:
+  contents: write
+concurrency: fetch-toronto-institutions
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -u cities/toronto/fetch_institutions.py 2>&1 | tee cities/toronto/raw/fetch_institutions.log
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/institutions_osm.json cities/toronto/raw/fetch_institutions.log
+          git commit -m "Fetch Toronto universities, colleges and hospitals from OpenStreetMap" || echo "no changes"
+          git pull --rebase
+          git push
