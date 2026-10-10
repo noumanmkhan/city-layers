@@ -1,0 +1,840 @@
+{
+ "run_utc": "2026-10-10T11:30:00+00:00",
+ "toronto": {
+  "error": "JSONDecodeError('Invalid \\\\escape: line 1 column 834440 (char 834439)')"
+ },
+ "chicago": {
+  "active_window": [
+   "2026-10-03",
+   "2026-12-09"
+  ],
+  "active_rows_citywide": [
+   {
+    "n": "56685"
+   }
+  ],
+  "cors": {
+   "Access-Control-Allow-Origin": "*"
+  },
+  "citywide_streetclosure_values": [
+   {
+    "n": "39429"
+   },
+   {
+    "streetclosure": "Curblane",
+    "n": "5458"
+   },
+   {
+    "streetclosure": "NA",
+    "n": "5151"
+   },
+   {
+    "streetclosure": "None",
+    "n": "3310"
+   },
+   {
+    "streetclosure": "Full",
+    "n": "1409"
+   },
+   {
+    "streetclosure": "Sidewalk",
+    "n": "1350"
+   },
+   {
+    "streetclosure": "Partial",
+    "n": "574"
+   },
+   {
+    "streetclosure": "Intermitte",
+    "n": "4"
+   }
+  ],
+  "citywide_status_values": [
+   {
+    "applicationstatus": "Open",
+    "n": "53877"
+   },
+   {
+    "applicationstatus": "Closed",
+    "n": "2808"
+   }
+  ],
+  "top_applicants_citywide": [
+   {
+    "primarycontactlast": "ComED North*",
+    "n": "2722"
+   },
+   {
+    "primarycontactlast": "Peoples Gas*",
+    "n": "2039"
+   },
+   {
+    "primarycontactlast": "SEVEN-D CONSTRUCTION CO*",
+    "n": "2024"
+   },
+   {
+    "primarycontactlast": "DWM*",
+    "n": "1705"
+   },
+   {
+    "primarycontactlast": "CROWN CASTLE NG CENTRAL LLC",
+    "n": "1361"
+   },
+   {
+    "primarycontactlast": "AT&T (SBC IL)*",
+    "n": "1008"
+   },
+   {
+    "primarycontactlast": "SUMIT CONSTRUCTION CO INC*",
+    "n": "889"
+   },
+   {
+    "primarycontactlast": "VERIZON COMMUNICATIONS INC.",
+    "n": "884"
+   },
+   {
+    "primarycontactlast": "PAN OCEANIC ENGINEERING CO., INC.*",
+    "n": "731"
+   },
+   {
+    "primarycontactlast": "G & V CONST CO INC (SL)*",
+    "n": "568"
+   },
+   {
+    "primarycontactlast": "RELIABLE CONTRACTING & EQUIPMENT*",
+    "n": "431"
+   },
+   {
+    "primarycontactlast": "BRACKENBOX INC*",
+    "n": "414"
+   },
+   {
+    "primarycontactlast": "CHICAGO PUBLIC SCHOOLS",
+    "n": "406"
+   },
+   {
+    "primarycontactlast": "CITYWIDE DISPOSAL INC*",
+    "n": "390"
+   },
+   {
+    "primarycontactlast": "CDOT - In-House Construction",
+    "n": "385"
+   },
+   {
+    "primarycontactlast": "COMCAST OF CHICAGO INC*",
+    "n": "379"
+   },
+   {
+    "primarycontactlast": "CITY LIGHTS LTD*",
+    "n": "354"
+   },
+   {
+    "primarycontactlast": "UNITED ENTERPRISE  (SL)*",
+    "n": "327"
+   },
+   {
+    "primarycontactlast": "CITY ESCAPE GARDEN AND DESIGN, LLC*",
+    "n": "316"
+   },
+   {
+    "primarycontactlast": "JOHN BURNS CONSTRUCTION CO.*",
+    "n": "309"
+   },
+   {
+    "primarycontactlast": "MQ CONSTRUCTION CO*",
+    "n": "257"
+   },
+   {
+    "primarycontactlast": "INLINER SOLUTIONS, LLC*",
+    "n": "244"
+   },
+   {
+    "primarycontactlast": "BIGANE PAVING CO (CONSTRUCTION)*",
+    "n": "225"
+   },
+   {
+    "primarycontactlast": "MILLENNIUM CONTRACTING CORP*",
+    "n": "219"
+   },
+   {
+    "primarycontactlast": "CDOT-Sign Management",
+    "n": "186"
+   },
+   {
+    "primarycontactlast": "MCI METRO ACCESS TRANSMISSION SERVICES LLC",
+    "n": "186"
+   },
+   {
+    "primarycontactlast": "CROWN CASTLE FIBER LLC*",
+    "n": "183"
+   },
+   {
+    "primarycontactlast": "CROSSTOWN FIBER*",
+    "n": "149"
+   },
+   {
+    "primarycontactlast": "CHICAGO SCAFFOLDING*",
+    "n": "147"
+   },
+   {
+    "primarycontactlast": "UNITED SCAFFOLDING INC*",
+    "n": "146"
+   },
+   {
+    "primarycontactlast": "RAVENSWOOD DISPOSAL SERVICE INC*",
+    "n": "141"
+   },
+   {
+    "primarycontactlast": "WALSH CONSTRUCTION COMPANY II, LLC*",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "CONTRACTORS ACCESS***",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "PLUMBING PROFESSIONALS CO*",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "CHICAGO  PUBLIC  SCHOOLS",
+    "n": "124"
+   },
+   {
+    "primarycontactlast": "CDOT - Division of Electrical Operations",
+    "n": "122"
+   },
+   {
+    "primarycontactlast": "TOMORROW GREENWAY LLC, D/B/A GREENWAY RECYCLING SE",
+    "n": "119"
+   },
+   {
+    "primarycontactlast": "LAKESHORE RECYCLING SYSTEMS, INC (LRS HOLDINGS)*",
+    "n": "105"
+   },
+   {
+    "primarycontactlast": "MOBILITIE LLC",
+    "n": "104"
+   },
+   {
+    "primarycontactlast": "CAPITOL CEMENT CO INC*",
+    "n": "102"
+   },
+   {
+    "primarycontactlast": "ECONOMY DISPOSAL",
+    "n": "99"
+   },
+   {
+    "primarycontactlast": "PRIME SCAFFOLD INC*",
+    "n": "97"
+   },
+   {
+    "primarycontactlast": "TRI-STATE DISPOSAL INC*",
+    "n": "94"
+   },
+   {
+    "primarycontactlast": "OPEN 4 BUSINESS PRODUCTIONS, LLC",
+    "n": "93"
+   },
+   {
+    "primarycontactlast": "D & P CONSTRUCTION CO INC***",
+    "n": "87"
+   },
+   {
+    "primarycontactlast": "COMMONWEALTH EDISON CO",
+    "n": "71"
+   },
+   {
+    "primarycontactlast": "BAY CRANE MIDWEST LLC",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "F.H. PASCHEN, S.N. NIELSEN* & ASSOC., LLC*",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "AA SCAFFOLD XPRESS INC*",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "CITY OF CHICAGO",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "PRACTICAL PLUMBING, LLC*",
+    "n": "58"
+   },
+   {
+    "primarycontactlast": "SBC  ILLINOIS",
+    "n": "58"
+   },
+   {
+    "primarycontactlast": "CHICAGO HOUSING AUTHORITY",
+    "n": "55"
+   },
+   {
+    "primarycontactlast": "B & T UNDERGROUND*",
+    "n": "54"
+   },
+   {
+    "primarycontactlast": "ALLIED WASTE TRANSPORTATION INC DBA REPUBLIC SERV*",
+    "n": "53"
+   },
+   {
+    "primarycontactlast": "WATERMAX PLUMBING INC*",
+    "n": "51"
+   },
+   {
+    "primarycontactlast": "LEVEL 3 COMMUNICATIONS DBA LUMEN*",
+    "n": "50"
+   },
+   {
+    "primarycontactlast": "CATHOLIC BISHOP OF CHICAGO",
+    "n": "48"
+   },
+   {
+    "primarycontactlast": "JAM PRODUCTIONS LTD*",
+    "n": "48"
+   },
+   {
+    "primarycontactlast": "GSG CONSULTANTS, INC.*",
+    "n": "47"
+   },
+   {
+    "primarycontactlast": "INDEPENDENT RECYCLING SERVICES*",
+    "n": "46"
+   },
+   {
+    "primarycontactlast": "CHICAGO PARK DISTRICT",
+    "n": "45"
+   },
+   {
+    "primarycontactlast": "ALF CARTAGE INC (OVERSIZE)",
+    "n": "44"
+   },
+   {
+    "primarycontactlast": "DUMPSTER RENTAL SERVICES, INC*",
+    "n": "44"
+   },
+   {
+    "primarycontactlast": "STEVENSON CRANE SERVICE INC (OVERSIZE)",
+    "n": "44"
+   },
+   {
+    "primarycontactlast": "RENEWAL BY ANDERSEN LLC*",
+    "n": "42"
+   },
+   {
+    "primarycontactlast": "GILCO SCAFFOLDING COMPANY LLC*",
+    "n": "41"
+   },
+   {
+    "primarycontactlast": "BENCHMARK CONSTRUCTION*",
+    "n": "41"
+   },
+   {
+    "primarycontactlast": "DESIGNED EQUIPMENT CORPORATION*",
+    "n": "41"
+   },
+   {
+    "primarycontactlast": "MAT CONSTRUCTION LEASING INC dba MAT CONSTRUCTION*",
+    "n": "40"
+   },
+   {
+    "primarycontactlast": "LAGRANGE CRANE SERVICE INC (OVERSIZE)",
+    "n": "39"
+   },
+   {
+    "primarycontactlast": "LOPEZ PLUMBING SYSTEMS, INC.*",
+    "n": "37"
+   },
+   {
+    "primarycontactlast": "TAYLOR EXCAVATING & CONSTRUCTION INC (SEAL)*",
+    "n": "36"
+   },
+   {
+    "primarycontactlast": "CHRISTY WEBBER & CO*",
+    "n": "36"
+   },
+   {
+    "primarycontactlast": "METRA",
+    "n": "36"
+   },
+   {
+    "primarycontactlast": "WALGREENS COMPANY STORE# 05124 MS 685",
+    "n": "35"
+   },
+   {
+    "primarycontactlast": "Shift Transit, LLC",
+    "n": "33"
+   },
+   {
+    "primarycontactlast": "MC DONALD'S CORP",
+    "n": "32"
+   },
+   {
+    "primarycontactlast": "BULLEY & ANDREWS, LLC*",
+    "n": "32"
+   },
+   {
+    "primarycontactlast": "J.L. ROLL-OFF SERVICE*",
+    "n": "32"
+   }
+  ],
+  "transit": {
+   "count": 268,
+   "by_applicant": {
+    "GREAT EXPECTATIONS ACADEMY": 1,
+    "SKYVIEW COCTAILS": 1,
+    "WALSH CONSTRUCTION COMPANY II, LLC*": 128,
+    "CTA*": 24,
+    "CHICAGO TRANSIT AUTHORITY": 28,
+    "VERIZON COMMUNICATIONS INC.": 3,
+    "GREAT EXPECTATIONS LEARNING ACADEMY": 1,
+    "WALSH": 6,
+    "EXACTA LLC DBA PUBLIC HOUSE BAR & GRILL": 1,
+    "Arezzo Jewelers, LTD": 1,
+    "GEO SERVICES, INC.*": 1,
+    "AirGarage Inc": 1,
+    "CROWN CASTLE FIBER LLC*": 2,
+    "RCN TELECOM SERVICES OF ILLINOIS INC (Astound)*": 2,
+    "J.C. Construction & Plumbing Co*": 1,
+    "ComED North*": 8,
+    "OCTAVIO TAPIA": 1,
+    "Chicago Transit Authority (CTA)": 1,
+    "SEVEN-D CONSTRUCTION CO*": 2,
+    "CITY LIGHTS LTD*": 1,
+    "COOK COUNTY WASTE & RECYCLING OF CHICAGO & SUBURBS": 1,
+    "LLC": 2,
+    "Harlem-Foster Shopping Center": 1,
+    "WALSH MASONRY, INC": 1,
+    "24/7 HEAVY HAUL LLC": 1,
+    "DA VINCI PLUMBING DESIGN & CONSULTING, LLC*": 4,
+    "WALSH CONSTRUCTION CO (OVERSIZE)": 2,
+    "AG BELLS II LLC": 1,
+    "Henry Bros. Co.*": 2,
+    "PERMA-SEAL BASEMENT SYSTEMS*": 1,
+    "NELSON-WESTERBERG INC": 1,
+    "VICTORY INTERNATIONAL PLUMBING, LLC*": 1,
+    "GSG CONSULTANTS, INC.*": 2,
+    "RELIABLE CONTRACTING & EQUIPMENT*": 1,
+    "Shift Transit, LLC": 1,
+    "SUSTAINABLE SEWER & WATER, INC*": 1,
+    "5600 LLC": 1,
+    "1857 N HARLEM LLC": 1,
+    "CHICAGO TRANSIT AUTHORITY (CTA)": 1,
+    "DA VINCI VISION BOUTIQUE": 1,
+    "20/20 PLUMBING INC*": 1,
+    "JOHN WALSH": 1,
+    "VINCI RESTAURANT": 1,
+    "WALSH/II IN ONE": 1,
+    "KEVIN F WALSH": 1,
+    "NOVAK CONSTRUCTION COMPANY*": 1,
+    "WALSH CONSTRUCTION CO": 2,
+    "HIBERNIAN DEVELOPMENT LLC *": 1,
+    "OM SAI 4344 LLC": 1,
+    "WALSH APARTMENTS": 1,
+    "WITMAN PLUMBING INC*": 1,
+    "COMCAST OF CHICAGO INC*": 1,
+    "PAN OCEANIC ENGINEERING CO., INC.*": 8,
+    "MILLENNIUM CONTRACTING CORP*": 1,
+    "Martinez": 1,
+    "B&K CONCRETE 1 INC*": 2,
+    "WALSH BROTHERS INC": 1,
+    "KELLY & WALSH INC": 1
+   },
+   "by_project": {
+    "16-000890": 1,
+    "96-121439": 1,
+    "CTA RLE - Permanent Closures": 10,
+    "CTA HR EVENT": 3,
+    "08-000753": 1,
+    "02-100314": 1,
+    "96-103756": 1,
+    "CTA Shuttle: Lake St. Bridge": 5,
+    "03-003778": 1,
+    "AVONDALE & HARLEM SC": 1,
+    "06-006194": 1,
+    "19-000355": 1,
+    "04-005513": 1,
+    "16-000330": 1,
+    "07-001690": 1,
+    "05-000074": 1,
+    "10-000691": 1,
+    "CTA RPM E02/Stns - Street": 6,
+    "02-100687": 1,
+    "10-002053": 1,
+    "3118 N. HARLEM": 1,
+    "05-000076": 1,
+    "05-000077": 1,
+    "CTA RPM LBMM Civil FOS-LEL II": 6,
+    "GEO 26612": 1,
+    "13-001623": 1,
+    "CTA RLE - Perry Closure": 1,
+    "04-001828": 1,
+    "04-001831": 1,
+    "01-100282": 1,
+    "830 N Orleans St": 1,
+    "SCU# 470370": 1,
+    "JBCC-26-003_Orleans": 2,
+    "CTA RLE - Closures": 10,
+    "2745 n Harlem": 1,
+    "20079445-250020-HARLEM AVE": 1,
+    "99-120241": 1,
+    "Maypole Closure": 1,
+    "07-000500": 1,
+    "26-0329_20039107_11900SCOTTAGE": 2,
+    "26-0329_19482981_325W112TH PL": 2,
+    "Green and Orange Shuttle": 5,
+    "2026 CDOT S-6-229": 2,
+    "CTA Portable Toilet": 1,
+    "CTA RPM - Win Arg WA Duct": 1,
+    "Spec 114026 - 7154 W Belmont": 1,
+    "GRAND & ORLEANS SC": 1,
+    "ONTARIO & ORLEANS SC": 1,
+    "Panoptic 2401-11 W Charleston": 1,
+    "SCU# 470371": 1,
+    "05-001027": 1,
+    "null": 5,
+    "RLE - Fence Eggleston": 2,
+    "1060 W Addison Bollards Work": 5,
+    "04-001126": 1,
+    "Harlem-Foster Shopping Center": 1,
+    "10-001992": 1,
+    "12-001102": 1,
+    "0818/10 490 harlem in": 1,
+    "TEMP. CTA BUS STOP-SPEC. EVENT": 1,
+    "04-001127": 1,
+    "2144 N Bell": 1,
+    "08-001719": 1,
+    "RLE - State St Sidewalk": 1,
+    "RLE - Doty Ave Closure": 1,
+    "RLE - 115th Sidewalk Cls": 1,
+    "24-0377_CE-ST-2211_EFP-131251": 2,
+    "292 x 1248- RLE CTA Project": 1,
+    "98-100509": 1,
+    "CTA-RLE - Advanced Earthworks": 1,
+    "RLE - 113th Sidewalk": 1,
+    "2713 N Drake": 1,
+    "CTA APTA Tours": 4,
+    "CTA RPM - School Lane": 2,
+    "RLE-QLA Potholing Restoration": 8,
+    "12-000611": 1,
+    "260329_18216791_CTARLE_354W109": 1,
+    "292 X 1248 RLE CTA Project": 1,
+    "03-100109": 1,
+    "3509 N. Harlem": 1,
+    "SACRED - South Chicago": 2,
+    "CTA Columbus Parade": 1,
+    "10015 S Charles St": 1,
+    "CTA RPM - Win Arg West Alley": 1,
+    "CTA RPM - Broadway East SW": 2,
+    "CTA RLE - LG Assembly Calumet": 1,
+    "487386- Gurler": 1,
+    "CTA RPM LBMM Civil ARD-BER II": 16,
+    "CTA RPM - Bryn Mawr Parking": 1,
+    "Charles St.": 1,
+    "WO12": 2,
+    "D1 LS 6015 N. Harlem": 1,
+    "divvy - Orleans & Merch Mart": 1,
+    "1060 W Addison Bollards 2026": 4,
+    "CTA RLE - Perry Cls": 1,
+    "2201-09 W Charleston": 1,
+    "CTA RPM E02/Stns - Street II": 7,
+    "CTA RPM - Under-L Activation 1": 9,
+    "5600 N. Harlem": 1,
+    "1857 N. Harlem Ave.": 1,
+    "20-001269": 1,
+    "14-001826": 1,
+    "14-001832": 1,
+    "16-000154": 1,
+    "18-000761": 1,
+    "Dani medical office": 1,
+    "02-100390": 1,
+    "92-120120": 1,
+    "96-121223": 1,
+    "96-121292": 1,
+    "1625 N Harlem Medical Office": 1,
+    "96-104703": 1,
+    "94-120091": 1,
+    "04-004658": 1,
+    "2026 N Orleans": 1,
+    "01-100283": 1,
+    "2216 N Cleveland": 1,
+    "CTA RPM - LBMM Embank II 2023": 3,
+    "86-120013": 1,
+    "RLE - 115th Sidewalk": 1,
+    "CTA Temporary Bus Stop": 1,
+    "Temporary bus stop for detour": 1,
+    "3202 N. Harlem Ave.": 1,
+    "Comcast N Orleans & W Chestnut": 1,
+    "WM INSTALLATION AND LSLR": 6,
+    "RLE Closures": 10,
+    "RLE - Closures": 10,
+    "6015 N Harlem Ave": 1,
+    "RLE - Wentworth 114th": 1,
+    "CTA RPM - W/E Alley Law-Ard": 2,
+    "Scarlett hair salon": 1,
+    "Repair concrete columns": 1,
+    "2072 N. Western/Charleston St.": 2,
+    "6509 W Higgins": 1,
+    "RLE - Wentworth Sidewalk": 1,
+    "96-102501": 1,
+    "96-103702": 1,
+    "96-104136": 1,
+    "96-100259": 1,
+    "WM Dist#3 - S Burley Ave": 2,
+    "CTA RPM LBMM Civil ARD-BER III": 1,
+    "CTA RLE - AE Potholing": 1
+   },
+   "by_type": {
+    "DOT Periodic Process / Signs": 8,
+    "DOT Periodic Process / Driveway Constr or Removal": 53,
+    "DOT Occupy the Pub. ROW Permit / Work Vehicles, Temporary Driveways, Barricades, Operating Equipment": 97,
+    "DOT Periodic Process / Small Cell": 5,
+    "DOT Public Way Opening / Opening in the Public Way": 91,
+    "DOT Public Way Opening / Soil Boring / Well Monitoring": 3,
+    "DOT Occupy the Pub. ROW Permit / Utility Pole Storage": 1,
+    "DOT Dumpster Permit / None": 1,
+    "DOT Public Way Opening / Work in Advance": 2,
+    "DOT Truck Routing Permits / Overweight/Oversized Vehicle": 3,
+    "DOT Occupy the Pub. ROW Permit / Moving Van Parking": 2,
+    "DOT Driveway Install Permit / None": 2
+   },
+   "by_closure": {
+    "null": 76,
+    "NA": 57,
+    "None": 62,
+    "Full": 23,
+    "Curblane": 33,
+    "Partial": 9,
+    "Sidewalk": 8
+   },
+   "by_status": {
+    "Open": 238,
+    "Closed": 30
+   },
+   "by_ward": {
+    "null": 72,
+    "9": 31,
+    "21": 38,
+    "34": 7,
+    "42": 4,
+    "48": 44,
+    "27": 3,
+    "29": 3,
+    "13": 5,
+    "28": 1,
+    "4": 5,
+    "3": 2,
+    "1": 3,
+    "44": 11,
+    "47": 2,
+    "32": 3,
+    "35": 1,
+    "10": 10,
+    "19": 2,
+    "2": 3,
+    "41": 3,
+    "46": 11,
+    "23": 1,
+    "43": 2,
+    "49": 1
+   },
+   "with_point": 196,
+   "with_range": 185,
+   "on_drawn_arterial": 38,
+   "on_drawn_by_closure": {
+    "None": 15,
+    "NA": 10,
+    "Curblane": 11,
+    "Partial": 1,
+    "Sidewalk": 1
+   },
+   "on_drawn_streets": {
+    "N JEFFERSON ST": 4,
+    "N CLARK ST": 3,
+    "W FOSTER AVE": 4,
+    "W CHICAGO AVE": 1,
+    "W 103RD ST": 2,
+    "N HARLEM AVE": 4,
+    "E 130TH ST": 1,
+    "S DEARBORN ST": 1,
+    "W BELMONT AVE": 1,
+    "N WESTERN AVE": 2,
+    "E CERMAK RD": 1,
+    "W MADISON ST": 1,
+    "N BROADWAY": 2,
+    "W 111TH ST": 3,
+    "W 63RD ST": 1,
+    "S HARLEM AVE": 1,
+    "W LAWRENCE AVE": 3,
+    "N CLYBOURN AVE": 1,
+    "N ELSTON AVE": 1,
+    "W HIGGINS AVE": 1
+   },
+   "off_drawn_streets": [
+    [
+     "",
+     72
+    ],
+    [
+     "S PRINCETON AVE",
+     7
+    ],
+    [
+     "S YALE AVE",
+     6
+    ],
+    [
+     "N BROADWAY",
+     6
+    ],
+    [
+     "W 113TH ST",
+     5
+    ],
+    [
+     "W 109TH ST",
+     5
+    ],
+    [
+     "W BRYN MAWR AVE",
+     5
+    ],
+    [
+     "S BURLEY AVE",
+     5
+    ],
+    [
+     "W WINONA ST",
+     4
+    ],
+    [
+     "N SHEFFIELD AVE",
+     4
+    ],
+    [
+     "W CATALPA AVE",
+     4
+    ],
+    [
+     "W ARDMORE AVE",
+     4
+    ],
+    [
+     "W AINSLIE ST",
+     4
+    ],
+    [
+     "W BALMORAL AVE",
+     4
+    ],
+    [
+     "W HOLLYWOOD AVE",
+     4
+    ],
+    [
+     "W 114TH ST",
+     3
+    ],
+    [
+     "N ORLEANS ST",
+     3
+    ],
+    [
+     "W 104TH ST",
+     3
+    ],
+    [
+     "S COTTAGE GROVE AVE",
+     3
+    ],
+    [
+     "W CHARLESTON ST",
+     3
+    ],
+    [
+     "W 115TH ST",
+     3
+    ],
+    [
+     "W ARGYLE ST",
+     3
+    ],
+    [
+     "W BERWYN AVE",
+     3
+    ],
+    [
+     "N WINTHROP AVE",
+     3
+    ],
+    [
+     "S PERRY AVE",
+     2
+    ],
+    [
+     "W 110TH ST",
+     2
+    ],
+    [
+     "S HARLEM AVE",
+     2
+    ],
+    [
+     "W 112TH PL",
+     2
+    ],
+    [
+     "W VAN BUREN ST",
+     2
+    ],
+    [
+     "S EGGLESTON AVE",
+     2
+    ],
+    [
+     "W ADDISON ST",
+     2
+    ],
+    [
+     "S STATE ST",
+     2
+    ],
+    [
+     "E 92ND ST",
+     2
+    ],
+    [
+     "S CHARLES ST",
+     2
+    ],
+    [
+     "W WAVELAND AVE",
+     2
+    ],
+    [
+     "W LELAND AVE",
+     2
+    ],
+    [
+     "W 112TH ST",
+     2
+    ],
+    [
+     "W 109TH PL",
+     2
+    ],
+    [
+     "W 105TH ST",
+     2
+    ],
+    [
+     "W 103RD PL",
+     2
+    ]
+   ]
+  }
+ }
+}

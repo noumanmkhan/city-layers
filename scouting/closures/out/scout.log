@@ -1,0 +1,315 @@
+Toronto: road restrictions feed
+  error JSONDecodeError('Invalid \\escape: line 1 column 834440 (char 834439)')
+Chicago: CDOT permits
+  active rows: [{'n': '56685'}]
+  transit-related rows: 268
+{
+ "run_utc": "2026-10-10T11:30:00+00:00",
+ "toronto": {
+  "error": "JSONDecodeError('Invalid \\\\escape: line 1 column 834440 (char 834439)')"
+ },
+ "chicago": {
+  "active_window": [
+   "2026-10-03",
+   "2026-12-09"
+  ],
+  "active_rows_citywide": [
+   {
+    "n": "56685"
+   }
+  ],
+  "cors": {
+   "Access-Control-Allow-Origin": "*"
+  },
+  "citywide_streetclosure_values": [
+   {
+    "n": "39429"
+   },
+   {
+    "streetclosure": "Curblane",
+    "n": "5458"
+   },
+   {
+    "streetclosure": "NA",
+    "n": "5151"
+   },
+   {
+    "streetclosure": "None",
+    "n": "3310"
+   },
+   {
+    "streetclosure": "Full",
+    "n": "1409"
+   },
+   {
+    "streetclosure": "Sidewalk",
+    "n": "1350"
+   },
+   {
+    "streetclosure": "Partial",
+    "n": "574"
+   },
+   {
+    "streetclosure": "Intermitte",
+    "n": "4"
+   }
+  ],
+  "citywide_status_values": [
+   {
+    "applicationstatus": "Open",
+    "n": "53877"
+   },
+   {
+    "applicationstatus": "Closed",
+    "n": "2808"
+   }
+  ],
+  "top_applicants_citywide": [
+   {
+    "primarycontactlast": "ComED North*",
+    "n": "2722"
+   },
+   {
+    "primarycontactlast": "Peoples Gas*",
+    "n": "2039"
+   },
+   {
+    "primarycontactlast": "SEVEN-D CONSTRUCTION CO*",
+    "n": "2024"
+   },
+   {
+    "primarycontactlast": "DWM*",
+    "n": "1705"
+   },
+   {
+    "primarycontactlast": "CROWN CASTLE NG CENTRAL LLC",
+    "n": "1361"
+   },
+   {
+    "primarycontactlast": "AT&T (SBC IL)*",
+    "n": "1008"
+   },
+   {
+    "primarycontactlast": "SUMIT CONSTRUCTION CO INC*",
+    "n": "889"
+   },
+   {
+    "primarycontactlast": "VERIZON COMMUNICATIONS INC.",
+    "n": "884"
+   },
+   {
+    "primarycontactlast": "PAN OCEANIC ENGINEERING CO., INC.*",
+    "n": "731"
+   },
+   {
+    "primarycontactlast": "G & V CONST CO INC (SL)*",
+    "n": "568"
+   },
+   {
+    "primarycontactlast": "RELIABLE CONTRACTING & EQUIPMENT*",
+    "n": "431"
+   },
+   {
+    "primarycontactlast": "BRACKENBOX INC*",
+    "n": "414"
+   },
+   {
+    "primarycontactlast": "CHICAGO PUBLIC SCHOOLS",
+    "n": "406"
+   },
+   {
+    "primarycontactlast": "CITYWIDE DISPOSAL INC*",
+    "n": "390"
+   },
+   {
+    "primarycontactlast": "CDOT - In-House Construction",
+    "n": "385"
+   },
+   {
+    "primarycontactlast": "COMCAST OF CHICAGO INC*",
+    "n": "379"
+   },
+   {
+    "primarycontactlast": "CITY LIGHTS LTD*",
+    "n": "354"
+   },
+   {
+    "primarycontactlast": "UNITED ENTERPRISE  (SL)*",
+    "n": "327"
+   },
+   {
+    "primarycontactlast": "CITY ESCAPE GARDEN AND DESIGN, LLC*",
+    "n": "316"
+   },
+   {
+    "primarycontactlast": "JOHN BURNS CONSTRUCTION CO.*",
+    "n": "309"
+   },
+   {
+    "primarycontactlast": "MQ CONSTRUCTION CO*",
+    "n": "257"
+   },
+   {
+    "primarycontactlast": "INLINER SOLUTIONS, LLC*",
+    "n": "244"
+   },
+   {
+    "primarycontactlast": "BIGANE PAVING CO (CONSTRUCTION)*",
+    "n": "225"
+   },
+   {
+    "primarycontactlast": "MILLENNIUM CONTRACTING CORP*",
+    "n": "219"
+   },
+   {
+    "primarycontactlast": "CDOT-Sign Management",
+    "n": "186"
+   },
+   {
+    "primarycontactlast": "MCI METRO ACCESS TRANSMISSION SERVICES LLC",
+    "n": "186"
+   },
+   {
+    "primarycontactlast": "CROWN CASTLE FIBER LLC*",
+    "n": "183"
+   },
+   {
+    "primarycontactlast": "CROSSTOWN FIBER*",
+    "n": "149"
+   },
+   {
+    "primarycontactlast": "CHICAGO SCAFFOLDING*",
+    "n": "147"
+   },
+   {
+    "primarycontactlast": "UNITED SCAFFOLDING INC*",
+    "n": "146"
+   },
+   {
+    "primarycontactlast": "RAVENSWOOD DISPOSAL SERVICE INC*",
+    "n": "141"
+   },
+   {
+    "primarycontactlast": "WALSH CONSTRUCTION COMPANY II, LLC*",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "CONTRACTORS ACCESS***",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "PLUMBING PROFESSIONALS CO*",
+    "n": "128"
+   },
+   {
+    "primarycontactlast": "CHICAGO  PUBLIC  SCHOOLS",
+    "n": "124"
+   },
+   {
+    "primarycontactlast": "CDOT - Division of Electrical Operations",
+    "n": "122"
+   },
+   {
+    "primarycontactlast": "TOMORROW GREENWAY LLC, D/B/A GREENWAY RECYCLING SE",
+    "n": "119"
+   },
+   {
+    "primarycontactlast": "LAKESHORE RECYCLING SYSTEMS, INC (LRS HOLDINGS)*",
+    "n": "105"
+   },
+   {
+    "primarycontactlast": "MOBILITIE LLC",
+    "n": "104"
+   },
+   {
+    "primarycontactlast": "CAPITOL CEMENT CO INC*",
+    "n": "102"
+   },
+   {
+    "primarycontactlast": "ECONOMY DISPOSAL",
+    "n": "99"
+   },
+   {
+    "primarycontactlast": "PRIME SCAFFOLD INC*",
+    "n": "97"
+   },
+   {
+    "primarycontactlast": "TRI-STATE DISPOSAL INC*",
+    "n": "94"
+   },
+   {
+    "primarycontactlast": "OPEN 4 BUSINESS PRODUCTIONS, LLC",
+    "n": "93"
+   },
+   {
+    "primarycontactlast": "D & P CONSTRUCTION CO INC***",
+    "n": "87"
+   },
+   {
+    "primarycontactlast": "COMMONWEALTH EDISON CO",
+    "n": "71"
+   },
+   {
+    "primarycontactlast": "BAY CRANE MIDWEST LLC",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "F.H. PASCHEN, S.N. NIELSEN* & ASSOC., LLC*",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "AA SCAFFOLD XPRESS INC*",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "CITY OF CHICAGO",
+    "n": "70"
+   },
+   {
+    "primarycontactlast": "PRACTICAL PLUMBING, LLC*",
+    "n": "58"
+   },
+   {
+    "primarycontactlast": "SBC  ILLINOIS",
+    "n": "58"
+   },
+   {
+    "primarycontactlast": "CHICAGO HOUSING AUTHORITY",
+    "n": "55"
+   },
+   {
+    "primarycontactlast": "B & T UNDERGROUND*",
+    "n": "54"
+   },
+   {
+    "primarycontactlast": "ALLIED WASTE TRANSPORTATION INC DBA REPUBLIC SERV*",
+    "n": "53"
+   },
+   {
+    "primarycontactlast": "WATERMAX PLUMBING INC*",
+    "n": "51"
+   },
+   {
+    "primarycontactlast": "LEVEL 3 COMMUNICATIONS DBA LUMEN*",
+    "n": "50"
+   },
+   {
+    "primarycontactlast": "CATHOLIC BISHOP OF CHICAGO",
+    "n": "48"
+   },
+   {
+    "primarycontactlast": "JAM PRODUCTIONS LTD*",
+    "n": "48"
+   },
+   {
+    "primarycontactlast": "GSG CONSULTANTS, INC.*",
+    "n": "47"
+   },
+   {
+    "primarycontactlast": "INDEPENDENT RECYCLING SERVICES*",
+    "n": "46"
+   },
+   {
+    "primarycontactlast": "CHICAGO PARK DISTRICT",
+    "n": "45"
+ 
