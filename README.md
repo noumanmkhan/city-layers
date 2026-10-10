@@ -38,6 +38,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
 | GO Transit trains | 7 lines<br>+ UP Express | ~70 stations, Metrolinx<br>line colours |
+| Transit under construction | 4 lines | Ontario Line, Line 2 East and<br>Eglinton West extensions,<br>Hazel McCallion Line (GTA view) |
+| Road closures | Daily | Closures and lane restrictions from<br>transit and GO construction |
 
 **Universities, colleges and hospitals:** three toggles under Landmarks, off by default, show how these are laid out across the city. They follow fixed rules rather than listing everything: universities are public or nonprofit, one point per campus; colleges are public only, so no private career colleges and no public-private partnership campuses (a public college's name on a campus run by a private company, whose students Ontario cut off from post-graduation work permits in 2024); hospitals are Ontario public hospitals plus OHIP-funded ones like Shouldice, with a heavier ring for an emergency department. Chicago applies the same rules from the federal IPEDS and CMS directories: universities with 1,000 or more students, the seven City Colleges, and public or nonprofit hospitals with an ER (two Prime Healthcare hospitals that turned for-profit in 2025 are left out). Names only: no ratings, rankings or wait times.
 
@@ -101,6 +103,8 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 **Keeping representatives current:** a GitHub Action runs every Monday, reads the current members straight from the City, the Legislative Assembly and the House of Commons, and republishes the site only if something changed, so by-elections and the new council after an election show up within a week. Names come from the same pages they link to. Open North's representatives data was tried first and dropped: it still listed an MP six months after her by-election.
 
+**Transit under construction and road closures:** lines being built are drawn dashed in their future colour, and nested under them is the one layer on the map that changes every day: road closures and lane restrictions caused by that construction. A GitHub Action runs just after midnight Eastern, reads Toronto's live Road Restrictions feed (permits filed by Metrolinx and the consortiums building its lines) and Chicago's CDOT permits (those naming the Red Line Extension or the Red/Purple rebuild), ties each permit to the nearest line being built or upgraded, and republishes. Arterials always show; full closures of side streets appear when zoomed in, since that's where most actual closures are (the streets crossing a new line). Tapping one gives the hours and the permit dates, labelled as permit dates: permits get padded and renewed, so they aren't a forecast of when a road reopens.
+
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
 
 ## Chicago Layers
@@ -123,6 +127,8 @@ The second city runs on the same engine with its own data and config (`cities/ch
 | Expressways | 11 in Chicago | Kennedy, Dan Ryan, Eisenhower,<br>Stevenson, Lake Shore Drive |
 | Metra | 11 lines | From four downtown terminals |
 | The 'L' | 8 lines, 144 stations | CTA rapid transit |
+| Transit under construction | 1 line | Red Line Extension, 95th to 130th Street |
+| Street closures | Daily | From the Red Line Extension and<br>the Red/Purple rebuild |
 
 The community area lens uses the American Community Survey (2020–2024 five-year estimates): Census tracts are grouped into community areas, and median home values and rents are read from the summed price brackets. Its tiers use the same cut-offs as Toronto's, so the two maps read alike. In the Chicagoland view, *Focus on a county* does the same for the seven Illinois counties and Lake and Porter in Indiana, using the Census Bureau's county lines: pick DuPage and its 29 towns are outlined, labelled and listed. Chicagoland residents tend to place themselves by county first, so this came straight from a Chicagoan's feedback. The suburban lens works the same way in the Chicagoland view, timed to State & Madison, the zero point of Chicago's address grid, from about 5,300 points; unincorporated county land stays grey but still gets a time on the card. Representatives are the alderperson, state representative, state senator and member of Congress, refreshed weekly from the City's data portal, Open States and the Clerk of the House. The Chicago Board of Education's 20 districts, on the ballot for the first time as a fully elected board on November 3, 2026, are a layer too, from the map the legislature enacted in 2024 (the City's portal doesn't carry it). The card names the spot's district and lists its candidates and the citywide president race from the election board's official candidate list; from election night it names who leads the count, and the winner once the board proclaims the results.
 
@@ -170,6 +176,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - There's no detailed street basemap: the map draws main streets, highways and transit, but not every local street. That's on purpose, to keep it readable; for street-level detail, use Google Maps or OpenStreetMap.
 - The neighbourhood lens uses the 2021 Census, so prices are a few years old, and commuting was counted in May 2021, during the pandemic, when transit use was unusually low. The tiers are relative to the rest of Toronto, which is what they're meant to show.
 - Times to Union come from published schedules, not real-world delays, and are for one destination. There's no driving time on purpose: free routing tools assume empty roads, which badly understates a Toronto rush hour.
+- Road closures are a daily snapshot of permits, not live traffic: work can finish early, run late or be renewed, and utility work done for a transit project but filed by the utility (Toronto Hydro, Enbridge) isn't included. Lines under construction show only once OpenStreetMap maps them (Yonge North isn't yet).
 - Representatives are refreshed weekly, so for a few days after an election or by-election the card can lag. Vacant seats say so.
 - Address matching depends on OpenStreetMap's address coverage, which is good in Toronto but not complete. The free Nominatim service also asks for no more than one search per second, which the page enforces.
 - Chicago: the sides are a convention, not an official boundary, and the main streets come from OpenStreetMap plus a hand-kept list of the mile-grid arterials and diagonals. Times to the Loop come from published schedules, like Toronto's times to Union.
@@ -189,6 +196,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Suburban drive times (both cities) routed with [OSRM](https://project-osrm.org/) on © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors' roads (ODbL).
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Skyscrapers (both cities) from Wikipedia's "List of tallest buildings in Toronto" and "…in Chicago" ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)); addresses of towers under construction placed with OpenStreetMap's Nominatim.
+- Road closures from the City of Toronto's [Road Restrictions](https://open.toronto.ca/dataset/road-restrictions/) live feed (Open Government Licence – Toronto); lines under construction © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL).
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario, Lake Simcoe and Lake Scugog shorelines around the GTA from OpenStreetMap; lakes farther out from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
 Chicago:
@@ -198,5 +206,6 @@ Chicago:
 - [Metra GTFS](https://metra.com/developers) for Metra lines and stations.
 - Illinois legislators from [Open States](https://openstates.org/) (public domain); members of Congress from the [Clerk of the U.S. House](https://clerk.house.gov/).
 - Streets and expressways © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
+- Street closures from CDOT's [Transportation Department Permits](https://data.cityofchicago.org/d/pubx-yq2d) (City of Chicago Data Portal); the Red Line Extension's line © OpenStreetMap contributors (ODbL).
 
 `cities/toronto/SOURCES.md` and `cities/chicago/SOURCES.md` list the exact queries used to fetch the raw data. The code is MIT-licensed (see `LICENSE`). The data stays under its original licences.

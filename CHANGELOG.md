@@ -3,6 +3,21 @@
 ## Since 1.1
 
 ### Both cities
+- **Transit under construction**: a new layer after Subway & LRT / the 'L', off by default. Dashed
+  lines in the future line's colour with hollow stations: the Ontario Line, the Line 2 East and
+  Eglinton West extensions and the Hazel McCallion Line (regional view) in Toronto; the Red Line
+  Extension in Chicago. Tap a line or station for who builds it, its length and (where the owner
+  has published one) the expected opening. Lines come from OpenStreetMap, filtered by a curated
+  list; Yonge North isn't mapped there yet, so it's left off.
+- **Road closures** nested under it, refreshed daily just after midnight Eastern: closures (red) and
+  lane restrictions (amber) from transit construction, including GO Expansion in Toronto and the
+  Red/Purple rebuild in Chicago. Arterials show from zoom 12 as a small diamond, and as the stretch
+  itself when zoomed in; full closures of side streets appear from zoom 15. Tap for the hours, the
+  permit dates, the project and the permit holder. Toronto from the City's live Road Restrictions
+  feed, Chicago from CDOT permits.
+- For the iOS app: new files `construction.geojson` and `closures.geojson` (optional), new layer
+  kinds `construction` and `closures`, `optional` on a layer; contract section 3. Additive, schema
+  stays 1.
 - **Skyscrapers**: a toggle under Landmarks with every building 150 m and taller (Toronto 117 plus
   13 under construction, Chicago 138 plus 1), from Wikipedia's tallest-buildings lists. A square
   badge per tower: its glyph and colour show use (residential, office or hotel, mixed); hollow and

@@ -83,7 +83,11 @@
       {"id": "go", "kind": "rail", "files": ["go_lines", "go_stations", "go_lines_416"], "name": "GO Transit trains", "note": "7 GO lines and UP Express to Pearson", "on": true,
        "hover": "{name} line · Union – {to}", "lineHover": {"UP": "{name} (Union – Pearson)"}},
       {"id": "subway", "kind": "metro", "files": ["subway_lines", "subway_stations"], "name": "Subway & LRT", "note": "Lines 1, 2, 4, 5 and 6", "on": true,
-       "stationHover": "{name} · Line {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}}
+       "stationHover": "{name} · Line {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}},
+      {"id": "build", "kind": "construction", "file": "construction", "name": "Transit under construction", "note": "Ontario Line, Line 2 and Line 5 extensions, Hazel McCallion Line",
+       "ucText": "Under construction", "linkText": "Project page"},
+      {"id": "closures", "kind": "closures", "under": "build", "file": "closures", "optional": true, "name": "Road closures", "note": "From transit and GO construction; side streets when zoomed in",
+       "tz": "America/Toronto", "closedText": "Closed", "narrowedText": "Lanes narrowed", "bothText": "both directions", "startsText": "Starts {date}", "untilText": "Permit to {date}", "longText": "long-term", "allDayText": "Around the clock", "whenLabel": "When", "hoursLabel": "Hours", "projectLabel": "For", "whoLabel": "Permit holder", "fineText": "Dates are permit dates, not a forecast of when the road reopens. Data as of {date}.", "asofText": "as of {date}"}
     ]]
   ],
 

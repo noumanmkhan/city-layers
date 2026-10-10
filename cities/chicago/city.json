@@ -74,7 +74,11 @@
       {"id": "metra", "kind": "rail", "files": ["metra_lines", "metra_stations", "metra_lines_inner"], "name": "Metra trains", "note": "11 commuter lines from four downtown stations", "on": true,
        "hover": "{name} · downtown – {to}"},
       {"id": "cta", "kind": "metro", "files": ["cta_lines", "cta_stations"], "name": "The ‘L’", "note": "CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines", "on": true,
-       "stationHover": "{name} · {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}}
+       "stationHover": "{name} · {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}},
+      {"id": "build", "kind": "construction", "file": "construction", "name": "Transit under construction", "note": "Red Line Extension, 95th to 130th Street",
+       "ucText": "Under construction", "linkText": "Project page"},
+      {"id": "closures", "kind": "closures", "under": "build", "file": "closures", "optional": true, "name": "Street closures", "note": "From the Red Line Extension and Red/Purple rebuild; side streets when zoomed in",
+       "tz": "America/Chicago", "closedText": "Closed", "narrowedText": "Lanes narrowed", "bothText": "both directions", "startsText": "Starts {date}", "untilText": "Permit to {date}", "longText": "long-term", "allDayText": "Around the clock", "whenLabel": "When", "hoursLabel": "Hours", "projectLabel": "For", "whoLabel": "Permit holder", "fineText": "Dates are permit dates, not a forecast of when the road reopens. Data as of {date}.", "asofText": "as of {date}"}
     ]]
   ],
 

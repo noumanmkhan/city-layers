@@ -430,9 +430,86 @@ const KINDS = {
     g._names = names;
     return g;
   },
+  // Lines being built: dashed in the line's colour over a casing, hollow stations, names from zoom 13.
+  // Tap a line or station for what it is, who builds it and when it's due.
+  construction: (it, fc) => {
+    const g = L.layerGroup();
+    const w = () => { const z = map.getZoom(); return z < 11 ? 2.5 : z < 13 ? 3.5 : 5; };
+    const lines = fc.features.filter(f => f.properties.part !== 'station'), stns = fc.features.filter(f => f.properties.part === 'station');
+    const byId = {}; lines.forEach(f => { byId[f.properties.id] = f.properties; });
+    const cas = L.geoJSON({type:'FeatureCollection', features: lines}, {pane:'transit', interactive:false, style: () => ({className:'cx-case', weight: w() + 3})});
+    const core = L.geoJSON({type:'FeatureCollection', features: lines}, {pane:'transit', style: f => ({className:'cx-line', color: f.properties.color, weight: w(), dashArray: '7 6'}),
+      onEachFeature: (f, lyr) => { hoverTip(lyr, esc(f.properties.name) + ' · ' + esc(it.ucText || 'under construction')); lyr.on('click', e => cxPopup(it, f.properties, e.latlng)); }});
+    map.on('zoomend', () => { cas.eachLayer(l => l.setStyle({weight: w() + 3})); core.eachLayer(l => l.setStyle({weight: w()})); });
+    g.addLayer(cas); g.addLayer(core);
+    stns.forEach(f => {
+      const p = f.properties, line = byId[p.id] || {};
+      const m = L.circleMarker(ll(f.geometry.coordinates), {pane:'pts', radius: 4.5, className:'cx-stn', color: line.color});
+      hoverTip(m, esc(p.name) + ' · ' + esc(line.short || line.name || ''));
+      m.on('click', e => cxPopup(it, line, e.latlng, p.name));
+      g.addLayer(m);
+      g.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6, 0], className:'lbl lbl-stn lbl-cx', interactive:false}).setLatLng(ll(f.geometry.coordinates)).setContent(esc(p.name)));
+    });
+    return g;
+  },
+  // Road closures and lane restrictions from transit construction (refreshed daily). Arterials at any
+  // zoom; full closures of local streets from zoom 15. Permits that have ended are hidden; ones starting
+  // within the week are drawn faint. Dates are permit dates, not a forecast of when a road reopens.
+  closures: (it, fc) => {
+    const g = L.layerGroup(), today = cityToday(it.tz);
+    const w = () => { const z = map.getZoom(); return z < 13 ? 4 : z < 15 ? 6 : 8; };
+    const shown = fc.features.filter(f => (f.properties.end || '9999').slice(0, 10) >= today);
+    const lyrs = [];
+    shown.forEach(f => {
+      const p = f.properties, soon = (p.start || '').slice(0, 10) > today;
+      const cls = 'cl ' + p.kind + (p.art ? '' : ' local') + (soon ? ' soon' : '');
+      const lyr = f.geometry.type === 'Point'
+        ? L.circleMarker(ll(f.geometry.coordinates), {pane:'transit', radius: 6, className: cls})
+        : L.polyline(f.geometry.coordinates.map(ll), {pane:'transit', className: cls, weight: w()});
+      // Most permits cover a block or less, too short to see zoomed out: a dot marks each one until zoom 15.
+      const c = f.geometry.coordinates, mid = f.geometry.type === 'Point' ? null : c[Math.floor((c.length - 1) / 2)];
+      const dot = mid && L.marker(ll(c.length === 2 ? [(c[0][0] + c[1][0]) / 2, (c[0][1] + c[1][1]) / 2] : mid), {pane:'pts', keyboard:false, riseOnHover:true,
+        icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="cl-pin ' + p.kind + (p.art ? '' : ' local') + (soon ? ' soon' : '') + '"></span>'})});
+      const tip = esc(p.street) + ' · ' + esc(p.kind === 'closed' ? it.closedText : it.narrowedText) + (soon ? ' · ' + esc(fill(it.startsText, {date: niceDate(p.start)})) : '');
+      [lyr, dot].filter(Boolean).forEach(x => { hoverTip(x, tip); x.on('click', e => clPopup(it, p, e.latlng, soon, fc.asof)); g.addLayer(x); });
+      if (f.geometry.type !== 'Point') lyrs.push(lyr);
+    });
+    map.on('zoomend', () => lyrs.forEach(l => l.setStyle({weight: w()})));
+    // The panel row says how fresh the data is.
+    const row = document.getElementById('lyr-' + it.id), note = row && row.closest('label').querySelector('.tx span');
+    if (note && fc.asof) note.textContent = it.note + ' · ' + fill(it.asofText || 'as of {date}', {date: niceDate(fc.asof)});
+    return g;
+  },
 };
+// Today's date (YYYY-MM-DD) where the city is, so a permit ending today still shows until midnight there.
+function cityToday(tz){ try { return new Date().toLocaleDateString('en-CA', {timeZone: tz}); } catch (e) { return new Date().toISOString().slice(0, 10); } }
+function niceDate(s, year){
+  if (!s) return '';
+  const d = new Date(s.slice(0, 10) + 'T12:00:00'), y = d.getFullYear() !== new Date().getFullYear();
+  return d.toLocaleDateString(CITY.locale, {month:'short', day:'numeric', ...(y || year ? {year:'numeric'} : {})});
+}
+function cxPopup(it, p, latlng, station){
+  const rows = [p.owner && ['Built by', p.owner], p.opens && ['Opening', p.opens], p.length && ['Length', p.length]].filter(Boolean);
+  L.popup({className:'info-pop', maxWidth: 280, autoPanPadding:[24, 24]}).setLatLng(latlng).setContent(
+    '<b>' + esc(station ? station : p.name) + '</b><small>' + esc(station ? (p.name || '') + ' · ' : '') + esc(it.ucText || 'Under construction') + '</small>' +
+    (p.about ? '<p>' + esc(p.about) + '</p>' : '') +
+    rows.map(([k, v]) => '<div class="kv"><span>' + esc(k) + '</span><span>' + esc(v) + '</span></div>').join('') +
+    (p.link ? '<a href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(it.linkText || 'Project page') + '</a>' : '')).openOn(map);
+}
+function clPopup(it, p, latlng, soon, asof){
+  const long = p.end && p.end.slice(0, 4) - new Date().getFullYear() >= 2;
+  const when = (soon ? fill(it.startsText, {date: niceDate(p.start)}) + ' · ' : '') + fill(it.untilText, {date: niceDate(p.end, long)}) + (long ? ' · ' + it.longText : '');
+  const hrs = p.hours === '24h' ? it.allDayText : p.hours ? p.hours + (p.days ? ' ' + p.days : '') : '';
+  const rows = [[it.whenLabel, when], hrs && [it.hoursLabel, hrs], [it.projectLabel, p.name], p.who && [it.whoLabel, p.who]].filter(Boolean);
+  L.popup({className:'info-pop', maxWidth: 290, autoPanPadding:[24, 24]}).setLatLng(latlng).setContent(
+    '<b>' + esc(p.street) + '</b><small class="cl-k ' + p.kind + '">' + esc(p.kind === 'closed' ? it.closedText : it.narrowedText) + (p.both && p.kind !== 'closed' ? ' · ' + esc(it.bothText) : '') + '</small>' +
+    (p.extent && p.extent !== p.street ? '<p>' + esc(p.extent) + '</p>' : '') +
+    rows.map(([k, v]) => '<div class="kv"><span>' + esc(k) + '</span><span>' + esc(v) + '</span></div>').join('') +
+    (p.desc ? '<p class="desc">' + esc(p.desc) + '</p>' : '') +
+    '<p class="fine">' + esc(fill(it.fineText, {date: niceDate(asof)})) + '</p>').openOn(map);
+}
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13, places: 14, towers: 14.5})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -1417,7 +1494,9 @@ renderEmpty('Loading map data…');
 const files = ['base', 'regions'];
 LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
-Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
+// Files of layers marked "optional" (e.g. daily closures not fetched yet) load as empty instead of failing the map.
+const OPTIONAL = new Set(LAYERS.filter(it => it.optional).flatMap(it => [].concat(it.file || it.files || [])));
+Promise.all(files.map(f => get(f).catch(e => { if (OPTIONAL.has(f)) return {type:'FeatureCollection', features:[]}; throw e; }).then(d => { loaded[f] = d; }))
   .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
     CITY.regionPlaces ? get(CITY.regionPlaces.file).then(d => { data.regionPlaces = d; }).catch(() => { data.regionPlaces = null; }) : null,
     CITY.card.nearby ? get(CITY.card.nearby.file).then(d => { data.nearby = d; }).catch(() => { data.nearby = null; }) : null,
