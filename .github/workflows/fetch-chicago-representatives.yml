@@ -1,11 +1,19 @@
 name: Refresh Chicago representatives
 # Weekly: fetches Chicago's current alderpersons (City Data Portal), Illinois legislators (Open States)
-# and members of Congress (Clerk of the House), and rebuilds docs/chicago/data/representatives.json. Commits to main only when a
+# and members of Congress (Clerk of the House), plus Board of Education results from the Chicago Board
+# of Elections around the November 3, 2026 election, and rebuilds docs/chicago/data/representatives.json. Commits to main only when a
 # name, party or link changed (a by-election, a new council after an election); GitHub Pages
 # then republishes the site. Can also be run by hand from the Actions tab.
 on:
   schedule:
     - cron: '37 9 * * 1'   # Mondays 09:37 UTC
+    # Around the November 3 election the board's results pages also feed the school board rows:
+    # hourly on election night (polls close 7 pm Chicago time, 01:00 UTC), then daily until the
+    # results are proclaimed (about three weeks later). These dates repeat yearly; off-season runs
+    # find no results page and change nothing.
+    - cron: '7 1-8 4 11 *'
+    - cron: '37 15 4-30 11 *'
+    - cron: '37 15 1-10 12 *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,12 +30,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 cities/chicago/fetch_representatives.py
+      - run: NO_PROBE=1 python3 cities/chicago/fetch_school_board_results.py || echo "school board results not fetched; keeping the last copy"
       - run: python3 cities/chicago/representatives.py
       - run: |
           if git diff --quiet -- docs/chicago/data/representatives.json; then echo "no changes"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
-          git add cities/chicago/raw/representatives docs/chicago/data/representatives.json
-          git commit -m "Refresh Chicago alderpersons, state legislators and members of Congress"
+          git add cities/chicago/raw/representatives cities/chicago/raw/school_board docs/chicago/data/representatives.json
+          git commit -m "Refresh Chicago alderpersons, state legislators, members of Congress and school board"
           git pull --rebase origin main
           git push origin HEAD:main

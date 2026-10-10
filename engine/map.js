@@ -429,7 +429,7 @@ CITY.groups.forEach(([title, items]) => {
       }));
       box.querySelector('#fclear').addEventListener('click', () => { clearFilters(); applyFilter(); queueHash(); });
     }
-    if (it.kind === 'boards'){
+    if (it.kind === 'boards' && it.boards.length > 1){   // one board: nothing to pick
       const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'brd-' + it.id; box.hidden = !it.on;
       box.innerHTML = '<div class="chips pick" role="radiogroup" aria-label="' + esc(it.name) + '">' + it.boards.map(([b, short, long]) =>
         '<button type="button" role="radio" data-board="' + b + '" data-layer="' + it.id + '" title="' + esc(long) + '" aria-checked="' + (b === boardPick[it.id]) + '">' + esc(short) + '</button>').join('') +
@@ -529,7 +529,7 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
-  if (kindOf(id) === 'boards'){ document.getElementById('brd-' + id).hidden = !on; if (on) setBoard(id, boardPick[id]); }
+  if (kindOf(id) === 'boards'){ const box = document.getElementById('brd-' + id); if (box) box.hidden = !on; if (on) setBoard(id, boardPick[id]); }
   if (kindOf(id) === 'suburbs'){
     document.getElementById('drvbox').hidden = !on;
     if (on && scope === 'inner') map.removeLayer(lyr);   // shown only in the regional view
@@ -646,27 +646,37 @@ function representatives(hits){
     }).join('') + trustees(hits) +
     '</dl><p>' + esc(fill(cfg.note, {date})) + (cfg.trustees && R[cfg.trustees.table] ? ' ' + esc(cfg.trustees.note) : '') + '</p></div>';
 }
-/* School board trustees: one row per board that covers the spot. Before the election the row lists the
-   candidates; once the results file names a winner (or one candidate was acclaimed), the winner, marked
-   as taking office on the start date; from that date, just the trustee. Dates come from city.json. */
+/* School board trustees: one row per board that covers the spot, plus an optional citywide seat
+   (T.citywide, e.g. a board president). Before the election the row lists the candidates; while votes
+   are counted it can name who leads (r.leader); once there is a winner (or one candidate was
+   acclaimed), the winner, marked as taking office on the start date; from that date, just the trustee.
+   Dates and wording come from city.json. */
 const isoDate = s => new Date(...s.split('-').map((v, i) => +v - (i === 1)));
 const longDate = s => isoDate(s).toLocaleDateString(CITY.locale, {month:'short', day:'numeric'});
+function trusteeRow(T, role, r, sub){
+  const today = new Date(), started = today >= isoDate(T.starts);
+  const dates = {election: longDate(T.election), starts: longDate(T.starts)};
+  let dd;
+  if (!r) dd = '<span>' + esc(sub) + '</span>';
+  else if (r.winner) dd = '<b>' + esc(r.winner) + '</b><span>' + esc(sub + (started ? '' : ' · ' + fill(r.acclaimed ? T.acclaimed : T.elected, dates))) + '</span>';
+  else if (r.leader && T.leading) dd = '<b>' + esc(r.leader) + '</b><span>' + esc(sub + ' · ' + fill(T.leading, dates)) + '</span>';
+  else {
+    const n = r.candidates.length;
+    const head = fill(today >= isoDate(T.election) ? T.counting : T.race, Object.assign({n, s: n === 1 ? '' : 's'}, dates));
+    dd = '<details class="cands"><summary>' + esc(head) + '</summary><span>' + r.candidates.map(esc).join(' · ') + '</span></details><span>' + esc(sub) + '</span>';
+  }
+  return '<dt>' + esc(role) + '</dt><dd>' + dd + '</dd>';
+}
 function trustees(hits){
   const T = CITY.card.reps.trustees, R = data.reps; if (!T || !R || !R[T.table]) return '';
   const it = LAYERS.find(l => l.id === T.layer), bh = hits[T.layer]; if (!it || !bh) return '';
-  const today = new Date(), started = today >= isoDate(T.starts);
-  const dates = {election: longDate(T.election), starts: longDate(T.starts)};
-  return it.boards.filter(([b]) => bh[b]).map(([b]) => {
-    const ctx = boardCtx(it, bh[b]), r = (R[T.table][b] || {})[String(ctx.num)], ward = fill(T.ward, ctx);
-    let dd;
-    if (!r) dd = '<span>' + esc(ward) + '</span>';
-    else if (r.winner) dd = '<b>' + esc(r.winner) + '</b><span>' + esc(ward + (started ? '' : ' · ' + fill(r.acclaimed ? T.acclaimed : T.elected, dates))) + '</span>';
-    else {
-      const head = fill(today >= isoDate(T.election) ? T.counting : T.race, Object.assign({n: r.candidates.length}, dates));
-      dd = '<details class="cands"><summary>' + esc(head) + '</summary><span>' + r.candidates.map(esc).join(' · ') + '</span></details><span>' + esc(ward) + '</span>';
-    }
-    return '<dt>' + esc(fill(T.role, ctx)) + '</dt><dd>' + dd + '</dd>';
-  }).join('');
+  const rows = it.boards.filter(([b]) => bh[b]).map(([b]) => {
+    const ctx = boardCtx(it, bh[b]);
+    return trusteeRow(T, fill(T.role, ctx), (R[T.table][b] || {})[String(ctx.num)], fill(T.ward, ctx));
+  });
+  const C = T.citywide, cb = C && (R[T.table][C.board] || {})[C.key];
+  if (cb && rows.length) rows.push(trusteeRow(T, C.role, cb, C.sub));
+  return rows.join('');
 }
 let pinName = '';
 function placePin(latlng, name){

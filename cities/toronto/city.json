@@ -148,7 +148,7 @@
       ],
       "trustees": {"layer": "school", "table": "trustees", "role": "{short} trustee", "ward": "Ward {num}[ {area}]",
         "election": "2026-10-26", "starts": "2026-11-15",
-        "race": "{n} candidates · election {election}", "counting": "{n} candidates · results to come",
+        "race": "{n} candidate[{s}] · election {election}", "counting": "{n} candidate[{s}] · results to come",
         "elected": "elected {election} · takes office {starts}", "acclaimed": "acclaimed · takes office {starts}",
         "note": "Trustee candidates and results come from the City’s election results file and are unofficial until the City Clerk certifies them."},
       "note": "Names open each person’s official page. Toronto councillors run without party labels. Checked weekly against those sites; last change {date}."

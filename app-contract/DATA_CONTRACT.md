@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (Toronto school board trustee wards: the `boards` layer kind, a School wards row and trustee rows; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -92,12 +92,13 @@ How the website's search does it, for an app that wants to match:
   `file` (one file, add `.geojson`) or `files` (several). Kinds the card tests a point against:
   `fill`, `units`, `outline`, `patches`, `districts`, and `boards` (below). The `knownas` kind is a
   point layer used by distance (step 4 below). Other kinds are map drawing only.
-- A `boards` layer (Toronto's `school`, file `school_wards`) holds several overlapping sets of
+- A `boards` layer (`school` in both cities: Toronto's file `school_wards`, Chicago's `school_board`) holds several overlapping sets of
   wards in one file, one set per school board. Each feature has `board` (an id), `num` (the
   board's ward number, a string), `area` (a ward name, French boards only, e.g. "Est"), `wards`
   (the City wards it is made of) and `lp`. The layer's `boards` lists `[id, short, long]` per board
   in display order (`["tdsb", "TDSB", "Toronto District School Board"]`); the first is the one the
-  map shows by default. Templates on this layer can use `{short}` and `{long}` as well as the
+  map shows by default. Chicago has one board (`cps`, the Chicago Board of Education; `num` "1a" …
+  "10b"), so there is nothing to pick. Templates on this layer can use `{short}` and `{long}` as well as the
   feature's fields.
 - `card`: `pills`, `facts`, `living`, `reps` (section 6).
 - `lens.file` (the profiles file) and `lens.lenses`: each has `key` (the profile field holding a
@@ -178,7 +179,7 @@ first matching feature in file order wins.
    value `r.name` linking to `r.url` (no record or no name: "Seat currently vacant"); subline
    `office.sub` filled with `{f: h.properties, r: r}`. Footer `card.reps.note` with `{date}` =
    `representatives.updated` written as a long date.
-   **Trustees** (`card.reps.trustees`, Toronto only, after the offices): skip if
+   **Trustees** (`card.reps.trustees`, after the offices): skip if
    `representatives[trustees.table]` is missing. For each board of layer `trustees.layer` with a
    hit `h` (in `boards` order): `r = representatives.trustees[board][h.num]`; label `role` filled
    from `h` plus `{short}`; `ward` = `trustees.ward` filled the same way. Value, by date (dates are
@@ -186,9 +187,14 @@ first matching feature in file order wins.
    - `r.winner` and today ≥ `starts`: the winner's name; subline `ward`.
    - `r.winner` before `starts`: the name; subline `ward` · `acclaimed` (if `r.acclaimed`) or
      `elected`, filled with `{election}` and `{starts}` as short dates ("Oct 26").
-   - No winner: `race` (before `election`) or `counting` (from `election` on), filled with
-     `{n}` = number of candidates and the dates; the candidate names (`r.candidates`) on expand;
-     subline `ward`.
+   - No winner but `r.leader` and the config has `leading` (Chicago): the leader's name; subline
+     `ward` · `leading`.
+   - Otherwise: `race` (before `election`) or `counting` (from `election` on), filled with
+     `{n}` = number of candidates, `{s}` = "s" unless n is 1 (templates write `candidate[{s}]`) and
+     the dates; the candidate names (`r.candidates`, ballot order) on expand; subline `ward`.
+   Then, if `trustees.citywide` is set ({board, key, role, sub}) and at least one board row was
+   shown: one more row, label `role`, record `representatives.trustees[board][key]` (Chicago's
+   board president), subline `sub`, same rules.
    Names are plain text (no official page yet). Append `trustees.note` to the footer.
 10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
    `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
@@ -286,6 +292,14 @@ Around the election the file is refreshed hourly on election night and daily unt
 There are no incumbent trustees in this data: TDSB's wards were redrawn for 2026, so the trustees
 in office until November 15 sat on different lines.
 
+Chicago has `trustees: {cps: {"1a": …, "10b": …, "president": {candidates, leader?, winner?}}}` for the
+Chicago Board of Education election on November 3, 2026 (20 subdistricts and a citywide president;
+terms start January 15, 2027). Candidates come from the Chicago Board of Elections' candidate list.
+Its results pages give no "all precincts reported" signal and mail ballots are counted for two weeks,
+so on and after election night only `leader` is set; `winner` appears once the board proclaims the
+results (about three weeks later). Illinois has no acclamation: a sole candidate is still on the
+ballot and shows as "1 candidate". The current board (10 elected in 2024, 11 appointed) isn't shown.
+
 ## 9. Not in this data
 
 Real-time data (weather, air quality, traffic, beach water quality, transit arrivals) is not
@@ -330,6 +344,7 @@ or `knownas`. Keep the group order and use `name` and `note` for the layer list.
 | | City wards (`wards`, outline city) | `wards` |
 | | Illinois House districts (`house`, outline state) | `il_house` |
 | | Congressional districts (`congress`, outline national) | `congress` |
+| | School board districts (`school`, boards) | `school_board` |
 | | Special Service Areas (`ssa`, patches) | `ssa` |
 
 Read these from `city.json`; the table is a snapshot, not a list to hard-code.

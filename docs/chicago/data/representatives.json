@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-07",
+"updated": "2026-10-10",
 "wards": {
 "1": {
 "name": "Daniel La Spata",
@@ -531,6 +531,136 @@
 "name": "Janice D. Schakowsky",
 "url": "https://clerk.house.gov/members/S001145",
 "party": "Democrat"
+}
+},
+"trustees": {
+"cps": {
+"1a": {
+"candidates": [
+"Ed Bannon",
+"Margie B. Luczak"
+]
+},
+"1b": {
+"candidates": [
+"Claudia Peralta",
+"Michelle N. Pierre"
+]
+},
+"2a": {
+"candidates": [
+"Ebony DeBerry",
+"Hector Morales"
+]
+},
+"2b": {
+"candidates": [
+"Deborah \"Debby\" Pope",
+"Kyna Lenhof",
+"Daniel Basco"
+]
+},
+"3a": {
+"candidates": [
+"Norma Rios Sierra",
+"Peter Gonzales"
+]
+},
+"3b": {
+"candidates": [
+"Jason Dónes",
+"Carlos A. Rivas Jr."
+]
+},
+"4a": {
+"candidates": [
+"Ellen Sherratt",
+"Karen Zaccor",
+"Angel Alvarez"
+]
+},
+"4b": {
+"candidates": [
+"Ellen Rosenfeld"
+]
+},
+"5a": {
+"candidates": [
+"LaPamela Williams",
+"Aaron \"Jitu\" Brown"
+]
+},
+"5b": {
+"candidates": [
+"Michilla \"Kyla\" Blaise",
+"Anthony Hargrove"
+]
+},
+"6a": {
+"candidates": [
+"Anusha Thotakura",
+"Isaiah White",
+"Brenda Lee Anderson"
+]
+},
+"6b": {
+"candidates": [
+"Michael L. Neal",
+"Brittany B. Kimble"
+]
+},
+"7a": {
+"candidates": [
+"Emma Lozano",
+"Jesus Ayala Jr."
+]
+},
+"7b": {
+"candidates": [
+"Yesenia Lopez",
+"Erika E. Diaz-Chavez"
+]
+},
+"8a": {
+"candidates": [
+"Angel Gutierrez"
+]
+},
+"8b": {
+"candidates": [
+"Juan Ignacio Gonzalez"
+]
+},
+"9a": {
+"candidates": [
+"Brittany R. Bailey Preston"
+]
+},
+"9b": {
+"candidates": [
+"Therese Boyle",
+"Katherine S. Dunneback"
+]
+},
+"10a": {
+"candidates": [
+"Che \"Rhymefest\" Smith"
+]
+},
+"10b": {
+"candidates": [
+"Connie Anderson",
+"Patrick C. Watson"
+]
+},
+"president": {
+"candidates": [
+"Victor P. Henderson",
+"Jessica Biggs",
+"Sendhil Revuluri",
+"Hilario Dominguez"
+]
+}
 }
 }
 }

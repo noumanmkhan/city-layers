@@ -1,0 +1,90 @@
+{
+ "source": "Chicago Board of Elections, Candidate List for the November 3, 2026 General Election",
+ "status": "Status as of 9/11/2026 3:47:15 PM",
+ "president": [
+  "Victor P. Henderson",
+  "Jessica Biggs",
+  "Sendhil Revuluri",
+  "Hilario Dominguez"
+ ],
+ "districts": {
+  "1a": [
+   "Ed Bannon",
+   "Margie B. Luczak"
+  ],
+  "1b": [
+   "Claudia Peralta",
+   "Michelle N. Pierre"
+  ],
+  "2a": [
+   "Ebony DeBerry",
+   "Hector Morales"
+  ],
+  "2b": [
+   "Deborah \"Debby\" Pope",
+   "Kyna Lenhof",
+   "Daniel Basco"
+  ],
+  "3a": [
+   "Norma Rios Sierra",
+   "Peter Gonzales"
+  ],
+  "3b": [
+   "Jason Dónes",
+   "Carlos A. Rivas Jr."
+  ],
+  "4a": [
+   "Ellen Sherratt",
+   "Karen Zaccor",
+   "Angel Alvarez"
+  ],
+  "4b": [
+   "Ellen Rosenfeld"
+  ],
+  "5a": [
+   "LaPamela Williams",
+   "Aaron \"Jitu\" Brown"
+  ],
+  "5b": [
+   "Michilla \"Kyla\" Blaise",
+   "Anthony Hargrove"
+  ],
+  "6a": [
+   "Anusha Thotakura",
+   "Isaiah White",
+   "Brenda Lee Anderson"
+  ],
+  "6b": [
+   "Michael L. Neal",
+   "Brittany B. Kimble"
+  ],
+  "7a": [
+   "Emma Lozano",
+   "Jesus Ayala Jr."
+  ],
+  "7b": [
+   "Yesenia Lopez",
+   "Erika E. Diaz-Chavez"
+  ],
+  "8a": [
+   "Angel Gutierrez"
+  ],
+  "8b": [
+   "Juan Ignacio Gonzalez"
+  ],
+  "9a": [
+   "Brittany R. Bailey Preston"
+  ],
+  "9b": [
+   "Therese Boyle",
+   "Katherine S. Dunneback"
+  ],
+  "10a": [
+   "Che \"Rhymefest\" Smith"
+  ],
+  "10b": [
+   "Connie Anderson",
+   "Patrick C. Watson"
+  ]
+ }
+}

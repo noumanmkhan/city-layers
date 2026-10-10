@@ -14,7 +14,7 @@ OUT=../../docs/chicago/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }
 npx mapshaper -i tmp/base.geojson -simplify interval=80 keep-shapes -filter-slivers min-area=20000m2 -o $OUT/base.geojson precision=0.00005 format=geojson -quiet
 simplify sides 10; simplify community_areas 10; simplify wards 10
-simplify il_house 10; simplify congress 10; simplify ssa 5; simplify heritage 3
+simplify il_house 10; simplify congress 10; simplify school_board 10; simplify ssa 5; simplify heritage 3
 for f in highways streets; do npx mapshaper -i tmp/$f.geojson -simplify interval=6 -o $OUT/$f.geojson precision=0.00001 -quiet; done
 npx mapshaper -i tmp/region_highways.geojson -simplify interval=15 -o $OUT/region_highways.geojson precision=0.00001 -quiet
 for f in metra_lines metra_lines_inner; do npx mapshaper -i tmp/$f.geojson -simplify interval=40 -o $OUT/$f.geojson precision=0.00001 -quiet; done

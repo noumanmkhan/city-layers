@@ -101,6 +101,11 @@ dump('wards', districts('wards.geojson', 'num', lambda p: {'num': int(p['ward'])
 # Illinois Senate district N is House districts 2N-1 and 2N, so one layer carries both.
 dump('il_house', districts('il_house.geojson', 'num', lambda p: {'num': int(p['BASENAME']), 'senate': (int(p['BASENAME']) + 1) // 2}))
 dump('congress', districts('congress.geojson', 'num', lambda p: {'num': int(p['BASENAME'])}))
+# Chicago Board of Education: the 20 sub-districts enacted by Public Act 103-0584 (SB 15, 2024), on the
+# November 3, 2026 ballot. One board, so every feature has board "cps"; num is "1a" ... "10b".
+if os.path.exists(R + 'school_board_20.geojson'):
+    sb = districts('school_board_20.geojson', 'num', lambda p: {'board': 'cps', 'num': p['LONGNAME'].split()[-1]})
+    dump('school_board', sorted(sb, key=lambda f: (int(f['properties']['num'][:-1]), f['properties']['num'][-1])))
 ssa = []
 for f in load('ssa.geojson')['features']:
     p = f['properties']

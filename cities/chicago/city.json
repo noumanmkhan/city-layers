@@ -57,6 +57,9 @@
       {"id": "wards", "kind": "outline", "level": "city", "file": "wards", "name": "City wards", "note": "50 wards, one alderperson each", "label": "Ward {num}", "hover": "Ward {num}"},
       {"id": "house", "kind": "outline", "level": "state", "file": "il_house", "name": "Illinois House districts", "note": "Two House districts make one Senate district", "label": "{num}", "hover": "Illinois House {num} · Senate {senate}"},
       {"id": "congress", "kind": "outline", "level": "national", "file": "congress", "name": "Congressional districts", "note": "Illinois seats in the U.S. House", "label": "IL-{num}", "hover": "Congressional district IL-{num}"},
+      {"id": "school", "kind": "boards", "file": "school_board", "name": "School board districts", "note": "20 Chicago Board of Education districts · on the Nov 3, 2026 ballot",
+       "boards": [["cps", "Board of Education", "Chicago Board of Education"]],
+       "label": "{num}", "hover": "Board of Education district {num}"},
       {"id": "ssa", "kind": "patches", "file": "ssa", "name": "Special Service Areas", "note": "Business districts funded by a local property-tax levy", "label": "{name}", "hover": "SSA #{num} · {name}"}
     ]],
     ["Getting around", [
@@ -114,7 +117,8 @@
       {"label": "City ward", "layer": "wards", "text": "Ward {num}"},
       {"label": "Illinois House", "layer": "house", "text": "District {num}"},
       {"label": "Illinois Senate", "layer": "house", "text": "District {senate}"},
-      {"label": "Congress", "layer": "congress", "text": "IL-{num}"}
+      {"label": "Congress", "layer": "congress", "text": "IL-{num}"},
+      {"label": "School board", "boards": "school", "text": "District {num}"}
     ],
     "living": {
       "hub": "To the Loop",
@@ -133,6 +137,12 @@
         {"role": "State senator", "layer": "house", "table": "senate", "key": "senate", "sub": "{r.party} · District {f.senate}"},
         {"role": "U.S. representative", "layer": "congress", "table": "congress", "key": "num", "sub": "{r.party} · IL-{f.num}"}
       ],
+      "trustees": {"layer": "school", "table": "trustees", "role": "School board member", "ward": "District {num}",
+        "election": "2026-11-03", "starts": "2027-01-15",
+        "race": "{n} candidate[{s}] · election {election}", "counting": "{n} candidate[{s}] · results to come",
+        "leading": "leads the unofficial count", "elected": "elected {election} · takes office {starts}", "acclaimed": "elected {election} · takes office {starts}",
+        "citywide": {"board": "cps", "key": "president", "role": "School board president", "sub": "Citywide"},
+        "note": "School board candidates are from the Chicago Board of Elections’ candidate list, and counts from its results pages; results are unofficial until the board proclaims them."},
       "note": "Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."
     }
   }
