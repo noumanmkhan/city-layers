@@ -39,3 +39,21 @@ Wikidata is too thin to be the main source (a quarter to two fifths of the tower
 - CN Tower stays on Landmarks; Willis Tower is in both Landmarks (Skydeck) and the list.
 - Existing Landmarks points with category "campus" (4 Toronto, 6 Chicago) overlap the Universities toggle.
 - OSM ids (and Wikidata where present) can link to footprints later if wanted; points are enough.
+
+## Built October 10, 2026 (commit 206d6bc)
+Decisions with the user: 150 m cut-off; supertall (300 m+) gets a gold ring; hollow badge until a
+tower is open for occupancy (topping out isn't enough); city-level ranks, with country/world
+records only as curated lines for culturally significant towers; Universities, Colleges, Hospitals
+and Skyscrapers indented under Landmarks, all off by default; campus points removed from Landmarks
+(nicknames moved to the Universities layer for search); Willis Tower and 875 North Michigan
+(the Hancock) stay on Landmarks too.
+- Fetch: `engine/fetch_skyscrapers.py` in Actions (`fetch-skyscrapers.yml`, monthly and on change)
+  → `cities/<city>/raw/skyscrapers/wiki.json`; towers under construction placed from addresses in
+  `cities/<city>/skyscrapers.json` via Nominatim (4800 Yonge hand-placed).
+- Build: `engine/skyscrapers.py <city>` (in run.sh) → `docs/<city>/data/skyscrapers.geojson`.
+  It prints any tower dated this year that isn't marked open or not in `skyscrapers.json` "open":
+  check those by hand (October 10: SkyTower and Kipling Station hollow; CIBC Square II, 400 King
+  West, Burke, Alias, The Charles at Church open).
+- Two curated facts were dropped because newer towers made them untrue (St. Regis Toronto "tallest
+  mixed-use in Canada", NEMA "tallest apartment building"). Aura's "tallest residential building
+  in Canada" holds until Concord Sky (300.2 m, residential) opens, expected 2027: remove it then.
