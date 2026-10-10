@@ -2,7 +2,9 @@
 into raw/institutions_osm.json, to place and check the curated list in institutions.py. Run from
 GitHub Actions (the *Fetch institutions* workflow); the sandbox can't reach Overpass.
 
-Each element keeps its name, OSM id, centre and the tags that matter for the rules (operator,
+Also fetched by name, whatever their tags: campuses and hospitals the curated list needs that OSM
+doesn't tag as amenities (George Brown's St. James campus, Centennial's Morningside campus, the Don
+Mills Surgical Unit, Toronto Grace, Casey House). Each element keeps its name, OSM id, centre and the tags that matter for the rules (operator,
 operator:type, healthcare, emergency, website)."""
 import json, os, time, urllib.parse, urllib.request
 
@@ -11,7 +13,10 @@ BBOX = (43.57, -79.65, 43.87, -79.10)   # the City of Toronto plus a margin (Sho
 ENDPOINTS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']
 QUERY = f"""
 [out:json][timeout:240];
-nwr["amenity"~"^(university|college|hospital)$"]({BBOX[0]},{BBOX[1]},{BBOX[2]},{BBOX[3]});
+(
+  nwr["amenity"~"^(university|college|hospital)$"]({BBOX[0]},{BBOX[1]},{BBOX[2]},{BBOX[3]});
+  nwr["name"~"George Brown|Centennial College|Don Mills Surgical|Toronto Grace|Casey House|Michener",i]({BBOX[0]},{BBOX[1]},{BBOX[2]},{BBOX[3]});
+);
 out tags center;
 """
 KEEP = ('name', 'alt_name', 'official_name', 'short_name', 'amenity', 'operator', 'operator:type', 'healthcare',
@@ -38,8 +43,8 @@ for el in fetch().get('elements', []):
     c = el if el.get('type') == 'node' else el.get('center')
     if not t.get('name') or not c or 'lat' not in c: continue
     els.append({'osm': el['type'][0] + str(el['id']), 'at': [round(c['lon'], 5), round(c['lat'], 5)],
-                **{k: t[k] for k in KEEP if k in t}})
+                'amenity': t.get('amenity') or 'other', **{k: t[k] for k in KEEP if k in t and k != 'amenity'}})
 els.sort(key=lambda e: (e['amenity'], e['name']))
 json.dump({'source': 'OpenStreetMap contributors (ODbL) via Overpass API', 'bbox': BBOX, 'elements': els},
           open(os.path.join(HERE, 'raw', 'institutions_osm.json'), 'w'), ensure_ascii=False, indent=0)
-print(len(els), 'elements:', {a: sum(1 for e in els if e['amenity'] == a) for a in ('university', 'college', 'hospital')})
+print(len(els), 'elements:', {a: sum(1 for e in els if e['amenity'] == a) for a in ('university', 'college', 'hospital', 'other')})
