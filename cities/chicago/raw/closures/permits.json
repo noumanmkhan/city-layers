@@ -1,0 +1,702 @@
+{
+"fetched": "2026-10-10T08:56",
+"source": "https://data.cityofchicago.org/resource/pubx-yq2d.json",
+"permits": [
+{
+"id": "DOT2278683:11100-11159:PRINCETON",
+"street": "S Princeton Ave",
+"extent": "11100\u201311159 S Princeton Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along Segment 4 of the CTA Red Line Extension project near properties owned by CTA where the future alignment of the Red Line will go.",
+"project": "RLE - Closures",
+"coords": [
+[
+-87.63046,
+41.692455
+],
+[
+-87.63046,
+41.691381
+]
+]
+},
+{
+"id": "DOT2278704:410-416:105TH",
+"street": "W 105th St",
+"extent": "410\u2013416 W 105th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.633643,
+41.703464
+],
+[
+-87.633789,
+41.703464
+]
+]
+},
+{
+"id": "DOT2278704:348-354:109TH",
+"street": "W 109th Pl",
+"extent": "348\u2013354 W 109th Pl",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.632161,
+41.695319
+],
+[
+-87.632307,
+41.695319
+]
+]
+},
+{
+"id": "DOT2278704:348-352:108TH",
+"street": "W 108th St",
+"extent": "348\u2013352 W 108th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.632337,
+41.698051
+],
+[
+-87.632434,
+41.698051
+]
+]
+},
+{
+"id": "DOT2278704:352-352:110TH",
+"street": "W 110th St",
+"extent": "352 W 110th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.632401,
+41.694406
+],
+[
+-87.632763,
+41.694406
+]
+]
+},
+{
+"id": "DOT2278704:406-408:104TH",
+"street": "W 104th St",
+"extent": "406\u2013408 W 104th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.633549,
+41.705327
+],
+[
+-87.633598,
+41.705327
+]
+]
+},
+{
+"id": "DOT2278704:400-412:103RD",
+"street": "W 103rd Pl",
+"extent": "400\u2013412 W 103rd Pl",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along the future alignment of the CTA Red Line Extension project around CTA owned properties.",
+"project": "RLE Closures",
+"coords": [
+[
+-87.633296,
+41.706226
+],
+[
+-87.633587,
+41.706226
+]
+]
+},
+{
+"id": "DOT2278683:11343-11347:YALE",
+"street": "S Yale Ave",
+"extent": "11343\u201311347 S Yale Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along Segment 4 of the CTA Red Line Extension project near properties owned by CTA where the future alignment of the Red Line will go.",
+"project": "RLE - Closures",
+"coords": [
+[
+-87.62882,
+41.687682
+],
+[
+-87.62882,
+41.687609
+]
+]
+},
+{
+"id": "DOT2278683:11317-11327:PRINCETON",
+"street": "S Princeton Ave",
+"extent": "11317\u201311327 S Princeton Ave",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along Segment 4 of the CTA Red Line Extension project near properties owned by CTA where the future alignment of the Red Line will go.",
+"project": "RLE - Closures",
+"coords": [
+[
+-87.630042,
+41.688414
+],
+[
+-87.630042,
+41.688232
+]
+]
+},
+{
+"id": "DOT2278683:310-320:113TH",
+"street": "W 113th St",
+"extent": "310\u2013320 W 113th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along Segment 4 of the CTA Red Line Extension project near properties owned by CTA where the future alignment of the Red Line will go.",
+"project": "RLE - Closures",
+"coords": [
+[
+-87.630572,
+41.688973
+],
+[
+-87.630815,
+41.688973
+]
+]
+},
+{
+"id": "DOT2278683:334-344:112TH",
+"street": "W 112th St",
+"extent": "334\u2013344 W 112th St",
+"kind": "closed",
+"both": true,
+"start": "2026-08-18",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Closures along Segment 4 of the CTA Red Line Extension project near properties owned by CTA where the future alignment of the Red Line will go.",
+"project": "RLE - Closures",
+"coords": [
+[
+-87.631616,
+41.69078
+],
+[
+-87.631858,
+41.69078
+]
+]
+},
+{
+"id": "DOT2287343:11500-12998:DOTY",
+"street": "S Doty Ave",
+"extent": "11500\u201312998 S Doty Ave",
+"kind": "closed",
+"both": true,
+"start": "2026-09-25",
+"end": "2026-10-24",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Street closure for water elevation surveys at Calumet prior to construction activities.",
+"project": "RLE - Doty Ave Closure",
+"coords": [
+[
+-87.603466,
+41.685684
+],
+[
+-87.603466,
+41.663067
+]
+]
+},
+{
+"id": "DOT2288895:11860-12808:COTTAGE GROVE",
+"street": "S Cottage Grove Ave",
+"extent": "11860\u201312808 S Cottage Grove Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-16",
+"end": "2026-11-15",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "Soil Borings, Install New UG Utility, Roadway restauration",
+"project": "CTA-RLE - Advanced Earthworks",
+"coords": [
+[
+-87.610066,
+41.67874
+],
+[
+-87.610066,
+41.661488
+]
+]
+},
+{
+"id": "DOT2289412:12500-12859:COTTAGE GROVE",
+"street": "S Cottage Grove Ave",
+"extent": "12500\u201312859 S Cottage Grove Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-16",
+"end": "2026-10-15",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "Permit in relation to the CTA RLE Project. Pole installation/RIP/Ground Rod Installation - OVHD EQUIPMENT, bucket trucks, alley closure where required. 11900 S COTTAGE GROVE AVE - CTA RED LINE - RELO- SECTION 3",
+"project": "26-0329_20039107_11900SCOTTAGE",
+"coords": [
+[
+-87.601206,
+41.667242
+],
+[
+-87.601206,
+41.660708
+]
+]
+},
+{
+"id": "DOT2289412:800-1120:130TH",
+"street": "E 130th St",
+"extent": "800\u20131120 E 130th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-16",
+"end": "2026-10-15",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "Permit in relation to the CTA RLE Project. Pole installation/RIP/Ground Rod Installation - OVHD EQUIPMENT, bucket trucks, alley closure where required. 11900 S COTTAGE GROVE AVE - CTA RED LINE - RELO- SECTION 3",
+"project": "26-0329_20039107_11900SCOTTAGE",
+"coords": [
+[
+-87.603121,
+41.659263
+],
+[
+-87.595357,
+41.659263
+]
+]
+},
+{
+"id": "DOT2289493:301-359:112TH",
+"street": "W 112th Pl",
+"extent": "301\u2013359 W 112th Pl",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-16",
+"end": "2026-10-16",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "Pole installation/RIP to support CTA RLE Project - OVHD Work / BUCKET TRUCKS - closure where required. DO - INSTALL OVERHEAD - 325 W 112TH PL - SEC 2A",
+"project": "26-0329_19482981_325W112TH PL",
+"coords": [
+[
+-87.630301,
+41.689666
+],
+[
+-87.631708,
+41.689666
+]
+]
+},
+{
+"id": "DOT2291947:301-359:112TH",
+"street": "W 112th Pl",
+"extent": "301\u2013359 W 112th Pl",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-23",
+"end": "2026-10-23",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "PROPOSED COMED DISTRIBUTION CONDUIT INSTALLATION VIA OPEN CUT TRENCH_PROPOSED 2 POLE INSTALLATIONS. This is the resubmission of EFP-132356 expired in the OUC 24-0377_CE-ST-2165_112TH PL & S. PRINCETON AVE _EFP-139111 WO#19482981",
+"project": "24-0377_CE-ST-2165_EFP-139111",
+"coords": [
+[
+-87.630301,
+41.689666
+],
+[
+-87.631708,
+41.689666
+]
+]
+},
+{
+"id": "DOT2292817:334-358:115TH",
+"street": "W 115th St",
+"extent": "334\u2013358 W 115th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-24",
+"end": "2026-10-24",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "CONDUIT INSTALLATION VIA OPEN CUT TRENCH_PROPOSED 1 POLE INSTALLATION 24-0377_CE-ST-2211 PH 7 WO#19482981 - FOR CTA RLE",
+"project": "24-0377_CE-ST-2211_EFP-131251",
+"coords": [
+[
+-87.631423,
+41.685329
+],
+[
+-87.632005,
+41.685329
+]
+]
+},
+{
+"id": "DOT2292817:11435-11459:STEWART",
+"street": "S Stewart Ave",
+"extent": "11435\u201311459 S Stewart Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-24",
+"end": "2026-10-24",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "CONDUIT INSTALLATION VIA OPEN CUT TRENCH_PROPOSED 1 POLE INSTALLATION 24-0377_CE-ST-2211 PH 7 WO#19482981 - FOR CTA RLE",
+"project": "24-0377_CE-ST-2211_EFP-131251",
+"coords": [
+[
+-87.632362,
+41.685975
+],
+[
+-87.632362,
+41.685538
+]
+]
+},
+{
+"id": "DOT2294271:800-1130:130TH",
+"street": "E 130th St",
+"extent": "800\u20131130 E 130th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-30",
+"end": "2026-10-30",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "PROPOSED JOINT BUILD CONDUIT INSTALLATION FOR CTA REDLINE RELOCATION VIA OPEN CUT TRENCH. PROPOSED 8 POLE INSTALLATIONS ComEd worked with developers and telecommunication companies to reduce the installation footprint and avoid moratoriums in the area. 25-0194_CE-ST-224_ WO20039107_ PD#25NBD1190 - EQUIPMENT AND TRUCKS",
+"project": "25-0194_CE-ST-224_EFP - 134483",
+"coords": [
+[
+-87.603121,
+41.659263
+],
+[
+-87.595115,
+41.659263
+]
+]
+},
+{
+"id": "DOT2294271:1001-1099:129TH",
+"street": "E 129th Pl",
+"extent": "1001\u20131099 E 129th Pl",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-30",
+"end": "2026-10-30",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "PROPOSED JOINT BUILD CONDUIT INSTALLATION FOR CTA REDLINE RELOCATION VIA OPEN CUT TRENCH. PROPOSED 8 POLE INSTALLATIONS ComEd worked with developers and telecommunication companies to reduce the installation footprint and avoid moratoriums in the area. 25-0194_CE-ST-224_ WO20039107_ PD#25NBD1190 - EQUIPMENT AND TRUCKS",
+"project": "25-0194_CE-ST-224_EFP - 134483",
+"coords": [
+[
+-87.597557,
+41.659556
+],
+[
+-87.59518,
+41.659556
+]
+]
+},
+{
+"id": "DOT2294329:320-362:111TH",
+"street": "W 111th St",
+"extent": "320\u2013362 W 111th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.631181,
+41.692599
+],
+[
+-87.6322,
+41.692599
+]
+]
+},
+{
+"id": "DOT2294329:11515-11529:STATE",
+"street": "S State St",
+"extent": "11515\u201311529 S State St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.622731,
+41.684892
+],
+[
+-87.622731,
+41.684637
+]
+]
+},
+{
+"id": "DOT2294329:101-165:116TH",
+"street": "E 116th St",
+"extent": "101\u2013165 E 116th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.620615,
+41.682448
+],
+[
+-87.619062,
+41.682448
+]
+]
+},
+{
+"id": "DOT2294329:11601-11631:INDIANA",
+"street": "S Indiana Ave",
+"extent": "11601\u201311631 S Indiana Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.617813,
+41.682534
+],
+[
+-87.617813,
+41.681988
+]
+]
+},
+{
+"id": "DOT2294329:408-420:104TH",
+"street": "W 104th St",
+"extent": "408\u2013420 W 104th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.633637,
+41.705326
+],
+[
+-87.633928,
+41.705326
+]
+]
+},
+{
+"id": "DOT2294768:300-358:109TH",
+"street": "W 109th St",
+"extent": "300\u2013358 W 109th St",
+"kind": "narrowed",
+"both": false,
+"start": "2026-09-30",
+"end": "2026-10-29",
+"hours": null,
+"days": null,
+"who": "ComED North",
+"desc": "POLE RIP/INSTALLATION - OVHD EQUIPMENT - BUCKET TRUCKS - ALLEY CLOSURE WHERE REQUIRED CTA RLE Project_SET POLE - 354 W 109TH ST - SEC1A",
+"project": "260329_18216791_CTARLE_354W109",
+"coords": [
+[
+-87.630526,
+41.696251
+],
+[
+-87.631933,
+41.696251
+]
+]
+},
+{
+"id": "DOT2294329:11634-11720:PRAIRIE",
+"street": "S Prairie Ave",
+"extent": "11634\u201311720 S Prairie Ave",
+"kind": "narrowed",
+"both": false,
+"start": "2026-10-08",
+"end": "2026-11-06",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "QLA Potholing operations for the CTA Red Line Project and subsequent restoration work. Per the general contractor's contract with the CTA, all areas in the footprint will be milled and overlayed.",
+"project": "RLE-QLA Potholing Restoration",
+"coords": [
+[
+-87.616828,
+41.681501
+],
+[
+-87.616828,
+41.679935
+]
+]
+},
+{
+"id": "DOT2297351:11426-11450:PERRY",
+"street": "S Perry Ave",
+"extent": "11426\u201311450 S Perry Ave",
+"kind": "closed",
+"both": true,
+"start": "2026-10-09",
+"end": "2027-05-28",
+"hours": null,
+"days": null,
+"who": "WALSH CONSTRUCTION COMPANY II, LLC",
+"desc": "S Perry Closure for the CTA RLE construction happening in the properties adjacent. Alderman letter of support attached. This will ultimately be reconstructed at the end of the project.",
+"project": "CTA RLE - Perry Cls",
+"coords": [
+[
+-87.625785,
+41.686297
+],
+[
+-87.625785,
+41.68586
+]
+]
+}
+]
+}
