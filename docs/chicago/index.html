@@ -677,7 +677,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 /* Layout: full-bleed map; a layer panel docked left (bottom sheet on phones); a "What's here" readout docked right. */
 :root{
   /* page */
-  --bg:#F4F3EE; --panel:#FFFFFF; --ink:#23262B; --ink-2:#5D6168; --ink-3:#8A8E95; --rule:#E2E0D8; --accent:#7A3EC8; --focus:#2F7FD8;
+  --bg:#F4F3EE; --panel:#FFFFFF; --ink:#23262B; --ink-2:#5D6168; --ink-3:#8A8E95; --rule:#E2E0D8; --accent:#7A3EC8; --focus:#2F7FD8; --scroll-thumb:rgba(35,38,43,.28);
   /* map */
   --water:#CFE7F7; --land-out:#E6E3DA; --land-out-line:#C4C0B4; --land-far:#F2F1EC; --city:#FBFAF6; --city-line:#4A4E55; --muni-label:#8E8B82;
   /* civic */
@@ -698,7 +698,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --shadow:0 1px 2px rgba(20,22,26,.08),0 8px 24px rgba(20,22,26,.10);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
+  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -708,7 +708,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
+  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -1011,7 +1011,6 @@ circle.cl{stroke-width:3;fill:var(--city)}
 .live dd b.dot{display:inline-block;width:7px;height:7px;border-radius:2px;margin-right:4px;vertical-align:1px}
 .lensbox .chips.pick{margin-bottom:2px}
 .live p{margin:8px 0 0;font-size:10.5px;color:var(--ink-3)}
-#here{max-height:calc(100vh - 110px);overflow:auto}
 .standout{display:flex;gap:8px;align-items:flex-start;margin:0;padding:0 16px 12px;font-size:12.5px;font-weight:500;color:var(--ink);line-height:1.4}
 .standout svg{width:13px;height:13px;flex:none;margin-top:2px;fill:var(--accent)}
 .standout b{font-weight:700}
@@ -1029,8 +1028,18 @@ circle.cl{stroke-width:3;fill:var(--city)}
 #map.z13 .lbl-boro{opacity:.35}
 
 /* ---------- readout ---------- */
-#side{position:absolute;z-index:1000;top:16px;right:16px;width:320px;display:flex;flex-direction:column;gap:10px}
-#here{background:var(--panel);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+/* #side runs to the bottom of the screen so the card can scroll inside it; the gap below the card stays tappable. */
+#side{position:absolute;z-index:1000;top:16px;right:16px;bottom:16px;width:320px;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+#side>*{pointer-events:auto;flex:none}
+#here{background:var(--panel);border-radius:14px;box-shadow:var(--shadow);flex:0 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;scrollbar-color:transparent transparent;transition:scrollbar-color .2s}
+#here:hover,#here:focus-within,#here.scrolling{scrollbar-color:var(--scroll-thumb) transparent}
+#here::-webkit-scrollbar{width:10px}
+#here::-webkit-scrollbar-track{background:transparent;margin:14px 0}
+#here::-webkit-scrollbar-thumb{background:transparent;border:3px solid transparent;border-radius:6px;background-clip:padding-box}
+#here:hover::-webkit-scrollbar-thumb,#here.scrolling::-webkit-scrollbar-thumb{background-color:var(--scroll-thumb)}
+#here .hh{position:sticky;top:0;z-index:2;background:var(--panel);transition:box-shadow .15s}
+#here.scrolled .hh{box-shadow:0 1px 0 var(--rule)}
 #search{position:relative;background:var(--panel);border-radius:14px;box-shadow:var(--shadow)}
 #search form{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 14px}
 #search svg{flex:none;width:16px;height:16px;color:var(--ink-3)}
@@ -1097,7 +1106,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
   .ph .hub-link{display:none}
   .fold,#unfold{display:none!important}
   #panel.folded{display:flex}
-  #side{top:12px;left:12px;right:12px;width:auto;gap:8px}
+  #side{top:12px;left:12px;right:12px;bottom:calc(var(--panel-h,0px) + 8px);width:auto;gap:8px}
   .hh{padding:10px 12px 6px}
   .pills{padding:0 12px 8px}
   .sec>summary{padding:9px 12px}
@@ -2078,6 +2087,8 @@ function nearCommunity(x, y, title){
 }
 let lastInspect = null;
 function inspect(latlng, title, muniName){
+  // A new spot starts the card at the top; a redraw of the same spot (data arriving) keeps the scroll.
+  if (!lastInspect || !lastInspect[0].equals(latlng)) here.scrollTop = 0;
   lastInspect = [latlng, title, muniName];
   const x = latlng.lng, y = latlng.lat;
   if (!hit(data.footprint, x, y)){
@@ -2164,9 +2175,22 @@ function driveHere(x, y, m){
     '<span class="caveat">With no traffic, at posted speeds. Most trips take longer.</span></dd></dl></div>';
 }
 function renderEmpty(msg){
+  here.scrollTop = 0;
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
   document.getElementById('hereX').onclick = closeHere;
 }
+// The card scrolls on its own when it's taller than the screen. The slim scrollbar shows on hover and
+// while scrolling; the header stays put and gets a hairline once content slides under it.
+let hereScrollT = 0;
+here.addEventListener('scroll', () => {
+  here.classList.toggle('scrolled', here.scrollTop > 0);
+  here.classList.add('scrolling'); clearTimeout(hereScrollT);
+  hereScrollT = setTimeout(() => here.classList.remove('scrolling'), 900);
+}, {passive: true});
+// Phones: the card stops above the layer sheet, whatever height the sheet is.
+if (window.ResizeObserver) new ResizeObserver(() => {
+  document.documentElement.style.setProperty('--panel-h', (matchMedia('(max-width:760px)').matches && !panel.hidden ? panel.offsetHeight : 0) + 'px');
+}).observe(panel);
 function closeHere(){ here.hidden = true; if (pin){ map.removeLayer(pin); pin = null; queueHash(); } }
 
 /* ---------- Theme: Auto (device setting), Light or Dark; remembered in this browser ---------- */

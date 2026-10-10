@@ -888,6 +888,8 @@ function nearCommunity(x, y, title){
 }
 let lastInspect = null;
 function inspect(latlng, title, muniName){
+  // A new spot starts the card at the top; a redraw of the same spot (data arriving) keeps the scroll.
+  if (!lastInspect || !lastInspect[0].equals(latlng)) here.scrollTop = 0;
   lastInspect = [latlng, title, muniName];
   const x = latlng.lng, y = latlng.lat;
   if (!hit(data.footprint, x, y)){
@@ -974,9 +976,22 @@ function driveHere(x, y, m){
     '<span class="caveat">With no traffic, at posted speeds. Most trips take longer.</span></dd></dl></div>';
 }
 function renderEmpty(msg){
+  here.scrollTop = 0;
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>Tap the map</strong></div><button type="button" aria-label="Close" id="hereX">×</button></div><div class="hint">' + esc(msg) + '</div>';
   document.getElementById('hereX').onclick = closeHere;
 }
+// The card scrolls on its own when it's taller than the screen. The slim scrollbar shows on hover and
+// while scrolling; the header stays put and gets a hairline once content slides under it.
+let hereScrollT = 0;
+here.addEventListener('scroll', () => {
+  here.classList.toggle('scrolled', here.scrollTop > 0);
+  here.classList.add('scrolling'); clearTimeout(hereScrollT);
+  hereScrollT = setTimeout(() => here.classList.remove('scrolling'), 900);
+}, {passive: true});
+// Phones: the card stops above the layer sheet, whatever height the sheet is.
+if (window.ResizeObserver) new ResizeObserver(() => {
+  document.documentElement.style.setProperty('--panel-h', (matchMedia('(max-width:760px)').matches && !panel.hidden ? panel.offsetHeight : 0) + 'px');
+}).observe(panel);
 function closeHere(){ here.hidden = true; if (pin){ map.removeLayer(pin); pin = null; queueHash(); } }
 
 /* ---------- Theme: Auto (device setting), Light or Dark; remembered in this browser ---------- */
