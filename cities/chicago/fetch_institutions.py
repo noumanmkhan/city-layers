@@ -69,7 +69,7 @@ for r in hosp:
 json.dump(geo, open(os.path.join(OUT, 'cms_geocoded.json'), 'w'), indent=1)
 print('geocoded', sum(1 for g in geo.values() if g['at']), 'of', len(geo))
 
-# OpenStreetMap, for campus and hospital positions.
+# OpenStreetMap, for campus and hospital positions. (Overpass refuses browser-like user agents with a 406.)
 BBOX = (41.64, -87.95, 42.03, -87.52)
 QUERY = f"""
 [out:json][timeout:240];
@@ -84,7 +84,7 @@ res = None
 for attempt in range(6):
     url = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'][attempt % 2]
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=UA), timeout=300) as r:
+        with urllib.request.urlopen(urllib.request.Request(url, data=data, headers={'User-Agent': 'city-layers-pipeline (github.com/noumanmkhan/city-layers)'}), timeout=300) as r:
             res = json.load(r); break
     except Exception as e:
         print('  retry', attempt + 1, url, e); time.sleep(20 * (attempt + 1))
