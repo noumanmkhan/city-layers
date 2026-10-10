@@ -19,7 +19,7 @@
   --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --hd:#7B5B3A; --sbw:#0E7F6E; --cult:#23262B; --cult-enclave:#B0306A;
   /* transport */
   --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#FFFFFF; --cl-closed:#D3263A; --cl-narrow:#E08A00;
+  --station:#FFFFFF; --cl-closed:#D3263A; --cl-narrow:#E08A00; --tram:#D7261E; --bus:#2F5FC4;
   --pill-bg:#F1EFE8;
   --cost-1:#F3E3B3; --cost-2:#E2A64B; --cost-3:#A85A1E; --hty-1:#E6EEF4; --hty-2:#A9C6DE; --hty-3:#5B90BE; --hty-4:#24588A; --mix-1:#C9D9E8; --mix-2:#8AB0D2; --mix-3:#4F82B4; --mix-4:#24588A;
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
@@ -33,7 +33,7 @@
   --shadow:0 1px 2px rgba(20,22,26,.08),0 8px 24px rgba(20,22,26,.10);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
+  --tram:#F0574D; --bus:#6F94EC; --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -43,7 +43,7 @@
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
+  --tram:#F0574D; --bus:#6F94EC; --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -253,6 +253,31 @@ circle.cl{stroke-width:3;fill:var(--city)}
 .cl-pin.closed{background:var(--cl-closed)} .cl-pin.narrowed{background:var(--cl-narrow)} .cl-pin.soon{opacity:.5}
 .z15 .cl-pin,.leaflet-container:not(.z12) .cl-pin{display:none}
 .leaflet-container:not(.z11) .cx-stn{display:none}
+/* Streetcars and buses: lines in the mode's colour, numbered badges from zoom 12, stops from zoom 15.
+   A picked route is drawn in ink over a casing, with its badges and stops at any zoom from 13. */
+.rt{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
+.rt.bus{stroke:var(--bus)} .rt.tram{stroke:var(--tram);stroke-width:2.4px}
+#map.z12 .rt{stroke-width:2.4px} #map.z12 .rt.tram{stroke-width:3px}
+#map.z14 .rt{stroke-width:3.2px} #map.z14 .rt.tram{stroke-width:4px}
+.rt-case{fill:none;stroke:var(--city);stroke-linecap:round;stroke-linejoin:round;stroke-width:3.4px;opacity:.85}
+.rt-case.tram{stroke-width:4.4px} #map.z12 .rt-case{stroke-width:4.4px} #map.z12 .rt-case.tram{stroke-width:5.4px}
+#map.z14 .rt-case{stroke-width:5.6px} #map.z14 .rt-case.tram{stroke-width:6.8px}
+.rt.pick,#map.z12 .rt.pick{stroke:var(--ink);stroke-width:3.6px} #map.z14 .rt.pick{stroke-width:5px}
+.rt-case.pick,#map.z12 .rt-case.pick{stroke-width:8px;opacity:.9} #map.z14 .rt-case.pick{stroke-width:10px}
+.rt-b{position:absolute;left:0;top:0;transform:translate(-50%,-50%);display:grid;place-items:center;box-sizing:border-box;height:15px;min-width:19px;padding:0 3px;border-radius:4px;
+  background:var(--bus);color:#fff;font:700 10px/1 var(--font);white-space:nowrap;box-shadow:0 0 0 1.5px var(--city)}
+.rt-b.tram{background:var(--tram)} .rt-b.pick{background:var(--ink);color:var(--panel);height:17px;font-size:11px}
+#map:not(.z12) .rt-b:not(.pick){display:none}
+.stop{fill:var(--city);stroke-width:1.6} .stop.bus{stroke:var(--bus)} .stop.tram{stroke:var(--tram)} .stop.pick{stroke:var(--ink);stroke-width:2}
+.sw.k-streetcars{background:var(--city) linear-gradient(var(--tram),var(--tram)) 0 50%/100% 4px no-repeat}
+.sw.k-buses{background:var(--city) linear-gradient(var(--bus),var(--bus)) 0 50%/100% 3px no-repeat}
+.buspick{display:grid;gap:4px} .buspick small{font-size:10.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.buspick .clr{border:none;color:var(--accent)}
+.rt-chips{display:flex!important;flex-wrap:wrap;gap:4px;margin:1px 0 2px}
+.rt-chip{font:inherit;font-size:11.5px;font-weight:700;line-height:1;padding:4px 6px;border-radius:5px;border:1.5px solid var(--bus);background:none;color:var(--ink);cursor:pointer}
+.rt-chip.tram{border-color:var(--tram)}
+.rt-chip.freq{background:var(--bus);color:#fff} .rt-chip.tram.freq{background:var(--tram)}
+.rt-chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--panel)}
 .sw.k-construction{background:repeating-linear-gradient(90deg,var(--ink-2) 0 6px,transparent 0 10px) center/100% 4px no-repeat}
 .sw.k-closures{background:linear-gradient(var(--cl-closed),var(--cl-closed)) left center/48% 5px no-repeat,linear-gradient(var(--cl-narrow),var(--cl-narrow)) right center/40% 5px no-repeat}
 /* Tap-for-details popups */

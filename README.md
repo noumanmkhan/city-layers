@@ -37,6 +37,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Main streets | 321 streets | Major and minor arterials<br>(King, Queen, Eglinton…), named along the line |
 | Highways | 10 in Toronto,<br>14 across the GTA | 400-series, QEW, 407 ETR,<br>DVP, Gardiner, Allen Rd |
 | Subway & LRT | 5 lines | Lines 1, 2, 4, 5, 6 with station names |
+| Streetcars | 11 routes | Numbered along the line;<br>stops when zoomed in |
+| Bus routes | 230 routes,<br>one family at a time | Frequent, express or overnight;<br>any route on demand |
 | GO Transit trains | 7 lines<br>+ UP Express | ~70 stations, Metrolinx<br>line colours |
 | Transit under construction | 4 lines | Ontario Line, Line 2 East and<br>Eglinton West extensions,<br>Hazel McCallion Line (GTA view) |
 | Road closures | Daily | Closures and lane restrictions from<br>transit and GO construction |
@@ -105,6 +107,8 @@ The boundary lookup runs in the browser with point-in-polygon tests against ever
 
 **Transit under construction and road closures:** lines being built are drawn dashed in their future colour, and nested under them is the one layer on the map that changes every day: road closures and lane restrictions caused by that construction. A GitHub Action runs just after midnight Eastern, reads Toronto's live Road Restrictions feed (permits filed by Metrolinx and the consortiums building its lines) and Chicago's CDOT permits (those naming the Red Line Extension or the Red/Purple rebuild), ties each permit to the nearest line being built or upgraded, and republishes. Arterials always show; full closures of side streets appear when zoomed in, since that's where most actual closures are (the streets crossing a new line). Tapping one gives the hours and the permit dates, labelled as permit dates: permits get padded and renewed, so they aren't a forecast of when a road reopens.
 
+**Streetcars and buses:** there are far too many bus routes to draw at once (230 in Toronto, 124 in Chicago), so the map shows them in families, one at a time, and draws any single route on demand. The families come from the schedule itself rather than the agency's branding: *Frequent* means a trip every 10 minutes or better each way through a weekday from 7 am to 7 pm (Toronto's network of 53 such routes, streetcars included, reads as a grid across the city); *Express* is what the agency calls express; *Overnight* means at least an hourly trip each way between 2 and 4 am, which in Toronto is the Blue Night network. Toronto's 11 streetcar routes get a layer of their own, in red, numbered along the line. The readout gains a *Transit nearby* section: the nearest subway or 'L' station, every route with a stop within about a 5-minute walk, the overnight routes, and the nearest stop. Frequent routes are filled in; tap any number (or a line on the map, or search "29" or "Dufferin") and that route is drawn in ink with its stops. A GitHub Action reads the TTC's and the CTA's GTFS each month, keeps each route's main shapes, counts trips per hour, and the build sorts routes into families from those counts. Nothing is ranked: how often a bus comes is described, never scored.
+
 ![Downtown with areas, neighbourhoods and known-as names switched on](assets/screenshot-downtown.png)
 
 ## Chicago Layers
@@ -127,6 +131,7 @@ The second city runs on the same engine with its own data and config (`cities/ch
 | Expressways | 11 in Chicago | Kennedy, Dan Ryan, Eisenhower,<br>Stevenson, Lake Shore Drive |
 | Metra | 11 lines | From four downtown terminals |
 | The 'L' | 8 lines, 144 stations | CTA rapid transit |
+| Bus routes | 124 routes,<br>one family at a time | Frequent, express or overnight;<br>any route on demand |
 | Transit under construction | 1 line | Red Line Extension, 95th to 130th Street |
 | Street closures | Daily | From the Red Line Extension and<br>the Red/Purple rebuild |
 
@@ -203,7 +208,7 @@ Chicago:
 
 - [City of Chicago Data Portal](https://data.cityofchicago.org/) ([terms](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html)): community areas, neighbourhoods, wards, SSAs, Landmark Districts, the city boundary, 'L' lines and stations, and ward offices.
 - U.S. Census Bureau (public domain): TIGERweb municipalities, counties, legislative districts, tract points and Lake Michigan's shoreline; American Community Survey 2020–2024 five-year tables.
-- [Metra GTFS](https://metra.com/developers) for Metra lines and stations.
+- [Metra GTFS](https://metra.com/developers) for Metra lines and stations; [CTA GTFS](https://www.transitchicago.com/developers/gtfs/) for bus routes and stops.
 - Illinois legislators from [Open States](https://openstates.org/) (public domain); members of Congress from the [Clerk of the U.S. House](https://clerk.house.gov/).
 - Streets and expressways © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
 - Street closures from CDOT's [Transportation Department Permits](https://data.cityofchicago.org/d/pubx-yq2d) (City of Chicago Data Portal); the Red Line Extension's line © OpenStreetMap contributors (ODbL).

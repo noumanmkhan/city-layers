@@ -57,6 +57,9 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 | `skyscrapers.geojson` | Buildings 150 m and taller (points) for the `towers` layer, from each city's Wikipedia list (CC BY-SA 4.0; credit "Wikipedia"), built by `engine/skyscrapers.py`. Sorted tallest first. `properties`: `name`, `h` (height in metres, architectural: spires count, antennas don't), `ft` (feet), `floors` (may be null), `year` (completed, or expected when `uc`; null when unknown), `use` (`res`, `com` office or hotel, `mix`), `purpose` (display word: "Residential", "Office", "Hotel", "Mixed-use"), `uc` (true until open for occupancy, including topped-out towers), `super` (true at 300 m+), `rank` (by height in the city among towers built or topped out; a tower still under construction gets the rank it will have), `facts` (1–3 short sentences, most telling first), and optionally `aka` (a former or popular name), `address`, `wiki` (English Wikipedia article title). Top-level `source`. |
 | `construction.geojson` | Transit lines under construction (layer kind `construction`), built by `engine/construction.py` from OpenStreetMap (ODbL) and the curated `cities/<city>/construction.json`. Line features (`LineString` or `MultiLineString`): `id`, `name`, `short`, `mode` (`subway`, `lrt`), `color` (hex), and optionally `owner`, `opens` (only an owner-published estimate, as text), `length` (text), `about`, `link`. Station features (`Point`): `part: "station"`, `id` (the line's), `name`. Only lines with construction under way; a line opens → it leaves this file. |
 | `closures.geojson` | Optional; may be missing or empty (load it so a failure doesn't stop the map). Road closures and lane restrictions caused by transit construction (layer kind `closures`), rebuilt daily just after midnight Eastern by `engine/closures.py` from Toronto's Road Restrictions feed and Chicago's CDOT permits. Top-level `asof` (local time of the fetch, "YYYY-MM-DDTHH:MM") and `today`. `LineString` (or `Point` when a permit has no stretch). `properties`: `proj` (a line `id` from `construction.geojson`, `up` for work on an existing line being upgraded, or `other`), `name` (the project, display text), `street`, `extent` (text), `kind` (`closed` or `narrowed`), `art` (true on a drawn arterial; false = a local street, shown only zoomed in; lane work on local streets is left out), `start`, `end` (permit dates, "YYYY-MM-DD" or with time; not a reopening forecast), `hours` ("24h", "21:00–05:00" or null), `days` (`daily`, `weekdays`, `weekends`, `some days` or null), `both` (both directions), `who` (permit holder), `desc` (up to 220 characters). Includes permits starting within 7 days; hide those whose `end` is before today in the city's time zone (`tz` on the layer in `city.json`). |
+| `transit.json` | Streetcar and bus routes and stops, built by `engine/surface.py` from the agency's GTFS (TTC, CTA), refreshed monthly. Top-level `asof` (fetch date, "YYYY-MM-DD") and `week` (the Monday of the week the schedule was read for). `routes`: `[{r, n, m, f, day, h, b}]`: `r` route number (text: "29", "J14", "X9"), `n` name ("Dufferin"), `m` mode (`tram` streetcar, `bus`), `f` families (any of `freq`, `exp`, `night`; below), `day` (false for a route that runs only overnight, e.g. Toronto's 300-series), `h` (typical wait in minutes on weekday middays, 10 am–3 pm, in the busier direction; null under one trip an hour), `b` bounds `[west, south, east, north]`. `stops`: `[[lon, lat, name, [route index, …]]]`, indexes into `routes`. Families describe the service and are never a ranking: `freq` = at least 6 trips an hour each way, averaged over every 3-hour block from 7 am to 7 pm on a weekday; `exp` = the agency names the route express; `night` = at least one trip each way in every hour from 2 to 4 am on a weeknight. |
+| `transit_routes.geojson` | One feature per route in `transit.json` (`MultiLineString`, simplified ~8 m; the main direction, plus the other direction where it runs on different streets). `properties`: `r`, `n`, `m`, `f`, `day`, `h` as in `transit.json`. Top-level `asof`, `week`. The website loads it only when the Bus routes layer is on or a route is picked. |
+| `streetcars.geojson` | Toronto only: the features of `transit_routes.geojson` with `m: "tram"` and `day: true` (the 11 daytime streetcar routes), for the `streetcars` layer. |
 | `institutions.geojson` | Universities, colleges and hospitals (points) for the `places` layers. `properties`: `name`, `cat` (`university`, `college`, `hospital`), `sub` (campus, network or ownership, optional), `ed` (true for a hospital with an emergency department). Curated by fixed rules (public or nonprofit only; see each city's `institutions.py`). Describe only: no ratings. |
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
@@ -88,6 +91,8 @@ How the website's search does it, for an app that wants to match:
   At most 6 results.
 - A result found through an alias shows its canonical `name`, with "also called {alias}"
   beneath. Choosing it titles the card with the canonical name.
+- Streetcar and bus routes (`transit.json`): "{r} {n}" and the bare number `r`; choosing one
+  draws the route and frames it (`b`). Sub-line: `card.transit.kinds[m]`, plus `nightOnly`.
 - Street addresses are looked up only when the user presses Find, never as they type.
 
 ## 4. city.json: the parts an app uses
@@ -120,6 +125,14 @@ How the website's search does it, for an app that wants to match:
   "Office tower"), `supText`, `ucText`, `builtText`, `expectedText`, `akaText` (`{aka}`),
   `moreText` (the Wikipedia link), `sourceText` (shown when a tower has no article). Card: section 5,
   step 5a.
+- A `streetcars` layer (Toronto, id `tram`, file `streetcars`) draws its routes in `--tram`, each numbered
+  along the line; stops (from `transit.json`, those served by a daytime streetcar) from zoom 15.
+- A `buses` layer (id `bus`, file `transit_routes`, `lazy: true`: load it only when needed) draws one
+  family at a time: `families` lists `[id, short, note]` (`freq`, `exp`, `night`), the first being the
+  default. Routes are drawn in their mode's colour (`--bus`, `--tram`), stops from zoom 15. Text:
+  `countText` (`{n}` routes), `hint`, `pickText`, `unpickText` (`{r}`), `clearText`. Any route can also
+  be picked (from the card, search or a link) and is then drawn in `--ink` over a `--city` casing with
+  its stops, whichever layers are on.
 - `under` (optional, any layer): the id of the layer it sits under in the panel (the institution
   toggles and Skyscrapers are `under: "landmarks"`). Indented in the panel; each still has its own
   toggle and default, all off.
@@ -242,13 +255,27 @@ first matching feature in file order wins.
    feature has no `x`. Levels with no hit are skipped (most of the city has no middle-school row).
    Footer `note` with `{year}` from the file. Section title `title`. No hits at all: no section.
    The website shows it between Living here and Nearby, and loads the file after the map is up.
+   **Transit nearby** (`card.transit`, both cities): load `card.transit.file` (`transit.json`). Rows:
+   - `station`: the nearest station of the `metro`-kind layer (its second file: `subway_stations` /
+     `cta_stations`), skipped beyond 5 km; value its name, subline `stationSub` filled with `{lines}`
+     and `{dist}`.
+   - For each `[mode, label, named]` in `rows`: the routes of that `m` with `day: true` that have a stop
+     within `radius` metres, nearest stop first; each shown as its number (`named`: number and name,
+     "501 Queen"). A route in family `freq` is drawn filled; the note says so.
+   - `night`: routes in family `night` with a stop within `radius` (Toronto's 300-series, Chicago's
+     overnight routes), numbers only.
+   - `stop`: the nearest stop's name and distance, or `none` when there is no stop within `radius`.
+   Footer `note` with `{week}` (from `transit.json`, a short date). Hover/tooltip text for a route:
+   "{r} {n}" plus `every` filled with `{h}`, plus `nightOnly` when `day` is false. `kinds` names a
+   route's mode for search ("Bus route"). The website shows the section between Schools and Nearby;
+   each number is a button that draws the route on the map. Describe only: no scores.
 10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
    `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
    layer's hit; coordinates (`43.6681° N, 79.3669° W`) only for a spot no layer covers.
    The standout line (step 7) drops its "{profile name}: " prefix when the title is that name.
 
 The website shows the standout line under the pills, then four collapsible sections in this
-order: Boundaries, Living here, Schools (Chicago), Nearby, Representatives.
+order: Boundaries, Living here, Schools (Chicago), Transit nearby, Nearby, Representatives.
 
 ### Worked example (Toronto, 43.66810, -79.36690)
 

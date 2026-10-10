@@ -110,7 +110,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lm.tw.sup b', '.lm.inst b', '.lm.tw b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.rt-b.pick', '.lm.t1 b', '.lm.t2 b', '.lm.tw.sup b', '.lm.inst b', '.lm.tw b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.rt-b', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -430,6 +430,20 @@ const KINDS = {
     g._names = names;
     return g;
   },
+  // Streetcar routes with daytime service, each numbered along its line (badges from zoom 12).
+  streetcars: (it, fc) => routeLines(fc.features, false),
+  // Bus routes: one family at a time (frequent, express, overnight). Shapes load the first time it's on.
+  buses: it => {
+    const g = L.layerGroup(); let cur = null;
+    g._draw = () => {
+      if (cur){ g.removeLayer(cur); cur = null; }
+      if (!routeGeo) return;
+      cur = routeLines(routeGeo.features.filter(f => f.properties.f.includes(busFam)), false);
+      g.addLayer(cur);
+    };
+    g.on('add', () => ensureRoutes().then(() => { g._draw(); drawBusBox(); }));
+    return g;
+  },
   // Lines being built: dashed in the line's colour over a casing, hollow stations, names from zoom 13.
   // Tap a line or station for what it is, who builds it and when it's due.
   construction: (it, fc) => {
@@ -508,8 +522,143 @@ function clPopup(it, p, latlng, soon, asof){
     (p.desc ? '<p class="desc">' + esc(p.desc) + '</p>' : '') +
     '<p class="fine">' + esc(fill(it.fineText, {date: niceDate(asof)})) + '</p>').openOn(map);
 }
+/* ---------- Streetcars and buses ----------
+   Routes and stops come from the agency's schedule (engine/surface.py). transit.json (the route list and every
+   stop) loads after the map; route shapes for the bus families load the first time they're needed. Families
+   describe the service (frequent, express, overnight); nothing is ranked. A route can be picked, from the card,
+   search, a link or a tap on its line: it's drawn in ink with its stops, whichever layers are on. */
+const TRAMS = byKind('streetcars'), BUSES = byKind('buses'), TR = CITY.card.transit;
+const picked = new Set();
+const BUS_DEFAULT = BUSES ? BUSES.families[0][0] : null;
+let busFam = BUS_DEFAULT, routeGeo = null, routeGeoP = null;
+function ensureRoutes(){
+  if (!TR) return Promise.resolve(null);
+  return routeGeoP || (routeGeoP = get(TR.routes).then(d => { routeGeo = d; return d; }).catch(() => { routeGeoP = null; return null; }));
+}
+const routeName = r => r.r + (r.n ? ' ' + r.n : '');
+const routeTip = p => esc(routeName(p)) + (p.h ? ' · ' + esc(fill(TR.every, {h: p.h})) : '') + (p.day === false ? ' · ' + esc(TR.nightOnly) : '');
+// A point a fraction t of the way along a line (lengths roughly in metres-per-degree at these latitudes).
+function along(c, t){
+  const d = [0];
+  for (let i = 1; i < c.length; i++) d.push(d[i - 1] + Math.hypot((c[i][0] - c[i - 1][0]) * .72, c[i][1] - c[i - 1][1]));
+  const T = d[d.length - 1] * t; let i = 1;
+  while (i < d.length - 1 && d[i] < T) i++;
+  const s = (T - d[i - 1]) / ((d[i] - d[i - 1]) || 1);
+  return [c[i - 1][0] + (c[i][0] - c[i - 1][0]) * s, c[i - 1][1] + (c[i][1] - c[i - 1][1]) * s];
+}
+const span = c => c.reduce((a, p, i) => i ? a + Math.hypot((p[0] - c[i - 1][0]) * .72, p[1] - c[i - 1][1]) : 0, 0);
+// Route lines with number badges. Line widths follow the zoom through CSS (.z12, .z14 on the map).
+function routeLines(feats, pick){
+  // Every casing goes in before any line, or a casing's rounded end would nick the line drawn before it.
+  const g = L.layerGroup(), cases = L.layerGroup(), lines = L.layerGroup();
+  g.addLayer(cases); g.addLayer(lines);
+  feats.forEach(f => {
+    const p = f.properties, parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
+    parts.forEach(c => {
+      cases.addLayer(L.polyline(c.map(ll), {pane:'transit', className:'rt-case ' + p.m + (pick ? ' pick' : ''), interactive:false}));
+      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt ' + p.m + (pick ? ' pick' : ''), bubblingMouseEvents:false});
+      hoverTip(pl, routeTip(p));
+      pl.on('click', e => { if (!pick) pickRoute(p.r, true); inspect(e.latlng); });
+      lines.addLayer(pl);
+    });
+    const long = parts.reduce((a, b) => span(b) > span(a) ? b : a);
+    (pick ? [0, .5, 1] : [.25, .75]).forEach(t => g.addLayer(L.marker(ll(along(long, t)), {pane:'pts', interactive:false, keyboard:false,
+      icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="rt-b ' + p.m + (pick ? ' pick' : '') + '">' + esc(p.r) + '</span>'})})));
+  });
+  return g;
+}
+const pickLayer = L.layerGroup().addTo(map);
+function drawPicks(){
+  pickLayer.clearLayers();
+  if (routeGeo && picked.size) pickLayer.addLayer(routeLines(routeGeo.features.filter(f => picked.has(f.properties.r)), true));
+  drawStops(); drawBusBox();
+  here.querySelectorAll('[data-route]').forEach(b => b.setAttribute('aria-pressed', String(picked.has(b.dataset.route))));
+}
+function pickRoute(r, on){
+  if (on) picked.add(r); else picked.delete(r);
+  ensureRoutes().then(drawPicks); queueHash();
+}
+// From search: pick the route and frame the whole of it.
+function goRoute(r){
+  showResults(''); q.value = routeName(r);
+  pickRoute(r.r, true);
+  if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+  frame(L.latLngBounds([[r.b[1], r.b[0]], [r.b[3], r.b[2]]]));
+}
+// Stops: those of the streetcar layer and the bus layer from zoom 15, a picked route's from zoom 13; only in view.
+const stopLayer = L.layerGroup().addTo(map);
+function drawStops(){
+  stopLayer.clearLayers();
+  const T = data.transit; if (!T) return;
+  const z = map.getZoom() + .01, b = map.getBounds().pad(.1);
+  const tram = TRAMS && state[TRAMS.id] && z >= 15, bus = BUSES && state[BUSES.id] && z >= 15;
+  const pk = picked.size && z >= 13 ? new Set(T.routes.map((r, i) => picked.has(r.r) ? i : -1).filter(i => i >= 0)) : null;
+  if (!tram && !bus && !pk) return;
+  T.stops.forEach(s => {
+    if (!b.contains([s[1], s[0]])) return;
+    const rs = s[3].map(i => T.routes[i]), isTram = rs.some(r => r.m === 'tram' && r.day), onPick = pk && s[3].some(i => pk.has(i));
+    if (!(onPick || (tram && isTram) || (bus && rs.some(r => r.m === 'bus')))) return;
+    const m = L.circleMarker([s[1], s[0]], {pane:'pts', radius: z >= 16 ? 4 : 3, className:'stop ' + (onPick ? 'pick' : isTram ? 'tram' : 'bus'), bubblingMouseEvents:false});
+    hoverTip(m, esc(s[2]) + ' · ' + esc(rs.map(r => r.r).join(', ')));
+    m.on('click', () => inspect(L.latLng(s[1], s[0]), s[2]));
+    stopLayer.addLayer(m);
+  });
+}
+map.on('moveend', drawStops);
+// The bus layer's panel box: pick a family; routes picked elsewhere are listed with a way to clear them.
+function drawBusBox(){
+  if (!BUSES) return;
+  const box = document.getElementById('busbox'); if (!box) return;
+  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.fam === busFam)));
+  const fam = BUSES.families.find(f => f[0] === busFam), n = data.transit ? data.transit.routes.filter(r => r.f.includes(busFam)).length : null;
+  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + fam[2] + ' ' + BUSES.hint;
+  const pk = document.getElementById('buspick');
+  pk.hidden = !picked.size;
+  pk.innerHTML = picked.size ? '<small>' + esc(BUSES.pickText) + '</small><div class="chips">' + [...picked].map(r =>
+    '<button type="button" data-unpick="' + esc(r) + '" aria-label="' + esc(fill(BUSES.unpickText, {r})) + '">' + esc(r) + ' ×</button>').join('') +
+    '<button type="button" class="clr" data-unpick="">' + esc(BUSES.clearText) + '</button></div>' : '';
+  pk.querySelectorAll('[data-unpick]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.unpick) pickRoute(b.dataset.unpick, false); else { picked.clear(); ensureRoutes().then(drawPicks); queueHash(); }
+  }));
+}
+function setBusFam(f){
+  if (!BUSES || !BUSES.families.some(x => x[0] === f)) return;
+  busFam = f;
+  if (layers[BUSES.id] && layers[BUSES.id]._draw) layers[BUSES.id]._draw();
+  drawBusBox(); queueHash();
+}
+/* The card's transit section: the nearest rapid-transit station, then every route with a stop within the radius,
+   by mode, nearest first, and the nearest stop. Numbers are buttons that draw the route. Filled numbers mark
+   frequent routes (a description of the service, not a score). */
+function transitHere(x, y){
+  const T = data.transit; if (!TR || !T) return '';
+  const near = new Map(); let best = null;
+  const dy = TR.radius / 111000 * 1.2;
+  T.stops.forEach(s => {
+    if (Math.abs(s[1] - y) > dy) return;
+    const d = metres([x, y], s); if (d > TR.radius) return;
+    s[3].forEach(i => { if (!near.has(i) || d < near.get(i)) near.set(i, d); });
+    if (!best || d < best[1]) best = [s, d];
+  });
+  const list = [...near].sort((a, b) => a[1] - b[1]).map(([i]) => T.routes[i]);
+  const chip = (r, named) => '<button type="button" class="rt-chip ' + r.m + (r.f.includes('freq') ? ' freq' : '') + '" data-route="' + esc(r.r) + '" aria-pressed="' + picked.has(r.r) + '" title="' + routeTip(r) + '">' + esc(named ? routeName(r) : r.r) + '</button>';
+  let rows = '';
+  const stns = METRO && loaded[[].concat(METRO.files)[1]];
+  if (TR.station && stns){
+    const s = stns.features.map(f => [f, metres([x, y], f.geometry.coordinates)]).sort((a, b) => a[1] - b[1])[0];
+    if (s && s[1] < (TR.stationMax || 5000)) rows += '<dt>' + esc(TR.station) + '</dt><dd>' + esc(s[0].properties.name) + '<span>' + esc(fill(TR.stationSub, {lines: s[0].properties.lines, dist: dist(s[1])})) + '</span></dd>';
+  }
+  TR.rows.forEach(([mode, label, named]) => {
+    const rs = list.filter(r => r.m === mode && r.day);
+    if (rs.length) rows += '<dt>' + esc(label) + '</dt><dd><span class="rt-chips">' + rs.map(r => chip(r, named)).join('') + '</span></dd>';
+  });
+  const night = list.filter(r => r.f.includes('night'));
+  if (night.length) rows += '<dt>' + esc(TR.night) + '</dt><dd><span class="rt-chips">' + night.map(r => chip(r, false)).join('') + '</span></dd>';
+  rows += '<dt>' + esc(TR.stop) + '</dt><dd>' + (best ? esc(best[0][2]) + '<span>' + dist(best[1]) + ' away</span>' : '<span>' + esc(TR.none) + '</span>') + '</dd>';
+  return '<div class="live transit"><dl>' + rows + '</dl><p>' + esc(fill(TR.note, {week: niceDate(T.week)})) + '</p></div>';
+}
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, buses: 11.5, streetcars: 11.6, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -550,6 +699,14 @@ CITY.groups.forEach(([title, items]) => {
         '</div><div class="legend"><small id="brdnote-' + it.id + '"></small></div>';
       grp.appendChild(box);
       box.querySelectorAll('[data-board]').forEach(b => b.addEventListener('click', () => setBoard(it.id, b.dataset.board)));
+    }
+    if (it.kind === 'buses'){   // one family at a time, plus any routes picked from the card or search
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'busbox'; box.hidden = !it.on;
+      box.innerHTML = '<div class="chips pick" role="radiogroup" aria-label="' + esc(it.name) + '">' + it.families.map(([f, short]) =>
+        '<button type="button" role="radio" data-fam="' + f + '" aria-checked="' + (f === busFam) + '">' + esc(short) + '</button>').join('') +
+        '</div><div class="legend"><small id="busnote"></small></div><div class="buspick" id="buspick" hidden></div>';
+      grp.appendChild(box);
+      box.querySelectorAll('[data-fam]').forEach(b => b.addEventListener('click', () => setBusFam(b.dataset.fam)));
     }
     if (it.kind === 'towers'){   // key to the badges, shown while the layer is on
       const box = document.createElement('div'); box.className = 'lensbox child'; box.id = 'twkey-' + it.id; box.hidden = !it.on;
@@ -651,6 +808,8 @@ function setLayer(id, on){
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
   if (kindOf(id) === 'towers'){ const box = document.getElementById('twkey-' + id); if (box) box.hidden = !on; }
+  if (kindOf(id) === 'buses'){ document.getElementById('busbox').hidden = !on; drawBusBox(); }
+  if (kindOf(id) === 'buses' || kindOf(id) === 'streetcars') drawStops();
   if (kindOf(id) === 'boards'){ const box = document.getElementById('brd-' + id); if (box) box.hidden = !on; if (on) setBoard(id, boardPick[id]); }
   if (kindOf(id) === 'suburbs'){
     document.getElementById('drvbox').hidden = !on;
@@ -674,6 +833,8 @@ document.getElementById('reset').addEventListener('click', () => {
   clearFilters(); applyFilter();
   Object.keys(pick).forEach(id => { pick[id] = LENSES[id].pick[0][0]; });
   BOARDS.forEach(it => setBoard(it.id, it.boards[0][0]));
+  if (BUSES) setBusFam(BUS_DEFAULT);
+  if (picked.size){ picked.clear(); drawPicks(); }
   setLens(FIRST_LENS);
   setScope('inner', true);
   closeHere();
@@ -747,7 +908,7 @@ function langRow(cfg, d){
     (cfg.note ? '<span class="caveat">' + esc(fill(cfg.note, {multi: d.langMulti})) + '</span>' : '') + '</dd>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
-const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, schools:false, near:false, reps:false} : {bounds:true, live:true, schools:true, near:true, reps:false};
+const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, schools:false, transit:false, near:false, reps:false} : {bounds:true, live:true, schools:true, transit:true, near:true, reps:false};
 let secOpen = Object.assign({}, SEC_DEFAULT);
 try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || '{}')); } catch (e) {}
 function section(id, title, body){
@@ -947,10 +1108,12 @@ function inspect(latlng, title, muniName){
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
     section('schools', (CITY.card.schools && CITY.card.schools.title) || 'Schools', schools(x, y)) +
+    section('transit', (TR && TR.title) || 'Transit', transitHere(x, y)) +
     section('near', 'Nearby', nearby(x, y)) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelector('.share').onclick = share;
+  here.querySelectorAll('[data-route]').forEach(b => b.addEventListener('click', () => pickRoute(b.dataset.route, !picked.has(b.dataset.route))));
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
 }
 // What makes the unit stand out among its peers (engine/facts.py, built ahead of time): the strongest fact.
@@ -1153,6 +1316,11 @@ function suggestions(text){
     const b = score([p.name].concat(p.aka ? [p.aka] : []));
     if (b && !lmHits.some(o => metres(o.at, f.geometry.coordinates) < 20)) out.push({s: b.s, rank: p.super ? 2 : 2.8, name: p.name, sub: TOWERS.place + ' · ' + towerHeight(p, true) + (p.uc ? ' · ' + TOWERS.ucText : '') + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
+  // Streetcar and bus routes, by number or name ("29", "Dufferin", "29 Dufferin"): choosing one draws it.
+  (data.transit ? data.transit.routes : []).forEach(r => {
+    const b = score([routeName(r), r.r]);
+    if (b) out.push({s: b.s, rank: 2.9, name: routeName(r), sub: TR.kinds[r.m] + (r.day ? '' : ' · ' + TR.nightOnly), go: () => goRoute(r)});
+  });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));
     if (b) out.push({s: b.s, rank: p.rank || p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
@@ -1327,6 +1495,8 @@ function linkState(){
   if (fit.length) parts.push(['fit', fit.join(',')]);
   const brd = BOARDS.filter(it => state[it.id] && boardPick[it.id] !== it.boards[0][0]).map(it => it.id + ':' + boardPick[it.id]);
   if (brd.length) parts.push(['board', brd.join(',')]);
+  if (BUSES && state[BUSES.id] && busFam !== BUS_DEFAULT) parts.push(['bus', busFam]);
+  if (picked.size) parts.push(['routes', [...picked].join(',')]);
   return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
 }
 function writeHash(){
@@ -1343,7 +1513,7 @@ function readHash(h){
 // Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
 function applyHash(h){
   const o = readHash(h);
-  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus', 'board'].some(k => k in o)) return false;
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus', 'board', 'bus', 'routes'].some(k => k in o)) return false;
   const num = s => s.split(/[,/]/).map(Number);
   setScope(o.view === 'region' || regionFeature(o.focus) ? 'outer' : 'inner', false);
   setFocus(regionFeature(o.focus) ? o.focus : null, false);
@@ -1358,6 +1528,9 @@ function applyHash(h){
     syncStnNames();
   }
   (o.board || '').split(',').forEach(part => { const [id, b] = part.split(':'); if (b) setBoard(id, b); });
+  if (o.bus) setBusFam(o.bus);
+  picked.clear(); (o.routes || '').split(',').filter(Boolean).forEach(r => picked.add(r));
+  if (TR && (picked.size || pickLayer.getLayers().length)) ensureRoutes().then(drawPicks);
   const [lk, lp] = (o.lens || '').split(':');
   if (lk && LENSES[lk] && document.querySelector('[data-lens="' + lk + '"]')){ if (lp) setPick(lk, lp); setLens(lk); }
   if (o.fit){
@@ -1456,7 +1629,7 @@ async function saveImage(labels){
     await new Promise(r => setTimeout(r, 400)); declutter(); await frames(2);
     const has = (n, c) => n.classList && n.classList.contains(c);
     const skip = n => has(n, 'leaflet-control-container') || has(n, 'leaflet-pin-pane') || has(n, 'hover-tip') ||
-      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') ||
+      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') || has(n, 'rt-b') ||
         (n.tagName === 'B' && n.parentElement && has(n.parentElement, 'lm'))));
     restoreSvg = inlineSvgStyles(el);
     canvas = await lib.toCanvas(el, {width: cw, height: ch, canvasWidth: W, canvasHeight: H, pixelRatio: 1,
@@ -1507,7 +1680,8 @@ function stampCredits(canvas){
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
 const files = ['base', 'regions'];
-LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
+// Files of layers marked "lazy" (bus route shapes) load the first time they're needed.
+LAYERS.filter(it => !it.lazy).forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
 // Files of layers marked "optional" (e.g. daily closures not fetched yet) load as empty instead of failing the map.
 const OPTIONAL = new Set(LAYERS.filter(it => it.optional).flatMap(it => [].concat(it.file || it.files || [])));
@@ -1546,6 +1720,12 @@ Promise.all(files.map(f => get(f).catch(e => { if (OPTIONAL.has(f)) return {type
   lastHash = location.hash;
   if (location.hash) linkReady = true; else armLink();
   window.cityMapReady = true;
+  // Stops and the route list: fetched after the map is up, then stops are drawn and the open card redrawn.
+  if (TR) get(TR.file).then(d => {
+    data.transit = d;
+    drawStops(); drawBusBox();
+    if (!here.hidden && lastInspect && hit(data.footprint, lastInspect[0].lng, lastInspect[0].lat)) inspect(...lastInspect);
+  }).catch(() => { data.transit = null; });
   // Attendance areas are big: fetched after the map is up, then the open card is redrawn with them.
   if (CITY.card.schools) get(CITY.card.schools.file).then(d => {
     data.schools = d;

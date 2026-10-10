@@ -84,6 +84,10 @@
        "hover": "{name} line · Union – {to}", "lineHover": {"UP": "{name} (Union – Pearson)"}},
       {"id": "subway", "kind": "metro", "files": ["subway_lines", "subway_stations"], "name": "Subway & LRT", "note": "Lines 1, 2, 4, 5 and 6", "on": true,
        "stationHover": "{name} · Line {lines}", "sub": {"id": "stnNames", "label": "Show station names", "on": true}},
+      {"id": "tram", "kind": "streetcars", "file": "streetcars", "name": "Streetcars", "note": "11 routes, numbered along the line; stops from zoom 15"},
+      {"id": "bus", "kind": "buses", "file": "transit_routes", "lazy": true, "name": "Bus routes", "note": "Frequent, express or overnight routes; stops from zoom 15",
+       "families": [["freq", "Frequent", "A bus or streetcar every 10 minutes or better each way, weekdays 7 am to 7 pm."], ["exp", "Express", "Routes the TTC names as express: fewer stops."], ["night", "Overnight", "At least hourly each way between 2 and 4 am on weeknights: the Blue Night network, buses and streetcars."]],
+       "countText": "{n} routes", "hint": "Tap a stop or any spot for the routes there, or search a route number.", "pickText": "Drawn on the map", "unpickText": "Stop drawing route {r}", "clearText": "Clear"},
       {"id": "build", "kind": "construction", "file": "construction", "name": "Transit under construction", "note": "Ontario Line, Line 2 and Line 5 extensions, Hazel McCallion Line",
        "ucText": "Under construction", "linkText": "Project page"},
       {"id": "closures", "kind": "closures", "under": "build", "file": "closures", "optional": true, "name": "Road closures", "note": "From transit and GO construction; side streets when zoomed in",
@@ -146,6 +150,15 @@
       "homes": {"label": "Home types", "types": [["detached", "Detached"], ["attached", "Semi & row"], ["lowrise", "Low-rise"], ["tower", "Towers"]]},
       "built": {"label": "Built", "bands": ["1960 or before", "1961–80", "1981–2000", "2001–21"]},
       "lang": {"label": "Language at home", "floor": 5, "note": "The language each person speaks most often at home.[ Another {multi}% name two or more equally.]"}
+    },
+    "transit": {
+      "file": "transit.json", "routes": "transit_routes", "title": "Transit nearby", "radius": 400,
+      "station": "Nearest station", "stationSub": "Line {lines} · {dist} away",
+      "rows": [["tram", "Streetcars", true], ["bus", "Buses", false]],
+      "night": "Overnight", "stop": "Nearest stop", "none": "No stop within 400 m",
+      "every": "about every {h} min on weekday middays", "nightOnly": "overnight only",
+      "kinds": {"tram": "Streetcar route", "bus": "Bus route"},
+      "note": "Routes with a stop within 400 m, about a 5-minute walk. Filled numbers come every 10 minutes or better on weekdays. Tap a number to draw the route. TTC schedules, week of {week}."
     },
     "nearby": {
       "file": "nearby.json", "radius": 1000,

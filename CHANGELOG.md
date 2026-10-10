@@ -3,6 +3,24 @@
 ## Since 1.1
 
 ### Both cities
+- **Streetcars and buses** (October 10), from the TTC and CTA schedules (GTFS), refreshed monthly
+  by a new Action (`fetch-surface.yml`).
+  - Toronto: a **Streetcars** layer after Subway & LRT, off by default: the 11 daytime routes in
+    red, numbered along the line, stops from zoom 15.
+  - Both cities: a **Bus routes** layer, off by default, showing one family at a time, picked with
+    chips: *Frequent* (every 10 minutes or better each way on weekdays, 7 am to 7 pm: 53 TTC routes
+    including streetcars, 23 CTA), *Express* (named express by the agency: 28 and 20) and
+    *Overnight* (at least hourly each way from 2 to 4 am: Toronto's Blue Night network, 35 routes;
+    17 CTA routes). Families are worked out from the schedule, not the agency's branding.
+  - Card: a **Transit nearby** section (between Schools and Nearby): the nearest subway/'L'
+    station, every streetcar and bus route with a stop within 400 m (¼ mile in Chicago), overnight
+    routes, and the nearest stop. Frequent routes are filled. Each number is a button that draws the
+    route on the map in ink with its stops, whichever layers are on; tapping a line on the map or
+    searching a route ("29", "Dufferin", "J14") does the same. Picked routes and the family are kept
+    in shared links (`routes=29,504`, `bus=night`).
+- For the iOS app: new files `transit.json`, `transit_routes.geojson` (load on demand) and, in
+  Toronto, `streetcars.geojson`; new layer kinds `streetcars` and `buses`, `lazy` on a layer;
+  `card.transit`; contract sections 3, 4 and 5. Additive, schema stays 1.
 - **Transit under construction**: a new layer after Subway & LRT / the 'L', off by default. Dashed
   lines in the future line's colour with hollow stations: the Ontario Line, the Line 2 East and
   Eglinton West extensions and the Hazel McCallion Line (regional view) in Toronto; the Red Line

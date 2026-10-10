@@ -684,7 +684,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --nbhd:#3D4148; --nbhd-fill:#3D4148; --ward:#7A3EC8; --prov:#B0306A; --fed:#1F6FB8; --bia:#E0791A; --hd:#7B5B3A; --sbw:#0E7F6E; --cult:#23262B; --cult-enclave:#B0306A;
   /* transport */
   --st:#FFFFFF; --st-case:#BDB9AE; --hwy:#F7C548; --hwy-case:#3B3F45; --hwy-city:#B6B9BF; --shield:#C8102E; --shield-city:#2E6B3A;
-  --station:#FFFFFF; --cl-closed:#D3263A; --cl-narrow:#E08A00;
+  --station:#FFFFFF; --cl-closed:#D3263A; --cl-narrow:#E08A00; --tram:#D7261E; --bus:#2F5FC4;
   --pill-bg:#F1EFE8;
   --cost-1:#F3E3B3; --cost-2:#E2A64B; --cost-3:#A85A1E; --hty-1:#E6EEF4; --hty-2:#A9C6DE; --hty-3:#5B90BE; --hty-4:#24588A; --mix-1:#C9D9E8; --mix-2:#8AB0D2; --mix-3:#4F82B4; --mix-4:#24588A;
   --com-1:#2E9C8F; --com-2:#C9CDD3; --com-3:#D9894A;
@@ -698,7 +698,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   --shadow:0 1px 2px rgba(20,22,26,.08),0 8px 24px rgba(20,22,26,.10);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
+  --tram:#F0574D; --bus:#6F94EC; --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -708,7 +708,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
+  --tram:#F0574D; --bus:#6F94EC; --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF; --scroll-thumb:rgba(236,237,239,.3);
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
   --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
@@ -918,6 +918,31 @@ circle.cl{stroke-width:3;fill:var(--city)}
 .cl-pin.closed{background:var(--cl-closed)} .cl-pin.narrowed{background:var(--cl-narrow)} .cl-pin.soon{opacity:.5}
 .z15 .cl-pin,.leaflet-container:not(.z12) .cl-pin{display:none}
 .leaflet-container:not(.z11) .cx-stn{display:none}
+/* Streetcars and buses: lines in the mode's colour, numbered badges from zoom 12, stops from zoom 15.
+   A picked route is drawn in ink over a casing, with its badges and stops at any zoom from 13. */
+.rt{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
+.rt.bus{stroke:var(--bus)} .rt.tram{stroke:var(--tram);stroke-width:2.4px}
+#map.z12 .rt{stroke-width:2.4px} #map.z12 .rt.tram{stroke-width:3px}
+#map.z14 .rt{stroke-width:3.2px} #map.z14 .rt.tram{stroke-width:4px}
+.rt-case{fill:none;stroke:var(--city);stroke-linecap:round;stroke-linejoin:round;stroke-width:3.4px;opacity:.85}
+.rt-case.tram{stroke-width:4.4px} #map.z12 .rt-case{stroke-width:4.4px} #map.z12 .rt-case.tram{stroke-width:5.4px}
+#map.z14 .rt-case{stroke-width:5.6px} #map.z14 .rt-case.tram{stroke-width:6.8px}
+.rt.pick,#map.z12 .rt.pick{stroke:var(--ink);stroke-width:3.6px} #map.z14 .rt.pick{stroke-width:5px}
+.rt-case.pick,#map.z12 .rt-case.pick{stroke-width:8px;opacity:.9} #map.z14 .rt-case.pick{stroke-width:10px}
+.rt-b{position:absolute;left:0;top:0;transform:translate(-50%,-50%);display:grid;place-items:center;box-sizing:border-box;height:15px;min-width:19px;padding:0 3px;border-radius:4px;
+  background:var(--bus);color:#fff;font:700 10px/1 var(--font);white-space:nowrap;box-shadow:0 0 0 1.5px var(--city)}
+.rt-b.tram{background:var(--tram)} .rt-b.pick{background:var(--ink);color:var(--panel);height:17px;font-size:11px}
+#map:not(.z12) .rt-b:not(.pick){display:none}
+.stop{fill:var(--city);stroke-width:1.6} .stop.bus{stroke:var(--bus)} .stop.tram{stroke:var(--tram)} .stop.pick{stroke:var(--ink);stroke-width:2}
+.sw.k-streetcars{background:var(--city) linear-gradient(var(--tram),var(--tram)) 0 50%/100% 4px no-repeat}
+.sw.k-buses{background:var(--city) linear-gradient(var(--bus),var(--bus)) 0 50%/100% 3px no-repeat}
+.buspick{display:grid;gap:4px} .buspick small{font-size:10.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.buspick .clr{border:none;color:var(--accent)}
+.rt-chips{display:flex!important;flex-wrap:wrap;gap:4px;margin:1px 0 2px}
+.rt-chip{font:inherit;font-size:11.5px;font-weight:700;line-height:1;padding:4px 6px;border-radius:5px;border:1.5px solid var(--bus);background:none;color:var(--ink);cursor:pointer}
+.rt-chip.tram{border-color:var(--tram)}
+.rt-chip.freq{background:var(--bus);color:#fff} .rt-chip.tram.freq{background:var(--tram)}
+.rt-chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--panel)}
 .sw.k-construction{background:repeating-linear-gradient(90deg,var(--ink-2) 0 6px,transparent 0 10px) center/100% 4px no-repeat}
 .sw.k-closures{background:linear-gradient(var(--cl-closed),var(--cl-closed)) left center/48% 5px no-repeat,linear-gradient(var(--cl-narrow),var(--cl-narrow)) right center/40% 5px no-repeat}
 /* Tap-for-details popups */
@@ -1196,7 +1221,7 @@ dl.facts dd{margin:0;font-weight:500;min-width:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet-polylineoffset@1.1.1/leaflet.polylineoffset.js"></script>
 <script>
-const CITY = {"id":"chicago","schema":1,"title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","distance":"mi","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim · Skyscrapers: Wikipedia (CC BY-SA)","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search an address or place","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Or press Find to search Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"drive":{"hub":[41.882,-87.6278],"hubName":"State & Madison"},"focus":{"label":"Focus on a county","all":"All of Chicagoland","noun":"County","count":"{n} towns in {name}","show":"Show all of {name}"},"facts":{"peers":"sides","in":"on the {name}","city":"in Chicago","hub":"the Loop"},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","place":"Side of the city","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners, housing type. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums; more below"},{"id":"unis","kind":"places","under":"landmarks","file":"institutions","cat":"university","name":"Universities","place":"University","aliases":{"University of Chicago":["UChicago","U of C"],"University of Illinois Chicago":["UIC"],"Loyola University Chicago":["Loyola"],"DePaul University":["DePaul"],"Northwestern University":["Northwestern"],"Illinois Institute of Technology":["IIT","Illinois Tech"]},"note":"Public and nonprofit universities with 1,000+ students, one point per campus"},{"id":"colleges","kind":"places","under":"landmarks","file":"institutions","cat":"college","name":"City Colleges","place":"City College","note":"The 7 City Colleges of Chicago"},{"id":"hospitals","kind":"places","under":"landmarks","file":"institutions","cat":"hospital","name":"ERs","place":"Hospital with an ER","edText":"Emergency department","note":"Public and nonprofit hospitals with an emergency department"},{"id":"towers","kind":"towers","under":"landmarks","file":"skyscrapers","name":"Skyscrapers","place":"Skyscraper","note":"Buildings about 490 ft (150 m) and taller, open or under construction","key":{"res":"Residential","com":"Commercial (office or hotel)","mix":"Mixed use","uc":"Under construction · hollow","sup":"Supertall, 984 ft (300 m) or more · gold ring"},"purpose":{"Residential":"Residential tower","Office":"Office tower","Hotel":"Hotel tower","Mixed-use":"Mixed-use tower"},"supText":"Supertall","ucText":"Under construction","builtText":"Completed","expectedText":"Expected","akaText":"Also known as {aka}","moreText":"More on Wikipedia","sourceText":"Source: Wikipedia"},{"id":"heritage","kind":"districts","file":"heritage","name":"Landmark districts","note":"59 Chicago Landmark Districts · boundaries as of 2012","label":"{name}","hover":"{name} Landmark District"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"school","kind":"boards","file":"school_board","name":"School board districts","note":"20 Chicago Board of Education districts · on the Nov 3, 2026 ballot","boards":[["cps","Board of Education","Chicago Board of Education"]],"label":"{num}","hover":"Board of Education district {num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}},{"id":"build","kind":"construction","file":"construction","name":"Transit under construction","note":"Red Line Extension, 95th to 130th Street","ucText":"Under construction","linkText":"Project page"},{"id":"closures","kind":"closures","under":"build","file":"closures","optional":true,"name":"Street closures","note":"From the Red Line Extension and Red/Purple rebuild; side streets when zoomed in","tz":"America/Chicago","closedText":"Closed","narrowedText":"Lanes narrowed","bothText":"both directions","startsText":"Starts {date}","untilText":"Permit to {date}","longText":"long-term","allDayText":"Around the clock","whenLabel":"When","hoursLabel":"Hours","projectLabel":"For","whoLabel":"Permit holder","fineText":"Dates are permit dates, not a forecast of when the road reopens. Data as of {date}.","asofText":"as of {date}"}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"loop","short":"To the Loop","key":"loopBand","minutes":"loop","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to the Loop leaving 8–9 am on a weekday, walking to the stop included (CTA ‘L’ and buses, Metra and the South Shore Line). Each spot counts its quickest arrival in the Loop: Union or Ogilvie, LaSalle/Van Buren, Clark/Lake, State & Madison or Millennium Station. Median across each community area.","source":"CTA, Metra and South Shore Line schedules, routed with r5py."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"homes","short":"Housing type","key":"homesTier","field":"homes","pick":[["detached","Detached","detached houses"],["attached","Attached","attached houses (rowhouses and townhouses)"],["flats","2–19 units","in buildings of 2 to 19 units, from two-flats to courtyard buildings"],["large","20+ units","in buildings of 20 or more units"]],"cuts":[10,30,60],"tiers":[["t1","Under 10%","--hty-1"],["t2","10–30%","--hty-2"],["t3","30–60%","--hty-3"],["t4","60% or more","--hty-4"]],"note":"Share of each community area's occupied homes that are {type}."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"loop","label":"To the Loop by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"Landmark district","layer":"heritage","text":"{name}[ (designated {since})]","onlyInside":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"},{"label":"School board","boards":"school","text":"District {num}"}],"living":{"hub":"To the Loop","hubText":"About {minutes} min by transit, weekday morning","caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024 and CTA/Metra schedules, {name}. Tiers compare community areas across Chicago.","homes":{"label":"Home types","types":[["detached","Detached"],["attached","Attached"],["flats","2–19 units"],["large","20+ units"]]},"built":{"label":"Built","bands":["1939 or earlier","1940–79","1980–99","2000 or later"]},"lang":{"label":"Language at home","floor":5,"note":"English only, or the language besides English that each person 5 or older speaks at home. For small areas the Census groups some languages: Polish shares a group with Russian and other Slavic languages."}},"schools":{"file":"attendance.geojson","title":"Schools","levels":[["es","Elementary"],["ms","Middle school"],["hs","High school"]],"sub":"Grades {grades} · {dist} away","subNoDist":"Grades {grades}","note":"The Chicago Public Schools whose attendance area this spot is in, from CPS’s {year} boundaries. Distances are straight-line to the school building. Boundaries change; CPS’s school locator has the final word."},"nearby":{"file":"nearby.json","radius":805,"nearest":[["library","Library"],["centre","Community center"],["er","Emergency dept."]],"within":"Within ½ mile","counts":[["park","park","parks"],["playground","playground","playgrounds"],["tennis","tennis court location","tennis court locations"]],"note":"Straight-line distances; half a mile is about a 10-minute walk. Chicago Public Library, the ERs layer and the Park District and City community centers, and OpenStreetMap (parks, playgrounds, courts)."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"trustees":{"layer":"school","table":"trustees","role":"School board member","ward":"District {num}","election":"2026-11-03","starts":"2027-01-15","race":"{n} candidate[{s}] · election {election}","counting":"{n} candidate[{s}] · results to come","leading":"leads the unofficial count","elected":"elected {election} · takes office {starts}","acclaimed":"elected {election} · takes office {starts}","citywide":{"board":"cps","key":"president","role":"School board president","sub":"Citywide"},"note":"School board candidates are from the Chicago Board of Elections’ candidate list, and counts from its results pages; results are unofficial until the board proclaims them."},"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
+const CITY = {"id":"chicago","schema":1,"title":"Chicago Layers","description":"A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.","mapLabel":"Map of the City of Chicago","locale":"en-US","distance":"mi","view":{"city":[[41.644,-87.94],[42.023,-87.524]],"region":[[41.2,-88.75],[42.5,-86.95]],"max":[[40.8,-89.4],[42.9,-86.3]]},"scope":{"outer":{"name":"Chicagoland","sub":"7 counties + NW Indiana"},"inner":{"name":"Chicago","sub":"city only"}},"footprint":"sides","water":[{"name":"Lake Michigan","at":[41.97,-87.57],"cls":"lake-near"},{"name":"Lake Michigan","at":[42.4,-87.55],"cls":"lake-far"}],"attribution":"Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Buses: CTA GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim · Skyscrapers: Wikipedia (CC BY-SA)","example":{"at":[41.8763,-87.6282],"name":"Harold Washington Library (example)"},"search":{"label":"Search an address or place","country":"us","viewbox":"-87.95,42.03,-87.52,41.64","noMatch":"No match inside the City of Chicago for “{q}”. Try the full street address, like “400 S State St”.","more":"Or press Find to search Chicago addresses"},"outside":{"beyond":"That spot is outside Chicagoland.","regionPill":"{region}","note":"Outside the City of Chicago. Wards, districts, community areas and SSAs on this map cover Chicago only."},"drive":{"hub":[41.882,-87.6278],"hubName":"State & Madison"},"focus":{"label":"Focus on a county","all":"All of Chicagoland","noun":"County","count":"{n} towns in {name}","show":"Show all of {name}"},"facts":{"peers":"sides","in":"on the {name}","city":"in Chicago","hub":"the Loop"},"units":{"singular":"Community area","plural":"community areas"},"groups":[["Places",[{"id":"sides","kind":"fill","size":"major","file":"sides","name":"The sides","place":"Side of the city","note":"Far North Side to Far Southeast Side: how Chicagoans place a neighbourhood","on":true,"colors":{"Far North Side":"--s-farnorth","Northwest Side":"--s-northwest","North Side":"--s-north","Central":"--s-central","West Side":"--s-west","South Side":"--s-south","Southwest Side":"--s-southwest","Far Southwest Side":"--s-farsouthwest","Far Southeast Side":"--s-farsoutheast"}},{"id":"ca","kind":"units","file":"community_areas","name":"Community areas","note":"The City’s 77 official community areas","on":true,"hover":"{name} · #{code}"},{"id":"lens","kind":"lens","name":"Community area lens","note":"Housing cost, getting to work, renters and owners, housing type. Narrow it to a shortlist."},{"id":"drive","kind":"suburbs","name":"Suburban lens","note":"Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},{"id":"knownas","kind":"knownas","file":"knownas","name":"Known-as names","note":"Wicker Park, Gold Coast, Pilsen, Wrigleyville…","on":true},{"id":"landmarks","kind":"landmarks","file":"landmarks","name":"Landmarks","note":"Ballparks, lakefront parks, museums; more below"},{"id":"unis","kind":"places","under":"landmarks","file":"institutions","cat":"university","name":"Universities","place":"University","aliases":{"University of Chicago":["UChicago","U of C"],"University of Illinois Chicago":["UIC"],"Loyola University Chicago":["Loyola"],"DePaul University":["DePaul"],"Northwestern University":["Northwestern"],"Illinois Institute of Technology":["IIT","Illinois Tech"]},"note":"Public and nonprofit universities with 1,000+ students, one point per campus"},{"id":"colleges","kind":"places","under":"landmarks","file":"institutions","cat":"college","name":"City Colleges","place":"City College","note":"The 7 City Colleges of Chicago"},{"id":"hospitals","kind":"places","under":"landmarks","file":"institutions","cat":"hospital","name":"ERs","place":"Hospital with an ER","edText":"Emergency department","note":"Public and nonprofit hospitals with an emergency department"},{"id":"towers","kind":"towers","under":"landmarks","file":"skyscrapers","name":"Skyscrapers","place":"Skyscraper","note":"Buildings about 490 ft (150 m) and taller, open or under construction","key":{"res":"Residential","com":"Commercial (office or hotel)","mix":"Mixed use","uc":"Under construction · hollow","sup":"Supertall, 984 ft (300 m) or more · gold ring"},"purpose":{"Residential":"Residential tower","Office":"Office tower","Hotel":"Hotel tower","Mixed-use":"Mixed-use tower"},"supText":"Supertall","ucText":"Under construction","builtText":"Completed","expectedText":"Expected","akaText":"Also known as {aka}","moreText":"More on Wikipedia","sourceText":"Source: Wikipedia"},{"id":"heritage","kind":"districts","file":"heritage","name":"Landmark districts","note":"59 Chicago Landmark Districts · boundaries as of 2012","label":"{name}","hover":"{name} Landmark District"}]],["Representation",[{"id":"wards","kind":"outline","level":"city","file":"wards","name":"City wards","note":"50 wards, one alderperson each","label":"Ward {num}","hover":"Ward {num}"},{"id":"house","kind":"outline","level":"state","file":"il_house","name":"Illinois House districts","note":"Two House districts make one Senate district","label":"{num}","hover":"Illinois House {num} · Senate {senate}"},{"id":"congress","kind":"outline","level":"national","file":"congress","name":"Congressional districts","note":"Illinois seats in the U.S. House","label":"IL-{num}","hover":"Congressional district IL-{num}"},{"id":"school","kind":"boards","file":"school_board","name":"School board districts","note":"20 Chicago Board of Education districts · on the Nov 3, 2026 ballot","boards":[["cps","Board of Education","Chicago Board of Education"]],"label":"{num}","hover":"Board of Education district {num}"},{"id":"ssa","kind":"patches","file":"ssa","name":"Special Service Areas","note":"Business districts funded by a local property-tax levy","label":"{name}","hover":"SSA #{num} · {name}"}]],["Getting around",[{"id":"streets","kind":"streets","file":"streets","name":"Main streets","note":"The mile grid and the diagonals: Ashland, Western, Milwaukee…","on":true},{"id":"hwy","kind":"highways","files":["highways","region_highways","region_shields"],"name":"Expressways","note":"Kennedy, Dan Ryan, Eisenhower, Stevenson, Lake Shore Drive","on":true,"shields":{"LSD":"Lake Shore Dr"},"tollShield":"Toll"},{"id":"metra","kind":"rail","files":["metra_lines","metra_stations","metra_lines_inner"],"name":"Metra trains","note":"11 commuter lines from four downtown stations","on":true,"hover":"{name} · downtown – {to}"},{"id":"cta","kind":"metro","files":["cta_lines","cta_stations"],"name":"The ‘L’","note":"CTA Red, Blue, Brown, Green, Orange, Pink, Purple and Yellow lines","on":true,"stationHover":"{name} · {lines}","sub":{"id":"stnNames","label":"Show station names","on":true}},{"id":"bus","kind":"buses","file":"transit_routes","lazy":true,"name":"Bus routes","note":"Frequent, express or overnight routes; stops from zoom 15","families":[["freq","Frequent","A bus every 10 minutes or better each way, weekdays 7 am to 7 pm."],["exp","Express","Routes the CTA names as express: fewer stops."],["night","Overnight","At least hourly each way between 2 and 4 am on weeknights: the CTA's Owl routes."]],"countText":"{n} routes","hint":"Tap a stop or any spot for the routes there, or search a route number.","pickText":"Drawn on the map","unpickText":"Stop drawing route {r}","clearText":"Clear"},{"id":"build","kind":"construction","file":"construction","name":"Transit under construction","note":"Red Line Extension, 95th to 130th Street","ucText":"Under construction","linkText":"Project page"},{"id":"closures","kind":"closures","under":"build","file":"closures","optional":true,"name":"Street closures","note":"From the Red Line Extension and Red/Purple rebuild; side streets when zoomed in","tz":"America/Chicago","closedText":"Closed","narrowedText":"Lanes narrowed","bothText":"both directions","startsText":"Starts {date}","untilText":"Permit to {date}","longText":"long-term","allDayText":"Around the clock","whenLabel":"When","hoursLabel":"Hours","projectLabel":"For","whoLabel":"Permit holder","fineText":"Dates are permit dates, not a forecast of when the road reopens. Data as of {date}.","asofText":"as of {date}"}]]],"lens":{"label":"Community area lens","file":"ca_profiles.json","source":"American Community Survey 2020–2024 (5-year estimates), Census tracts grouped into community areas.","lenses":[{"id":"cost","short":"Housing cost","key":"cost","tiers":[["lower","Lower housing cost","--cost-1"],["middle","Middle","--cost-2"],["higher","Higher housing cost","--cost-3"]],"note":"Median home value and rent, weighted by owners and renters, ranked into thirds across Chicago. 2020–2024 survey estimates, not current prices."},{"id":"loop","short":"To the Loop","key":"loopBand","minutes":"loop","optional":true,"tiers":[["under30","Under 30 min","--uni-1"],["30to45","30–45 min","--uni-2"],["45to60","45–60 min","--uni-3"],["over60","Over an hour","--uni-4"]],"note":"Typical transit trip to the Loop leaving 8–9 am on a weekday, walking to the stop included (CTA ‘L’ and buses, Metra and the South Shore Line). Each spot counts its quickest arrival in the Loop: Union or Ogilvie, LaSalle/Van Buren, Clark/Lake, State & Madison or Millennium Station. Median across each community area.","source":"CTA, Metra and South Shore Line schedules, routed with r5py."},{"id":"commute","short":"Getting to work","key":"commute","tiers":[["transit","Mostly transit, walk or bike","--com-1"],["mixed","Mixed","--com-2"],["car","Mostly car","--com-3"]],"note":"Share of commuters who drive: under 50%, 50–68%, 68% or more (the same lines as the Toronto map). People who work from home aren’t counted."},{"id":"tenure","short":"Renters & owners","key":"tenure","tiers":[["owners","Mostly owners","--ten-1"],["mix","A mix","--ten-2"],["renters","Mostly renters","--ten-3"]],"note":"Share of households that rent: under 35%, 35–60%, over 60%."},{"id":"homes","short":"Housing type","key":"homesTier","field":"homes","pick":[["detached","Detached","detached houses"],["attached","Attached","attached houses (rowhouses and townhouses)"],["flats","2–19 units","in buildings of 2 to 19 units, from two-flats to courtyard buildings"],["large","20+ units","in buildings of 20 or more units"]],"cuts":[10,30,60],"tiers":[["t1","Under 10%","--hty-1"],["t2","10–30%","--hty-2"],["t3","30–60%","--hty-3"],["t4","60% or more","--hty-4"]],"note":"Share of each community area's occupied homes that are {type}."}],"filters":[{"lens":"cost","label":"Housing cost","options":[["lower","Lower"],["middle","Middle"],["higher","Higher"]]},{"lens":"loop","label":"To the Loop by transit","max":true,"options":[[30,"Up to 30 min"],[45,"45 min"],[60,"60 min"]]},{"lens":"commute","label":"Getting to work","options":[["transit","Transit, walk, bike"],["mixed","Mixed"],["car","Car"]]},{"lens":"tenure","label":"Households","options":[["owners","Mostly own"],["mix","A mix"],["renters","Mostly rent"]]}]},"card":{"pills":[{"layer":"sides","else":"sides"},{"knownas":2},{"layer":"ssa","text":"SSA: {name}","color":"--bia"},{"layer":"congress","text":"Congress: IL-{num}","color":"--fed"}],"facts":[{"label":"Side","layer":"sides","text":"{name}"},{"label":"Community area","layer":"ca","text":"{name} (#{code})"},{"label":"Known as","knownas":true},{"label":"Landmark district","layer":"heritage","text":"{name}[ (designated {since})]","onlyInside":true},{"label":"SSA","layer":"ssa","text":"{name}[ (#{num})]","empty":"None"},{"label":"City ward","layer":"wards","text":"Ward {num}"},{"label":"Illinois House","layer":"house","text":"District {num}"},{"label":"Illinois Senate","layer":"house","text":"District {senate}"},{"label":"Congress","layer":"congress","text":"IL-{num}"},{"label":"School board","boards":"school","text":"District {num}"}],"living":{"hub":"To the Loop","hubText":"About {minutes} min by transit, weekday morning","caveat":"Survey estimates for 2020–2024, not current prices. Use them to compare community areas, not to budget.","footer":"American Community Survey 2020–2024 and CTA/Metra schedules, {name}. Tiers compare community areas across Chicago.","homes":{"label":"Home types","types":[["detached","Detached"],["attached","Attached"],["flats","2–19 units"],["large","20+ units"]]},"built":{"label":"Built","bands":["1939 or earlier","1940–79","1980–99","2000 or later"]},"lang":{"label":"Language at home","floor":5,"note":"English only, or the language besides English that each person 5 or older speaks at home. For small areas the Census groups some languages: Polish shares a group with Russian and other Slavic languages."}},"schools":{"file":"attendance.geojson","title":"Schools","levels":[["es","Elementary"],["ms","Middle school"],["hs","High school"]],"sub":"Grades {grades} · {dist} away","subNoDist":"Grades {grades}","note":"The Chicago Public Schools whose attendance area this spot is in, from CPS’s {year} boundaries. Distances are straight-line to the school building. Boundaries change; CPS’s school locator has the final word."},"transit":{"file":"transit.json","routes":"transit_routes","title":"Transit nearby","radius":402,"station":"Nearest ‘L’ station","stationSub":"{lines} · {dist} away","rows":[["bus","Buses",false]],"night":"Overnight","stop":"Nearest stop","none":"No stop within ¼ mile","every":"about every {h} min on weekday middays","nightOnly":"overnight only","kinds":{"bus":"Bus route"},"note":"Routes with a stop within ¼ mile, about a 5-minute walk. Filled numbers come every 10 minutes or better on weekdays. Tap a number to draw the route. CTA schedules, week of {week}."},"nearby":{"file":"nearby.json","radius":805,"nearest":[["library","Library"],["centre","Community center"],["er","Emergency dept."]],"within":"Within ½ mile","counts":[["park","park","parks"],["playground","playground","playgrounds"],["tennis","tennis court location","tennis court locations"]],"note":"Straight-line distances; half a mile is about a 10-minute walk. Chicago Public Library, the ERs layer and the Park District and City community centers, and OpenStreetMap (parks, playgrounds, courts)."},"reps":{"file":"representatives.json","offices":[{"role":"Alderperson","layer":"wards","table":"wards","key":"num","sub":"Ward {f.num}"},{"role":"State representative","layer":"house","table":"house","key":"num","sub":"{r.party} · District {f.num}"},{"role":"State senator","layer":"house","table":"senate","key":"senate","sub":"{r.party} · District {f.senate}"},{"role":"U.S. representative","layer":"congress","table":"congress","key":"num","sub":"{r.party} · IL-{f.num}"}],"trustees":{"layer":"school","table":"trustees","role":"School board member","ward":"District {num}","election":"2026-11-03","starts":"2027-01-15","race":"{n} candidate[{s}] · election {election}","counting":"{n} candidate[{s}] · results to come","leading":"leads the unofficial count","elected":"elected {election} · takes office {starts}","acclaimed":"elected {election} · takes office {starts}","citywide":{"board":"cps","key":"president","role":"School board president","sub":"Citywide"},"note":"School board candidates are from the Chicago Board of Elections’ candidate list, and counts from its results pages; results are unofficial until the board proclaims them."},"note":"Names open each person’s official page. Chicago’s city council elections are nonpartisan. Checked weekly against those sources; last change {date}."}}};
 /* City Layers map engine. Everything city-specific comes from CITY (cities/<city>/city.json),
    inlined above this script by engine/assemble.py, and from the city's data/ folder. */
 (() => {
@@ -1309,7 +1334,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lm.tw.sup b', '.lm.inst b', '.lm.tw b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.rt-b.pick', '.lm.t1 b', '.lm.t2 b', '.lm.tw.sup b', '.lm.inst b', '.lm.tw b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.rt-b', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -1629,6 +1654,20 @@ const KINDS = {
     g._names = names;
     return g;
   },
+  // Streetcar routes with daytime service, each numbered along its line (badges from zoom 12).
+  streetcars: (it, fc) => routeLines(fc.features, false),
+  // Bus routes: one family at a time (frequent, express, overnight). Shapes load the first time it's on.
+  buses: it => {
+    const g = L.layerGroup(); let cur = null;
+    g._draw = () => {
+      if (cur){ g.removeLayer(cur); cur = null; }
+      if (!routeGeo) return;
+      cur = routeLines(routeGeo.features.filter(f => f.properties.f.includes(busFam)), false);
+      g.addLayer(cur);
+    };
+    g.on('add', () => ensureRoutes().then(() => { g._draw(); drawBusBox(); }));
+    return g;
+  },
   // Lines being built: dashed in the line's colour over a casing, hollow stations, names from zoom 13.
   // Tap a line or station for what it is, who builds it and when it's due.
   construction: (it, fc) => {
@@ -1707,8 +1746,143 @@ function clPopup(it, p, latlng, soon, asof){
     (p.desc ? '<p class="desc">' + esc(p.desc) + '</p>' : '') +
     '<p class="fine">' + esc(fill(it.fineText, {date: niceDate(asof)})) + '</p>').openOn(map);
 }
+/* ---------- Streetcars and buses ----------
+   Routes and stops come from the agency's schedule (engine/surface.py). transit.json (the route list and every
+   stop) loads after the map; route shapes for the bus families load the first time they're needed. Families
+   describe the service (frequent, express, overnight); nothing is ranked. A route can be picked, from the card,
+   search, a link or a tap on its line: it's drawn in ink with its stops, whichever layers are on. */
+const TRAMS = byKind('streetcars'), BUSES = byKind('buses'), TR = CITY.card.transit;
+const picked = new Set();
+const BUS_DEFAULT = BUSES ? BUSES.families[0][0] : null;
+let busFam = BUS_DEFAULT, routeGeo = null, routeGeoP = null;
+function ensureRoutes(){
+  if (!TR) return Promise.resolve(null);
+  return routeGeoP || (routeGeoP = get(TR.routes).then(d => { routeGeo = d; return d; }).catch(() => { routeGeoP = null; return null; }));
+}
+const routeName = r => r.r + (r.n ? ' ' + r.n : '');
+const routeTip = p => esc(routeName(p)) + (p.h ? ' · ' + esc(fill(TR.every, {h: p.h})) : '') + (p.day === false ? ' · ' + esc(TR.nightOnly) : '');
+// A point a fraction t of the way along a line (lengths roughly in metres-per-degree at these latitudes).
+function along(c, t){
+  const d = [0];
+  for (let i = 1; i < c.length; i++) d.push(d[i - 1] + Math.hypot((c[i][0] - c[i - 1][0]) * .72, c[i][1] - c[i - 1][1]));
+  const T = d[d.length - 1] * t; let i = 1;
+  while (i < d.length - 1 && d[i] < T) i++;
+  const s = (T - d[i - 1]) / ((d[i] - d[i - 1]) || 1);
+  return [c[i - 1][0] + (c[i][0] - c[i - 1][0]) * s, c[i - 1][1] + (c[i][1] - c[i - 1][1]) * s];
+}
+const span = c => c.reduce((a, p, i) => i ? a + Math.hypot((p[0] - c[i - 1][0]) * .72, p[1] - c[i - 1][1]) : 0, 0);
+// Route lines with number badges. Line widths follow the zoom through CSS (.z12, .z14 on the map).
+function routeLines(feats, pick){
+  // Every casing goes in before any line, or a casing's rounded end would nick the line drawn before it.
+  const g = L.layerGroup(), cases = L.layerGroup(), lines = L.layerGroup();
+  g.addLayer(cases); g.addLayer(lines);
+  feats.forEach(f => {
+    const p = f.properties, parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
+    parts.forEach(c => {
+      cases.addLayer(L.polyline(c.map(ll), {pane:'transit', className:'rt-case ' + p.m + (pick ? ' pick' : ''), interactive:false}));
+      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt ' + p.m + (pick ? ' pick' : ''), bubblingMouseEvents:false});
+      hoverTip(pl, routeTip(p));
+      pl.on('click', e => { if (!pick) pickRoute(p.r, true); inspect(e.latlng); });
+      lines.addLayer(pl);
+    });
+    const long = parts.reduce((a, b) => span(b) > span(a) ? b : a);
+    (pick ? [0, .5, 1] : [.25, .75]).forEach(t => g.addLayer(L.marker(ll(along(long, t)), {pane:'pts', interactive:false, keyboard:false,
+      icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="rt-b ' + p.m + (pick ? ' pick' : '') + '">' + esc(p.r) + '</span>'})})));
+  });
+  return g;
+}
+const pickLayer = L.layerGroup().addTo(map);
+function drawPicks(){
+  pickLayer.clearLayers();
+  if (routeGeo && picked.size) pickLayer.addLayer(routeLines(routeGeo.features.filter(f => picked.has(f.properties.r)), true));
+  drawStops(); drawBusBox();
+  here.querySelectorAll('[data-route]').forEach(b => b.setAttribute('aria-pressed', String(picked.has(b.dataset.route))));
+}
+function pickRoute(r, on){
+  if (on) picked.add(r); else picked.delete(r);
+  ensureRoutes().then(drawPicks); queueHash();
+}
+// From search: pick the route and frame the whole of it.
+function goRoute(r){
+  showResults(''); q.value = routeName(r);
+  pickRoute(r.r, true);
+  if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
+  frame(L.latLngBounds([[r.b[1], r.b[0]], [r.b[3], r.b[2]]]));
+}
+// Stops: those of the streetcar layer and the bus layer from zoom 15, a picked route's from zoom 13; only in view.
+const stopLayer = L.layerGroup().addTo(map);
+function drawStops(){
+  stopLayer.clearLayers();
+  const T = data.transit; if (!T) return;
+  const z = map.getZoom() + .01, b = map.getBounds().pad(.1);
+  const tram = TRAMS && state[TRAMS.id] && z >= 15, bus = BUSES && state[BUSES.id] && z >= 15;
+  const pk = picked.size && z >= 13 ? new Set(T.routes.map((r, i) => picked.has(r.r) ? i : -1).filter(i => i >= 0)) : null;
+  if (!tram && !bus && !pk) return;
+  T.stops.forEach(s => {
+    if (!b.contains([s[1], s[0]])) return;
+    const rs = s[3].map(i => T.routes[i]), isTram = rs.some(r => r.m === 'tram' && r.day), onPick = pk && s[3].some(i => pk.has(i));
+    if (!(onPick || (tram && isTram) || (bus && rs.some(r => r.m === 'bus')))) return;
+    const m = L.circleMarker([s[1], s[0]], {pane:'pts', radius: z >= 16 ? 4 : 3, className:'stop ' + (onPick ? 'pick' : isTram ? 'tram' : 'bus'), bubblingMouseEvents:false});
+    hoverTip(m, esc(s[2]) + ' · ' + esc(rs.map(r => r.r).join(', ')));
+    m.on('click', () => inspect(L.latLng(s[1], s[0]), s[2]));
+    stopLayer.addLayer(m);
+  });
+}
+map.on('moveend', drawStops);
+// The bus layer's panel box: pick a family; routes picked elsewhere are listed with a way to clear them.
+function drawBusBox(){
+  if (!BUSES) return;
+  const box = document.getElementById('busbox'); if (!box) return;
+  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.fam === busFam)));
+  const fam = BUSES.families.find(f => f[0] === busFam), n = data.transit ? data.transit.routes.filter(r => r.f.includes(busFam)).length : null;
+  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + fam[2] + ' ' + BUSES.hint;
+  const pk = document.getElementById('buspick');
+  pk.hidden = !picked.size;
+  pk.innerHTML = picked.size ? '<small>' + esc(BUSES.pickText) + '</small><div class="chips">' + [...picked].map(r =>
+    '<button type="button" data-unpick="' + esc(r) + '" aria-label="' + esc(fill(BUSES.unpickText, {r})) + '">' + esc(r) + ' ×</button>').join('') +
+    '<button type="button" class="clr" data-unpick="">' + esc(BUSES.clearText) + '</button></div>' : '';
+  pk.querySelectorAll('[data-unpick]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.unpick) pickRoute(b.dataset.unpick, false); else { picked.clear(); ensureRoutes().then(drawPicks); queueHash(); }
+  }));
+}
+function setBusFam(f){
+  if (!BUSES || !BUSES.families.some(x => x[0] === f)) return;
+  busFam = f;
+  if (layers[BUSES.id] && layers[BUSES.id]._draw) layers[BUSES.id]._draw();
+  drawBusBox(); queueHash();
+}
+/* The card's transit section: the nearest rapid-transit station, then every route with a stop within the radius,
+   by mode, nearest first, and the nearest stop. Numbers are buttons that draw the route. Filled numbers mark
+   frequent routes (a description of the service, not a score). */
+function transitHere(x, y){
+  const T = data.transit; if (!TR || !T) return '';
+  const near = new Map(); let best = null;
+  const dy = TR.radius / 111000 * 1.2;
+  T.stops.forEach(s => {
+    if (Math.abs(s[1] - y) > dy) return;
+    const d = metres([x, y], s); if (d > TR.radius) return;
+    s[3].forEach(i => { if (!near.has(i) || d < near.get(i)) near.set(i, d); });
+    if (!best || d < best[1]) best = [s, d];
+  });
+  const list = [...near].sort((a, b) => a[1] - b[1]).map(([i]) => T.routes[i]);
+  const chip = (r, named) => '<button type="button" class="rt-chip ' + r.m + (r.f.includes('freq') ? ' freq' : '') + '" data-route="' + esc(r.r) + '" aria-pressed="' + picked.has(r.r) + '" title="' + routeTip(r) + '">' + esc(named ? routeName(r) : r.r) + '</button>';
+  let rows = '';
+  const stns = METRO && loaded[[].concat(METRO.files)[1]];
+  if (TR.station && stns){
+    const s = stns.features.map(f => [f, metres([x, y], f.geometry.coordinates)]).sort((a, b) => a[1] - b[1])[0];
+    if (s && s[1] < (TR.stationMax || 5000)) rows += '<dt>' + esc(TR.station) + '</dt><dd>' + esc(s[0].properties.name) + '<span>' + esc(fill(TR.stationSub, {lines: s[0].properties.lines, dist: dist(s[1])})) + '</span></dd>';
+  }
+  TR.rows.forEach(([mode, label, named]) => {
+    const rs = list.filter(r => r.m === mode && r.day);
+    if (rs.length) rows += '<dt>' + esc(label) + '</dt><dd><span class="rt-chips">' + rs.map(r => chip(r, named)).join('') + '</span></dd>';
+  });
+  const night = list.filter(r => r.f.includes('night'));
+  if (night.length) rows += '<dt>' + esc(TR.night) + '</dt><dd><span class="rt-chips">' + night.map(r => chip(r, false)).join('') + '</span></dd>';
+  rows += '<dt>' + esc(TR.stop) + '</dt><dd>' + (best ? esc(best[0][2]) + '<span>' + dist(best[1]) + ' away</span>' : '<span>' + esc(TR.none) + '</span>') + '</dd>';
+  return '<div class="live transit"><dl>' + rows + '</dl><p>' + esc(fill(TR.note, {week: niceDate(T.week)})) + '</p></div>';
+}
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, buses: 11.5, streetcars: 11.6, metro: 12, construction: 12.3, closures: 12.6, landmarks: 13, places: 14, towers: 14.5})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -1749,6 +1923,14 @@ CITY.groups.forEach(([title, items]) => {
         '</div><div class="legend"><small id="brdnote-' + it.id + '"></small></div>';
       grp.appendChild(box);
       box.querySelectorAll('[data-board]').forEach(b => b.addEventListener('click', () => setBoard(it.id, b.dataset.board)));
+    }
+    if (it.kind === 'buses'){   // one family at a time, plus any routes picked from the card or search
+      const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'busbox'; box.hidden = !it.on;
+      box.innerHTML = '<div class="chips pick" role="radiogroup" aria-label="' + esc(it.name) + '">' + it.families.map(([f, short]) =>
+        '<button type="button" role="radio" data-fam="' + f + '" aria-checked="' + (f === busFam) + '">' + esc(short) + '</button>').join('') +
+        '</div><div class="legend"><small id="busnote"></small></div><div class="buspick" id="buspick" hidden></div>';
+      grp.appendChild(box);
+      box.querySelectorAll('[data-fam]').forEach(b => b.addEventListener('click', () => setBusFam(b.dataset.fam)));
     }
     if (it.kind === 'towers'){   // key to the badges, shown while the layer is on
       const box = document.createElement('div'); box.className = 'lensbox child'; box.id = 'twkey-' + it.id; box.hidden = !it.on;
@@ -1850,6 +2032,8 @@ function setLayer(id, on){
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
   if (kindOf(id) === 'towers'){ const box = document.getElementById('twkey-' + id); if (box) box.hidden = !on; }
+  if (kindOf(id) === 'buses'){ document.getElementById('busbox').hidden = !on; drawBusBox(); }
+  if (kindOf(id) === 'buses' || kindOf(id) === 'streetcars') drawStops();
   if (kindOf(id) === 'boards'){ const box = document.getElementById('brd-' + id); if (box) box.hidden = !on; if (on) setBoard(id, boardPick[id]); }
   if (kindOf(id) === 'suburbs'){
     document.getElementById('drvbox').hidden = !on;
@@ -1873,6 +2057,8 @@ document.getElementById('reset').addEventListener('click', () => {
   clearFilters(); applyFilter();
   Object.keys(pick).forEach(id => { pick[id] = LENSES[id].pick[0][0]; });
   BOARDS.forEach(it => setBoard(it.id, it.boards[0][0]));
+  if (BUSES) setBusFam(BUS_DEFAULT);
+  if (picked.size){ picked.clear(); drawPicks(); }
   setLens(FIRST_LENS);
   setScope('inner', true);
   closeHere();
@@ -1946,7 +2132,7 @@ function langRow(cfg, d){
     (cfg.note ? '<span class="caveat">' + esc(fill(cfg.note, {multi: d.langMulti})) + '</span>' : '') + '</dd>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
-const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, schools:false, near:false, reps:false} : {bounds:true, live:true, schools:true, near:true, reps:false};
+const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, schools:false, transit:false, near:false, reps:false} : {bounds:true, live:true, schools:true, transit:true, near:true, reps:false};
 let secOpen = Object.assign({}, SEC_DEFAULT);
 try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || '{}')); } catch (e) {}
 function section(id, title, body){
@@ -2146,10 +2332,12 @@ function inspect(latlng, title, muniName){
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
     section('schools', (CITY.card.schools && CITY.card.schools.title) || 'Schools', schools(x, y)) +
+    section('transit', (TR && TR.title) || 'Transit', transitHere(x, y)) +
     section('near', 'Nearby', nearby(x, y)) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelector('.share').onclick = share;
+  here.querySelectorAll('[data-route]').forEach(b => b.addEventListener('click', () => pickRoute(b.dataset.route, !picked.has(b.dataset.route))));
   here.querySelectorAll('details.sec').forEach(d => d.addEventListener('toggle', () => { secOpen[d.dataset.sec] = d.open; try { localStorage.setItem('cardSections', JSON.stringify(secOpen)); } catch (e) {} }));
 }
 // What makes the unit stand out among its peers (engine/facts.py, built ahead of time): the strongest fact.
@@ -2352,6 +2540,11 @@ function suggestions(text){
     const b = score([p.name].concat(p.aka ? [p.aka] : []));
     if (b && !lmHits.some(o => metres(o.at, f.geometry.coordinates) < 20)) out.push({s: b.s, rank: p.super ? 2 : 2.8, name: p.name, sub: TOWERS.place + ' · ' + towerHeight(p, true) + (p.uc ? ' · ' + TOWERS.ucText : '') + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
+  // Streetcar and bus routes, by number or name ("29", "Dufferin", "29 Dufferin"): choosing one draws it.
+  (data.transit ? data.transit.routes : []).forEach(r => {
+    const b = score([routeName(r), r.r]);
+    if (b) out.push({s: b.s, rank: 2.9, name: routeName(r), sub: TR.kinds[r.m] + (r.day ? '' : ' · ' + TR.nightOnly), go: () => goRoute(r)});
+  });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));
     if (b) out.push({s: b.s, rank: p.rank || p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
@@ -2526,6 +2719,8 @@ function linkState(){
   if (fit.length) parts.push(['fit', fit.join(',')]);
   const brd = BOARDS.filter(it => state[it.id] && boardPick[it.id] !== it.boards[0][0]).map(it => it.id + ':' + boardPick[it.id]);
   if (brd.length) parts.push(['board', brd.join(',')]);
+  if (BUSES && state[BUSES.id] && busFam !== BUS_DEFAULT) parts.push(['bus', busFam]);
+  if (picked.size) parts.push(['routes', [...picked].join(',')]);
   return parts.map(([k, v]) => k + '=' + enc(v)).join('&');
 }
 function writeHash(){
@@ -2542,7 +2737,7 @@ function readHash(h){
 // Put the map into the state a link describes. Unknown ids and malformed parts are skipped.
 function applyHash(h){
   const o = readHash(h);
-  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus', 'board'].some(k => k in o)) return false;
+  if (!['map', 'pin', 'view', 'layers', 'lens', 'fit', 'focus', 'board', 'bus', 'routes'].some(k => k in o)) return false;
   const num = s => s.split(/[,/]/).map(Number);
   setScope(o.view === 'region' || regionFeature(o.focus) ? 'outer' : 'inner', false);
   setFocus(regionFeature(o.focus) ? o.focus : null, false);
@@ -2557,6 +2752,9 @@ function applyHash(h){
     syncStnNames();
   }
   (o.board || '').split(',').forEach(part => { const [id, b] = part.split(':'); if (b) setBoard(id, b); });
+  if (o.bus) setBusFam(o.bus);
+  picked.clear(); (o.routes || '').split(',').filter(Boolean).forEach(r => picked.add(r));
+  if (TR && (picked.size || pickLayer.getLayers().length)) ensureRoutes().then(drawPicks);
   const [lk, lp] = (o.lens || '').split(':');
   if (lk && LENSES[lk] && document.querySelector('[data-lens="' + lk + '"]')){ if (lp) setPick(lk, lp); setLens(lk); }
   if (o.fit){
@@ -2655,7 +2853,7 @@ async function saveImage(labels){
     await new Promise(r => setTimeout(r, 400)); declutter(); await frames(2);
     const has = (n, c) => n.classList && n.classList.contains(c);
     const skip = n => has(n, 'leaflet-control-container') || has(n, 'leaflet-pin-pane') || has(n, 'hover-tip') ||
-      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') ||
+      (!labels && (has(n, 'leaflet-tooltip-pane') || has(n, 'leaflet-stlbl-pane') || has(n, 'shield') || has(n, 'rt-b') ||
         (n.tagName === 'B' && n.parentElement && has(n.parentElement, 'lm'))));
     restoreSvg = inlineSvgStyles(el);
     canvas = await lib.toCanvas(el, {width: cw, height: ch, canvasWidth: W, canvasHeight: H, pixelRatio: 1,
@@ -2706,7 +2904,8 @@ function stampCredits(canvas){
 /* ---------- load ---------- */
 renderEmpty('Loading map data…');
 const files = ['base', 'regions'];
-LAYERS.forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
+// Files of layers marked "lazy" (bus route shapes) load the first time they're needed.
+LAYERS.filter(it => !it.lazy).forEach(it => [].concat(it.file || it.files || []).forEach(f => { if (!files.includes(f)) files.push(f); }));
 const loaded = {};
 // Files of layers marked "optional" (e.g. daily closures not fetched yet) load as empty instead of failing the map.
 const OPTIONAL = new Set(LAYERS.filter(it => it.optional).flatMap(it => [].concat(it.file || it.files || [])));
@@ -2745,6 +2944,12 @@ Promise.all(files.map(f => get(f).catch(e => { if (OPTIONAL.has(f)) return {type
   lastHash = location.hash;
   if (location.hash) linkReady = true; else armLink();
   window.cityMapReady = true;
+  // Stops and the route list: fetched after the map is up, then stops are drawn and the open card redrawn.
+  if (TR) get(TR.file).then(d => {
+    data.transit = d;
+    drawStops(); drawBusBox();
+    if (!here.hidden && lastInspect && hit(data.footprint, lastInspect[0].lng, lastInspect[0].lat)) inspect(...lastInspect);
+  }).catch(() => { data.transit = null; });
   // Attendance areas are big: fetched after the map is up, then the open card is redrawn with them.
   if (CITY.card.schools) get(CITY.card.schools.file).then(d => {
     data.schools = d;
