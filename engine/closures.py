@@ -107,6 +107,11 @@ def on_arterial(p, pts):
     return False
 
 
+def clip(t, n):
+    """At most n characters, cut at a word, with an ellipsis when cut."""
+    return t if len(t) <= n else t[:n].rsplit(' ', 1)[0].rstrip(',;:(') + '…'
+
+
 def day(s):
     return datetime.strptime(s[:10], '%Y-%m-%d').date() if s else None
 
@@ -137,7 +142,7 @@ for p in src['permits']:
     key = (norm(p['street']), p['kind'], tuple(sorted(tuple(round(v, 4) for v in c) for c in p['coords'][:1] + p['coords'][-1:])))   # either direction
     props = {'proj': proj, 'name': pname, 'street': p['street'], 'extent': p['extent'], 'kind': p['kind'], 'art': art,
              'start': p['start'], 'end': p['end'], 'hours': p.get('hours'), 'days': p.get('days'), 'both': p.get('both', False),
-             'who': p.get('who'), 'desc': (p.get('desc') or '')[:220]}
+             'who': p.get('who'), 'desc': clip(p.get('desc') or '', 220)}
     old = kept.get(key)
     if old and old['properties']['end'] >= props['end']:
         continue
