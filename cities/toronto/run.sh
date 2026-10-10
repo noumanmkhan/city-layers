@@ -34,5 +34,6 @@ python3 gta_places.py        # likewise: names each community's municipality fro
 python3 ../../engine/regions.py toronto   # outlines for Focus on a county / region
 [ -f raw/construction/osm.json ] && python3 ../../engine/construction.py toronto   # after streets: lines being built (fetch-construction.yml)
 [ -f raw/closures/permits.json ] && python3 ../../engine/closures.py toronto       # after construction: closures from that work (fetch-closures.yml, daily)
+[ -f raw/surface/routes.json ] && python3 ../../engine/surface.py toronto       # streetcars and buses from the agency GTFS (fetch-surface.yml)
 python3 ../../engine/assemble.py toronto
 echo "Done. Preview: cd docs && python3 -m http.server 8000"
