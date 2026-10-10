@@ -272,6 +272,11 @@ circle.cl{stroke-width:3;fill:var(--city)}
   background:var(--bus);color:#fff;font:700 10px/1 var(--font);white-space:nowrap;box-shadow:0 0 0 1.5px var(--city)}
 .rt-b.tram{background:var(--tram)} .rt-b.pick{background:var(--ink);color:var(--panel);height:17px;font-size:11px}
 #map:not(.z12) .rt-b:not(.pick){display:none}
+.rt-b{cursor:pointer}
+/* One route shown alone: the rest fade back, their numbers hide */
+#map.rt-focus .rt:not(.focus),#map.rt-focus .rt-case:not(.focus){opacity:.12}
+#map.rt-focus .rt-b:not(.focus){display:none}
+#map.rt-focus .rt-b.focus{display:grid}
 .stop{fill:var(--city);stroke-width:1.6} .stop.bus{stroke:var(--bus)} .stop.tram{stroke:var(--tram)} .stop.pick{stroke:var(--ink);stroke-width:2}
 .sw.k-streetcars{background:var(--city) linear-gradient(var(--tram),var(--tram)) 0 50%/100% 4px no-repeat}
 .sw.k-buses{background:var(--city) linear-gradient(var(--bus),var(--bus)) 0 50%/100% 3px no-repeat}

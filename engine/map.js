@@ -565,23 +565,45 @@ function routeLines(feats, pick, extra){
   g.addLayer(cases); g.addLayer(lines);
   feats.forEach(f => {
     const p = f.properties, parts = f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates;
+    const x = ' ' + p.m + (pick ? ' pick' : '') + (extra ? extra(p) : '');
     parts.forEach(c => {
-      cases.addLayer(L.polyline(c.map(ll), {pane:'transit', className:'rt-case ' + p.m + (pick ? ' pick' : ''), interactive:false}));
-      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt ' + p.m + (pick ? ' pick' : '') + (extra ? extra(p) : ''), bubblingMouseEvents:false});
+      cases.addLayer(L.polyline(c.map(ll), {pane:'transit', className:'rt-case' + x, interactive:false}));
+      const pl = L.polyline(c.map(ll), {pane:'transit', className:'rt' + x, bubblingMouseEvents:false});
       hoverTip(pl, routeTip(p));
-      pl.on('click', e => { if (!pick) pickRoute(p.r, true); inspect(e.latlng); });
+      pl.on('click', () => focusRoute(p.r));
       lines.addLayer(pl);
     });
+    // Number badges: tapping one shows that route alone too.
     const long = parts.reduce((a, b) => span(b) > span(a) ? b : a);
-    (pick ? [0, .5, 1] : [.25, .75]).forEach(t => g.addLayer(L.marker(ll(along(long, t)), {pane:'pts', interactive:false, keyboard:false,
-      icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="rt-b ' + p.m + (pick ? ' pick' : '') + '">' + esc(p.r) + '</span>'})})));
+    (pick ? [0, .5, 1] : [.25, .75]).forEach(t => {
+      const m = L.marker(ll(along(long, t)), {pane:'pts', keyboard:false, title: routeName(p),
+        icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="rt-b' + x + '">' + esc(p.r) + '</span>'})});
+      m.on('click', () => focusRoute(p.r));
+      g.addLayer(m);
+    });
   });
   return g;
 }
 const pickLayer = L.layerGroup().addTo(map);
+/* Focus: tapping a route's line or number shows it alone. It's drawn like a picked route, everything
+   else on the map's route layers fades (CSS: #map.rt-focus) and only its stops show. Tapping it again,
+   anywhere else on the map, or Escape brings the rest back. Not kept in links: it's a passing look. */
+let focusR = null;
+function focusRoute(r){
+  focusR = focusR === r ? null : r;
+  map.getContainer().classList.toggle('rt-focus', !!focusR);
+  ensureRoutes().then(drawPicks);
+}
+function unfocus(){ if (focusR) focusRoute(focusR); }
+// While a route is shown alone, the next tap elsewhere only brings the rest back (no card). Leaflet fires
+// 'preclick' before any layer's click; inspect() skips the tap that's being swallowed.
+let swallowTap = false;
+map.on('preclick', () => { if (focusR){ swallowTap = true; unfocus(); setTimeout(() => { swallowTap = false; }); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') unfocus(); });
 function drawPicks(){
   pickLayer.clearLayers();
-  if (routeGeo && picked.size) pickLayer.addLayer(routeLines(routeGeo.features.filter(f => picked.has(f.properties.r)), true));
+  if (routeGeo && picked.size) pickLayer.addLayer(routeLines(routeGeo.features.filter(f => picked.has(f.properties.r) && f.properties.r !== focusR), true));
+  if (routeGeo && focusR) pickLayer.addLayer(routeLines(routeGeo.features.filter(f => f.properties.r === focusR), true, () => ' focus'));
   drawStops(); drawBusBox();
   here.querySelectorAll('[data-route]').forEach(b => b.setAttribute('aria-pressed', String(picked.has(b.dataset.route))));
 }
@@ -604,10 +626,12 @@ function drawStops(){
   const T = data.transit; if (!T) return;
   const z = map.getZoom() + .01, b = map.getBounds().pad(.1);
   const tram = TRAMS && state[TRAMS.id] && z >= 15, bus = BUSES && state[BUSES.id] && z >= 15;
-  const pk = picked.size && z >= 13 ? new Set(T.routes.map((r, i) => picked.has(r.r) ? i : -1).filter(i => i >= 0)) : null;
+  const want = r => focusR ? r.r === focusR : picked.has(r.r);
+  const pk = (picked.size || focusR) && z >= 13 ? new Set(T.routes.map((r, i) => want(r) ? i : -1).filter(i => i >= 0)) : null;
   if (!tram && !bus && !pk) return;
   T.stops.forEach(s => {
     if (!b.contains([s[1], s[0]])) return;
+    if (focusR && !(pk && s[3].some(i => pk.has(i)))) return;   // showing one route: only its stops
     const rs = s[3].map(i => T.routes[i]), isTram = rs.some(r => r.m === 'tram' && r.day), onPick = pk && s[3].some(i => pk.has(i));
     if (!(onPick || (tram && isTram) || (bus && rs.some(busShows)))) return;
     const m = L.circleMarker([s[1], s[0]], {pane:'pts', radius: z >= 16 ? 4 : 3, className:'stop ' + (onPick ? 'pick' : isTram ? 'tram' : 'bus'), bubblingMouseEvents:false});
@@ -1073,6 +1097,7 @@ function nearCommunity(x, y, title){
 }
 let lastInspect = null;
 function inspect(latlng, title, muniName){
+  if (swallowTap) return;
   // A new spot starts the card at the top; a redraw of the same spot (data arriving) keeps the scroll.
   if (!lastInspect || !lastInspect[0].equals(latlng)) here.scrollTop = 0;
   lastInspect = [latlng, title, muniName];

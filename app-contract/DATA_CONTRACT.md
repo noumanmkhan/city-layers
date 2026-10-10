@@ -135,7 +135,9 @@ How the website's search does it, for an app that wants to match:
   layer; streetcars that run only overnight show in `night`. Routes are drawn in their mode's colour
   (`--bus`, `--tram`); with more than one family on, routes in `exp` are dashed (`comboText` says so).
   Stops from zoom 15. Text: `countText` (`{n}` routes), `hint`, `pickText`, `unpickText` (`{r}`),
-  `clearText`. The website's links write the families as `bus=freq+exp`. Any route can also
+  `clearText`. The website's links write the families as `bus=freq+exp`. Tapping a route's line or number badge shows that route
+  alone (the rest of the route layers fade to 12% and their badges hide; only its stops show); the next tap
+  anywhere else, or Escape, brings them back without opening the card. Not kept in links. Any route can also
   be picked (from the card, search or a link) and is then drawn in `--ink` over a `--city` casing with
   its stops, whichever layers are on.
 - `under` (optional, any layer): the id of the layer it sits under in the panel (the institution

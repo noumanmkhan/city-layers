@@ -3,6 +3,10 @@
 ## Since 1.1
 
 ### Both cities
+- **Tap a route to see it alone** (October 10): tapping a streetcar or bus line, or its number badge,
+  shows that route alone in ink with its stops while every other route fades; tapping another route
+  switches to it, and the next tap anywhere else (or Escape) brings them all back without opening the
+  card. A passing look, so it isn't kept in shared links.
 - **Collector streets** (October 10): a toggle under Main streets, off by default,
   drawing the next tier of roads (Toronto's Collector class, 989 streets; Chicago's OSM tertiary
   roads, 272) thinner than the main streets from zoom 13, named from 15. Most bus streets that aren't
