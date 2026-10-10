@@ -31,9 +31,12 @@ jobs:
           for c in toronto chicago; do
             mkdir -p cities/$c/raw/surface
             python3 -u engine/fetch_surface.py $c 2>&1 | tee /tmp/fetch-$c.log || true
-            # Rebuild when the raw files changed, or when the build script itself changed in this push.
-            if ! git diff --quiet -- cities/$c/raw/surface/routes.json || [ "${{ github.event_name }}" != "schedule" ]; then
+            # A new feed: keep its log and rebuild. Otherwise rebuild only on a push or a run by hand (the
+            # build script may have changed); the log of the last real fetch stays.
+            if ! git diff --quiet -- cities/$c/raw/surface/routes.json; then
               cp /tmp/fetch-$c.log cities/$c/raw/surface/fetch.log
+              python3 -u engine/surface.py $c
+            elif [ "${{ github.event_name }}" != "schedule" ]; then
               python3 -u engine/surface.py $c
             fi
           done
