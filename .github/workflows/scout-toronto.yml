@@ -1,0 +1,40 @@
+name: Scout Toronto data
+# Runs a one-off scouting script, cities/toronto/scout_*.py, and commits what it writes under
+# cities/toronto/raw/scouting/ (plus its log). A push to main runs whichever scout script its last
+# commit changed; a manual run names one. The sandbox can't reach the City's GIS server; Actions can.
+on:
+  workflow_dispatch:
+    inputs:
+      script: {description: 'Script in cities/toronto/ to run', default: ''}
+  push:
+    branches: [main]
+    paths: ['cities/toronto/scout_*.py']
+permissions:
+  contents: write
+concurrency: scout-toronto
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          S="${{ inputs.script }}"
+          [ -n "$S" ] || S=$(git diff --name-only HEAD~1 HEAD -- 'cities/toronto/scout_*.py' | head -1 | xargs -r basename)
+          if [ -z "$S" ]; then echo "No scout script changed; nothing to do."; exit 0; fi
+          echo "SCRIPT=$S" >> "$GITHUB_ENV"
+          mkdir -p cities/toronto/raw/scouting
+          python3 -u "cities/toronto/$S" 2>&1 | tee "cities/toronto/raw/scouting/${S%.py}.log"
+      - run: |
+          [ -n "$SCRIPT" ] || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/scouting
+          git commit -m "Scout Toronto data ($SCRIPT)" || echo "no changes"
+          git pull --rebase
+          git push
