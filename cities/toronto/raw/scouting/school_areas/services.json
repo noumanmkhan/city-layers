@@ -1,0 +1,342 @@
+[
+ {
+  "name": "cot_geospatial10",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial10",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial11",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial11",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial12",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial12",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial13",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial13",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial16",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial16",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial17",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial17",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial18",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial18",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial19",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial19",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial20",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial20",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial21",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial21",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial22",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial22",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial23",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial23",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial24",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial24",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial25",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial25",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial26",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial26",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial27",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial27",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial28",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial28",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial29",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial29",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial2",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial2",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial3",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial3",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial6",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial6",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial7",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial7",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial8",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial8",
+  "type": "MapServer"
+ },
+ {
+  "name": "cot_geospatial",
+  "type": "FeatureServer"
+ },
+ {
+  "name": "cot_geospatial",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_2020_NightTimeLight_20cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_historic_aerial_1931",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_historic_aerial_1939",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_historic_aerial_1954",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_historic_aerial_1965",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_historic_aerial_1978",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_LiDAR_2015_Hillshade_BareEarth",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_LiDAR_2015_Hillshade_FullFeature",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_1999_greyscale_15cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2003_greyscale_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2005_color_20cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2009_color_10cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2011_color_10cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2012_color_5cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2013_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2014_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2015_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2016_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2017_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2018_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2020_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2021_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2022_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2023_color_10cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2024_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_2025_color_8cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho_Keele_Valley_Landfill_2019_10cm",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_ortho",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_solar_yearly_800k",
+  "type": "MapServer"
+ },
+ {
+  "name": "basemap/cot_topo",
+  "type": "MapServer"
+ },
+ {
+  "name": "primary/cot_basemap_mtm",
+  "type": "MapServer"
+ },
+ {
+  "name": "temporary/pingservice",
+  "type": "MapServer"
+ },
+ {
+  "name": "Utilities/Geometry",
+  "type": "GeometryServer"
+ },
+ {
+  "name": "Utilities/OfflinePackaging",
+  "type": "GPServer"
+ },
+ {
+  "name": "Utilities/PrintingTools",
+  "type": "GPServer"
+ },
+ {
+  "name": "Utilities/RasterUtilities",
+  "type": "GPServer"
+ },
+ {
+  "name": "Utilities/Symbols",
+  "type": "SymbolServer"
+ }
+]
