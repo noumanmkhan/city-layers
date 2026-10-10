@@ -1,7 +1,336 @@
 {
- "run_utc": "2026-10-10T11:30:00+00:00",
+ "run_utc": "2026-10-10T11:31:02+00:00",
  "toronto": {
-  "error": "JSONDecodeError('Invalid \\\\escape: line 1 column 834440 (char 834439)')"
+  "records_in_feed": 2250,
+  "cors": {
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST,GET,OPTIONS",
+   "Access-Control-Max-Age": "3600",
+   "Access-Control-Allow-Headers": "Origin, X-Requested-With, X-Auth-Token, Content-Type, Accept"
+  },
+  "metrolinx": {
+   "count": 99,
+   "by_type": {
+    "CONSTRUCTION/None": 90,
+    "ROAD_CLOSED/ROAD_CLOSED_CONSTRUCTION": 9
+   },
+   "by_roadClass": {
+    "Major Arterial Road": 50,
+    "Minor Arterial Road": 18,
+    "Local Road": 29,
+    "Unknown": 2
+   },
+   "by_contractor": {
+    "Entera Utility Contractors": 2,
+    "ONxpress Civils Contractor GP": 19,
+    "Peter Kiewit Sons ULC": 1,
+    "Aecon Infrastructure Management Inc": 6,
+    "GREEN INFRASTRUCTURE PARTNERS INC.": 7,
+    "Leaside Valley Builders": 1,
+    "Grascan Construction Ltd.": 1,
+    "Ontario Transit Group": 5,
+    "Mosaic Transit Group": 3,
+    "Trillium Guideway Partners": 21,
+    "Pape North Connect": 4,
+    "West End Connectors": 5,
+    "STRABAG Inc.": 8,
+    "Capital Traffic Management Solutions": 1,
+    "Graham Construction and Engineering LP": 6,
+    "Powerline Plus LTD.": 2,
+    "Scarborough Transit Connect": 3,
+    "Leaside Vallley Builders": 1,
+    "Smart Tracks Construction Partners General Partnership": 1,
+    "EllisDon Infrastructure LSW RER Inc.": 1,
+    "RCP": 1
+   },
+   "by_workPeriod": {
+    "Daily": 43,
+    "Continuous": 55,
+    "Weekdays": 1
+   },
+   "on_drawn_arterial": 65,
+   "on_drawn_by_type": {
+    "CONSTRUCTION/None": 63,
+    "ROAD_CLOSED/ROAD_CLOSED_CONSTRUCTION": 2
+   },
+   "on_drawn_roads": {
+    "Finch Ave W": 5,
+    "Birchmount Rd": 9,
+    "Danforth Ave": 2,
+    "Pape Ave": 1,
+    "Millwood Rd": 1,
+    "Sheppard Ave W": 1,
+    "Queen St E": 2,
+    "Jarvis St": 1,
+    "Carlaw Ave": 3,
+    "Don Mills Rd": 8,
+    "Eglinton Ave W": 5,
+    "Islington Ave": 1,
+    "Eglinton Ave E": 8,
+    "Danforth Rd": 4,
+    "Martin Grove Rd": 2,
+    "St Clair Ave W": 4,
+    "McCowan Rd": 1,
+    "Scarlett Rd": 1,
+    "Finch Ave E": 1,
+    "Davenport Rd": 1,
+    "Dupont St": 1,
+    "Gerrard St E": 1,
+    "Overlea Blvd": 1,
+    "Eastern Ave": 1
+   },
+   "off_drawn_roads": {
+    "Sudbury St": 1,
+    "Mack Ave": 4,
+    "Chantrey Crt": 1,
+    "Jane St": 1,
+    "Westlake Rd": 2,
+    "Galloway Rd": 2,
+    "Gertrude Pl": 2,
+    "Augusta Ave": 1,
+    "Mutual St": 1,
+    "Sammon Ave": 1,
+    "Gateway Blvd": 2,
+    "Richview Rd": 1,
+    "Highview Ave": 1,
+    "Victoria Park Ave": 1,
+    "Lipton Ave": 2,
+    "Eglinton Ave W": 2,
+    "Beth Nealson Dr": 1,
+    "Aldwych Ave": 1,
+    "Winter Ave": 1,
+    "Thorncliffe Park Dr": 1,
+    "De Grassi St": 1,
+    "Edgeware Dr": 1,
+    "Pape Ave": 1,
+    "Ln W Pape S Cosburn": 1,
+    "Simcoe St": 1
+   },
+   "class_vs_drawn": {
+    "Major Arterial Road -> drawn": 46,
+    "Minor Arterial Road -> drawn": 18,
+    "Local Road -> not drawn": 29,
+    "Major Arterial Road -> not drawn": 4,
+    "Unknown -> not drawn": 1,
+    "Unknown -> drawn": 1
+   },
+   "active_today": 74,
+   "end_dates": [
+    "2026-10",
+    "2026-11",
+    "2026-12",
+    "2027-01",
+    "2027-02",
+    "2027-03"
+   ]
+  },
+  "not_metrolinx_but_transit_words": {
+   "count": 32,
+   "by_source": {
+    "Toronto Hydro": 9,
+    "Gasmain": 2,
+    "Other": 15,
+    "{\"tabledata\":[{\"Option\":\"Toronto Water\"": 1,
+    "Operation of cherry picker": 1,
+    "Waterfront Toronto": 1,
+    "Watermain": 1,
+    "null": 2
+   },
+   "by_contractor": {
+    "Tristar Electrical Inc": 5,
+    "Enbridge Gas Inc": 2,
+    "Entera Utility Contractors": 2,
+    "Alliance Verdi Civil Inc.": 2,
+    "Tristar Electric Inc.": 2,
+    "Ontario Transit Group": 5,
+    "Miller Paving Ltd.": 4,
+    "Hatch Ltd.": 1,
+    "Kenaidan CONTRACTING": 1,
+    "Drainstar Contracting Ltd": 1,
+    "Ward & Burke Microtunneling Ltd": 1,
+    "ERRITT CONSTRUCTION LTD": 2,
+    "PCL": 1,
+    "Torbear Contracting inc.": 1,
+    "null": 2
+   },
+   "examples": [
+    {
+     "road": "Adelaide St E",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Church St",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Adelaide St E",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Milton St",
+     "source": "Gasmain",
+     "contractor": "Enbridge Gas Inc",
+     "type": "CONSTRUCTION",
+     "description": "Gas main installation for regulator station relocation."
+    },
+    {
+     "road": "Oxford St",
+     "source": "Gasmain",
+     "contractor": "Enbridge Gas Inc",
+     "type": "CONSTRUCTION",
+     "description": "Gas main installation for regulator station relocation."
+    },
+    {
+     "road": "Holly St",
+     "source": "Toronto Hydro",
+     "contractor": "Entera Utility Contractors",
+     "type": "CONSTRUCTION",
+     "description": "- The project is Underground Civil Infrastructure project. The project includes rebuilding an old cable chamber. - The project will be executed by Entera Utility Contractors under the contract with Toronto Hydro. Cut permit have been received from City of Toronto. - Metrolinx no conflict letter has been received. - Construction notices has been delivered. Residents and offices around are aware of our existence on the site."
+    },
+    {
+     "road": "Finch Ave W",
+     "source": "Other",
+     "contractor": "Alliance Verdi Civil Inc.",
+     "type": "CONSTRUCTION",
+     "description": "Rehabilitation work under Metrolinx contract IT-2024RTMD-766 for the bridge over Finch Ave West. Scope of work includes installation of lumber against the edge of the bridge to facilitate waterproofing operation on the tracks. Equipment includes skid steer, scissor lift/boom lift, traffic barrels and signs. Temporary alternating lane closures will be used in both the EB and WB directions simultaneously while maintaining at least one lane of traffic in both directions. One sidewalk is to be closed continuously to facilitate the safe storage of necessary equipment. One sidewalk to remain opened at all times. Pedestrians to be detoured from closed sidewalk to opened sidewalk at nearest crossings. A maximum of 1 lane + HOV would be closed in the EBL and WBL simultaneously."
+    },
+    {
+     "road": "Bain Ave",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electric Inc.",
+     "type": "CONSTRUCTION",
+     "description": "Replacing a switch in vault, and splicing in pits. Pedestrian access will remain open. Temporary street occupation permit only, no road cuts. Working at one work area at a time. Metrolinx No Conflict Response Letter attached."
+    },
+    {
+     "road": "Carlaw Ave",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electric Inc.",
+     "type": "CONSTRUCTION",
+     "description": "Replacing a switch in vault, and splicing in pits. Pedestrian access will remain open. Temporary street occupation permit only, no road cuts. Working at one work area at a time. Metrolinx No Conflict Response Letter attached."
+    },
+    {
+     "road": "Ln S Queen W Spadina",
+     "source": "Other",
+     "contractor": "Ontario Transit Group",
+     "type": "CONSTRUCTION",
+     "description": "Extension/reissue of previously submitted RoDARS (using old method) with new permit for the EB curb lane closure during working, non-peak hours adjacent to OTG's Queen-Spadina Station South Shaft location. Closure utilized Monday - Friday, sometimes Sat. for piling activities/station works."
+    },
+    {
+     "road": "Queen St W",
+     "source": "Other",
+     "contractor": "Ontario Transit Group",
+     "type": "CONSTRUCTION",
+     "description": "Extension/reissue of previously submitted RoDARS (using old method) with new permit for the EB curb lane closure during working, non-peak hours adjacent to OTG's Queen-Spadina Station South Shaft location. Closure utilized Monday - Friday, sometimes Sat. for piling activities/station works."
+    },
+    {
+     "road": "Yonge St",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "P-230136-XD124001 - Cable Upgrade - A41GD (Natasha) Cable replacement project along King St. Cable chamber and station work. Working on both locations. Returning to each location as needed. Specific dates cannot be provided as we return as needed. Overcharge is accepted."
+    },
+    {
+     "road": "Yonge St",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "P-230136-XD124001 - Cable Upgrade - A41GD (Natasha) Cable replacement project along King St. Cable chamber and station work. Working on both locations. Returning to each location as needed. Specific dates cannot be provided as we return as needed. Overcharge is accepted."
+    },
+    {
+     "road": "Leslie St",
+     "source": "Other",
+     "contractor": "Miller Paving Ltd.",
+     "type": "CONSTRUCTION",
+     "description": "Hwy 401 EBC Rehabilitation - Avenue Road to Warden Avenue Contract MTO 2022-2013"
+    },
+    {
+     "road": "Leslie St",
+     "source": "Other",
+     "contractor": "Miller Paving Ltd.",
+     "type": "CONSTRUCTION",
+     "description": "Hwy 401 EBC Rehabilitation - Avenue Road to Warden Avenue Contract MTO 2022-2013"
+    },
+    {
+     "road": "Danforth Ave",
+     "source": "Other",
+     "contractor": "Hatch Ltd.",
+     "type": "CONSTRUCTION",
+     "description": "Engineering Services for the Detailed Measurement and Structural Assessment of Railway Bridges (Package A): To conduct a detailed inspection of the Metrolinx-owned railway bridge at 3575 Danforth Avenue, the bridge spans, piers, and abutments will be inspected. Ultrasonic Thickness measurements will be collected on Girder and Flange beams, hand tools will be used to clean inspection areas. Flashlights, and measuring tapes will be used. A scissor lift will be used to access the underside of the bridge. During the inspection, one lane will be closed at a time until the full length of the bridge has been inspected. Each lane closure is expected to last approximately 1 to 1.5 hours."
+    },
+    {
+     "road": "Islington Ave",
+     "source": "Other",
+     "contractor": "Kenaidan CONTRACTING",
+     "type": "CONSTRUCTION",
+     "description": "Kenaidan Contracting Ltd. has been retained by the Toronto Transit Commission to deliver the Islington Station Redevelopment project, part of the TTC\u2019s Easier Access III program. The scope of work includes the installation of new utilities, hydro upgrades, construction of a new west entrance to the station, and the reconstruction of the Aberfoyle Crescent and Islington Avenue intersection. To facilitate this work, northbound traffic will be reduced to one lane to allow the relocation of jersey barriers. Refer to attached traffic management plan and construction permit."
+    },
+    {
+     "road": "Finch Ave W",
+     "source": "Other",
+     "contractor": "Alliance Verdi Civil Inc.",
+     "type": "CONSTRUCTION",
+     "description": "Rehabilitation work under Metrolinx contract IT-2024RTMD-766 for the bridge over Finch Ave West. Scope of work includes installation of lumber against the edge of the bridge to facilitate waterproofing operation on the tracks. Equipment includes skid steer, scissor lift/boom lift, traffic barrels and signs. Temporary alternating lane closures will be used in both the EB and WB directions simultaneously while maintaining at least one lane of traffic in both directions. One sidewalk is to be closed continuously to facilitate the safe storage of necessary equipment. One sidewalk to remain opened at all times. Pedestrians to be detoured from closed sidewalk to opened sidewalk at nearest crossings. A maximum of 1 lane + HOV would be closed in the EBL and WBL simultaneously."
+    },
+    {
+     "road": "Riverside Dr",
+     "source": "{\"tabledata\":[{\"Option\":\"Toronto Water\"",
+     "contractor": "Drainstar Contracting Ltd",
+     "type": "ROAD_CLOSED",
+     "description": "Sanitary Forcemain Installation for the Humber Sanitary Pumping Station"
+    },
+    {
+     "road": "Adelaide St W",
+     "source": "Toronto Hydro",
+     "contractor": "Entera Utility Contractors",
+     "type": "CONSTRUCTION",
+     "description": "- The project is Underground Civil Infrastructure project. The project includes rebuilding an old vault. - The project will be executed by Entera Utility Contractors under the contract with Toronto Hydro. Cut permit have been received from City of Toronto. - Metrolinx no conflict letter has been received. - Location is 379 Adelaide St West. Construction notices has been delivered. Residents and offices around are aware of our existence on the site."
+    },
+    {
+     "road": "Steeles Ave W",
+     "source": "Operation of cherry picker",
+     "contractor": "Ward & Burke Microtunneling Ltd",
+     "type": "CONSTRUCTION",
+     "description": "Working on traffic lights on eastside of intersection. Hanging overhead lights, removing traffic pole on median, as well as removing the median"
+    },
+    {
+     "road": "Keele St",
+     "source": "Other",
+     "contractor": "ERRITT CONSTRUCTION LTD",
+     "type": "CONSTRUCTION",
+     "description": "Installation of a watermain diversion, tunnelling retrieval shaft, manhole structure, connection to the existing city sewer network and restoration."
+    },
+    {
+     "road": "Keele St",
+     "source": "Other",
+     "contractor": "ERRITT CONSTRUCTION LTD",
+     "type": "CONSTRUCTION",
+     "description": "Installation of a tunnelling retrieval shaft, manhole structure, and restoration."
+    },
+    {
+     "road": "Leslie St",
+     "source": "Other",
+     "contractor": "Miller Paving Ltd.",
+     "type": "CONSTRUCTION",
+     "description": "Hwy 401 EBC Rehabilitation - Avenue Road to Warden Avenue Contract MTO 2022-2013"
+    },
+    {
+     "road": "Leslie St",
+     "source": "Other",
+     "contractor": "Miller Paving Ltd.",
+     "type": "CONSTRUCTION",
+     "description": "Hwy 401 EBC Rehabilitation - Avenue Road to Warden Avenue Contract MTO 2022-2013"
+    }
+   ]
+  }
  },
  "chicago": {
   "active_window": [

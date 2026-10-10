@@ -1,315 +1,209 @@
 Toronto: road restrictions feed
-  error JSONDecodeError('Invalid \\escape: line 1 column 834440 (char 834439)')
+  groups: {'Closure': 2250} records 2250
 Chicago: CDOT permits
   active rows: [{'n': '56685'}]
   transit-related rows: 268
 {
- "run_utc": "2026-10-10T11:30:00+00:00",
+ "run_utc": "2026-10-10T11:31:02+00:00",
  "toronto": {
-  "error": "JSONDecodeError('Invalid \\\\escape: line 1 column 834440 (char 834439)')"
- },
- "chicago": {
-  "active_window": [
-   "2026-10-03",
-   "2026-12-09"
-  ],
-  "active_rows_citywide": [
-   {
-    "n": "56685"
-   }
-  ],
+  "records_in_feed": 2250,
   "cors": {
-   "Access-Control-Allow-Origin": "*"
+   "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Methods": "POST,GET,OPTIONS",
+   "Access-Control-Max-Age": "3600",
+   "Access-Control-Allow-Headers": "Origin, X-Requested-With, X-Auth-Token, Content-Type, Accept"
   },
-  "citywide_streetclosure_values": [
-   {
-    "n": "39429"
-   },
-   {
-    "streetclosure": "Curblane",
-    "n": "5458"
-   },
-   {
-    "streetclosure": "NA",
-    "n": "5151"
-   },
-   {
-    "streetclosure": "None",
-    "n": "3310"
-   },
-   {
-    "streetclosure": "Full",
-    "n": "1409"
-   },
-   {
-    "streetclosure": "Sidewalk",
-    "n": "1350"
-   },
-   {
-    "streetclosure": "Partial",
-    "n": "574"
-   },
-   {
-    "streetclosure": "Intermitte",
-    "n": "4"
-   }
-  ],
-  "citywide_status_values": [
-   {
-    "applicationstatus": "Open",
-    "n": "53877"
-   },
-   {
-    "applicationstatus": "Closed",
-    "n": "2808"
-   }
-  ],
-  "top_applicants_citywide": [
-   {
-    "primarycontactlast": "ComED North*",
-    "n": "2722"
-   },
-   {
-    "primarycontactlast": "Peoples Gas*",
-    "n": "2039"
-   },
-   {
-    "primarycontactlast": "SEVEN-D CONSTRUCTION CO*",
-    "n": "2024"
-   },
-   {
-    "primarycontactlast": "DWM*",
-    "n": "1705"
-   },
-   {
-    "primarycontactlast": "CROWN CASTLE NG CENTRAL LLC",
-    "n": "1361"
-   },
-   {
-    "primarycontactlast": "AT&T (SBC IL)*",
-    "n": "1008"
-   },
-   {
-    "primarycontactlast": "SUMIT CONSTRUCTION CO INC*",
-    "n": "889"
-   },
-   {
-    "primarycontactlast": "VERIZON COMMUNICATIONS INC.",
-    "n": "884"
-   },
-   {
-    "primarycontactlast": "PAN OCEANIC ENGINEERING CO., INC.*",
-    "n": "731"
-   },
-   {
-    "primarycontactlast": "G & V CONST CO INC (SL)*",
-    "n": "568"
-   },
-   {
-    "primarycontactlast": "RELIABLE CONTRACTING & EQUIPMENT*",
-    "n": "431"
-   },
-   {
-    "primarycontactlast": "BRACKENBOX INC*",
-    "n": "414"
-   },
-   {
-    "primarycontactlast": "CHICAGO PUBLIC SCHOOLS",
-    "n": "406"
-   },
-   {
-    "primarycontactlast": "CITYWIDE DISPOSAL INC*",
-    "n": "390"
-   },
-   {
-    "primarycontactlast": "CDOT - In-House Construction",
-    "n": "385"
-   },
-   {
-    "primarycontactlast": "COMCAST OF CHICAGO INC*",
-    "n": "379"
-   },
-   {
-    "primarycontactlast": "CITY LIGHTS LTD*",
-    "n": "354"
-   },
-   {
-    "primarycontactlast": "UNITED ENTERPRISE  (SL)*",
-    "n": "327"
-   },
-   {
-    "primarycontactlast": "CITY ESCAPE GARDEN AND DESIGN, LLC*",
-    "n": "316"
-   },
-   {
-    "primarycontactlast": "JOHN BURNS CONSTRUCTION CO.*",
-    "n": "309"
-   },
-   {
-    "primarycontactlast": "MQ CONSTRUCTION CO*",
-    "n": "257"
-   },
-   {
-    "primarycontactlast": "INLINER SOLUTIONS, LLC*",
-    "n": "244"
-   },
-   {
-    "primarycontactlast": "BIGANE PAVING CO (CONSTRUCTION)*",
-    "n": "225"
-   },
-   {
-    "primarycontactlast": "MILLENNIUM CONTRACTING CORP*",
-    "n": "219"
-   },
-   {
-    "primarycontactlast": "CDOT-Sign Management",
-    "n": "186"
-   },
-   {
-    "primarycontactlast": "MCI METRO ACCESS TRANSMISSION SERVICES LLC",
-    "n": "186"
-   },
-   {
-    "primarycontactlast": "CROWN CASTLE FIBER LLC*",
-    "n": "183"
-   },
-   {
-    "primarycontactlast": "CROSSTOWN FIBER*",
-    "n": "149"
-   },
-   {
-    "primarycontactlast": "CHICAGO SCAFFOLDING*",
-    "n": "147"
-   },
-   {
-    "primarycontactlast": "UNITED SCAFFOLDING INC*",
-    "n": "146"
-   },
-   {
-    "primarycontactlast": "RAVENSWOOD DISPOSAL SERVICE INC*",
-    "n": "141"
-   },
-   {
-    "primarycontactlast": "WALSH CONSTRUCTION COMPANY II, LLC*",
-    "n": "128"
-   },
-   {
-    "primarycontactlast": "CONTRACTORS ACCESS***",
-    "n": "128"
-   },
-   {
-    "primarycontactlast": "PLUMBING PROFESSIONALS CO*",
-    "n": "128"
-   },
-   {
-    "primarycontactlast": "CHICAGO  PUBLIC  SCHOOLS",
-    "n": "124"
-   },
-   {
-    "primarycontactlast": "CDOT - Division of Electrical Operations",
-    "n": "122"
-   },
-   {
-    "primarycontactlast": "TOMORROW GREENWAY LLC, D/B/A GREENWAY RECYCLING SE",
-    "n": "119"
-   },
-   {
-    "primarycontactlast": "LAKESHORE RECYCLING SYSTEMS, INC (LRS HOLDINGS)*",
-    "n": "105"
-   },
-   {
-    "primarycontactlast": "MOBILITIE LLC",
-    "n": "104"
-   },
-   {
-    "primarycontactlast": "CAPITOL CEMENT CO INC*",
-    "n": "102"
-   },
-   {
-    "primarycontactlast": "ECONOMY DISPOSAL",
-    "n": "99"
-   },
-   {
-    "primarycontactlast": "PRIME SCAFFOLD INC*",
-    "n": "97"
-   },
-   {
-    "primarycontactlast": "TRI-STATE DISPOSAL INC*",
-    "n": "94"
-   },
-   {
-    "primarycontactlast": "OPEN 4 BUSINESS PRODUCTIONS, LLC",
-    "n": "93"
-   },
-   {
-    "primarycontactlast": "D & P CONSTRUCTION CO INC***",
-    "n": "87"
-   },
-   {
-    "primarycontactlast": "COMMONWEALTH EDISON CO",
-    "n": "71"
-   },
-   {
-    "primarycontactlast": "BAY CRANE MIDWEST LLC",
-    "n": "70"
-   },
-   {
-    "primarycontactlast": "F.H. PASCHEN, S.N. NIELSEN* & ASSOC., LLC*",
-    "n": "70"
-   },
-   {
-    "primarycontactlast": "AA SCAFFOLD XPRESS INC*",
-    "n": "70"
-   },
-   {
-    "primarycontactlast": "CITY OF CHICAGO",
-    "n": "70"
-   },
-   {
-    "primarycontactlast": "PRACTICAL PLUMBING, LLC*",
-    "n": "58"
-   },
-   {
-    "primarycontactlast": "SBC  ILLINOIS",
-    "n": "58"
-   },
-   {
-    "primarycontactlast": "CHICAGO HOUSING AUTHORITY",
-    "n": "55"
-   },
-   {
-    "primarycontactlast": "B & T UNDERGROUND*",
-    "n": "54"
-   },
-   {
-    "primarycontactlast": "ALLIED WASTE TRANSPORTATION INC DBA REPUBLIC SERV*",
-    "n": "53"
-   },
-   {
-    "primarycontactlast": "WATERMAX PLUMBING INC*",
-    "n": "51"
-   },
-   {
-    "primarycontactlast": "LEVEL 3 COMMUNICATIONS DBA LUMEN*",
-    "n": "50"
-   },
-   {
-    "primarycontactlast": "CATHOLIC BISHOP OF CHICAGO",
-    "n": "48"
-   },
-   {
-    "primarycontactlast": "JAM PRODUCTIONS LTD*",
-    "n": "48"
-   },
-   {
-    "primarycontactlast": "GSG CONSULTANTS, INC.*",
-    "n": "47"
-   },
-   {
-    "primarycontactlast": "INDEPENDENT RECYCLING SERVICES*",
-    "n": "46"
-   },
-   {
-    "primarycontactlast": "CHICAGO PARK DISTRICT",
-    "n": "45"
- 
+  "metrolinx": {
+   "count": 99,
+   "by_type": {
+    "CONSTRUCTION/None": 90,
+    "ROAD_CLOSED/ROAD_CLOSED_CONSTRUCTION": 9
+   },
+   "by_roadClass": {
+    "Major Arterial Road": 50,
+    "Minor Arterial Road": 18,
+    "Local Road": 29,
+    "Unknown": 2
+   },
+   "by_contractor": {
+    "Entera Utility Contractors": 2,
+    "ONxpress Civils Contractor GP": 19,
+    "Peter Kiewit Sons ULC": 1,
+    "Aecon Infrastructure Management Inc": 6,
+    "GREEN INFRASTRUCTURE PARTNERS INC.": 7,
+    "Leaside Valley Builders": 1,
+    "Grascan Construction Ltd.": 1,
+    "Ontario Transit Group": 5,
+    "Mosaic Transit Group": 3,
+    "Trillium Guideway Partners": 21,
+    "Pape North Connect": 4,
+    "West End Connectors": 5,
+    "STRABAG Inc.": 8,
+    "Capital Traffic Management Solutions": 1,
+    "Graham Construction and Engineering LP": 6,
+    "Powerline Plus LTD.": 2,
+    "Scarborough Transit Connect": 3,
+    "Leaside Vallley Builders": 1,
+    "Smart Tracks Construction Partners General Partnership": 1,
+    "EllisDon Infrastructure LSW RER Inc.": 1,
+    "RCP": 1
+   },
+   "by_workPeriod": {
+    "Daily": 43,
+    "Continuous": 55,
+    "Weekdays": 1
+   },
+   "on_drawn_arterial": 65,
+   "on_drawn_by_type": {
+    "CONSTRUCTION/None": 63,
+    "ROAD_CLOSED/ROAD_CLOSED_CONSTRUCTION": 2
+   },
+   "on_drawn_roads": {
+    "Finch Ave W": 5,
+    "Birchmount Rd": 9,
+    "Danforth Ave": 2,
+    "Pape Ave": 1,
+    "Millwood Rd": 1,
+    "Sheppard Ave W": 1,
+    "Queen St E": 2,
+    "Jarvis St": 1,
+    "Carlaw Ave": 3,
+    "Don Mills Rd": 8,
+    "Eglinton Ave W": 5,
+    "Islington Ave": 1,
+    "Eglinton Ave E": 8,
+    "Danforth Rd": 4,
+    "Martin Grove Rd": 2,
+    "St Clair Ave W": 4,
+    "McCowan Rd": 1,
+    "Scarlett Rd": 1,
+    "Finch Ave E": 1,
+    "Davenport Rd": 1,
+    "Dupont St": 1,
+    "Gerrard St E": 1,
+    "Overlea Blvd": 1,
+    "Eastern Ave": 1
+   },
+   "off_drawn_roads": {
+    "Sudbury St": 1,
+    "Mack Ave": 4,
+    "Chantrey Crt": 1,
+    "Jane St": 1,
+    "Westlake Rd": 2,
+    "Galloway Rd": 2,
+    "Gertrude Pl": 2,
+    "Augusta Ave": 1,
+    "Mutual St": 1,
+    "Sammon Ave": 1,
+    "Gateway Blvd": 2,
+    "Richview Rd": 1,
+    "Highview Ave": 1,
+    "Victoria Park Ave": 1,
+    "Lipton Ave": 2,
+    "Eglinton Ave W": 2,
+    "Beth Nealson Dr": 1,
+    "Aldwych Ave": 1,
+    "Winter Ave": 1,
+    "Thorncliffe Park Dr": 1,
+    "De Grassi St": 1,
+    "Edgeware Dr": 1,
+    "Pape Ave": 1,
+    "Ln W Pape S Cosburn": 1,
+    "Simcoe St": 1
+   },
+   "class_vs_drawn": {
+    "Major Arterial Road -> drawn": 46,
+    "Minor Arterial Road -> drawn": 18,
+    "Local Road -> not drawn": 29,
+    "Major Arterial Road -> not drawn": 4,
+    "Unknown -> not drawn": 1,
+    "Unknown -> drawn": 1
+   },
+   "active_today": 74,
+   "end_dates": [
+    "2026-10",
+    "2026-11",
+    "2026-12",
+    "2027-01",
+    "2027-02",
+    "2027-03"
+   ]
+  },
+  "not_metrolinx_but_transit_words": {
+   "count": 32,
+   "by_source": {
+    "Toronto Hydro": 9,
+    "Gasmain": 2,
+    "Other": 15,
+    "{\"tabledata\":[{\"Option\":\"Toronto Water\"": 1,
+    "Operation of cherry picker": 1,
+    "Waterfront Toronto": 1,
+    "Watermain": 1,
+    "null": 2
+   },
+   "by_contractor": {
+    "Tristar Electrical Inc": 5,
+    "Enbridge Gas Inc": 2,
+    "Entera Utility Contractors": 2,
+    "Alliance Verdi Civil Inc.": 2,
+    "Tristar Electric Inc.": 2,
+    "Ontario Transit Group": 5,
+    "Miller Paving Ltd.": 4,
+    "Hatch Ltd.": 1,
+    "Kenaidan CONTRACTING": 1,
+    "Drainstar Contracting Ltd": 1,
+    "Ward & Burke Microtunneling Ltd": 1,
+    "ERRITT CONSTRUCTION LTD": 2,
+    "PCL": 1,
+    "Torbear Contracting inc.": 1,
+    "null": 2
+   },
+   "examples": [
+    {
+     "road": "Adelaide St E",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Church St",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Adelaide St E",
+     "source": "Toronto Hydro",
+     "contractor": "Tristar Electrical Inc",
+     "type": "CONSTRUCTION",
+     "description": "Cable replacement project. Cable chamber work. No surface cuts required. Metrolinx permit attached. (Natasha)"
+    },
+    {
+     "road": "Milton St",
+     "source": "Gasmain",
+     "contractor": "Enbridge Gas Inc",
+     "type": "CONSTRUCTION",
+     "description": "Gas main installation for regulator station relocation."
+    },
+    {
+     "road": "Oxford St",
+     "source": "Gasmain",
+     "contractor": "Enbridge Gas Inc",
+     "type": "CONSTRUCTION",
+     "description": "Gas main installation for regulator station relocation."
+    },
+    {
+     "road": "Holly St",
+     "source": "Toronto Hydro",
+     "contractor": "Entera Utility Contractors",
+     "type": "CONSTRUCTION",
+     "description": "- The project is Underground Civil Infrastructure project. The project includes rebuilding an old cable chamber. - The project will be executed by Entera Utility Contractors under the contract with Toronto Hydro. Cut permit have been received from City of Toronto. - Metrolinx no conflict letter has been received. - Construction notices has been delivered. Residents and offices around are aware of our existence on the site."
+    },
+    {
+     "road": "Finch Ave W",
+     "source": "Other",
+     "contractor": "Alliance Verdi Civil Inc.",
+     "type": "CONSTRUCTION",
+     "description": "Rehabilitation work under Metrol
