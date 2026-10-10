@@ -20,9 +20,9 @@ SHAPES = {
     'school_board_10.zip': 'https://ilsenateredistricting.com/images/shape-files/ERSB_10_District_Map_FA1_SB_15.zip',
 }
 SCOUT = {
-    'cboe_candidates.html': 'https://chicagoelections.gov/getting-ballot/candidates',
-    'cboe_results_2024_general.html': 'https://chicagoelections.gov/elections/results/41',
-    'cboe_specimen_news.html': 'https://chicagoelections.gov/news/vote-mail-and-online-specimen-ballots-now-available-november-3-general-election',
+    'cboe_candidate_list.pdf': 'https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-09/Candidate%20List_20260911-1.pdf',
+    'cboe_ballot_lottery.pdf': 'https://cboeprod.blob.core.usgovcloudapi.net/prod/2026-06/CHI%2020261103%20Ballot%20Placement%20Lottery%20Results.pdf',
+    'cboe_results_2024_school1_get.html': 'https://chicagoelections.gov/elections/results/41?contest=110',
 }
 
 
@@ -52,3 +52,14 @@ for name, url in SCOUT.items():
     if st == 200 and body:
         open(os.path.join(RAW, 'school_board', name), 'wb').write(body)
     time.sleep(2)
+
+# How the results page returns one contest: the page is a Drupal form; try posting it.
+import urllib.parse
+try:
+    form = urllib.parse.urlencode({'election_id': '41', 'contest': '110', 'form_id': 'election_results_form'}).encode()
+    req = urllib.request.Request('https://chicagoelections.gov/elections/results/41', data=form, headers=UA)
+    with urllib.request.urlopen(req, timeout=120) as r:
+        body = r.read(); print('post contest 110', r.status, len(body))
+        open(os.path.join(RAW, 'school_board', 'cboe_results_2024_school1_post.html'), 'wb').write(body)
+except Exception as e:
+    print('post failed', e)
