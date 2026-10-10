@@ -27,7 +27,9 @@ groups = {k: [] for k in ('library', 'centre', 'er', 'park', 'playground', 'tenn
 for r in json.load(open(os.path.join(RAW, 'cpl_branches.json'))):
     loc = r.get('location') or {}
     if loc.get('latitude'):
-        groups['library'].append([round(float(loc['longitude']), 5), round(float(loc['latitude']), 5), r['branch_'].strip() + ' branch'])
+        name = r['branch_'].strip().replace('Washtington', 'Washington')   # typo in the City's file
+        groups['library'].append([round(float(loc['longitude']), 5), round(float(loc['latitude']), 5),
+                                  name if 'Library Center' in name else name + ' branch'])
 courts = []
 for e in json.load(open(os.path.join(RAW, 'osm_amenities.json'))):
     c = e['at']
