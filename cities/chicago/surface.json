@@ -1,0 +1,5 @@
+{
+  "_about": "Buses (engine/fetch_surface.py, engine/surface.py). 'gtfs' says where the agency's schedule comes from: a CKAN package (ckan) or a direct zip (url). Rail routes are drawn by the 'L' layer, so only buses are kept.",
+  "gtfs": {"url": "https://www.transitchicago.com/downloads/sch_data/google_transit.zip"},
+  "skip": []
+}

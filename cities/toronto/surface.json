@@ -1,0 +1,5 @@
+{
+  "_about": "Streetcars and buses (engine/fetch_surface.py, engine/surface.py). 'gtfs' says where the agency's schedule comes from: a CKAN package (ckan) or a direct zip (url). 'skip' lists route numbers already drawn by another layer (Subway & LRT).",
+  "gtfs": {"ckan": "https://ckan0.cf.opendata.inter.prod-toronto.ca/api/3/action/package_show?id=ttc-routes-and-schedules"},
+  "skip": ["1", "2", "3", "4", "5", "6"]
+}
