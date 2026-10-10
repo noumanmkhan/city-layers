@@ -9,6 +9,9 @@
                       Medicare-certified hospital with its type, ownership and whether it has emergency
                       services. Only the Chicago rows are kept.
   cms_geocoded.json   The Chicago hospitals' addresses placed by the U.S. Census Bureau geocoder.
+  osm.json            OpenStreetMap's universities, colleges and hospitals in Chicago (Overpass), plus a
+                      few campuses by name, to place campuses IPEDS lists only by their main address and
+                      hospitals the geocoder missed.
 """
 import csv, io, json, os, time, urllib.parse, urllib.request, zipfile
 
@@ -38,7 +41,7 @@ else:
     raise SystemExit('no IPEDS HD file found')
 zf = zipfile.ZipFile(io.BytesIO(z))
 name = [n for n in zf.namelist() if n.lower().endswith('.csv')][0]
-rows = list(csv.DictReader(io.TextIOWrapper(zf.open(name), encoding='latin-1')))
+rows = list(csv.DictReader(io.TextIOWrapper(zf.open(name), encoding='utf-8-sig', errors='replace')))
 il = [r for r in rows if r.get('STABBR') == 'IL']
 with open(os.path.join(OUT, 'ipeds_hd.csv'), 'w', newline='', encoding='utf-8') as f:
     w = csv.DictWriter(f, fieldnames=list(il[0].keys())); w.writeheader(); w.writerows(il)
@@ -65,3 +68,32 @@ for r in hosp:
     time.sleep(0.5)
 json.dump(geo, open(os.path.join(OUT, 'cms_geocoded.json'), 'w'), indent=1)
 print('geocoded', sum(1 for g in geo.values() if g['at']), 'of', len(geo))
+
+# OpenStreetMap, for campus and hospital positions.
+BBOX = (41.64, -87.95, 42.03, -87.52)
+QUERY = f"""
+[out:json][timeout:240];
+(
+  nwr["amenity"~"^(university|college|hospital)$"]({BBOX[0]},{BBOX[1]},{BBOX[2]},{BBOX[3]});
+  nwr["name"~"Northwestern|DePaul|Loyola|Rush University|Swedish",i]["building"]({BBOX[0]},{BBOX[1]},{BBOX[2]},{BBOX[3]});
+);
+out tags center;
+"""
+data = urllib.parse.urlencode({'data': QUERY}).encode()
+res = None
+for attempt in range(6):
+    url = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'][attempt % 2]
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=UA), timeout=300) as r:
+            res = json.load(r); break
+    except Exception as e:
+        print('  retry', attempt + 1, url, e); time.sleep(20 * (attempt + 1))
+if res is None: raise SystemExit('Overpass request failed')
+els = []
+for el in res.get('elements', []):
+    t = el.get('tags', {}); c = el if el.get('type') == 'node' else el.get('center')
+    if not t.get('name') or not c or 'lat' not in c: continue
+    els.append({'osm': el['type'][0] + str(el['id']), 'at': [round(c['lon'], 5), round(c['lat'], 5)], 'name': t['name'],
+                'amenity': t.get('amenity') or 'other', 'operator': t.get('operator'), 'emergency': t.get('emergency')})
+json.dump(sorted(els, key=lambda e: (e['amenity'], e['name'])), open(os.path.join(OUT, 'osm.json'), 'w'), ensure_ascii=False, indent=0)
+print('OSM:', len(els), 'elements')
