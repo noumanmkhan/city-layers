@@ -1,0 +1,257 @@
+{
+ "140018": {
+  "address": "15TH STREET AT CALIFORNIA, Chicago, IL 60608",
+  "at": [
+   -87.69572,
+   41.86012
+  ],
+  "matched": "W 15TH PL & S CALIFORNIA AVE, CHICAGO, IL, 60608"
+ },
+ "14003F": {
+  "address": "820 S DAMEN STREET, Chicago, IL 60612",
+  "at": [
+   -87.67645,
+   41.87119
+  ],
+  "matched": "820 S DAMEN AVE, CHICAGO, IL, 60612"
+ },
+ "140048": {
+  "address": "2320 E 93RD ST, Chicago, IL 60617",
+  "at": [
+   -87.56785,
+   41.72627
+  ],
+  "matched": "2320 E 93RD ST, CHICAGO, IL, 60617"
+ },
+ "140068": {
+  "address": "45 W 111TH STREET, Chicago, IL 60628",
+  "at": [
+   -87.62434,
+   41.69251
+  ],
+  "matched": "45 W 111TH ST, CHICAGO, IL, 60628"
+ },
+ "140082": {
+  "address": "4646 N MARINE DRIVE, Chicago, IL 60640",
+  "at": [
+   -87.64895,
+   41.96647
+  ],
+  "matched": "4646 N MARINE DR, CHICAGO, IL, 60640"
+ },
+ "140083": {
+  "address": "645 SOUTH CENTRAL AVE, Chicago, IL 60644",
+  "at": [
+   -87.7645,
+   41.87269
+  ],
+  "matched": "645 S CENTRAL AVE, CHICAGO, IL, 60644"
+ },
+ "140088": {
+  "address": "5841 SOUTH MARYLAND, Chicago, IL 60637",
+  "at": [
+   -87.60486,
+   41.78877
+  ],
+  "matched": "5841 S MARYLAND AVE, CHICAGO, IL, 60637"
+ },
+ "140095": {
+  "address": "2875 WEST 19TH STREET, Chicago, IL 60623",
+  "at": [
+   -87.69809,
+   41.85546
+  ],
+  "matched": "2875 W 19TH ST, CHICAGO, IL, 60623"
+ },
+ "140103": {
+  "address": "326 W 64TH ST, Chicago, IL 60621",
+  "at": [
+   -87.63188,
+   41.77819
+  ],
+  "matched": "326 W 64TH ST, CHICAGO, IL, 60621"
+ },
+ "140114": {
+  "address": "5145 N CALIFORNIA AVE, Chicago, IL 60625",
+  "at": null,
+  "matched": null
+ },
+ "140115": {
+  "address": "850 W IRVING PARK RD, Chicago, IL 60613",
+  "at": [
+   -87.65232,
+   41.95458
+  ],
+  "matched": "850 W IRVING PARK RD, CHICAGO, IL, 60613"
+ },
+ "140117": {
+  "address": "7435 W TALCOTT AVENUE, Chicago, IL 60631",
+  "at": [
+   -87.81292,
+   41.98861
+  ],
+  "matched": "7435 W TALCOTT AVE, CHICAGO, IL, 60631"
+ },
+ "140119": {
+  "address": "1653 WEST CONGRESS PARKWAY, Chicago, IL 60612",
+  "at": null,
+  "matched": null
+ },
+ "140124": {
+  "address": "1901 W HARRISON ST, Chicago, IL 60612",
+  "at": [
+   -87.67409,
+   41.87402
+  ],
+  "matched": "1901 W HARRISON ST, CHICAGO, IL, 60612"
+ },
+ "140133": {
+  "address": "2701 W 68TH STREET, Chicago, IL 60629",
+  "at": [
+   -87.6908,
+   41.76998
+  ],
+  "matched": "2701 W 68TH ST, CHICAGO, IL, 60629"
+ },
+ "140150": {
+  "address": "1740 WEST TAYLOR ST SUITE 1400, Chicago, IL 60612",
+  "at": [
+   -87.67071,
+   41.86926
+  ],
+  "matched": "1740 W TAYLOR ST, CHICAGO, IL, 60612"
+ },
+ "140158": {
+  "address": "2525 S MICHIGAN AVE, Chicago, IL 60616",
+  "at": [
+   -87.62331,
+   41.84541
+  ],
+  "matched": "2525 S MICHIGAN AVE, CHICAGO, IL, 60616"
+ },
+ "140177": {
+  "address": "7531 S STONY ISLAND AVE, Chicago, IL 60649",
+  "at": [
+   -87.58564,
+   41.7578
+  ],
+  "matched": "7531 STONY ISLAND AVE, CHICAGO, IL, 60649"
+ },
+ "140180": {
+  "address": "2233 W DIVISION ST, Chicago, IL 60622",
+  "at": [
+   -87.68296,
+   41.90303
+  ],
+  "matched": "2233 W DIVISION ST, CHICAGO, IL, 60622"
+ },
+ "140181": {
+  "address": "8012 SOUTH CRANDON AVENUE, Chicago, IL 60617",
+  "at": [
+   -87.56871,
+   41.74973
+  ],
+  "matched": "8012 S CRANDON AVE, CHICAGO, IL, 60617"
+ },
+ "140182": {
+  "address": "836 WEST WELLINGTON AVENUE, Chicago, IL 60657",
+  "at": [
+   -87.6522,
+   41.93636
+  ],
+  "matched": "836 W WELLINGTON AVE, CHICAGO, IL, 60657"
+ },
+ "140197": {
+  "address": "5025 N PAULINA STREET, Chicago, IL 60640",
+  "at": [
+   -87.67105,
+   41.97275
+  ],
+  "matched": "5025 N PAULINA ST, CHICAGO, IL, 60640"
+ },
+ "140206": {
+  "address": "1044 N FRANCISCO AVE, Chicago, IL 60622",
+  "at": [
+   -87.69935,
+   41.89981
+  ],
+  "matched": "1044 N FRANCISCO AVE, CHICAGO, IL, 60622"
+ },
+ "140224": {
+  "address": "2900 NORTH LAKE SHORE DRIVE, Chicago, IL 60657",
+  "at": [
+   -87.63285,
+   41.93526
+  ],
+  "matched": "2900 N LAKE SHORE DR, CHICAGO, IL, 60657"
+ },
+ "140251": {
+  "address": "5645 W ADDISON STREET, Chicago, IL 60634",
+  "at": [
+   -87.76819,
+   41.9458
+  ],
+  "matched": "5645 W ADDISON ST, CHICAGO, IL, 60634"
+ },
+ "140281": {
+  "address": "251 E HURON ST, Chicago, IL 60611",
+  "at": [
+   -87.62152,
+   41.89495
+  ],
+  "matched": "251 E HURON ST, CHICAGO, IL, 60611"
+ },
+ "140300": {
+  "address": "500 E 51ST ST, Chicago, IL 60615",
+  "at": [
+   -87.61258,
+   41.80221
+  ],
+  "matched": "500 E 51ST ST, CHICAGO, IL, 60615"
+ },
+ "143300": {
+  "address": "225 E CHICAGO AVE, BOX 140, Chicago, IL 60611",
+  "at": [
+   -87.62293,
+   41.8967
+  ],
+  "matched": "225 E CHICAGO AVE, CHICAGO, IL, 60611"
+ },
+ "143301": {
+  "address": "E 65TH ST AT LAKE MICHIGAN, Chicago, IL 60649",
+  "at": null,
+  "matched": null
+ },
+ "143302": {
+  "address": "2211 NORTH OAK PARK AVE, Chicago, IL 60707",
+  "at": [
+   -87.79496,
+   41.91695
+  ],
+  "matched": "2211 N OAK PARK AVE, CHICAGO, IL, 60707"
+ },
+ "144010": {
+  "address": "4200 N OAK PARK AVE, Chicago, IL 60634",
+  "at": [
+   -87.79769,
+   41.95717
+  ],
+  "matched": "4200 N OAK PARK AVE, CHICAGO, IL, 60634"
+ },
+ "144026": {
+  "address": "5730 W ROOSEVELT ROAD, Chicago, IL 60644",
+  "at": [
+   -87.76757,
+   41.86561
+  ],
+  "matched": "5730 W ROOSEVELT RD, CHICAGO, IL, 60644"
+ },
+ "144043": {
+  "address": "4720 N CLARENDON AVENUE, Chicago, IL 60640",
+  "at": [
+   -87.65017,
+   41.96819
+  ],
+  "matched": "4720 N CLARENDON AVE, CHICAGO, IL, 60640"
+ }
+}
