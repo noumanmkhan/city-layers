@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-10T10:51:23+00:00",
+ "fetched": "2026-10-10T10:54:29+00:00",
  "page": "List of tallest buildings in Chicago",
  "revid": 1376906461,
  "license": "CC BY-SA 4.0, Wikipedia contributors",
@@ -7154,6 +7154,14 @@
    "lat": 41.889707,
    "lon": -87.624861,
    "qid": "Q1464592"
+  }
+ },
+ "geocoded": {
+  "Halsted Pointe Phase 1": {
+   "address": "901 North Halsted Street",
+   "lat": 41.899132,
+   "lon": -87.6479903,
+   "found": "901, North Halsted Street, River North, Near North Side, Chicago, North Chicago Township, Cook County, Illinois, 60642, United States"
   }
  }
 }

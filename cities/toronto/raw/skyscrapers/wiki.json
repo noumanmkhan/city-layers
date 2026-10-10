@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-10T10:51:20+00:00",
+ "fetched": "2026-10-10T10:54:23+00:00",
  "page": "List of tallest buildings in Toronto",
  "revid": 1378696540,
  "license": "CC BY-SA 4.0, Wikipedia contributors",
@@ -6634,6 +6634,86 @@
    "lat": 43.67027778,
    "lon": -79.39111111,
    "qid": "Q1022897"
+  }
+ },
+ "geocoded": {
+  "Concord Sky (385 Yonge Street)": {
+   "address": "385 Yonge Street",
+   "lat": 43.6588319,
+   "lon": -79.3817941,
+   "found": "385, Yonge Street, Downtown Yonge East, Toronto Centre, Toronto, Ontario, M5B 1S5, Canada"
+  },
+  "Forma East Tower (266 King Street West)": {
+   "address": "266 King Street West",
+   "lat": 43.64719,
+   "lon": -79.38787,
+   "found": "266, King Street West, Wellington Place, Downtown, Toronto, Ontario, M5V 1H9, Canada"
+  },
+  "8 Elm Street": {
+   "address": "8 Elm Street",
+   "lat": 43.6579,
+   "lon": -79.38222,
+   "found": "8, Elm Street, Yonge-Bay Corridor, University—Rosedale, Toronto, Ontario, M5G 1G7, Canada"
+  },
+  "The Pemberton (33 Yorkville Avenue)": {
+   "address": "33 Yorkville Avenue",
+   "lat": 43.67143,
+   "lon": -79.38916,
+   "found": "33, Yorkville Avenue, Annex, Downtown, Toronto, Ontario, M4W 1L5, Canada"
+  },
+  "Q Tower (200 Queens Quay West)": {
+   "address": "200 Queens Quay West",
+   "lat": 43.64048,
+   "lon": -79.38174,
+   "found": "200, Queens Quay West, Harbourfront-CityPlace, Downtown, Toronto, Ontario, M5J 2Y6, Canada"
+  },
+  "Queen Church": {
+   "address": "60 Queen Street East",
+   "lat": 43.653275,
+   "lon": -79.375677,
+   "found": "60, Queen Street East, Downtown Yonge East, Toronto Centre, Toronto, Ontario, M5C 1R9, Canada"
+  },
+  "The United BLDG (481 University Avenue)": {
+   "address": "481 University Avenue",
+   "lat": 43.655415,
+   "lon": -79.388258,
+   "found": "481, University Avenue, Yonge-Bay Corridor, University—Rosedale, Toronto, Ontario, M5G 1V1, Canada"
+  },
+  "241 Church Street": {
+   "address": "241 Church Street",
+   "lat": 43.65689,
+   "lon": -79.37705,
+   "found": "241, Church Street, Downtown Yonge East, Toronto Centre, Toronto, Ontario, M5B 1E9, Canada"
+  },
+  "The Bourne": {
+   "address": "591 Sherbourne Street",
+   "lat": 43.67089,
+   "lon": -79.37601,
+   "found": "591, Sherbourne Street, North St.James Town, Downtown, Toronto, Ontario, M4Y 1V5, Canada"
+  },
+  "4800 Yonge": {
+   "address": "4800 Yonge Street",
+   "lat": 43.7211959,
+   "lon": -79.4014145,
+   "found": "Yonge Street, Lawrence Park South, Don Valley West, Toronto, Ontario, M4R 1S4, Canada"
+  },
+  "170 Roehampton": {
+   "address": "170 Roehampton Avenue",
+   "lat": 43.7092549,
+   "lon": -79.3937885,
+   "found": "170, Roehampton Avenue, North Toronto, Toronto—St. Paul's, Toronto, Ontario, M4P 1T7, Canada"
+  },
+  "Pinnacle Lakeside Tower 1 (215 Lake Shore Boulevard East)": {
+   "address": "215 Lake Shore Boulevard East",
+   "lat": 43.64566,
+   "lon": -79.36699,
+   "found": "215, Lake Shore Boulevard East, St Lawrence-East Bayfront-The Islands, Spadina—Fort York, Toronto, Ontario, M5A 3C4, Canada"
+  },
+  "49 Ontario Street West Tower": {
+   "address": "49 Ontario Street",
+   "lat": 43.652846,
+   "lon": -79.366133,
+   "found": "49, Ontario Street, Moss Park, Downtown, Toronto, Ontario, M5A 3S5, Canada"
   }
  }
 }
