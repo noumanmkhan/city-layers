@@ -1,0 +1,31 @@
+name: Fetch Toronto nearby places
+# Downloads Toronto's parks and recreation facilities and library branches (Toronto Open Data) into
+# cities/toronto/raw/nearby/ for the card's Nearby section. Runs when the fetch script changes on
+# main, monthly (the parks file is refreshed monthly), or by hand.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 8 3 * *'
+  push:
+    branches: [main]
+    paths: ['cities/toronto/fetch_nearby.py', '.github/workflows/fetch-toronto-nearby.yml']
+permissions:
+  contents: write
+concurrency: fetch-toronto-nearby
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: mkdir -p cities/toronto/raw/nearby && python3 -u cities/toronto/fetch_nearby.py 2>&1 | tee cities/toronto/raw/nearby/fetch.log
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/nearby
+          git commit -m "Fetch Toronto parks, recreation and library locations" || echo "no changes"
+          git pull --rebase
+          git push
