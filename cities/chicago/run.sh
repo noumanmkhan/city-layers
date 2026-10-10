@@ -20,6 +20,7 @@ for f in highways streets; do npx mapshaper -i tmp/$f.geojson -simplify interval
 npx mapshaper -i tmp/region_highways.geojson -simplify interval=15 -o $OUT/region_highways.geojson precision=0.00001 -quiet
 for f in metra_lines metra_lines_inner; do npx mapshaper -i tmp/$f.geojson -simplify interval=40 -o $OUT/$f.geojson precision=0.00001 -quiet; done
 npx mapshaper -i tmp/cta_lines.geojson -simplify interval=5 -o $OUT/cta_lines.geojson precision=0.00001 -quiet
+python3 nearby.py             # after sides are simplified and institutions written: the card's Nearby points
 [ -d raw/representatives ] && python3 representatives.py   # after the boundaries above: it matches them
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build chicago   # after base is simplified: adds drive times to it
 python3 ../../engine/regions.py chicago   # outlines for Focus on a county / region

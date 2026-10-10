@@ -142,6 +142,13 @@
       "built": {"label": "Built", "bands": ["1960 or before", "1961–80", "1981–2000", "2001–21"]},
       "lang": {"label": "Language at home", "floor": 5, "note": "The language each person speaks most often at home.[ Another {multi}% name two or more equally.]"}
     },
+    "nearby": {
+      "file": "nearby.json", "radius": 1000,
+      "nearest": [["library", "Library"], ["centre", "Community centre"], ["er", "Emergency dept."]],
+      "within": "Within 1 km",
+      "counts": [["park", "park", "parks"], ["playground", "playground", "playgrounds"], ["tennis", "park with tennis courts", "parks with tennis courts"], ["offleash", "dog off-leash area", "dog off-leash areas"]],
+      "note": "Straight-line distances; 1 km is about a 15-minute walk. City of Toronto parks and recreation, Toronto Public Library and the hospitals layer. Counts parks, not courts."
+    },
     "reps": {
       "file": "representatives.json",
       "offices": [

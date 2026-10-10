@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -52,6 +52,7 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 | `drive_grid.json` | Free-flow drive minutes to the hub on a ~1.5 km grid, outside the city. Section 6. |
 | `region_places.json` | Toronto only: ~470 named GTA communities. `[{name, muni, region, kind, at:[lon,lat]}]`. |
 | `region_areas.geojson` | Region/county outlines for the regional view. Not needed for the card. |
+| `nearby.json` | Points for the card's Nearby section: `{groups: {key: [[lon, lat, name?], …]}}`. Keys and labels come from `card.nearby` (section 5). Named kinds (`library`, `centre`, `er`) carry a name; counted kinds (`park`, `playground`, …) are bare points. |
 | `institutions.geojson` | Universities, colleges and hospitals (points) for the `places` layers. `properties`: `name`, `cat` (`university`, `college`, `hospital`), `sub` (campus, network or ownership, optional), `ed` (true for a hospital with an emergency department). Curated by fixed rules (public or nonprofit only; see each city's `institutions.py`). Describe only: no ratings. |
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
@@ -200,13 +201,20 @@ first matching feature in file order wins.
    shown: one more row, label `role`, record `representatives.trustees[board][key]` (Chicago's
    board president), subline `sub`, same rules.
    Names are plain text (no official page yet). Append `trustees.note` to the footer.
+   **Nearby** (`card.nearby`, both cities): for each `[key, label]` in `nearest`, the nearest point
+   of `nearby.groups[key]` by straight-line distance: row `label`, value its name, subline the
+   distance ("600 m away"; to the nearest 50 m under a kilometre, then "1.8 km"). Then one row,
+   label `within`, value the count of points of each `[key, one, many]` in `counts` within
+   `radius` metres, "19 parks · 7 playgrounds …" (`one` when the count is 1). Footer `note`, always
+   shown. Counts only: never a score, ranking or "best". The website shows this section between
+   Living here and Representatives.
 10. **Title**: the searched place's name if there is one. Otherwise (a dropped pin): the name of
    `hits[unitsLayerId]` (the neighbourhood / community area); failing that, the first `fill`-kind
    layer's hit; coordinates (`43.6681° N, 79.3669° W`) only for a spot no layer covers.
    The standout line (step 7) drops its "{profile name}: " prefix when the title is that name.
 
-The website shows the standout line under the pills, then three collapsible sections in this
-order: Boundaries, Living here, Representatives.
+The website shows the standout line under the pills, then four collapsible sections in this
+order: Boundaries, Living here, Nearby, Representatives.
 
 ### Worked example (Toronto, 43.66810, -79.36690)
 

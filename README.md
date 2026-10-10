@@ -88,6 +88,7 @@ Three more rows describe the place without ranking it: *Home types* (the mix of 
 
 - *Boundaries:* former city, area, neighbourhood, nearby known-as names, BIA, ward, provincial riding, federal riding and the spot's ward on each of the four school boards.
 - *Living here:* the neighbourhood lens tiers and the figures behind them.
+- *Nearby:* the nearest library branch, community centre and emergency department, with the distance, and how many parks, playgrounds, parks with tennis courts and dog off-leash areas are within 1 km (about a 15-minute walk). Counts only, nothing scored. From the City's parks and recreation file and Toronto Public Library; Chicago's uses the Chicago Public Library and OpenStreetMap.
 - *Representatives:* the city councillor, MPP and MP for that spot, each name linking to their official page on toronto.ca, ola.org or ourcommons.ca, with party for the MPP and MP (Toronto councillors run without party labels). Then a school trustee row for each board: before the October 26, 2026 election it lists the candidates; once the City's results file has a winner it names them, marked as taking office November 15; from then on, just the trustee.
 
 The boundary lookup runs in the browser with point-in-polygon tests against every layer, whether or not the layer is switched on.

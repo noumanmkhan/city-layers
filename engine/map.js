@@ -643,12 +643,28 @@ function langRow(cfg, d){
     (cfg.note ? '<span class="caveat">' + esc(fill(cfg.note, {multi: d.langMulti})) + '</span>' : '') + '</dd>';
 }
 // Collapsible card sections. Open/closed is remembered in this browser; phones start with all closed.
-const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, reps:false} : {bounds:true, live:true, reps:false};
+const SEC_DEFAULT = matchMedia('(max-width:760px)').matches ? {bounds:false, live:false, near:false, reps:false} : {bounds:true, live:true, near:true, reps:false};
 let secOpen = Object.assign({}, SEC_DEFAULT);
 try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || '{}')); } catch (e) {}
 function section(id, title, body){
   if (!body) return '';
   return '<details class="sec" data-sec="' + id + '"' + (secOpen[id] ? ' open' : '') + '><summary>' + title + '</summary>' + body + '</details>';
+}
+/* Nearby (card only, nothing drawn on the map): the nearest of a few kinds of public place (library,
+   community centre, emergency department) with the straight-line distance, and how many of others
+   (parks, playgrounds…) are within the radius. Describe only: counts, never a score or a ranking. */
+const dist = m => m < 950 ? (Math.round(m / 50) * 50 || 50) + ' m' : (m / 1000).toFixed(m < 9950 ? 1 : 0) + ' km';
+function nearby(x, y){
+  const N = CITY.card.nearby, G = data.nearby && data.nearby.groups; if (!N || !G) return '';
+  const rows = N.nearest.map(([key, label]) => {
+    const best = (G[key] || []).map(p => [p, metres([x, y], p)]).sort((a, b) => a[1] - b[1])[0];
+    return best ? '<dt>' + esc(label) + '</dt><dd>' + esc(best[0][2]) + '<span>' + dist(best[1]) + ' away</span></dd>' : '';
+  }).join('');
+  const counts = N.counts.map(([key, one, many]) => {
+    const n = (G[key] || []).filter(p => metres([x, y], p) <= N.radius).length;
+    return n + ' ' + (n === 1 ? one : many);
+  });
+  return '<div class="live"><dl>' + rows + '<dt>' + esc(N.within) + '</dt><dd>' + esc(counts.join(' · ')) + '</dd></dl><p>' + esc(N.note) + '</p></div>';
 }
 // Who represents this spot. Names link to their official pages.
 function representatives(hits){
@@ -766,6 +782,7 @@ function inspect(latlng, title, muniName){
     standout(unit, heading) +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
+    section('near', 'Nearby', nearby(x, y)) +
     section('reps', 'Representatives', representatives(hits));
   document.getElementById('hereX').onclick = closeHere;
   here.querySelector('.share').onclick = share;
@@ -1309,6 +1326,7 @@ const loaded = {};
 Promise.all(files.map(f => get(f).then(d => { loaded[f] = d; }))
   .concat([get(CITY.lens.file).then(d => { data.profiles = d; }), get(CITY.card.reps.file).then(d => { data.reps = d; }).catch(() => { data.reps = null; }),
     CITY.regionPlaces ? get(CITY.regionPlaces.file).then(d => { data.regionPlaces = d; }).catch(() => { data.regionPlaces = null; }) : null,
+    CITY.card.nearby ? get(CITY.card.nearby.file).then(d => { data.nearby = d; }).catch(() => { data.nearby = null; }) : null,
     CITY.drive ? get('drive_grid.json').then(d => { data.driveGrid = d; }).catch(() => { data.driveGrid = null; }) : null,
     CITY.focus ? get('region_areas').then(d => { data.regionAreas = d; }).catch(() => { data.regionAreas = null; }) : null]))
 .then(() => {
