@@ -141,10 +141,10 @@
     },
     "nearby": {
       "file": "nearby.json", "radius": 805,
-      "nearest": [["library", "Library"], ["centre", "Community centre"], ["er", "Emergency dept."]],
+      "nearest": [["library", "Library"], ["centre", "Community center"], ["er", "Emergency dept."]],
       "within": "Within ½ mile",
       "counts": [["park", "park", "parks"], ["playground", "playground", "playgrounds"], ["tennis", "tennis court location", "tennis court locations"]],
-      "note": "Straight-line distances; half a mile is about a 10-minute walk. Chicago Public Library, the ERs layer and OpenStreetMap (parks, playgrounds, courts, community centres)."
+      "note": "Straight-line distances; half a mile is about a 10-minute walk. Chicago Public Library, the ERs layer and the Park District and City community centers, and OpenStreetMap (parks, playgrounds, courts)."
     },
     "reps": {
       "file": "representatives.json",
