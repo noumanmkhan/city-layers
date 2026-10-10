@@ -1819,7 +1819,8 @@ function goRoute(r){
   if (matchMedia('(max-width:760px)').matches) panel.classList.add('collapsed');
   frame(L.latLngBounds([[r.b[1], r.b[0]], [r.b[3], r.b[2]]]));
 }
-// Stops: those of the streetcar layer and the bus layer from zoom 15, a picked route's from zoom 13; only in view.
+// Stops from zoom 15 for the routes each layer is drawing (daytime streetcars; the bus families on show), and a
+// picked route's from zoom 13; only in view. A stop whose routes aren't drawn stays hidden, so no stop floats.
 const stopLayer = L.layerGroup().addTo(map);
 function drawStops(){
   stopLayer.clearLayers();
@@ -1831,7 +1832,7 @@ function drawStops(){
   T.stops.forEach(s => {
     if (!b.contains([s[1], s[0]])) return;
     const rs = s[3].map(i => T.routes[i]), isTram = rs.some(r => r.m === 'tram' && r.day), onPick = pk && s[3].some(i => pk.has(i));
-    if (!(onPick || (tram && isTram) || (bus && rs.some(r => r.m === 'bus')))) return;
+    if (!(onPick || (tram && isTram) || (bus && rs.some(busShows)))) return;
     const m = L.circleMarker([s[1], s[0]], {pane:'pts', radius: z >= 16 ? 4 : 3, className:'stop ' + (onPick ? 'pick' : isTram ? 'tram' : 'bus'), bubblingMouseEvents:false});
     hoverTip(m, esc(s[2]) + ' · ' + esc(rs.map(r => r.r).join(', ')));
     m.on('click', () => inspect(L.latLng(s[1], s[0]), s[2]));
@@ -1871,7 +1872,7 @@ function setBusFams(list){
   if (!pickd.length) return;
   busFams.clear(); pickd.forEach(f => busFams.add(f));
   if (layers[BUSES.id] && layers[BUSES.id]._draw) layers[BUSES.id]._draw();
-  drawBusBox(); queueHash();
+  drawBusBox(); drawStops(); queueHash();
 }
 /* The card's transit section: the nearest rapid-transit station, then every route with a stop within the radius,
    by mode, nearest first, and the nearest stop. Numbers are buttons that draw the route. Filled numbers mark
