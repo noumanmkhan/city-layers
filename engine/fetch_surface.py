@@ -12,9 +12,11 @@ What it keeps, per route (streetcar or bus; route numbers in "skip" are left out
     (hours 0-29: GTFS writes after-midnight trips of a service day as 24:xx, 25:xx...).
 Per stop: id, name, position and the route numbers that serve it during that week.
 
+When the downloaded feed is the one already fetched (same checksum), nothing is written.
+
 Usage: python3 engine/fetch_surface.py <city>
 """
-import collections, csv, datetime as dt, io, json, os, sys, time, urllib.request, zipfile
+import collections, csv, datetime as dt, hashlib, io, json, os, sys, time, urllib.request, zipfile
 from shapely.geometry import LineString
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -56,6 +58,15 @@ else:
     urls = [src['url']]
 feed_url = next((u for u in urls if download(u, ZIP) and ok(ZIP)), None)
 if not feed_url: raise SystemExit('No GTFS found')
+
+# The job runs weekly; agencies publish a new feed every few weeks. Same feed as last time: nothing to do,
+# so the repo only changes when the schedule does.
+SHA = hashlib.sha256(open(ZIP, 'rb').read()).hexdigest()[:16]
+try:
+    if json.load(open(os.path.join(OUT, 'routes.json'))).get('sha') == SHA:
+        print('feed unchanged (sha', SHA + '); keeping the files from last time'); sys.exit(0)
+except (OSError, ValueError):
+    pass
 
 z = zipfile.ZipFile(ZIP)
 
@@ -176,7 +187,7 @@ for r in rows('stops.txt'):
         names[r['stop_id']] = [r['stop_id'], r.get('stop_name', ''), round(float(r['stop_lon']), 5), round(float(r['stop_lat']), 5),
                                sorted({routes[x]['short'] for x in stop_routes[r['stop_id']]}, key=lambda s: (len(s), s))]
 
-meta = {'source': feed_url, 'fetched': dt.date.today().isoformat(), 'feed': [str(first), str(last)], 'week': str(day),
+meta = {'source': feed_url, 'sha': SHA, 'fetched': dt.date.today().isoformat(), 'feed': [str(first), str(last)], 'week': str(day),
         'days': {k: str(v) for k, v in PICK.items()}}
 json.dump(dict(meta, routes=out_routes), open(os.path.join(OUT, 'routes.json'), 'w'), separators=(',', ':'))
 json.dump(dict(meta, stops=list(names.values())), open(os.path.join(OUT, 'stops.json'), 'w'), separators=(',', ':'))

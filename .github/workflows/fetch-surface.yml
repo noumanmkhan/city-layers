@@ -1,15 +1,18 @@
 name: Fetch streetcar and bus routes
-# Downloads each city's agency GTFS (cities/<city>/surface.json) and writes streetcar and bus
-# routes, stops and trips-per-hour counts into cities/<city>/raw/surface/, then commits to main.
-# Runs when the fetch script or a surface.json changes on main, on the 5th of each month
-# (agencies change service a few times a year), or by hand. Rebuild with cities/<city>/run.sh.
+# Downloads each city's agency GTFS (cities/<city>/surface.json). When the feed has changed since the
+# last run, rewrites cities/<city>/raw/surface/ (routes, stops, trips-per-hour counts), rebuilds the
+# published transit files with engine/surface.py (docs/<city>/data/transit.json, transit_routes.geojson,
+# streetcars.geojson) and commits both to main, so the site picks up new schedules without a manual
+# rebuild. Same feed as last time: nothing is committed.
+# Runs weekly (Mondays; the TTC and CTA post new schedules a few days before each service change),
+# when the fetch or build script or a surface.json changes on main, or by hand.
 on:
   workflow_dispatch:
   schedule:
-    - cron: '41 7 5 * *'
+    - cron: '41 7 * * 1'
   push:
     branches: [main]
-    paths: ['engine/fetch_surface.py', 'cities/*/surface.json', '.github/workflows/fetch-surface.yml']
+    paths: ['engine/fetch_surface.py', 'engine/surface.py', 'cities/*/surface.json', '.github/workflows/fetch-surface.yml']
 permissions:
   contents: write
 concurrency: fetch-surface
@@ -23,15 +26,22 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install shapely
-      - run: |
+      - name: Fetch, and rebuild where the feed changed
+        run: |
           for c in toronto chicago; do
             mkdir -p cities/$c/raw/surface
-            python3 -u engine/fetch_surface.py $c 2>&1 | tee cities/$c/raw/surface/fetch.log || true
+            python3 -u engine/fetch_surface.py $c 2>&1 | tee /tmp/fetch-$c.log || true
+            # Rebuild when the raw files changed, or when the build script itself changed in this push.
+            if ! git diff --quiet -- cities/$c/raw/surface/routes.json || [ "${{ github.event_name }}" != "schedule" ]; then
+              cp /tmp/fetch-$c.log cities/$c/raw/surface/fetch.log
+              python3 -u engine/surface.py $c
+            fi
           done
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
           git add cities/toronto/raw/surface cities/chicago/raw/surface
-          git commit -m "Fetch streetcar and bus routes from the agencies' GTFS" || echo "no changes"
+          for c in toronto chicago; do git add docs/$c/data/transit.json docs/$c/data/transit_routes.geojson; [ -f docs/$c/data/streetcars.geojson ] && git add docs/$c/data/streetcars.geojson; done
+          git commit -m "Update streetcar and bus routes from the agencies' latest schedules" || echo "no changes"
           git pull --rebase
           git push
