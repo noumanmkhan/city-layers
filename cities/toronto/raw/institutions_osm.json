@@ -1,0 +1,1767 @@
+{
+"source": "OpenStreetMap contributors (ODbL) via Overpass API",
+"bbox": [
+43.57,
+-79.65,
+43.87,
+-79.1
+],
+"elements": [
+{
+"osm": "n13374713725",
+"at": [
+-79.45525,
+43.75168
+],
+"name": "AAPS",
+"amenity": "college"
+},
+{
+"osm": "n13704267913",
+"at": [
+-79.33686,
+43.72455
+],
+"name": "Academy of Learning Career College",
+"amenity": "college"
+},
+{
+"osm": "n13879320058",
+"at": [
+-79.58542,
+43.60718
+],
+"name": "Academy of Learning Career College",
+"amenity": "college",
+"addr:street": "Dundas Street East",
+"addr:housenumber": "1310"
+},
+{
+"osm": "n7659631027",
+"at": [
+-79.30444,
+43.81877
+],
+"name": "Alpha International Academy",
+"amenity": "college",
+"website": "http://www.slc-alpha.ca/"
+},
+{
+"osm": "n10977886210",
+"at": [
+-79.39759,
+43.70709
+],
+"name": "Anderson College",
+"amenity": "college"
+},
+{
+"osm": "n11776213104",
+"at": [
+-79.61682,
+43.58112
+],
+"name": "Anderson College",
+"amenity": "college",
+"addr:street": "Hurontario Street",
+"addr:housenumber": "3025"
+},
+{
+"osm": "n10885279286",
+"at": [
+-79.62061,
+43.57725
+],
+"name": "Anderson College Galaxy Towers",
+"amenity": "college"
+},
+{
+"osm": "n7797321403",
+"at": [
+-79.26716,
+43.7692
+],
+"name": "Annamalai University",
+"amenity": "college"
+},
+{
+"osm": "n11115201179",
+"at": [
+-79.51334,
+43.70103
+],
+"name": "Bitts International Career College",
+"amenity": "college"
+},
+{
+"osm": "n7751950341",
+"at": [
+-79.35271,
+43.75706
+],
+"name": "Brooklyn College",
+"amenity": "college"
+},
+{
+"osm": "n10085704214",
+"at": [
+-79.27961,
+43.73042
+],
+"name": "CDI College",
+"amenity": "college"
+},
+{
+"osm": "n11699120799",
+"at": [
+-79.62209,
+43.57494
+],
+"name": "CIMT College",
+"amenity": "college"
+},
+{
+"osm": "n13890109307",
+"at": [
+-79.38741,
+43.6723
+],
+"name": "CIMT College",
+"amenity": "college"
+},
+{
+"osm": "n8828490091",
+"at": [
+-79.49033,
+43.76501
+],
+"name": "CJ Healthcare College",
+"amenity": "college"
+},
+{
+"osm": "n640959706",
+"at": [
+-79.61748,
+43.58073
+],
+"name": "CRD College of Health Care",
+"amenity": "college",
+"addr:street": "3024 Hurontario Street",
+"addr:housenumber": "13"
+},
+{
+"osm": "n12941605147",
+"at": [
+-79.42907,
+43.83993
+],
+"name": "Canada Skills & Training College",
+"amenity": "college"
+},
+{
+"osm": "n9740184036",
+"at": [
+-79.4685,
+43.77307
+],
+"name": "Canadian All Care College",
+"amenity": "college"
+},
+{
+"osm": "w77039686",
+"at": [
+-79.58931,
+43.60553
+],
+"name": "Canadian Beauty College",
+"amenity": "college",
+"addr:street": "Dundas Street East",
+"addr:housenumber": "1185"
+},
+{
+"osm": "n12861774206",
+"at": [
+-79.64017,
+43.6345
+],
+"name": "Canadian College of Traditional Chinese Medicine",
+"amenity": "college"
+},
+{
+"osm": "w1024399954",
+"at": [
+-79.38137,
+43.74152
+],
+"name": "Canadian Film Centre",
+"amenity": "college",
+"website": "https://cfccreates.com/",
+"addr:street": "Bayview Avenue",
+"addr:housenumber": "2489"
+},
+{
+"osm": "n1907123254",
+"at": [
+-79.5003,
+43.602
+],
+"name": "Canadian Institude of Floral Design",
+"amenity": "college",
+"website": "https://www.cifd.ca/"
+},
+{
+"osm": "n1515959209",
+"at": [
+-79.63108,
+43.62791
+],
+"name": "Canadore College - Stanford Mississauga Campus",
+"amenity": "college",
+"operator": "Canadore College"
+},
+{
+"osm": "n7236041819",
+"at": [
+-79.2333,
+43.78302
+],
+"name": "Canadore College - Stanford Scarborough Campus",
+"amenity": "college",
+"operator": "Canadore College"
+},
+{
+"osm": "w33013888",
+"at": [
+-79.22783,
+43.78572
+],
+"name": "Centennial College",
+"alt_name": "Centennial College - Progress Campus",
+"amenity": "college",
+"operator": "Centennial College",
+"website": "https://www.centennialcollege.ca/",
+"addr:street": "Progress Avenue",
+"addr:housenumber": "941"
+},
+{
+"osm": "w775639084",
+"at": [
+-79.34893,
+43.68474
+],
+"name": "Centennial College",
+"amenity": "college",
+"operator": "Centennial College",
+"website": "https://www.centennialcollege.ca/",
+"addr:street": "Carlaw Avenue",
+"addr:housenumber": "951"
+},
+{
+"osm": "w36508437",
+"at": [
+-79.29134,
+43.73152
+],
+"name": "Centennial College - Ashtonbee Campus",
+"amenity": "college",
+"operator": "Centennial College"
+},
+{
+"osm": "w1034677780",
+"at": [
+-79.47532,
+43.74746
+],
+"name": "Centennial College Downsview Campus",
+"amenity": "college",
+"addr:street": "Carl Hall Road",
+"addr:housenumber": "65"
+},
+{
+"osm": "n10647679866",
+"at": [
+-79.28037,
+43.72991
+],
+"name": "Centennial College Performing Arts Centre",
+"amenity": "college",
+"operator": "Centennial College",
+"website": "https://www.centennialcollege.ca/about-centennial/schools/school-of-communications-media-arts-and-design/about-the-school/centennial-college-performing-arts-centre",
+"addr:street": "Eglinton Avenue East",
+"addr:housenumber": "2200"
+},
+{
+"osm": "n11103503144",
+"at": [
+-79.64173,
+43.58948
+],
+"name": "Chellsey Institute of Beauty and Health Inc.",
+"amenity": "college"
+},
+{
+"osm": "n9376637799",
+"at": [
+-79.56516,
+43.64158
+],
+"name": "Civic Centre LINC",
+"amenity": "college"
+},
+{
+"osm": "n2681580824",
+"at": [
+-79.37466,
+43.6424
+],
+"name": "Collège Boréal - Toronto Campus",
+"amenity": "college",
+"operator": "Collège Boréal"
+},
+{
+"osm": "n13670266862",
+"at": [
+-79.56588,
+43.73707
+],
+"name": "Empire Truck Academy",
+"amenity": "college"
+},
+{
+"osm": "w815475387",
+"at": [
+-79.35752,
+43.84493
+],
+"name": "Evergreen College Markham Campus",
+"amenity": "college"
+},
+{
+"osm": "w1431713652",
+"at": [
+-79.65003,
+43.67421
+],
+"name": "Fire and Emergency Services Training Institute",
+"short_name": "FESTI",
+"amenity": "college",
+"website": "https://festi.ca/",
+"addr:street": "Courtneypark Drive East",
+"addr:housenumber": "2025"
+},
+{
+"osm": "n708864708",
+"at": [
+-79.61489,
+43.57974
+],
+"name": "Free Game Dept. Branding Academy",
+"amenity": "college",
+"addr:street": "Hurontario Street",
+"addr:housenumber": "2553a"
+},
+{
+"osm": "w42705254",
+"at": [
+-79.41097,
+43.6759
+],
+"name": "George Brown College - Casa Loma Campus",
+"amenity": "college",
+"operator": "George Brown College"
+},
+{
+"osm": "n8755303552",
+"at": [
+-79.36868,
+43.64451
+],
+"name": "George Brown College - School of Design",
+"amenity": "college",
+"website": "https://www.georgebrown.ca",
+"addr:street": "Lower Jarvis Street",
+"addr:housenumber": "3"
+},
+{
+"osm": "w775640504",
+"at": [
+-79.36579,
+43.64415
+],
+"name": "George Brown College - Waterfront Campus",
+"amenity": "college",
+"operator": "George Brown College",
+"addr:street": "Dockside Drive",
+"addr:housenumber": "51"
+},
+{
+"osm": "n12091108919",
+"at": [
+-79.35759,
+43.65097
+],
+"name": "Geroge Brown Theatre School",
+"amenity": "college",
+"addr:street": "Tank House Lane",
+"addr:housenumber": "50"
+},
+{
+"osm": "n12770899929",
+"at": [
+-79.39188,
+43.70784
+],
+"name": "Helix Academy",
+"amenity": "college"
+},
+{
+"osm": "n783499436",
+"at": [
+-79.38137,
+43.65434
+],
+"name": "Herzing Career College",
+"amenity": "college",
+"website": "https://www.herzing.ca",
+"addr:street": "Yonge Street",
+"addr:housenumber": "220"
+},
+{
+"osm": "n6848957015",
+"at": [
+-79.43405,
+43.65237
+],
+"name": "Hot Pizza Studio",
+"amenity": "college",
+"website": "https://www.hotpizza.studio",
+"addr:street": "College Street",
+"addr:housenumber": "1152"
+},
+{
+"osm": "n9071191071",
+"at": [
+-79.38359,
+43.66989
+],
+"name": "Humber Downtown Campus",
+"amenity": "college",
+"operator": "Humber College",
+"addr:street": "Hayden Street",
+"addr:housenumber": "59"
+},
+{
+"osm": "n4957538454",
+"at": [
+-79.60627,
+43.73935
+],
+"name": "Humber Education & Training Solutions",
+"amenity": "college",
+"operator": "Humber College",
+"addr:street": "Carrier Drive",
+"addr:housenumber": "30"
+},
+{
+"osm": "n1518532024",
+"at": [
+-79.51743,
+43.59827
+],
+"name": "Humber Fashion Institute",
+"amenity": "college",
+"addr:street": "Lake Shore Boulevard West",
+"addr:housenumber": "3166"
+},
+{
+"osm": "w220190025",
+"at": [
+-79.6061,
+43.72862
+],
+"name": "Humber Polytechnic",
+"alt_name": "Humber College - North Campus;Humber Polytechnic - North Campus",
+"amenity": "college",
+"operator": "Humber Institute of Technology and Advanced Learning"
+},
+{
+"osm": "w505921693",
+"at": [
+-79.51453,
+43.59598
+],
+"name": "Humber Polytechnic - Lakeshore Campus",
+"amenity": "college",
+"operator": "Humber Polytechnic"
+},
+{
+"osm": "w686503820",
+"at": [
+-79.51985,
+43.59617
+],
+"name": "Humber Polytechnic - Lakeshore Campus West",
+"amenity": "college",
+"operator": "Humber Polytechnic"
+},
+{
+"osm": "w1504222290",
+"at": [
+-79.39914,
+43.66582
+],
+"name": "Innis College",
+"amenity": "college",
+"operator": "University of Toronto",
+"operator:type": "university",
+"website": "https://innis.utoronto.ca/"
+},
+{
+"osm": "w1504227411",
+"at": [
+-79.39669,
+43.66143
+],
+"name": "Knox College",
+"amenity": "college",
+"website": "https://knox.utoronto.ca/"
+},
+{
+"osm": "n3925813284",
+"at": [
+-79.58828,
+43.62426
+],
+"name": "LINC English Classes",
+"amenity": "college",
+"addr:street": "Fieldgate Drive",
+"addr:housenumber": "3417"
+},
+{
+"osm": "n4507572289",
+"at": [
+-79.33597,
+43.77337
+],
+"name": "Lambton College - Toronto Campus",
+"amenity": "college",
+"operator": "Lambton College"
+},
+{
+"osm": "w1289507559",
+"at": [
+-79.34584,
+43.81167
+],
+"name": "Loyalist College in Toronto",
+"amenity": "college",
+"website": "https://loyalistcollege.com/lcit-home/"
+},
+{
+"osm": "w1540356416",
+"at": [
+-79.39749,
+43.66483
+],
+"name": "Massey College",
+"amenity": "college",
+"website": "https://masseycollege.ca/"
+},
+{
+"osm": "n12227880714",
+"at": [
+-79.44805,
+43.71663
+],
+"name": "Medix College",
+"amenity": "college"
+},
+{
+"osm": "n13946404588",
+"at": [
+-79.60588,
+43.73795
+],
+"name": "NAB College",
+"amenity": "college",
+"addr:street": "Woodbine Downs Boulevard",
+"addr:housenumber": "55"
+},
+{
+"osm": "n12312756757",
+"at": [
+-79.28071,
+43.76693
+],
+"name": "NetPLUS College",
+"amenity": "college",
+"addr:street": "Kennedy Road",
+"addr:housenumber": "1891 Unit 3"
+},
+{
+"osm": "w1504225085",
+"at": [
+-79.40045,
+43.66165
+],
+"name": "New College",
+"amenity": "college",
+"operator": "University of Toronto",
+"operator:type": "university",
+"website": "https://www.newcollege.utoronto.ca/"
+},
+{
+"osm": "n13670266863",
+"at": [
+-79.56589,
+43.73702
+],
+"name": "Newlight Truck Academy",
+"amenity": "college"
+},
+{
+"osm": "n14229453397",
+"at": [
+-79.40399,
+43.6979
+],
+"name": "Ontario Academy of Progressive Osteopathy",
+"amenity": "college",
+"addr:street": "Chaplin Crescent",
+"addr:housenumber": "115"
+},
+{
+"osm": "n13951193852",
+"at": [
+-79.33064,
+43.68166
+],
+"name": "Ontario College of Homeopathic Medicine",
+"amenity": "college",
+"addr:street": "Danforth Avenue",
+"addr:housenumber": "1245"
+},
+{
+"osm": "n11091336111",
+"at": [
+-79.25005,
+43.7771
+],
+"name": "Oxford College",
+"amenity": "college",
+"addr:street": "Progress Avenue",
+"addr:housenumber": "670"
+},
+{
+"osm": "n13885890639",
+"at": [
+-79.38863,
+43.67408
+],
+"name": "Oxford College",
+"amenity": "college"
+},
+{
+"osm": "n9543551939",
+"at": [
+-79.46831,
+43.75361
+],
+"name": "Peak College",
+"amenity": "college"
+},
+{
+"osm": "n9139819377",
+"at": [
+-79.54964,
+43.63085
+],
+"name": "Pharma-Medical Science College of Canada",
+"amenity": "college",
+"website": "https://pharmamedical.ca"
+},
+{
+"osm": "n12537548075",
+"at": [
+-79.26564,
+43.75229
+],
+"name": "Pures College",
+"amenity": "college"
+},
+{
+"osm": "n12623084524",
+"at": [
+-79.26497,
+43.75277
+],
+"name": "Pures College Of Technology",
+"amenity": "college"
+},
+{
+"osm": "w1504227413",
+"at": [
+-79.39029,
+43.66398
+],
+"name": "Regis College",
+"amenity": "college",
+"website": "https://regiscollege.ca/"
+},
+{
+"osm": "n11281293717",
+"at": [
+-79.45212,
+43.65661
+],
+"name": "Sault College",
+"amenity": "college"
+},
+{
+"osm": "w775641405",
+"at": [
+-79.49949,
+43.77152
+],
+"name": "Seneca @ York Campus",
+"amenity": "college",
+"operator": "Seneca College"
+},
+{
+"osm": "w469583454",
+"at": [
+-79.36763,
+43.84968
+],
+"name": "Seneca College - Markham Campus",
+"amenity": "college",
+"operator": "Seneca College"
+},
+{
+"osm": "w703666033",
+"at": [
+-79.34984,
+43.79669
+],
+"name": "Seneca Polytechnic",
+"alt_name": "Seneca College - Newnham Campus",
+"amenity": "college",
+"operator": "Seneca Polytechnic",
+"operator:type": "public"
+},
+{
+"osm": "w49380969",
+"at": [
+-79.64807,
+43.5912
+],
+"name": "Sheridan College - Hazel McCallion Campus",
+"alt_name": "Sheridan College",
+"amenity": "college",
+"operator": "Sheridan College",
+"operator:type": "college",
+"addr:street": "Duke of York Boulevard",
+"addr:housenumber": "4180"
+},
+{
+"osm": "n12898232996",
+"at": [
+-79.31334,
+43.74304
+],
+"name": "Skilled Trades College of Canada",
+"amenity": "college"
+},
+{
+"osm": "n12819212196",
+"at": [
+-79.54011,
+43.63569
+],
+"name": "St. John Ambulance",
+"amenity": "college"
+},
+{
+"osm": "n12322231472",
+"at": [
+-79.6305,
+43.62769
+],
+"name": "Stanford International College",
+"amenity": "college"
+},
+{
+"osm": "n7781377932",
+"at": [
+-79.37909,
+43.66171
+],
+"name": "Taie International Institute",
+"amenity": "college",
+"addr:street": "Church Street",
+"addr:housenumber": "399"
+},
+{
+"osm": "w1268267050",
+"at": [
+-79.40286,
+43.64882
+],
+"name": "Toronto School of Art",
+"amenity": "college",
+"website": "https://tsa-art.com/",
+"addr:street": "Ryerson Avenue",
+"addr:housenumber": "24"
+},
+{
+"osm": "n1306212511",
+"at": [
+-79.38414,
+43.66433
+],
+"name": "Trebas Institute",
+"amenity": "college",
+"website": "https://www.trebas.com"
+},
+{
+"osm": "n9672795308",
+"at": [
+-79.57171,
+43.61995
+],
+"name": "Tricare Academy Career College",
+"amenity": "college",
+"addr:street": "Dundas Street East",
+"addr:housenumber": "1500"
+},
+{
+"osm": "w1504220927",
+"at": [
+-79.39656,
+43.66315
+],
+"name": "University College",
+"alt_name": "University College, Toronto",
+"short_name": "UC",
+"amenity": "college",
+"operator": "University of Toronto",
+"operator:type": "university",
+"website": "https://www.uc.utoronto.ca/"
+},
+{
+"osm": "n13932534615",
+"at": [
+-79.59463,
+43.74175
+],
+"name": "Windsor Career College",
+"amenity": "college",
+"website": "https://windsorcareercollege.ca/contact-us-toronto-campus",
+"addr:street": "Albion Road",
+"addr:housenumber": "1625"
+},
+{
+"osm": "w1504222043",
+"at": [
+-79.39906,
+43.66687
+],
+"name": "Woodsworth College",
+"amenity": "college",
+"operator": "University of Toronto",
+"operator:type": "university",
+"website": "https://wdw.utoronto.ca/"
+},
+{
+"osm": "n7797331451",
+"at": [
+-79.26234,
+43.77221
+],
+"name": "Worksafe Forklift",
+"amenity": "college"
+},
+{
+"osm": "w1504227412",
+"at": [
+-79.39471,
+43.66447
+],
+"name": "Wycliffe College",
+"amenity": "college",
+"website": "https://www.wycliffecollege.ca/"
+},
+{
+"osm": "n9550175417",
+"at": [
+-79.46997,
+43.76538
+],
+"name": "York Construction Academy",
+"amenity": "college",
+"website": "https://www.yorkacademy.ca/",
+"addr:street": "Champagne Drive",
+"addr:housenumber": "155"
+},
+{
+"osm": "w678508080",
+"at": [
+-79.43542,
+43.72988
+],
+"name": "Baycrest Health Sciences",
+"amenity": "hospital",
+"operator": "Baycrest Health Sciences",
+"operator:type": "government",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.baycrest.org",
+"addr:street": "Bathurst Street",
+"addr:housenumber": "3560"
+},
+{
+"osm": "w712078933",
+"at": [
+-79.39927,
+43.65906
+],
+"name": "Centre For Addiction and Mental Health - College Street Site",
+"short_name": "CAMH",
+"amenity": "hospital",
+"operator": "Centre For Addiction and Mental Health",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "College Street",
+"addr:housenumber": "250"
+},
+{
+"osm": "w22793935",
+"at": [
+-79.41863,
+43.64301
+],
+"name": "Centre For Addiction and Mental Health - Queen Street Site",
+"short_name": "CAMH",
+"amenity": "hospital",
+"operator": "Centre For Addiction and Mental Health",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Queen Street West",
+"addr:housenumber": "1001"
+},
+{
+"osm": "w388597293",
+"at": [
+-79.54299,
+43.8502
+],
+"name": "Cortellucci Vaughan Hospital",
+"amenity": "hospital",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.mackenziehealth.ca/en/about-us/about.aspx",
+"addr:street": "Major Mackenzie Drive",
+"addr:housenumber": "3200"
+},
+{
+"osm": "w712078934",
+"at": [
+-79.43315,
+43.63534
+],
+"name": "E.W. Bickle Centre for Complex Continuing Care",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.uhn.ca/corporate/Directions/Pages/directions_TRI_bickle.aspx",
+"addr:street": "Dunn Avenue",
+"addr:housenumber": "130"
+},
+{
+"osm": "w670281258",
+"at": [
+-79.59833,
+43.72904
+],
+"name": "Etobicoke General Hospital",
+"alt_name": "William Osler Health System - Etobicoke General Hospital",
+"amenity": "hospital",
+"operator": "William Osler Health System",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Humber College Boulevard",
+"addr:housenumber": "101"
+},
+{
+"osm": "w437519686",
+"at": [
+-79.35457,
+43.66637
+],
+"name": "Hennick Bridgepoint Hospital",
+"amenity": "hospital",
+"operator": "Sinai Health System",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.hennickbridgepointhospital.ca",
+"addr:street": "St. Matthews Road",
+"addr:housenumber": "14"
+},
+{
+"osm": "w673002279",
+"at": [
+-79.48825,
+43.72329
+],
+"name": "Hennick Humber Hospital",
+"amenity": "hospital",
+"operator": "Hennick Humber Hospital",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.hrh.ca/",
+"addr:street": "Wilson Avenue",
+"addr:housenumber": "1235"
+},
+{
+"osm": "w826840277",
+"at": [
+-79.41553,
+43.67766
+],
+"name": "Hillcrest Grounds",
+"amenity": "hospital",
+"operator": "Hillcrest Reactivation Centre",
+"healthcare": "hospital"
+},
+{
+"osm": "w684431222",
+"at": [
+-79.37352,
+43.71858
+],
+"name": "Holland Bloorview Kids Rehabilitation Hospital",
+"amenity": "hospital",
+"operator": "Holland Bloorview Kids Rehabilitation Hospital",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.hollandbloorview.ca/",
+"addr:street": "Kilgour Road",
+"addr:housenumber": "150"
+},
+{
+"osm": "w712078929",
+"at": [
+-79.38757,
+43.65726
+],
+"name": "Hospital for Sick Children",
+"alt_name": "SickKids Hospital",
+"amenity": "hospital",
+"operator": "Hospital for Sick Children",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.sickkids.ca/",
+"addr:street": "University Avenue",
+"addr:housenumber": "555"
+},
+{
+"osm": "w700226991",
+"at": [
+-79.44998,
+43.87107
+],
+"name": "MacKenzie Health - Richmond Hill",
+"amenity": "hospital",
+"operator": "MacKenzie Health",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Trench Street",
+"addr:housenumber": "10"
+},
+{
+"osm": "w447744987",
+"at": [
+-79.32493,
+43.68994
+],
+"name": "Michael Garron Hospital",
+"amenity": "hospital",
+"operator": "Michael Garron Hospital",
+"operator:type": "university",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Coxwell Avenue",
+"addr:housenumber": "825"
+},
+{
+"osm": "w299944185",
+"at": [
+-79.60837,
+43.57165
+],
+"name": "Mississauga Hospital",
+"amenity": "hospital",
+"operator": "Trillium Health Partners",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Queensway West",
+"addr:housenumber": "100"
+},
+{
+"osm": "w43809864",
+"at": [
+-79.39176,
+43.65791
+],
+"name": "Mount Sinai Hospital",
+"amenity": "hospital",
+"healthcare": "hospital",
+"website": "https://www.mountsinai.on.ca/care/rmcad/programs/chiropractic-spine-clinic"
+},
+{
+"osm": "w712078931",
+"at": [
+-79.39033,
+43.65745
+],
+"name": "Mount Sinai Hospital",
+"amenity": "hospital",
+"operator": "Sinai Health System",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.sinaihealth.ca/our-hospitals/mount-sinai-hospital",
+"addr:street": "University Avenue",
+"addr:housenumber": "600"
+},
+{
+"osm": "w684426043",
+"at": [
+-79.36258,
+43.76923
+],
+"name": "North York General Hospital",
+"amenity": "hospital",
+"operator": "North York General Hospital",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.nygh.on.ca/",
+"addr:street": "Leslie Street",
+"addr:housenumber": "4001"
+},
+{
+"osm": "w678430199",
+"at": [
+-79.44724,
+43.77161
+],
+"name": "North York General Hospital - Finch Site",
+"amenity": "hospital",
+"operator": "North York General Hospital",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Finch Avenue West",
+"addr:housenumber": "555"
+},
+{
+"osm": "w712078932",
+"at": [
+-79.39064,
+43.65817
+],
+"name": "Princess Margaret Cancer Centre",
+"short_name": "PMCC;PMH;Princess Margaret;PM",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.uhn.ca/PrincessMargaret",
+"addr:street": "University Avenue",
+"addr:housenumber": "610"
+},
+{
+"osm": "w26949564",
+"at": [
+-79.28526,
+43.71265
+],
+"name": "Providence Healthcare",
+"amenity": "hospital",
+"operator": "Unity Health Toronto",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "St Clair Avenue East",
+"addr:housenumber": "3276"
+},
+{
+"osm": "w34006717",
+"at": [
+-79.56217,
+43.61
+],
+"name": "Queensway Health Centre",
+"amenity": "hospital",
+"operator": "Trillium Health Partners",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Sherway Drive",
+"addr:housenumber": "150"
+},
+{
+"osm": "w712075200",
+"at": [
+-79.5106,
+43.70958
+],
+"name": "Reactivation Care Center",
+"amenity": "hospital",
+"healthcare": "hospital",
+"emergency": "no",
+"website": "https://www.hrh.ca/covid-19/",
+"addr:street": "Church Street",
+"addr:housenumber": "200"
+},
+{
+"osm": "w486817681",
+"at": [
+-79.48097,
+43.66451
+],
+"name": "Runnymede Healthcare Centre",
+"amenity": "hospital",
+"operator": "Runnymede Healthcare Centre",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Runnymede Road",
+"addr:housenumber": "625"
+},
+{
+"osm": "w681295730",
+"at": [
+-79.30925,
+43.80167
+],
+"name": "Scarborough Health Network - Birchmount Hospital",
+"alt_name": "SHN Birchmount",
+"amenity": "hospital",
+"operator": "Scarborough Health Network",
+"operator:type": "public",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Birchmount Road",
+"addr:housenumber": "3030"
+},
+{
+"osm": "w5520155",
+"at": [
+-79.20445,
+43.78047
+],
+"name": "Scarborough Health Network - Centenary Hospital",
+"alt_name": "SHN Centenary",
+"amenity": "hospital",
+"operator": "Scarborough Health Network",
+"operator:type": "public",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Ellesmere Road",
+"addr:housenumber": "2867"
+},
+{
+"osm": "w681295729",
+"at": [
+-79.24828,
+43.75648
+],
+"name": "Scarborough Health Network - General Campus",
+"alt_name": "SHN General",
+"amenity": "hospital",
+"operator": "Scarborough Health Network",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Lawrence Avenue East",
+"addr:housenumber": "3050"
+},
+{
+"osm": "w684426042",
+"at": [
+-79.40414,
+43.82091
+],
+"name": "Shouldice Hospital",
+"amenity": "hospital",
+"operator": "Shouldice Hospital",
+"operator:type": "private",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Bayview Avenue",
+"addr:housenumber": "7750"
+},
+{
+"osm": "w152167667",
+"at": [
+-79.44987,
+43.64036
+],
+"name": "St. Joseph's Health Centre",
+"amenity": "hospital",
+"operator": "Unity Health Toronto",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "The Queensway",
+"addr:housenumber": "30"
+},
+{
+"osm": "w712085020",
+"at": [
+-79.3778,
+43.65363
+],
+"name": "St. Michael's Hospital",
+"amenity": "hospital",
+"operator": "Unity Health Toronto",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://unityhealth.to/locations/st-michaels-hospital/",
+"addr:street": "Bond Street",
+"addr:housenumber": "30"
+},
+{
+"osm": "w684426041",
+"at": [
+-79.40421,
+43.78733
+],
+"name": "Sunnybrook - St. John's Rehab Hospital",
+"amenity": "hospital",
+"operator": "Sunnybrook Health Sciences Centre",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Cummer Avenue",
+"addr:housenumber": "285"
+},
+{
+"osm": "w27006473",
+"at": [
+-79.37382,
+43.72279
+],
+"name": "Sunnybrook Health Sciences Centre - Bayview Campus",
+"amenity": "hospital",
+"operator": "Sunnybrook Health Sciences Centre",
+"operator:type": "university",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.sunnybrook.ca/",
+"addr:street": "Bayview Avenue",
+"addr:housenumber": "2075"
+},
+{
+"osm": "w712085019",
+"at": [
+-79.3823,
+43.66509
+],
+"name": "Sunnybrook Holland Centre",
+"amenity": "hospital",
+"operator": "Sunnybrook Health Sciences Centre",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Wellesley Street East",
+"addr:housenumber": "43"
+},
+{
+"osm": "w712078928",
+"at": [
+-79.38816,
+43.65866
+],
+"name": "Toronto General Hospital",
+"short_name": "TGH",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "yes",
+"website": "https://www.uhn.ca/OurHospitals/TGH",
+"addr:street": "Elizabeth Street",
+"addr:housenumber": "200"
+},
+{
+"osm": "w712078930",
+"at": [
+-79.38999,
+43.65669
+],
+"name": "Toronto Rehab",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "University Avenue",
+"addr:housenumber": "550"
+},
+{
+"osm": "w684431221",
+"at": [
+-79.36974,
+43.71912
+],
+"name": "Toronto Rehab - Lyndhurst Centre",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Sutherland Drive",
+"addr:housenumber": "520"
+},
+{
+"osm": "w684431220",
+"at": [
+-79.37174,
+43.7188
+],
+"name": "Toronto Rehab Institute - Rumsey Centre",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Rumsey Road",
+"addr:housenumber": "345"
+},
+{
+"osm": "w43805626",
+"at": [
+-79.40549,
+43.65347
+],
+"name": "Toronto Western Hospital",
+"amenity": "hospital",
+"operator": "University Health Network",
+"healthcare": "hospital",
+"emergency": "yes",
+"addr:street": "Bathurst Street",
+"addr:housenumber": "399"
+},
+{
+"osm": "w671599453",
+"at": [
+-79.50781,
+43.68896
+],
+"name": "West Park Healthcare Centre",
+"amenity": "hospital",
+"operator": "West Park Healthcare Centre",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Buttonwood Avenue",
+"addr:housenumber": "82"
+},
+{
+"osm": "w712085021",
+"at": [
+-79.38754,
+43.66173
+],
+"name": "Women's College Hospital",
+"amenity": "hospital",
+"operator": "Women's College Hospital",
+"healthcare": "hospital",
+"emergency": "no",
+"addr:street": "Grenville Street",
+"addr:housenumber": "76"
+},
+{
+"osm": "n2332330690",
+"at": [
+-79.3767,
+43.6575
+],
+"name": "Centre for Urban Energy",
+"amenity": "university",
+"website": "http://cue.ryerson.ca/",
+"addr:street": "Dalhousie Street",
+"addr:housenumber": "147"
+},
+{
+"osm": "n14169865054",
+"at": [
+-79.39347,
+43.66064
+],
+"name": "Faculty of Medicine",
+"amenity": "university",
+"operator": "University of Toronto",
+"website": "https://temertymedicine.utoronto.ca",
+"addr:street": "King's College Circle",
+"addr:housenumber": "1"
+},
+{
+"osm": "n2375249754",
+"at": [
+-79.43008,
+43.71454
+],
+"name": "Kollel Avreichim",
+"amenity": "university",
+"website": "https://kollel.com/",
+"addr:street": "Coldstream Avenue",
+"addr:housenumber": "515"
+},
+{
+"osm": "n547498239",
+"at": [
+-79.38325,
+43.64817
+],
+"name": "Laurier",
+"amenity": "university"
+},
+{
+"osm": "n1142872979",
+"at": [
+-79.39502,
+43.6687
+],
+"name": "McMaster University Toronto Campus",
+"amenity": "university",
+"operator": "McMaster University",
+"website": "https://180bloor.mcmaster.ca/",
+"addr:street": "Bloor Street West",
+"addr:housenumber": "180"
+},
+{
+"osm": "n401521720",
+"at": [
+-79.39388,
+43.6491
+],
+"name": "Northeastern University",
+"amenity": "university"
+},
+{
+"osm": "r2995413",
+"at": [
+-79.3903,
+43.65175
+],
+"name": "OCAD University",
+"alt_name": "OCAD U",
+"amenity": "university",
+"website": "https://www.ocadu.ca/"
+},
+{
+"osm": "w23447393",
+"at": [
+-79.37921,
+43.65842
+],
+"name": "Recreation and Athletics Centre",
+"amenity": "university",
+"operator": "Toronto Metropolitan University",
+"addr:street": "Gould Street",
+"addr:housenumber": "40,50"
+},
+{
+"osm": "w61759776",
+"at": [
+-79.38916,
+43.65545
+],
+"name": "Rehabilitation Sciences Building",
+"amenity": "university",
+"operator": "University of Toronto",
+"addr:street": "University Avenue",
+"addr:housenumber": "522"
+},
+{
+"osm": "n12912579192",
+"at": [
+-79.38584,
+43.64484
+],
+"name": "Smith School of Business Queen’s University",
+"amenity": "university"
+},
+{
+"osm": "w23447514",
+"at": [
+-79.37825,
+43.65775
+],
+"name": "Student Campus Centre",
+"amenity": "university",
+"operator": "Toronto Metropolitan University",
+"website": "https://www.tmustudentcentre.ca/",
+"addr:street": "Gould Street",
+"addr:housenumber": "55"
+},
+{
+"osm": "n2884419126",
+"at": [
+-79.39057,
+43.65878
+],
+"name": "The Lawrence and Frances Bloomberg Department of Obstetrics and Gynaecology",
+"amenity": "university"
+},
+{
+"osm": "r16358719",
+"at": [
+-79.37942,
+43.65767
+],
+"name": "Toronto Metropolitan University",
+"amenity": "university",
+"website": "https://www.torontomu.ca/"
+},
+{
+"osm": "w1502657605",
+"at": [
+-79.39662,
+43.66559
+],
+"name": "Trinity College",
+"alt_name": "Trinity College, Toronto",
+"amenity": "university",
+"operator": "Trinity College",
+"website": "https://www.trinity.utoronto.ca/"
+},
+{
+"osm": "w702100748",
+"at": [
+-79.39078,
+43.79794
+],
+"name": "Tyndale University",
+"alt_name": "Tyndale University College and Seminary",
+"amenity": "university",
+"website": "https://www.tyndale.ca/",
+"addr:street": "Bayview Avenue",
+"addr:housenumber": "3377"
+},
+{
+"osm": "w1502659706",
+"at": [
+-79.38959,
+43.66608
+],
+"name": "University of St. Michael's College",
+"alt_name": "St. Michael's College",
+"amenity": "university",
+"operator": "University of St. Michael's College",
+"website": "https://stmikes.utoronto.ca/"
+},
+{
+"osm": "w60304653",
+"at": [
+-79.38706,
+43.65629
+],
+"name": "University of Toronto - Faculty of Dentistry",
+"amenity": "university",
+"operator": "University of Toronto",
+"addr:street": "Edward Street",
+"addr:housenumber": "124"
+},
+{
+"osm": "r21058560",
+"at": [
+-79.18654,
+43.7852
+],
+"name": "University of Toronto Scarborough",
+"alt_name": "U of T St. George",
+"short_name": "UTSC",
+"amenity": "university",
+"operator": "University of Toronto",
+"operator:type": "university",
+"website": "https://www.utsc.utoronto.ca/",
+"addr:street": "Military Trail",
+"addr:housenumber": "1265"
+},
+{
+"osm": "r18447148",
+"at": [
+-79.39568,
+43.66191
+],
+"name": "University of Toronto St. George",
+"alt_name": "University of Toronto",
+"short_name": "UTSG",
+"amenity": "university",
+"operator": "University of Toronto",
+"operator:type": "public"
+},
+{
+"osm": "n9633703338",
+"at": [
+-79.36897,
+43.64508
+],
+"name": "Université de l'Ontario français",
+"amenity": "university",
+"website": "https://uontario.ca",
+"addr:street": "Lower Jarvis Street",
+"addr:housenumber": "9"
+},
+{
+"osm": "w23447424",
+"at": [
+-79.37948,
+43.65689
+],
+"name": "Victoria Building",
+"amenity": "university",
+"operator": "Toronto Metropolitan University",
+"operator:type": "university",
+"addr:street": "Victoria Street",
+"addr:housenumber": "285"
+},
+{
+"osm": "w1502658805",
+"at": [
+-79.39217,
+43.66721
+],
+"name": "Victoria University",
+"amenity": "university",
+"operator": "Victoria University",
+"website": "https://www.vicu.utoronto.ca/"
+},
+{
+"osm": "w23334883",
+"at": [
+-79.37765,
+43.72835
+],
+"name": "York University Glendon Campus",
+"alt_name": "York University",
+"amenity": "university",
+"operator": "York University",
+"website": "https://www.glendon.yorku.ca/about/contact-us/",
+"addr:street": "Bayview Avenue"
+},
+{
+"osm": "w161110169",
+"at": [
+-79.31091,
+43.85454
+],
+"name": "York University Markham Campus",
+"amenity": "university"
+},
+{
+"osm": "w15396822",
+"at": [
+-79.50489,
+43.77423
+],
+"name": "York University, Keele Campus",
+"alt_name": "York University",
+"amenity": "university",
+"operator": "York University",
+"addr:street": "Keele Street",
+"addr:housenumber": "4700"
+}
+]
+}
