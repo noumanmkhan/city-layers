@@ -1,0 +1,30 @@
+name: Fetch GTA shoreline
+# Downloads accurate outlines of Lake Ontario, Lake Simcoe and Lake Scugog from OpenStreetMap
+# (Overpass API) into cities/toronto/raw/gta_lakes.geojson and commits it to main. Used for the
+# shoreline beyond Toronto's city limits. Runs when the fetch script changes on main, or by hand.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['cities/toronto/fetch_gta_shoreline.py', '.github/workflows/fetch-gta-shoreline.yml']
+permissions:
+  contents: write
+concurrency: fetch-gta-shoreline
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install shapely
+      - run: python3 -u cities/toronto/fetch_gta_shoreline.py 2>&1 | tee cities/toronto/raw/fetch_gta_shoreline.log
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/gta_lakes.geojson cities/toronto/raw/fetch_gta_shoreline.log
+          git commit -m "Fetch GTA lake shorelines from OpenStreetMap" || echo "no changes"
+          git pull --rebase
+          git push
