@@ -5,6 +5,9 @@ directions by, it doesn't belong here.
 tier 1 = spread-out, city-scale anchors (icons from zoom 11); tier 2 = dense or local places (icons from zoom 13),
 so downtown doesn't pile up when zoomed out.
 aliases = other names people type into search (old names, nicknames, abbreviations).
+Universities, colleges, hospitals and skyscrapers have their own toggles under Landmarks, so campuses
+aren't listed here (their search nicknames live on the Universities layer in city.json). A tower that's
+a sight in its own right (an observation deck, a household name) stays here as well.
 Positions were checked against OpenStreetMap (Nominatim); big parks use a point inside the Toronto part.
 Output: docs/toronto/data/landmarks.geojson
 """
@@ -49,11 +52,6 @@ LANDMARKS = [
     ("Queen's Park", 'civic', 2, 43.6625, -79.3916, ['Ontario Legislature', 'Legislative Building', 'Queens Park']),
     ('Union Station', 'civic', 2, 43.6453, -79.3806, ['Union']),
 
-    # Campuses
-    ('University of Toronto', 'campus', 1, 43.6629, -79.3957, ['U of T', 'UofT', 'UT St. George', 'St. George campus']),
-    ('Toronto Metropolitan University', 'campus', 2, 43.6577, -79.3788, ['TMU', 'Ryerson', 'Ryerson University', 'TMet']),
-    ('York University', 'campus', 1, 43.7742, -79.5047, ['York U', 'YorkU']),
-    ('U of T Scarborough', 'campus', 2, 43.7853, -79.1895, ['UTSC']),
 
     # Culture and attractions
     ('CN Tower', 'culture', 1, 43.6426, -79.3871, []),

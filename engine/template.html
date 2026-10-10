@@ -28,6 +28,7 @@
   --drv-1:#35287F; --drv-2:#7563CF; --drv-3:#B9AEEE; --drv-4:#ECE9F8;
   --shield-toll:#1F5FA8; --go-ring:#3D4148; --go-ink:#2F4F3A;
   --lm-sports:#C8102E; --lm-park:#2E8B57; --lm-music:#8E44AD; --lm-civic:#4A5A70; --lm-campus:#1F5FA8; --lm-culture:#D9730D; --in-university:#1F5FA8; --in-college:#9A5B00; --in-hospital:#C62828;
+  --tw-res:#0F8577; --tw-com:#3858A8; --tw-mix:#8A4BAF; --tw-sup:#C9A227;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --shadow:0 1px 2px rgba(20,22,26,.08),0 8px 24px rgba(20,22,26,.10);
 }
@@ -35,6 +36,7 @@
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
+  --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E; --hty-1:#2C333C; --hty-2:#2F5272; --hty-3:#4C86BA; --hty-4:#9CC8EE; --mix-1:#34506B; --mix-2:#4C78A3; --mix-3:#78A8D6; --mix-4:#B6D6F2;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
@@ -44,6 +46,7 @@
   --bg:#15171B; --panel:#1E2126; --ink:#ECEDEF; --ink-2:#AEB2B9; --ink-3:#7E838B; --rule:#30343B; --accent:#B892F0; --focus:#6CB2FF;
   --water:#13283A; --land-out:#24272D; --land-out-line:#3E434B; --land-far:#1A1C20; --city:#2A2D33; --city-line:#C9CCD2; --muni-label:#7E838B;
   --nbhd:#D7DADF; --nbhd-fill:#D7DADF; --ward:#B892F0; --prov:#F07AAE; --fed:#6CB2FF; --bia:#F39A45; --hd:#D2A877; --sbw:#4CC4AE; --in-university:#5FA8F5; --in-college:#E0A040; --in-hospital:#F06262; --cult:#ECEDEF; --cult-enclave:#F07AAE;
+  --tw-res:#3CC2B0; --tw-com:#86A3EE; --tw-mix:#C08BE6; --tw-sup:#E8C547;
   --st:#4E545E; --st-case:#121417; --hwy:#E2B13A; --hwy-case:#0E1013; --hwy-city:#6E737B; --shield:#C8102E; --shield-city:#2E6B3A;
   --station:#1E2126; --pill-bg:#2A2D33; --go-ring:#C9CCD2; --go-ink:#B7D7C1; --drv-1:#DCD5FF; --drv-2:#9484F0; --drv-3:#54479F; --drv-4:#2D2943; --cost-1:#6B5A2E; --cost-2:#B07A2C; --cost-3:#E0A060; --com-1:#2A8C80; --com-2:#5A606A; --com-3:#C47A3E; --ten-1:#5B86D6; --ten-2:#474A52; --ten-3:#B48CF0; --uni-1:#6EE0CB; --uni-2:#2FA392; --uni-3:#1D6A61; --uni-4:#34373E; --hty-1:#2C333C; --hty-2:#2F5272; --hty-3:#4C86BA; --hty-4:#9CC8EE; --mix-1:#34506B; --mix-2:#4C78A3; --mix-3:#78A8D6; --mix-4:#B6D6F2;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.45);
@@ -206,7 +209,21 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .lm.inst i{width:18px;height:18px} .lm.inst i svg{width:11px;height:11px} .lm.inst{transform:translate(-9px,-9px)} .lm.inst b{font-size:10.5px;font-weight:600}
 .lm.inst.ed i{box-shadow:0 0 0 2.5px var(--lm),0 1px 3px rgba(0,0,0,.25)}
 #map:not(.z11) .lm.inst,#map:not(.z14) .lm.inst b{display:none}
-.sw.k-places{background:var(--panel);display:grid;place-items:center} .sw.in-university{color:var(--in-university)} .sw.in-college{color:var(--in-college)} .sw.in-hospital{color:var(--in-hospital)}
+.sw.k-places{background:var(--panel);display:grid;place-items:center}
+/* Skyscrapers: square badges. Filled = open; dashed and hollow = under construction; gold ring = 300 m+. */
+.lm.tw{transform:translate(-8px,-8px)}
+.lm.tw.u-res{--lm:var(--tw-res)} .lm.tw.u-com{--lm:var(--tw-com)} .lm.tw.u-mix{--lm:var(--tw-mix)}
+.lm.tw i{box-sizing:border-box;width:16px;height:16px;border-radius:4px;background:var(--lm);color:var(--panel);box-shadow:0 0 0 1.5px var(--panel),0 1px 3px rgba(0,0,0,.3)}
+.lm.tw i svg{width:11px;height:11px}
+.lm.tw.uc i{background:var(--panel);color:var(--lm);border:1.5px dashed var(--lm);box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.lm.tw.sup{transform:translate(-10px,-10px)}
+.lm.tw.sup i{width:20px;height:20px;box-shadow:0 0 0 1.5px var(--panel),0 0 0 3.5px var(--tw-sup),0 1px 4px rgba(0,0,0,.3)}
+.lm.tw.sup i svg{width:13px;height:13px}
+.lm.tw b{font-size:10.5px;font-weight:600} .lm.tw.sup b{font-size:11.5px;font-weight:700}
+#map:not(.z12) .lm.tw.sup,#map:not(.z14) .lm.tw:not(.sup),#map:not(.z13) .lm.tw.sup b,#map:not(.z15) .lm.tw:not(.sup) b{display:none}
+.sw.k-towers{background:var(--panel);display:grid;place-items:center;color:var(--tw-com)}
+.row.child{margin-left:16px} .lensbox.child{margin-left:64px}
+.twkey .lm.tw{transform:none;display:inline-flex} .twkey .lm.tw i{width:16px;height:16px;border-radius:4px} .twkey .lm.tw.sup i{width:16px;height:16px} .twkey .lm.tw.sup i svg{width:11px;height:11px} .sw.in-university{color:var(--in-university)} .sw.in-college{color:var(--in-college)} .sw.in-hospital{color:var(--in-hospital)}
 .sw.k-places svg{width:14px;height:14px}
 .lm.campus{--lm:var(--lm-campus)} .lm.culture{--lm:var(--lm-culture)} .lm.airport{--lm:var(--ink)}
 #map:not(.z11) .lm.t1,#map:not(.z13) .lm.t2,#map:not(.z13) .lm.t1 b,#map:not(.z14) .lm.t2 b{display:none}
@@ -336,6 +353,17 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font
 .hh .share svg{width:15px;height:15px}
 .hh button{flex:none;font:inherit;font-size:18px;line-height:1;width:28px;height:28px;border-radius:7px;border:none;background:var(--pill-bg);color:var(--ink-2);cursor:pointer}
 .pills{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}
+.tower{margin:0 16px 12px;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;display:grid;gap:9px}
+.tw-what{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.tw-what .lm.tw{transform:none} .tw-what em{font-style:normal;font-weight:500;color:var(--ink-2);margin-left:6px}
+.tw-what em::before{content:"·";color:var(--ink-3);margin-right:6px}
+.tw-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
+.tw-stats dt{font-size:10.5px;color:var(--ink-3);letter-spacing:.02em}
+.tw-stats dd{margin:1px 0 0;font-size:15px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.tw-stats dd small{display:block;font-size:11px;font-weight:400;color:var(--ink-3)}
+.tw-facts{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:12.5px;line-height:1.4;color:var(--ink)}
+.tw-facts li{display:flex;gap:7px} .tw-facts li::before{content:"";flex:none;width:5px;height:5px;margin-top:7px;border-radius:50%;background:var(--accent)}
+.tw-src{font-size:11px;color:var(--ink-3)} .tw-src a{color:inherit}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:var(--pill-bg);font-weight:600;font-size:12.5px}
 .pill i{width:9px;height:9px;border-radius:50%;flex:none}
 dl.facts{margin:0;padding:10px 16px 14px;border-top:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12.5px}

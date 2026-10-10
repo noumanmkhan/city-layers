@@ -104,13 +104,13 @@ const get = f => fetch(DATA + (f.includes('.') ? f : f + '.geojson')).then(r => 
 
 function zoomClasses(){
   const z = map.getZoom(), el = map.getContainer();
-  [10,11,12,13,14].forEach(t => el.classList.toggle('z'+t, z >= t - .01));
+  [10,11,12,13,14,15,16].forEach(t => el.classList.toggle('z'+t, z >= t - .01));
 }
 map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lm.inst b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lm.tw.sup b', '.lm.inst b', '.lm.tw b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -173,10 +173,14 @@ const GLYPH = {
   campus: '<path d="M12 3 1 9l11 6 9-4.9V16h2V9zM5 13.2V17l7 4 7-4v-3.8L12 17z"/>',
   culture: '<path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/>',
   airport: '<path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/>',
+  // Skyscrapers, by use: office floors as bands, homes as a grid of windows, mixed use as both.
+  'tw-com': '<path fill-rule="evenodd" d="M5 1.5h14v21H5zM7.6 4.5v2.2h8.8V4.5zm0 4v2.2h8.8V8.5zm0 4v2.2h8.8v-2.2zm0 4v2.2h8.8v-2.2z"/>',
+  'tw-res': '<path fill-rule="evenodd" d="M5 1.5h14v21H5zM7.6 4.5h3.2v3.2H7.6zm5.6 0h3.2v3.2h-3.2zM7.6 10h3.2v3.2H7.6zm5.6 0h3.2v3.2h-3.2zM7.6 15.5h3.2v3.2H7.6zm5.6 0h3.2v3.2h-3.2z"/>',
+  'tw-mix': '<path fill-rule="evenodd" d="M5 1.5h14v21H5zM7.6 4.5h3.2v3.2H7.6zm5.6 0h3.2v3.2h-3.2zM7.6 10h3.2v3.2H7.6zm5.6 0h3.2v3.2h-3.2zM7.6 15v2.2h8.8V15zm0 3.6v2h8.8v-2z"/>',
 };
 const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + d + '</svg>';
 const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
-const swatchOf = it => it.kind === 'places' ? svg(GLYPH[it.cat] || GLYPH.culture) : (SWATCH[it.kind] || '');
+const swatchOf = it => it.kind === 'places' ? svg(GLYPH[it.cat] || GLYPH.culture) : it.kind === 'towers' ? svg(GLYPH['tw-com']) : (SWATCH[it.kind] || '');
 // Representation layers draw in one of three styles, by level of government.
 const OUTLINE = {city:'ward', state:'prov', national:'fed'};
 
@@ -265,6 +269,21 @@ const KINDS = {
       const m = L.marker(ll(f.geometry.coordinates), {pane:'pts', keyboard:false, riseOnHover:true,
         icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="lm inst in-' + p.cat + (p.ed ? ' ed' : '') + '"><i>' + svg(GLYPH[p.cat] || GLYPH.culture) + '</i><b>' + esc(p.name) + '</b></span>'})});
       hoverTip(m, fill(it.hover || '{name}[ · {sub}]', p) + (p.ed && it.edText ? ' · ' + it.edText : ''));
+      m.on('click', () => goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), p.name, false));
+      g.addLayer(m);
+    });
+    return g;
+  },
+  // Skyscrapers: a square badge per tower, its glyph showing use (residential, commercial, mixed);
+  // filled once open for occupancy, hollow while under construction; a gold ring at 300 m+ (supertall).
+  // Supertall icons from zoom 12 and names from 13; the rest from 14 and 15. Names declutter.
+  towers: (it, fc) => {
+    const g = L.layerGroup();
+    fc.features.forEach(f => {
+      const p = f.properties;
+      const m = L.marker(ll(f.geometry.coordinates), {pane:'pts', keyboard:false, riseOnHover:true, zIndexOffset: p.super ? 200 : 0,
+        icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="lm tw u-' + p.use + (p.uc ? ' uc' : '') + (p.super ? ' sup' : '') + '"><i>' + svg(GLYPH['tw-' + p.use]) + '</i><b>' + esc(p.name) + '</b></span>'})});
+      hoverTip(m, esc(p.name) + ' · ' + towerHeight(p, true) + (p.uc ? ' · ' + esc(it.ucText || 'Under construction') : ''));
       m.on('click', () => goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), p.name, false));
       g.addLayer(m);
     });
@@ -413,7 +432,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13, places: 14})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13, places: 14, towers: 14.5})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -423,7 +442,7 @@ CITY.groups.forEach(([title, items]) => {
   const grp = document.createElement('div'); grp.className = 'grp';
   grp.innerHTML = '<h2>' + title + '</h2>';
   items.forEach(it => {
-    const row = document.createElement('label'); row.className = 'row'; row.htmlFor = 'lyr-' + it.id;
+    const row = document.createElement('label'); row.className = 'row' + (it.under ? ' child' : ''); row.htmlFor = 'lyr-' + it.id;
     row.innerHTML = '<span class="sw ' + it.id + ' k-' + (it.kind === 'outline' ? it.level : it.kind) + (it.kind === 'places' ? ' in-' + it.cat : '') + '">' + swatchOf(it) + '</span><span class="tx"><b>' + it.name + '</b><span>' + it.note + '</span></span>' +
       '<input type="checkbox" id="lyr-' + it.id + '"' + (it.on ? ' checked' : '') + '><span class="tg" aria-hidden="true"></span>';
     grp.appendChild(row);
@@ -454,6 +473,13 @@ CITY.groups.forEach(([title, items]) => {
         '</div><div class="legend"><small id="brdnote-' + it.id + '"></small></div>';
       grp.appendChild(box);
       box.querySelectorAll('[data-board]').forEach(b => b.addEventListener('click', () => setBoard(it.id, b.dataset.board)));
+    }
+    if (it.kind === 'towers'){   // key to the badges, shown while the layer is on
+      const box = document.createElement('div'); box.className = 'lensbox child'; box.id = 'twkey-' + it.id; box.hidden = !it.on;
+      const key = (cls, use, text) => '<div><span class="lm tw u-' + use + ' ' + cls + '"><i>' + svg(GLYPH['tw-' + use]) + '</i></span>' + esc(text) + '</div>';
+      box.innerHTML = '<div class="legend twkey">' + key('', 'res', it.key.res) + key('', 'com', it.key.com) + key('', 'mix', it.key.mix) +
+        key('uc', 'res', it.key.uc) + key('sup', 'com', it.key.sup) + '</div>';
+      grp.appendChild(box);
     }
     if (it.kind === 'suburbs'){
       row.classList.add('outer-only'); row.id = 'row-' + it.id;
@@ -547,6 +573,7 @@ function setLayer(id, on){
   const lyr = layers[id]; if (!lyr) return;
   if (on) { lyr.addTo(map); } else { map.removeLayer(lyr); }
   if (METRO && id === METRO.id) syncStnNames();
+  if (kindOf(id) === 'towers'){ const box = document.getElementById('twkey-' + id); if (box) box.hidden = !on; }
   if (kindOf(id) === 'boards'){ const box = document.getElementById('brd-' + id); if (box) box.hidden = !on; if (on) setBoard(id, boardPick[id]); }
   if (kindOf(id) === 'suburbs'){
     document.getElementById('drvbox').hidden = !on;
@@ -649,6 +676,41 @@ try { Object.assign(secOpen, JSON.parse(localStorage.getItem('cardSections') || 
 function section(id, title, body){
   if (!body) return '';
   return '<details class="sec" data-sec="' + id + '"' + (secOpen[id] ? ' open' : '') + '><summary>' + title + '</summary>' + body + '</details>';
+}
+/* Skyscrapers on the card: a tower picked on the map, from search or a shared link (the pin carries its
+   name) gets its own block: use, height, floors, year and up to three facts, built ahead of time by
+   engine/skyscrapers.py. Heights in the city's unit first (CITY.distance "mi": feet). */
+const TOWERS = byKind('towers');
+const towerFeatures = () => (TOWERS && loaded[TOWERS.file] ? loaded[TOWERS.file].features : []);
+const num = n => Number(n).toLocaleString(CITY.locale || 'en');
+function towerHeight(p, short){
+  const m = short ? num(Math.round(p.h)) + ' m' : num(p.h) + ' m', ft = num(p.ft) + ' ft';
+  if (short) return CITY.distance === 'mi' ? ft : m;
+  return CITY.distance === 'mi' ? ft + ' (' + m + ')' : m + ' (' + ft + ')';
+}
+// The tower a named pin is on: same name (or former name) within 150 m, or any tower within 20 m
+// (a landmark inside one, like the Lyric Opera in the Civic Opera House; not the shops next door).
+function towerAt(x, y, title){
+  if (!title) return null;
+  let best = null, bd = Infinity;
+  towerFeatures().forEach(f => {
+    const p = f.properties, d = metres([x, y], f.geometry.coordinates);
+    const named = p.name === title || p.aka === title;
+    if (d < (named ? 150 : 20) && d < bd){ best = f; bd = d; }
+  });
+  return best;
+}
+function towerCard(f){
+  if (!f) return '';
+  const p = f.properties, T = TOWERS;
+  const stat = (k, v, sub) => '<div><dt>' + k + '</dt><dd>' + v + (sub ? '<small>' + sub + '</small>' : '') + '</dd></div>';
+  const [hMain, hSub] = CITY.distance === 'mi' ? [num(p.ft) + ' ft', num(p.h) + ' m'] : [num(p.h) + ' m', num(p.ft) + ' ft'];
+  return '<div class="tower"><div class="tw-what"><span class="lm tw u-' + p.use + (p.uc ? ' uc' : '') + (p.super ? ' sup' : '') + '"><i>' + svg(GLYPH['tw-' + p.use]) + '</i></span><span>' +
+      esc((T.purpose && T.purpose[p.purpose]) || p.purpose) + (p.super ? ' · ' + esc(T.supText) : '') + (p.uc ? '<em>' + esc(T.ucText) + '</em>' : '') + '</span></div>' +
+    '<dl class="tw-stats">' + stat('Height', hMain, hSub) + (p.floors ? stat('Floors', p.floors) : '') +
+      (p.uc ? stat(T.expectedText, p.year || 'TBD') : stat(T.builtText, p.year)) + '</dl>' +
+    (p.facts && p.facts.length ? '<ul class="tw-facts">' + p.facts.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>' : '') +
+    '<small class="tw-src">' + (p.aka ? esc(fill(T.akaText, p)) + ' · ' : '') + (p.wiki ? '<a href="https://en.wikipedia.org/wiki/' + encodeURIComponent(p.wiki.replace(/ /g, '_')) + '" target="_blank" rel="noopener">' + esc(T.moreText) + '</a>' : esc(T.sourceText)) + '</small></div>';
 }
 /* Nearby (card only, nothing drawn on the map): the nearest of a few kinds of public place (library,
    community centre, emergency department) with the straight-line distance, and how many of others
@@ -801,6 +863,7 @@ function inspect(latlng, title, muniName){
   here.hidden = false;
   here.innerHTML = '<div class="hh"><div><small>What’s here</small><strong>' + esc(heading) + '</strong></div><div class="hb"><button type="button" class="share" aria-label="Share this spot" title="Share a link to this spot">' + SHARE_ICON + '</button><button type="button" aria-label="Close" id="hereX">×</button></div></div>' +
     '<div class="pills">' + pills.map(p => '<span class="pill"><i style="background:' + p[0] + '"></i>' + esc(p[1]) + '</span>').join('') + '</div>' +
+    towerCard(towerAt(x, y, title)) +
     standout(unit, heading) +
     section('bounds', 'Boundaries', '<dl class="facts">' + facts.map(f => '<dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd>').join('') + '</dl>') +
     section('live', 'Living here', livingHere(UNITS && hits[UNITS.id])) +
@@ -984,11 +1047,19 @@ function suggestions(text){
   const out = [];
   (data.landmarks ? data.landmarks.features : []).forEach(f => {
     const b = score([f.properties.name].concat(f.properties.aliases || []));
-    if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
+    if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f), at: f.geometry.coordinates});
   });
   INSTITUTIONS().forEach(([it, f]) => {
-    const p = f.properties, b = score([p.name + (p.sub && /campus|centre|site/i.test(p.sub) ? ' ' + p.sub : ''), p.name]);
-    if (b) out.push({s: b.s, rank: 2.5, name: p.name, sub: [it.place || it.name, p.sub].filter(Boolean).join(' · '), go: () => goLandmark(f)});
+    // Nicknames (U of T, UIC…) come from the layer's "aliases" in city.json.
+    const p = f.properties, b = score([p.name + (p.sub && /campus|centre|site/i.test(p.sub) ? ' ' + p.sub : ''), p.name].concat((it.aliases || {})[p.name] || []));
+    if (b) out.push({s: b.s, rank: 2.5, name: p.name, sub: [it.place || it.name, p.sub].filter(Boolean).join(' · ') + (b.alias && b.alias !== p.name ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
+  });
+  // Skyscrapers, unless a landmark suggested for the same words stands on it (Willis Tower, the Hancock).
+  const lmHits = out.filter(o => o.at);
+  towerFeatures().forEach(f => {
+    const p = f.properties;
+    const b = score([p.name].concat(p.aka ? [p.aka] : []));
+    if (b && !lmHits.some(o => metres(o.at, f.geometry.coordinates) < 20)) out.push({s: b.s, rank: p.super ? 2 : 2.8, name: p.name, sub: TOWERS.place + ' · ' + towerHeight(p, true) + (p.uc ? ' · ' + TOWERS.ucText : '') + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));

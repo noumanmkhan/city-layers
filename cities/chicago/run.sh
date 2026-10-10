@@ -9,6 +9,7 @@ python3 build.py
 python3 landmarks.py
 python3 profiles.py
 python3 ../../engine/facts.py chicago   # after profiles: what makes each unit stand out
+python3 ../../engine/skyscrapers.py chicago   # towers 150 m+ from raw/skyscrapers/wiki.json (fetch-skyscrapers.yml)
 python3 heritage.py
 python3 institutions.py       # universities, City Colleges, ERs: points, written straight to docs
 OUT=../../docs/chicago/data

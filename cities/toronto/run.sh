@@ -13,6 +13,7 @@ python3 landmarks.py
 python3 go.py
 python3 profiles.py
 python3 ../../engine/facts.py toronto   # after profiles: what makes each unit stand out
+python3 ../../engine/skyscrapers.py toronto   # towers 150 m+ from raw/skyscrapers/wiki.json (fetch-skyscrapers.yml)
 python3 heritage.py
 python3 institutions.py       # universities, colleges, hospitals: points, written straight to docs
 python3 nearby.py             # after institutions: points for the card's Nearby section

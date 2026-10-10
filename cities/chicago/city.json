@@ -21,7 +21,7 @@
     {"name": "Lake Michigan", "at": [41.97, -87.57], "cls": "lake-near"},
     {"name": "Lake Michigan", "at": [42.40, -87.55], "cls": "lake-far"}
   ],
-  "attribution": "Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim",
+  "attribution": "Boundaries, SSAs & the ‘L’: City of Chicago Data Portal · Districts & municipalities: U.S. Census Bureau TIGER · Metra: Metra GTFS · Streets, expressways & address search: © OpenStreetMap contributors via Nominatim · Skyscrapers: Wikipedia (CC BY-SA)",
   "example": {"at": [41.8763, -87.6282], "name": "Harold Washington Library (example)"},
 
   "search": {
@@ -51,10 +51,11 @@
       {"id": "lens", "kind": "lens", "name": "Community area lens", "note": "Housing cost, getting to work, renters and owners, housing type. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},
       {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
-      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"},
-      {"id": "unis", "kind": "places", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "note": "Public and nonprofit universities with 1,000+ students, one point per campus"},
-      {"id": "colleges", "kind": "places", "file": "institutions", "cat": "college", "name": "City Colleges", "place": "City College", "note": "The 7 City Colleges of Chicago"},
-      {"id": "hospitals", "kind": "places", "file": "institutions", "cat": "hospital", "name": "ERs", "place": "Hospital with an ER", "edText": "Emergency department", "note": "Public and nonprofit hospitals with an emergency department"},
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums; more below"},
+      {"id": "unis", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "aliases": {"University of Chicago": ["UChicago", "U of C"], "University of Illinois Chicago": ["UIC"], "Loyola University Chicago": ["Loyola"], "DePaul University": ["DePaul"], "Northwestern University": ["Northwestern"], "Illinois Institute of Technology": ["IIT", "Illinois Tech"]}, "note": "Public and nonprofit universities with 1,000+ students, one point per campus"},
+      {"id": "colleges", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "college", "name": "City Colleges", "place": "City College", "note": "The 7 City Colleges of Chicago"},
+      {"id": "hospitals", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "hospital", "name": "ERs", "place": "Hospital with an ER", "edText": "Emergency department", "note": "Public and nonprofit hospitals with an emergency department"},
+      {"id": "towers", "kind": "towers", "under": "landmarks", "file": "skyscrapers", "name": "Skyscrapers", "place": "Skyscraper", "note": "Buildings about 490 ft (150 m) and taller, open or under construction", "key": {"res": "Residential", "com": "Commercial (office or hotel)", "mix": "Mixed use", "uc": "Under construction · hollow", "sup": "Supertall, 984 ft (300 m) or more · gold ring"}, "purpose": {"Residential": "Residential tower", "Office": "Office tower", "Hotel": "Hotel tower", "Mixed-use": "Mixed-use tower"}, "supText": "Supertall", "ucText": "Under construction", "builtText": "Completed", "expectedText": "Expected", "akaText": "Also known as {aka}", "moreText": "More on Wikipedia", "sourceText": "Source: Wikipedia"},
       {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Landmark districts", "note": "59 Chicago Landmark Districts · boundaries as of 2012", "label": "{name}", "hover": "{name} Landmark District"}
     ]],
     ["Representation", [

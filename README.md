@@ -25,7 +25,8 @@ Toronto's geography is described in several overlapping ways at once. A single a
 | Old Toronto areas | 5 | Downtown, Midtown, Uptown,<br>West End, East End |
 | Neighbourhoods | 158 | The City's official set (2022) |
 | Known-as names | 85 | King West, Little Italy, the Junction… |
-| Landmarks | 38 | Arenas, big parks, music venues,<br>civic buildings, campuses, airports |
+| Landmarks | 34 | Arenas, big parks, music venues,<br>museums, civic buildings, airports |
+| Skyscrapers | 130 | Every building 150 m and taller:<br>117 built or topped out, 13 under construction |
 | City wards | 25 | |
 | Provincial ridings | 25 | Same lines as the wards |
 | Federal ridings | 24 | 2023 Representation Order |
@@ -40,7 +41,9 @@ Toronto's geography is described in several overlapping ways at once. A single a
 
 **Universities, colleges and hospitals:** three toggles under Landmarks, off by default, show how these are laid out across the city. They follow fixed rules rather than listing everything: universities are public or nonprofit, one point per campus; colleges are public only, so no private career colleges and no public-private partnership campuses (a public college's name on a campus run by a private company, whose students Ontario cut off from post-graduation work permits in 2024); hospitals are Ontario public hospitals plus OHIP-funded ones like Shouldice, with a heavier ring for an emergency department. Chicago applies the same rules from the federal IPEDS and CMS directories: universities with 1,000 or more students, the seven City Colleges, and public or nonprofit hospitals with an ER (two Prime Healthcare hospitals that turned for-profit in 2025 are left out). Names only: no ratings, rankings or wait times.
 
-**Landmarks:** a short, curated list of the places Torontonians give directions by (Scotiabank Arena, High Park, Massey Hall, City Hall, U of T, Exhibition Place…), not an exhaustive points-of-interest database. Big, spread-out anchors appear city-wide; dense downtown venues appear as you zoom in, and overlapping labels are hidden automatically.
+**Skyscrapers:** a fourth toggle under Landmarks, off by default, places every building 150 m and taller: 117 in Toronto (plus 13 under construction) and 138 in Chicago. Each badge shows what the tower is for (homes as a grid of windows, offices and hotels as floor bands, mixed use as both), stays hollow until the building is open for occupancy (topping out isn't enough), and gets a gold ring at 300 m and up, the supertalls: SkyTower and One Bloor West in Toronto, Willis, Trump, St. Regis, Aon, the Hancock, Franklin Center and Two Prudential in Chicago. Tap one and the readout gives its height, floors and year with a few facts: where it ranks in the city, whether it was once the city's tallest, the tallest of its decade or its kind, and a handful of written-up records (Willis was the world's tallest building for almost 25 years; First Canadian Place was Canada's tallest for half a century). The list comes from Wikipedia's tallest-buildings pages, refreshed monthly; this year's openings are checked by hand before a tower turns solid.
+
+**Landmarks:** a short, curated list of the places Torontonians give directions by (Scotiabank Arena, High Park, Massey Hall, City Hall, Exhibition Place…), not an exhaustive points-of-interest database. Big, spread-out anchors appear city-wide; dense downtown venues appear as you zoom in, and overlapping labels are hidden automatically.
 
 **Address search:** type an address (for example "789 Yonge St") and the map flies there, drops a pin and fills in the readout below. Addresses are matched with OpenStreetMap's Nominatim service across the GTA, with Toronto matches listed first; an address beyond the city limits switches the map to the regional view. Landmarks and place names also suggest themselves as you type, without any network call: landmarks with their old names and nicknames (SkyDome, Air Canada Centre, Ryerson, "the Ex"), plus every neighbourhood, known-as name, former city and surrounding municipality. Choosing a place like Deer Park or Mississauga frames it on the map and fills in the readout, switching to the regional view for places outside the city. Beyond Toronto, the GTA's named communities suggest themselves too (Meadowvale, Port Credit, Woodbridge, Unionville, Brooklin, Kleinburg…, about 470 in all, from OpenStreetMap's place names): choosing one shows where it is, with its municipality and region, and an address in the GTA gets a "Near Meadowvale"-style pill. Most GTA municipalities don't publish neighbourhood boundaries the way Toronto does, so these are named points for finding your way, not drawn areas. On the Chicago map the same works for community areas, the sides and suburbs like Lombard.
 
@@ -116,6 +119,7 @@ The second city runs on the same engine with its own data and config (`cities/ch
 | Congressional districts | 9 | Illinois seats in the U.S. House |
 | Special Service Areas | 58 | Chicago's equivalent of BIAs |
 | Landmark districts | 59 | The City's boundary file dates from 2012,<br>so later designations are missing |
+| Skyscrapers | 139 | Every building 150 m (about 490 ft)<br>and taller; 7 supertall, 1 under construction |
 | Expressways | 11 in Chicago | Kennedy, Dan Ryan, Eisenhower,<br>Stevenson, Lake Shore Drive |
 | Metra | 11 lines | From four downtown terminals |
 | The 'L' | 8 lines, 144 stations | CTA rapid transit |
@@ -184,6 +188,7 @@ The work was data sourcing as much as it was code. Some examples of the judgment
 - Travel times to Union computed from the TTC schedules and from Metrolinx's GO and UP Express GTFS ([Metrolinx Open Data](https://www.metrolinx.com/en/about-us/open-data)), with walking routes from OpenStreetMap.
 - Suburban drive times (both cities) routed with [OSRM](https://project-osrm.org/) on © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors' roads (ODbL).
 - Highways outside Toronto © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL), fetched with the Overpass API.
+- Skyscrapers (both cities) from Wikipedia's "List of tallest buildings in Toronto" and "…in Chicago" ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)); addresses of towers under construction placed with OpenStreetMap's Nominatim.
 - Neighbouring municipalities © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Lake Ontario, Lake Simcoe and Lake Scugog shorelines around the GTA from OpenStreetMap; lakes farther out from [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 
 Chicago:

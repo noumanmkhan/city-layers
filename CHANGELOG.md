@@ -2,6 +2,21 @@
 
 ## Since 1.1
 
+### Both cities
+- **Skyscrapers**: a toggle under Landmarks with every building 150 m and taller (Toronto 117 plus
+  13 under construction, Chicago 138 plus 1), from Wikipedia's tallest-buildings lists. A square
+  badge per tower: its glyph and colour show use (residential, office or hotel, mixed); hollow and
+  dashed until open for occupancy; a gold ring at 300 m+. Tapping one adds a block to the card:
+  use, height, floors, year (or expected year), up to three facts and a Wikipedia link. Search
+  finds towers by name and former name ("Vista Tower", "John Hancock").
+- **Landmarks**: campus points are gone from the Landmarks layer (the Universities toggle has them,
+  and search still finds U of T, TMU, UIC, IIT… through the layer's nicknames). Universities,
+  Colleges, Hospitals/ERs and Skyscrapers sit indented under Landmarks, all off by default. Willis
+  Tower and 875 North Michigan stay on Landmarks too.
+- For the iOS app: new file `skyscrapers.geojson`, new layer kind `towers`, `aliases` on the
+  Universities layer, `under` on nested layers, card step 5a; contract sections 3, 4, 5 and 11.
+  Additive, schema stays 1.
+
 ### Chicago
 - **Schools** section on the card: the CPS elementary, middle (where one has its own area) and high
   school whose attendance area holds the spot, with grades, straight-line distance and a link to

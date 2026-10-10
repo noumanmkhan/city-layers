@@ -20,7 +20,7 @@
     {"name": "Lake Ontario", "at": [43.585, -79.40], "cls": "lake-near"},
     {"name": "Lake Ontario", "at": [43.45, -78.75], "cls": "lake-far"}
   ],
-  "attribution": "Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim",
+  "attribution": "Boundaries & streets: City of Toronto Open Data · Ridings: Elections Canada / Elections Ontario via Open North · Transit: TTC GTFS · Neighbouring municipalities & address search: © OpenStreetMap contributors via Nominatim · Skyscrapers: Wikipedia (CC BY-SA)",
   "example": {"at": [43.67194, -79.38667], "name": "Toronto Reference Library (example)"},
 
   "search": {
@@ -58,10 +58,11 @@
       {"id": "lens", "kind": "lens", "name": "Neighbourhood lens", "note": "Housing cost, time to Union, renters and owners, housing type. Narrow it to a shortlist."},
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},
       {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
-      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"},
-      {"id": "unis", "kind": "places", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "note": "Public and nonprofit universities, one point per campus"},
-      {"id": "colleges", "kind": "places", "file": "institutions", "cat": "college", "name": "Colleges", "place": "College", "note": "Public college campuses; no private career colleges or partnership campuses"},
-      {"id": "hospitals", "kind": "places", "file": "institutions", "cat": "hospital", "name": "Hospitals", "place": "Hospital", "edText": "Emergency department", "note": "Public and OHIP-funded hospitals; a heavier ring marks an emergency department"},
+      {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, museums, music venues; more below"},
+      {"id": "unis", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "aliases": {"University of Toronto": ["U of T", "UofT", "UT St. George", "St. George campus"], "Toronto Metropolitan University": ["TMU", "Ryerson", "Ryerson University", "TMet"], "York University": ["York U", "YorkU"], "University of Toronto Scarborough": ["UTSC", "U of T Scarborough"]}, "note": "Public and nonprofit universities, one point per campus"},
+      {"id": "colleges", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "college", "name": "Colleges", "place": "College", "note": "Public college campuses; no private career colleges or partnership campuses"},
+      {"id": "hospitals", "kind": "places", "under": "landmarks", "file": "institutions", "cat": "hospital", "name": "Hospitals", "place": "Hospital", "edText": "Emergency department", "note": "Public and OHIP-funded hospitals; a heavier ring marks an emergency department"},
+      {"id": "towers", "kind": "towers", "under": "landmarks", "file": "skyscrapers", "name": "Skyscrapers", "place": "Skyscraper", "note": "Buildings 150 m and taller, open or under construction", "key": {"res": "Residential", "com": "Commercial (office or hotel)", "mix": "Mixed use", "uc": "Under construction · hollow", "sup": "Supertall, 300 m or more · gold ring"}, "purpose": {"Residential": "Residential tower", "Office": "Office tower", "Hotel": "Hotel tower", "Mixed-use": "Mixed-use tower"}, "supText": "Supertall", "ucText": "Under construction", "builtText": "Completed", "expectedText": "Expected", "akaText": "Also known as {aka}", "moreText": "More on Wikipedia", "sourceText": "Source: Wikipedia"},
       {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Heritage districts", "note": "29 Heritage Conservation Districts in force", "label": "{name}", "hover": "{name} Heritage Conservation District"}
     ]],
     ["Representation", [

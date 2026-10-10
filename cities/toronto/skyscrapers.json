@@ -17,12 +17,16 @@
    "The United BLDG (481 University Avenue)": "481 University Avenue",
    "241 Church Street": "241 Church Street",
    "The Bourne": "591 Sherbourne Street",
-   "4800 Yonge": "4800 Yonge Street",
    "170 Roehampton": "170 Roehampton Avenue",
    "Pinnacle Lakeside Tower 1 (215 Lake Shore Boulevard East)": "215 Lake Shore Boulevard East",
    "49 Ontario Street West Tower": "49 Ontario Street"
   }
  },
+ "coords": {
+  "_why": "Nominatim has no house number 4800 on Yonge; the site is the southwest corner of Yonge and Sheppard (UrbanToronto, December 2025).",
+  "4800 Yonge": [-79.4117, 43.7607]
+ },
+ "timelineNames": {"Toronto-Dominion Bank Tower": "TD Bank Tower"},
  "open": {
   "_rule": "A tower listed with this year's date is drawn hollow (under construction) unless marked true here: it must be open for occupancy, not just topped out. Checked October 10, 2026.",
   "SkyTower at Pinnacle One Yonge": false,
@@ -37,7 +41,6 @@
   "SkyTower at Pinnacle One Yonge": ["Tallest building in Canada, and the first in the country with more than 100 floors"],
   "One Bloor West": ["Briefly Canada's tallest building, 2025–2026, until SkyTower overtook it"],
   "First Canadian Place": ["Tallest building in Canada for half a century, 1975–2025", "When it opened, the tallest building in the world outside New York and Chicago"],
-  "The St. Regis Toronto": ["Tallest mixed-use building in Canada"],
   "Aura": ["Tallest residential building in Canada"]
  }
 }

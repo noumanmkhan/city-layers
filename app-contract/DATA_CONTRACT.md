@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (`distance` unit, Chicago in miles with a half-mile Nearby radius; Chicago's Schools section and `attendance.geojson`; Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (Skyscrapers: the `towers` layer kind, `skyscrapers.geojson` and a tower block on the card; campuses off the Landmarks file, their nicknames now on the Universities layer as `aliases`; `under` on layers nested under Landmarks; `distance` unit, Chicago in miles with a half-mile Nearby radius; Chicago's Schools section and `attendance.geojson`; Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -54,6 +54,7 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 | `region_areas.geojson` | Region/county outlines for the regional view. Not needed for the card. |
 | `nearby.json` | Points for the card's Nearby section: `{groups: {key: [[lon, lat, name?], …]}}`. Keys and labels come from `card.nearby` (section 5). Named kinds (`library`, `centre`, `er`) carry a name; counted kinds (`park`, `playground`, …) are bare points. |
 | `attendance.geojson` | Chicago only: CPS attendance areas for the card's Schools section. One polygon per school and grade range, all levels in one file. `properties`: `level` (`es` elementary, `ms` middle, `hs` high), `grades` ("K–8", "7–8", "9–12"), `name` (the school's full name), `url` (its CPS profile page, may be empty), `x`, `y` (the building, lon/lat; absent when unknown, then `addr` may name the street). Top-level `year` ("2025–26"). Areas of one level don't overlap. Describe only: no ratings, scores or enrolment. |
+| `skyscrapers.geojson` | Buildings 150 m and taller (points) for the `towers` layer, from each city's Wikipedia list (CC BY-SA 4.0; credit "Wikipedia"), built by `engine/skyscrapers.py`. Sorted tallest first. `properties`: `name`, `h` (height in metres, architectural: spires count, antennas don't), `ft` (feet), `floors` (may be null), `year` (completed, or expected when `uc`; null when unknown), `use` (`res`, `com` office or hotel, `mix`), `purpose` (display word: "Residential", "Office", "Hotel", "Mixed-use"), `uc` (true until open for occupancy, including topped-out towers), `super` (true at 300 m+), `rank` (by height in the city among towers built or topped out; a tower still under construction gets the rank it will have), `facts` (1–3 short sentences, most telling first), and optionally `aka` (a former or popular name), `address`, `wiki` (English Wikipedia article title). Top-level `source`. |
 | `institutions.geojson` | Universities, colleges and hospitals (points) for the `places` layers. `properties`: `name`, `cat` (`university`, `college`, `hospital`), `sub` (campus, network or ownership, optional), `ed` (true for a hospital with an emergency department). Curated by fixed rules (public or nonprofit only; see each city's `institutions.py`). Describe only: no ratings. |
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
@@ -62,8 +63,8 @@ Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat
 ### Point layers used for search
 
 - **Landmarks** (the `landmarks`-kind layer; file `landmarks.geojson`): ~40 curated points per
-  city. Properties: `name`, `cat` (`park`, `music`, `culture`, `sports`, `campus`, `civic`,
-  `airport`), `catLabel` (display text, e.g. "Sports venue"), `tier` (display priority; 1 is
+  city. Properties: `name`, `cat` (`park`, `music`, `culture`, `sports`, `civic`, `airport`;
+  `campus` is no longer used: campuses are on the Universities layer), `catLabel` (display text, e.g. "Sports venue"), `tier` (display priority; 1 is
   most prominent), `aliases` (other names people search for, e.g. "Air Canada Centre" for
   Scotiabank Arena; may be empty).
 - **Known-as names** (the `knownas`-kind layer; `cultural.geojson` in Toronto,
@@ -71,6 +72,9 @@ Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat
 - **Units** (the `units`-kind layer): `name` and `code`.
 - **`region_places.json`** (Toronto only): see the table above; an entry may also have `alt`,
   a list of other names.
+- **Institutions** (`places` layers): `name`, plus the layer's `aliases` for that name (U of T, UIC…).
+- **Skyscrapers** (the `towers` layer): `name` and `aka`. The website skips a tower when a landmark
+  suggested for the same words stands within 20 m of it (Willis Tower, 875 North Michigan).
 
 How the website's search does it, for an app that wants to match:
 
@@ -106,7 +110,17 @@ How the website's search does it, for an app that wants to match:
   feature's fields.
 - A `places` layer draws the points of `file` whose `cat` equals the layer's `cat` (several layers
   share `institutions.geojson`). `place` names the kind of place ("Hospital", "City College"),
-  `edText` the extra hover words for a feature with `ed`. Not part of the card.
+  `edText` the extra hover words for a feature with `ed`, and `aliases` (optional, Universities)
+  maps a feature `name` to the nicknames search should also match. Not part of the card.
+- A `towers` layer (id `towers`, file `skyscrapers`) draws every feature of `skyscrapers.geojson`.
+  Its text: `place` ("Skyscraper", search sub-line), `key` (`res`, `com`, `mix`, `uc`, `sup`: the
+  legend shown under the layer while it's on), `purpose` (card wording per `purpose`, e.g.
+  "Office tower"), `supText`, `ucText`, `builtText`, `expectedText`, `akaText` (`{aka}`),
+  `moreText` (the Wikipedia link), `sourceText` (shown when a tower has no article). Card: section 5,
+  step 5a.
+- `under` (optional, any layer): the id of the layer it sits under in the panel (the institution
+  toggles and Skyscrapers are `under: "landmarks"`). Indented in the panel; each still has its own
+  toggle and default, all off.
 - `card`: `pills`, `facts`, `living`, `reps` (section 6).
 - `lens.file` (the profiles file) and `lens.lenses`: each has `key` (the profile field holding a
   tier id) and `tiers: [[tierId, label, colourVariable], …]`. Use the label; the colour variable
@@ -166,6 +180,14 @@ first matching feature in file order wins.
    - `{"knownas": N}`: one pill per known-as name from step 4.
    - `{"layer": A, "else": B}`: the name of `hits[A]`, or if none, of `hits[B]`.
    - `{"layer": A, "text": T}`: `T` filled from `hits[A]`, only if there is a hit.
+5a. **Tower** (only when the card has a title, from a tap on a tower, a search or a shared link):
+   the `skyscrapers.geojson` feature whose `name` or `aka` equals the title within 150 m, or else
+   any tower within 20 m (a landmark inside a tower, e.g. the Lyric Opera in the Civic Opera
+   House). If found, a block under the pills: the `towers` layer's `purpose` word, `supText` when
+   `super`, `ucText` when `uc`; Height (Toronto: "298.3 m" over "979 ft"; Chicago, `distance` "mi":
+   feet first), Floors, and `builtText` or `expectedText` with `year` ("TBD" when null); the
+   `facts` as a list; `akaText` and a link to `https://en.wikipedia.org/wiki/{wiki}` labelled
+   `moreText`.
 6. **Boundaries** (`card.facts`, in order), each a label and a value:
    - Skip a row with `onlyInside: true` unless its layer has a hit.
    - `knownas: true`: the known-as names from step 4, comma-separated, or `—`.
@@ -408,6 +430,12 @@ order, bottom to top, is the table's order.
   coloured `--in-university`, `--in-college`, `--in-hospital`; a hospital with `ed` gets a heavier
   ring. Tapping one opens the card for that spot, titled with its name. The website's search also
   suggests them by name.
+- `towers` layer: a square badge per tower (16 pt; 20 pt with a 2 pt `--tw-sup` gold ring when
+  `super`), with a glyph per `use` (office: horizontal bands; residential: a grid of windows; mixed:
+  both) in the panel colour on `--tw-res`, `--tw-com` or `--tw-mix`. When `uc`, the badge is hollow:
+  panel colour inside, a dashed 1.5 pt border and the glyph in the use colour. Supertall icons from
+  zoom 12 with names from 13; the rest from 14 with names from 15. Tapping one opens the card titled
+  with its `name`.
 - A `boards` layer draws only the features of one board at a time, chosen by the user (a row of
   `short` names under the layer; the default is the first). The website keeps the choice in links
   as `board=school:tcdsb`.

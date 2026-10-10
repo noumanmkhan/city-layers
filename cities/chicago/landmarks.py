@@ -5,6 +5,9 @@ directions by, it doesn't belong here.
 tier 1 = spread-out, city-scale anchors (icons from zoom 11); tier 2 = dense or local places (icons from zoom 13),
 so downtown doesn't pile up when zoomed out.
 aliases = other names people type into search (old names, nicknames, abbreviations).
+Universities, colleges, hospitals and skyscrapers have their own toggles under Landmarks, so campuses
+aren't listed here (their search nicknames live on the Universities layer in city.json). A tower that's
+a sight in its own right (an observation deck, a household name) stays here as well.
 Positions were checked against OpenStreetMap (Nominatim); see raw/landmark_check.json.
 Output: docs/chicago/data/landmarks.geojson
 """
@@ -46,13 +49,6 @@ LANDMARKS = [
     ('Ogilvie Transportation Center', 'civic', 2, 41.8829, -87.6409, ['Ogilvie', 'Northwestern Station']),
     ('McCormick Place', 'civic', 2, 41.8517, -87.6155, []),
 
-    # Campuses
-    ('University of Chicago', 'campus', 1, 41.7900, -87.5995, ['UChicago', 'U of C']),
-    ('University of Illinois Chicago', 'campus', 1, 41.8749, -87.6520, ['UIC']),
-    ('Loyola University', 'campus', 2, 41.9990, -87.6578, ['Loyola University Chicago', 'Loyola']),
-    ('DePaul University', 'campus', 2, 41.9246, -87.6507, ['DePaul']),
-    ('Northwestern (Chicago campus)', 'campus', 2, 41.8960, -87.6185, ['Northwestern Memorial', 'Feinberg', 'Northwestern']),
-    ('Illinois Tech', 'campus', 2, 41.8349, -87.6270, ['IIT', 'Illinois Institute of Technology']),
 
     # Museums and sights
     ('Art Institute', 'culture', 2, 41.8796, -87.6237, ['Art Institute of Chicago', 'AIC']),
