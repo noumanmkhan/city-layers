@@ -32,5 +32,7 @@ python3 representatives.py   # after the boundaries above: it matches names agai
 python3 gta_places.py        # likewise: names each community's municipality from base
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build toronto   # after base is simplified: adds drive times to it
 python3 ../../engine/regions.py toronto   # outlines for Focus on a county / region
+[ -f raw/construction/osm.json ] && python3 ../../engine/construction.py toronto   # after streets: lines being built (fetch-construction.yml)
+[ -f raw/closures/permits.json ] && python3 ../../engine/closures.py toronto       # after construction: closures from that work (fetch-closures.yml, daily)
 python3 ../../engine/assemble.py toronto
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

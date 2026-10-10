@@ -26,5 +26,7 @@ python3 nearby.py             # after sides are simplified and institutions writ
 [ -d raw/representatives ] && python3 representatives.py   # after the boundaries above: it matches them
 [ -f raw/drive_times.json ] && python3 ../../engine/drive.py build chicago   # after base is simplified: adds drive times to it
 python3 ../../engine/regions.py chicago   # outlines for Focus on a county / region
+[ -f raw/construction/osm.json ] && python3 ../../engine/construction.py chicago   # after streets: lines being built (fetch-construction.yml)
+[ -f raw/closures/permits.json ] && python3 ../../engine/closures.py chicago       # after construction: closures from that work (fetch-closures.yml, daily)
 python3 ../../engine/assemble.py chicago
 echo "Done. Preview: cd docs && python3 -m http.server 8000"

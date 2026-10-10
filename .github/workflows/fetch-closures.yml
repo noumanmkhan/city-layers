@@ -1,0 +1,54 @@
+name: Fetch transit closures
+# Daily, just after midnight Eastern: pulls road closures and lane restrictions caused by transit
+# construction from Toronto's live Road Restrictions feed and Chicago's CDOT permits
+# (cities/<city>/fetch_closures.py -> raw/closures/permits.json), builds
+# docs/<city>/data/closures.geojson with engine/closures.py, and commits both to main. Pages
+# redeploys on the push, so the map shows that day's permits.
+# Actions schedules are in UTC: midnight in New York is 04:00 UTC in summer and 05:00 UTC in winter,
+# so both run and the one that isn't the midnight hour in New York exits straight away.
+# Scheduled runs can start late; the page hides permits that have ended, so a late run is harmless.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 4 * * *'
+    - cron: '7 5 * * *'
+  push:
+    branches: [main]
+    paths: ['cities/*/fetch_closures.py', 'cities/*/construction.json', 'engine/closures.py', '.github/workflows/fetch-closures.yml']
+permissions:
+  contents: write
+concurrency: fetch-closures
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Only at midnight in New York (scheduled runs)
+        id: when
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(TZ=America/New_York date +%H)" != "00" ]; then
+            echo "Not the midnight hour in New York; the other schedule covers today."; echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.when.outputs.skip != '1'
+        uses: actions/checkout@v4
+      - if: steps.when.outputs.skip != '1'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # Each city on its own, so one failing keeps the other's update (and yesterday's file stays up).
+      - if: steps.when.outputs.skip != '1'
+        run: |
+          for c in toronto chicago; do
+            mkdir -p cities/$c/raw/closures
+            ( python3 -u cities/$c/fetch_closures.py && python3 -u engine/closures.py $c ) 2>&1 | tee cities/$c/raw/closures/fetch.log || true
+          done
+      - if: steps.when.outputs.skip != '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          for p in cities/toronto/raw/closures cities/chicago/raw/closures docs/toronto/data/closures.geojson docs/chicago/data/closures.geojson; do
+            if [ -e "$p" ]; then git add "$p"; fi
+          done
+          git commit -m "Daily transit closures ($(TZ=America/New_York date +%F))" || echo "no changes"
+          git pull --rebase
+          git push
