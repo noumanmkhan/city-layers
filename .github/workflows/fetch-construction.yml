@@ -1,0 +1,37 @@
+name: Fetch transit construction lines
+# Downloads rail lines and stations under construction from OpenStreetMap (Overpass) for each city's
+# regional box into cities/<city>/raw/construction/osm.json and commits it to main. The build
+# (engine/construction.py) keeps only the projects curated in cities/<city>/construction.json.
+# Runs when the fetch script changes on main, on the 3rd of each month (mapping catches up with
+# construction), or by hand. Rebuild afterwards with cities/<city>/run.sh.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 3 * *'
+  push:
+    branches: [main]
+    paths: ['engine/fetch_construction.py', '.github/workflows/fetch-construction.yml']
+permissions:
+  contents: write
+concurrency: fetch-construction
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          for c in toronto chicago; do
+            mkdir -p cities/$c/raw/construction
+            python3 -u engine/fetch_construction.py $c 2>&1 | tee cities/$c/raw/construction/fetch.log || true
+          done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/construction cities/chicago/raw/construction
+          git commit -m "Fetch transit lines under construction from OpenStreetMap" || echo "no changes"
+          git pull --rebase
+          git push
