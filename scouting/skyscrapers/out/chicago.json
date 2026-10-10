@@ -1,0 +1,5623 @@
+{
+ "wikidata": {
+  "Q29294": {
+   "name": "Willis Tower",
+   "coord": "Point(-87.635833 41.878611)",
+   "heights": [
+    442.1
+   ],
+   "methods": [],
+   "floors": [
+    "108",
+    "110"
+   ],
+   "inception": [
+    "1971-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1973-05-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "office"
+   ],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Willis_Tower",
+   "osm_way": "380868216"
+  },
+  "Q225731": {
+   "name": "330 North Wabash",
+   "coord": "Point(-87.6275 41.888611111)",
+   "heights": [
+    212.0
+   ],
+   "methods": [],
+   "floors": [
+    "52"
+   ],
+   "inception": [
+    "1973-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/AMA_Plaza",
+   "osm_way": "64596068"
+  },
+  "Q226246": {
+   "name": "340 on the Park",
+   "coord": "Point(-87.6189 41.8848)",
+   "heights": [
+    205.0
+   ],
+   "methods": [],
+   "floors": [
+    "62"
+   ],
+   "inception": [
+    "2007-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/340_on_the_Park",
+   "osm_way": "95486949"
+  },
+  "Q268559": {
+   "name": "77 West Wacker Drive",
+   "coord": "Point(-87.6305 41.8865)",
+   "heights": [
+    204.0
+   ],
+   "methods": [],
+   "floors": [
+    "49"
+   ],
+   "inception": [
+    "1992-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/77_West_Wacker_Drive",
+   "osm_way": "64391028"
+  },
+  "Q271695": {
+   "name": "Aon Center",
+   "coord": "Point(-87.621388888 41.885277777)",
+   "heights": [
+    346.3
+   ],
+   "methods": [],
+   "floors": [
+    "83"
+   ],
+   "inception": [
+    "1973-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1973-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Aon_Center_(Chicago)",
+   "osm_way": "64388609"
+  },
+  "Q275936": {
+   "name": "900 North Michigan",
+   "coord": "Point(-87.625 41.899722222)",
+   "heights": [
+    265.0
+   ],
+   "methods": [],
+   "floors": [
+    "66"
+   ],
+   "inception": [
+    "1989-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/900_North_Michigan",
+   "osm_way": "31064552"
+  },
+  "Q291304": {
+   "name": "Chase Tower",
+   "coord": "Point(-87.630353 41.881536)",
+   "heights": [
+    264.6
+   ],
+   "methods": [],
+   "floors": [
+    "60"
+   ],
+   "inception": [
+    "1968-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "bank building"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Chase_Tower_(Chicago)",
+   "osm_way": "230613007"
+  },
+  "Q298584": {
+   "name": "Franklin Center (Chicago)",
+   "coord": "Point(-87.634184 41.880681)",
+   "heights": [
+    307.0
+   ],
+   "methods": [],
+   "floors": [
+    "60"
+   ],
+   "inception": [
+    "1989-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Franklin_Center_(Chicago)",
+   "osm_way": null
+  },
+  "Q376658": {
+   "name": "The Heritage at Millennium Park",
+   "coord": "Point(-87.625597 41.884019)",
+   "heights": [
+    192.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "2005-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2005-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/The_Heritage_at_Millennium_Park",
+   "osm_way": "147397547"
+  },
+  "Q511256": {
+   "name": "One Museum Park",
+   "coord": "Point(-87.621186 41.867111)",
+   "heights": [
+    223.8
+   ],
+   "methods": [],
+   "floors": [
+    "62"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/One_Museum_Park",
+   "osm_way": "151479984"
+  },
+  "Q546221": {
+   "name": "Trump International Hotel and Tower",
+   "coord": "Point(-87.626672222 41.8891)",
+   "heights": [
+    423.2
+   ],
+   "methods": [],
+   "floors": [
+    "98"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2009-01-30T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "dwelling",
+    "hotel"
+   ],
+   "type": [
+    "hotel",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Trump_International_Hotel_and_Tower_(Chicago)",
+   "osm_way": "64594680"
+  },
+  "Q170442": {
+   "name": "111 South Wacker Drive",
+   "coord": "Point(-87.6375 41.8803)",
+   "heights": [
+    207.6
+   ],
+   "methods": [],
+   "floors": [
+    "45"
+   ],
+   "inception": [
+    "2005-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/111_South_Wacker_Drive",
+   "osm_way": "64887962"
+  },
+  "Q200780": {
+   "name": "181 West Madison Street",
+   "coord": "Point(-87.633636 41.881528)",
+   "heights": [
+    207.3
+   ],
+   "methods": [],
+   "floors": [
+    "50"
+   ],
+   "inception": [
+    "1990-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1990-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/181_West_Madison_Street",
+   "osm_way": "124865458"
+  },
+  "Q217727": {
+   "name": "875 North Michigan Avenue",
+   "coord": "Point(-87.623056 41.898889)",
+   "heights": [
+    344.0
+   ],
+   "methods": [],
+   "floors": [],
+   "inception": [
+    "1969-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "residential building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/John_Hancock_Center",
+   "osm_way": null
+  },
+  "Q223788": {
+   "name": "300 North LaSalle",
+   "coord": "Point(-87.6331 41.8882)",
+   "heights": [
+    239.0
+   ],
+   "methods": [],
+   "floors": [
+    "60"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/300_North_LaSalle",
+   "osm_way": "1274706595"
+  },
+  "Q224563": {
+   "name": "311 South Wacker Drive",
+   "coord": "Point(-87.635555555 41.877777777)",
+   "heights": [
+    292.9
+   ],
+   "methods": [],
+   "floors": [
+    "65"
+   ],
+   "inception": [
+    "1990-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/311_South_Wacker_Drive",
+   "osm_way": "147350208"
+  },
+  "Q622895": {
+   "name": "Aqua",
+   "coord": "Point(-87.619711 41.886497)",
+   "heights": [
+    262.0
+   ],
+   "methods": [],
+   "floors": [
+    "82"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Aqua_(Chicago)",
+   "osm_way": "95486962"
+  },
+  "Q638403": {
+   "name": "Chicago Spire",
+   "coord": "Point(-87.614697 41.889811)",
+   "heights": [
+    610.0
+   ],
+   "methods": [],
+   "floors": [
+    "150"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "proposed building or structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Chicago_Spire",
+   "osm_way": null
+  },
+  "Q643334": {
+   "name": "One Prudential Plaza",
+   "coord": "Point(-87.6233 41.8849)",
+   "heights": [
+    183.0
+   ],
+   "methods": [],
+   "floors": [
+    "41"
+   ],
+   "inception": [
+    "1955-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1955-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/One_Prudential_Plaza",
+   "osm_way": "127107034"
+  },
+  "Q885672": {
+   "name": "Blue Cross Blue Shield Tower",
+   "coord": "Point(-87.6199 41.8849)",
+   "heights": [
+    243.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "1997-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Blue_Cross_Blue_Shield_Tower",
+   "osm_way": "95486960"
+  },
+  "Q934401": {
+   "name": "Chicago Title and Trust Center",
+   "coord": "Point(-87.630555555 41.884722222)",
+   "heights": [
+    230.0
+   ],
+   "methods": [],
+   "floors": [
+    "50"
+   ],
+   "inception": [
+    "1992-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Grant_Thornton_Tower",
+   "osm_way": "144846547"
+  },
+  "Q961346": {
+   "name": "333 South Wabash",
+   "coord": "Point(-87.625638888 41.877416666)",
+   "heights": [
+    183.0
+   ],
+   "methods": [],
+   "floors": [
+    "44"
+   ],
+   "inception": [
+    "1972-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1973-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/333_South_Wabash",
+   "osm_way": "124865485"
+  },
+  "Q6825278": {
+   "name": "Metropolitan Tower",
+   "coord": "Point(-87.6246 41.8776)",
+   "heights": [
+    144.8
+   ],
+   "methods": [],
+   "floors": [],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Metropolitan_Tower_(Chicago)",
+   "osm_way": null
+  },
+  "Q6914041": {
+   "name": "Morrison Hotel",
+   "coord": "Point(-87.6301 41.8816)",
+   "heights": [
+    160.3
+   ],
+   "methods": [],
+   "floors": [
+    "45"
+   ],
+   "inception": [
+    "1925-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [
+    "hotel"
+   ],
+   "type": [
+    "hotel",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Morrison_Hotel_(Chicago)",
+   "osm_way": null
+  },
+  "Q19817574": {
+   "name": "451 E. Grand",
+   "coord": "Point(-87.61562 41.891573)",
+   "heights": [
+    257.0
+   ],
+   "methods": [],
+   "floors": [
+    "69"
+   ],
+   "inception": [
+    "2019-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2019-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "residential building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/One_Bennett_Park",
+   "osm_way": null
+  },
+  "Q19817578": {
+   "name": "St. Regis Chicago",
+   "coord": "Point(-87.617222 41.887222)",
+   "heights": [
+    362.9
+   ],
+   "methods": [],
+   "floors": [
+    "101"
+   ],
+   "inception": [],
+   "opening": [
+    "2020-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "residential building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/St._Regis_Chicago",
+   "osm_way": "464802811"
+  },
+  "Q21011003": {
+   "name": "150 North Riverside Chicago",
+   "coord": "Point(-87.638672 41.885105)",
+   "heights": [
+    226.0
+   ],
+   "methods": [],
+   "floors": [
+    "54"
+   ],
+   "inception": [
+    "2017-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2017-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/150_North_Riverside",
+   "osm_way": "330879260"
+  },
+  "Q21609043": {
+   "name": "NEMA Chicago",
+   "coord": "Point(-87.6227 41.8673)",
+   "heights": [
+    273.1
+   ],
+   "methods": [],
+   "floors": [
+    "76"
+   ],
+   "inception": [
+    "2019-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2019-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/NEMA_Chicago",
+   "osm_way": "509032412"
+  },
+  "Q27975185": {
+   "name": "Loews Hotel Tower",
+   "coord": "Point(-87.6194258 41.8898851)",
+   "heights": [
+    166.0
+   ],
+   "methods": [],
+   "floors": [
+    "49"
+   ],
+   "inception": [
+    "2015-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Loews_Hotel_Tower",
+   "osm_way": "330309811"
+  },
+  "Q30591083": {
+   "name": "Presidential Towers",
+   "coord": "Point(-87.6426838 41.8814362)",
+   "heights": [
+    140.5
+   ],
+   "methods": [],
+   "floors": [
+    "49"
+   ],
+   "inception": [
+    "1986-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Presidential_Towers",
+   "osm_way": null
+  },
+  "Q41811212": {
+   "name": "Optima Signature",
+   "coord": "Point(-87.621667 41.891111)",
+   "heights": [
+    178.9
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "2017-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Optima_Signature",
+   "osm_way": "357501101"
+  },
+  "Q60763905": {
+   "name": "151 North Franklin",
+   "coord": "Point(-87.635 41.8848)",
+   "heights": [
+    173.0
+   ],
+   "methods": [],
+   "floors": [
+    "35"
+   ],
+   "inception": [
+    "2018-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/151_North_Franklin",
+   "osm_way": "676025639"
+  },
+  "Q1121971": {
+   "name": "Two Prudential Plaza",
+   "coord": "Point(-87.622777777 41.885555555)",
+   "heights": [
+    303.3
+   ],
+   "methods": [],
+   "floors": [
+    "64"
+   ],
+   "inception": [
+    "1990-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Two_Prudential_Plaza",
+   "osm_way": "64388666"
+  },
+  "Q1140508": {
+   "name": "Waldorf Astoria Chicago",
+   "coord": "Point(-87.6275 41.8997)",
+   "heights": [
+    209.0
+   ],
+   "methods": [],
+   "floors": [
+    "60"
+   ],
+   "inception": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "hotel",
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Waldorf_Astoria_Chicago",
+   "osm_way": "153966977"
+  },
+  "Q1582716": {
+   "name": "Water Tower Place",
+   "coord": "Point(-87.622361111 41.897916666)",
+   "heights": [
+    262.0
+   ],
+   "methods": [],
+   "floors": [
+    "74"
+   ],
+   "inception": [
+    "1977-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1976-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "shopping center",
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Water_Tower_Place",
+   "osm_way": null
+  },
+  "Q1639792": {
+   "name": "Hyatt Center",
+   "coord": "Point(-87.636486 41.880836)",
+   "heights": [
+    207.0
+   ],
+   "methods": [],
+   "floors": [
+    "48"
+   ],
+   "inception": [
+    "2005-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2005-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "office building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/71_South_Wacker",
+   "osm_way": "148685510"
+  },
+  "Q1766475": {
+   "name": "Richard J. Daley Center",
+   "coord": "Point(-87.6302 41.8839)",
+   "heights": [
+    197.5
+   ],
+   "methods": [],
+   "floors": [
+    "30"
+   ],
+   "inception": [
+    "1965-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "courthouse",
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Richard_J._Daley_Center",
+   "osm_way": null
+  },
+  "Q1787391": {
+   "name": "Three First National Plaza",
+   "coord": "Point(-87.630767 41.882331)",
+   "heights": [
+    234.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "1981-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1981-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Three_First_National_Plaza",
+   "osm_way": "64888429"
+  },
+  "Q1787863": {
+   "name": "Olympia Centre",
+   "coord": "Point(-87.623064 41.896358)",
+   "heights": [
+    221.0
+   ],
+   "methods": [],
+   "floors": [
+    "63"
+   ],
+   "inception": [
+    "1986-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Olympia_Centre",
+   "osm_way": "159959827"
+  },
+  "Q1801054": {
+   "name": "Lake Point Tower",
+   "coord": "Point(-87.612222222 41.891666666)",
+   "heights": [
+    197.0
+   ],
+   "methods": [],
+   "floors": [
+    "70"
+   ],
+   "inception": [
+    "1968-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Lake_Point_Tower",
+   "osm_way": null
+  },
+  "Q1810424": {
+   "name": "Park Tower",
+   "coord": "Point(-87.625277777 41.896944444)",
+   "heights": [
+    257.0
+   ],
+   "methods": [],
+   "floors": [
+    "70"
+   ],
+   "inception": [
+    "2000-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2000-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Park_Tower_(Chicago)",
+   "osm_way": "143830547"
+  },
+  "Q1810949": {
+   "name": "NBC Tower",
+   "coord": "Point(-87.621083333 41.889888888)",
+   "heights": [
+    160.0,
+    171.0,
+    191.0
+   ],
+   "methods": [],
+   "floors": [
+    "37"
+   ],
+   "inception": [
+    "1989-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1989-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "office",
+    "television studio"
+   ],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/NBC_Tower",
+   "osm_way": "153567403"
+  },
+  "Q1812350": {
+   "name": "Legacy at Millennium Park",
+   "coord": "Point(-87.6257 41.8814)",
+   "heights": [
+    250.0
+   ],
+   "methods": [],
+   "floors": [
+    "72"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Legacy_at_Millennium_Park",
+   "osm_way": "147478372"
+  },
+  "Q1860472": {
+   "name": "One Magnificent Mile",
+   "coord": "Point(-87.6247 41.9005)",
+   "heights": [
+    205.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "1983-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "built structure"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/One_Magnificent_Mile",
+   "osm_way": "143758386"
+  },
+  "Q2056267": {
+   "name": "Pittsfield Building",
+   "coord": "Point(-87.625672 41.883053)",
+   "heights": [
+    168.0
+   ],
+   "methods": [],
+   "floors": [
+    "38"
+   ],
+   "inception": [
+    "1927-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Pittsfield_Building",
+   "osm_way": "124865459"
+  },
+  "Q2143136": {
+   "name": "Tribune Tower",
+   "coord": "Point(-87.623694444 41.890388888)",
+   "heights": [
+    141.0
+   ],
+   "methods": [],
+   "floors": [
+    "36"
+   ],
+   "inception": [
+    "1925-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Tribune_Tower",
+   "osm_way": "150407241"
+  },
+  "Q2224700": {
+   "name": "Chicago Board of Trade Building",
+   "coord": "Point(-87.63225 41.878125)",
+   "heights": [
+    184.1
+   ],
+   "methods": [],
+   "floors": [
+    "44"
+   ],
+   "inception": [
+    "1930-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1930-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Chicago_Board_of_Trade_Building",
+   "osm_way": "28951633"
+  },
+  "Q2302438": {
+   "name": "Waterview Tower",
+   "coord": "Point(-87.631388888 41.886388888)",
+   "heights": [
+    190.0
+   ],
+   "methods": [],
+   "floors": [
+    "60"
+   ],
+   "inception": [
+    "2014-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/OneEleven",
+   "osm_way": "124865463"
+  },
+  "Q2342206": {
+   "name": "Millennium Centre",
+   "coord": "Point(-87.629344 41.892831)",
+   "heights": [
+    186.0
+   ],
+   "methods": [],
+   "floors": [
+    "59"
+   ],
+   "inception": [
+    "2001-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2003-08-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Millennium_Centre_(Chicago)",
+   "osm_way": "158621274"
+  },
+  "Q2363313": {
+   "name": "Park Tower Condominiums",
+   "coord": "Point(-87.6547 41.9803)",
+   "heights": [
+    156.0
+   ],
+   "methods": [],
+   "floors": [
+    "54",
+    "55"
+   ],
+   "inception": [
+    "1974-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "condominium",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Park_Tower_and_Mall",
+   "osm_way": null
+  },
+  "Q2444330": {
+   "name": "Crain Communications Building",
+   "coord": "Point(-87.6248 41.8854)",
+   "heights": [
+    177.0
+   ],
+   "methods": [],
+   "floors": [
+    "41"
+   ],
+   "inception": [
+    "1984-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1984-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "building"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Crain_Communications_Building",
+   "osm_way": "210671717"
+  },
+  "Q3117510": {
+   "name": "Mather Tower",
+   "coord": "Point(-87.6254 41.8877)",
+   "heights": [
+    158.8
+   ],
+   "methods": [],
+   "floors": [
+    "42"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Mather_Tower",
+   "osm_way": "147399564"
+  },
+  "Q3387206": {
+   "name": "Palmolive Building",
+   "coord": "Point(-87.623428 41.899831)",
+   "heights": [
+    172.2
+   ],
+   "methods": [],
+   "floors": [
+    "37"
+   ],
+   "inception": [
+    "1929-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Palmolive_Building",
+   "osm_way": "143756601"
+  },
+  "Q4616395": {
+   "name": "200 North Riverside Plaza",
+   "coord": "Point(-87.6396077 41.8864234)",
+   "heights": [
+    223.1
+   ],
+   "methods": [],
+   "floors": [
+    "52"
+   ],
+   "inception": [
+    "2017-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2017-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/River_Point",
+   "osm_way": "330309437"
+  },
+  "Q4635502": {
+   "name": "353 North Clark",
+   "coord": "Point(-87.631 41.8885)",
+   "heights": [
+    190.0,
+    190.2
+   ],
+   "methods": [],
+   "floors": [
+    "45"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/353_North_Clark",
+   "osm_way": "153320986"
+  }
+ },
+ "wikidata_skyscrapers_without_height": [
+  {
+   "item": "http://www.wikidata.org/entity/Q2979811",
+   "itemLabel": "Q2979811"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q14687469",
+   "itemLabel": "Crane Company Building",
+   "floors": "12"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7894715",
+   "itemLabel": "University Hall"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q16890366",
+   "itemLabel": "Civic Opera Building",
+   "floors": "45"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2370872",
+   "itemLabel": "Huron Plaza",
+   "floors": "56"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q6747849",
+   "itemLabel": "Mandarin Oriental, Chicago",
+   "floors": "74"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2387082",
+   "itemLabel": "The Clare at Water Tower",
+   "floors": "53"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q1886439",
+   "itemLabel": "190 South LaSalle Street",
+   "floors": "40"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q16985591",
+   "itemLabel": "Buckingham Building",
+   "floors": "27"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q1920923",
+   "itemLabel": "1000 Lake Shore Plaza",
+   "floors": "55"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q1921426",
+   "itemLabel": "Merchandise Mart",
+   "floors": "25"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q3756449",
+   "itemLabel": "Harris Bank Addition II",
+   "floors": "38"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2707913",
+   "itemLabel": "Park Place Tower"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2187086",
+   "itemLabel": "Chicago Mercantile Exchange Center"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q273155",
+   "itemLabel": "860–880 Lake Shore Drive Apartments"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q17040597",
+   "itemLabel": "Tacoma Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2456156",
+   "itemLabel": "Citadel Center",
+   "floors": "39"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q14687923",
+   "itemLabel": "Municipal Courts Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q14687991",
+   "itemLabel": "Old Colony Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q15205667",
+   "itemLabel": "Building at 320 West Oakdale Avenue"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4856038",
+   "itemLabel": "Bank of America Plaza",
+   "floors": "29"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q17039466",
+   "itemLabel": "Wolf Point South Tower"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q19817563",
+   "itemLabel": "Riverside Plaza",
+   "floors": "26"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q18589155",
+   "itemLabel": "Burnham Center"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2788256",
+   "itemLabel": "The Columbian",
+   "floors": "47"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5952876",
+   "itemLabel": "Hyatt Regency Chicago"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q85751292",
+   "itemLabel": "Century Building",
+   "floors": "16"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q6837642",
+   "itemLabel": "Michigan Plaza"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7291429",
+   "itemLabel": "Rand McNally Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q866660",
+   "itemLabel": "The Fordham"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2565075",
+   "itemLabel": "One North LaSalle",
+   "floors": "48"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7623091",
+   "itemLabel": "Atwater Apartments"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q26710810",
+   "itemLabel": "Wolf Point East Tower"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7093003",
+   "itemLabel": "One Museum Park West",
+   "floors": "54"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5138215",
+   "itemLabel": "Coast at Lakeshore East",
+   "floors": "51"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2598533",
+   "itemLabel": "10 South LaSalle",
+   "floors": "37"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2050970",
+   "itemLabel": "River East Center",
+   "floors": "58"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q225835",
+   "itemLabel": "333 Wacker Drive",
+   "floors": "36"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2058889",
+   "itemLabel": "Kluczynski Federal Building",
+   "floors": "42"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7763967",
+   "itemLabel": "The Shoreham",
+   "floors": "46"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7203573",
+   "itemLabel": "Plaza 440",
+   "floors": "49"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q774991",
+   "itemLabel": "North Harbor Tower",
+   "floors": "55"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q131339054",
+   "itemLabel": "Ralph H. Metcalfe Federal Building",
+   "floors": "28"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7291873",
+   "itemLabel": "Randolph Tower",
+   "floors": "45"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2667628",
+   "itemLabel": "The Parkshore",
+   "floors": "56"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7339772",
+   "itemLabel": "Roanoke Building",
+   "floors": "37"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q1071998",
+   "itemLabel": "Chicago Temple Building",
+   "floors": "25"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q931979",
+   "itemLabel": "Joffrey Tower",
+   "floors": "31"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q786387",
+   "itemLabel": "Reliance Building",
+   "floors": "15"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q141509883",
+   "itemLabel": "Federal Reserve Bank of Chicago Building",
+   "floors": "17"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q27970771",
+   "itemLabel": "Fairmont Hotel",
+   "floors": "37"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2731989",
+   "itemLabel": "191 North Wacker",
+   "floors": "37"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2415903",
+   "itemLabel": "Harbor Point",
+   "floors": "54"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5519366",
+   "itemLabel": "Northwestern Memorial Hospital Galter Pavilion",
+   "floors": "22"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q18347828",
+   "itemLabel": "Clark Adams Building",
+   "floors": "41"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q3307842",
+   "itemLabel": "River Plaza",
+   "floors": "51"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q97183053",
+   "itemLabel": "NEMA"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2166184",
+   "itemLabel": "North Pier Apartments",
+   "floors": "61"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q54952515",
+   "itemLabel": "Tribune East Tower",
+   "floors": "113"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2190930",
+   "itemLabel": "Newberry Plaza",
+   "floors": "57"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2195755",
+   "itemLabel": "Elysées Condominiums",
+   "floors": "56"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2793789",
+   "itemLabel": "Kemper Building",
+   "floors": "41"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7553765",
+   "itemLabel": "Sofitel Chicago Water Tower",
+   "floors": "33"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7752114",
+   "itemLabel": "The Montgomery",
+   "floors": "28"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4550543",
+   "itemLabel": "155 North Wacker",
+   "floors": "45"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2219119",
+   "itemLabel": "The Streeter",
+   "floors": "50"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2808938",
+   "itemLabel": "1700 East 56th Street",
+   "floors": "40"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q18706042",
+   "itemLabel": "Boyce Building",
+   "floors": "12"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2837946",
+   "itemLabel": "Allerton Hotel",
+   "floors": "25"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4631505",
+   "itemLabel": "235 Van Buren",
+   "floors": "46"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4642314",
+   "itemLabel": "680 N Lake Shore Drive",
+   "floors": "29"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q106091150",
+   "itemLabel": "Cook County Administration Building",
+   "floors": "35"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2257273",
+   "itemLabel": "One Superior Place",
+   "floors": "52"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q961568",
+   "itemLabel": "Boeing International Headquarters",
+   "floors": "36"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2259283",
+   "itemLabel": "120 North LaSalle",
+   "floors": "39"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2259682",
+   "itemLabel": "One South Wacker",
+   "floors": "40"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2300049",
+   "itemLabel": "Grand Plaza I",
+   "floors": "57"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2308936",
+   "itemLabel": "321 North Clark",
+   "floors": "35"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q83182129",
+   "itemLabel": "The Narragansett"
+  }
+ ],
+ "wikipedia": {
+  "title": "List of tallest buildings in Chicago",
+  "revid": 1376906461,
+  "sections": [
+   "History",
+   "First skyscrapers",
+   "1900s–1930s",
+   "1940s–1950s",
+   "1960s–1970s",
+   "1980s–1990s",
+   "21st century",
+   "Studio Gang",
+   "South Loop and West Loop",
+   "Mega-developments",
+   "Future",
+   "Cityscape",
+   "Map of tallest buildings",
+   "Tallest buildings",
+   "Tallest buildings by pinnacle height",
+   "Tallest demolished",
+   "Tallest under construction",
+   "Tallest unbuilt",
+   "Timeline of tallest buildings",
+   "Notes",
+   "See also",
+   "Footnotes",
+   "References",
+   "General",
+   "Specific",
+   "Sources",
+   "External links"
+  ],
+  "tables": [
+   {
+    "columns": [
+     "Skyline of Chicago",
+     "Skyline of Chicago.1"
+    ],
+    "rows": 12,
+    "records": [
+     {
+      "Skyline of Chicago": "Chicago skyline in 2024 on the shores of Lake Michigan",
+      "Skyline of Chicago.1": "Chicago skyline in 2024 on the shores of Lake Michigan"
+     },
+     {
+      "Skyline of Chicago": "Tallest building",
+      "Skyline of Chicago.1": "Willis Tower (1974)"
+     },
+     {
+      "Skyline of Chicago": "Tallest building height",
+      "Skyline of Chicago.1": "1,451 feet (442 m)"
+     },
+     {
+      "Skyline of Chicago": "First 150 m+ building",
+      "Skyline of Chicago.1": "Chicago Temple Building (1924)"
+     },
+     {
+      "Skyline of Chicago": "Number of tall buildings (2026)",
+      "Skyline of Chicago.1": "Number of tall buildings (2026)"
+     },
+     {
+      "Skyline of Chicago": "Taller than 100 m (328 ft)",
+      "Skyline of Chicago.1": "356[1]"
+     },
+     {
+      "Skyline of Chicago": "Taller than 150 m (492 ft)",
+      "Skyline of Chicago.1": "137 + 1 T/O[i]"
+     },
+     {
+      "Skyline of Chicago": "Taller than 200 m (656 ft)",
+      "Skyline of Chicago.1": "38 + 1 T/O"
+     },
+     {
+      "Skyline of Chicago": "Taller than 300 m (984 ft)",
+      "Skyline of Chicago.1": "7"
+     },
+     {
+      "Skyline of Chicago": "Taller than 400 m (1,312 ft)",
+      "Skyline of Chicago.1": "2"
+     },
+     {
+      "Skyline of Chicago": "Number of tall buildings — feet",
+      "Skyline of Chicago.1": "Number of tall buildings — feet"
+     },
+     {
+      "Skyline of Chicago": "Taller than 300 ft (91.4 m)",
+      "Skyline of Chicago.1": "409[2]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Rank",
+     "Name",
+     "Image",
+     "Location",
+     "Height ft (m)",
+     "Floors",
+     "Year",
+     "Purpose",
+     "Notes"
+    ],
+    "rows": 138,
+    "records": [
+     {
+      "Rank": 1,
+      "Name": "Willis Tower",
+      "Image": null,
+      "Location": "41°52′44″N 87°38′9″W﻿ / ﻿41.87889°N 87.63583°W",
+      "Height ft (m)": "1,451 (442)",
+      "Floors": 110,
+      "Year": 1974,
+      "Purpose": "Office",
+      "Notes": "Formerly known as Sears Tower, a name it is still commonly called today; 3rd-tallest building in the United States, 26th-tallest building in the world; tallest building in the world from 1974 until 1998. Also the tallest building in the Midwest. Tallest building completed in Chicago in the 1970s.[7][8]"
+     },
+     {
+      "Rank": 2,
+      "Name": "Trump International Hotel and Tower",
+      "Image": null,
+      "Location": "41°53′20″N 87°37′35″W﻿ / ﻿41.88889°N 87.62639°W",
+      "Height ft (m)": "1,388 (423)",
+      "Floors": 98,
+      "Year": 2009,
+      "Purpose": "Mixed-use",
+      "Notes": "7th-tallest building in the United States; tallest building completed in Chicago in the 2000s. A mixed-use residential and hotel skyscraper.[78]"
+     },
+     {
+      "Rank": 3,
+      "Name": "St. Regis Chicago",
+      "Image": null,
+      "Location": "41°53′14″N 87°37′02″W﻿ / ﻿41.88722°N 87.61722°W",
+      "Height ft (m)": "1,198 (363)",
+      "Floors": 101,
+      "Year": 2020,
+      "Purpose": "Mixed-use",
+      "Notes": "Formerly known as the Wanda Vista Tower; 11th-tallest building in the United States, and the tallest skyscraper in the world designed by a woman. It is the newest supertall skyscraper in Chicago. Tallest building completed in Chicago in the 2020s. A mixed-use residential and hotel skyscraper.[79][80]"
+     },
+     {
+      "Rank": 4,
+      "Name": "Aon Center",
+      "Image": null,
+      "Location": "41°53′7″N 87°37′17″W﻿ / ﻿41.88528°N 87.62139°W",
+      "Height ft (m)": "1,136 (346)",
+      "Floors": 83,
+      "Year": 1973,
+      "Purpose": "Office",
+      "Notes": "12th-tallest building in the U.S.; formerly known as the Standard Oil Building. Was the tallest building in Chicago before being surpassed by the Willis Tower.[81]"
+     },
+     {
+      "Rank": 5,
+      "Name": "875 North Michigan Avenue",
+      "Image": null,
+      "Location": "41°53′55.5″N 87°37′23″W﻿ / ﻿41.898750°N 87.62306°W",
+      "Height ft (m)": "1,127 (344)",
+      "Floors": 100,
+      "Year": 1969,
+      "Purpose": "Mixed-use",
+      "Notes": "Previously known as John Hancock Center; 13th-tallest building in the United States; tallest building completed in the world in the 1960s; first building in the world outside of New York City to rise at least 1,000 feet (305 m). A mixed-use residential and office skyscraper. Was the tallest building in Chicago before being surpassed by the Aon Center.[82]"
+     },
+     {
+      "Rank": 6,
+      "Name": "Franklin Center",
+      "Image": null,
+      "Location": "41°52′49.5″N 87°38′5″W﻿ / ﻿41.880417°N 87.63472°W",
+      "Height ft (m)": "1,007 (307)",
+      "Floors": 61,
+      "Year": 1989,
+      "Purpose": "Office",
+      "Notes": "Formerly known as the AT&T Corporate Center; 27th-tallest building in the United States; tallest building completed in Chicago in the 1980s.[83][84]"
+     },
+     {
+      "Rank": 7,
+      "Name": "Two Prudential Plaza",
+      "Image": null,
+      "Location": "41°53′8″N 87°37′22″W﻿ / ﻿41.88556°N 87.62278°W",
+      "Height ft (m)": "995 (303)",
+      "Floors": 64,
+      "Year": 1990,
+      "Purpose": "Office",
+      "Notes": "30th-tallest building in the United States; tallest building completed in Chicago in the 1990s.[85][86]"
+     },
+     {
+      "Rank": 8,
+      "Name": "One Chicago East Tower",
+      "Image": null,
+      "Location": "41°53′46″N 87°37′43″W﻿ / ﻿41.8960713°N 87.628645°W",
+      "Height ft (m)": "973 (296)",
+      "Floors": 78,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "37th-tallest building in the United States. Topped out in July 2021.[87][88]"
+     },
+     {
+      "Rank": 9,
+      "Name": "311 South Wacker Drive",
+      "Image": null,
+      "Location": "41°52′39″N 87°38′8″W﻿ / ﻿41.87750°N 87.63556°W",
+      "Height ft (m)": "961 (293)",
+      "Floors": 65,
+      "Year": 1990,
+      "Purpose": "Office",
+      "Notes": "39th-tallest building in the United States.[89][90]"
+     },
+     {
+      "Rank": 10,
+      "Name": "NEMA Chicago",
+      "Image": null,
+      "Location": "41°52′1″N 87°37′23″W﻿ / ﻿41.86694°N 87.62306°W",
+      "Height ft (m)": "896 (273)",
+      "Floors": 76,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "Tallest apartment building in Chicago. Tallest building completed in Chicago in the 2010s.[91][92]"
+     },
+     {
+      "Rank": 11,
+      "Name": "900 North Michigan",
+      "Image": null,
+      "Location": "41°53′59″N 87°37′30″W﻿ / ﻿41.89972°N 87.62500°W",
+      "Height ft (m)": "871 (266)",
+      "Floors": 66,
+      "Year": 1989,
+      "Purpose": "Mixed-use",
+      "Notes": "A mixed-use skyscraper with office, residential, and hotel components.[93][94]"
+     },
+     {
+      "Rank": 12,
+      "Name": "Chase Tower",
+      "Image": null,
+      "Location": "41°52′53.5″N 87°37′48″W﻿ / ﻿41.881528°N 87.63000°W",
+      "Height ft (m)": "869 (264.8)",
+      "Floors": 60,
+      "Year": 1969,
+      "Purpose": "Office",
+      "Notes": "Also known as First National Plaza. Replaced the Morrison Hotel, the tallest building to ever have been demolished in Chicago. Tallest building in Chicago briefly in 1969, before being surpassed by 875 North Michigan Avenue.[95]"
+     },
+     {
+      "Rank": 13,
+      "Name": "Water Tower Place",
+      "Image": null,
+      "Location": "41°53′52.5″N 87°37′20.5″W﻿ / ﻿41.897917°N 87.622361°W",
+      "Height ft (m)": "859 (261.9)",
+      "Floors": 74,
+      "Year": 1976,
+      "Purpose": "Mixed-use",
+      "Notes": "Currently a mixed-use skyscraper with residential and retail components and a Ritz-Carlton hotel.[96]"
+     },
+     {
+      "Rank": 14,
+      "Name": "Aqua",
+      "Image": null,
+      "Location": "41°53′11″N 87°37′12″W﻿ / ﻿41.88639°N 87.62000°W",
+      "Height ft (m)": "859 (261.8)",
+      "Floors": 82,
+      "Year": 2009,
+      "Purpose": "Mixed-use",
+      "Notes": "Currently the second-tallest building in the world designed by a female-led architectural firm; first skyscraper in Chicago to contain a hotel, condominiums, apartments and retail space.[97][98][99]"
+     },
+     {
+      "Rank": 15,
+      "Name": "400 Lake Shore Drive North Tower",
+      "Image": null,
+      "Location": "41°53′23.53″N 87°36′53.6″W﻿ / ﻿41.8898694°N 87.614889°W",
+      "Height ft (m)": "850 (259.1)",
+      "Floors": 72,
+      "Year": 2027,
+      "Purpose": "Residential",
+      "Notes": "Approved on December 14, 2020. Groundbreaking ceremony was held in June 2024.[100][101] Construction reached 38th floor in July 2025.[102] Topped off in April 2026."
+     },
+     {
+      "Rank": 16,
+      "Name": "Park Tower",
+      "Image": null,
+      "Location": "41°53′49.5″N 87°37′30.5″W﻿ / ﻿41.897083°N 87.625139°W",
+      "Height ft (m)": "844 (257)",
+      "Floors": 67,
+      "Year": 2000,
+      "Purpose": "Mixed-use",
+      "Notes": "A mixed-use residential and hotel skyscraper.[103][104]"
+     },
+     {
+      "Rank": 17,
+      "Name": "One Bennett Park",
+      "Image": null,
+      "Location": "41°53′30″N 87°36′56.4″W﻿ / ﻿41.89167°N 87.615667°W",
+      "Height ft (m)": "837 (255)",
+      "Floors": 69,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[105]"
+     },
+     {
+      "Rank": 18,
+      "Name": "Salesforce Tower Chicago",
+      "Image": null,
+      "Location": "41°53′15.4″N 87°38′15.7″W﻿ / ﻿41.887611°N 87.637694°W",
+      "Height ft (m)": "835 (255)",
+      "Floors": 60,
+      "Year": 2023,
+      "Purpose": "Office",
+      "Notes": "Formerly known as Wolf Point South Tower.[106][107][108]"
+     },
+     {
+      "Rank": 19,
+      "Name": "The Legacy at Millennium Park",
+      "Image": null,
+      "Location": "41°52′53″N 87°37′32″W﻿ / ﻿41.88139°N 87.62556°W",
+      "Height ft (m)": "822 (251)",
+      "Floors": 73,
+      "Year": 2010,
+      "Purpose": "Residential",
+      "Notes": "[109][110]"
+     },
+     {
+      "Rank": 20,
+      "Name": "110 North Wacker",
+      "Image": null,
+      "Location": "41°53′1″N 87°38′15″W﻿ / ﻿41.88361°N 87.63750°W",
+      "Height ft (m)": "814 (248)",
+      "Floors": 51,
+      "Year": 2020,
+      "Purpose": "Office",
+      "Notes": "[111][112]"
+     },
+     {
+      "Rank": 21,
+      "Name": "1000M",
+      "Image": null,
+      "Location": "41°52′11.7″N 87°37′28.5″W﻿ / ﻿41.869917°N 87.624583°W",
+      "Height ft (m)": "805 (245)",
+      "Floors": 73,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "Construction was temporarily halted in June 2020 due to funding issues and COVID-19 concerns; a revised design received city approval in June 2021 and construction resumed in December 2021. Topped out in July 2023.[113][114][115][116][117]"
+     },
+     {
+      "Rank": 22,
+      "Name": "300 North LaSalle",
+      "Image": null,
+      "Location": "41°53′17.5″N 87°37′59″W﻿ / ﻿41.888194°N 87.63306°W",
+      "Height ft (m)": "784 (239)",
+      "Floors": 60,
+      "Year": 2008,
+      "Purpose": "Office",
+      "Notes": "[118][119]"
+     },
+     {
+      "Rank": 23,
+      "Name": "Three First National Plaza",
+      "Image": null,
+      "Location": "41°52′56″N 87°37′50″W﻿ / ﻿41.88222°N 87.63056°W",
+      "Height ft (m)": "767 (234)",
+      "Floors": 57,
+      "Year": 1981,
+      "Purpose": "Office",
+      "Notes": "Also known by its address, 70 West Madison.[120][121]"
+     },
+     {
+      "Rank": 24,
+      "Name": "Grant Thornton Tower",
+      "Image": null,
+      "Location": "41°53′5″N 87°37′50″W﻿ / ﻿41.88472°N 87.63056°W",
+      "Height ft (m)": "755 (230)",
+      "Floors": 50,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "Also known by its address, 161 North Clark.[122][123]"
+     },
+     {
+      "Rank": 25,
+      "Name": "Blue Cross Blue Shield Tower",
+      "Image": null,
+      "Location": "41°53′5″N 87°37′12″W﻿ / ﻿41.88472°N 87.62000°W",
+      "Height ft (m)": "744 (227)",
+      "Floors": 54,
+      "Year": 2010,
+      "Purpose": "Office",
+      "Notes": "The building was originally built in 1997 at 33 stories and a height of 411 feet (125.3 m). In 2010, 21 floors were added in a vertical expansion, along with 3 below-ground floors.[124][125][126]"
+     },
+     {
+      "Rank": 26,
+      "Name": "River Point",
+      "Image": null,
+      "Location": "41°53′9.3″N 87°38′21.8″W﻿ / ﻿41.885917°N 87.639389°W",
+      "Height ft (m)": "732 (223)",
+      "Floors": 52,
+      "Year": 2017,
+      "Purpose": "Office",
+      "Notes": "[127]"
+     },
+     {
+      "Rank": 27,
+      "Name": "Olympia Centre",
+      "Image": null,
+      "Location": "41°53′47″N 87°37′24″W﻿ / ﻿41.89639°N 87.62333°W",
+      "Height ft (m)": "731 (223)",
+      "Floors": 63,
+      "Year": 1986,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use office and residential skyscraper.[128][129][130]"
+     },
+     {
+      "Rank": 28,
+      "Name": "BMO Tower",
+      "Image": null,
+      "Location": "41°52′38″N 87°38′24″W﻿ / ﻿41.87722°N 87.64000°W",
+      "Height ft (m)": "729 (222)",
+      "Floors": 51,
+      "Year": 2021,
+      "Purpose": "Office",
+      "Notes": "[131][132][133][134]"
+     },
+     {
+      "Rank": 29,
+      "Name": "One Museum Park",
+      "Image": null,
+      "Location": "41°52′1.5″N 87°37′17″W﻿ / ﻿41.867083°N 87.62139°W",
+      "Height ft (m)": "726 (221)",
+      "Floors": 62,
+      "Year": 2009,
+      "Purpose": "Residential",
+      "Notes": "[135][136]"
+     },
+     {
+      "Rank": 30,
+      "Name": "150 North Riverside",
+      "Image": null,
+      "Location": "41°53′07″N 87°38′18.5″W﻿ / ﻿41.88528°N 87.638472°W",
+      "Height ft (m)": "724 (221)",
+      "Floors": 54,
+      "Year": 2017,
+      "Purpose": "Office",
+      "Notes": "Tallest building in the city west of the Chicago River.[137]"
+     },
+     {
+      "Rank": 31,
+      "Name": "330 North Wabash",
+      "Image": null,
+      "Location": "41°53′19″N 87°37′39″W﻿ / ﻿41.88861°N 87.62750°W",
+      "Height ft (m)": "695 (212)",
+      "Floors": 52,
+      "Year": 1972,
+      "Purpose": "Mixed-use",
+      "Notes": "Also known as the IBM Building, and formerly as AMA Plaza. Originally an office building. Currently a mixed-use office and hotel skyscraper.[138][139]"
+     },
+     {
+      "Rank": 32,
+      "Name": "Waldorf Astoria Chicago",
+      "Image": null,
+      "Location": "41°53′59″N 87°37′39″W﻿ / ﻿41.89972°N 87.62750°W",
+      "Height ft (m)": "686 (209)",
+      "Floors": 60,
+      "Year": 2009,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use residential and hotel building.[140][141]"
+     },
+     {
+      "Rank": 33,
+      "Name": "111 South Wacker Drive",
+      "Image": null,
+      "Location": "41°52′49″N 87°38′10.5″W﻿ / ﻿41.88028°N 87.636250°W",
+      "Height ft (m)": "681 (208)",
+      "Floors": 51,
+      "Year": 2005,
+      "Purpose": "Office",
+      "Notes": "[142][143]"
+     },
+     {
+      "Rank": 34,
+      "Name": "181 West Madison Street",
+      "Image": null,
+      "Location": "41°52′53.5″N 87°38′00″W﻿ / ﻿41.881528°N 87.63333°W",
+      "Height ft (m)": "680 (207)",
+      "Floors": 50,
+      "Year": 1990,
+      "Purpose": "Office",
+      "Notes": "[144][145]"
+     },
+     {
+      "Rank": 35,
+      "Name": "71 South Wacker",
+      "Image": null,
+      "Location": "41°52′51″N 87°38′10″W﻿ / ﻿41.88083°N 87.63611°W",
+      "Height ft (m)": "679 (207)",
+      "Floors": 48,
+      "Year": 2005,
+      "Purpose": "Office",
+      "Notes": "[146][147]"
+     },
+     {
+      "Rank": 36,
+      "Name": "One Magnificent Mile",
+      "Image": null,
+      "Location": "41°54′2″N 87°37′29″W﻿ / ﻿41.90056°N 87.62472°W",
+      "Height ft (m)": "673 (205)",
+      "Floors": 57,
+      "Year": 1983,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use office and residential building.[148][149]"
+     },
+     {
+      "Rank": 37,
+      "Name": "340 on the Park",
+      "Image": null,
+      "Location": "41°53′5.5″N 87°37′8″W﻿ / ﻿41.884861°N 87.61889°W",
+      "Height ft (m)": "672 (205)",
+      "Floors": 64,
+      "Year": 2007,
+      "Purpose": "Residential",
+      "Notes": "[150][151]"
+     },
+     {
+      "Rank": 38,
+      "Name": "77 West Wacker Drive",
+      "Image": null,
+      "Location": "41°53′11.5″N 87°37′50″W﻿ / ﻿41.886528°N 87.63056°W",
+      "Height ft (m)": "668 (204)",
+      "Floors": 49,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "Formerly known as the United Building and the R.R. Donnelley Building.[152][153]"
+     },
+     {
+      "Rank": 39,
+      "Name": "Wolf Point East Tower",
+      "Image": null,
+      "Location": "41°53′16.1″N 87°38′12.4″W﻿ / ﻿41.887806°N 87.636778°W",
+      "Height ft (m)": "668 (204)",
+      "Floors": 60,
+      "Year": 2020,
+      "Purpose": "Residential",
+      "Notes": "[154][155]"
+     },
+     {
+      "Rank": 40,
+      "Name": "One North Wacker",
+      "Image": null,
+      "Location": "41°52′56″N 87°38′10″W﻿ / ﻿41.88222°N 87.63611°W",
+      "Height ft (m)": "652 (199)",
+      "Floors": 50,
+      "Year": 2001,
+      "Purpose": "Office",
+      "Notes": "Also known as the UBS Tower.[156][157]"
+     },
+     {
+      "Rank": 41,
+      "Name": "Richard J. Daley Center",
+      "Image": null,
+      "Location": "41°53′2.5″N 87°37′49″W﻿ / ﻿41.884028°N 87.63028°W",
+      "Height ft (m)": "648 (198)",
+      "Floors": 32,
+      "Year": 1965,
+      "Purpose": "Office",
+      "Notes": "Tallest flat-roofed building in the world that contains fewer than 40 floors. Was the tallest building in Chicago before being surpassed by Chase Tower.[158][159]"
+     },
+     {
+      "Rank": 42,
+      "Name": "55 East Erie Street",
+      "Image": null,
+      "Location": "41°53′38″N 87°37′33″W﻿ / ﻿41.89389°N 87.62583°W",
+      "Height ft (m)": "647 (197)",
+      "Floors": 56,
+      "Year": 2004,
+      "Purpose": "Residential",
+      "Notes": "[160][161]"
+     },
+     {
+      "Rank": 43,
+      "Name": "Lake Point Tower",
+      "Image": null,
+      "Location": "41°53′30″N 87°36′44″W﻿ / ﻿41.89167°N 87.61222°W",
+      "Height ft (m)": "645 (197)",
+      "Floors": 70,
+      "Year": 1968,
+      "Purpose": "Residential",
+      "Notes": "The only tower in the city that sits on the east side of Lake Shore Drive.[162][163]"
+     },
+     {
+      "Rank": 44,
+      "Name": "River East Center",
+      "Image": null,
+      "Location": "41°53′29″N 87°37′5.5″W﻿ / ﻿41.89139°N 87.618194°W",
+      "Height ft (m)": "644 (196)",
+      "Floors": 58,
+      "Year": 2001,
+      "Purpose": "Residential",
+      "Notes": "[164][165]"
+     },
+     {
+      "Rank": 45,
+      "Name": "Grand Plaza I",
+      "Image": null,
+      "Location": "41°53′31″N 87°37′43″W﻿ / ﻿41.89194°N 87.62861°W",
+      "Height ft (m)": "641 (195)",
+      "Floors": 57,
+      "Year": 2003,
+      "Purpose": "Residential",
+      "Notes": "[166][167]"
+     },
+     {
+      "Rank": 46,
+      "Name": "155 North Wacker",
+      "Image": null,
+      "Location": "41°53′5″N 87°38′11.5″W﻿ / ﻿41.88472°N 87.636528°W",
+      "Height ft (m)": "638 (195)",
+      "Floors": 45,
+      "Year": 2009,
+      "Purpose": "Office",
+      "Notes": "[168][169]"
+     },
+     {
+      "Rank": 47,
+      "Name": "Leo Burnett Building",
+      "Image": null,
+      "Location": "41°53′11″N 87°37′45″W﻿ / ﻿41.88639°N 87.62917°W",
+      "Height ft (m)": "635 (194)",
+      "Floors": 50,
+      "Year": 1989,
+      "Purpose": "Office",
+      "Notes": "[170][171]"
+     },
+     {
+      "Rank": 48,
+      "Name": "The Heritage at Millennium Park",
+      "Image": null,
+      "Location": "41°53′3″N 87°37′32″W﻿ / ﻿41.88417°N 87.62556°W",
+      "Height ft (m)": "631 (192)",
+      "Floors": 57,
+      "Year": 2005,
+      "Purpose": "Residential",
+      "Notes": "[172][173]"
+     },
+     {
+      "Rank": 49,
+      "Name": "OneEleven",
+      "Image": null,
+      "Location": "41°53′11.5″N 87°37′53″W﻿ / ﻿41.886528°N 87.63139°W",
+      "Height ft (m)": "630 (192)",
+      "Floors": 59,
+      "Year": 2014,
+      "Purpose": "Residential",
+      "Notes": "Formally 111 W. Wacker and Waterview Tower.[174]"
+     },
+     {
+      "Rank": 50,
+      "Name": "NBC Tower",
+      "Image": null,
+      "Location": "41°53′24″N 87°37′16″W﻿ / ﻿41.89000°N 87.62111°W",
+      "Height ft (m)": "627 (191)",
+      "Floors": 37,
+      "Year": 1989,
+      "Purpose": "Office",
+      "Notes": "[175][176]"
+     },
+     {
+      "Rank": 51,
+      "Name": "353 North Clark",
+      "Image": null,
+      "Location": "41°53′20″N 87°37′48″W﻿ / ﻿41.88889°N 87.63000°W",
+      "Height ft (m)": "624 (190)",
+      "Floors": 44,
+      "Year": 2009,
+      "Purpose": "Office",
+      "Notes": "[177][178]"
+     },
+     {
+      "Rank": 52,
+      "Name": "Essex on the Park",
+      "Image": null,
+      "Location": "41°52′17.4″N 87°37′28.9″W﻿ / ﻿41.871500°N 87.624694°W",
+      "Height ft (m)": "620 (189)",
+      "Floors": 57,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "[179]"
+     },
+     {
+      "Rank": 53,
+      "Name": "Millennium Centre",
+      "Image": null,
+      "Location": "41°53′35″N 87°37′45″W﻿ / ﻿41.89306°N 87.62917°W",
+      "Height ft (m)": "610 (186)",
+      "Floors": 58,
+      "Year": 2003,
+      "Purpose": "Residential",
+      "Notes": "[180][181]"
+     },
+     {
+      "Rank": 54,
+      "Name": "Chicago Place",
+      "Image": null,
+      "Location": "41°53′43″N 87°37′30.5″W﻿ / ﻿41.89528°N 87.625139°W",
+      "Height ft (m)": "608 (185)",
+      "Floors": 49,
+      "Year": 1991,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use residential and office building.[182][183]"
+     },
+     {
+      "Rank": 55,
+      "Name": "Chicago Board of Trade Building",
+      "Image": null,
+      "Location": "41°52′39.5″N 87°37′56″W﻿ / ﻿41.877639°N 87.63222°W",
+      "Height ft (m)": "605 (184)",
+      "Floors": 44,
+      "Year": 1930,
+      "Purpose": "Office",
+      "Notes": "One of the tallest Art Deco buildings in the world; tallest building completed in Chicago in the 1930s. Was the tallest building in Chicago before being surpassed by the Richard J. Daley Center.[184][185]"
+     },
+     {
+      "Rank": 56,
+      "Name": "One Prudential Plaza",
+      "Image": null,
+      "Location": "41°53′5″N 87°37′24″W﻿ / ﻿41.88472°N 87.62333°W",
+      "Height ft (m)": "601 (183)",
+      "Floors": 41,
+      "Year": 1955,
+      "Purpose": "Office",
+      "Notes": "Tallest building completed in Chicago in the 1950s.[186][187]"
+     },
+     {
+      "Rank": 57,
+      "Name": "333 South Wabash",
+      "Image": null,
+      "Location": "41°52′38″N 87°37′32″W﻿ / ﻿41.87722°N 87.62556°W",
+      "Height ft (m)": "601 (183)",
+      "Floors": 44,
+      "Year": 1972,
+      "Purpose": "Office",
+      "Notes": "[188][189]"
+     },
+     {
+      "Rank": 58,
+      "Name": "Heller International Building",
+      "Image": null,
+      "Location": "41°52′51″N 87°38′25″W﻿ / ﻿41.88083°N 87.64028°W",
+      "Height ft (m)": "600 (183)",
+      "Floors": 45,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "[190]"
+     },
+     {
+      "Rank": 59,
+      "Name": "200 West Madison",
+      "Image": null,
+      "Location": "41°52′56″N 87°38′4″W﻿ / ﻿41.88222°N 87.63444°W",
+      "Height ft (m)": "599 (182)",
+      "Floors": 44,
+      "Year": 1982,
+      "Purpose": "Office",
+      "Notes": "[191][192]"
+     },
+     {
+      "Rank": 60,
+      "Name": "The Grant",
+      "Image": null,
+      "Location": "41°52′1.5″N 87°37′19″W﻿ / ﻿41.867083°N 87.62194°W",
+      "Height ft (m)": "595 (181)",
+      "Floors": 54,
+      "Year": 2010,
+      "Purpose": "Residential",
+      "Notes": "[193][194]"
+     },
+     {
+      "Rank": 61,
+      "Name": "1000 Lake Shore Plaza",
+      "Image": null,
+      "Location": "41°54′3.5″N 87°37′28″W﻿ / ﻿41.900972°N 87.62444°W",
+      "Height ft (m)": "590 (180)",
+      "Floors": 55,
+      "Year": 1964,
+      "Purpose": "Residential",
+      "Notes": "[195][196]"
+     },
+     {
+      "Rank": 62,
+      "Name": "The Clare",
+      "Image": null,
+      "Location": "41°53′50″N 87°37′34″W﻿ / ﻿41.89722°N 87.62611°W",
+      "Height ft (m)": "589 (179)",
+      "Floors": 52,
+      "Year": 2009,
+      "Purpose": "Residential",
+      "Notes": "An independent-living community for seniors[197][198]"
+     },
+     {
+      "Rank": 63,
+      "Name": "Accenture Tower",
+      "Image": null,
+      "Location": "41°52′56″N 87°38′26″W﻿ / ﻿41.88222°N 87.64056°W",
+      "Height ft (m)": "588 (179)",
+      "Floors": 42,
+      "Year": 1987,
+      "Purpose": "Office",
+      "Notes": "[199][200]"
+     },
+     {
+      "Rank": 64,
+      "Name": "Marina City I",
+      "Image": null,
+      "Location": "41°53′17.5″N 87°37′42.5″W﻿ / ﻿41.888194°N 87.628472°W",
+      "Height ft (m)": "588 (179)",
+      "Floors": 61,
+      "Year": 1964,
+      "Purpose": "Residential",
+      "Notes": "Marina City was the first building in the United States to be constructed with the Linden climbing tower cranes. It was also the first post-war urban high-rise residential complex in the United States. The two towers were both the tallest residential and tallest concrete structures in the world upon completion in 1968.[201][202][203]"
+     },
+     {
+      "Rank": 65,
+      "Name": "Marina City II",
+      "Image": null,
+      "Location": "41°53′16.5″N 87°37′45″W﻿ / ﻿41.887917°N 87.62917°W",
+      "Height ft (m)": "588 (179)",
+      "Floors": 61,
+      "Year": 1964,
+      "Purpose": "Residential",
+      "Notes": "Marina City was the first building in the United States to be constructed with the Linden climbing tower cranes. It was also the first post-war urban high-rise residential complex in the United States. The two towers were both the tallest residential and tallest concrete structures in the world upon completion in 1968.[204][205][206]"
+     },
+     {
+      "Rank": 66,
+      "Name": "Optima Signature",
+      "Image": null,
+      "Location": "41°53′29.5″N 87°37′18″W﻿ / ﻿41.891528°N 87.62167°W",
+      "Height ft (m)": "587 (179)",
+      "Floors": 57,
+      "Year": 2017,
+      "Purpose": "Residential",
+      "Notes": "[207]"
+     },
+     {
+      "Rank": 67,
+      "Name": "Mid-Continental Plaza",
+      "Image": null,
+      "Location": "41°52′49″N 87°37′32.5″W﻿ / ﻿41.88028°N 87.625694°W",
+      "Height ft (m)": "583 (178)",
+      "Floors": 49,
+      "Year": 1972,
+      "Purpose": "Mixed-use",
+      "Notes": "Also known by its address, 55 East Monroe. Mixed-use office and residential skyscraper.[208][209]"
+     },
+     {
+      "Rank": 68,
+      "Name": "Crain Communications Building",
+      "Image": null,
+      "Location": "41°53′5″N 87°37′30″W﻿ / ﻿41.88472°N 87.62500°W",
+      "Height ft (m)": "582 (177)",
+      "Floors": 41,
+      "Year": 1983,
+      "Purpose": "Office",
+      "Notes": "Also known by its address, 150 North Michigan Avenue.[210][211]"
+     },
+     {
+      "Rank": 69,
+      "Name": "North Pier Apartments",
+      "Image": null,
+      "Location": "41°53′27″N 87°36′52.5″W﻿ / ﻿41.89083°N 87.614583°W",
+      "Height ft (m)": "581 (177)",
+      "Floors": 61,
+      "Year": 1990,
+      "Purpose": "Residential",
+      "Notes": "[212][213]"
+     },
+     {
+      "Rank": 70,
+      "Name": "Citadel Center",
+      "Image": null,
+      "Location": "41°52′47″N 87°37′43″W﻿ / ﻿41.87972°N 87.62861°W",
+      "Height ft (m)": "580 (177)",
+      "Floors": 39,
+      "Year": 2003,
+      "Purpose": "Office",
+      "Notes": "[214][215]"
+     },
+     {
+      "Rank": 71,
+      "Name": "The Fordham",
+      "Image": null,
+      "Location": "41°53′43.5″N 87°37′38″W﻿ / ﻿41.895417°N 87.62722°W",
+      "Height ft (m)": "574 (175)",
+      "Floors": 52,
+      "Year": 2003,
+      "Purpose": "Residential",
+      "Notes": "[216][217]"
+     },
+     {
+      "Rank": 72,
+      "Name": "One Chicago West Tower",
+      "Image": null,
+      "Location": "41°53′47″N 87°37′46″W﻿ / ﻿41.896437°N 87.62933°W",
+      "Height ft (m)": "574 (174)",
+      "Floors": 49,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "Also known as 23 West Chicago Avenue.[87][218]"
+     },
+     {
+      "Rank": 73,
+      "Name": "190 South LaSalle Street",
+      "Image": null,
+      "Location": "41°52′47″N 87°37′58″W﻿ / ﻿41.87972°N 87.63278°W",
+      "Height ft (m)": "573 (175)",
+      "Floors": 40,
+      "Year": 1987,
+      "Purpose": "Office",
+      "Notes": "[219][220]"
+     },
+     {
+      "Rank": 74,
+      "Name": "One South Dearborn",
+      "Image": null,
+      "Location": "41°52′54″N 87°37′43″W﻿ / ﻿41.88167°N 87.62861°W",
+      "Height ft (m)": "571 (174)",
+      "Floors": 39,
+      "Year": 2005,
+      "Purpose": "Office",
+      "Notes": "[221][222]"
+     },
+     {
+      "Rank": 75,
+      "Name": "Axis Apartments",
+      "Image": null,
+      "Location": "41°53′38″N 87°36′59″W﻿ / ﻿41.89389°N 87.61639°W",
+      "Height ft (m)": "570 (174)",
+      "Floors": 60,
+      "Year": 1986,
+      "Purpose": "Residential",
+      "Notes": "Formerly known as the Onterie Center. Originally an office tower.[223][224]"
+     },
+     {
+      "Rank": 76,
+      "Name": "Loews Hotel Tower",
+      "Image": null,
+      "Location": "41°53′23.9″N 87°37′8″W﻿ / ﻿41.889972°N 87.61889°W",
+      "Height ft (m)": "569 (174)",
+      "Floors": 52,
+      "Year": 2015,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use hotel and residential skyscraper.[225]"
+     },
+     {
+      "Rank": 77,
+      "Name": "Chicago Temple Building",
+      "Image": null,
+      "Location": "41°52′59″N 87°37′50″W﻿ / ﻿41.88306°N 87.63056°W",
+      "Height ft (m)": "568 (173)",
+      "Floors": 21,
+      "Year": 1924,
+      "Purpose": "Mixed-use",
+      "Notes": "Tallest building completed in Chicago in the 1920s. Was the tallest building in Chicago before being surpassed by the Chicago Board Of Trade Building.[226][227]"
+     },
+     {
+      "Rank": 78,
+      "Name": "Palmolive Building",
+      "Image": null,
+      "Location": "41°53′59″N 87°37′25″W﻿ / ﻿41.89972°N 87.62361°W",
+      "Height ft (m)": "565 (172)",
+      "Floors": 37,
+      "Year": 1929,
+      "Purpose": "Office",
+      "Notes": "[228][229]"
+     },
+     {
+      "Rank": 79,
+      "Name": "Kluczynski Federal Building",
+      "Image": null,
+      "Location": "41°52′42.2″N 87°37′47.6″W﻿ / ﻿41.878389°N 87.629889°W",
+      "Height ft (m)": "562 (171)",
+      "Floors": 42,
+      "Year": 1974,
+      "Purpose": "Office",
+      "Notes": "[230]"
+     },
+     {
+      "Rank": 80,
+      "Name": "Cirrus",
+      "Image": null,
+      "Location": "41°53′11″N 87°36′53″W﻿ / ﻿41.88639°N 87.61472°W",
+      "Height ft (m)": "562 (171)",
+      "Floors": 37,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[231]"
+     },
+     {
+      "Rank": 81,
+      "Name": "Huron Plaza",
+      "Image": null,
+      "Location": "41°53′43″N 87°37′36″W﻿ / ﻿41.89528°N 87.62667°W",
+      "Height ft (m)": "560 (171)",
+      "Floors": 56,
+      "Year": 1983,
+      "Purpose": "Residential",
+      "Notes": "[232][233]"
+     },
+     {
+      "Rank": 82,
+      "Name": "Boeing International Headquarters",
+      "Image": null,
+      "Location": "41°53′2.5″N 87°38′19″W﻿ / ﻿41.884028°N 87.63861°W",
+      "Height ft (m)": "560 (171)",
+      "Floors": 36,
+      "Year": 1990,
+      "Purpose": "Office",
+      "Notes": "Also known as the Boeing Building or by its address, 100 North Riverside Plaza. Was the headquarters of Boeing from 2001 to 2022.[234][235]"
+     },
+     {
+      "Rank": 83,
+      "Name": "Pittsfield Building",
+      "Image": null,
+      "Location": "41°52′59″N 87°37′52.5″W﻿ / ﻿41.88306°N 87.631250°W",
+      "Height ft (m)": "557 (170)",
+      "Floors": 38,
+      "Year": 1927,
+      "Purpose": "Office",
+      "Notes": "[236]"
+     },
+     {
+      "Rank": 84,
+      "Name": "The Parkshore",
+      "Image": null,
+      "Location": "41°53′8.5″N 87°36′53″W﻿ / ﻿41.885694°N 87.61472°W",
+      "Height ft (m)": "556 (169)",
+      "Floors": 56,
+      "Year": 1991,
+      "Purpose": "Residential",
+      "Notes": "[237][238]"
+     },
+     {
+      "Rank": 85,
+      "Name": "North Harbor Tower",
+      "Image": null,
+      "Location": "41°53′7.5″N 87°36′55.5″W﻿ / ﻿41.885417°N 87.615417°W",
+      "Height ft (m)": "556 (169)",
+      "Floors": 55,
+      "Year": 1988,
+      "Purpose": "Residential",
+      "Notes": "[239][240]"
+     },
+     {
+      "Rank": 86,
+      "Name": "Civic Opera House",
+      "Image": null,
+      "Location": "41°52′57″N 87°38′14.5″W﻿ / ﻿41.88250°N 87.637361°W",
+      "Height ft (m)": "555 (169)",
+      "Floors": 45,
+      "Year": 1929,
+      "Purpose": "Mixed-use",
+      "Notes": "Most of the 45-story building is office space. The lower floors house a performance space that is the second-largest opera auditorium in North America, after the Metropolitan Opera House.[241]"
+     },
+     {
+      "Rank": 87,
+      "Name": "Harbor Point",
+      "Image": null,
+      "Location": "41°53′6″N 87°36′53″W﻿ / ﻿41.88500°N 87.61472°W",
+      "Height ft (m)": "554 (169)",
+      "Floors": 54,
+      "Year": 1975,
+      "Purpose": "Residential",
+      "Notes": "[242][243]"
+     },
+     {
+      "Rank": 88,
+      "Name": "Atwater Apartments",
+      "Image": null,
+      "Location": "41°53′32″N 87°37′5″W﻿ / ﻿41.89222°N 87.61806°W",
+      "Height ft (m)": "554 (169)",
+      "Floors": 55,
+      "Year": 2009,
+      "Purpose": "Residential",
+      "Notes": "Also known as Streeter Place.[244][245]"
+     },
+     {
+      "Rank": 89,
+      "Name": "30 North LaSalle",
+      "Image": null,
+      "Location": "41°52′58″N 87°37′58.5″W﻿ / ﻿41.88278°N 87.632917°W",
+      "Height ft (m)": "553 (169)",
+      "Floors": 44,
+      "Year": 1975,
+      "Purpose": "Office",
+      "Notes": "[246]"
+     },
+     {
+      "Rank": 90,
+      "Name": "Michigan Plaza South",
+      "Image": null,
+      "Location": "41°53′10″N 87°37′25″W﻿ / ﻿41.885994°N 87.623543°W",
+      "Height ft (m)": "553 (169)",
+      "Floors": 46,
+      "Year": 1985,
+      "Purpose": "Office",
+      "Notes": "[247]"
+     },
+     {
+      "Rank": 91,
+      "Name": "Newberry Plaza",
+      "Image": null,
+      "Location": "41°54′05″N 87°37′44″W﻿ / ﻿41.90152°N 87.628853°W",
+      "Height ft (m)": "553 (169)",
+      "Floors": 53,
+      "Year": 1974,
+      "Purpose": "Residential",
+      "Notes": "[248]"
+     },
+     {
+      "Rank": 92,
+      "Name": "One South Wacker",
+      "Image": null,
+      "Location": "41°52′54″N 87°38′10″W﻿ / ﻿41.881531°N 87.636078°W",
+      "Height ft (m)": "550 (168)",
+      "Floors": 40,
+      "Year": 1982,
+      "Purpose": "Office",
+      "Notes": "[249]"
+     },
+     {
+      "Rank": 93,
+      "Name": "Park Millennium",
+      "Image": "–",
+      "Location": "41°53′12″N 87°37′17″W﻿ / ﻿41.886578°N 87.621498°W",
+      "Height ft (m)": "544 (166)",
+      "Floors": 57,
+      "Year": 2002,
+      "Purpose": "Residential",
+      "Notes": "[250]"
+     },
+     {
+      "Rank": 94,
+      "Name": "AMLI River North",
+      "Image": "–",
+      "Location": "41°53′23″N 87°37′51″W﻿ / ﻿41.889782°N 87.630707°W",
+      "Height ft (m)": "543 (166)",
+      "Floors": 49,
+      "Year": 2013,
+      "Purpose": "Residential",
+      "Notes": "[251]"
+     },
+     {
+      "Rank": 95,
+      "Name": "The Franklin – South Tower",
+      "Image": "–",
+      "Location": "41°52′47″N 87°38′05″W﻿ / ﻿41.879766°N 87.634860°W",
+      "Height ft (m)": "538 (164)",
+      "Floors": 35,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "[252]"
+     },
+     {
+      "Rank": 96,
+      "Name": "Field Building",
+      "Image": null,
+      "Location": "41°52′47″N 87°37′54″W﻿ / ﻿41.87973°N 87.631569°W",
+      "Height ft (m)": "535 (163)",
+      "Floors": 45,
+      "Year": 1934,
+      "Purpose": "Mixed-use",
+      "Notes": "Originally an office building, now a mixed-use office and residential building.[253]"
+     },
+     {
+      "Rank": 97,
+      "Name": "The Pinnacle",
+      "Image": "–",
+      "Location": "41°53′40″N 87°37′38″W﻿ / ﻿41.894505°N 87.62709°W",
+      "Height ft (m)": "535 (163)",
+      "Floors": 48,
+      "Year": 2004,
+      "Purpose": "Residential",
+      "Notes": "[254]"
+     },
+     {
+      "Rank": 98,
+      "Name": "Park Place Tower",
+      "Image": null,
+      "Location": "41°57′16″N 87°38′50″W﻿ / ﻿41.954414°N 87.647339°W",
+      "Height ft (m)": "531 (162)",
+      "Floors": 56,
+      "Year": 1971,
+      "Purpose": "Residential",
+      "Notes": "[255]"
+     },
+     {
+      "Rank": 99,
+      "Name": "One North LaSalle",
+      "Image": null,
+      "Location": "41°52′56″N 87°37′55″W﻿ / ﻿41.882278°N 87.63205°W",
+      "Height ft (m)": "530 (162)",
+      "Floors": 48,
+      "Year": 1930,
+      "Purpose": "Office",
+      "Notes": "[256]"
+     },
+     {
+      "Rank": 100,
+      "Name": "Elysées Condominiums",
+      "Image": null,
+      "Location": "41°53′52″N 87°37′31″W﻿ / ﻿41.897903°N 87.625221°W",
+      "Height ft (m)": "529 (161)",
+      "Floors": 56,
+      "Year": 1973,
+      "Purpose": "Residential",
+      "Notes": "[257]"
+     },
+     {
+      "Rank": 101,
+      "Name": "465 North Park",
+      "Image": null,
+      "Location": "41°53′27″N 87°37′09″W﻿ / ﻿41.890736°N 87.619263°W",
+      "Height ft (m)": "525 (160)",
+      "Floors": 48,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[258]"
+     },
+     {
+      "Rank": 102,
+      "Name": "River Plaza",
+      "Image": null,
+      "Location": "41°53′24″N 87°37′33″W﻿ / ﻿41.889866°N 87.625793°W",
+      "Height ft (m)": "524 (160)",
+      "Floors": 56,
+      "Year": 1977,
+      "Purpose": "Residential",
+      "Notes": "[259]"
+     },
+     {
+      "Rank": 103,
+      "Name": "35 East Wacker",
+      "Image": null,
+      "Location": "41°53′11″N 87°37′36″W﻿ / ﻿41.886501°N 87.626785°W",
+      "Height ft (m)": "523 (159)",
+      "Floors": 40,
+      "Year": 1927,
+      "Purpose": "Office",
+      "Notes": "[260]"
+     },
+     {
+      "Rank": 104,
+      "Name": "Arrive Michigan Avenue",
+      "Image": "–",
+      "Location": "41°51′54″N 87°37′28″W﻿ / ﻿41.865044°N 87.624565°W",
+      "Height ft (m)": "523 (159)",
+      "Floors": 48,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "Also known as The Paragon.[261]"
+     },
+     {
+      "Rank": 105,
+      "Name": "Kemper Building",
+      "Image": null,
+      "Location": "41°53′11″N 87°37′39″W﻿ / ﻿41.886501°N 87.627548°W",
+      "Height ft (m)": "522 (159)",
+      "Floors": 41,
+      "Year": 1962,
+      "Purpose": "Office",
+      "Notes": "Also known as the United Insurance Building, or Unitrin Building.[262]"
+     },
+     {
+      "Rank": 106,
+      "Name": "Mather Tower",
+      "Image": null,
+      "Location": "41°53′15″N 87°37′32″W﻿ / ﻿41.887596°N 87.625458°W",
+      "Height ft (m)": "521 (159)",
+      "Floors": 38,
+      "Year": 1928,
+      "Purpose": "Hotel",
+      "Notes": "Also known as Club Quarters River Hotel[263]"
+     },
+     {
+      "Rank": 107,
+      "Name": "30 South Wacker",
+      "Image": null,
+      "Location": "41°52′51″N 87°38′15″W﻿ / ﻿41.880863°N 87.637527°W",
+      "Height ft (m)": "520 (158)",
+      "Floors": 40,
+      "Year": 1983,
+      "Purpose": "Office",
+      "Notes": "Also known as \"the Merc\"; part of the Chicago Mercantile Exchange Center.[264]"
+     },
+     {
+      "Rank": 108,
+      "Name": "10 South Wacker",
+      "Image": null,
+      "Location": "41°52′54″N 87°38′15″W﻿ / ﻿41.881584°N 87.637527°W",
+      "Height ft (m)": "520 (158)",
+      "Floors": 40,
+      "Year": 1987,
+      "Purpose": "Office",
+      "Notes": "[265]"
+     },
+     {
+      "Rank": 109,
+      "Name": "The Columbian",
+      "Image": null,
+      "Location": "41°52′04″N 87°37′28″W﻿ / ﻿41.867695°N 87.62458°W",
+      "Height ft (m)": "517 (158)",
+      "Floors": 47,
+      "Year": 2008,
+      "Purpose": "Residential",
+      "Notes": "[266]"
+     },
+     {
+      "Rank": 110,
+      "Name": "151 North Franklin",
+      "Image": null,
+      "Location": "41°53′05″N 87°38′06″W﻿ / ﻿41.884815°N 87.634933°W",
+      "Height ft (m)": "517 (158)",
+      "Floors": 35,
+      "Year": 2018,
+      "Purpose": "Office",
+      "Notes": "In June 2018, 151 North Franklin became the new corporate headquarters for CNA Insurance, which has been headquartered in the Chicago Loop since 1900. CNA Insurance was previously located at 333 South Wabash.[267]"
+     },
+     {
+      "Rank": 111,
+      "Name": "191 North Wacker",
+      "Image": null,
+      "Location": "41°53′07″N 87°38′11″W﻿ / ﻿41.885338°N 87.636475°W",
+      "Height ft (m)": "516 (157)",
+      "Floors": 37,
+      "Year": 2002,
+      "Purpose": "Office",
+      "Notes": "[268]"
+     },
+     {
+      "Rank": 112,
+      "Name": "425 South Financial Place",
+      "Image": null,
+      "Location": "41°52′33″N 87°37′56″W﻿ / ﻿41.875904°N 87.632172°W",
+      "Height ft (m)": "515 (157)",
+      "Floors": 39,
+      "Year": 1985,
+      "Purpose": "Office",
+      "Notes": "Also known as One Financial Place[269]"
+     },
+     {
+      "Rank": 113,
+      "Name": "401 East Ontario",
+      "Image": "–",
+      "Location": "41°53′36″N 87°37′01″W﻿ / ﻿41.893211°N 87.616898°W",
+      "Height ft (m)": "515 (157)",
+      "Floors": 51,
+      "Year": 1990,
+      "Purpose": "Residential",
+      "Notes": "[270]"
+     },
+     {
+      "Rank": 114,
+      "Name": "Millie on Michigan",
+      "Image": "–",
+      "Location": "41°53′13″N 87°37′30″W﻿ / ﻿41.88699°N 87.625°W",
+      "Height ft (m)": "515 (157)",
+      "Floors": 47,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "[271]"
+     },
+     {
+      "Rank": 115,
+      "Name": "The Streeter",
+      "Image": "–",
+      "Location": "41°53′32″N 87°37′09″W﻿ / ﻿41.892361°N 87.619034°W",
+      "Height ft (m)": "514 (157)",
+      "Floors": 50,
+      "Year": 2007,
+      "Purpose": "Residential",
+      "Notes": "[272]"
+     },
+     {
+      "Rank": 116,
+      "Name": "Park Tower Condominiums",
+      "Image": null,
+      "Location": "41°58′48″N 87°39′17″W﻿ / ﻿41.980114°N 87.654716°W",
+      "Height ft (m)": "513 (156)",
+      "Floors": 54,
+      "Year": 1973,
+      "Purpose": "Residential",
+      "Notes": "Not to be confused with Park Tower. Also known as 5415 North Sheridan.[273]"
+     },
+     {
+      "Rank": 117,
+      "Name": "600 North Lake Shore Drive – South Tower",
+      "Image": null,
+      "Location": "41°53′34″N 87°36′54″W﻿ / ﻿41.892876°N 87.614967°W",
+      "Height ft (m)": "513 (156)",
+      "Floors": 47,
+      "Year": 2009,
+      "Purpose": "Residential",
+      "Notes": "[274]"
+     },
+     {
+      "Rank": 118,
+      "Name": "LaSalle-Wacker Building",
+      "Image": null,
+      "Location": "41°53′11″N 87°37′55″W﻿ / ﻿41.886494°N 87.631973°W",
+      "Height ft (m)": "512 (156)",
+      "Floors": 41,
+      "Year": 1930,
+      "Purpose": "Office",
+      "Notes": "[275]"
+     },
+     {
+      "Rank": 119,
+      "Name": "Harris Bank Addition II",
+      "Image": null,
+      "Location": "41°52′49″N 87°37′55″W﻿ / ﻿41.88028°N 87.631912°W",
+      "Height ft (m)": "510 (155)",
+      "Floors": 55,
+      "Year": 1974,
+      "Purpose": "Office",
+      "Notes": "Officially renamed to the Jesse White State of Illinois building in 2025.[276][277]"
+     },
+     {
+      "Rank": 120,
+      "Name": "321 North Clark",
+      "Image": null,
+      "Location": "41°53′18″N 87°37′50″W﻿ / ﻿41.888218°N 87.63063°W",
+      "Height ft (m)": "510 (155)",
+      "Floors": 38,
+      "Year": 1987,
+      "Purpose": "Office",
+      "Notes": "Also known as Quaker Tower.[278]"
+     },
+     {
+      "Rank": 121,
+      "Name": "215 West",
+      "Image": null,
+      "Location": "41°52′59″N 87°38′04″W﻿ / ﻿41.882946°N 87.634438°W",
+      "Height ft (m)": "509 (155)",
+      "Floors": 50,
+      "Year": 2010,
+      "Purpose": "Residential",
+      "Notes": "[279]"
+     },
+     {
+      "Rank": 122,
+      "Name": "Carbide & Carbon Building",
+      "Image": null,
+      "Location": "41°53′12″N 87°37′30″W﻿ / ﻿41.886574°N 87.624886°W",
+      "Height ft (m)": "503 (153)",
+      "Floors": 37,
+      "Year": 1929,
+      "Purpose": "Hotel",
+      "Notes": "Now a hotel known as Pendry Chicago.[280]"
+     },
+     {
+      "Rank": 123,
+      "Name": "400 East Ohio Street",
+      "Image": "–",
+      "Location": "41°53′34″N 87°37′03″W﻿ / ﻿41.892807°N 87.617409°W",
+      "Height ft (m)": "503 (153)",
+      "Floors": 50,
+      "Year": 1982,
+      "Purpose": "Residential",
+      "Notes": "[281]"
+     },
+     {
+      "Rank": 124,
+      "Name": "One Superior Place",
+      "Image": "–",
+      "Location": "41°53′44″N 87°37′45″W﻿ / ﻿41.895451°N 87.629028°W",
+      "Height ft (m)": "502 (153)",
+      "Floors": 52,
+      "Year": 1999,
+      "Purpose": "Residential",
+      "Notes": "[282]"
+     },
+     {
+      "Rank": 125,
+      "Name": "10 South LaSalle",
+      "Image": null,
+      "Location": "41°52′54″N 87°37′58″W﻿ / ﻿41.881599°N 87.632706°W",
+      "Height ft (m)": "501 (153)",
+      "Floors": 37,
+      "Year": 1986,
+      "Purpose": "Office",
+      "Notes": "Formerly known under several names, including Chemical Plaza, Manufacturers Hanover Plaza, and Chase Plaza.[283]"
+     },
+     {
+      "Rank": 126,
+      "Name": "120 North LaSalle",
+      "Image": null,
+      "Location": "41°53′01″N 87°37′58″W﻿ / ﻿41.883717°N 87.632896°W",
+      "Height ft (m)": "501 (153)",
+      "Floors": 39,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "[284]"
+     },
+     {
+      "Rank": 127,
+      "Name": "200 South Wacker Drive",
+      "Image": null,
+      "Location": "41°52′44″N 87°38′15″W﻿ / ﻿41.879021°N 87.63739°W",
+      "Height ft (m)": "500 (152)",
+      "Floors": 41,
+      "Year": 1981,
+      "Purpose": "Office",
+      "Notes": "[285]"
+     },
+     {
+      "Rank": 128,
+      "Name": "The Tides at Lakeshore East",
+      "Image": null,
+      "Location": "41°53′12″N 87°37′05″W﻿ / ﻿41.886677°N 87.618164°W",
+      "Height ft (m)": "500 (152)",
+      "Floors": 51,
+      "Year": 2008,
+      "Purpose": "Residential",
+      "Notes": "[286]"
+     },
+     {
+      "Rank": 129,
+      "Name": "Parkview West",
+      "Image": "–",
+      "Location": "41°53′28″N 87°37′02″W﻿ / ﻿41.891247°N 87.617271°W",
+      "Height ft (m)": "498 (152)",
+      "Floors": 49,
+      "Year": 2008,
+      "Purpose": "Residential",
+      "Notes": "[287]"
+     },
+     {
+      "Rank": 130,
+      "Name": "500 North Lake Shore Drive",
+      "Image": "–",
+      "Location": "41°53′30″N 87°36′53″W﻿ / ﻿41.891624°N 87.614777°W",
+      "Height ft (m)": "497 (151)",
+      "Floors": 47,
+      "Year": 2013,
+      "Purpose": "Residential",
+      "Notes": "[288]"
+     },
+     {
+      "Rank": 131,
+      "Name": "727 West Madison",
+      "Image": null,
+      "Location": "41°52′53″N 87°38′48″W﻿ / ﻿41.881454°N 87.646667°W",
+      "Height ft (m)": "496 (151)",
+      "Floors": 45,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "Also known as 1 South Halsted.[289]"
+     },
+     {
+      "Rank": 132,
+      "Name": "55 West Monroe",
+      "Image": "–",
+      "Location": "41°52′49″N 87°37′47″W﻿ / ﻿41.880367°N 87.629814°W",
+      "Height ft (m)": "495 (151)",
+      "Floors": 41,
+      "Year": 1980,
+      "Purpose": "Office",
+      "Notes": "Also known as the Xerox Center.[290]"
+     },
+     {
+      "Rank": 133,
+      "Name": "Ontario Place",
+      "Image": "–",
+      "Location": "41°53′37″N 87°37′40″W﻿ / ﻿41.893562°N 87.627762°W",
+      "Height ft (m)": "495 (151)",
+      "Floors": 49,
+      "Year": 1983,
+      "Purpose": "Residential",
+      "Notes": "[291]"
+     },
+     {
+      "Rank": 134,
+      "Name": "The Row",
+      "Image": null,
+      "Location": "41°53′06″N 87°39′01″W﻿ / ﻿41.88496°N 87.650169°W",
+      "Height ft (m)": "495 (151)[a]",
+      "Floors": 43,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "[292]"
+     },
+     {
+      "Rank": 135,
+      "Name": "50 East Chestnut Street",
+      "Image": null,
+      "Location": "41°53′55″N 87°37′34″W﻿ / ﻿41.898544°N 87.626198°W",
+      "Height ft (m)": "495 (151)",
+      "Floors": 40,
+      "Year": 2008,
+      "Purpose": "Residential",
+      "Notes": "[293]"
+     },
+     {
+      "Rank": 136,
+      "Name": "The Ritz-Carlton Residences",
+      "Image": "–",
+      "Location": "41°53′40″N 87°37′29″W﻿ / ﻿41.894474°N 87.624634°W",
+      "Height ft (m)": "495 (151)",
+      "Floors": 40,
+      "Year": 2012,
+      "Purpose": "Residential",
+      "Notes": "[294]"
+     },
+     {
+      "Rank": 137,
+      "Name": "PNC Center",
+      "Image": "–",
+      "Location": "41°52′56″N 87°38′06″W﻿ / ﻿41.882256°N 87.634972°W",
+      "Height ft (m)": "494 (151)",
+      "Floors": 36,
+      "Year": 1992,
+      "Purpose": "Office",
+      "Notes": "Also known as One North Franklin[295]"
+     },
+     {
+      "Rank": 138,
+      "Name": "No. 9 Walton",
+      "Image": "–",
+      "Location": "41°53′59″N 87°37′44″W﻿ / ﻿41.899708°N 87.628761°W",
+      "Height ft (m)": "494 (151)",
+      "Floors": 38,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[296]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Pinn. rank",
+     "Std. rank",
+     "Name",
+     "Pinn. height ft (m)",
+     "Std. height ft (m)",
+     "Floors",
+     "Year",
+     "Source"
+    ],
+    "rows": 10,
+    "records": [
+     {
+      "Pinn. rank": 1,
+      "Std. rank": 1,
+      "Name": "Willis Tower",
+      "Pinn. height ft (m)": "1,730 (527)",
+      "Std. height ft (m)": "1,451 (442)",
+      "Floors": 110,
+      "Year": 1974,
+      "Source": "[297]"
+     },
+     {
+      "Pinn. rank": 2,
+      "Std. rank": 5,
+      "Name": "875 North Michigan Avenue",
+      "Pinn. height ft (m)": "1,500 (457)",
+      "Std. height ft (m)": "1,127 (344)",
+      "Floors": 100,
+      "Year": 1969,
+      "Source": "[298]"
+     },
+     {
+      "Pinn. rank": 3,
+      "Std. rank": 2,
+      "Name": "Trump International Hotel and Tower",
+      "Pinn. height ft (m)": "1,389 (423)",
+      "Std. height ft (m)": "1,389 (423)",
+      "Floors": 98,
+      "Year": 2009,
+      "Source": "[299]"
+     },
+     {
+      "Pinn. rank": 4,
+      "Std. rank": 3,
+      "Name": "St Regis Chicago",
+      "Pinn. height ft (m)": "1,198 (365)",
+      "Std. height ft (m)": "1,198 (365)",
+      "Floors": 101,
+      "Year": 2020,
+      "Source": "[300]"
+     },
+     {
+      "Pinn. rank": 5,
+      "Std. rank": 4,
+      "Name": "Aon Center",
+      "Pinn. height ft (m)": "1,136 (346)",
+      "Std. height ft (m)": "1,136 (346)",
+      "Floors": 83,
+      "Year": 1973,
+      "Source": "[300]"
+     },
+     {
+      "Pinn. rank": 6,
+      "Std. rank": 6,
+      "Name": "Franklin Center North Tower",
+      "Pinn. height ft (m)": "1,007 (307)",
+      "Std. height ft (m)": "887 (270)",
+      "Floors": 61,
+      "Year": 1989,
+      "Source": "[84]"
+     },
+     {
+      "Pinn. rank": 7,
+      "Std. rank": 7,
+      "Name": "Two Prudential Plaza",
+      "Pinn. height ft (m)": "995 (303)",
+      "Std. height ft (m)": "995 (303)",
+      "Floors": 64,
+      "Year": 1990,
+      "Source": "[86]"
+     },
+     {
+      "Pinn. rank": 8,
+      "Std. rank": 8,
+      "Name": "311 South Wacker Drive",
+      "Pinn. height ft (m)": "961 (293)",
+      "Std. height ft (m)": "961 (293)",
+      "Floors": 65,
+      "Year": 1990,
+      "Source": "[90]"
+     },
+     {
+      "Pinn. rank": 9,
+      "Std. rank": 51,
+      "Name": "One Prudential Plaza",
+      "Pinn. height ft (m)": "912 (278)",
+      "Std. height ft (m)": "601 (183)",
+      "Floors": 41,
+      "Year": 1955,
+      "Source": "[187]"
+     },
+     {
+      "Pinn. rank": 10,
+      "Std. rank": 9,
+      "Name": "NEMA Chicago",
+      "Pinn. height ft (m)": "896 (273)",
+      "Std. height ft (m)": "896 (273)",
+      "Floors": 76,
+      "Year": 2019,
+      "Source": "[91]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Name",
+     "Image",
+     "Height ft (m)",
+     "Floors",
+     "Year completed",
+     "Year demolished",
+     "Purpose",
+     "Notes"
+    ],
+    "rows": 1,
+    "records": [
+     {
+      "Name": "Morrisons Hotel",
+      "Image": null,
+      "Height ft (m)": "526 (160)",
+      "Floors": 45,
+      "Year completed": 1925,
+      "Year demolished": 1965,
+      "Purpose": "Hotel",
+      "Notes": "Was the tallest hotel in Chicago until its demolition. First building outside of New York City to have more than 40 floors. The hotel first opened in 1915, with the tower added during an expansion in 1925. It was demolished in 1965. The Chase Tower was later built on the site.[301]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Name",
+     "Location",
+     "Height ft (m)",
+     "Floors",
+     "Year",
+     "Notes"
+    ],
+    "rows": 1,
+    "records": [
+     {
+      "Name": "Halsted Pointe Phase 1",
+      "Location": "Goose Island (Chicago)",
+      "Height ft (m)": "502 (153.0)",
+      "Floors": 46,
+      "Year": 2028,
+      "Notes": "This initial phase will consist of a 46-story tower designed by local architecture firm HPA. The skyscraper will be anchored by a five-story podium, which will meet the slope of Halsted as it descends from the nearby bridge. Construction started in April 2026. The project has a 24-month timeline.[302]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Name",
+     "Height ft (m)",
+     "Floors",
+     "Approved",
+     "Cancelled",
+     "Notes"
+    ],
+    "rows": 5,
+    "records": [
+     {
+      "Name": "7 South Dearborn",
+      "Height ft (m)": "2,000 (610)",
+      "Floors": 112,
+      "Approved": 1999,
+      "Cancelled": "2000",
+      "Notes": "One South Dearborn was built on the site instead.[303][304]"
+     },
+     {
+      "Name": "Chicago Spire",
+      "Height ft (m)": "2,000 (610)",
+      "Floors": 150,
+      "Approved": 2007,
+      "Cancelled": "2014",
+      "Notes": "400 Lake Shore Drive is the existing proposal for the site.[305][306]"
+     },
+     {
+      "Name": "Old Chicago Main Post Office Twin Towers",
+      "Height ft (m)": "2,000 (610)",
+      "Floors": 120,
+      "Approved": 2011,
+      "Cancelled": "2014",
+      "Notes": "Part of the Old Chicago Main Post Office Redevelopment pursued by Bill Davies.[307]"
+     },
+     {
+      "Name": "Thompson Center Redevelopment",
+      "Height ft (m)": "1,699 (518)",
+      "Floors": 115,
+      "Approved": 2017,
+      "Cancelled": "—",
+      "Notes": "Thompson Center is acquired by Alphabet Inc. and is being renovated to become Google's new Midwest HQ.[308][309]"
+     },
+     {
+      "Name": "Waterview Tower",
+      "Height ft (m)": "1,047 (319)",
+      "Floors": 89,
+      "Approved": 2005,
+      "Cancelled": "2008",
+      "Notes": "The original design for Waterview Tower was cancelled after construction of the first 26 floors of the building. OneEleven was built on the vacated structure.[310][311][312]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Name",
+     "Image",
+     "Years as tallest (Yrs)",
+     "Height ft (m)",
+     "Floors",
+     "Notes"
+    ],
+    "rows": 13,
+    "records": [
+     {
+      "Name": "First Holy Name Cathedral[A]",
+      "Image": null,
+      "Years as tallest (Yrs)": "1854–1869 (15)",
+      "Height ft (m)": "245 (75)",
+      "Floors": 1,
+      "Notes": "[313]"
+     },
+     {
+      "Name": "Saint Michael's Church",
+      "Image": null,
+      "Years as tallest (Yrs)": "1869–1885 (16)",
+      "Height ft (m)": "290 (88)",
+      "Floors": 1,
+      "Notes": "[314]"
+     },
+     {
+      "Name": "Chicago Board of Trade Building[B]",
+      "Image": null,
+      "Years as tallest (Yrs)": "1885–1895 (10)",
+      "Height ft (m)": "322 (98)",
+      "Floors": 10,
+      "Notes": "[315]"
+     },
+     {
+      "Name": "Masonic Temple Building",
+      "Image": null,
+      "Years as tallest (Yrs)": "1895–1899 (4)[C]",
+      "Height ft (m)": "302 (92)",
+      "Floors": 21,
+      "Notes": "[316]"
+     },
+     {
+      "Name": "Montgomery Ward Building[D]",
+      "Image": null,
+      "Years as tallest (Yrs)": "1899–1922 (23)",
+      "Height ft (m)": "394 (120)",
+      "Floors": 22,
+      "Notes": "[317]"
+     },
+     {
+      "Name": "Wrigley Building",
+      "Image": null,
+      "Years as tallest (Yrs)": "1922–1924 (2)",
+      "Height ft (m)": "438 (134)",
+      "Floors": 30,
+      "Notes": "[318]"
+     },
+     {
+      "Name": "Chicago Temple Building",
+      "Image": null,
+      "Years as tallest (Yrs)": "1924–1930 (6)",
+      "Height ft (m)": "568 (173)",
+      "Floors": 23,
+      "Notes": "[319]"
+     },
+     {
+      "Name": "Chicago Board of Trade Building",
+      "Image": null,
+      "Years as tallest (Yrs)": "1930–1965 (35)",
+      "Height ft (m)": "605 (184)",
+      "Floors": 44,
+      "Notes": "[320]"
+     },
+     {
+      "Name": "Richard J. Daley Center",
+      "Image": null,
+      "Years as tallest (Yrs)": "1965–1969 (4)",
+      "Height ft (m)": "648 (198)",
+      "Floors": 32,
+      "Notes": "[321]"
+     },
+     {
+      "Name": "Chase Tower (Chicago)",
+      "Image": null,
+      "Years as tallest (Yrs)": "1969 (0)",
+      "Height ft (m)": "850 (260)",
+      "Floors": 60,
+      "Notes": null
+     },
+     {
+      "Name": "John Hancock Center",
+      "Image": null,
+      "Years as tallest (Yrs)": "1969–1973 (4)",
+      "Height ft (m)": "1,127 (344)",
+      "Floors": 100,
+      "Notes": "[322]"
+     },
+     {
+      "Name": "Aon Center",
+      "Image": null,
+      "Years as tallest (Yrs)": "1973–1974 (1)",
+      "Height ft (m)": "1,136 (346)",
+      "Floors": 83,
+      "Notes": "[300]"
+     },
+     {
+      "Name": "Willis Tower",
+      "Image": null,
+      "Years as tallest (Yrs)": "1974–present (52)",
+      "Height ft (m)": "1,451 (442)",
+      "Floors": 108,
+      "Notes": "[323]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteChicago skyscrapers",
+     "vteChicago skyscrapers.1"
+    ],
+    "rows": 5,
+    "records": [
+     {
+      "vteChicago skyscrapers": "Tallest buildings",
+      "vteChicago skyscrapers.1": "875 North Michigan Avenue (formerly John Hancock Center) Aon Center Franklin Center St. Regis Chicago Trump International Hotel and Tower Two Prudential Plaza Willis Tower"
+     },
+     {
+      "vteChicago skyscrapers": "Selected buildings with 20 or more floors",
+      "vteChicago skyscrapers.1": "35 East Wacker 55 East Erie 71 South Wacker 77 West Wacker 110 North Wacker 111 South Wacker 151 North Franklin 155 North Wacker 181 West Madison 311 South Wacker 333 North Michigan 333 South Wabash (formerly CNA Center) 333 Wacker Drive 340 on the Park 400 East Randolph 401 East Ontario 425 South Financial Place 541 North Fairbanks Court (formerly Time-Life Building) 540 West Madison 860–880 Lake Shore Drive 900 North Michigan 900 West Randolph 1700 East 56th Street Accenture Tower AMA Plaza Aqua Bilandic Building The Blackstone Hotel BCBS Tower Boeing Building Builders Building Carbide & Carbon Building Chase Tower Chicago Board of Trade Building Chicago Place Chicago Temple Building City Hall Square Building Civic Opera House Coast at Lakeshore East Consumers Building Crain Communications Building Dirksen Federal Building Essex on the Park Field Building Fisher Building Grant Thornton Tower Harbor Point Hilton Chicago Home Insurance Building James R. Thompson Center Joffrey Tower Kluczynski Federal Building Lake Point Tower LaSalle–Wacker Building Legacy Tower Leo Burnett Building London Guarantee Building Lurie Children's Hospital Marina City Masonic Temple Mather Tower Metropolitan Tower Montauk Building NBC Tower NEMA Northwestern Memorial Hospital Olympia Centre One Bennett Park One Magnificent Mile One Museum Park One North LaSalle One North Wacker One Prudential Plaza Optima Signature Palmer House Hotel Palmolive Building Park Tower The Parkshore Peoples Gas Building Pittsfield Building Plaza 440 Powhatan Apartments Presidential Towers Regents Park Richard J. Daley Center River East Center Roanoke Building The Shoreham Skybridge Shirley Ryan AbilityLab The Buckingham The Fordham The Heritage The Grant The Pinnacle Three First National Plaza Tribune Tower Virgin Hotels Chicago Waldorf Astoria Chicago Warwick Allerton Water Tower Place Wolf Point East Tower Wrigley Building"
+     },
+     {
+      "vteChicago skyscrapers": "Chicago Landmark skyscrapers with  12 or more floors",
+      "vteChicago skyscrapers.1": "300 West Adams Building The Arc at Old Colony Auditorium Building Brooks Building Bryn Mawr Apartment Hotel Chicago Building Gage Group Buildings Heyworth Building Hilliard Towers Apartments Inland Steel Building Manhattan Building Marquette Building Marshall Field and Company Building Monadnock Building Mundelein College Skyscraper Building New York Life Insurance Building Reliance Building Rookery Building Sullivan Center"
+     },
+     {
+      "vteChicago skyscrapers": "See also",
+      "vteChicago skyscrapers.1": "Architecture Art Deco Chicago City Hall Chicago School Washington Block"
+     },
+     {
+      "vteChicago skyscrapers": "Buildings in italics have been demolished.",
+      "vteChicago skyscrapers.1": "Buildings in italics have been demolished."
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteTimeline of tallest buildings in Chicago",
+     "vteTimeline of tallest buildings in Chicago.1"
+    ],
+    "rows": 1,
+    "records": [
+     {
+      "vteTimeline of tallest buildings in Chicago": "First Holy Name Cathedral (75 m) (1854) Saint Michael's Church (88 m) (1869) Chicago Board of Trade Building (98 m) (1885) Masonic Temple Building (92 m) (1895) Montgomery Ward Building (120 m) (1899) Wrigley Building (134 m) (1922) Chicago Temple Building (173 m) (1924) Chicago Board of Trade Building (184 m) (1930) Richard J. Daley Center (198 m) (1965) John Hancock Center (344 m) (1969) Aon Center (346 m) (1973) Sears Tower/Willis Tower (442 m) (1974)",
+      "vteTimeline of tallest buildings in Chicago.1": "First Holy Name Cathedral (75 m) (1854) Saint Michael's Church (88 m) (1869) Chicago Board of Trade Building (98 m) (1885) Masonic Temple Building (92 m) (1895) Montgomery Ward Building (120 m) (1899) Wrigley Building (134 m) (1922) Chicago Temple Building (173 m) (1924) Chicago Board of Trade Building (184 m) (1930) Richard J. Daley Center (198 m) (1965) John Hancock Center (344 m) (1969) Aon Center (346 m) (1973) Sears Tower/Willis Tower (442 m) (1974)"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vtePlanned Chicago skyscrapers",
+     "vtePlanned Chicago skyscrapers.1"
+    ],
+    "rows": 3,
+    "records": [
+     {
+      "vtePlanned Chicago skyscrapers": "Under construction",
+      "vtePlanned Chicago skyscrapers.1": "One Chicago Square East Tower One Chicago Square West Tower Cirrus 400 Lake Shore North Tower"
+     },
+     {
+      "vtePlanned Chicago skyscrapers": "Proposed",
+      "vtePlanned Chicago skyscrapers.1": "Tribune East Tower 400 Lake Shore South Tower Lakeshore East I Tower 113 East Roosevelt (Phase II)"
+     },
+     {
+      "vtePlanned Chicago skyscrapers": "Cancelled or distressed",
+      "vtePlanned Chicago skyscrapers.1": "7 South Dearborn Chicago Spire Miglin-Beitler Skyneedle Old Chicago Main Post Office Twin Towers Waldorf-Astoria Hotel and Residence Tower"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteChicago",
+     "vteChicago.1"
+    ],
+    "rows": 2,
+    "records": [
+     {
+      "vteChicago": "Architecture Beaches Climate tornadoes Colleges and universities Community areas Crime gangs Culture Demographics Economy companies Expressways Flag Geography Government Harbor History politics timeline Landmarks Literature Media newspapers Metropolitan area Museums Neighborhoods Parks list People music musicians theater Public schools list Skyscrapers Sports Tourism Transportation Visual arts",
+      "vteChicago.1": "Architecture Beaches Climate tornadoes Colleges and universities Community areas Crime gangs Culture Demographics Economy companies Expressways Flag Geography Government Harbor History politics timeline Landmarks Literature Media newspapers Metropolitan area Museums Neighborhoods Parks list People music musicians theater Public schools list Skyscrapers Sports Tourism Transportation Visual arts"
+     },
+     {
+      "vteChicago": "Portal  Category",
+      "vteChicago.1": "Portal  Category"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteLists of tallest buildings in the United States",
+     "vteLists of tallest buildings in the United States.1"
+    ],
+    "rows": 26,
+    "records": [
+     {
+      "vteLists of tallest buildings in the United States": "Tallest buildings Buildings by state Tallest structures by height Structures by state Structures by type Tallest buildings by pinnacle height Tallest under construction, approved, and proposed buildings Timeline of tallest buildings Tallest demolished buildings Cities with the most skyscrapers",
+      "vteLists of tallest buildings in the United States.1": "Tallest buildings Buildings by state Tallest structures by height Structures by state Structures by type Tallest buildings by pinnacle height Tallest under construction, approved, and proposed buildings Timeline of tallest buildings Tallest demolished buildings Cities with the most skyscrapers"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Northeast",
+      "vteLists of tallest buildings in the United States.1": "New England Boston Cambridge, MA Hartford Manchester, NH New Haven Providence Springfield, MA Worcester, MA New Jersey Atlantic City Camden Jersey City Newark North Hudson New York Albany Buffalo New York City Brooklyn Queens Staten Island Rochester, NY Syracuse Pennsylvania Harrisburg Philadelphia Pittsburgh Reading"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "New England",
+      "vteLists of tallest buildings in the United States.1": "Boston Cambridge, MA Hartford Manchester, NH New Haven Providence Springfield, MA Worcester, MA"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "New Jersey",
+      "vteLists of tallest buildings in the United States.1": "Atlantic City Camden Jersey City Newark North Hudson"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "New York",
+      "vteLists of tallest buildings in the United States.1": "Albany Buffalo New York City Brooklyn Queens Staten Island Rochester, NY Syracuse"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Pennsylvania",
+      "vteLists of tallest buildings in the United States.1": "Harrisburg Philadelphia Pittsburgh Reading"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Midwest",
+      "vteLists of tallest buildings in the United States.1": "Indiana Evansville Fort Wayne Indianapolis South Bend Michigan Detroit Grand Rapids Lansing Minnesota Minneapolis Rochester, MN Saint Paul Missouri Clayton Kansas City St. Louis Ohio Akron Cincinnati Cleveland Columbus Dayton Toledo Other Cedar Rapids Chicago Des Moines Lincoln, NE Madison Milwaukee Omaha Peoria Quad Cities Wichita"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Indiana",
+      "vteLists of tallest buildings in the United States.1": "Evansville Fort Wayne Indianapolis South Bend"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Michigan",
+      "vteLists of tallest buildings in the United States.1": "Detroit Grand Rapids Lansing"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Minnesota",
+      "vteLists of tallest buildings in the United States.1": "Minneapolis Rochester, MN Saint Paul"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Missouri",
+      "vteLists of tallest buildings in the United States.1": "Clayton Kansas City St. Louis"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Ohio",
+      "vteLists of tallest buildings in the United States.1": "Akron Cincinnati Cleveland Columbus Dayton Toledo"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Other",
+      "vteLists of tallest buildings in the United States.1": "Cedar Rapids Chicago Des Moines Lincoln, NE Madison Milwaukee Omaha Peoria Quad Cities Wichita"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "South",
+      "vteLists of tallest buildings in the United States.1": "Florida Fort Lauderdale Jacksonville Miami Miami Beach Orlando Sunny Isles Beach St. Petersburg Tampa Louisiana Baton Rouge New Orleans Shreveport North Carolina Asheville Charlotte Greensboro Raleigh Winston-Salem Tennessee Chattanooga Knoxville Memphis Nashville Texas Amarillo Austin Corpus Christi Dallas El Paso Fort Worth Houston San Antonio Virginia Arlington Norfolk Richmond Tysons Virginia Beach Other Atlanta Baltimore Birmingham, AL Columbia, SC Jackson Little Rock Louisville Mobile Oklahoma City Tulsa Washington, DC Washington metropolitan area Wilmington"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Florida",
+      "vteLists of tallest buildings in the United States.1": "Fort Lauderdale Jacksonville Miami Miami Beach Orlando Sunny Isles Beach St. Petersburg Tampa"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Louisiana",
+      "vteLists of tallest buildings in the United States.1": "Baton Rouge New Orleans Shreveport"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "North Carolina",
+      "vteLists of tallest buildings in the United States.1": "Asheville Charlotte Greensboro Raleigh Winston-Salem"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Tennessee",
+      "vteLists of tallest buildings in the United States.1": "Chattanooga Knoxville Memphis Nashville"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Texas",
+      "vteLists of tallest buildings in the United States.1": "Amarillo Austin Corpus Christi Dallas El Paso Fort Worth Houston San Antonio"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Virginia",
+      "vteLists of tallest buildings in the United States.1": "Arlington Norfolk Richmond Tysons Virginia Beach"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Other",
+      "vteLists of tallest buildings in the United States.1": "Atlanta Baltimore Birmingham, AL Columbia, SC Jackson Little Rock Louisville Mobile Oklahoma City Tulsa Washington, DC Washington metropolitan area Wilmington"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "West",
+      "vteLists of tallest buildings in the United States.1": "California Long Beach Los Angeles Oakland Sacramento San Diego San Francisco San Jose Mountain Albuquerque Billings Boise Colorado Springs Denver Las Vegas Missoula Phoenix Salt Lake City Tucson Northwest Bellevue Portland, OR Seattle Spokane Tacoma Other Anchorage Honolulu"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "California",
+      "vteLists of tallest buildings in the United States.1": "Long Beach Los Angeles Oakland Sacramento San Diego San Francisco San Jose"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Mountain",
+      "vteLists of tallest buildings in the United States.1": "Albuquerque Billings Boise Colorado Springs Denver Las Vegas Missoula Phoenix Salt Lake City Tucson"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Northwest",
+      "vteLists of tallest buildings in the United States.1": "Bellevue Portland, OR Seattle Spokane Tacoma"
+     },
+     {
+      "vteLists of tallest buildings in the United States": "Other",
+      "vteLists of tallest buildings in the United States.1": "Anchorage Honolulu"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 4,
+    "records": [
+     {
+      "0": "New England",
+      "1": "Boston Cambridge, MA Hartford Manchester, NH New Haven Providence Springfield, MA Worcester, MA"
+     },
+     {
+      "0": "New Jersey",
+      "1": "Atlantic City Camden Jersey City Newark North Hudson"
+     },
+     {
+      "0": "New York",
+      "1": "Albany Buffalo New York City Brooklyn Queens Staten Island Rochester, NY Syracuse"
+     },
+     {
+      "0": "Pennsylvania",
+      "1": "Harrisburg Philadelphia Pittsburgh Reading"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 6,
+    "records": [
+     {
+      "0": "Indiana",
+      "1": "Evansville Fort Wayne Indianapolis South Bend"
+     },
+     {
+      "0": "Michigan",
+      "1": "Detroit Grand Rapids Lansing"
+     },
+     {
+      "0": "Minnesota",
+      "1": "Minneapolis Rochester, MN Saint Paul"
+     },
+     {
+      "0": "Missouri",
+      "1": "Clayton Kansas City St. Louis"
+     },
+     {
+      "0": "Ohio",
+      "1": "Akron Cincinnati Cleveland Columbus Dayton Toledo"
+     },
+     {
+      "0": "Other",
+      "1": "Cedar Rapids Chicago Des Moines Lincoln, NE Madison Milwaukee Omaha Peoria Quad Cities Wichita"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 7,
+    "records": [
+     {
+      "0": "Florida",
+      "1": "Fort Lauderdale Jacksonville Miami Miami Beach Orlando Sunny Isles Beach St. Petersburg Tampa"
+     },
+     {
+      "0": "Louisiana",
+      "1": "Baton Rouge New Orleans Shreveport"
+     },
+     {
+      "0": "North Carolina",
+      "1": "Asheville Charlotte Greensboro Raleigh Winston-Salem"
+     },
+     {
+      "0": "Tennessee",
+      "1": "Chattanooga Knoxville Memphis Nashville"
+     },
+     {
+      "0": "Texas",
+      "1": "Amarillo Austin Corpus Christi Dallas El Paso Fort Worth Houston San Antonio"
+     },
+     {
+      "0": "Virginia",
+      "1": "Arlington Norfolk Richmond Tysons Virginia Beach"
+     },
+     {
+      "0": "Other",
+      "1": "Atlanta Baltimore Birmingham, AL Columbia, SC Jackson Little Rock Louisville Mobile Oklahoma City Tulsa Washington, DC Washington metropolitan area Wilmington"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 4,
+    "records": [
+     {
+      "0": "California",
+      "1": "Long Beach Los Angeles Oakland Sacramento San Diego San Francisco San Jose"
+     },
+     {
+      "0": "Mountain",
+      "1": "Albuquerque Billings Boise Colorado Springs Denver Las Vegas Missoula Phoenix Salt Lake City Tucson"
+     },
+     {
+      "0": "Northwest",
+      "1": "Bellevue Portland, OR Seattle Spokane Tacoma"
+     },
+     {
+      "0": "Other",
+      "1": "Anchorage Honolulu"
+     }
+    ]
+   }
+  ]
+ },
+ "osm": [
+  {
+   "osm": "way/28951633",
+   "name": "Chicago Board of Trade Building",
+   "height": 184.0,
+   "levels": 45.0,
+   "building": "office",
+   "wikidata": "Q2224700",
+   "start_date": null,
+   "lat": 41.8775057,
+   "lon": -87.631783
+  },
+  {
+   "osm": "way/31064573",
+   "name": "875 N Michigan",
+   "height": 343.0,
+   "levels": 100.0,
+   "building": "commercial",
+   "wikidata": "Q217727",
+   "start_date": null,
+   "lat": 41.8988181,
+   "lon": -87.6230946
+  },
+  {
+   "osm": "way/64388609",
+   "name": "Aon Center",
+   "height": 340.0,
+   "levels": 83.0,
+   "building": "office",
+   "wikidata": "Q271695",
+   "start_date": null,
+   "lat": 41.8852816,
+   "lon": -87.6215479
+  },
+  {
+   "osm": "way/64388666",
+   "name": "Two Prudential Plaza",
+   "height": 303.0,
+   "levels": 64.0,
+   "building": "office",
+   "wikidata": "Q1121971",
+   "start_date": null,
+   "lat": 41.885418,
+   "lon": -87.6227198
+  },
+  {
+   "osm": "way/64389514",
+   "name": "Kemper Building",
+   "height": 159.0,
+   "levels": 41.0,
+   "building": "office",
+   "wikidata": "Q2793789",
+   "start_date": null,
+   "lat": 41.8865268,
+   "lon": -87.6274295
+  },
+  {
+   "osm": "way/64391028",
+   "name": "77 West Wacker",
+   "height": 203.61,
+   "levels": 49.0,
+   "building": "office",
+   "wikidata": "Q268559",
+   "start_date": null,
+   "lat": 41.8865179,
+   "lon": -87.6305507
+  },
+  {
+   "osm": "way/64391487",
+   "name": "Kluczynski Federal Building",
+   "height": 166.0,
+   "levels": 45.0,
+   "building": "government",
+   "wikidata": "Q2058889",
+   "start_date": null,
+   "lat": 41.8784548,
+   "lon": -87.6298984
+  },
+  {
+   "osm": "way/64398410",
+   "name": "Franklin Center North Tower",
+   "height": 306.9,
+   "levels": 60.0,
+   "building": "commercial",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8802888,
+   "lon": -87.6347327
+  },
+  {
+   "osm": "way/64596068",
+   "name": "330 North Wabash",
+   "height": 211.84,
+   "levels": 52.0,
+   "building": "office",
+   "wikidata": "Q225731",
+   "start_date": "1971",
+   "lat": 41.8886549,
+   "lon": -87.6275952
+  },
+  {
+   "osm": "way/64887962",
+   "name": "111 South Wacker",
+   "height": 208.0,
+   "levels": 51.0,
+   "building": "commercial",
+   "wikidata": "Q170442",
+   "start_date": null,
+   "lat": 41.8802904,
+   "lon": -87.6363171
+  },
+  {
+   "osm": "way/64888042",
+   "name": "200 South Wacker",
+   "height": 152.0,
+   "levels": 41.0,
+   "building": "commercial",
+   "wikidata": "Q2739407",
+   "start_date": null,
+   "lat": 41.879035,
+   "lon": -87.6373829
+  },
+  {
+   "osm": "way/64888389",
+   "name": "Richard J. Daley Center",
+   "height": 197.5,
+   "levels": 32.0,
+   "building": "public",
+   "wikidata": "Q1766475",
+   "start_date": "1965",
+   "lat": 41.8840956,
+   "lon": -87.630206
+  },
+  {
+   "osm": "way/64888440",
+   "name": "One North LaSalle",
+   "height": 161.0,
+   "levels": 48.0,
+   "building": "office",
+   "wikidata": "Q2565075",
+   "start_date": null,
+   "lat": 41.8823196,
+   "lon": -87.6320267
+  },
+  {
+   "osm": "way/64889208",
+   "name": "PNC Centre",
+   "height": 150.0,
+   "levels": 36.0,
+   "building": "commercial",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8823065,
+   "lon": -87.6349709
+  },
+  {
+   "osm": "way/73711002",
+   "name": "Bankers Building",
+   "height": 145.0,
+   "levels": 41.0,
+   "building": "hotel",
+   "wikidata": "Q18347828",
+   "start_date": null,
+   "lat": 41.8790885,
+   "lon": -87.6311841
+  },
+  {
+   "osm": "way/74267847",
+   "name": "235 West Van Buren Street",
+   "height": 150.0,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": "Q4631505",
+   "start_date": null,
+   "lat": 41.8765962,
+   "lon": -87.6346578
+  },
+  {
+   "osm": "way/95486940",
+   "name": "The Buckingham",
+   "height": 119.0,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": "Q7720479",
+   "start_date": "1982",
+   "lat": 41.8848128,
+   "lon": -87.6179561
+  },
+  {
+   "osm": "way/95486945",
+   "name": "The Tides",
+   "height": 152.0,
+   "levels": 51.0,
+   "building": "apartments",
+   "wikidata": "Q2220723",
+   "start_date": null,
+   "lat": 41.8867038,
+   "lon": -87.6180653
+  },
+  {
+   "osm": "way/95486949",
+   "name": "340 on the Park",
+   "height": null,
+   "levels": 62.0,
+   "building": "apartments",
+   "wikidata": "Q226246",
+   "start_date": "2007",
+   "lat": 41.8847936,
+   "lon": -87.6188059
+  },
+  {
+   "osm": "way/95486952",
+   "name": "Harbor Point",
+   "height": 160.0,
+   "levels": 54.0,
+   "building": "apartments",
+   "wikidata": "Q2415903",
+   "start_date": "1975",
+   "lat": 41.8849379,
+   "lon": -87.6147978
+  },
+  {
+   "osm": "way/95486955",
+   "name": "North Harbor Tower",
+   "height": 163.0,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": "Q774991",
+   "start_date": "1988",
+   "lat": 41.8854441,
+   "lon": -87.6154753
+  },
+  {
+   "osm": "way/95486956",
+   "name": "The Shoreham",
+   "height": 137.0,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": "Q7763967",
+   "start_date": null,
+   "lat": 41.8867214,
+   "lon": -87.6168263
+  },
+  {
+   "osm": "way/95486959",
+   "name": "The Parkshore",
+   "height": 169.0,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": "Q2667628",
+   "start_date": null,
+   "lat": 41.8856684,
+   "lon": -87.6147069
+  },
+  {
+   "osm": "way/95486966",
+   "name": "Swissotel Chicago",
+   "height": 139.0,
+   "levels": 45.0,
+   "building": "hotel",
+   "wikidata": "Q21609099",
+   "start_date": null,
+   "lat": 41.887361,
+   "lon": -87.619528
+  },
+  {
+   "osm": "way/95486968",
+   "name": "The Regatta",
+   "height": 142.0,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.887171,
+   "lon": -87.6162842
+  },
+  {
+   "osm": "way/108240966",
+   "name": "30 North LaSalle",
+   "height": 167.0,
+   "levels": 44.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8828454,
+   "lon": -87.6329139
+  },
+  {
+   "osm": "way/116017092",
+   "name": "333 Wacker Drive",
+   "height": 148.0,
+   "levels": 36.0,
+   "building": "office",
+   "wikidata": "Q225835",
+   "start_date": null,
+   "lat": 41.8861417,
+   "lon": -87.6359838
+  },
+  {
+   "osm": "way/118061326",
+   "name": "321 North Clark",
+   "height": 155.0,
+   "levels": 35.0,
+   "building": "office",
+   "wikidata": "Q2308936",
+   "start_date": "1987",
+   "lat": 41.8882523,
+   "lon": -87.630618
+  },
+  {
+   "osm": "way/124865439",
+   "name": "10 South LaSalle",
+   "height": 153.0,
+   "levels": 37.0,
+   "building": "office",
+   "wikidata": "Q2598533",
+   "start_date": null,
+   "lat": 41.8816022,
+   "lon": -87.632745
+  },
+  {
+   "osm": "way/124865458",
+   "name": "181 West Madison",
+   "height": 207.0,
+   "levels": 50.0,
+   "building": "office",
+   "wikidata": "Q200780",
+   "start_date": null,
+   "lat": 41.8815803,
+   "lon": -87.6333577
+  },
+  {
+   "osm": "way/124865463",
+   "name": "OneEleven",
+   "height": 192.0,
+   "levels": 60.0,
+   "building": "apartments",
+   "wikidata": "Q2302438",
+   "start_date": null,
+   "lat": 41.8865122,
+   "lon": -87.6314558
+  },
+  {
+   "osm": "way/124865472",
+   "name": "Jessie White State of Illinois Building",
+   "height": 155.0,
+   "levels": 38.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8803133,
+   "lon": -87.6319164
+  },
+  {
+   "osm": "way/124865479",
+   "name": "One South Dearborn",
+   "height": 174.0,
+   "levels": 39.0,
+   "building": "office",
+   "wikidata": "Q2736389",
+   "start_date": null,
+   "lat": 41.8816523,
+   "lon": -87.6287331
+  },
+  {
+   "osm": "way/124865488",
+   "name": "35 East Wacker",
+   "height": 160.65,
+   "levels": 40.0,
+   "building": "office",
+   "wikidata": "Q2816312",
+   "start_date": null,
+   "lat": 41.8865278,
+   "lon": -87.6267919
+  },
+  {
+   "osm": "way/124873924",
+   "name": "LaSalle - Wacker Building",
+   "height": 156.0,
+   "levels": 41.0,
+   "building": "office",
+   "wikidata": "Q1960267",
+   "start_date": null,
+   "lat": 41.8865139,
+   "lon": -87.6320028
+  },
+  {
+   "osm": "way/124873925",
+   "name": "Madison Plaza",
+   "height": 182.0,
+   "levels": 44.0,
+   "building": "commercial",
+   "wikidata": "Q2672118",
+   "start_date": null,
+   "lat": 41.8823139,
+   "lon": -87.6343433
+  },
+  {
+   "osm": "way/127107024",
+   "name": "Michigan Plaza South",
+   "height": 169.0,
+   "levels": 44.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8860783,
+   "lon": -87.6235609
+  },
+  {
+   "osm": "way/127107026",
+   "name": "Millennium Park Plaza",
+   "height": 122.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8852435,
+   "lon": -87.6241455
+  },
+  {
+   "osm": "way/127107034",
+   "name": "One Prudential Plaza",
+   "height": 278.0,
+   "levels": 41.0,
+   "building": "office",
+   "wikidata": "Q643334",
+   "start_date": null,
+   "lat": 41.8849261,
+   "lon": -87.6231404
+  },
+  {
+   "osm": "way/136662656",
+   "name": "155 North Wacker",
+   "height": 194.0,
+   "levels": 45.0,
+   "building": "office",
+   "wikidata": "Q4550543",
+   "start_date": null,
+   "lat": 41.8848281,
+   "lon": -87.6363203
+  },
+  {
+   "osm": "way/137127809",
+   "name": "110 North Wacker",
+   "height": 249.0,
+   "levels": 57.0,
+   "building": "office",
+   "wikidata": "Q85341956",
+   "start_date": null,
+   "lat": 41.883754,
+   "lon": -87.6374651
+  },
+  {
+   "osm": "way/143758386",
+   "name": "One Magnificent Mile",
+   "height": null,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": "Q1860472",
+   "start_date": null,
+   "lat": 41.9004031,
+   "lon": -87.6247615
+  },
+  {
+   "osm": "way/143828634",
+   "name": "The Plaza on DeWitt",
+   "height": null,
+   "levels": 43.0,
+   "building": "apartments",
+   "wikidata": "Q7203722",
+   "start_date": null,
+   "lat": 41.8986722,
+   "lon": -87.6196585
+  },
+  {
+   "osm": "way/143830547",
+   "name": "Park Tower",
+   "height": 257.0,
+   "levels": 70.0,
+   "building": "apartments",
+   "wikidata": "Q1810424",
+   "start_date": null,
+   "lat": 41.8970803,
+   "lon": -87.6253716
+  },
+  {
+   "osm": "way/143834539",
+   "name": "The Clare at Water Tower",
+   "height": 179.0,
+   "levels": null,
+   "building": "apartments",
+   "wikidata": "Q2387082",
+   "start_date": null,
+   "lat": 41.8972697,
+   "lon": -87.626317
+  },
+  {
+   "osm": "way/144015987",
+   "name": "The Bristol",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8989011,
+   "lon": -87.6262452
+  },
+  {
+   "osm": "way/144015994",
+   "name": "50 East Chestnut",
+   "height": 151.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8985947,
+   "lon": -87.6261633
+  },
+  {
+   "osm": "way/144020993",
+   "name": "The Walton Residence",
+   "height": null,
+   "levels": 43.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9002351,
+   "lon": -87.6251874
+  },
+  {
+   "osm": "way/144126594",
+   "name": null,
+   "height": null,
+   "levels": 52.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8953513,
+   "lon": -87.6289579
+  },
+  {
+   "osm": "way/144351493",
+   "name": "Franklin Center South Tower",
+   "height": 163.9,
+   "levels": 35.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8797475,
+   "lon": -87.6347593
+  },
+  {
+   "osm": "way/144697864",
+   "name": "Park Millennium",
+   "height": 166.0,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8865964,
+   "lon": -87.6215131
+  },
+  {
+   "osm": "way/144710193",
+   "name": "Columbus Plaza",
+   "height": 143.0,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8876183,
+   "lon": -87.6212103
+  },
+  {
+   "osm": "way/144846547",
+   "name": "Chicago Title & Trust Building",
+   "height": 230.0,
+   "levels": 50.0,
+   "building": "office",
+   "wikidata": "Q934401",
+   "start_date": null,
+   "lat": 41.884911,
+   "lon": -87.6305225
+  },
+  {
+   "osm": "way/145625873",
+   "name": "33 North LaSalle",
+   "height": 146.0,
+   "levels": 38.0,
+   "building": "office",
+   "wikidata": "Q131375297",
+   "start_date": null,
+   "lat": 41.8828542,
+   "lon": -87.632026
+  },
+  {
+   "osm": "way/145814406",
+   "name": "Heller International Building",
+   "height": 183.0,
+   "levels": 42.0,
+   "building": "commercial",
+   "wikidata": "Q2513875",
+   "start_date": null,
+   "lat": 41.8809122,
+   "lon": -87.6404132
+  },
+  {
+   "osm": "way/147013355",
+   "name": "191 North Wacker",
+   "height": 157.0,
+   "levels": 37.0,
+   "building": "office",
+   "wikidata": "Q2731989",
+   "start_date": null,
+   "lat": 41.8853711,
+   "lon": -87.6364835
+  },
+  {
+   "osm": "way/147013357",
+   "name": "120 North LaSalle",
+   "height": 153.0,
+   "levels": 39.0,
+   "building": "office",
+   "wikidata": "Q2259283",
+   "start_date": null,
+   "lat": 41.8837108,
+   "lon": -87.6329637
+  },
+  {
+   "osm": "way/147013359",
+   "name": "One South Wacker",
+   "height": 167.0,
+   "levels": 40.0,
+   "building": "office",
+   "wikidata": "Q2259682",
+   "start_date": null,
+   "lat": 41.8815684,
+   "lon": -87.6361524
+  },
+  {
+   "osm": "way/147013360",
+   "name": "UBS Tower",
+   "height": 198.0,
+   "levels": 50.0,
+   "building": "office",
+   "wikidata": "Q1876150",
+   "start_date": null,
+   "lat": 41.8823313,
+   "lon": -87.6361424
+  },
+  {
+   "osm": "way/147013786",
+   "name": "Randolph Tower",
+   "height": 140.8,
+   "levels": 45.0,
+   "building": "apartments",
+   "wikidata": "Q7291873",
+   "start_date": null,
+   "lat": 41.8848346,
+   "lon": -87.6336319
+  },
+  {
+   "osm": "way/147095646",
+   "name": "215 West Apartments",
+   "height": 155.0,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8828561,
+   "lon": -87.6344603
+  },
+  {
+   "osm": "way/147217811",
+   "name": "The Columbian",
+   "height": 158.0,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": "Q2788256",
+   "start_date": null,
+   "lat": 41.8677568,
+   "lon": -87.624658
+  },
+  {
+   "osm": "way/147397547",
+   "name": "The Heritage at Millennium Park",
+   "height": 192.0,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": "Q376658",
+   "start_date": null,
+   "lat": 41.8840005,
+   "lon": -87.6257629
+  },
+  {
+   "osm": "way/147397549",
+   "name": "Lake & Wells Apartments",
+   "height": 137.0,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8860534,
+   "lon": -87.6343934
+  },
+  {
+   "osm": "way/147399564",
+   "name": "Club Quarters Hotel, Wacker at Michigan",
+   "height": 158.0,
+   "levels": 41.0,
+   "building": "hotel",
+   "wikidata": "Q3117510",
+   "start_date": null,
+   "lat": 41.8876164,
+   "lon": -87.6254422
+  },
+  {
+   "osm": "way/147400406",
+   "name": "MILA",
+   "height": 149.0,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.886113,
+   "lon": -87.6249995
+  },
+  {
+   "osm": "way/148685510",
+   "name": "71 South Wacker",
+   "height": 207.0,
+   "levels": null,
+   "building": "office",
+   "wikidata": "Q1639792",
+   "start_date": null,
+   "lat": 41.8809964,
+   "lon": -87.6360456
+  },
+  {
+   "osm": "way/148882920",
+   "name": "425 South Financial Place",
+   "height": 157.0,
+   "levels": 40.0,
+   "building": "office",
+   "wikidata": "Q2615799",
+   "start_date": "1985",
+   "lat": 41.875949,
+   "lon": -87.6322273
+  },
+  {
+   "osm": "way/148910731",
+   "name": "727 West Madison",
+   "height": 150.8,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8814138,
+   "lon": -87.6468742
+  },
+  {
+   "osm": "way/149215071",
+   "name": "AT&T",
+   "height": 148.0,
+   "levels": 27.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8814774,
+   "lon": -87.640205
+  },
+  {
+   "osm": "way/149376405",
+   "name": "1001 South State",
+   "height": 134.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8700544,
+   "lon": -87.6270777
+  },
+  {
+   "osm": "way/150408224",
+   "name": null,
+   "height": 191.0,
+   "levels": 69.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8915507,
+   "lon": -87.6123123
+  },
+  {
+   "osm": "way/151371817",
+   "name": "The Grant",
+   "height": 181.0,
+   "levels": 54.0,
+   "building": "apartments",
+   "wikidata": "Q7093003",
+   "start_date": null,
+   "lat": 41.8671059,
+   "lon": -87.6220366
+  },
+  {
+   "osm": "way/151477490",
+   "name": "Museum Tower",
+   "height": 124.0,
+   "levels": 62.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8661569,
+   "lon": -87.6213838
+  },
+  {
+   "osm": "way/151544480",
+   "name": "Sky55",
+   "height": 129.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8660206,
+   "lon": -87.6235871
+  },
+  {
+   "osm": "way/153291615",
+   "name": "Plaza 440",
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": "Q7203573",
+   "start_date": null,
+   "lat": 41.8904775,
+   "lon": -87.6274106
+  },
+  {
+   "osm": "way/153320986",
+   "name": "353 North Clark",
+   "height": 182.0,
+   "levels": 44.0,
+   "building": "office",
+   "wikidata": "Q4635502",
+   "start_date": "2009",
+   "lat": 41.8889278,
+   "lon": -87.6301472
+  },
+  {
+   "osm": "way/153320989",
+   "name": "AMLI River North",
+   "height": 165.0,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.889771,
+   "lon": -87.6307007
+  },
+  {
+   "osm": "way/153567401",
+   "name": "Optima Center Chicago",
+   "height": 135.0,
+   "levels": 42.0,
+   "building": "commercial",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8912064,
+   "lon": -87.6223014
+  },
+  {
+   "osm": "way/153567403",
+   "name": "NBC Tower",
+   "height": 151.5,
+   "levels": 37.0,
+   "building": "office",
+   "wikidata": "Q1810949",
+   "start_date": null,
+   "lat": 41.889888,
+   "lon": -87.6210333
+  },
+  {
+   "osm": "way/153735900",
+   "name": "InterContinental Chicago Hotel",
+   "height": 143.0,
+   "levels": 42.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8913494,
+   "lon": -87.6235459
+  },
+  {
+   "osm": "way/153966977",
+   "name": "Waldorf Astoria Chicago",
+   "height": 209.0,
+   "levels": 60.0,
+   "building": "hotel",
+   "wikidata": "Q1140508",
+   "start_date": null,
+   "lat": 41.8996921,
+   "lon": -87.6276158
+  },
+  {
+   "osm": "way/155075911",
+   "name": "400 North LaSalle Condomium",
+   "height": 138.0,
+   "levels": 45.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.88974,
+   "lon": -87.6330336
+  },
+  {
+   "osm": "way/158621274",
+   "name": "Millennium Centre",
+   "height": null,
+   "levels": 59.0,
+   "building": "apartments",
+   "wikidata": "Q2342206",
+   "start_date": null,
+   "lat": 41.8928562,
+   "lon": -87.6292351
+  },
+  {
+   "osm": "way/159142371",
+   "name": "Chicago Place",
+   "height": 185.0,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": "Q2963328",
+   "start_date": null,
+   "lat": 41.8953344,
+   "lon": -87.6249444
+  },
+  {
+   "osm": "way/159798681",
+   "name": "Onterie Center",
+   "height": 173.74,
+   "levels": 58.0,
+   "building": "apartments",
+   "wikidata": "Q2240739",
+   "start_date": null,
+   "lat": 41.8938587,
+   "lon": -87.6162527
+  },
+  {
+   "osm": "way/159959827",
+   "name": "Olympia Centre",
+   "height": 221.0,
+   "levels": 63.0,
+   "building": "apartments",
+   "wikidata": "Q1787863",
+   "start_date": "1986",
+   "lat": 41.8962391,
+   "lon": -87.6234942
+  },
+  {
+   "osm": "way/159959833",
+   "name": null,
+   "height": 120.0,
+   "levels": 40.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8952156,
+   "lon": -87.6231834
+  },
+  {
+   "osm": "way/173328309",
+   "name": "River East Center",
+   "height": 196.29,
+   "levels": 58.0,
+   "building": "apartments",
+   "wikidata": "Q2050970",
+   "start_date": null,
+   "lat": 41.8914329,
+   "lon": -87.6181949
+  },
+  {
+   "osm": "way/173328311",
+   "name": "Streeter Place",
+   "height": 168.76,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": "Q7623091",
+   "start_date": null,
+   "lat": 41.8922029,
+   "lon": -87.6180845
+  },
+  {
+   "osm": "way/173328331",
+   "name": null,
+   "height": 156.36,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8929007,
+   "lon": -87.6149528
+  },
+  {
+   "osm": "way/173328351",
+   "name": "McClurg Court Center",
+   "height": 131.0,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8930024,
+   "lon": -87.6179661
+  },
+  {
+   "osm": "way/173328352",
+   "name": "North Pier Tower",
+   "height": 177.09,
+   "levels": 62.0,
+   "building": "apartments",
+   "wikidata": "Q2166184",
+   "start_date": null,
+   "lat": 41.8908347,
+   "lon": -87.6147718
+  },
+  {
+   "osm": "way/173328360",
+   "name": "400 East Ohio Street",
+   "height": 154.0,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": "Q1989226",
+   "start_date": null,
+   "lat": 41.8928381,
+   "lon": -87.6174108
+  },
+  {
+   "osm": "way/173328363",
+   "name": "Parkview West",
+   "height": 151.64,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8914499,
+   "lon": -87.6172536
+  },
+  {
+   "osm": "way/173328373",
+   "name": "500 North Lake Shore Drive",
+   "height": 142.0,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8914567,
+   "lon": -87.6147751
+  },
+  {
+   "osm": "way/178936172",
+   "name": null,
+   "height": 138.08,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.893268,
+   "lon": -87.6151002
+  },
+  {
+   "osm": "way/178936175",
+   "name": "McClurg Court Center",
+   "height": 131.0,
+   "levels": 53.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8932293,
+   "lon": -87.6186394
+  },
+  {
+   "osm": "way/195143172",
+   "name": "Eugenie Terrace on the Park",
+   "height": null,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9137805,
+   "lon": -87.6338344
+  },
+  {
+   "osm": "way/198549080",
+   "name": "Eugenie Square",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9126095,
+   "lon": -87.633569
+  },
+  {
+   "osm": "way/200743574",
+   "name": null,
+   "height": null,
+   "levels": 44.0,
+   "building": "residential",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9140575,
+   "lon": -87.6340751
+  },
+  {
+   "osm": "way/201603717",
+   "name": "1000 Lake Shore Plaza",
+   "height": null,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": "Q1920923",
+   "start_date": null,
+   "lat": 41.9010447,
+   "lon": -87.6246498
+  },
+  {
+   "osm": "way/205124172",
+   "name": "The Residences at Grand Plaza",
+   "height": 140.0,
+   "levels": 39.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8921938,
+   "lon": -87.629246
+  },
+  {
+   "osm": "way/205124174",
+   "name": "Grand Plaza Apartments",
+   "height": 195.0,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8919203,
+   "lon": -87.628553
+  },
+  {
+   "osm": "way/210268206",
+   "name": "Accenture Tower",
+   "height": null,
+   "levels": 42.0,
+   "building": "office",
+   "wikidata": "Q2425550",
+   "start_date": null,
+   "lat": 41.8823454,
+   "lon": -87.6404856
+  },
+  {
+   "osm": "way/210324252",
+   "name": "2626 North Lakeview",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9302456,
+   "lon": -87.6399794
+  },
+  {
+   "osm": "way/210328547",
+   "name": "Hawthorne House",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9451234,
+   "lon": -87.642137
+  },
+  {
+   "osm": "way/210331441",
+   "name": "The New York Private Residences",
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9495582,
+   "lon": -87.6458651
+  },
+  {
+   "osm": "way/210395466",
+   "name": "East Point",
+   "height": null,
+   "levels": 43.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9927425,
+   "lon": -87.6544527
+  },
+  {
+   "osm": "way/210395832",
+   "name": "Malibu East",
+   "height": null,
+   "levels": 45.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9919135,
+   "lon": -87.6547545
+  },
+  {
+   "osm": "way/210671717",
+   "name": "Crain Communications Building",
+   "height": 177.0,
+   "levels": 39.0,
+   "building": "office",
+   "wikidata": "Q2444330",
+   "start_date": "1984",
+   "lat": 41.8848264,
+   "lon": -87.6249715
+  },
+  {
+   "osm": "way/210679106",
+   "name": "Omni Chicago Hotel",
+   "height": 143.0,
+   "levels": 40.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.894724,
+   "lon": -87.62493
+  },
+  {
+   "osm": "way/210679211",
+   "name": "Newberry Plaza",
+   "height": 168.5,
+   "levels": 53.0,
+   "building": "apartments",
+   "wikidata": "Q2190930",
+   "start_date": null,
+   "lat": 41.9014234,
+   "lon": -87.628896
+  },
+  {
+   "osm": "way/210679944",
+   "name": "30 East Huron Private Residences",
+   "height": null,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": "Q2370872",
+   "start_date": null,
+   "lat": 41.8951934,
+   "lon": -87.6265636
+  },
+  {
+   "osm": "way/210680521",
+   "name": "The Carlyle",
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9020067,
+   "lon": -87.6247283
+  },
+  {
+   "osm": "way/210680523",
+   "name": "The Fordham",
+   "height": null,
+   "levels": 52.0,
+   "building": "apartments",
+   "wikidata": "Q866660",
+   "start_date": null,
+   "lat": 41.8952929,
+   "lon": -87.6273143
+  },
+  {
+   "osm": "way/210680531",
+   "name": "The Pinnacle",
+   "height": 163.0,
+   "levels": 48.0,
+   "building": "apartments",
+   "wikidata": "Q2180787",
+   "start_date": null,
+   "lat": 41.8944957,
+   "lon": -87.6271472
+  },
+  {
+   "osm": "way/210680553",
+   "name": "Windsor at Ontario Place",
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.893682,
+   "lon": -87.6274435
+  },
+  {
+   "osm": "way/210680683",
+   "name": null,
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9027432,
+   "lon": -87.625109
+  },
+  {
+   "osm": "way/210680684",
+   "name": null,
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9028169,
+   "lon": -87.624971
+  },
+  {
+   "osm": "way/210680692",
+   "name": null,
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9061682,
+   "lon": -87.625847
+  },
+  {
+   "osm": "way/210680704",
+   "name": "55 East Erie",
+   "height": 197.0,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": "Q1839186",
+   "start_date": null,
+   "lat": 41.8938736,
+   "lon": -87.6261119
+  },
+  {
+   "osm": "way/210686216",
+   "name": "James House",
+   "height": null,
+   "levels": 43.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9104076,
+   "lon": -87.6326976
+  },
+  {
+   "osm": "way/210686604",
+   "name": "1555 North Astor",
+   "height": null,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9110305,
+   "lon": -87.6273467
+  },
+  {
+   "osm": "way/211426693",
+   "name": null,
+   "height": 156.31,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9801626,
+   "lon": -87.6546504
+  },
+  {
+   "osm": "way/211426694",
+   "name": null,
+   "height": 152.35,
+   "levels": 54.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9801529,
+   "lon": -87.6546651
+  },
+  {
+   "osm": "way/212016122",
+   "name": "Kingsbury Plaza",
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8909805,
+   "lon": -87.6400454
+  },
+  {
+   "osm": "way/227604492",
+   "name": null,
+   "height": 122.0,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.892865,
+   "lon": -87.6166709
+  },
+  {
+   "osm": "way/227604499",
+   "name": null,
+   "height": 157.0,
+   "levels": 51.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8932592,
+   "lon": -87.6169226
+  },
+  {
+   "osm": "way/230613007",
+   "name": "Chase Tower",
+   "height": 260.0,
+   "levels": 60.0,
+   "building": "office",
+   "wikidata": "Q291304",
+   "start_date": "1969",
+   "lat": 41.8816195,
+   "lon": -87.6301407
+  },
+  {
+   "osm": "way/231319685",
+   "name": "73 East Lake",
+   "height": 143.0,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8854206,
+   "lon": -87.6254818
+  },
+  {
+   "osm": "way/313781973",
+   "name": "Arrive Michigan Avenue",
+   "height": null,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8649089,
+   "lon": -87.6245813
+  },
+  {
+   "osm": "way/330309437",
+   "name": "River Point",
+   "height": 222.0,
+   "levels": 52.0,
+   "building": "office",
+   "wikidata": "Q4616395",
+   "start_date": null,
+   "lat": 41.8861772,
+   "lon": -87.6394532
+  },
+  {
+   "osm": "way/330309811",
+   "name": "Loews Chicago Downtown",
+   "height": 174.0,
+   "levels": 50.0,
+   "building": "hotel",
+   "wikidata": "Q27975185",
+   "start_date": null,
+   "lat": 41.8898641,
+   "lon": -87.6190926
+  },
+  {
+   "osm": "way/330745077",
+   "name": "Wolf Point West",
+   "height": 150.0,
+   "levels": 48.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8876319,
+   "lon": -87.6382694
+  },
+  {
+   "osm": "way/330879260",
+   "name": "150 N Riverside",
+   "height": 229.0,
+   "levels": 54.0,
+   "building": "office",
+   "wikidata": "Q21011003",
+   "start_date": null,
+   "lat": 41.8852801,
+   "lon": -87.6384547
+  },
+  {
+   "osm": "way/357501101",
+   "name": "Optima Signature",
+   "height": 179.0,
+   "levels": 57.0,
+   "building": "apartments",
+   "wikidata": "Q41811212",
+   "start_date": null,
+   "lat": 41.8915111,
+   "lon": -87.6215993
+  },
+  {
+   "osm": "way/508827814",
+   "name": "369 Grand",
+   "height": 136.55,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8913107,
+   "lon": -87.6378557
+  },
+  {
+   "osm": "way/509906353",
+   "name": "One Bennett Park",
+   "height": 257.0,
+   "levels": 69.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8914917,
+   "lon": -87.6157218
+  },
+  {
+   "osm": "way/509957160",
+   "name": "Wolf Point East",
+   "height": 207.0,
+   "levels": 60.0,
+   "building": "apartments",
+   "wikidata": "Q26710810",
+   "start_date": null,
+   "lat": 41.8877919,
+   "lon": -87.6367607
+  },
+  {
+   "osm": "way/530011771",
+   "name": "Essex on the Park",
+   "height": 189.0,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": "Q85759658",
+   "start_date": null,
+   "lat": 41.8714845,
+   "lon": -87.6247395
+  },
+  {
+   "osm": "way/587337495",
+   "name": "Park Place Tower",
+   "height": 161.7,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": "Q2707913",
+   "start_date": null,
+   "lat": 41.9543929,
+   "lon": -87.6472335
+  },
+  {
+   "osm": "way/641291399",
+   "name": null,
+   "height": 163.0,
+   "levels": 48.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8907976,
+   "lon": -87.6192955
+  },
+  {
+   "osm": "way/676025639",
+   "name": "151 North Franklin",
+   "height": 183.0,
+   "levels": 36.0,
+   "building": "office",
+   "wikidata": "Q60763905",
+   "start_date": null,
+   "lat": 41.8848307,
+   "lon": -87.6348931
+  },
+  {
+   "osm": "way/686200364",
+   "name": null,
+   "height": 234.0,
+   "levels": 57.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8823269,
+   "lon": -87.6304344
+  },
+  {
+   "osm": "way/723250169",
+   "name": "Cirrus",
+   "height": null,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8863413,
+   "lon": -87.6146275
+  },
+  {
+   "osm": "way/839664090",
+   "name": "Salesforce Tower",
+   "height": 255.0,
+   "levels": 61.0,
+   "building": "office",
+   "wikidata": "Q17039466",
+   "start_date": null,
+   "lat": 41.8873861,
+   "lon": -87.6376602
+  },
+  {
+   "osm": "way/846471647",
+   "name": "BMO Tower",
+   "height": null,
+   "levels": 51.0,
+   "building": "office",
+   "wikidata": "Q107646016",
+   "start_date": null,
+   "lat": 41.8772668,
+   "lon": -87.6399973
+  },
+  {
+   "osm": "way/1011916999",
+   "name": "The Reed",
+   "height": null,
+   "levels": 41.0,
+   "building": "residential",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8723901,
+   "lon": -87.6347514
+  },
+  {
+   "osm": "way/1013794039",
+   "name": "1000M",
+   "height": 240.0,
+   "levels": 74.0,
+   "building": "apartments",
+   "wikidata": "Q21609042",
+   "start_date": "2024",
+   "lat": 41.8699141,
+   "lon": -87.6248339
+  },
+  {
+   "osm": "way/1085191554",
+   "name": null,
+   "height": null,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.9331224,
+   "lon": -87.6370038
+  },
+  {
+   "osm": "way/1175801219",
+   "name": null,
+   "height": 153.0,
+   "levels": null,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8816013,
+   "lon": -87.6329992
+  },
+  {
+   "osm": "way/1177727287",
+   "name": "200 N Dearborn",
+   "height": 141.0,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 41.8860681,
+   "lon": -87.6299118
+  },
+  {
+   "osm": "way/1361811949",
+   "name": "400 Lake Shore - North Tower",
+   "height": 267.0,
+   "levels": 72.0,
+   "building": "residential",
+   "wikidata": "Q56280353",
+   "start_date": null,
+   "lat": 41.8898749,
+   "lon": -87.6148778
+  }
+ ]
+}

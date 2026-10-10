@@ -1,0 +1,4101 @@
+{
+ "wikidata": {
+  "Q134883": {
+   "name": "CN Tower",
+   "coord": "Point(-79.387147222 43.642752777)",
+   "heights": [
+    447.0,
+    553.3
+   ],
+   "methods": [],
+   "floors": [
+    "8"
+   ],
+   "inception": [
+    "1976-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1976-06-26T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "architectural landmark",
+    "observation tower",
+    "television tower"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/CN_Tower",
+   "osm_way": null
+  },
+  "Q153625": {
+   "name": "Simpson Tower",
+   "coord": "Point(-79.3812 43.652)",
+   "heights": [
+    144.0
+   ],
+   "methods": [],
+   "floors": [
+    "33"
+   ],
+   "inception": [
+    "1968-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1968-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Simpson_Tower",
+   "osm_way": null
+  },
+  "Q593320": {
+   "name": "Four Seasons Hotel and Residences Toronto",
+   "coord": "Point(-79.3939 43.6695)",
+   "heights": [
+    205.0
+   ],
+   "methods": [],
+   "floors": [
+    "52"
+   ],
+   "inception": [
+    "2012-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building complex",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Four_Seasons_Hotel_and_Residences_Toronto",
+   "osm_way": null
+  },
+  "Q774178": {
+   "name": "Aura",
+   "coord": "Point(-79.3828 43.6594)",
+   "heights": [
+    272.0
+   ],
+   "methods": [],
+   "floors": [
+    "78"
+   ],
+   "inception": [
+    "2014-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2014-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "residential building"
+   ],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Aura_(Toronto)",
+   "osm_way": null
+  },
+  "Q780392": {
+   "name": "L Tower",
+   "coord": "Point(-79.376388888 43.646388888)",
+   "heights": [
+    205.0
+   ],
+   "methods": [],
+   "floors": [
+    "58"
+   ],
+   "inception": [
+    "2014-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/L_Tower",
+   "osm_way": null
+  },
+  "Q812062": {
+   "name": "Bay Adelaide Centre",
+   "coord": "Point(-79.38 43.6504)",
+   "heights": [
+    218.0
+   ],
+   "methods": [],
+   "floors": [
+    "52"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building complex"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Bay_Adelaide_Centre",
+   "osm_way": null
+  },
+  "Q929051": {
+   "name": "Brookfield Place",
+   "coord": "Point(-79.378611111 43.646944444)",
+   "heights": [
+    261.0
+   ],
+   "methods": [],
+   "floors": [],
+   "inception": [
+    "1992-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building complex"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Brookfield_Place_(Toronto)",
+   "osm_way": null
+  },
+  "Q1052475": {
+   "name": "First Canadian Place",
+   "coord": "Point(-79.3817 43.6486)",
+   "heights": [
+    298.0
+   ],
+   "methods": [],
+   "floors": [
+    "72"
+   ],
+   "inception": [
+    "1975-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1975-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "office"
+   ],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/First_Canadian_Place",
+   "osm_way": null
+  },
+  "Q1143174": {
+   "name": "Ritz-Carlton Toronto",
+   "coord": "Point(-79.387 43.645)",
+   "heights": [
+    209.8
+   ],
+   "methods": [],
+   "floors": [
+    "53"
+   ],
+   "inception": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [
+    "dwelling",
+    "hotel"
+   ],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Ritz-Carlton_Toronto",
+   "osm_way": null
+  },
+  "Q1224878": {
+   "name": "RBC Centre",
+   "coord": "Point(-79.385 43.6457)",
+   "heights": [
+    208.0
+   ],
+   "methods": [],
+   "floors": [
+    "43"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/RBC_Centre",
+   "osm_way": null
+  },
+  "Q1327514": {
+   "name": "Scotia Plaza",
+   "coord": "Point(-79.3794 43.6492)",
+   "heights": [
+    275.0
+   ],
+   "methods": [],
+   "floors": [
+    "68"
+   ],
+   "inception": [
+    "1988-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "1988-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "office"
+   ],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Scotia_Plaza",
+   "osm_way": null
+  },
+  "Q788064": {
+   "name": "The Uptown Residences",
+   "coord": "Point(-79.3874 43.6695)",
+   "heights": [
+    160.0
+   ],
+   "methods": [],
+   "floors": [
+    "48"
+   ],
+   "inception": [
+    "2011-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2011-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q1702528": {
+   "name": "U Condominiums",
+   "coord": "Point(-79.38907 43.667)",
+   "heights": [
+    184.0
+   ],
+   "methods": [],
+   "floors": [
+    "55"
+   ],
+   "inception": [
+    "2013-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q16507527": {
+   "name": "Commerce Court North",
+   "coord": "Point(-79.3788 43.6481)",
+   "heights": [
+    145.0
+   ],
+   "methods": [],
+   "floors": [
+    "34"
+   ],
+   "inception": [
+    "1931-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q23527286": {
+   "name": "Commerce Court West",
+   "coord": "Point(-79.379722 43.648333)",
+   "heights": [
+    287.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "1972-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q30744067": {
+   "name": "Harbour Plaza Residences",
+   "coord": "Point(-79.39759 43.70545)",
+   "heights": [
+    237.0
+   ],
+   "methods": [],
+   "floors": [
+    "67"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q102157525": {
+   "name": "Three Hundred",
+   "coord": "Point(-79.389278 43.644346)",
+   "heights": [
+    158.0
+   ],
+   "methods": [],
+   "floors": [
+    "49"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "tower block"
+   ],
+   "enwiki": null,
+   "osm_way": null
+  },
+  "Q1338561": {
+   "name": "Number One Bloor",
+   "coord": "Point(-79.3865 43.6702)",
+   "heights": [
+    257.0
+   ],
+   "methods": [],
+   "floors": [
+    "75"
+   ],
+   "inception": [
+    "2015-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Number_One_Bloor",
+   "osm_way": null
+  },
+  "Q1383518": {
+   "name": "Exchange Tower",
+   "coord": "Point(-79.3833 43.6483)",
+   "heights": [
+    146.0
+   ],
+   "methods": [],
+   "floors": [
+    "36"
+   ],
+   "inception": [
+    "1981-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Exchange_Tower",
+   "osm_way": null
+  },
+  "Q1471340": {
+   "name": "SP!RE",
+   "coord": "Point(-79.3753 43.6514)",
+   "heights": [
+    143.0
+   ],
+   "methods": [],
+   "floors": [
+    "45"
+   ],
+   "inception": [
+    "2007-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/SP!RE",
+   "osm_way": null
+  },
+  "Q1567534": {
+   "name": "Q1567534",
+   "coord": "Point(-79.3803 43.6497)",
+   "heights": [
+    277.0
+   ],
+   "methods": [],
+   "floors": [
+    "57"
+   ],
+   "inception": [
+    "2012-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2012-04-16T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper",
+    "tower block"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/The_St._Regis_Toronto",
+   "osm_way": "25108216"
+  },
+  "Q1656109": {
+   "name": "ÏCE Condominiums at York Centre",
+   "coord": "Point(-79.381584 43.642063)",
+   "heights": [
+    234.0
+   ],
+   "methods": [],
+   "floors": [
+    "67"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building complex",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/ICE_Condominiums",
+   "osm_way": null
+  },
+  "Q1682432": {
+   "name": "Manulife Centre",
+   "coord": "Point(-79.388333333 43.669444444)",
+   "heights": [
+    166.0
+   ],
+   "methods": [],
+   "floors": [
+    "51"
+   ],
+   "inception": [
+    "1974-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Manulife_Centre",
+   "osm_way": null
+  },
+  "Q1762378": {
+   "name": "Simcoe Place",
+   "coord": "Point(-79.3858 43.645)",
+   "heights": [
+    148.0
+   ],
+   "methods": [],
+   "floors": [
+    "33"
+   ],
+   "inception": [
+    "1995-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Simcoe_Place",
+   "osm_way": null
+  },
+  "Q1892072": {
+   "name": "Maple Leaf Square",
+   "coord": "Point(-79.380623 43.642841)",
+   "heights": [
+    184.0
+   ],
+   "methods": [],
+   "floors": [
+    "54"
+   ],
+   "inception": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Maple_Leaf_Square",
+   "osm_way": null
+  },
+  "Q1937575": {
+   "name": "Minto Midtown",
+   "coord": "Point(-79.3976 43.7055)",
+   "heights": [
+    165.0
+   ],
+   "methods": [],
+   "floors": [
+    "54"
+   ],
+   "inception": [
+    "2008-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "building complex"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Minto_Midtown",
+   "osm_way": null
+  },
+  "Q2384310": {
+   "name": "TIFF Lightbox",
+   "coord": "Point(-79.390221 43.646835)",
+   "heights": [
+    156.7
+   ],
+   "methods": [],
+   "floors": [
+    "42"
+   ],
+   "inception": [
+    "2009-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "arts center",
+    "headquarters",
+    "movie theater",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/TIFF_Lightbox",
+   "osm_way": null
+  },
+  "Q2462375": {
+   "name": "Two Bloor West",
+   "coord": "Point(-79.3872 43.6702)",
+   "heights": [
+    148.0
+   ],
+   "methods": [],
+   "floors": [
+    "34"
+   ],
+   "inception": [
+    "1973-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Two_Bloor_West",
+   "osm_way": null
+  },
+  "Q2597675": {
+   "name": "X Condominium",
+   "coord": "Point(-79.3803 43.6701)",
+   "heights": [
+    149.0
+   ],
+   "methods": [],
+   "floors": [
+    "45"
+   ],
+   "inception": [
+    "2010-01-01T00:00:00Z"
+   ],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/X_Condominium",
+   "osm_way": null
+  },
+  "Q19817552": {
+   "name": "Delta Toronto Hotel",
+   "coord": "Point(-79.38365 43.64264)",
+   "heights": [
+    160.0
+   ],
+   "methods": [],
+   "floors": [
+    "47"
+   ],
+   "inception": [
+    "2011-01-01T00:00:00Z"
+   ],
+   "opening": [
+    "2014-11-27T00:00:00Z"
+   ],
+   "state": [],
+   "use": [
+    "apartment hotel",
+    "hotel"
+   ],
+   "type": [
+    "hotel",
+    "hotel building",
+    "skyscraper"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/Delta_Toronto_Hotel",
+   "osm_way": "231284913"
+  },
+  "Q28163699": {
+   "name": "One Bloor West",
+   "coord": "Point(-79.38697964 43.66990198)",
+   "heights": [
+    306.3
+   ],
+   "methods": [],
+   "floors": [
+    "83"
+   ],
+   "inception": [],
+   "opening": [],
+   "state": [],
+   "use": [],
+   "type": [
+    "proposed entity",
+    "supertall building"
+   ],
+   "enwiki": "https://en.wikipedia.org/wiki/One_Bloor_West",
+   "osm_way": null
+  }
+ },
+ "wikidata_skyscrapers_without_height": [
+  {
+   "item": "http://www.wikidata.org/entity/Q3519684",
+   "itemLabel": "Q3519684"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7751158",
+   "itemLabel": "The Met Condos",
+   "floors": "43"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q612340",
+   "itemLabel": "One Bloor East",
+   "floors": "76"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q8036348",
+   "itemLabel": "World Trade Centre"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q135003393",
+   "itemLabel": "25 The Esplanade"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q135004088",
+   "itemLabel": "33 Yonge Street"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q14875205",
+   "itemLabel": "Imperial Oil Building",
+   "floors": "21"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q14875248",
+   "itemLabel": "Leaside Towers",
+   "floors": "44"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5374167",
+   "itemLabel": "Empire Tower"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2276983",
+   "itemLabel": "Shangri-La Toronto",
+   "floors": "65"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7826291",
+   "itemLabel": "Toronto Board of Trade Building",
+   "floors": "6"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2095908",
+   "itemLabel": "Pinnacle Centre"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q19817569",
+   "itemLabel": "Ernst & Young Tower",
+   "floors": "42"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q1278419",
+   "itemLabel": "Toronto Eaton Centre",
+   "floors": "4"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4876641",
+   "itemLabel": "Beard Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5029412",
+   "itemLabel": "Canada Permanent Trust Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5047801",
+   "itemLabel": "Casa Condominio Residenza"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5093974",
+   "itemLabel": "Chestnut Residence"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5122973",
+   "itemLabel": "CityPlace"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5158841",
+   "itemLabel": "Concord Park Place"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q17507890",
+   "itemLabel": "88 Scott",
+   "floors": "58"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q20006849",
+   "itemLabel": "Massey Tower",
+   "floors": "60"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q6937326",
+   "itemLabel": "Murano, Toronto"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2024006",
+   "itemLabel": "One King Street West",
+   "floors": "51"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q332518",
+   "itemLabel": "Absolute World",
+   "floors": "56"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7421067",
+   "itemLabel": "Sapphire Tower"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4998116",
+   "itemLabel": "Burano",
+   "floors": "48"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7093438",
+   "itemLabel": "One Yonge Street",
+   "floors": "25"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7974377",
+   "itemLabel": "Waterpark City"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q30744065",
+   "itemLabel": "Ten York",
+   "floors": "65"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7698491",
+   "itemLabel": "Temple Building",
+   "floors": "12"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q4632183",
+   "itemLabel": "25 The Esplanade",
+   "floors": "33"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q5594600",
+   "itemLabel": "Grand Harbour",
+   "floors": "17"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q22827744",
+   "itemLabel": "Quantum 2",
+   "floors": "51"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q9360189",
+   "itemLabel": "Toronto Dominion Bank Tower",
+   "floors": "56"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q68618992",
+   "itemLabel": "Bank of Nova Scotia Building"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q2816307",
+   "itemLabel": "City Place",
+   "floors": "49"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7611475",
+   "itemLabel": "Sterling Tower",
+   "floors": "21"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q124484720",
+   "itemLabel": "The Well"
+  },
+  {
+   "item": "http://www.wikidata.org/entity/Q7638395",
+   "itemLabel": "Sun Life Centre",
+   "floors": "28"
+  }
+ ],
+ "wikipedia": {
+  "title": "List of tallest buildings in Toronto",
+  "revid": 1378696540,
+  "sections": [
+   "History",
+   "1890s–1950s",
+   "1960s–1990s",
+   "2000s–present",
+   "An expanding skyline",
+   "\"Manhattanization\" and supertall skyscrapers",
+   "New bank icons",
+   "Developments outside of downtown",
+   "Tallest buildings",
+   "Tallest completed buildings by neighbourhood",
+   "Map of tallest buildings",
+   "Downtown Toronto",
+   "Rest of Toronto",
+   "Tallest under construction",
+   "Timeline of tallest buildings",
+   "Cityscape",
+   "Skylines",
+   "See also",
+   "References",
+   "External links"
+  ],
+  "tables": [
+   {
+    "columns": [
+     "Skyline of Toronto",
+     "Skyline of Toronto.1"
+    ],
+    "rows": 12,
+    "records": [
+     {
+      "Skyline of Toronto": "View of Downtown Toronto in 2026",
+      "Skyline of Toronto.1": "View of Downtown Toronto in 2026"
+     },
+     {
+      "Skyline of Toronto": "Tallest building",
+      "Skyline of Toronto.1": "SkyTower at Pinnacle One Yonge (2026)"
+     },
+     {
+      "Skyline of Toronto": "Tallest building height",
+      "Skyline of Toronto.1": "351.8 m (1,154 ft)"
+     },
+     {
+      "Skyline of Toronto": "Tallest structure",
+      "Skyline of Toronto.1": "CN Tower (1976)"
+     },
+     {
+      "Skyline of Toronto": "Tallest structure height",
+      "Skyline of Toronto.1": "553.3 m (1,815 ft)"
+     },
+     {
+      "Skyline of Toronto": "Major clusters",
+      "Skyline of Toronto.1": "Downtown Toronto Humber Bay Yonge–Eglinton North York City Centre"
+     },
+     {
+      "Skyline of Toronto": "First 150 m+ building",
+      "Skyline of Toronto.1": "TD Tower (1967)"
+     },
+     {
+      "Skyline of Toronto": "Number of tall buildings (2026)",
+      "Skyline of Toronto.1": "Number of tall buildings (2026)"
+     },
+     {
+      "Skyline of Toronto": "Taller than 100 m (328 ft)",
+      "Skyline of Toronto.1": "405[1]"
+     },
+     {
+      "Skyline of Toronto": "Taller than 150 m (492 ft)",
+      "Skyline of Toronto.1": "111 + 6 T/O"
+     },
+     {
+      "Skyline of Toronto": "Taller than 200 m (656 ft)",
+      "Skyline of Toronto.1": "32 + 2 T/O"
+     },
+     {
+      "Skyline of Toronto": "Taller than 300 m (984 ft)",
+      "Skyline of Toronto.1": "2 T/O"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Rank",
+     "Name",
+     "Image",
+     "Location",
+     "Height m (ft)",
+     "Floors",
+     "Year",
+     "Purpose",
+     "Notes"
+    ],
+    "rows": 118,
+    "records": [
+     {
+      "Rank": null,
+      "Name": "CN Tower",
+      "Image": null,
+      "Location": "290 Bremner Boulevard 43°38′33″N 79°23′14″W﻿ / ﻿43.642506°N 79.387108°W",
+      "Height m (ft)": "553.4 (1,816)",
+      "Floors": null,
+      "Year": 1976,
+      "Purpose": "Communication Observation",
+      "Notes": "Not a habitable building. Included for comparison purposes. Tallest free-standing structure in the world from 1976 to 2007, and tallest tower until 2009.[76]"
+     },
+     {
+      "Rank": 1.0,
+      "Name": "SkyTower at Pinnacle One Yonge",
+      "Image": null,
+      "Location": "7 Yonge Street 43°38′36″N 79°22′30″W﻿ / ﻿43.64333°N 79.37500°W",
+      "Height m (ft)": "351.8 (1,154)",
+      "Floors": 106.0,
+      "Year": 2026,
+      "Purpose": "Mixed-use",
+      "Notes": "Currently the tallest building in Canada. Topped off in early 2026. First building in Canada over 100 storeys.[77]"
+     },
+     {
+      "Rank": 2.0,
+      "Name": "One Bloor West",
+      "Image": null,
+      "Location": "1 Bloor Street West 43°40′11.7″N 79°23′13.3″W﻿ / ﻿43.669917°N 79.387028°W",
+      "Height m (ft)": "308.9 (1,013)",
+      "Floors": 85.0,
+      "Year": 2028,
+      "Purpose": "Mixed-use",
+      "Notes": "Formerly known as The One. Topped off in late 2025. Briefly the tallest building in Canada from 2025 to 2026.[78]"
+     },
+     {
+      "Rank": 3.0,
+      "Name": "First Canadian Place",
+      "Image": null,
+      "Location": "100 King Street West 43°38′56″N 79°22′54″W﻿ / ﻿43.648838°N 79.381744°W",
+      "Height m (ft)": "298.3 (979)",
+      "Floors": 72.0,
+      "Year": 1975,
+      "Purpose": "Office",
+      "Notes": "Tallest building in Canada from 1975 to 2025. 8th-tallest building in the world at the time of its completion. Tallest building in the world outside Chicago and New York City at the time of its completion. Tallest building completed in Toronto in the 1970s. Formerly known as First Bank Tower.[79]"
+     },
+     {
+      "Rank": 4.0,
+      "Name": "The St. Regis Toronto",
+      "Image": null,
+      "Location": "325 Bay Street 43°38′59″N 79°22′49″W﻿ / ﻿43.649818°N 79.380341°W",
+      "Height m (ft)": "276.9 (908)",
+      "Floors": 63.0,
+      "Year": 2012,
+      "Purpose": "Mixed-use",
+      "Notes": "Tallest mixed-use building in Canada. Tallest building completed in Toronto in the 2010s. Formerly known as Trump International Hotel & Tower Toronto and later as The Adelaide Hotel.[80]"
+     },
+     {
+      "Rank": 5.0,
+      "Name": "Scotia Plaza",
+      "Image": null,
+      "Location": "40 King Street West 43°38′58″N 79°22′46″W﻿ / ﻿43.649422°N 79.379578°W",
+      "Height m (ft)": "275 (902)",
+      "Floors": 68.0,
+      "Year": 1988,
+      "Purpose": "Office",
+      "Notes": "Tallest building completed in Toronto in the 1980s.[81]"
+     },
+     {
+      "Rank": 6.0,
+      "Name": "Aura",
+      "Image": null,
+      "Location": "388 Yonge Street 43°39′34″N 79°22′58″W﻿ / ﻿43.659431°N 79.382812°W",
+      "Height m (ft)": "271.9 (892)",
+      "Floors": 78.0,
+      "Year": 2014,
+      "Purpose": "Residential",
+      "Notes": "Tallest residential building in Toronto and in Canada.[82]"
+     },
+     {
+      "Rank": 7.0,
+      "Name": "TD Canada Trust Tower",
+      "Image": null,
+      "Location": "161 Bay Street 43°38′47″N 79°22′44″W﻿ / ﻿43.646465°N 79.378784°W",
+      "Height m (ft)": "260.9 (856)",
+      "Floors": 53.0,
+      "Year": 1990,
+      "Purpose": "Office",
+      "Notes": "Tallest building completed in Toronto in the 1990s.[83]"
+     },
+     {
+      "Rank": 8.0,
+      "Name": "One Bloor",
+      "Image": null,
+      "Location": "1 Bloor Street East 43°40′12″N 79°23′10″W﻿ / ﻿43.669983°N 79.386147°W",
+      "Height m (ft)": "257.3 (844)",
+      "Floors": 78.0,
+      "Year": 2017,
+      "Purpose": "Residential",
+      "Notes": "[84]"
+     },
+     {
+      "Rank": 9.0,
+      "Name": "CIBC Square II",
+      "Image": null,
+      "Location": "141 Bay Street 43°38′43″N 79°22′44″W﻿ / ﻿43.64527°N 79.3788°W",
+      "Height m (ft)": "243.1 (798)",
+      "Floors": 53.0,
+      "Year": 2026,
+      "Purpose": "Office",
+      "Notes": "[85]"
+     },
+     {
+      "Rank": 10.0,
+      "Name": "CIBC Square I",
+      "Image": null,
+      "Location": "81 Bay Street 43°38′39″N 79°22′40″W﻿ / ﻿43.644161°N 79.377762°W",
+      "Height m (ft)": "241.3 (792)",
+      "Floors": 49.0,
+      "Year": 2021,
+      "Purpose": "Office",
+      "Notes": "Tallest building completed in Toronto in the 2020s so far.[86]"
+     },
+     {
+      "Rank": 11.0,
+      "Name": "Commerce Court West",
+      "Image": null,
+      "Location": "199 Bay Street 43°38′54″N 79°22′46″W﻿ / ﻿43.648209°N 79.379509°W",
+      "Height m (ft)": "239 (784)",
+      "Floors": 57.0,
+      "Year": 1973,
+      "Purpose": "Office",
+      "Notes": "Tallest building in Toronto from 1972 to 1975.[87]"
+     },
+     {
+      "Rank": 12.0,
+      "Name": "TD Terrace",
+      "Image": null,
+      "Location": "160 Front Street West 43°38′43″N 79°23′04″W﻿ / ﻿43.645195°N 79.384583°W",
+      "Height m (ft)": "236.5 (776)",
+      "Floors": 48.0,
+      "Year": 2024,
+      "Purpose": "Office",
+      "Notes": "8+8=16[88]"
+     },
+     {
+      "Rank": 13.0,
+      "Name": "ICE Condominiums II",
+      "Image": null,
+      "Location": "14 York Street 43°38′31″N 79°22′54″W﻿ / ﻿43.642048°N 79.381676°W",
+      "Height m (ft)": "234.2 (768)",
+      "Floors": 68.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[89]"
+     },
+     {
+      "Rank": 14.0,
+      "Name": "Harbour Plaza East",
+      "Image": null,
+      "Location": "88 Harbour Street 43°38′32″N 79°22′44″W﻿ / ﻿43.642113°N 79.379013°W",
+      "Height m (ft)": "233 (764)",
+      "Floors": 71.0,
+      "Year": 2017,
+      "Purpose": "Residential",
+      "Notes": "[90]"
+     },
+     {
+      "Rank": 15.0,
+      "Name": "Concord Canada House 1",
+      "Image": null,
+      "Location": "23 Spadina Avenue 43°38′29″N 79°23′32″W﻿ / ﻿43.641399°N 79.392265°W",
+      "Height m (ft)": "231.3 (759)",
+      "Floors": 69.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[91]"
+     },
+     {
+      "Rank": 16.0,
+      "Name": "Sugar Wharf Tower G",
+      "Image": null,
+      "Location": "55 Lake Shore Boulevard East 43°38′41″N 79°22′18″W﻿ / ﻿43.64476°N 79.371704°W",
+      "Height m (ft)": "230.2 (755)",
+      "Floors": 74.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "Also known as Sugar Wharf Tower II.[92]"
+     },
+     {
+      "Rank": 17.0,
+      "Name": "Eau du Soleil Sky Tower",
+      "Image": null,
+      "Location": "2183 Lake Shore Boulevard West 43°37′24″N 79°28′48″W﻿ / ﻿43.623436°N 79.480064°W",
+      "Height m (ft)": "228.2 (749)",
+      "Floors": 66.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "Canada's tallest building outside a central business district.[93]"
+     },
+     {
+      "Rank": 18.0,
+      "Name": "Harbour Plaza West",
+      "Image": null,
+      "Location": "100 Harbour Street 43°38′32″N 79°22′47″W﻿ / ﻿43.642109°N 79.379616°W",
+      "Height m (ft)": "224 (735)",
+      "Floors": 67.0,
+      "Year": 2017,
+      "Purpose": "Residential",
+      "Notes": "[94]"
+     },
+     {
+      "Rank": 19.0,
+      "Name": "Ten York",
+      "Image": null,
+      "Location": "10 York Street 43°38′28″N 79°22′52″W﻿ / ﻿43.641106°N 79.381248°W",
+      "Height m (ft)": "224 (735)",
+      "Floors": 65.0,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[95]"
+     },
+     {
+      "Rank": 20.0,
+      "Name": "TD Bank Tower",
+      "Image": null,
+      "Location": "66 Wellington Street West 43°38′51″N 79°22′52″W﻿ / ﻿43.647568°N 79.381012°W",
+      "Height m (ft)": "222.8 (731)",
+      "Floors": 56.0,
+      "Year": 1967,
+      "Purpose": "Office",
+      "Notes": "Tallest building in Toronto from 1967 to 1972. Tallest building completed in Toronto in the 1960s. Also known simply as TD Tower.[96]"
+     },
+     {
+      "Rank": 21.0,
+      "Name": "11 YV",
+      "Image": "–",
+      "Location": "11 Yorkville Avenue 43°40′17″N 79°23′18″W﻿ / ﻿43.671486°N 79.388222°W",
+      "Height m (ft)": "221.91 (728)",
+      "Floors": 66.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[97]"
+     },
+     {
+      "Rank": 22.0,
+      "Name": "Sugar Wharf Tower F",
+      "Image": null,
+      "Location": "55 Lake Shore Boulevard East 43°38′40″N 79°22′16″W﻿ / ﻿43.644562°N 79.371086°W",
+      "Height m (ft)": "218.4 (717)",
+      "Floors": 66.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "[98]"
+     },
+     {
+      "Rank": 23.0,
+      "Name": "Prestige at Pinnacle One Yonge",
+      "Image": null,
+      "Location": "28 Freeland Street 43°38′37″N 79°22′27″W﻿ / ﻿43.643608°N 79.374184°W",
+      "Height m (ft)": "216.2 (709)",
+      "Floors": 65.0,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "[99]"
+     },
+     {
+      "Rank": 24.0,
+      "Name": "Bay Adelaide Centre West",
+      "Image": null,
+      "Location": "333 Bay Street 43°39′01″N 79°22′50″W﻿ / ﻿43.650269°N 79.380508°W",
+      "Height m (ft)": "214.7 (704)",
+      "Floors": 52.0,
+      "Year": 2009,
+      "Purpose": "Office",
+      "Notes": "Tallest building completed in Toronto in the 2000s.[100]"
+     },
+     {
+      "Rank": 25.0,
+      "Name": "Shangri-La Toronto",
+      "Image": null,
+      "Location": "188 University Avenue 43°38′57″N 79°23′10″W﻿ / ﻿43.649086°N 79.386177°W",
+      "Height m (ft)": "214 (702)",
+      "Floors": 65.0,
+      "Year": 2012,
+      "Purpose": "Mixed-use",
+      "Notes": "[101]"
+     },
+     {
+      "Rank": 26.0,
+      "Name": "Ritz-Carlton Toronto",
+      "Image": null,
+      "Location": "181 Wellington Street West 43°38′43″N 79°23′13″W﻿ / ﻿43.645226°N 79.387009°W",
+      "Height m (ft)": "209.5 (687)",
+      "Floors": 54.0,
+      "Year": 2011,
+      "Purpose": "Mixed-use",
+      "Notes": "[102]"
+     },
+     {
+      "Rank": 27.0,
+      "Name": "488 University Avenue",
+      "Image": null,
+      "Location": "488 University Avenue 43°39′18″N 79°23′20″W﻿ / ﻿43.655064°N 79.389008°W",
+      "Height m (ft)": "207.6 (681)",
+      "Floors": 57.0,
+      "Year": 2019,
+      "Purpose": "Mixed-use",
+      "Notes": "Also known as Residences of 488 University.[103]"
+     },
+     {
+      "Rank": 28.0,
+      "Name": "Bay-Wellington Tower",
+      "Image": null,
+      "Location": "181 Bay Street 43°38′51″N 79°22′42″W﻿ / ﻿43.647369°N 79.378334°W",
+      "Height m (ft)": "207 (679)",
+      "Floors": 49.0,
+      "Year": 1991,
+      "Purpose": "Office",
+      "Notes": "[104]"
+     },
+     {
+      "Rank": 29.0,
+      "Name": "L Tower",
+      "Image": null,
+      "Location": "8 The Esplanade 43°38′46″N 79°22′35″W﻿ / ﻿43.646172°N 79.376312°W",
+      "Height m (ft)": "205 (673)",
+      "Floors": 59.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[105]"
+     },
+     {
+      "Rank": 30.0,
+      "Name": "Massey Tower",
+      "Image": null,
+      "Location": "197 Yonge Street 43°39′13″N 79°22′45″W﻿ / ﻿43.653683°N 79.37915°W",
+      "Height m (ft)": "204.2 (670)",
+      "Floors": 62.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "[106]"
+     },
+     {
+      "Rank": 31.0,
+      "Name": "Four Seasons Hotel and Residences West",
+      "Image": null,
+      "Location": "60 Yorkville Avenue 43°40′18″N 79°23′24″W﻿ / ﻿43.671764°N 79.38987°W",
+      "Height m (ft)": "204 (669)",
+      "Floors": 55.0,
+      "Year": 2012,
+      "Purpose": "Mixed-Use",
+      "Notes": "[107]"
+     },
+     {
+      "Rank": 32.0,
+      "Name": "ICE Condominiums I",
+      "Image": null,
+      "Location": "12 York Street 43°38′30″N 79°22′55″W﻿ / ﻿43.641655°N 79.382034°W",
+      "Height m (ft)": "202.3 (664)",
+      "Floors": 57.0,
+      "Year": 2014,
+      "Purpose": "Residential",
+      "Notes": "[108]"
+     },
+     {
+      "Rank": 33.0,
+      "Name": "Concord Canada House 2",
+      "Image": null,
+      "Location": "23 Spadina Avenue 43°38′28″N 79°23′34″W﻿ / ﻿43.64101°N 79.392715°W",
+      "Height m (ft)": "202.2 (663)",
+      "Floors": 59.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[109]"
+     },
+     {
+      "Rank": 34.0,
+      "Name": "YC Condominiums",
+      "Image": null,
+      "Location": "460 Yonge Street 43°39′43″N 79°23′01″W﻿ / ﻿43.661823°N 79.383675°W",
+      "Height m (ft)": "202.2 (663)",
+      "Floors": 60.0,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[110]"
+     },
+     {
+      "Rank": 35.0,
+      "Name": "88 Scott",
+      "Image": null,
+      "Location": "88 Scott Street 43°38′54″N 79°22′35″W﻿ / ﻿43.648434°N 79.376495°W",
+      "Height m (ft)": "198.2 (650)",
+      "Floors": 58.0,
+      "Year": 2017,
+      "Purpose": "Residential",
+      "Notes": "[111]"
+     },
+     {
+      "Rank": 36.0,
+      "Name": "Bay Adelaide Centre East",
+      "Image": null,
+      "Location": "22 Adelaide Street West 43°39′03″N 79°22′46″W﻿ / ﻿43.650723°N 79.379471°W",
+      "Height m (ft)": "196 (643)",
+      "Floors": 44.0,
+      "Year": 2016,
+      "Purpose": "Office",
+      "Notes": "[112]"
+     },
+     {
+      "Rank": 37.0,
+      "Name": "E Condos South",
+      "Image": null,
+      "Location": "8 Eglinton Avenue East 43°42′27″N 79°23′53″W﻿ / ﻿43.707436°N 79.398018°W",
+      "Height m (ft)": "195.7 (642)",
+      "Floors": 58.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "Also known as E Condominiums.[113]"
+     },
+     {
+      "Rank": 38.0,
+      "Name": "Wellesley on the Park",
+      "Image": null,
+      "Location": "11 Wellesley Street West 43°39′52″N 79°23′07″W﻿ / ﻿43.664406°N 79.385292°W",
+      "Height m (ft)": "194.2 (637)",
+      "Floors": 60.0,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[114]"
+     },
+     {
+      "Rank": 39.0,
+      "Name": "2221 Yonge",
+      "Image": "–",
+      "Location": "2221 Yonge Street 43°42′22″N 79°23′51″W﻿ / ﻿43.706104°N 79.397629°W",
+      "Height m (ft)": "192.5 (632)",
+      "Floors": 58.0,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[115]"
+     },
+     {
+      "Rank": 40.0,
+      "Name": "EY Tower",
+      "Image": null,
+      "Location": "100 Adelaide Street West 43°39′01″N 79°22′57″W﻿ / ﻿43.650162°N 79.382515°W",
+      "Height m (ft)": "188.2 (617)",
+      "Floors": 40.0,
+      "Year": 2017,
+      "Purpose": "Office",
+      "Notes": "[116]"
+     },
+     {
+      "Rank": 41.0,
+      "Name": "Toronto House",
+      "Image": null,
+      "Location": "225 Adelaide Street West 43°38′53″N 79°23′18″W﻿ / ﻿43.648094°N 79.388229°W",
+      "Height m (ft)": "186.5 (612)",
+      "Floors": 58.0,
+      "Year": 2024,
+      "Purpose": "Mixed-use",
+      "Notes": "[117]"
+     },
+     {
+      "Rank": 42.0,
+      "Name": "RBC Centre",
+      "Image": null,
+      "Location": "155 Wellington Street West 43°38′44″N 79°23′09″W﻿ / ﻿43.645622°N 79.385735°W",
+      "Height m (ft)": "184.9 (607)",
+      "Floors": 42.0,
+      "Year": 2009,
+      "Purpose": "Office",
+      "Notes": "[118]"
+     },
+     {
+      "Rank": 43.0,
+      "Name": "Casa II",
+      "Image": "–",
+      "Location": "42 Charles Street East 43°40′10″N 79°23′03″W﻿ / ﻿43.669441°N 79.384201°W",
+      "Height m (ft)": "184.5 (605)",
+      "Floors": 57.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "[119]"
+     },
+     {
+      "Rank": 44.0,
+      "Name": "U Condominiums East Tower",
+      "Image": null,
+      "Location": "1080 Bay Street 43°40′01″N 79°23′19″W﻿ / ﻿43.666916°N 79.388718°W",
+      "Height m (ft)": "184 (604)",
+      "Floors": 55.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "Also known as U Condominiums II.[120]"
+     },
+     {
+      "Rank": 45.0,
+      "Name": "1 Yorkville",
+      "Image": "–",
+      "Location": "1 Yorkville Avenue 43°40′18″N 79°23′16″W﻿ / ﻿43.671604°N 79.387764°W",
+      "Height m (ft)": "183.2 (601)",
+      "Floors": 58.0,
+      "Year": 2020,
+      "Purpose": "Residential",
+      "Notes": "[121]"
+     },
+     {
+      "Rank": 46.0,
+      "Name": "TD North Tower",
+      "Image": null,
+      "Location": "77 King Street West 43°38′53″N 79°22′55″W﻿ / ﻿43.647926°N 79.381996°W",
+      "Height m (ft)": "182.9 (600)",
+      "Floors": 46.0,
+      "Year": 1969,
+      "Purpose": "Office",
+      "Notes": "[122]"
+     },
+     {
+      "Rank": 47.0,
+      "Name": "Water's Edge at the Cove",
+      "Image": "–",
+      "Location": "38 The Marginal Boulevard 43°37′34″N 79°28′43″W﻿ / ﻿43.625999°N 79.478714°W",
+      "Height m (ft)": "182.3 (598)",
+      "Floors": 56.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[123]"
+     },
+     {
+      "Rank": 48.0,
+      "Name": "Maple Leaf Square North Tower",
+      "Image": null,
+      "Location": "65 Bremner Boulevard 43°38′34″N 79°22′50″W﻿ / ﻿43.642849°N 79.380585°W",
+      "Height m (ft)": "181.3 (595)",
+      "Floors": 54.0,
+      "Year": 2010,
+      "Purpose": "Residential",
+      "Notes": "[124]"
+     },
+     {
+      "Rank": 49.0,
+      "Name": "8 Wellesley",
+      "Image": "–",
+      "Location": "8 Wellesley Street West 43°39′54″N 79°23′07″W﻿ / ﻿43.665043°N 79.385155°W",
+      "Height m (ft)": "181.2 (594)",
+      "Floors": 55.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[125]"
+     },
+     {
+      "Rank": 50.0,
+      "Name": "Eau Du Soleil Water Tower",
+      "Image": "–",
+      "Location": "2183 Lake Shore Boulevard West 43°37′24″N 79°28′44″W﻿ / ﻿43.623417°N 79.478889°W",
+      "Height m (ft)": "180.8 (593)",
+      "Floors": 49.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "[126]"
+     },
+     {
+      "Rank": 51.0,
+      "Name": "Casa III",
+      "Image": "–",
+      "Location": "50 Charles Street East 43°40′10″N 79°23′01″W﻿ / ﻿43.669529°N 79.383698°W",
+      "Height m (ft)": "179.6 (589)",
+      "Floors": 55.0,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "Also known as Casa III Condominiums & Fifty Nine Hayden.[127]"
+     },
+     {
+      "Rank": 52.0,
+      "Name": "Rosedale on Bloor",
+      "Image": "–",
+      "Location": "387 Bloor Street East 43°40′19″N 79°22′39″W﻿ / ﻿43.671947°N 79.377403°W",
+      "Height m (ft)": "179 (587)",
+      "Floors": 52.0,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "[128]"
+     },
+     {
+      "Rank": 53.0,
+      "Name": "INDX Tower",
+      "Image": "–",
+      "Location": "70 Temperance Street 43°39′03″N 79°22′56″W﻿ / ﻿43.650749°N 79.382118°W",
+      "Height m (ft)": "178.2 (585)",
+      "Floors": 54.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "[129]"
+     },
+     {
+      "Rank": 54.0,
+      "Name": "Vita on the Lake",
+      "Image": "–",
+      "Location": "70 Anne Craig Drive 43°37′29″N 79°28′45″W﻿ / ﻿43.624702°N 79.479187°W",
+      "Height m (ft)": "177.1 (581)",
+      "Floors": 53.0,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[130]"
+     },
+     {
+      "Rank": 55.0,
+      "Name": "88 Queen Street East",
+      "Image": "–",
+      "Location": "88 Queen Street East 43°39′13″N 79°22′30″W﻿ / ﻿43.653687°N 79.374878°W",
+      "Height m (ft)": "177 (581)",
+      "Floors": 57.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[131]"
+     },
+     {
+      "Rank": 56.0,
+      "Name": "One King West Hotel & Residence",
+      "Image": null,
+      "Location": "1 King Street West 43°38′56″N 79°22′42″W﻿ / ﻿43.648808°N 79.378204°W",
+      "Height m (ft)": "176.2 (578)",
+      "Floors": 51.0,
+      "Year": 2005,
+      "Purpose": "Mixed-use",
+      "Notes": "First building taller than 150 m (492 ft) in Toronto to be built in the 21st century.[132]"
+     },
+     {
+      "Rank": 57.0,
+      "Name": "8 Spadina at The Well",
+      "Image": null,
+      "Location": "8 Spadina Avenue 43°38′35″N 79°23′41″W﻿ / ﻿43.643082°N 79.394661°W",
+      "Height m (ft)": "174.1 (571)",
+      "Floors": 38.0,
+      "Year": 2022,
+      "Purpose": "Office",
+      "Notes": "[133]"
+     },
+     {
+      "Rank": 58.0,
+      "Name": "Success Tower 2",
+      "Image": "–",
+      "Location": "33 Bay Street 43°38′36″N 79°22′37″W﻿ / ﻿43.643204°N 79.376892°W",
+      "Height m (ft)": "173.3 (569)",
+      "Floors": 55.0,
+      "Year": 2010,
+      "Purpose": "Residential",
+      "Notes": "[134]"
+     },
+     {
+      "Rank": 59.0,
+      "Name": "Royal Bank Plaza South",
+      "Image": null,
+      "Location": "200 Bay Street 43°38′46″N 79°22′47″W﻿ / ﻿43.646198°N 79.379761°W",
+      "Height m (ft)": "173 (568)",
+      "Floors": 41.0,
+      "Year": 1979,
+      "Purpose": "Office",
+      "Notes": "[135]"
+     },
+     {
+      "Rank": 60.0,
+      "Name": "Maple Leaf Square South Tower",
+      "Image": null,
+      "Location": "55 Bremner Boulevard 43°38′32″N 79°22′51″W﻿ / ﻿43.642296°N 79.380814°W",
+      "Height m (ft)": "171.3 (562)",
+      "Floors": 50.0,
+      "Year": 2010,
+      "Purpose": "Mixed-use",
+      "Notes": "[136]"
+     },
+     {
+      "Rank": 61.0,
+      "Name": "The Selby",
+      "Image": "–",
+      "Location": "25 Selby Street 43°40′16″N 79°22′38″W﻿ / ﻿43.671158°N 79.377098°W",
+      "Height m (ft)": "170.6 (560)",
+      "Floors": 51.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "[137]"
+     },
+     {
+      "Rank": 62.0,
+      "Name": "Teahouse Condominiums South",
+      "Image": "–",
+      "Location": "501 Yonge Street 43°39′48″N 79°23′01″W﻿ / ﻿43.663258°N 79.383537°W",
+      "Height m (ft)": "170 (558)",
+      "Floors": 52.0,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "[138]"
+     },
+     {
+      "Rank": 63.0,
+      "Name": "Eight Cumberland",
+      "Image": "–",
+      "Location": "8 Cumberland Street 43°40′17″N 79°23′16″W﻿ / ﻿43.671314°N 79.387718°W",
+      "Height m (ft)": "169.8 (557)",
+      "Floors": 51.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "[139]"
+     },
+     {
+      "Rank": 64.0,
+      "Name": "Hullmark Centre I",
+      "Image": null,
+      "Location": "5 Sheppard Avenue East 43°45′41″N 79°24′35″W﻿ / ﻿43.761433°N 79.409859°W",
+      "Height m (ft)": "169.6 (556)",
+      "Floors": 45.0,
+      "Year": 2015,
+      "Purpose": "Mixed-use",
+      "Notes": "[140]"
+     },
+     {
+      "Rank": 65.0,
+      "Name": "Lago",
+      "Image": "–",
+      "Location": "56 Anne Craig Drive 43°37′32″N 79°28′44″W﻿ / ﻿43.625473°N 79.478897°W",
+      "Height m (ft)": "167.5 (550)",
+      "Floors": 49.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "Also known as Lago at the Waterfront.[141]"
+     },
+     {
+      "Rank": 66.0,
+      "Name": "55C",
+      "Image": "–",
+      "Location": "55 Charles Street East 43°40′08″N 79°23′01″W﻿ / ﻿43.668858°N 79.383537°W",
+      "Height m (ft)": "167 (548)",
+      "Floors": 48.0,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "[142]"
+     },
+     {
+      "Rank": 67.0,
+      "Name": "252 Church",
+      "Image": null,
+      "Location": "252 Church Street 43°39′22″N 79°22′38″W﻿ / ﻿43.656181°N 79.377342°W",
+      "Height m (ft)": "166.1 (545)",
+      "Floors": 52.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[143]"
+     },
+     {
+      "Rank": 68.0,
+      "Name": "44 Charles Street West",
+      "Image": null,
+      "Location": "44 Charles Street West 43°40′07″N 79°23′18″W﻿ / ﻿43.668678°N 79.388229°W",
+      "Height m (ft)": "166 (545)",
+      "Floors": 51.0,
+      "Year": 1974,
+      "Purpose": "Residential",
+      "Notes": "[144]"
+     },
+     {
+      "Rank": 69.0,
+      "Name": "Karma",
+      "Image": "–",
+      "Location": "24 Grenville Street 43°39′42″N 79°23′03″W﻿ / ﻿43.661747°N 79.384209°W",
+      "Height m (ft)": "165.9 (544)",
+      "Floors": 50.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "[145]"
+     },
+     {
+      "Rank": 70.0,
+      "Name": "Quantum 2",
+      "Image": null,
+      "Location": "2191 Yonge Street 43°42′20″N 79°23′51″W﻿ / ﻿43.705669°N 79.397453°W",
+      "Height m (ft)": "165 (541)",
+      "Floors": 51.0,
+      "Year": 2008,
+      "Purpose": "Residential",
+      "Notes": "Also known as Quantum North.[146]"
+     },
+     {
+      "Rank": 71.0,
+      "Name": "Theatre Park",
+      "Image": "–",
+      "Location": "224 King Street West 43°38′51″N 79°23′14″W﻿ / ﻿43.64761°N 79.387352°W",
+      "Height m (ft)": "164.8 (541)",
+      "Floors": 47.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[147]"
+     },
+     {
+      "Rank": 72.0,
+      "Name": "Social",
+      "Image": "–",
+      "Location": "229 Church Street 43°39′23″N 79°22′36″W﻿ / ﻿43.656265°N 79.376701°W",
+      "Height m (ft)": "164.8 (541)",
+      "Floors": 52.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "Also known as Social at Church + Dundas.[148]"
+     },
+     {
+      "Rank": 73.0,
+      "Name": "400 King West",
+      "Image": "–",
+      "Location": "400 King Street West 43°38′46″N 79°23′35″W﻿ / ﻿43.6460451°N 79.3929238°W",
+      "Height m (ft)": "164.6 (540)",
+      "Floors": 49.0,
+      "Year": 2026,
+      "Purpose": "Residential",
+      "Notes": "[149]"
+     },
+     {
+      "Rank": 74.0,
+      "Name": "Burke Condominiums",
+      "Image": "–",
+      "Location": "603 Sherbourne Street 43°40′17″N 79°22′35″W﻿ / ﻿43.671421°N 79.376309°W",
+      "Height m (ft)": "163.3 (536)",
+      "Floors": 53.0,
+      "Year": 2026,
+      "Purpose": "Residential",
+      "Notes": "[150][151]"
+     },
+     {
+      "Rank": 75.0,
+      "Name": "Residences of College Park I",
+      "Image": null,
+      "Location": "763 Bay Street 43°39′37″N 79°23′06″W﻿ / ﻿43.660305°N 79.385063°W",
+      "Height m (ft)": "163 (535)",
+      "Floors": 51.0,
+      "Year": 2006,
+      "Purpose": "Residential",
+      "Notes": "Also known as Residences of College Park North.[152]"
+     },
+     {
+      "Rank": 76.0,
+      "Name": "Burano",
+      "Image": null,
+      "Location": "832 Bay Street 43°39′44″N 79°23′11″W﻿ / ﻿43.662212°N 79.386497°W",
+      "Height m (ft)": "163 (535)",
+      "Floors": 50.0,
+      "Year": 2012,
+      "Purpose": "Residential",
+      "Notes": "Also known as Burnao on Bay.[153]"
+     },
+     {
+      "Rank": 77.0,
+      "Name": "Success Tower 1",
+      "Image": null,
+      "Location": "18 Harbour Street 43°38′34″N 79°22′38″W﻿ / ﻿43.642719°N 79.377144°W",
+      "Height m (ft)": "161.9 (531)",
+      "Floors": 52.0,
+      "Year": 2011,
+      "Purpose": "Residential",
+      "Notes": "Also known as 33 Bay Residences at Pinnacle Centre.[154]"
+     },
+     {
+      "Rank": 78.0,
+      "Name": "Pinnacle Etobicoke 2A",
+      "Image": "–",
+      "Location": "5415 Dundas Street West 43°37′55″N 79°32′33″W﻿ / ﻿43.63191°N 79.54246°W",
+      "Height m (ft)": "161.9 (531)",
+      "Floors": 48.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[155]"
+     },
+     {
+      "Rank": 79.0,
+      "Name": "E2 at E Place",
+      "Image": "–",
+      "Location": "41 Roehampton Avenue 43°42′28″N 79°23′49″W﻿ / ﻿43.707916°N 79.396996°W",
+      "Height m (ft)": "161.8 (531)",
+      "Floors": 48.0,
+      "Year": 2022,
+      "Purpose": "Residential",
+      "Notes": "[156]"
+     },
+     {
+      "Rank": 80.0,
+      "Name": "X2",
+      "Image": "–",
+      "Location": "101 Charles Street East 43°40′10″N 79°22′50″W﻿ / ﻿43.669582°N 79.380569°W",
+      "Height m (ft)": "161.1 (529)",
+      "Floors": 44.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[157]"
+     },
+     {
+      "Rank": 81.0,
+      "Name": "FIVE",
+      "Image": "–",
+      "Location": "5 St. Joseph Street 43°39′56″N 79°23′08″W﻿ / ﻿43.665569°N 79.385597°W",
+      "Height m (ft)": "161 (528)",
+      "Floors": 48.0,
+      "Year": 2016,
+      "Purpose": "Residential",
+      "Notes": "[158]"
+     },
+     {
+      "Rank": 82.0,
+      "Name": "Kipling Station Condos",
+      "Image": "–",
+      "Location": "5251 Dundas Street West 43°38′17″N 79°32′16″W﻿ / ﻿43.63814°N 79.53779°W",
+      "Height m (ft)": "160.8 (528)",
+      "Floors": 50.0,
+      "Year": 2026,
+      "Purpose": "Residential",
+      "Notes": "Topped out in May 2026.[159]"
+     },
+     {
+      "Rank": 83.0,
+      "Name": "Alias",
+      "Image": "–",
+      "Location": "120 Church Street 43°39′07″N 79°22′32″W﻿ / ﻿43.652061°N 79.375542°W",
+      "Height m (ft)": "158.7 (521)",
+      "Floors": 48.0,
+      "Year": 2026,
+      "Purpose": "Residential",
+      "Notes": "[160]"
+     },
+     {
+      "Rank": 84.0,
+      "Name": "The Uptown Residences",
+      "Image": null,
+      "Location": "35 Balmuto Street 43°40′10″N 79°23′15″W﻿ / ﻿43.669468°N 79.387459°W",
+      "Height m (ft)": "158 (518)",
+      "Floors": 48.0,
+      "Year": 2011,
+      "Purpose": "Residential",
+      "Notes": "[161]"
+     },
+     {
+      "Rank": 85.0,
+      "Name": "One Delisle",
+      "Image": null,
+      "Location": "1 Delisle Avenue 43°41′20″N 79°23′42″W﻿ / ﻿43.6889175°N 79.3948974°W",
+      "Height m (ft)": "158 (518)",
+      "Floors": 48.0,
+      "Year": 2027,
+      "Purpose": "Residential",
+      "Notes": "[162]"
+     },
+     {
+      "Rank": 86.0,
+      "Name": "Three Hundred",
+      "Image": null,
+      "Location": "300 Front Street West 43°38′39″N 79°23′22″W﻿ / ﻿43.644222°N 79.389481°W",
+      "Height m (ft)": "157.9 (518)",
+      "Floors": 52.0,
+      "Year": 2014,
+      "Purpose": "Residential",
+      "Notes": "[163]"
+     },
+     {
+      "Rank": 87.0,
+      "Name": "Lighthouse Tower Condominium",
+      "Image": "–",
+      "Location": "132 Queens Quay East 43°38′43″N 79°22′09″W﻿ / ﻿43.645248°N 79.369301°W",
+      "Height m (ft)": "157.9 (518)",
+      "Floors": 45.0,
+      "Year": 2020,
+      "Purpose": "Residential",
+      "Notes": "Also known as Lighthouse West at Daniels Waterfront.[164]"
+     },
+     {
+      "Rank": 88.0,
+      "Name": "The Well Residential One",
+      "Image": null,
+      "Location": "435 Wellington Street West 43°38′34″N 79°23′44″W﻿ / ﻿43.642761°N 79.395424°W",
+      "Height m (ft)": "157.3 (516)",
+      "Floors": 46.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "Also known as FourFifty The Well.[165]"
+     },
+     {
+      "Rank": 89.0,
+      "Name": "Grid Condos",
+      "Image": "–",
+      "Location": "181 Dundas Street East 43°39′25″N 79°22′27″W﻿ / ﻿43.656948°N 79.374092°W",
+      "Height m (ft)": "157 (515)",
+      "Floors": 50.0,
+      "Year": 2019,
+      "Purpose": "Residential",
+      "Notes": "[166]"
+     },
+     {
+      "Rank": 90.0,
+      "Name": "16 York",
+      "Image": "–",
+      "Location": "16 York Street 43°38′33″N 79°22′55″W﻿ / ﻿43.642635°N 79.382019°W",
+      "Height m (ft)": "157 (515)",
+      "Floors": 32.0,
+      "Year": 2020,
+      "Purpose": "Office",
+      "Notes": "[167]"
+     },
+     {
+      "Rank": 91.0,
+      "Name": "Delta Toronto Hotel",
+      "Image": null,
+      "Location": "75 Lower Simcoe Street 43°38′36″N 79°23′02″W﻿ / ﻿43.643208°N 79.383827°W",
+      "Height m (ft)": "156.8 (514)",
+      "Floors": 47.0,
+      "Year": 2014,
+      "Purpose": "Hotel",
+      "Notes": "[168]"
+     },
+     {
+      "Rank": 92.0,
+      "Name": "One York Street",
+      "Image": null,
+      "Location": "1 York Street 43°38′30″N 79°22′49″W﻿ / ﻿43.641617°N 79.380264°W",
+      "Height m (ft)": "156.8 (514)",
+      "Floors": 35.0,
+      "Year": 2016,
+      "Purpose": "Office",
+      "Notes": "[169]"
+     },
+     {
+      "Rank": 93.0,
+      "Name": "Festival Tower",
+      "Image": null,
+      "Location": "80 John Street 43°38′49″N 79°23′25″W﻿ / ﻿43.64698°N 79.390182°W",
+      "Height m (ft)": "156.7 (514)",
+      "Floors": 42.0,
+      "Year": 2011,
+      "Purpose": "Mixed-use",
+      "Notes": "[170]"
+     },
+     {
+      "Rank": 94.0,
+      "Name": "Hotel Riu Plaza Toronto",
+      "Image": "–",
+      "Location": "30 Widmer Street 43°38′50″N 79°23′31″W﻿ / ﻿43.64732°N 79.39183°W",
+      "Height m (ft)": "156.1 (512)",
+      "Floors": 48.0,
+      "Year": 2021,
+      "Purpose": "Mixed-use",
+      "Notes": "Mixed-use residential and hotel building.[171]"
+     },
+     {
+      "Rank": 95.0,
+      "Name": "Theatre District Residences",
+      "Image": "–",
+      "Location": "8 Widmer Street 43°38′49″N 79°23′30″W﻿ / ﻿43.64694°N 79.39167°W",
+      "Height m (ft)": "156.1 (512)",
+      "Floors": 49.0,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[171][172]"
+     },
+     {
+      "Rank": 96.0,
+      "Name": "Dundas Square Gardens",
+      "Image": "–",
+      "Location": "251 Jarvis Street 43°39′27″N 79°22′27″W﻿ / ﻿43.657566°N 79.374268°W",
+      "Height m (ft)": "156 (512)",
+      "Floors": 48.0,
+      "Year": 2020,
+      "Purpose": "Residential",
+      "Notes": "[173]"
+     },
+     {
+      "Rank": 97.0,
+      "Name": "No. 55 Mercer",
+      "Image": "–",
+      "Location": "55 Mercer Street 43°38′43″N 79°23′29″W﻿ / ﻿43.64529°N 79.391518°W",
+      "Height m (ft)": "156 (512)",
+      "Floors": 47.0,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "[174]"
+     },
+     {
+      "Rank": 98.0,
+      "Name": "Nobu Residences East Tower",
+      "Image": "–",
+      "Location": "15 Mercer Street 43°38′44″N 79°23′25″W﻿ / ﻿43.645611°N 79.390396°W",
+      "Height m (ft)": "156 (512)",
+      "Floors": 49.0,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "Also known as Nobu Residences II.[175]"
+     },
+     {
+      "Rank": 99.0,
+      "Name": "Nobu Residences West Tower",
+      "Image": "–",
+      "Location": "35 Mercer Street 43°38′44″N 79°23′28″W﻿ / ﻿43.645451°N 79.390976°W",
+      "Height m (ft)": "156 (512)",
+      "Floors": 49.0,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "Also known as Nobu Hotel & Residences I.[176]"
+     },
+     {
+      "Rank": 100.0,
+      "Name": "King Blue North Tower",
+      "Image": "–",
+      "Location": "355 King Street West 43°38′46″N 79°23′29″W﻿ / ﻿43.646004°N 79.39151°W",
+      "Height m (ft)": "155.8 (511)",
+      "Floors": 48.0,
+      "Year": 2020,
+      "Purpose": "Mixed-use",
+      "Notes": "Also called King Blue Hotel & Condominiums.[177]"
+     },
+     {
+      "Rank": 101.0,
+      "Name": "PJ Condos",
+      "Image": null,
+      "Location": "99 John Street 43°38′51″N 79°23′24″W﻿ / ﻿43.647514°N 79.389877°W",
+      "Height m (ft)": "155.8 (511)",
+      "Floors": 49.0,
+      "Year": 2020,
+      "Purpose": "Residential",
+      "Notes": "[178]"
+     },
+     {
+      "Rank": 102.0,
+      "Name": "Maverick",
+      "Image": "–",
+      "Location": "333 King Street West 43°38′46″N 79°23′28″W﻿ / ﻿43.64613°N 79.39109°W",
+      "Height m (ft)": "154.5 (507)",
+      "Floors": 49.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[179]"
+     },
+     {
+      "Rank": 103.0,
+      "Name": "U Condominiums West Tower",
+      "Image": "–",
+      "Location": "65 St. Mary Street 43°40′01″N 79°23′22″W﻿ / ﻿43.666927°N 79.389389°W",
+      "Height m (ft)": "154 (505)",
+      "Floors": 45.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "Also known as U Condominiums I.[180]"
+     },
+     {
+      "Rank": 104.0,
+      "Name": "87 Peter",
+      "Image": "–",
+      "Location": "87 Peter Street 43°38′49″N 79°23′32″W﻿ / ﻿43.647053°N 79.392242°W",
+      "Height m (ft)": "154 (505)",
+      "Floors": 49.0,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[181]"
+     },
+     {
+      "Rank": 105.0,
+      "Name": "Yonge + Rich",
+      "Image": "–",
+      "Location": "25 Richmond Street East 43°39′07″N 79°22′37″W﻿ / ﻿43.651878°N 79.376968°W",
+      "Height m (ft)": "154 (505)",
+      "Floors": 45.0,
+      "Year": 2021,
+      "Purpose": "Residential",
+      "Notes": "[182]"
+     },
+     {
+      "Rank": 106.0,
+      "Name": "TD South Tower",
+      "Image": null,
+      "Location": "79 Wellington Street West 43°38′48″N 79°22′52″W﻿ / ﻿43.646774°N 79.381233°W",
+      "Height m (ft)": "153.6 (504)",
+      "Floors": 39.0,
+      "Year": 1985,
+      "Purpose": "Office",
+      "Notes": "[183]"
+     },
+     {
+      "Rank": 107.0,
+      "Name": "Westlake Village 1",
+      "Image": "–",
+      "Location": "2220 Lake Shore Boulevard West 43°37′22″N 79°29′00″W﻿ / ﻿43.622723°N 79.483253°W",
+      "Height m (ft)": "153.3 (503)",
+      "Floors": 48.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[184]"
+     },
+     {
+      "Rank": 108.0,
+      "Name": "35 Mariner",
+      "Image": "–",
+      "Location": "35 Mariner Terrace 43°38′23″N 79°23′31″W﻿ / ﻿43.639828°N 79.392036°W",
+      "Height m (ft)": "153.2 (503)",
+      "Floors": 49.0,
+      "Year": 2005,
+      "Purpose": "Residential",
+      "Notes": "Also known as Harbourview Estates II at Cityplace.[185]"
+     },
+     {
+      "Rank": 109.0,
+      "Name": "Montage",
+      "Image": null,
+      "Location": "25 Telegram Mews 43°38′28″N 79°23′40″W﻿ / ﻿43.641155°N 79.394371°W",
+      "Height m (ft)": "153 (502)",
+      "Floors": 48.0,
+      "Year": 2009,
+      "Purpose": "Residential",
+      "Notes": "Also called Montage at Cityplace.[186]"
+     },
+     {
+      "Rank": 110.0,
+      "Name": "IMMIX",
+      "Image": "–",
+      "Location": "484 Yonge Street 43°39′46″N 79°23′03″W﻿ / ﻿43.662724°N 79.384033°W",
+      "Height m (ft)": "153 (502)",
+      "Floors": 45.0,
+      "Year": 2023,
+      "Purpose": "Residential",
+      "Notes": "[187]"
+     },
+     {
+      "Rank": 111.0,
+      "Name": "Peter & Adelaide",
+      "Image": "–",
+      "Location": "114 Peter Street 43°38′52″N 79°23′36″W﻿ / ﻿43.647713°N 79.3934323°W",
+      "Height m (ft)": "153 (502)",
+      "Floors": 47.0,
+      "Year": 2024,
+      "Purpose": "Residential",
+      "Notes": "[188]"
+     },
+     {
+      "Rank": 112.0,
+      "Name": "The Charles at Church",
+      "Image": "–",
+      "Location": "68 Charles Street East 43°40′10″N 79°22′59″W﻿ / ﻿43.669559°N 79.383041°W",
+      "Height m (ft)": "152.7 (501)",
+      "Floors": 47.0,
+      "Year": 2026,
+      "Purpose": "Residential",
+      "Notes": "[189]"
+     },
+     {
+      "Rank": 113.0,
+      "Name": "Beyond the Sea Star Tower",
+      "Image": "–",
+      "Location": "2230 Lake Shore Boulevard West 43°37′18″N 79°28′58″W﻿ / ﻿43.621723°N 79.482834°W",
+      "Height m (ft)": "151.5 (497)",
+      "Floors": 44.0,
+      "Year": 2012,
+      "Purpose": "Residential",
+      "Notes": "[190]"
+     },
+     {
+      "Rank": 114.0,
+      "Name": "Chaz Yorkville Condos",
+      "Image": "–",
+      "Location": "45 Charles Street East 43°40′08″N 79°23′02″W﻿ / ﻿43.668934°N 79.383865°W",
+      "Height m (ft)": "151.4 (497)",
+      "Floors": 47.0,
+      "Year": 2015,
+      "Purpose": "Residential",
+      "Notes": "[191]"
+     },
+     {
+      "Rank": 115.0,
+      "Name": "The 250",
+      "Image": null,
+      "Location": "250 Yonge Street 43°39′17″N 79°22′50″W﻿ / ﻿43.654598°N 79.380524°W",
+      "Height m (ft)": "150.6 (494)",
+      "Floors": 35.0,
+      "Year": 1992,
+      "Purpose": "Residential",
+      "Notes": "Also known as 250 Yonge at Toronto Eaton Centre.[192]"
+     },
+     {
+      "Rank": 116.0,
+      "Name": "Monde",
+      "Image": "–",
+      "Location": "12 Bonnycastle Street 43°38′47″N 79°21′54″W﻿ / ﻿43.646305°N 79.36512°W",
+      "Height m (ft)": "150 (492)",
+      "Floors": 44.0,
+      "Year": 2018,
+      "Purpose": "Residential",
+      "Notes": "[193]"
+     },
+     {
+      "Rank": 117.0,
+      "Name": "The Saint",
+      "Image": "–",
+      "Location": "89 Church Street 43°39′07″N 79°22′30″W﻿ / ﻿43.652061°N 79.374992°W",
+      "Height m (ft)": "150 (492)",
+      "Floors": 45.0,
+      "Year": 2025,
+      "Purpose": "Residential",
+      "Notes": "[194]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Sub- division",
+     "Neighbourhoods",
+     "Name",
+     "Height m (ft)",
+     "Floors",
+     "Year",
+     "Notes"
+    ],
+    "rows": 20,
+    "records": [
+     {
+      "Sub- division": "Old Toronto, Downtown",
+      "Neighbourhoods": "Financial District",
+      "Name": "First Canadian Place",
+      "Height m (ft)": "298.1 (978)",
+      "Floors": 72,
+      "Year": 1975,
+      "Notes": "[195]"
+     },
+     {
+      "Sub- division": "Old Toronto, Downtown",
+      "Neighbourhoods": "Yorkville",
+      "Name": "One Bloor",
+      "Height m (ft)": "257.3 (844)",
+      "Floors": 78,
+      "Year": 2017,
+      "Notes": null
+     },
+     {
+      "Sub- division": "Old Toronto, Midtown",
+      "Neighbourhoods": "Yonge–Eglinton",
+      "Name": "E Condos South",
+      "Height m (ft)": "195.7 (642)",
+      "Floors": 58,
+      "Year": 2019,
+      "Notes": "[113]"
+     },
+     {
+      "Sub- division": "Old Toronto, Midtown",
+      "Neighbourhoods": "Casa Loma / Forest Hill",
+      "Name": "The Heathview Apartments (Twin buildings)",
+      "Height m (ft)": "109 (358)",
+      "Floors": 30,
+      "Year": 2015,
+      "Notes": "[196]"
+     },
+     {
+      "Sub- division": "Old Toronto, West End",
+      "Neighbourhoods": "Wallace Emerson",
+      "Name": "The Diamond I",
+      "Height m (ft)": "101.1 (332)",
+      "Floors": 36,
+      "Year": 2024,
+      "Notes": "[197]"
+     },
+     {
+      "Sub- division": "East York",
+      "Neighbourhoods": "Thorncliffe Park",
+      "Name": "Leaside Towers (Twin buildings)",
+      "Height m (ft)": "129 (423)",
+      "Floors": 44,
+      "Year": 1970,
+      "Notes": "[198]"
+     },
+     {
+      "Sub- division": "East York",
+      "Neighbourhoods": "Taylor–Massey / Crescent Town",
+      "Name": "Bela Square Phase 1",
+      "Height m (ft)": "112.5 (369)",
+      "Floors": 35,
+      "Year": 2025,
+      "Notes": "[199]"
+     },
+     {
+      "Sub- division": "East York",
+      "Neighbourhoods": "Wynford–Concorde",
+      "Name": "Accolade",
+      "Height m (ft)": "110 (361)",
+      "Floors": 36,
+      "Year": 2009,
+      "Notes": "[200]"
+     },
+     {
+      "Sub- division": "York",
+      "Neighbourhoods": "Weston",
+      "Name": "West 22 at Weston Common",
+      "Height m (ft)": "107.5 (353)",
+      "Floors": 30,
+      "Year": 2019,
+      "Notes": "[201]"
+     },
+     {
+      "Sub- division": "Etobicoke",
+      "Neighbourhoods": "The Queensway –Humber Bay",
+      "Name": "Eau du Soleil Sky Tower",
+      "Height m (ft)": "228.2 (749)",
+      "Floors": 66,
+      "Year": 2019,
+      "Notes": "[93]"
+     },
+     {
+      "Sub- division": "Etobicoke",
+      "Neighbourhoods": "Islington-City Centre West",
+      "Name": "Islington Terrace",
+      "Height m (ft)": "145.1 (476)",
+      "Floors": 45,
+      "Year": 2020,
+      "Notes": "[202]"
+     },
+     {
+      "Sub- division": "Etobicoke",
+      "Neighbourhoods": "Eatonville",
+      "Name": "Thunderbird at One Valhalla",
+      "Height m (ft)": "111.3 (365)",
+      "Floors": 35,
+      "Year": 2014,
+      "Notes": "[203]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Willowdale",
+      "Name": "Hullmark Centre",
+      "Height m (ft)": "169.6 (556)",
+      "Floors": 45,
+      "Year": 2015,
+      "Notes": "[140]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Henry Farm",
+      "Name": "Alto at Atria",
+      "Height m (ft)": "137.3 (450)",
+      "Floors": 43,
+      "Year": 2016,
+      "Notes": "[204]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Bayview Village",
+      "Name": "Empire Tower",
+      "Height m (ft)": "130 (427)",
+      "Floors": 28,
+      "Year": 2005,
+      "Notes": "[205]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Parkway Forest",
+      "Name": "Emerald City I",
+      "Height m (ft)": "126 (413)",
+      "Floors": 37,
+      "Year": 2014,
+      "Notes": "[206]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Don Mills",
+      "Name": "Rodeo Drive Condominiums 1",
+      "Height m (ft)": "105.5 (346)",
+      "Floors": 32,
+      "Year": 2024,
+      "Notes": "[207]"
+     },
+     {
+      "Sub- division": "North York",
+      "Neighbourhoods": "Yorkdale–Glen Park",
+      "Name": "The Sloane East Tower",
+      "Height m (ft)": "103.4 (339)",
+      "Floors": 29,
+      "Year": 2025,
+      "Notes": "[208]"
+     },
+     {
+      "Sub- division": "Scarborough",
+      "Neighbourhoods": "Scarborough City Centre",
+      "Name": "Encore at Equinox",
+      "Height m (ft)": "131 (430)",
+      "Floors": 39,
+      "Year": 2013,
+      "Notes": "[209]"
+     },
+     {
+      "Sub- division": "Scarborough",
+      "Neighbourhoods": "Agincourt",
+      "Name": "Solaris at Metrogate (Twin buildings)",
+      "Height m (ft)": "127 (417)",
+      "Floors": 40,
+      "Year": 2017,
+      "Notes": "[210]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1",
+     "2"
+    ],
+    "rows": 2,
+    "records": [
+     {
+      "0": "The Queensway–Humber Bay",
+      "1": "Yonge–Eglinton",
+      "2": "North York City Centre"
+     },
+     {
+      "0": "410m 447yds113107786554504717 Skyscrapers taller than 150 m (492 ft)  2010s 2020s 17 Eau du Soleil Sky Tower 47 Water's Edge at the Cove 50 Eau Du Soleil Water Tower 54 Vita on the Lake 65 Lago 78 Pinnacle Etobicoke 2A* 107 Westlake Village 1 113 Beyond the Sea Star Tower",
+      "1": "410m 447yds79703937 Skyscrapers taller than 150 m (492 ft)  2000s 2010s 2020s 37 E Condos South 39 2221 Yonge 70 Quantum 2 79 E2 at E Place",
+      "2": "410m 447yds64 Skyscrapers taller than 150 m (492 ft)  2010s 64 Hullmark Centre I"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Rank",
+     "Name",
+     "Image",
+     "Height m (ft)",
+     "Floors",
+     "Year",
+     "Purpose",
+     "Notes"
+    ],
+    "rows": 13,
+    "records": [
+     {
+      "Rank": 1,
+      "Name": "Concord Sky (385 Yonge Street)",
+      "Image": null,
+      "Height m (ft)": "300.2 (985)",
+      "Floors": 85,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[211]"
+     },
+     {
+      "Rank": 2,
+      "Name": "Forma East Tower (266 King Street West)",
+      "Image": null,
+      "Height m (ft)": "266.5 (874)",
+      "Floors": 74,
+      "Year": "2028",
+      "Purpose": "Residential",
+      "Notes": "[212]"
+     },
+     {
+      "Rank": 3,
+      "Name": "8 Elm Street",
+      "Image": null,
+      "Height m (ft)": "220.3 (723)",
+      "Floors": 69,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[213]"
+     },
+     {
+      "Rank": 4,
+      "Name": "The Pemberton (33 Yorkville Avenue)",
+      "Image": null,
+      "Height m (ft)": "215.8 (708)",
+      "Floors": 68,
+      "Year": "2026",
+      "Purpose": "Residential",
+      "Notes": "[214]"
+     },
+     {
+      "Rank": 5,
+      "Name": "Q Tower (200 Queens Quay West)",
+      "Image": null,
+      "Height m (ft)": "197.4 (648)",
+      "Floors": 59,
+      "Year": "2029",
+      "Purpose": "Residential",
+      "Notes": "[215]"
+     },
+     {
+      "Rank": 6,
+      "Name": "Queen Church",
+      "Image": null,
+      "Height m (ft)": "186.2 (611)",
+      "Floors": 57,
+      "Year": "2028",
+      "Purpose": "Residential",
+      "Notes": "[216]"
+     },
+     {
+      "Rank": 7,
+      "Name": "The United BLDG (481 University Avenue)",
+      "Image": null,
+      "Height m (ft)": "179.5 (589)",
+      "Floors": 54,
+      "Year": "2027",
+      "Purpose": "Mixed-use",
+      "Notes": "[217]"
+     },
+     {
+      "Rank": 8,
+      "Name": "241 Church Street",
+      "Image": null,
+      "Height m (ft)": "170.1 (558)",
+      "Floors": 53,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[218]"
+     },
+     {
+      "Rank": 9,
+      "Name": "The Bourne",
+      "Image": null,
+      "Height m (ft)": "169.8 (557)",
+      "Floors": 57,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[219]"
+     },
+     {
+      "Rank": 10,
+      "Name": "4800 Yonge",
+      "Image": null,
+      "Height m (ft)": "167.1 (548)",
+      "Floors": 49,
+      "Year": "2027",
+      "Purpose": "Mixed-use",
+      "Notes": "[220]"
+     },
+     {
+      "Rank": 11,
+      "Name": "170 Roehampton",
+      "Image": null,
+      "Height m (ft)": "162.5 (533)",
+      "Floors": 49,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[221]"
+     },
+     {
+      "Rank": 12,
+      "Name": "Pinnacle Lakeside Tower 1 (215 Lake Shore Boulevard East)",
+      "Image": null,
+      "Height m (ft)": "157 (515)",
+      "Floors": 49,
+      "Year": "2027",
+      "Purpose": "Residential",
+      "Notes": "[222]"
+     },
+     {
+      "Rank": 13,
+      "Name": "49 Ontario Street West Tower",
+      "Image": null,
+      "Height m (ft)": "152.4 (500)",
+      "Floors": 44,
+      "Year": "TBD",
+      "Purpose": "Mixed-use",
+      "Notes": "[223]"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "Name",
+     "Image",
+     "Street address",
+     "Years as tallest",
+     "Height m / ft",
+     "Floors"
+    ],
+    "rows": 13,
+    "records": [
+     {
+      "Name": "Beard Building[3]",
+      "Image": null,
+      "Street address": "163 King Street East",
+      "Years as tallest": "1894–1896",
+      "Height m / ft": "30 / 98",
+      "Floors": 7
+     },
+     {
+      "Name": "Temple Building[224]",
+      "Image": null,
+      "Street address": "62 Richmond Street West",
+      "Years as tallest": "1896–1906",
+      "Height m / ft": "40 / 131",
+      "Floors": 10
+     },
+     {
+      "Name": "Trader's Bank Building[225]",
+      "Image": null,
+      "Street address": "67 Yonge Street",
+      "Years as tallest": "1906–1912",
+      "Height m / ft": "60 / 197",
+      "Floors": 15
+     },
+     {
+      "Name": "Canadian Pacific Building[226]",
+      "Image": null,
+      "Street address": "69 Yonge Street",
+      "Years as tallest": "1912–1915",
+      "Height m / ft": "65 / 213",
+      "Floors": 15
+     },
+     {
+      "Name": "Royal Bank Building[227]",
+      "Image": null,
+      "Street address": "2 King Street East",
+      "Years as tallest": "1915–1928",
+      "Height m / ft": "89 / 295",
+      "Floors": 20
+     },
+     {
+      "Name": "Sterling Tower[228]",
+      "Image": null,
+      "Street address": "372 Bay Street",
+      "Years as tallest": "1928–1929",
+      "Height m / ft": "90 / 295",
+      "Floors": 21
+     },
+     {
+      "Name": "Royal York Hotel[229]",
+      "Image": null,
+      "Street address": "100 Front Street West",
+      "Years as tallest": "1929–1931",
+      "Height m / ft": "124 / 407",
+      "Floors": 28
+     },
+     {
+      "Name": "Commerce Court North[230]",
+      "Image": null,
+      "Street address": "25 King Street West",
+      "Years as tallest": "1931–1967",
+      "Height m / ft": "145 / 476",
+      "Floors": 34
+     },
+     {
+      "Name": "Toronto-Dominion Bank Tower[231]",
+      "Image": null,
+      "Street address": "66 Wellington Street West",
+      "Years as tallest": "1967–1973",
+      "Height m / ft": "223 / 731",
+      "Floors": 56
+     },
+     {
+      "Name": "Commerce Court West[232]",
+      "Image": null,
+      "Street address": "199 Bay Street",
+      "Years as tallest": "1973–1975",
+      "Height m / ft": "239 / 784",
+      "Floors": 57
+     },
+     {
+      "Name": "First Canadian Place[2]",
+      "Image": null,
+      "Street address": "100 King Street West",
+      "Years as tallest": "1975–2025",
+      "Height m / ft": "298 / 978",
+      "Floors": 72
+     },
+     {
+      "Name": "One Bloor West[233]",
+      "Image": null,
+      "Street address": "1 Bloor Street West",
+      "Years as tallest": "2025–2026",
+      "Height m / ft": "309 / 1,012",
+      "Floors": 85
+     },
+     {
+      "Name": "SkyTower at Pinnacle One Yonge[234]",
+      "Image": null,
+      "Street address": "7 Yonge Street",
+      "Years as tallest": "2026–",
+      "Height m / ft": "356 / 1,168",
+      "Floors": 106
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteCity of Toronto",
+     "vteCity of Toronto.1"
+    ],
+    "rows": 17,
+    "records": [
+     {
+      "vteCity of Toronto": "Features",
+      "vteCity of Toronto.1": "General outline Demographics Name Flag Coat of arms Sister cities Notable Torontonians"
+     },
+     {
+      "vteCity of Toronto": "History",
+      "vteCity of Toronto.1": "Timeline Former municipalities  Before 1998 Teiaiagon Toronto Carrying-Place Trail Toronto Purchase Fort York Battle of York Battle of Montgomery's Tavern Great Fire of 1849 Toronto circus riot Great Fire of 1904 1918 anti-Greek riot Christie Pits riot Centennial of the City Hurricane Hazel and its effects Hoggs Hollow Disaster First Amalgamation of Toronto 1967 Stanley Cup Final Cancelled expressways 1976 Summer Paralympics 1992 World Series 1993 World Series Since 1998 Second Amalgamation of Toronto World Youth Day 2002 2003 Etobicoke gas explosion Northeast blackout of 2003 2008 propane explosion 2010 G20 Toronto summit and associated protests Rob Ford video scandal 2015 Pan American Games / Parapan American Games 2017 MLS Cup 2019 NBA Finals (Championship parade) COVID-19 pandemic 2026 FIFA World Cup"
+     },
+     {
+      "vteCity of Toronto": "Before 1998",
+      "vteCity of Toronto.1": "Teiaiagon Toronto Carrying-Place Trail Toronto Purchase Fort York Battle of York Battle of Montgomery's Tavern Great Fire of 1849 Toronto circus riot Great Fire of 1904 1918 anti-Greek riot Christie Pits riot Centennial of the City Hurricane Hazel and its effects Hoggs Hollow Disaster First Amalgamation of Toronto 1967 Stanley Cup Final Cancelled expressways 1976 Summer Paralympics 1992 World Series 1993 World Series"
+     },
+     {
+      "vteCity of Toronto": "Since 1998",
+      "vteCity of Toronto.1": "Second Amalgamation of Toronto World Youth Day 2002 2003 Etobicoke gas explosion Northeast blackout of 2003 2008 propane explosion 2010 G20 Toronto summit and associated protests Rob Ford video scandal 2015 Pan American Games / Parapan American Games 2017 MLS Cup 2019 NBA Finals (Championship parade) COVID-19 pandemic 2026 FIFA World Cup"
+     },
+     {
+      "vteCity of Toronto": "Geography",
+      "vteCity of Toronto.1": "Greater Toronto Area Golden Horseshoe Ontario Peninsula Great Lakes megalopolis Neighbourhoods History Downtown Harbour Toronto Islands Leslie Street Spit Ookwemin Minising Scarborough Bluffs Environmental issues Fauna Native trees Parks Ravines Skyscrapers Waterfront Waterways Don River Humber River Rouge River"
+     },
+     {
+      "vteCity of Toronto": "Economy",
+      "vteCity of Toronto.1": "Bay Street Financial District Hotels Tourism Toronto Region Board of Trade Toronto Stock Exchange"
+     },
+     {
+      "vteCity of Toronto": "Politics",
+      "vteCity of Toronto.1": "City of Toronto Act City Council Speaker City Hall Elections Mayor List Deputy Municipal government City Manager"
+     },
+     {
+      "vteCity of Toronto": "Public services",
+      "vteCity of Toronto.1": "Fire Health and Toronto Public Health Hospitals Paramedic Services Parks & Recreation Recreation centres Police Solid Waste Management Water Works and Emergency Services"
+     },
+     {
+      "vteCity of Toronto": "Education",
+      "vteCity of Toronto.1": "Primary/secondary Toronto District School Board Toronto Catholic District School Board Conseil scolaire Viamonde Conseil scolaire catholique MonAvenir Post-secondary Centennial College Collège Boréal George Brown Polytechnic Humber Polytechnic OCAD University Seneca Polytechnic Toronto Metropolitan University (formerly Ryerson University) Tyndale University Université de l'Ontario français University of Guelph-Humber University of Toronto St. George Scarborough York University Glendon College Keele Libraries Toronto Public Library List of branches Toronto Reference Library Toronto Tool Library"
+     },
+     {
+      "vteCity of Toronto": "Primary/secondary",
+      "vteCity of Toronto.1": "Toronto District School Board Toronto Catholic District School Board Conseil scolaire Viamonde Conseil scolaire catholique MonAvenir"
+     },
+     {
+      "vteCity of Toronto": "Post-secondary",
+      "vteCity of Toronto.1": "Centennial College Collège Boréal George Brown Polytechnic Humber Polytechnic OCAD University Seneca Polytechnic Toronto Metropolitan University (formerly Ryerson University) Tyndale University Université de l'Ontario français University of Guelph-Humber University of Toronto St. George Scarborough York University Glendon College Keele"
+     },
+     {
+      "vteCity of Toronto": "Libraries",
+      "vteCity of Toronto.1": "Toronto Public Library List of branches Toronto Reference Library Toronto Tool Library"
+     },
+     {
+      "vteCity of Toronto": "Culture",
+      "vteCity of Toronto.1": "Annual events Asian events in Toronto Architecture Cinemas Cuisine Fiction set in Toronto Films set in Toronto Hollywood North Films shot in Toronto Landmarks Media Music venues Places of worship Churches Synagogues Public art Subway public art Recreation Shopping malls Slang Sports Amateur sports Battle of Ontario Labour Day Classic Sports teams Tourism"
+     },
+     {
+      "vteCity of Toronto": "Transportation",
+      "vteCity of Toronto.1": "Public transportation Toronto Transit Commission Buses Streetcars Subway Former trolley buses Metrolinx GO Transit Union Pearson Express Brampton Transit Züm MiWay York Region Transit viva Durham Region Transit Other transportation, infrastructure, and services Airports Bridges Cycling Bike Share Island Ferry Parking Authority Port Toronto Port Authority Roads Lists Contour East–west North–south Notable streets Toronto Transportation Services"
+     },
+     {
+      "vteCity of Toronto": "Public transportation",
+      "vteCity of Toronto.1": "Toronto Transit Commission Buses Streetcars Subway Former trolley buses Metrolinx GO Transit Union Pearson Express Brampton Transit Züm MiWay York Region Transit viva Durham Region Transit"
+     },
+     {
+      "vteCity of Toronto": "Other transportation, infrastructure, and services",
+      "vteCity of Toronto.1": "Airports Bridges Cycling Bike Share Island Ferry Parking Authority Port Toronto Port Authority Roads Lists Contour East–west North–south Notable streets Toronto Transportation Services"
+     },
+     {
+      "vteCity of Toronto": "Category  Ontario portal",
+      "vteCity of Toronto.1": "Category  Ontario portal"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 2,
+    "records": [
+     {
+      "0": "Before 1998",
+      "1": "Teiaiagon Toronto Carrying-Place Trail Toronto Purchase Fort York Battle of York Battle of Montgomery's Tavern Great Fire of 1849 Toronto circus riot Great Fire of 1904 1918 anti-Greek riot Christie Pits riot Centennial of the City Hurricane Hazel and its effects Hoggs Hollow Disaster First Amalgamation of Toronto 1967 Stanley Cup Final Cancelled expressways 1976 Summer Paralympics 1992 World Series 1993 World Series"
+     },
+     {
+      "0": "Since 1998",
+      "1": "Second Amalgamation of Toronto World Youth Day 2002 2003 Etobicoke gas explosion Northeast blackout of 2003 2008 propane explosion 2010 G20 Toronto summit and associated protests Rob Ford video scandal 2015 Pan American Games / Parapan American Games 2017 MLS Cup 2019 NBA Finals (Championship parade) COVID-19 pandemic 2026 FIFA World Cup"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 3,
+    "records": [
+     {
+      "0": "Primary/secondary",
+      "1": "Toronto District School Board Toronto Catholic District School Board Conseil scolaire Viamonde Conseil scolaire catholique MonAvenir"
+     },
+     {
+      "0": "Post-secondary",
+      "1": "Centennial College Collège Boréal George Brown Polytechnic Humber Polytechnic OCAD University Seneca Polytechnic Toronto Metropolitan University (formerly Ryerson University) Tyndale University Université de l'Ontario français University of Guelph-Humber University of Toronto St. George Scarborough York University Glendon College Keele"
+     },
+     {
+      "0": "Libraries",
+      "1": "Toronto Public Library List of branches Toronto Reference Library Toronto Tool Library"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "0",
+     "1"
+    ],
+    "rows": 2,
+    "records": [
+     {
+      "0": "Public transportation",
+      "1": "Toronto Transit Commission Buses Streetcars Subway Former trolley buses Metrolinx GO Transit Union Pearson Express Brampton Transit Züm MiWay York Region Transit viva Durham Region Transit"
+     },
+     {
+      "0": "Other transportation, infrastructure, and services",
+      "1": "Airports Bridges Cycling Bike Share Island Ferry Parking Authority Port Toronto Port Authority Roads Lists Contour East–west North–south Notable streets Toronto Transportation Services"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteToronto skyscrapers and towers",
+     "vteToronto skyscrapers and towers.1"
+    ],
+    "rows": 5,
+    "records": [
+     {
+      "vteToronto skyscrapers and towers": "Over 150 metres (by height)",
+      "vteToronto skyscrapers and towers.1": "CN Tower First Canadian Place The St. Regis Scotia Plaza Aura TD Canada Trust Tower One Bloor TD Terrace Commerce Court West ICE Condominiums II Harbour Plaza East Harbour Plaza West Ten York TD Bank Tower Bay Adelaide West Shangri-La Ritz-Carlton Massey Tower Bay Wellington Tower L Tower Four Seasons West Bay Adelaide East ICE Condominiums I EY Tower Maple Leaf Square North RBC Centre Casa II Royal Trust Tower Royal Bank Plaza South INDX Tower One King West Maple Leaf Square South Success Tower 1 44 Charles Street West Quantum 2 Success Tower 2 College Park North Burano Delta Toronto Festival Tower TD Waterhouse Tower"
+     },
+     {
+      "vteToronto skyscrapers and towers": "Under 150 metres (alphabetically)",
+      "vteToronto skyscrapers and towers.1": "Artists' Alley Bank of Canada Building Canada Life Canada Permanent Trust Casa Condominio Residenza Exchange Tower Fairmont Royal York Imperial Plaza Metro Hall Murano One Yonge Street Palace Pier Pantages Tower Royal Bank Plaza North Sheraton Centre Simcoe Place Simpson Tower Spire Sun Life Centre TELUS Harbour Toronto City Hall 2 Bloor East Two Bloor West World Trade Centre"
+     },
+     {
+      "vteToronto skyscrapers and towers": "Proposed or under construction",
+      "vteToronto skyscrapers and towers.1": "CIBC Square Concord Sky Forma One Bloor West Pinnacle One Yonge"
+     },
+     {
+      "vteToronto skyscrapers and towers": "Cancelled or never built",
+      "vteToronto skyscrapers and towers.1": "John Maryon Tower Sapphire Tower"
+     },
+     {
+      "vteToronto skyscrapers and towers": "Other",
+      "vteToronto skyscrapers and towers.1": "List of tallest buildings in Toronto"
+     }
+    ]
+   },
+   {
+    "columns": [
+     "vteLists of tallest buildings in Canada",
+     "vteLists of tallest buildings in Canada.1"
+    ],
+    "rows": 7,
+    "records": [
+     {
+      "vteLists of tallest buildings in Canada": "Tallest buildings in Canada Tallest buildings by city Timeline of tallest buildings Cities with the most skyscrapers",
+      "vteLists of tallest buildings in Canada.1": "Tallest buildings in Canada Tallest buildings by city Timeline of tallest buildings Cities with the most skyscrapers"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "British Columbia",
+      "vteLists of tallest buildings in Canada.1": "Burnaby Coquitlam Kelowna Surrey Vancouver"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "Alberta",
+      "vteLists of tallest buildings in Canada.1": "Calgary Edmonton"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "Prairies/Territories",
+      "vteLists of tallest buildings in Canada.1": "Regina Saskatoon Winnipeg Yellowknife"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "Ontario",
+      "vteLists of tallest buildings in Canada.1": "Hamilton London Markham Mississauga Niagara Falls Ottawa Sudbury Toronto Vaughan Waterloo Region Windsor"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "Quebec",
+      "vteLists of tallest buildings in Canada.1": "Montreal Quebec City"
+     },
+     {
+      "vteLists of tallest buildings in Canada": "Atlantic",
+      "vteLists of tallest buildings in Canada.1": "Halifax Moncton Saint John St. John's"
+     }
+    ]
+   }
+  ]
+ },
+ "osm": [
+  {
+   "osm": "way/7969169",
+   "name": "Festival Tower",
+   "height": 157.0,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6468283,
+   "lon": -79.3902294
+  },
+  {
+   "osm": "way/22244757",
+   "name": "Three Hundred Front Street West",
+   "height": null,
+   "levels": 52.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6442679,
+   "lon": -79.3893403
+  },
+  {
+   "osm": "way/22252078",
+   "name": "Theatre Park",
+   "height": null,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6475377,
+   "lon": -79.3873355
+  },
+  {
+   "osm": "way/25108215",
+   "name": "Bay Adelaide Centre West Tower",
+   "height": 218.0,
+   "levels": 51.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6503255,
+   "lon": -79.3804885
+  },
+  {
+   "osm": "way/25108216",
+   "name": "The St. Regis",
+   "height": 1.0,
+   "levels": 57.0,
+   "building": "yes",
+   "wikidata": "Q1567534",
+   "start_date": null,
+   "lat": 43.6497682,
+   "lon": -79.3803216
+  },
+  {
+   "osm": "way/25491342",
+   "name": "Shangri-La",
+   "height": 214.0,
+   "levels": 65.0,
+   "building": "hotel",
+   "wikidata": "Q2276983",
+   "start_date": null,
+   "lat": 43.6491621,
+   "lon": -79.3862941
+  },
+  {
+   "osm": "way/27767625",
+   "name": "Royal Bank Plaza South Tower",
+   "height": 180.0,
+   "levels": 41.0,
+   "building": "office",
+   "wikidata": "Q1848303",
+   "start_date": null,
+   "lat": 43.6463577,
+   "lon": -79.3797707
+  },
+  {
+   "osm": "way/27767627",
+   "name": "First Canadian Place",
+   "height": 292.0,
+   "levels": 72.0,
+   "building": "office",
+   "wikidata": "Q1052475",
+   "start_date": "1975",
+   "lat": 43.6487661,
+   "lon": -79.3816918
+  },
+  {
+   "osm": "way/27767628",
+   "name": "Commerce Court West",
+   "height": 239.0,
+   "levels": 57.0,
+   "building": "office",
+   "wikidata": "Q23527286",
+   "start_date": null,
+   "lat": 43.6481782,
+   "lon": -79.3795286
+  },
+  {
+   "osm": "way/27767631",
+   "name": "TD South Tower",
+   "height": 153.57,
+   "levels": 39.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6466292,
+   "lon": -79.3812475
+  },
+  {
+   "osm": "way/27767636",
+   "name": "Exchange Tower",
+   "height": 146.0,
+   "levels": 36.0,
+   "building": "office",
+   "wikidata": "Q1383518",
+   "start_date": null,
+   "lat": 43.6484193,
+   "lon": -79.3832424
+  },
+  {
+   "osm": "way/27991582",
+   "name": "Two Bloor West",
+   "height": 148.74,
+   "levels": 34.0,
+   "building": "office",
+   "wikidata": "Q2462375",
+   "start_date": null,
+   "lat": 43.6704497,
+   "lon": -79.387242
+  },
+  {
+   "osm": "way/32742038",
+   "name": "CN Tower",
+   "height": 553.0,
+   "levels": null,
+   "building": "yes",
+   "wikidata": "Q134883",
+   "start_date": null,
+   "lat": 43.6425651,
+   "lon": -79.38712
+  },
+  {
+   "osm": "way/33296492",
+   "name": "Harbourview Estates 2",
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6396762,
+   "lon": -79.3921148
+  },
+  {
+   "osm": "way/33296494",
+   "name": "Harbour View Estates 1",
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6404069,
+   "lon": -79.3918744
+  },
+  {
+   "osm": "way/34111106",
+   "name": "Residences of College Park North",
+   "height": null,
+   "levels": 51.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6601175,
+   "lon": -79.385083
+  },
+  {
+   "osm": "way/34111110",
+   "name": "Residences of College Park South",
+   "height": null,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6595365,
+   "lon": -79.3848397
+  },
+  {
+   "osm": "way/34227668",
+   "name": "Quantum 2",
+   "height": null,
+   "levels": 54.0,
+   "building": "apartments",
+   "wikidata": "Q22827744",
+   "start_date": null,
+   "lat": 43.7057295,
+   "lon": -79.397576
+  },
+  {
+   "osm": "way/34587440",
+   "name": "Simpson Tower",
+   "height": 144.0,
+   "levels": 32.0,
+   "building": "office",
+   "wikidata": "Q153625",
+   "start_date": null,
+   "lat": 43.6517736,
+   "lon": -79.381097
+  },
+  {
+   "osm": "way/34769928",
+   "name": "33 Bay Street",
+   "height": null,
+   "levels": 51.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6425474,
+   "lon": -79.3772162
+  },
+  {
+   "osm": "way/34769931",
+   "name": "Success Tower",
+   "height": 157.4,
+   "levels": 53.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6430384,
+   "lon": -79.3769717
+  },
+  {
+   "osm": "way/34769933",
+   "name": "Pinnacle A",
+   "height": null,
+   "levels": 40.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6434325,
+   "lon": -79.3760995
+  },
+  {
+   "osm": "way/35159806",
+   "name": "252 Church",
+   "height": null,
+   "levels": 52.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6562058,
+   "lon": -79.3773587
+  },
+  {
+   "osm": "way/35980718",
+   "name": null,
+   "height": null,
+   "levels": 40.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6398258,
+   "lon": -79.3794912
+  },
+  {
+   "osm": "way/35980719",
+   "name": null,
+   "height": null,
+   "levels": 40.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6392467,
+   "lon": -79.379087
+  },
+  {
+   "osm": "way/41363025",
+   "name": null,
+   "height": null,
+   "levels": 49.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6399889,
+   "lon": -79.3936267
+  },
+  {
+   "osm": "way/41363026",
+   "name": null,
+   "height": null,
+   "levels": 49.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6393867,
+   "lon": -79.3934164
+  },
+  {
+   "osm": "way/41363027",
+   "name": "Montage",
+   "height": null,
+   "levels": 47.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6410078,
+   "lon": -79.3944139
+  },
+  {
+   "osm": "way/43054561",
+   "name": "1 King West",
+   "height": null,
+   "levels": 51.0,
+   "building": "apartments",
+   "wikidata": "Q2024006",
+   "start_date": null,
+   "lat": 43.6487708,
+   "lon": -79.3781782
+  },
+  {
+   "osm": "way/43804120",
+   "name": "Palace Pier (North)",
+   "height": null,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6315101,
+   "lon": -79.4745434
+  },
+  {
+   "osm": "way/44076451",
+   "name": "The Ritz-Carlton Hotel",
+   "height": 210.0,
+   "levels": 52.0,
+   "building": "hotel",
+   "wikidata": "Q1143174",
+   "start_date": null,
+   "lat": 43.6453404,
+   "lon": -79.3870873
+  },
+  {
+   "osm": "way/44076453",
+   "name": "RBC Centre",
+   "height": null,
+   "levels": 42.0,
+   "building": "office",
+   "wikidata": "Q1224878",
+   "start_date": null,
+   "lat": 43.6455335,
+   "lon": -79.386148
+  },
+  {
+   "osm": "way/55970881",
+   "name": "Absolute World - South",
+   "height": 175.6,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.5944717,
+   "lon": -79.6351096
+  },
+  {
+   "osm": "way/55970894",
+   "name": "Absolute World - North",
+   "height": 157.9,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.5949271,
+   "lon": -79.635716
+  },
+  {
+   "osm": "way/61698842",
+   "name": "Peter St. Condos",
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6475993,
+   "lon": -79.3925589
+  },
+  {
+   "osm": "way/61759778",
+   "name": null,
+   "height": null,
+   "levels": 55.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6550526,
+   "lon": -79.38902
+  },
+  {
+   "osm": "way/62004061",
+   "name": "Pantages Tower",
+   "height": null,
+   "levels": 45.0,
+   "building": "apartments",
+   "wikidata": "Q7131626",
+   "start_date": null,
+   "lat": 43.6544693,
+   "lon": -79.3791899
+  },
+  {
+   "osm": "way/62058560",
+   "name": "Spire",
+   "height": null,
+   "levels": 45.0,
+   "building": "yes",
+   "wikidata": "Q1471340",
+   "start_date": null,
+   "lat": 43.6514532,
+   "lon": -79.3753149
+  },
+  {
+   "osm": "way/80560946",
+   "name": "Royal Canadian Military Institute Condos",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": "Q7373898",
+   "start_date": null,
+   "lat": 43.6540057,
+   "lon": -79.3885534
+  },
+  {
+   "osm": "way/90305161",
+   "name": "The Uptown Residences",
+   "height": 158.0,
+   "levels": 48.0,
+   "building": "apartments",
+   "wikidata": "Q788064",
+   "start_date": null,
+   "lat": 43.6694737,
+   "lon": -79.3874179
+  },
+  {
+   "osm": "way/103954347",
+   "name": "The Clover on Yonge",
+   "height": null,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2019",
+   "lat": 43.6662607,
+   "lon": -79.384688
+  },
+  {
+   "osm": "way/104934501",
+   "name": "Massey Tower",
+   "height": 207.0,
+   "levels": 60.0,
+   "building": "yes",
+   "wikidata": "Q20006849",
+   "start_date": null,
+   "lat": 43.6534159,
+   "lon": -79.3792173
+  },
+  {
+   "osm": "way/115685712",
+   "name": "Quartz",
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6385013,
+   "lon": -79.3983109
+  },
+  {
+   "osm": "way/141693728",
+   "name": "Toronto Dominion Bank Tower",
+   "height": 222.86,
+   "levels": 56.0,
+   "building": "office",
+   "wikidata": "Q9360189",
+   "start_date": null,
+   "lat": 43.647528,
+   "lon": -79.381071
+  },
+  {
+   "osm": "way/141693739",
+   "name": "TD North Tower",
+   "height": 182.88,
+   "levels": 46.0,
+   "building": "office",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6478992,
+   "lon": -79.3819976
+  },
+  {
+   "osm": "way/142557688",
+   "name": "Leaside Towers",
+   "height": null,
+   "levels": 43.0,
+   "building": "apartments",
+   "wikidata": "Q14875248",
+   "start_date": null,
+   "lat": 43.707198,
+   "lon": -79.341221
+  },
+  {
+   "osm": "way/148646768",
+   "name": "Four Seasons",
+   "height": null,
+   "levels": 52.0,
+   "building": "yes",
+   "wikidata": "Q593320",
+   "start_date": null,
+   "lat": 43.6718731,
+   "lon": -79.3899024
+  },
+  {
+   "osm": "way/150507540",
+   "name": "Murano South",
+   "height": null,
+   "levels": 45.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6618748,
+   "lon": -79.3857092
+  },
+  {
+   "osm": "way/151526369",
+   "name": "Casa I",
+   "height": null,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": "Q5047801",
+   "start_date": null,
+   "lat": 43.6686495,
+   "lon": -79.3844882
+  },
+  {
+   "osm": "way/204680766",
+   "name": "Palace Place",
+   "height": null,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6314856,
+   "lon": -79.4726334
+  },
+  {
+   "osm": "way/205665801",
+   "name": "Prime Condos",
+   "height": null,
+   "levels": 46.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2024",
+   "lat": 43.6598623,
+   "lon": -79.3752614
+  },
+  {
+   "osm": "way/209082415",
+   "name": "The Met Condos",
+   "height": 131.5,
+   "levels": 43.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6610916,
+   "lon": -79.3821001
+  },
+  {
+   "osm": "way/219070851",
+   "name": null,
+   "height": null,
+   "levels": 43.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6511756,
+   "lon": -79.3841628
+  },
+  {
+   "osm": "way/229482182",
+   "name": "Ultra",
+   "height": null,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.775347,
+   "lon": -79.337061
+  },
+  {
+   "osm": "way/229485041",
+   "name": null,
+   "height": null,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6397953,
+   "lon": -79.3985465
+  },
+  {
+   "osm": "way/229563562",
+   "name": "Couture",
+   "height": null,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2013",
+   "lat": 43.6706082,
+   "lon": -79.3805658
+  },
+  {
+   "osm": "way/231284913",
+   "name": "Southcore Financial Centre Delta Hotel",
+   "height": 160.0,
+   "levels": 47.0,
+   "building": "hotel",
+   "wikidata": "Q19817552",
+   "start_date": null,
+   "lat": 43.6430839,
+   "lon": -79.383877
+  },
+  {
+   "osm": "way/237613281",
+   "name": "Parade",
+   "height": 128.0,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6403098,
+   "lon": -79.3974475
+  },
+  {
+   "osm": "way/238264282",
+   "name": "L Tower",
+   "height": 1.0,
+   "levels": 58.0,
+   "building": "yes",
+   "wikidata": "Q780392",
+   "start_date": null,
+   "lat": 43.6461752,
+   "lon": -79.3763116
+  },
+  {
+   "osm": "way/240317043",
+   "name": "X Condominium",
+   "height": null,
+   "levels": 45.0,
+   "building": "residential",
+   "wikidata": "Q2597675",
+   "start_date": null,
+   "lat": 43.6701232,
+   "lon": -79.3803303
+  },
+  {
+   "osm": "way/243576611",
+   "name": "Monde Condominiums",
+   "height": null,
+   "levels": 44.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6459708,
+   "lon": -79.3649927
+  },
+  {
+   "osm": "way/256389315",
+   "name": null,
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.7698125,
+   "lon": -79.4137643
+  },
+  {
+   "osm": "way/261802899",
+   "name": "Aura",
+   "height": 272.0,
+   "levels": 9.0,
+   "building": "apartments",
+   "wikidata": "Q774178",
+   "start_date": null,
+   "lat": 43.659346,
+   "lon": -79.3828166
+  },
+  {
+   "osm": "way/300884213",
+   "name": "Bay Adelaide Centre East Tower",
+   "height": 196.0,
+   "levels": 44.0,
+   "building": "office",
+   "wikidata": "Q812062",
+   "start_date": null,
+   "lat": 43.6505262,
+   "lon": -79.3795144
+  },
+  {
+   "osm": "way/301418954",
+   "name": "Ten York",
+   "height": 8.0,
+   "levels": 68.0,
+   "building": "apartments",
+   "wikidata": "Q30744065",
+   "start_date": null,
+   "lat": 43.6411044,
+   "lon": -79.3814956
+  },
+  {
+   "osm": "way/302352940",
+   "name": "Studio",
+   "height": null,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6492107,
+   "lon": -79.3882093
+  },
+  {
+   "osm": "way/325044058",
+   "name": "Casa III",
+   "height": 179.5,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6695837,
+   "lon": -79.3838422
+  },
+  {
+   "osm": "way/365310168",
+   "name": null,
+   "height": null,
+   "levels": 47.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6468809,
+   "lon": -79.3922485
+  },
+  {
+   "osm": "way/367347131",
+   "name": "EY Tower",
+   "height": 1.0,
+   "levels": 40.0,
+   "building": "yes",
+   "wikidata": "Q19817569",
+   "start_date": null,
+   "lat": 43.6500055,
+   "lon": -79.382617
+  },
+  {
+   "osm": "way/416989000",
+   "name": "Bisha Hotel & Residences",
+   "height": null,
+   "levels": 42.0,
+   "building": "hotel",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6453152,
+   "lon": -79.3924348
+  },
+  {
+   "osm": "way/425415470",
+   "name": "Daniels Waterfront Condos",
+   "height": null,
+   "levels": 45.0,
+   "building": "residential",
+   "wikidata": null,
+   "start_date": "2020-06-01",
+   "lat": 43.6452301,
+   "lon": -79.3690212
+  },
+  {
+   "osm": "way/437027803",
+   "name": "Key West",
+   "height": null,
+   "levels": 44.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6234533,
+   "lon": -79.4846244
+  },
+  {
+   "osm": "way/475483985",
+   "name": "INDX",
+   "height": null,
+   "levels": 54.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6505325,
+   "lon": -79.3821052
+  },
+  {
+   "osm": "way/483341399",
+   "name": "88 Scott",
+   "height": 204.0,
+   "levels": 58.0,
+   "building": "yes",
+   "wikidata": "Q17507890",
+   "start_date": null,
+   "lat": 43.648376,
+   "lon": -79.3766263
+  },
+  {
+   "osm": "way/537274899",
+   "name": "The LakeShore Condos",
+   "height": null,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6372262,
+   "lon": -79.3991295
+  },
+  {
+   "osm": "way/653388858",
+   "name": "Eight Cumberland",
+   "height": null,
+   "levels": 51.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2024",
+   "lat": 43.6712312,
+   "lon": -79.3875823
+  },
+  {
+   "osm": "way/661193667",
+   "name": null,
+   "height": null,
+   "levels": 42.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.769407,
+   "lon": -79.4138665
+  },
+  {
+   "osm": "way/668372120",
+   "name": "Grid Condos",
+   "height": null,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6569214,
+   "lon": -79.3740941
+  },
+  {
+   "osm": "way/686163960",
+   "name": "TD Terrace",
+   "height": 239.87,
+   "levels": null,
+   "building": "office",
+   "wikidata": "Q131548710",
+   "start_date": null,
+   "lat": 43.6453472,
+   "lon": -79.3846149
+  },
+  {
+   "osm": "way/687689437",
+   "name": "Transit City 2",
+   "height": 175.0,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2021",
+   "lat": 43.7965608,
+   "lon": -79.5291945
+  },
+  {
+   "osm": "way/762956030",
+   "name": "Casa II",
+   "height": null,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6694689,
+   "lon": -79.3841946
+  },
+  {
+   "osm": "way/804493285",
+   "name": "eCondos",
+   "height": null,
+   "levels": 58.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.707289,
+   "lon": -79.3979798
+  },
+  {
+   "osm": "way/813275079",
+   "name": "2221 Yonge",
+   "height": null,
+   "levels": 56.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.7061029,
+   "lon": -79.3976789
+  },
+  {
+   "osm": "way/944508308",
+   "name": null,
+   "height": null,
+   "levels": 48.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6458073,
+   "lon": -79.3917214
+  },
+  {
+   "osm": "way/973194885",
+   "name": "Transit City 1",
+   "height": 175.0,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2021",
+   "lat": 43.7975081,
+   "lon": -79.5291716
+  },
+  {
+   "osm": "way/973194886",
+   "name": "Transit City 3",
+   "height": 178.0,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2021",
+   "lat": 43.797604,
+   "lon": -79.5283044
+  },
+  {
+   "osm": "way/973194887",
+   "name": "Norf East",
+   "height": 123.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2020",
+   "lat": 43.7965437,
+   "lon": -79.5205683
+  },
+  {
+   "osm": "way/973194888",
+   "name": "Nord West",
+   "height": 123.0,
+   "levels": 40.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": "2020",
+   "lat": 43.7963417,
+   "lon": -79.5214151
+  },
+  {
+   "osm": "way/990220834",
+   "name": "YC Condos",
+   "height": 202.0,
+   "levels": 60.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6617823,
+   "lon": -79.3836624
+  },
+  {
+   "osm": "way/991383065",
+   "name": "Teahouse",
+   "height": null,
+   "levels": 52.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6634515,
+   "lon": -79.3835454
+  },
+  {
+   "osm": "way/996524144",
+   "name": null,
+   "height": null,
+   "levels": 43.0,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6696608,
+   "lon": -79.3751376
+  },
+  {
+   "osm": "way/1085845809",
+   "name": null,
+   "height": 185.0,
+   "levels": null,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6567877,
+   "lon": -79.3187119
+  },
+  {
+   "osm": "way/1085846060",
+   "name": null,
+   "height": 213.36,
+   "levels": null,
+   "building": "yes",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6464133,
+   "lon": -79.3335418
+  },
+  {
+   "osm": "way/1163968779",
+   "name": "Pavilia Tower A",
+   "height": null,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.8404569,
+   "lon": -79.3974246
+  },
+  {
+   "osm": "way/1163968780",
+   "name": "Pavilia Tower B",
+   "height": null,
+   "levels": 41.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.8406644,
+   "lon": -79.3965067
+  },
+  {
+   "osm": "way/1369976228",
+   "name": "11 Yorkville Condo",
+   "height": null,
+   "levels": 66.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6714083,
+   "lon": -79.3884681
+  },
+  {
+   "osm": "way/1374840671",
+   "name": null,
+   "height": 182.1,
+   "levels": 55.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6650463,
+   "lon": -79.3852955
+  },
+  {
+   "osm": "way/1384489351",
+   "name": "One Bloor West",
+   "height": null,
+   "levels": 85.0,
+   "building": "construction",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6697985,
+   "lon": -79.3869675
+  },
+  {
+   "osm": "way/1416422614",
+   "name": null,
+   "height": null,
+   "levels": 41.0,
+   "building": "construction",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.7162937,
+   "lon": -79.33277
+  },
+  {
+   "osm": "way/1418193889",
+   "name": null,
+   "height": null,
+   "levels": 50.0,
+   "building": "construction",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6381208,
+   "lon": -79.5377348
+  },
+  {
+   "osm": "way/1445809542",
+   "name": null,
+   "height": null,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6696832,
+   "lon": -79.3829587
+  },
+  {
+   "osm": "way/1445810153",
+   "name": null,
+   "height": null,
+   "levels": 50.0,
+   "building": "apartments",
+   "wikidata": null,
+   "start_date": null,
+   "lat": 43.6689,
+   "lon": -79.3834134
+  }
+ ]
+}

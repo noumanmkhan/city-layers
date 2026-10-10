@@ -1,0 +1,46 @@
+{
+ "run_at": "2026-10-10T10:24:18+00:00",
+ "min_height_m": 140,
+ "toronto": {
+  "wikidata": 31,
+  "wikidata_no_height": 40,
+  "wikipedia_tables": [
+   12,
+   118,
+   20,
+   2,
+   13,
+   13,
+   17,
+   2,
+   3,
+   2,
+   5,
+   7
+  ],
+  "osm": 102
+ },
+ "chicago": {
+  "wikidata": 55,
+  "wikidata_no_height": 79,
+  "wikipedia_tables": [
+   12,
+   138,
+   10,
+   1,
+   1,
+   5,
+   13,
+   5,
+   1,
+   3,
+   2,
+   26,
+   4,
+   6,
+   7,
+   4
+  ],
+  "osm": 154
+ }
+}
