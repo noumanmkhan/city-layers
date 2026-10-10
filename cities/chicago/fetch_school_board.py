@@ -20,10 +20,9 @@ SHAPES = {
     'school_board_10.zip': 'https://ilsenateredistricting.com/images/shape-files/ERSB_10_District_Map_FA1_SB_15.zip',
 }
 SCOUT = {
-    'cboe_home.html': 'https://chicagoelections.gov/',
-    'cboe_candidates.html': 'https://chicagoelections.gov/elections/candidates',
-    'cboe_g2026_list.pdf': 'https://app.chicagoelections.gov/documents/news_releases/G2026-Candidate-List.pdf',
-    'cboe_results.html': 'https://chicagoelections.gov/elections/results',
+    'cboe_candidates.html': 'https://chicagoelections.gov/getting-ballot/candidates',
+    'cboe_results_2024_general.html': 'https://chicagoelections.gov/elections/results/41',
+    'cboe_specimen_news.html': 'https://chicagoelections.gov/news/vote-mail-and-online-specimen-ballots-now-available-november-3-general-election',
 }
 
 
