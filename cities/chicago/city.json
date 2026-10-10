@@ -5,6 +5,7 @@
   "description": "A map of the City of Chicago with toggleable layers: the nine sides, 77 community areas, known-as names, wards, state and congressional districts, Special Service Areas, main streets, expressways, the 'L' and Metra.",
   "mapLabel": "Map of the City of Chicago",
   "locale": "en-US",
+  "distance": "mi",
 
   "view": {
     "city": [[41.644, -87.940], [42.023, -87.524]],
@@ -139,11 +140,11 @@
       "note": "The Chicago Public Schools whose attendance area this spot is in, from CPS’s {year} boundaries. Distances are straight-line to the school building. Boundaries change; CPS’s school locator has the final word."
     },
     "nearby": {
-      "file": "nearby.json", "radius": 1000,
+      "file": "nearby.json", "radius": 805,
       "nearest": [["library", "Library"], ["centre", "Community centre"], ["er", "Emergency dept."]],
-      "within": "Within 1 km",
+      "within": "Within ½ mile",
       "counts": [["park", "park", "parks"], ["playground", "playground", "playgrounds"], ["tennis", "tennis court location", "tennis court locations"]],
-      "note": "Straight-line distances; 1 km is about a 15-minute walk. Chicago Public Library, the ERs layer and OpenStreetMap (parks, playgrounds, courts, community centres)."
+      "note": "Straight-line distances; half a mile is about a 10-minute walk. Chicago Public Library, the ERs layer and OpenStreetMap (parks, playgrounds, courts, community centres)."
     },
     "reps": {
       "file": "representatives.json",

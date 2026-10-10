@@ -653,7 +653,13 @@ function section(id, title, body){
 /* Nearby (card only, nothing drawn on the map): the nearest of a few kinds of public place (library,
    community centre, emergency department) with the straight-line distance, and how many of others
    (parks, playgrounds…) are within the radius. Describe only: counts, never a score or a ranking. */
-const dist = m => m < 950 ? (Math.round(m / 50) * 50 || 50) + ' m' : (m / 1000).toFixed(m < 9950 ? 1 : 0) + ' km';
+// Distances on the card, in the city's unit (CITY.distance: "km", the default, or "mi").
+// km: "600 m" to the nearest 50 m under a kilometre, then "1.8 km". mi: "300 ft" to the nearest 50 ft
+// under a tenth of a mile, then "0.4 mi", "1.2 mi" (whole miles from 10).
+const MI = 1609.344, FT = 0.3048;
+const dist = CITY.distance === 'mi'
+  ? m => m < 0.095 * MI ? (Math.round(m / FT / 50) * 50 || 50) + ' ft' : (m / MI).toFixed(m < 9.95 * MI ? 1 : 0) + ' mi'
+  : m => m < 950 ? (Math.round(m / 50) * 50 || 50) + ' m' : (m / 1000).toFixed(m < 9950 ? 1 : 0) + ' km';
 function nearby(x, y){
   const N = CITY.card.nearby, G = data.nearby && data.nearby.groups; if (!N || !G) return '';
   const rows = N.nearest.map(([key, label]) => {

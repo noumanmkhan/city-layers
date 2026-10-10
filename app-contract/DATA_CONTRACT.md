@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (Chicago's Schools section and `attendance.geojson`; Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (`distance` unit, Chicago in miles with a half-mile Nearby radius; Chicago's Schools section and `attendance.geojson`; Nearby section and `nearby.json`; institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -87,6 +87,7 @@ How the website's search does it, for an app that wants to match:
 ## 4. city.json: the parts an app uses
 
 - `id`, `schema`, `title`, `locale` (`en-CA` or `en-US`, for number and date formatting).
+- `distance` (optional): the unit for distances shown on the card, `"km"` (the default when absent; Toronto) or `"mi"` (Chicago). Config values such as `card.nearby.radius` stay in metres either way.
 - `units.singular` / `units.plural`: what the city calls its units ("Neighbourhood",
   "community areas").
 - `footprint`: the id of the layer that outlines the city. A point outside it gets the
@@ -204,7 +205,8 @@ first matching feature in file order wins.
    Names are plain text (no official page yet). Append `trustees.note` to the footer.
    **Nearby** (`card.nearby`, both cities): for each `[key, label]` in `nearest`, the nearest point
    of `nearby.groups[key]` by straight-line distance: row `label`, value its name, subline the
-   distance ("600 m away"; to the nearest 50 m under a kilometre, then "1.8 km"). Then one row,
+   distance ("600 m away"; to the nearest 50 m under a kilometre, then "1.8 km". With `distance`
+   `"mi"`: "250 ft away" to the nearest 50 ft under 0.1 mile, then "0.4 mi", whole miles from 10). Then one row,
    label `within`, value the count of points of each `[key, one, many]` in `counts` within
    `radius` metres, "19 parks · 7 playgrounds …" (`one` when the count is 1). Footer `note`, always
    shown. Counts only: never a score, ranking or "best". The website shows this section between

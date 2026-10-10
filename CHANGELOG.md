@@ -6,8 +6,12 @@
 - **Schools** section on the card: the CPS elementary, middle (where one has its own area) and high
   school whose attendance area holds the spot, with grades, straight-line distance and a link to
   the CPS profile. CPS 2025–26 boundaries from the City's Data Portal. Names and grades only.
-- For the iOS app: new file `attendance.geojson`; new `card.schools` in `city.json`; contract
-  sections 3 and 5. Additive, schema stays 1.
+- **Miles**: card distances (Nearby and Schools) are in miles, feet when very close, and Nearby
+  counts what's within half a mile (805 m, about a 10-minute walk) instead of 1 km. Toronto stays
+  in kilometres.
+- For the iOS app: new file `attendance.geojson`; new `card.schools` and top-level `distance`
+  (`"mi"`) in `city.json`, with `card.nearby.radius` now 805; contract sections 3, 4 and 5.
+  Additive, schema stays 1.
 
 ## Version 1.1 (October 10, 2026)
 
