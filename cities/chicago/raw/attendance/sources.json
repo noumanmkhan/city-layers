@@ -1,0 +1,22 @@
+{
+ "elementary": {
+  "id": "x72b-38qv",
+  "name": "Chicago Public Schools - Elementary School Attendance Boundaries SY2526",
+  "updated": 1757449429
+ },
+ "middle": {
+  "id": "fyff-53xy",
+  "name": "Chicago Public Schools - Middle School Attendance Boundaries SY2526",
+  "updated": 1758754841
+ },
+ "high": {
+  "id": "xg7c-d8rm",
+  "name": "Chicago Public Schools - High School Attendance Boundaries SY2526",
+  "updated": 1757451282
+ },
+ "profiles": {
+  "id": "3dhs-m3w4",
+  "name": "Chicago Public Schools - School Profile Information SY2425",
+  "updated": "2024-11-10T23:30:17.000Z"
+ }
+}
