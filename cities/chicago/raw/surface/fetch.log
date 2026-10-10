@@ -1,0 +1,129 @@
+  got https://www.transitchicago.com/downloads/sch_data/google_transit.zip 68738293 bytes
+routes kept: 124
+feed 2026-09-11 - 2026-11-30 · week from 2026-10-12 · days {'wk': '2026-10-14', 'sat': '2026-10-17', 'sun': '2026-10-18'}
+trips in the week: 45598
+routes written: 124 · trams 0 · stops 10641
+  bus      1 Bronzeville/Union Station          shapes 2  midday/5h   2  1-5am 0
+  bus      2 Hyde Park Express                  shapes 4  midday/5h   0  1-5am 0
+  bus      3 King Drive                         shapes 2  midday/5h  30  1-5am 5
+  bus      4 Cottage Grove                      shapes 2  midday/5h  32  1-5am 20
+  bus      6 Jackson Park Express               shapes 2  midday/5h  26  1-5am 5
+  bus      7 Harrison                           shapes 3  midday/5h  20  1-5am 0
+  bus      8 Halsted                            shapes 2  midday/5h  35  1-5am 7
+  bus      9 Ashland                            shapes 6  midday/5h  46  1-5am 33
+  bus     10 Obama Presidential Center/Museum o shapes 2  midday/5h  10  1-5am 0
+  bus     11 Lincoln                            shapes 2  midday/5h  16  1-5am 0
+  bus     12 Roosevelt                          shapes 2  midday/5h  33  1-5am 13
+  bus     15 Jeffery Local                      shapes 2  midday/5h  22  1-5am 6
+  bus     18 16th/18th                          shapes 4  midday/5h  18  1-5am 0
+  bus     20 Madison                            shapes 5  midday/5h  42  1-5am 24
+  bus     21 Cermak                             shapes 2  midday/5h  24  1-5am 10
+  bus     22 Clark                              shapes 3  midday/5h  30  1-5am 21
+  bus     24 Wentworth                          shapes 5  midday/5h  17  1-5am 0
+  bus     26 South Shore Express                shapes 3  midday/5h  15  1-5am 3
+  bus     28 Stony Island                       shapes 7  midday/5h  20  1-5am 4
+  bus     29 State                              shapes 2  midday/5h  24  1-5am 4
+  bus     30 South Chicago                      shapes 3  midday/5h  16  1-5am 4
+  bus     31 31st                               shapes 2  midday/5h  11  1-5am 0
+  bus     34 South Michigan                     shapes 2  midday/5h  30  1-5am 17
+  bus     35 31st/35th                          shapes 3  midday/5h  31  1-5am 10
+  bus     36 Broadway                           shapes 3  midday/5h  23  1-5am 5
+  bus     37 Sedgwick                           shapes 2  midday/5h  13  1-5am 0
+  bus     39 Pershing                           shapes 2  midday/5h  13  1-5am 0
+  bus     43 43rd                               shapes 4  midday/5h  16  1-5am 0
+  bus     44 Wallace/Racine                     shapes 4  midday/5h  18  1-5am 4
+  bus     47 47th                               shapes 2  midday/5h  34  1-5am 16
+  bus     48 South Damen                        shapes 4  midday/5h   6  1-5am 0
+  bus     49 Western                            shapes 2  midday/5h  39  1-5am 21
+  bus     50 Damen                              shapes 2  midday/5h  26  1-5am 2
+  bus     51 51st                               shapes 2  midday/5h  17  1-5am 0
+  bus     52 Kedzie                             shapes 4  midday/5h  24  1-5am 7
+  bus     53 Pulaski                            shapes 3  midday/5h  37  1-5am 38
+  bus     54 Cicero                             shapes 2  midday/5h  34  1-5am 17
+  bus     55 Garfield                           shapes 2  midday/5h  35  1-5am 21
+  bus     56 Milwaukee                          shapes 2  midday/5h  21  1-5am 3
+  bus     57 Laramie                            shapes 2  midday/5h  20  1-5am 0
+  bus     59 59th/61st                          shapes 2  midday/5h  17  1-5am 0
+  bus     60 Blue Island/26th                   shapes 2  midday/5h  35  1-5am 18
+  bus     62 Archer                             shapes 2  midday/5h  25  1-5am 19
+  bus     63 63rd                               shapes 2  midday/5h  39  1-5am 27
+  bus     65 Grand                              shapes 5  midday/5h  23  1-5am 4
+  bus     66 Chicago                            shapes 4  midday/5h  46  1-5am 27
+  bus     67 67th/69th/71st                     shapes 6  midday/5h  34  1-5am 11
+  bus     68 Northwest Highway                  shapes 2  midday/5h  13  1-5am 2
+  bus     70 Division                           shapes 3  midday/5h  28  1-5am 6
+  bus     71 71st/South Shore                   shapes 2  midday/5h  26  1-5am 7
+  bus     72 North                              shapes 3  midday/5h  36  1-5am 18
+  bus     73 Armitage                           shapes 4  midday/5h  22  1-5am 6
+  bus     74 Fullerton                          shapes 4  midday/5h  38  1-5am 15
+  bus     75 74th/75th                          shapes 2  midday/5h  27  1-5am 1
+  bus     76 Diversey                           shapes 2  midday/5h  27  1-5am 8
+  bus     77 Belmont                            shapes 4  midday/5h  45  1-5am 19
+  bus     78 Montrose                           shapes 3  midday/5h  24  1-5am 3
+  bus     79 79th                               shapes 4  midday/5h  48  1-5am 38
+  bus     80 Irving Park                        shapes 3  midday/5h  30  1-5am 10
+  bus     81 Lawrence                           shapes 2  midday/5h  34  1-5am 23
+  bus     82 Kimball/Homan                      shapes 4  midday/5h  37  1-5am 17
+  bus     84 Peterson                           shapes 2  midday/5h  24  1-5am 0
+  bus     85 Central                            shapes 2  midday/5h  33  1-5am 12
+  bus     86 Narragansett/Ridgeland             shapes 2  midday/5h  17  1-5am 0
+  bus     87 87th                               shapes 4  midday/5h  31  1-5am 26
+  bus     88 Higgins                            shapes 2  midday/5h  14  1-5am 2
+  bus     8A South Halsted                      shapes 4  midday/5h  20  1-5am 0
+  bus     90 Harlem                             shapes 2  midday/5h  16  1-5am 4
+  bus     91 Austin                             shapes 2  midday/5h  21  1-5am 5
+  bus     92 Foster                             shapes 2  midday/5h  22  1-5am 4
+  bus     93 California/Dodge                   shapes 4  midday/5h  16  1-5am 5
+  bus     94 California                         shapes 2  midday/5h  25  1-5am 7
+  bus     95 95th                               shapes 4  midday/5h  43  1-5am 4
+  bus     96 Lunt                               shapes 4  midday/5h  10  1-5am 0
+  bus     97 Skokie                             shapes 2  midday/5h  15  1-5am 1
+  bus     N5 South Shore Night Bus              shapes 2  midday/5h   0  1-5am 15
+  bus     X4 Cottage Grove Express              shapes 2  midday/5h   7  1-5am 0
+  bus     X9 Ashland Express                    shapes 4  midday/5h  11  1-5am 3
+  bus    100 Jeffery Manor Express              shapes 4  midday/5h   1  1-5am 0
+  bus    103 West 103rd                         shapes 4  midday/5h  18  1-5am 2
+  bus    106 East 103rd                         shapes 4  midday/5h  21  1-5am 1
+  bus    108 Halsted/95th                       shapes 3  midday/5h   3  1-5am 0
+  bus    111 111th/King Drive                   shapes 2  midday/5h  20  1-5am 2
+  bus    112 Vincennes/111th                    shapes 2  midday/5h  19  1-5am 5
+  bus    115 Pullman/115th                      shapes 2  midday/5h  21  1-5am 3
+  bus    119 Michigan/119th                     shapes 2  midday/5h  25  1-5am 5
+  bus    120 Ogilvie/Streeterville Express      shapes 4  midday/5h   1  1-5am 0
+  bus    121 Union/Streeterville Express        shapes 4  midday/5h   1  1-5am 0
+  bus    124 Navy Pier                          shapes 2  midday/5h  11  1-5am 0
+  bus    125 Water Tower Express                shapes 3  midday/5h   1  1-5am 0
+  bus    126 Jackson                            shapes 4  midday/5h  20  1-5am 1
+  bus    134 Stockton/LaSalle Express           shapes 2  midday/5h   0  1-5am 0
+  bus    135 Clarendon/LaSalle Express          shapes 3  midday/5h   0  1-5am 0
+  bus    136 Sheridan/LaSalle Express           shapes 3  midday/5h   0  1-5am 0
+  bus    143 Stockton/Michigan Express          shapes 2  midday/5h   0  1-5am 0
+  bus    146 Inner Lake Shore/Michigan Express  shapes 4  midday/5h  30  1-5am 0
+  bus    147 Outer DuSable Lake Shore Express   shapes 3  midday/5h  28  1-5am 7
+  bus    148 Clarendon/Michigan Express         shapes 2  midday/5h   0  1-5am 0
+  bus    151 Sheridan                           shapes 2  midday/5h  27  1-5am 6
+  bus    152 Addison                            shapes 2  midday/5h  24  1-5am 4
+  bus    155 Devon                              shapes 2  midday/5h  26  1-5am 2
+  bus    156 LaSalle                            shapes 2  midday/5h  17  1-5am 0
+  bus    157 Streeterville/Taylor               shapes 2  midday/5h  20  1-5am 0
+  bus    165 West 65th                          shapes 2  midday/5h   1  1-5am 0
+  bus    169 69th/UPS Express                   shapes 2  midday/5h   0  1-5am 2
+  bus    171 U. of Chicago/Hyde Park            shapes 2  midday/5h  13  1-5am 0
+  bus    172 U. of Chicago/Kenwood              shapes 2  midday/5h  22  1-5am 0
+  bus    192 University of Chicago Hospitals Ex shapes 3  midday/5h   0  1-5am 0
+  bus    201 Central/Ridge                      shapes 2  midday/5h  10  1-5am 0
+  bus    206 Evanston Circulator                shapes 6  midday/5h   3  1-5am 0
+  bus    49B North Western                      shapes 2  midday/5h  28  1-5am 6
+  bus    52A South Kedzie                       shapes 2  midday/5h  18  1-5am 10
+  bus    53A South Pulaski                      shapes 4  midday/5h  23  1-5am 9
+  bus    54A North Cicero/Skokie Blvd.          shapes 2  midday/5h   3  1-5am 0
+  bus    54B South Cicero                       shapes 4  midday/5h  16  1-5am 2
+  bus    55A 55th/Austin                        shapes 2  midday/5h   0  1-5am 0
+  bus    55N 55th/Narragansett                  shapes 2  midday/5h  13  1-5am 0
+  bus    62H Archer/Harlem                      shapes 2  midday/5h  11  1-5am 1
+  bus    63W West 63rd                          shapes 4  midday/5h  14  1-5am 5
+  bus    81W West Lawrence                      shapes 2  midday/5h  12  1-5am 1
+  bus    85A North Central                      shapes 2  midday/5h  15  1-5am 0
+  bus    J14 Jeffery Jump                       shapes 3  midday/5h  31  1-5am 8
+  bus    X49 Western Express                    shapes 2  midday/5h   4  1-5am 0
+  bus   111A Pullman Shuttle                    shapes 2  midday/5h  15  1-5am 0
