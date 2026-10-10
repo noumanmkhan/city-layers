@@ -1,5 +1,5 @@
 {
- "fetched": "2026-10-10T10:54:23+00:00",
+ "fetched": "2026-10-10T11:05:07+00:00",
  "page": "List of tallest buildings in Toronto",
  "revid": 1378696540,
  "license": "CC BY-SA 4.0, Wikipedia contributors",
@@ -6669,8 +6669,8 @@
   },
   "Queen Church": {
    "address": "60 Queen Street East",
-   "lat": 43.653275,
-   "lon": -79.375677,
+   "lat": 43.6533112,
+   "lon": -79.3756573,
    "found": "60, Queen Street East, Downtown Yonge East, Toronto Centre, Toronto, Ontario, M5C 1R9, Canada"
   },
   "The United BLDG (481 University Avenue)": {
@@ -6690,12 +6690,6 @@
    "lat": 43.67089,
    "lon": -79.37601,
    "found": "591, Sherbourne Street, North St.James Town, Downtown, Toronto, Ontario, M4Y 1V5, Canada"
-  },
-  "4800 Yonge": {
-   "address": "4800 Yonge Street",
-   "lat": 43.7211959,
-   "lon": -79.4014145,
-   "found": "Yonge Street, Lawrence Park South, Don Valley West, Toronto, Ontario, M4R 1S4, Canada"
   },
   "170 Roehampton": {
    "address": "170 Roehampton Avenue",
