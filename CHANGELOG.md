@@ -3,6 +3,13 @@
 ## Since 1.1
 
 ### Both cities
+- **Every bus route** (October 10): the Bus routes chips are now *All*, *Frequent*, *Express* and
+  *Regular* (every other daytime route: 119 TTC, 80 CTA) in any mix, with *Overnight* on a row of its
+  own as before. All draws every daytime bus route (183 in Toronto, 123 in Chicago). Route shapes were
+  rebuilt so each route is a handful of lines instead of dozens of overlapping pieces (Chicago 8,472
+  pieces → 391, Toronto 2,838 → 652), which keeps All quick on phones and made the file smaller.
+  For the iOS app: family `reg` in `transit.json`, `allText`/`allNote` on the layer, `bus=all` in
+  links; contract sections 3 and 4. Additive, schema stays 1.
 - **Tap a route to see it alone** (October 10): tapping a streetcar or bus line, or its number badge,
   shows that route alone in ink with its stops while every other route fades; tapping another route
   switches to it, and the next tap anywhere else (or Escape) brings them all back without opening the

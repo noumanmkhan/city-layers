@@ -541,7 +541,10 @@ const BUS_DEFAULT = BUSES ? [BUSES.families[0][0]] : [];
 const busFams = new Set(BUS_DEFAULT);
 let routeGeo = null, routeGeoP = null;
 const busShows = r => [...busFams].some(k => r.f.includes(k)) && (!TRAMS || r.m !== 'tram' || r.day === false);
-const busKey = () => BUSES ? BUSES.families.map(f => f[0]).filter(k => busFams.has(k)).join('+') : '';
+// The families that can be combined (all but the solo ones); "All" means every one of them is on.
+const COMBO = BUSES ? BUSES.families.map(f => f[0]).filter(k => !(BUSES.solo || []).includes(k)) : [];
+const allOn = () => COMBO.length > 1 && COMBO.every(k => busFams.has(k));
+const busKey = () => !BUSES ? '' : allOn() ? 'all' : BUSES.families.map(f => f[0]).filter(k => busFams.has(k)).join('+');
 function ensureRoutes(){
   if (!TR) return Promise.resolve(null);
   return routeGeoP || (routeGeoP = get(TR.routes).then(d => { routeGeo = d; return d; }).catch(() => { routeGeoP = null; return null; }));
@@ -645,9 +648,9 @@ map.on('moveend', drawStops);
 function drawBusBox(){
   if (!BUSES) return;
   const box = document.getElementById('busbox'); if (!box) return;
-  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-pressed', String(busFams.has(b.dataset.fam))));
+  box.querySelectorAll('[data-fam]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.fam === 'all' ? allOn() : busFams.has(b.dataset.fam) && !allOn())));
   const fams = BUSES.families.filter(f => busFams.has(f[0])), n = data.transit ? data.transit.routes.filter(busShows).length : null;
-  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + fams.map(f => f[2]).join(' ') +
+  document.getElementById('busnote').textContent = (n != null ? fill(BUSES.countText, {n}) + '. ' : '') + (allOn() && BUSES.allNote ? BUSES.allNote : fams.map(f => f[2]).join(' ')) +
     (fams.length > 1 && BUSES.comboText ? ' ' + BUSES.comboText : '') + ' ' + BUSES.hint;
   const pk = document.getElementById('buspick');
   pk.hidden = !picked.size;
@@ -660,14 +663,17 @@ function drawBusBox(){
 }
 // A chip tap: a solo family replaces the rest; a combinable one toggles (and replaces a solo one).
 // At least one family stays on.
+// "All" turns every combinable family on. From All, tapping one family narrows to just it.
 function tapBusFam(f){
   const solo = BUSES.solo || [];
-  if (solo.includes(f) || [...busFams].some(k => solo.includes(k))) setBusFams([f]);
+  if (f === 'all') setBusFams(COMBO);
+  else if (solo.includes(f) || [...busFams].some(k => solo.includes(k)) || allOn()) setBusFams([f]);
   else if (!busFams.has(f)) setBusFams([...busFams, f]);
   else if (busFams.size > 1) setBusFams([...busFams].filter(k => k !== f));
 }
 function setBusFams(list){
   if (!BUSES) return;
+  if (list.includes('all')) list = COMBO;
   const ok = list.filter(f => BUSES.families.some(x => x[0] === f)), solo = BUSES.solo || [];
   const pickd = ok.some(f => solo.includes(f)) ? [ok.find(f => solo.includes(f))] : ok;
   if (!pickd.length) return;
@@ -750,9 +756,12 @@ CITY.groups.forEach(([title, items]) => {
     }
     if (it.kind === 'buses'){   // one family at a time, plus any routes picked from the card or search
       const box = document.createElement('div'); box.className = 'lensbox'; box.id = 'busbox'; box.hidden = !it.on;
-      box.innerHTML = '<div class="chips pick" role="group" aria-label="' + esc(it.name) + '">' + it.families.map(([f, short]) =>
-        '<button type="button" data-fam="' + f + '" aria-pressed="' + busFams.has(f) + '">' + esc(short) + '</button>').join('') +
-        '</div><div class="legend"><small id="busnote"></small></div><div class="buspick" id="buspick" hidden></div>';
+      // First row: All and the families that combine; then the solo ones (overnight) on their own row.
+      const chip = ([f, short]) => '<button type="button" data-fam="' + f + '" aria-pressed="false">' + esc(short) + '</button>';
+      const solo = it.solo || [], combo = it.families.filter(f => !solo.includes(f[0]));
+      box.innerHTML = '<div class="chips pick" role="group" aria-label="' + esc(it.name) + '">' + (it.allText && combo.length > 1 ? chip(['all', it.allText]) : '') + combo.map(chip).join('') +
+        '</div>' + (solo.length ? '<div class="chips pick" role="group" aria-label="' + esc(it.name) + '">' + it.families.filter(f => solo.includes(f[0])).map(chip).join('') + '</div>' : '') +
+        '<div class="legend"><small id="busnote"></small></div><div class="buspick" id="buspick" hidden></div>';
       grp.appendChild(box);
       box.querySelectorAll('[data-fam]').forEach(b => b.addEventListener('click', () => tapBusFam(b.dataset.fam)));
     }
