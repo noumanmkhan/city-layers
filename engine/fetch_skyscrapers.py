@@ -4,7 +4,8 @@ Usage: python3 engine/fetch_skyscrapers.py <city>   (reads cities/<city>/skyscra
 
 Run from GitHub Actions (.github/workflows/fetch-skyscrapers.yml): the sandbox can't reach Wikipedia.
 Saves every wikitable on the page with the section it sits under, each cell's text and the first article
-link in each cell, plus each linked article's coordinates and Wikidata id (from the Wikipedia API).
+link in each cell, plus each linked article's coordinates and Wikidata id (from the Wikipedia API), and the
+street addresses listed in skyscrapers.json geocoded with Nominatim (for towers with no coordinates).
 engine/skyscrapers.py turns this into docs/<city>/data/skyscrapers.geojson. Wikipedia text is CC BY-SA 4.0.
 """
 import json, os, re, sys, time, urllib.parse, urllib.request
@@ -105,6 +106,22 @@ for i in range(0, len(titles), 50):
     time.sleep(1)
 print('linked articles:', len(pages), 'with coordinates:', sum(1 for p in pages.values() if p['lat'] is not None))
 
+# Towers with no coordinates in the list or an article (mostly ones under construction): their street
+# addresses from skyscrapers.json, geocoded with OpenStreetMap Nominatim (one request a second, per its policy).
+geo = cfg.get('geocode', {})
+geocoded = {}
+for name, addr in (geo.get('addresses') or {}).items():
+    q = urllib.parse.urlencode({'q': addr + ', ' + geo['suffix'], 'format': 'jsonv2', 'limit': 1})
+    try:
+        with urllib.request.urlopen(urllib.request.Request('https://nominatim.openstreetmap.org/search?' + q, headers=UA), timeout=60) as r:
+            hits = json.loads(r.read())
+    except Exception as e:
+        print('  geocode failed', name, e); hits = []
+    geocoded[name] = {'address': addr, 'lat': hits and float(hits[0]['lat']), 'lon': hits and float(hits[0]['lon']),
+                      'found': hits and hits[0].get('display_name')}
+    print('  geocoded', name, '->', geocoded[name]['found'])
+    time.sleep(1.2)
+
 json.dump({'fetched': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'page': page['title'], 'revid': page['revid'],
-           'license': 'CC BY-SA 4.0, Wikipedia contributors', 'tables': tables, 'pages': pages},
+           'license': 'CC BY-SA 4.0, Wikipedia contributors', 'tables': tables, 'pages': pages, 'geocoded': geocoded},
           open(os.path.join(OUT, 'wiki.json'), 'w'), indent=1, ensure_ascii=False)

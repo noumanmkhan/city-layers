@@ -1,3 +1,31 @@
 {
- "wiki": "List of tallest buildings in Chicago"
+ "_about": "Skyscrapers layer (150 m+). engine/fetch_skyscrapers.py fetches the Wikipedia list; engine/skyscrapers.py builds docs/chicago/data/skyscrapers.geojson. Facts below are our own wording, checked against the sources noted.",
+ "wiki": "List of tallest buildings in Chicago",
+ "city": "Chicago",
+ "heights": ["ft", "m"],
+ "tables": {"built": "Tallest buildings", "uc": "Tallest under construction", "timeline": "Timeline of tallest buildings"},
+ "exclude": {},
+ "geocode": {
+  "suffix": "Chicago, Illinois, USA",
+  "addresses": {
+   "Halsted Pointe Phase 1": "901 North Halsted Street"
+  }
+ },
+ "use": {"Halsted Pointe Phase 1": "res"},
+ "open": {
+  "_rule": "A tower listed with this year's date is drawn hollow (under construction) unless marked true here: it must be open for occupancy, not just topped out. Checked October 10, 2026."
+ },
+ "aka": {
+  "Willis Tower": "Sears Tower",
+  "875 North Michigan Avenue": "John Hancock Center",
+  "Aon Center": "Standard Oil Building",
+  "St. Regis Chicago": "Vista Tower",
+  "Franklin Center": "AT&T Corporate Center"
+ },
+ "facts": {
+  "Willis Tower": ["Tallest building in the world for almost 25 years, 1974–1998", "Still called the Sears Tower by many Chicagoans"],
+  "875 North Michigan Avenue": ["The first building outside New York to reach 1,000 ft", "Tallest building completed anywhere in the world in the 1960s"],
+  "St. Regis Chicago": ["Tallest building in the world designed by a woman (Jeanne Gang)"],
+  "NEMA Chicago": ["Tallest apartment building in Chicago"]
+ }
 }

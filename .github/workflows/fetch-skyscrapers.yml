@@ -1,7 +1,8 @@
 name: Fetch skyscrapers
 # Downloads each city's "List of tallest buildings" from English Wikipedia (tables, linked articles'
 # coordinates and Wikidata ids) into cities/<city>/raw/skyscrapers/wiki.json and commits it to main.
-# The sandbox can't reach Wikipedia; Actions can. Runs when the fetch script changes on main, on the
+# The sandbox can't reach Wikipedia or Nominatim; Actions can. Runs when the fetch script or a city's
+# skyscrapers.json changes on main (addresses to geocode live there), on the
 # 1st of each month (towers open, lists change), or by hand from the Actions tab.
 # After it runs, rebuild with cities/<city>/run.sh (or python3 engine/skyscrapers.py <city>).
 on:
@@ -10,7 +11,7 @@ on:
     - cron: '17 6 1 * *'
   push:
     branches: [main]
-    paths: ['engine/fetch_skyscrapers.py', '.github/workflows/fetch-skyscrapers.yml']
+    paths: ['engine/fetch_skyscrapers.py', 'cities/*/skyscrapers.json', '.github/workflows/fetch-skyscrapers.yml']
 permissions:
   contents: write
 concurrency: fetch-skyscrapers

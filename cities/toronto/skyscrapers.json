@@ -1,3 +1,43 @@
 {
- "wiki": "List of tallest buildings in Toronto"
+ "_about": "Skyscrapers layer (150 m+). engine/fetch_skyscrapers.py fetches the Wikipedia list; engine/skyscrapers.py builds docs/toronto/data/skyscrapers.geojson. Facts below are our own wording, checked against the sources noted.",
+ "wiki": "List of tallest buildings in Toronto",
+ "city": "Toronto",
+ "heights": ["m", "ft"],
+ "tables": {"built": "Tallest buildings", "uc": "Tallest under construction", "timeline": "Timeline of tallest buildings"},
+ "exclude": {"CN Tower": "A communications tower, not a building; it stays on Landmarks."},
+ "geocode": {
+  "suffix": "Toronto, Ontario, Canada",
+  "addresses": {
+   "Concord Sky (385 Yonge Street)": "385 Yonge Street",
+   "Forma East Tower (266 King Street West)": "266 King Street West",
+   "8 Elm Street": "8 Elm Street",
+   "The Pemberton (33 Yorkville Avenue)": "33 Yorkville Avenue",
+   "Q Tower (200 Queens Quay West)": "200 Queens Quay West",
+   "Queen Church": "60 Queen Street East",
+   "The United BLDG (481 University Avenue)": "481 University Avenue",
+   "241 Church Street": "241 Church Street",
+   "The Bourne": "591 Sherbourne Street",
+   "4800 Yonge": "4800 Yonge Street",
+   "170 Roehampton": "170 Roehampton Avenue",
+   "Pinnacle Lakeside Tower 1 (215 Lake Shore Boulevard East)": "215 Lake Shore Boulevard East",
+   "49 Ontario Street West Tower": "49 Ontario Street"
+  }
+ },
+ "open": {
+  "_rule": "A tower listed with this year's date is drawn hollow (under construction) unless marked true here: it must be open for occupancy, not just topped out. Checked October 10, 2026.",
+  "SkyTower at Pinnacle One Yonge": false,
+  "Kipling Station Condos": false,
+  "CIBC Square II": true,
+  "400 King West": true,
+  "Burke Condominiums": true,
+  "Alias": true,
+  "The Charles at Church": true
+ },
+ "facts": {
+  "SkyTower at Pinnacle One Yonge": ["Tallest building in Canada, and the first in the country with more than 100 floors"],
+  "One Bloor West": ["Briefly Canada's tallest building, 2025–2026, until SkyTower overtook it"],
+  "First Canadian Place": ["Tallest building in Canada for half a century, 1975–2025", "When it opened, the tallest building in the world outside New York and Chicago"],
+  "The St. Regis Toronto": ["Tallest mixed-use building in Canada"],
+  "Aura": ["Tallest residential building in Canada"]
+ }
 }
