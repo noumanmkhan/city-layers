@@ -59,6 +59,9 @@
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to Union Station with no traffic, town by town. Shows in the regional view."},
       {"id": "cultural", "kind": "knownas", "file": "cultural", "name": "Known-as names", "note": "King West, Little Italy, the Junction…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Arenas, big parks, music venues, campuses"},
+      {"id": "unis", "kind": "places", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "note": "Public and nonprofit universities, one point per campus"},
+      {"id": "colleges", "kind": "places", "file": "institutions", "cat": "college", "name": "Colleges", "place": "College", "note": "Public college campuses; no private career colleges or partnership campuses"},
+      {"id": "hospitals", "kind": "places", "file": "institutions", "cat": "hospital", "name": "Hospitals", "place": "Hospital", "edText": "Emergency department", "note": "Public and OHIP-funded hospitals; a heavier ring marks an emergency department"},
       {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Heritage districts", "note": "29 Heritage Conservation Districts in force", "label": "{name}", "hover": "{name} Heritage Conservation District"}
     ]],
     ["Representation", [

@@ -2,7 +2,7 @@
 
 This is everything an app needs to rebuild the map's "What's here" card from the published
 data, without reading the website's code. The website (this repo) is the only producer; an app is
-a read-only consumer. Last updated October 10, 2026 (school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
+a read-only consumer. Last updated October 10, 2026 (institution points: the `places` layer kind and `institutions.geojson`; school boards in both cities: the `boards` layer kind, a School wards / School board row and trustee rows, with Chicago's leader and citywide president; earlier: map layers and `palette`, section 11; card title names the neighbourhood; profile facts; Chicago's To the Loop fields).
 
 ## 1. Ground rules
 
@@ -52,6 +52,7 @@ All coordinates are WGS84. GeoJSON positions are `[longitude, latitude]`; most o
 | `drive_grid.json` | Free-flow drive minutes to the hub on a ~1.5 km grid, outside the city. Section 6. |
 | `region_places.json` | Toronto only: ~470 named GTA communities. `[{name, muni, region, kind, at:[lon,lat]}]`. |
 | `region_areas.geojson` | Region/county outlines for the regional view. Not needed for the card. |
+| `institutions.geojson` | Universities, colleges and hospitals (points) for the `places` layers. `properties`: `name`, `cat` (`university`, `college`, `hospital`), `sub` (campus, network or ownership, optional), `ed` (true for a hospital with an emergency department). Curated by fixed rules (public or nonprofit only; see each city's `institutions.py`). Describe only: no ratings. |
 
 Properties that appear on many features: `name`, `lp` (a label point, `[lon, lat]`), `code`
 (a unit number), `num` (a ward or district number).
@@ -100,6 +101,9 @@ How the website's search does it, for an app that wants to match:
   map shows by default. Chicago has one board (`cps`, the Chicago Board of Education; `num` "1a" …
   "10b"), so there is nothing to pick. Templates on this layer can use `{short}` and `{long}` as well as the
   feature's fields.
+- A `places` layer draws the points of `file` whose `cat` equals the layer's `cat` (several layers
+  share `institutions.geojson`). `place` names the kind of place ("Hospital", "City College"),
+  `edText` the extra hover words for a feature with `ed`. Not part of the card.
 - `card`: `pills`, `facts`, `living`, `reps` (section 6).
 - `lens.file` (the profiles file) and `lens.lenses`: each has `key` (the profile field holding a
   tier id) and `tiers: [[tierId, label, colourVariable], …]`. Use the label; the colour variable
@@ -382,6 +386,10 @@ order, bottom to top, is the table's order.
 | `boards` | none | `--sbw`, 2.6, dashed 9 on / 4 off | `label` template, 11 pt bold, `--sbw` | 11 |
 | `knownas` | (points: label only) | | `name`, 11.5 pt semibold italic, `--cult`; `kind: "enclave"` uses `--cult-enclave` | 12 |
 
+- `places` layers (institutions): an icon per point, from zoom 11, the name beside it from zoom 14,
+  coloured `--in-university`, `--in-college`, `--in-hospital`; a hospital with `ed` gets a heavier
+  ring. Tapping one opens the card for that spot, titled with its name. The website's search also
+  suggests them by name.
 - A `boards` layer draws only the features of one board at a time, chosen by the user (a row of
   `short` names under the layer; the default is the first). The website keeps the choice in links
   as `board=school:tcdsb`.

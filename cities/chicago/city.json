@@ -51,6 +51,9 @@
       {"id": "drive", "kind": "suburbs", "name": "Suburban lens", "note": "Typical drive to State & Madison with no traffic, town by town. Shows in the regional view."},
       {"id": "knownas", "kind": "knownas", "file": "knownas", "name": "Known-as names", "note": "Wicker Park, Gold Coast, Pilsen, Wrigleyville…", "on": true},
       {"id": "landmarks", "kind": "landmarks", "file": "landmarks", "name": "Landmarks", "note": "Ballparks, lakefront parks, museums, campuses"},
+      {"id": "unis", "kind": "places", "file": "institutions", "cat": "university", "name": "Universities", "place": "University", "note": "Public and nonprofit universities with 1,000+ students, one point per campus"},
+      {"id": "colleges", "kind": "places", "file": "institutions", "cat": "college", "name": "City Colleges", "place": "City College", "note": "The 7 City Colleges of Chicago"},
+      {"id": "hospitals", "kind": "places", "file": "institutions", "cat": "hospital", "name": "ERs", "place": "Hospital with an ER", "edText": "Emergency department", "note": "Public and nonprofit hospitals with an emergency department"},
       {"id": "heritage", "kind": "districts", "file": "heritage", "name": "Landmark districts", "note": "59 Chicago Landmark Districts · boundaries as of 2012", "label": "{name}", "hover": "{name} Landmark District"}
     ]],
     ["Representation", [

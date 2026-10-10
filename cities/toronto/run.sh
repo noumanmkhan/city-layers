@@ -14,6 +14,7 @@ python3 go.py
 python3 profiles.py
 python3 ../../engine/facts.py toronto   # after profiles: what makes each unit stand out
 python3 heritage.py
+python3 institutions.py       # universities, colleges, hospitals: points, written straight to docs
 OUT=../../docs/toronto/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }
 simplify areas 10; simplify base 40; simplify bia 5; simplify boroughs 10; simplify heritage 3

@@ -110,7 +110,7 @@ map.on('zoomend', zoomClasses); zoomClasses();
 
 /* Label declutter: after each move, place labels in priority order and hide any that would overlap
    a label already placed. Icons stay; hovering an icon still shows its name. */
-const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
+const LABEL_PRIORITY = ['.lbl-focus', '.lm.t1 b', '.lm.t2 b', '.lm.inst b', '.lbl-stn.end', '.lbl-go.end', '.shield', '.lbl-stn', '.lbl-go', '.lbl-cult', '.lbl-area', '.lbl-nbhd', '.lbl-ward, .lbl-prov, .lbl-fed, .lbl-sbw', '.lbl-bia', '.lbl-hd'];
 let declutterQueued = false;
 function declutter(){
   declutterQueued = false;
@@ -163,6 +163,9 @@ function buildBase(fc, regions){
 }
 
 const GLYPH = {
+  university: '<path d="M12 3 1 9l11 6 9-4.9V16h2V9zM5 13.2V17l7 4 7-4v-3.8L12 17z"/>',
+  college: '<path d="M2 5.5c3.2-1.6 6.6-1.4 9.2.8V20c-2.6-2.1-6-2.3-9.2-.8zm20 0c-3.2-1.6-6.6-1.4-9.2.8V20c2.6-2.1 6-2.3 9.2-.8z"/>',
+  hospital: '<path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5z"/>',
   sports: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2.2a7.8 7.8 0 0 1 7.2 4.8H4.8A7.8 7.8 0 0 1 12 4.2zM4.8 15h14.4a7.8 7.8 0 0 1-14.4 0z"/>',
   park: '<path d="M12 2 6.5 9.5h3L5 16h6v6h2v-6h6l-4.5-6.5h3z"/>',
   music: '<path d="M20 2 8 4.3v11.1A3.5 3.5 0 1 0 10 18.5V9.2l8-1.5v5.7a3.5 3.5 0 1 0 2 3.1z"/>',
@@ -173,6 +176,7 @@ const GLYPH = {
 };
 const svg = d => '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + d + '</svg>';
 const SWATCH = {knownas: 'Aa', landmarks: svg(GLYPH.culture)};
+const swatchOf = it => it.kind === 'places' ? svg(GLYPH[it.cat] || GLYPH.culture) : (SWATCH[it.kind] || '');
 // Representation layers draw in one of three styles, by level of government.
 const OUTLINE = {city:'ward', state:'prov', national:'fed'};
 
@@ -249,6 +253,20 @@ const KINDS = {
       m.on('click', e => inspect(e.latlng));
       g.addLayer(m);
       g.addLayer(L.tooltip({permanent:true, direction:'right', offset:[6, 0], className:'lbl lbl-go' + (end || p.hub ? ' end' : '') + out, interactive:false}).setLatLng(ll(c)).setContent(esc(p.name)));
+    });
+    return g;
+  },
+  // Institutions by category (universities, colleges, hospitals…): one file, one layer per category.
+  // Icons from zoom 11, names from 14. Describe only: name and what it is, nothing ranked.
+  places: (it, fc) => {
+    const g = L.layerGroup();
+    fc.features.filter(f => f.properties.cat === it.cat).forEach(f => {
+      const p = f.properties;
+      const m = L.marker(ll(f.geometry.coordinates), {pane:'pts', keyboard:false, riseOnHover:true,
+        icon: L.divIcon({className:'', iconSize:[0, 0], html:'<span class="lm inst in-' + p.cat + (p.ed ? ' ed' : '') + '"><i>' + svg(GLYPH[p.cat] || GLYPH.culture) + '</i><b>' + esc(p.name) + '</b></span>'})});
+      hoverTip(m, fill(it.hover || '{name}[ · {sub}]', p) + (p.ed && it.edText ? ' · ' + it.edText : ''));
+      m.on('click', () => goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), p.name, false));
+      g.addLayer(m);
     });
     return g;
   },
@@ -395,7 +413,7 @@ const KINDS = {
   },
 };
 // Drawing order: the order layers join the map decides which sits on top within a pane.
-const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13})[it.kind];
+const RANK = it => ({fill: it.size === 'major' ? 0 : 1, lens: 2, suburbs: 2, patches: 3, districts: 3, units: 4, boards: 4.5, outline: {national: 5, state: 6, city: 7}[it.level], knownas: 8, streets: 9, highways: 10, rail: 11, metro: 12, landmarks: 13, places: 14})[it.kind];
 const ORDER = LAYERS.map(it => it).sort((a, b) => RANK(a) - RANK(b));
 
 /* ---------- panel ---------- */
@@ -406,7 +424,7 @@ CITY.groups.forEach(([title, items]) => {
   grp.innerHTML = '<h2>' + title + '</h2>';
   items.forEach(it => {
     const row = document.createElement('label'); row.className = 'row'; row.htmlFor = 'lyr-' + it.id;
-    row.innerHTML = '<span class="sw ' + it.id + ' k-' + (it.kind === 'outline' ? it.level : it.kind) + '">' + (SWATCH[it.kind] || '') + '</span><span class="tx"><b>' + it.name + '</b><span>' + it.note + '</span></span>' +
+    row.innerHTML = '<span class="sw ' + it.id + ' k-' + (it.kind === 'outline' ? it.level : it.kind) + (it.kind === 'places' ? ' in-' + it.cat : '') + '">' + swatchOf(it) + '</span><span class="tx"><b>' + it.name + '</b><span>' + it.note + '</span></span>' +
       '<input type="checkbox" id="lyr-' + it.id + '"' + (it.on ? ' checked' : '') + '><span class="tg" aria-hidden="true"></span>';
     grp.appendChild(row);
     row.querySelector('input').addEventListener('change', e => setLayer(it.id, e.target.checked));
@@ -928,6 +946,10 @@ function suggestions(text){
     const b = score([f.properties.name].concat(f.properties.aliases || []));
     if (b) out.push({s: b.s, rank: f.properties.tier, name: f.properties.name, sub: f.properties.catLabel + (b.alias ? ' · also called ' + b.alias : ''), go: () => goLandmark(f)});
   });
+  INSTITUTIONS().forEach(([it, f]) => {
+    const p = f.properties, b = score([p.name + (p.sub && /campus|centre|site/i.test(p.sub) ? ' ' + p.sub : ''), p.name]);
+    if (b) out.push({s: b.s, rank: 2.5, name: p.name, sub: [it.place || it.name, p.sub].filter(Boolean).join(' · '), go: () => goLandmark(f)});
+  });
   PLACES.forEach(p => {
     const b = score([p.name].concat(p.alt || []));
     if (b) out.push({s: b.s, rank: p.rank || p.community || (p.outside ? 4 : 3), name: p.name, sub: p.sub + (b.alias ? ' · also called ' + b.alias : ''), go: () => goPlace(p)});
@@ -940,6 +962,8 @@ function showSuggestions(list, more){
     (more ? '<li class="msg">' + esc(CITY.search.more) + '</li>' : ''));
   results.querySelectorAll('[data-sg]').forEach(b => b.addEventListener('click', () => window.__sg[+b.dataset.sg].go()));
 }
+// Institutions for search: every feature of every places-kind layer's own category.
+const INSTITUTIONS = () => LAYERS.filter(it => it.kind === 'places' && loaded[it.file]).flatMap(it => loaded[it.file].features.filter(f => f.properties.cat === it.cat).map(f => [it, f]));
 function goLandmark(f){ goTo(L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]), f.properties.name, true); }
 // A named area: frame the whole of it and pin its label point. Outside the city, switch to the region view first.
 function goPlace(p){

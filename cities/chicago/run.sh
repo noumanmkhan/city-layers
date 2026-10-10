@@ -10,6 +10,7 @@ python3 landmarks.py
 python3 profiles.py
 python3 ../../engine/facts.py chicago   # after profiles: what makes each unit stand out
 python3 heritage.py
+python3 institutions.py       # universities, City Colleges, ERs: points, written straight to docs
 OUT=../../docs/chicago/data
 simplify () { npx mapshaper -i "tmp/$1.geojson" -simplify interval="$2" keep-shapes -o "$OUT/$1.geojson" precision=0.00001 format=geojson -quiet; }
 npx mapshaper -i tmp/base.geojson -simplify interval=80 keep-shapes -filter-slivers min-area=20000m2 -o $OUT/base.geojson precision=0.00005 format=geojson -quiet
