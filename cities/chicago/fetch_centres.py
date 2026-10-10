@@ -5,16 +5,17 @@ Rule (agreed October 10, 2026): a "Community centre" on the card is publicly fun
 everyone, like Toronto's City-run centres. OpenStreetMap's community_centre tag mixes in churches,
 clubs and advocacy groups, so it is no longer used. Sources:
 
-  fieldhouses_page_N.html  Chicago Park District, Facilities: Fieldhouses (chicagoparkdistrict.com),
-                           every list page. The Park District is a public body; its fieldhouses run
-                           programs open to all. Current list, with addresses.
+  fieldhouses.json         Chicago Park District, Facilities: Fieldhouses (chicagoparkdistrict.com):
+                           name, page and address from every list page, placed by the U.S. Census
+                           Bureau's batch geocoder. The Park District is a public body; its fieldhouses
+                           run programs open to all. Current list.
   cpd_facilities.json      City Data Portal, CPD_Facilities (eix4-gf83): Park District facilities with
-                           positions, as of November 2016. Used to place the fieldhouses.
+                           positions, as of November 2016. A fallback for fieldhouses the geocoder misses.
   dfss_*.json              City Data Portal datasets from the Department of Family and Support Services
                            (community service centers, senior centers), found through the catalog.
   catalog.json             What the catalog searches returned, for checking.
 """
-import json, os, re, time, urllib.parse, urllib.request
+import csv, html, io, json, os, re, time, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'raw', 'nearby', 'centres'); os.makedirs(OUT, exist_ok=True)
@@ -32,17 +33,44 @@ def get(url, tries=4):
     return None
 
 
-# Park District fieldhouses: walk ?page=0.. until a page has no new facility links.
-seen, page = set(), 0
+# Park District fieldhouses: list pages ?page=0.. carry 8 cards each (name, link, address); walk them
+# until a page has no new cards. (Every page also repeats a full A-Z link list without addresses.)
+CARD = re.compile(r'<h3 class="facility--title">\s*<a href="([^"]+)"[^>]*><span[^>]*>([^<]+)</span>.*?href="https://google.com/maps\?q=([^"]+)"', re.S)
+cards, page = {}, 0
 while page < 60:
     body = get(f'https://www.chicagoparkdistrict.com/facilities/fieldhouses?page={page}')
     if not body: print('page', page, 'failed'); break
-    links = set(re.findall(rb'href="(/parks-facilities/[^"#?]+|/node/\d+)"', body))
-    new = links - seen
-    print('page', page, len(body), 'links', len(links), 'new', len(new))
-    open(os.path.join(OUT, f'fieldhouses_page_{page}.html'), 'wb').write(body)
+    got = CARD.findall(body.decode('utf-8', 'replace'))
+    new = [c for c in got if c[0] not in cards]
+    print('page', page, 'cards', len(got), 'new', len(new))
     if not new: break
-    seen |= links; page += 1; time.sleep(2)
+    for link, name, addr in new: cards[link] = {'link': link, 'name': html.unescape(name).strip(), 'address': html.unescape(addr).strip()}
+    page += 1; time.sleep(1)
+print('fieldhouses', len(cards))
+
+# Place them with the U.S. Census Bureau's batch geocoder (built for bulk lookups of U.S. addresses).
+rows = []
+for i, c in enumerate(cards.values()):
+    street, city, zipc = (c['address'].split(',') + ['', '', ''])[:3]
+    rows.append(f'{i},"{street.strip()}",Chicago,IL,{zipc.strip()}')
+boundary = 'cityLayersBoundary'
+parts = [f'--{boundary}\r\nContent-Disposition: form-data; name="benchmark"\r\n\r\nPublic_AR_Current\r\n',
+         f'--{boundary}\r\nContent-Disposition: form-data; name="addressFile"; filename="a.csv"\r\nContent-Type: text/csv\r\n\r\n' + '\n'.join(rows) + '\r\n',
+         f'--{boundary}--\r\n']
+req = urllib.request.Request('https://geocoding.geo.census.gov/geocoder/locations/addressbatch', data=''.join(parts).encode(),
+                             headers=dict(UA, **{'Content-Type': f'multipart/form-data; boundary={boundary}'}))
+try:
+    with urllib.request.urlopen(req, timeout=600) as r: res = r.read().decode('utf-8', 'replace')
+except Exception as e:
+    res = ''; print('geocoder failed', e)
+vals = list(cards.values())
+for line in csv.reader(io.StringIO(res)):
+    if len(line) >= 6 and line[2] == 'Match' and line[5]:
+        lon, lat = line[5].split(',')
+        vals[int(line[0])]['at'] = [round(float(lon), 5), round(float(lat), 5)]
+        vals[int(line[0])]['matched'] = line[4]
+print('geocoded', sum('at' in c for c in vals), 'of', len(vals))
+json.dump(vals, open(os.path.join(OUT, 'fieldhouses.json'), 'w'), indent=1, ensure_ascii=False)
 
 body = get(f'{PORTAL}/resource/eix4-gf83.json?$limit=10000')
 if body:
