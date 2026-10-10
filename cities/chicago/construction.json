@@ -1,0 +1,21 @@
+{
+  "_about": "Transit under construction (engine/construction.py, engine/closures.py). Lines are drawn from OpenStreetMap ways whose name matches 'match' (fetched by engine/fetch_construction.py). Stations come from 'stations': where the line crosses the named street ('cross', a street in streets.geojson). Only facts the owner has published go in 'opens'.",
+  "lat0": 41.85,
+  "lines": [
+    {"id": "rle", "name": "Red Line Extension", "short": "Red Line Extension", "mode": "subway", "color": "#C60C30",
+     "owner": "Chicago Transit Authority", "opens": "2030 (CTA)", "length": "5.5 miles, 4 stations",
+     "about": "Extends the Red Line south from 95th Street to 130th Street, mostly elevated alongside the Union Pacific tracks, with a new rail yard.",
+     "link": "https://www.transitchicago.com/rle/",
+     "match": "^Red Line Exten[st]ion$",
+     "stations": [{"name": "103rd Street", "cross": "103rd St"}, {"name": "111th Street", "cross": "111th St"},
+                  {"name": "Michigan Avenue", "cross": "Michigan Ave"}, {"name": "130th Street", "cross": "130th St"}]}
+  ],
+  "upgrades": {"file": "cta_lines", "field": "name", "only": ["Red Line", "Purple Line"], "label": "Red and Purple Modernization ({name})"},
+  "existing": [],
+  "closures": {
+    "tz": "America/Chicago",
+    "near": 500,
+    "otherLabel": "Other CTA work",
+    "keywords": ["RLE", "RPM", "Red Line Extension", "Red Purple Modernization", "Red and Purple Modernization"]
+  }
+}

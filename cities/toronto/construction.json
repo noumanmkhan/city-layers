@@ -1,0 +1,38 @@
+{
+  "_about": "Transit under construction (engine/construction.py, engine/closures.py). Lines are drawn from OpenStreetMap ways whose name matches 'match' (fetched by engine/fetch_construction.py); a line with no OSM geometry yet is left off. Stations come from OSM where mapped, otherwise from 'stations': where the line crosses the named street ('cross', a street in streets.geojson). Only facts the owner has published go in 'opens'.",
+  "lat0": 43.7,
+  "lines": [
+    {"id": "ontario", "name": "Ontario Line", "short": "Ontario Line", "mode": "subway", "color": "#1F8FB8",
+     "owner": "Metrolinx", "opens": "Early 2030s (Metrolinx estimate)", "length": "15.6 km, 15 stations",
+     "about": "A new subway from Exhibition Place through downtown to Don Valley station at Eglinton and Don Mills, partly elevated through Thorncliffe Park and Flemingdon Park.",
+     "link": "https://www.metrolinx.com/en/projects-and-programs/ontario-line",
+     "match": "^Ontario Line$", "stationsFromOsm": true},
+    {"id": "l2east", "name": "Line 2 East extension", "short": "Line 2 extension", "mode": "subway", "color": "#00A64F",
+     "owner": "Metrolinx; the TTC will run it", "length": "7.8 km, 3 stations",
+     "about": "Extends Line 2 Bloor–Danforth north-east from Kennedy to Sheppard Avenue and McCowan Road, replacing the closed Line 3.",
+     "link": "https://www.metrolinx.com/en/projects-and-programs/scarborough-subway-extension",
+     "match": "^Line 2 Bloor-Danforth$",
+     "stations": [{"name": "Lawrence–McCowan", "cross": "Lawrence Ave E"}, {"name": "Scarborough Centre", "cross": "Ellesmere Rd"}, {"name": "Sheppard–McCowan", "cross": "Sheppard Ave E"}]},
+    {"id": "eglwest", "name": "Eglinton Crosstown West extension", "short": "Line 5 extension", "mode": "lrt", "color": "#F58426",
+     "owner": "Metrolinx; the TTC will run it", "length": "About 9 km, 7 stops",
+     "about": "Extends Line 5 Eglinton west from Mount Dennis to Renforth Drive, mostly underground.",
+     "link": "https://www.metrolinx.com/en/projects-and-programs/eglinton-crosstown-west-extension",
+     "match": "^Eglinton LRT West Extension$",
+     "stations": [{"name": "Scarlett", "cross": "Scarlett Rd"}, {"name": "Jane", "cross": "Jane St"}, {"name": "Royal York", "cross": "Royal York Rd"},
+                  {"name": "Islington", "cross": "Islington Ave"}, {"name": "Kipling", "cross": "Kipling Ave"}, {"name": "Martin Grove", "cross": "Martin Grove Rd"}, {"name": "Renforth", "cross": "Renforth Dr"}]},
+    {"id": "hazel", "name": "Hazel McCallion Line", "short": "Hazel McCallion Line", "mode": "lrt", "color": "#7E57C2",
+     "owner": "Metrolinx", "length": "18 km, 19 stops",
+     "about": "Light rail along Hurontario Street from Port Credit GO in Mississauga to the Brampton Gateway Terminal.",
+     "link": "https://www.metrolinx.com/en/projects-and-programs/hazel-mccallion-line",
+     "match": "^Hurontario LRT$", "stationsFromOsm": true}
+  ],
+  "upgrades": {"file": "go_lines", "field": "name", "label": "GO Expansion ({name} line)"},
+  "existing": ["subway_lines"],
+  "closures": {
+    "tz": "America/Toronto",
+    "near": 500,
+    "otherLabel": "Other Metrolinx work",
+    "contractors": ["Ontario Transit Group", "Trillium Guideway", "Green Infrastructure Partners", "Pape North Connect", "Leaside Valley Builders",
+                    "Leaside Vallley Builders", "West End Connectors", "Scarborough Transit Connect", "ONxpress", "Mosaic Transit Group"]
+  }
+}
