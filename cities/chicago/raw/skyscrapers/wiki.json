@@ -1,0 +1,7159 @@
+{
+ "fetched": "2026-10-10T10:51:23+00:00",
+ "page": "List of tallest buildings in Chicago",
+ "revid": 1376906461,
+ "license": "CC BY-SA 4.0, Wikipedia contributors",
+ "tables": [
+  {
+   "section": "Tallest buildings",
+   "columns": [
+    "Rank",
+    "Name",
+    "Image",
+    "Location",
+    "Heightft (m)",
+    "Floors",
+    "Year",
+    "Purpose",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "Willis Tower",
+      "link": "Willis Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′44″N 87°38′9″W / 41.87889°N 87.63583°W / 41.87889; -87.63583 (Willis Tower)",
+      "link": null
+     },
+     {
+      "text": "1,451 (442)",
+      "link": null
+     },
+     {
+      "text": "110",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Formerly known as Sears Tower, a name it is still commonly called today; 3rd-tallest building in the United States, 26th-tallest building in the world; tallest building in the world from 1974 until 1998. Also the tallest building in the Midwest. Tallest building completed in Chicago in the 1970s.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "2",
+      "link": null
+     },
+     {
+      "text": "Trump International Hotel and Tower",
+      "link": "Trump International Hotel and Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′20″N 87°37′35″W / 41.88889°N 87.62639°W / 41.88889; -87.62639 (Trump International Hotel and Tower)",
+      "link": null
+     },
+     {
+      "text": "1,388 (423)",
+      "link": null
+     },
+     {
+      "text": "98",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "7th-tallest building in the United States; tallest building completed in Chicago in the 2000s. A mixed-use residential and hotel skyscraper.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "3",
+      "link": null
+     },
+     {
+      "text": "St. Regis Chicago",
+      "link": "St. Regis Chicago"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′14″N 87°37′02″W / 41.88722°N 87.61722°W / 41.88722; -87.61722 (St. Regis Chicago)",
+      "link": null
+     },
+     {
+      "text": "1,198 (363)",
+      "link": null
+     },
+     {
+      "text": "101",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Formerly known as the Wanda Vista Tower; 11th-tallest building in the United States, and the tallest skyscraper in the world designed by a woman. It is the newest supertall skyscraper in Chicago. Tallest building completed in Chicago in the 2020s. A mixed-use residential and hotel skyscraper.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "4",
+      "link": null
+     },
+     {
+      "text": "Aon Center",
+      "link": "Aon Center (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′7″N 87°37′17″W / 41.88528°N 87.62139°W / 41.88528; -87.62139 (Aon Center)",
+      "link": null
+     },
+     {
+      "text": "1,136 (346)",
+      "link": null
+     },
+     {
+      "text": "83",
+      "link": null
+     },
+     {
+      "text": "1973",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "12th-tallest building in the U.S.; formerly known as the Standard Oil Building. Was the tallest building in Chicago before being surpassed by the Willis Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "5",
+      "link": null
+     },
+     {
+      "text": "875 North Michigan Avenue",
+      "link": "875 North Michigan Avenue"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′55.5″N 87°37′23″W / 41.898750°N 87.62306°W / 41.898750; -87.62306 (John Hancock Center)",
+      "link": null
+     },
+     {
+      "text": "1,127 (344)",
+      "link": null
+     },
+     {
+      "text": "100",
+      "link": null
+     },
+     {
+      "text": "1969",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Previously known as John Hancock Center; 13th-tallest building in the United States; tallest building completed in the world in the 1960s; first building in the world outside of New York City to rise at least 1,000 feet (305 m). A mixed-use residential and office skyscraper. Was the tallest building in Chicago before being surpassed by the Aon Center.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "6",
+      "link": null
+     },
+     {
+      "text": "Franklin Center",
+      "link": "Franklin Center (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′49.5″N 87°38′5″W / 41.880417°N 87.63472°W / 41.880417; -87.63472 (AT&T Corporate Center)",
+      "link": null
+     },
+     {
+      "text": "1,007 (307)",
+      "link": null
+     },
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1989",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Formerly known as the AT&T Corporate Center; 27th-tallest building in the United States; tallest building completed in Chicago in the 1980s.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "7",
+      "link": null
+     },
+     {
+      "text": "Two Prudential Plaza",
+      "link": "Two Prudential Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′8″N 87°37′22″W / 41.88556°N 87.62278°W / 41.88556; -87.62278 (Two Prudential Plaza)",
+      "link": null
+     },
+     {
+      "text": "995 (303)",
+      "link": null
+     },
+     {
+      "text": "64",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "30th-tallest building in the United States; tallest building completed in Chicago in the 1990s.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "8",
+      "link": null
+     },
+     {
+      "text": "One Chicago East Tower",
+      "link": "One Chicago Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′46″N 87°37′43″W / 41.8960713°N 87.628645°W / 41.8960713; -87.628645 (215 West)",
+      "link": null
+     },
+     {
+      "text": "973 (296)",
+      "link": null
+     },
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "37th-tallest building in the United States. Topped out in July 2021.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "9",
+      "link": null
+     },
+     {
+      "text": "311 South Wacker Drive",
+      "link": "311 South Wacker Drive"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′39″N 87°38′8″W / 41.87750°N 87.63556°W / 41.87750; -87.63556 (311 South Wacker Drive)",
+      "link": null
+     },
+     {
+      "text": "961 (293)",
+      "link": null
+     },
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "39th-tallest building in the United States.",
+      "link": "List of tallest buildings in the United States"
+     }
+    ],
+    [
+     {
+      "text": "10",
+      "link": null
+     },
+     {
+      "text": "NEMA Chicago",
+      "link": "NEMA (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′1″N 87°37′23″W / 41.86694°N 87.62306°W / 41.86694; -87.62306 (NEMA Chicago)",
+      "link": null
+     },
+     {
+      "text": "896 (273)",
+      "link": null
+     },
+     {
+      "text": "76",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Tallest apartment building in Chicago. Tallest building completed in Chicago in the 2010s.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "11",
+      "link": null
+     },
+     {
+      "text": "900 North Michigan",
+      "link": "900 North Michigan"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′59″N 87°37′30″W / 41.89972°N 87.62500°W / 41.89972; -87.62500 (900 North Michigan)",
+      "link": null
+     },
+     {
+      "text": "871 (266)",
+      "link": null
+     },
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "1989",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "A mixed-use skyscraper with office, residential, and hotel components.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "12",
+      "link": null
+     },
+     {
+      "text": "Chase Tower",
+      "link": "Chase Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′53.5″N 87°37′48″W / 41.881528°N 87.63000°W / 41.881528; -87.63000 (Chase Tower)",
+      "link": null
+     },
+     {
+      "text": "869 (264.8)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "1969",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as First National Plaza. Replaced the Morrison Hotel, the tallest building to ever have been demolished in Chicago. Tallest building in Chicago briefly in 1969, before being surpassed by 875 North Michigan Avenue.",
+      "link": "Morrison Hotel (Chicago)"
+     }
+    ],
+    [
+     {
+      "text": "13",
+      "link": null
+     },
+     {
+      "text": "Water Tower Place",
+      "link": "Water Tower Place"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′52.5″N 87°37′20.5″W / 41.897917°N 87.622361°W / 41.897917; -87.622361 (Water Tower Place)",
+      "link": null
+     },
+     {
+      "text": "859 (261.9)",
+      "link": null
+     },
+     {
+      "text": "74",
+      "link": null
+     },
+     {
+      "text": "1976",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Currently a mixed-use skyscraper with residential and retail components and a Ritz-Carlton hotel.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "14",
+      "link": null
+     },
+     {
+      "text": "Aqua",
+      "link": "Aqua (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°37′12″W / 41.88639°N 87.62000°W / 41.88639; -87.62000 (Aqua)",
+      "link": null
+     },
+     {
+      "text": "859 (261.8)",
+      "link": null
+     },
+     {
+      "text": "82",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Currently the second-tallest building in the world designed by a female-led architectural firm; first skyscraper in Chicago to contain a hotel, condominiums, apartments and retail space.",
+      "link": "List of tallest buildings designed by women"
+     }
+    ],
+    [
+     {
+      "text": "15",
+      "link": null
+     },
+     {
+      "text": "400 Lake Shore Drive North Tower",
+      "link": "400 Lake Shore Drive"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′23.53″N 87°36′53.6″W / 41.8898694°N 87.614889°W / 41.8898694; -87.614889 (400 Lake Shore North Tower)",
+      "link": null
+     },
+     {
+      "text": "850 (259.1)",
+      "link": null
+     },
+     {
+      "text": "72",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Approved on December 14, 2020. Groundbreaking ceremony was held in June 2024. Construction reached 38th floor in July 2025. Topped off in April 2026.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "16",
+      "link": null
+     },
+     {
+      "text": "Park Tower",
+      "link": "Park Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′49.5″N 87°37′30.5″W / 41.897083°N 87.625139°W / 41.897083; -87.625139 (Park Tower)",
+      "link": null
+     },
+     {
+      "text": "844 (257)",
+      "link": null
+     },
+     {
+      "text": "67",
+      "link": null
+     },
+     {
+      "text": "2000",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "A mixed-use residential and hotel skyscraper.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "17",
+      "link": null
+     },
+     {
+      "text": "One Bennett Park",
+      "link": "One Bennett Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′30″N 87°36′56.4″W / 41.89167°N 87.615667°W / 41.89167; -87.615667 (One Bennett Park)",
+      "link": null
+     },
+     {
+      "text": "837 (255)",
+      "link": null
+     },
+     {
+      "text": "69",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "18",
+      "link": null
+     },
+     {
+      "text": "Salesforce Tower Chicago",
+      "link": "Wolf Point South Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′15.4″N 87°38′15.7″W / 41.887611°N 87.637694°W / 41.887611; -87.637694 (Salesforce Tower Chicago)",
+      "link": null
+     },
+     {
+      "text": "835 (255)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Formerly known as Wolf Point South Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "19",
+      "link": null
+     },
+     {
+      "text": "The Legacy at Millennium Park",
+      "link": "Legacy at Millennium Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′53″N 87°37′32″W / 41.88139°N 87.62556°W / 41.88139; -87.62556 (The Legacy at Millennium Park)",
+      "link": null
+     },
+     {
+      "text": "822 (251)",
+      "link": null
+     },
+     {
+      "text": "73",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "20",
+      "link": null
+     },
+     {
+      "text": "110 North Wacker",
+      "link": "110 North Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′1″N 87°38′15″W / 41.88361°N 87.63750°W / 41.88361; -87.63750 (110 North Wacker Drive)",
+      "link": null
+     },
+     {
+      "text": "814 (248)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "21",
+      "link": null
+     },
+     {
+      "text": "1000M",
+      "link": "1000M"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′11.7″N 87°37′28.5″W / 41.869917°N 87.624583°W / 41.869917; -87.624583 (1000M)",
+      "link": null
+     },
+     {
+      "text": "805 (245)",
+      "link": null
+     },
+     {
+      "text": "73",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Construction was temporarily halted in June 2020 due to funding issues and COVID-19 concerns; a revised design received city approval in June 2021 and construction resumed in December 2021. Topped out in July 2023.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "22",
+      "link": null
+     },
+     {
+      "text": "300 North LaSalle",
+      "link": "300 North LaSalle"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′17.5″N 87°37′59″W / 41.888194°N 87.63306°W / 41.888194; -87.63306 (300 North LaSalle)",
+      "link": null
+     },
+     {
+      "text": "784 (239)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "23",
+      "link": null
+     },
+     {
+      "text": "Three First National Plaza",
+      "link": "Three First National Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°37′50″W / 41.88222°N 87.63056°W / 41.88222; -87.63056 (Three First National Plaza)",
+      "link": null
+     },
+     {
+      "text": "767 (234)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "1981",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known by its address, 70 West Madison.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "24",
+      "link": null
+     },
+     {
+      "text": "Grant Thornton Tower",
+      "link": "Grant Thornton Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5″N 87°37′50″W / 41.88472°N 87.63056°W / 41.88472; -87.63056 (Chicago Title and Trust Center)",
+      "link": null
+     },
+     {
+      "text": "755 (230)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known by its address, 161 North Clark.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "25",
+      "link": null
+     },
+     {
+      "text": "Blue Cross Blue Shield Tower",
+      "link": "Blue Cross Blue Shield Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5″N 87°37′12″W / 41.88472°N 87.62000°W / 41.88472; -87.62000 (Blue Cross Blue Shield Tower)",
+      "link": null
+     },
+     {
+      "text": "744 (227)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "The building was originally built in 1997 at 33 stories and a height of 411 feet (125.3 m). In 2010, 21 floors were added in a vertical expansion, along with 3 below-ground floors.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "26",
+      "link": null
+     },
+     {
+      "text": "River Point",
+      "link": "River Point"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′9.3″N 87°38′21.8″W / 41.885917°N 87.639389°W / 41.885917; -87.639389 (River Point)",
+      "link": null
+     },
+     {
+      "text": "732 (223)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "27",
+      "link": null
+     },
+     {
+      "text": "Olympia Centre",
+      "link": "Olympia Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′47″N 87°37′24″W / 41.89639°N 87.62333°W / 41.89639; -87.62333 (Olympia Centre)",
+      "link": null
+     },
+     {
+      "text": "731 (223)",
+      "link": null
+     },
+     {
+      "text": "63",
+      "link": null
+     },
+     {
+      "text": "1986",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use office and residential skyscraper.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "28",
+      "link": null
+     },
+     {
+      "text": "BMO Tower",
+      "link": "BMO Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′38″N 87°38′24″W / 41.87722°N 87.64000°W / 41.87722; -87.64000 (BMO Tower)",
+      "link": null
+     },
+     {
+      "text": "729 (222)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "29",
+      "link": null
+     },
+     {
+      "text": "One Museum Park",
+      "link": "One Museum Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′1.5″N 87°37′17″W / 41.867083°N 87.62139°W / 41.867083; -87.62139 (One Museum Park)",
+      "link": null
+     },
+     {
+      "text": "726 (221)",
+      "link": null
+     },
+     {
+      "text": "62",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "30",
+      "link": null
+     },
+     {
+      "text": "150 North Riverside",
+      "link": "150 North Riverside"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′07″N 87°38′18.5″W / 41.88528°N 87.638472°W / 41.88528; -87.638472 (150 North Riverside)",
+      "link": null
+     },
+     {
+      "text": "724 (221)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building in the city west of the Chicago River.",
+      "link": "Chicago River"
+     }
+    ],
+    [
+     {
+      "text": "31",
+      "link": null
+     },
+     {
+      "text": "330 North Wabash",
+      "link": "330 North Wabash"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′19″N 87°37′39″W / 41.88861°N 87.62750°W / 41.88861; -87.62750 (330 North Wabash)",
+      "link": null
+     },
+     {
+      "text": "695 (212)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "1972",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Also known as the IBM Building, and formerly as AMA Plaza. Originally an office building. Currently a mixed-use office and hotel skyscraper.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "Waldorf Astoria Chicago",
+      "link": "Waldorf Astoria Chicago"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′59″N 87°37′39″W / 41.89972°N 87.62750°W / 41.89972; -87.62750 (Elysian)",
+      "link": null
+     },
+     {
+      "text": "686 (209)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use residential and hotel building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "33",
+      "link": null
+     },
+     {
+      "text": "111 South Wacker Drive",
+      "link": "111 South Wacker Drive"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′49″N 87°38′10.5″W / 41.88028°N 87.636250°W / 41.88028; -87.636250 (111 South Wacker Drive)",
+      "link": null
+     },
+     {
+      "text": "681 (208)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "34",
+      "link": null
+     },
+     {
+      "text": "181 West Madison Street",
+      "link": "181 West Madison Street"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′53.5″N 87°38′00″W / 41.881528°N 87.63333°W / 41.881528; -87.63333 (181 West Madison Street)",
+      "link": null
+     },
+     {
+      "text": "680 (207)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "71 South Wacker",
+      "link": "71 South Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′51″N 87°38′10″W / 41.88083°N 87.63611°W / 41.88083; -87.63611 (Hyatt Center)",
+      "link": null
+     },
+     {
+      "text": "679 (207)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "One Magnificent Mile",
+      "link": "One Magnificent Mile"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°54′2″N 87°37′29″W / 41.90056°N 87.62472°W / 41.90056; -87.62472 (One Magnificent Mile)",
+      "link": null
+     },
+     {
+      "text": "673 (205)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "1983",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use office and residential building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "340 on the Park",
+      "link": "340 on the Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5.5″N 87°37′8″W / 41.884861°N 87.61889°W / 41.884861; -87.61889 (340 on the Park)",
+      "link": null
+     },
+     {
+      "text": "672 (205)",
+      "link": null
+     },
+     {
+      "text": "64",
+      "link": null
+     },
+     {
+      "text": "2007",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "77 West Wacker Drive",
+      "link": "77 West Wacker Drive"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11.5″N 87°37′50″W / 41.886528°N 87.63056°W / 41.886528; -87.63056 (77 West Wacker Drive)",
+      "link": null
+     },
+     {
+      "text": "668 (204)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Formerly known as the United Building and the R.R. Donnelley Building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "Wolf Point East Tower",
+      "link": "Wolf Point East Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′16.1″N 87°38′12.4″W / 41.887806°N 87.636778°W / 41.887806; -87.636778",
+      "link": null
+     },
+     {
+      "text": "668 (204)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "One North Wacker",
+      "link": "One North Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°38′10″W / 41.88222°N 87.63611°W / 41.88222; -87.63611 (One North Wacker)",
+      "link": null
+     },
+     {
+      "text": "652 (199)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2001",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as the UBS Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "Richard J. Daley Center",
+      "link": "Richard J. Daley Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′2.5″N 87°37′49″W / 41.884028°N 87.63028°W / 41.884028; -87.63028 (Richard J. Daley Center)",
+      "link": null
+     },
+     {
+      "text": "648 (198)",
+      "link": null
+     },
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "1965",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest flat-roofed building in the world that contains fewer than 40 floors. Was the tallest building in Chicago before being surpassed by Chase Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "55 East Erie Street",
+      "link": "55 East Erie Street"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′38″N 87°37′33″W / 41.89389°N 87.62583°W / 41.89389; -87.62583 (55 East Erie Street)",
+      "link": null
+     },
+     {
+      "text": "647 (197)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "2004",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "43",
+      "link": null
+     },
+     {
+      "text": "Lake Point Tower",
+      "link": "Lake Point Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′30″N 87°36′44″W / 41.89167°N 87.61222°W / 41.89167; -87.61222 (Lake Point Tower)",
+      "link": null
+     },
+     {
+      "text": "645 (197)",
+      "link": null
+     },
+     {
+      "text": "70",
+      "link": null
+     },
+     {
+      "text": "1968",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "The only tower in the city that sits on the east side of Lake Shore Drive.",
+      "link": "Lake Shore Drive"
+     }
+    ],
+    [
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "River East Center",
+      "link": "River East Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′29″N 87°37′5.5″W / 41.89139°N 87.618194°W / 41.89139; -87.618194 (River East Center)",
+      "link": null
+     },
+     {
+      "text": "644 (196)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2001",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "Grand Plaza I",
+      "link": "Grand Plaza I"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′31″N 87°37′43″W / 41.89194°N 87.62861°W / 41.89194; -87.62861 (Grand Plaza I)",
+      "link": null
+     },
+     {
+      "text": "641 (195)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2003",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "155 North Wacker",
+      "link": "155 North Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5″N 87°38′11.5″W / 41.88472°N 87.636528°W / 41.88472; -87.636528 (155 North Wacker)",
+      "link": null
+     },
+     {
+      "text": "638 (195)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "Leo Burnett Building",
+      "link": "Leo Burnett Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°37′45″W / 41.88639°N 87.62917°W / 41.88639; -87.62917 (Leo Burnett Building)",
+      "link": null
+     },
+     {
+      "text": "635 (194)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "1989",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "The Heritage at Millennium Park",
+      "link": "The Heritage at Millennium Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′3″N 87°37′32″W / 41.88417°N 87.62556°W / 41.88417; -87.62556 (The Heritage at Millennium Park)",
+      "link": null
+     },
+     {
+      "text": "631 (192)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "OneEleven",
+      "link": "OneEleven"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11.5″N 87°37′53″W / 41.886528°N 87.63139°W / 41.886528; -87.63139 (OneEleven)",
+      "link": null
+     },
+     {
+      "text": "630 (192)",
+      "link": null
+     },
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Formally 111 W. Wacker and Waterview Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "NBC Tower",
+      "link": "NBC Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′24″N 87°37′16″W / 41.89000°N 87.62111°W / 41.89000; -87.62111 (NBC Tower)",
+      "link": null
+     },
+     {
+      "text": "627 (191)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "1989",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "353 North Clark",
+      "link": "353 North Clark"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′20″N 87°37′48″W / 41.88889°N 87.63000°W / 41.88889; -87.63000 (353 North Clark)",
+      "link": null
+     },
+     {
+      "text": "624 (190)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "Essex on the Park",
+      "link": "Essex on the Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′17.4″N 87°37′28.9″W / 41.871500°N 87.624694°W / 41.871500; -87.624694 (Essex on the Park)",
+      "link": null
+     },
+     {
+      "text": "620 (189)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "Millennium Centre",
+      "link": "Millennium Centre (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′35″N 87°37′45″W / 41.89306°N 87.62917°W / 41.89306; -87.62917 (Millennium Centre)",
+      "link": null
+     },
+     {
+      "text": "610 (186)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2003",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "Chicago Place",
+      "link": "Chicago Place"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′43″N 87°37′30.5″W / 41.89528°N 87.625139°W / 41.89528; -87.625139 (Chicago Place)",
+      "link": null
+     },
+     {
+      "text": "608 (185)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "1991",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use residential and office building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "Chicago Board of Trade Building",
+      "link": "Chicago Board of Trade Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′39.5″N 87°37′56″W / 41.877639°N 87.63222°W / 41.877639; -87.63222 (Chicago Board of Trade Building)",
+      "link": null
+     },
+     {
+      "text": "605 (184)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "1930",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "One of the tallest Art Deco buildings in the world; tallest building completed in Chicago in the 1930s. Was the tallest building in Chicago before being surpassed by the Richard J. Daley Center.",
+      "link": "Art Deco"
+     }
+    ],
+    [
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "One Prudential Plaza",
+      "link": "One Prudential Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5″N 87°37′24″W / 41.88472°N 87.62333°W / 41.88472; -87.62333 (One Prudential Plaza)",
+      "link": null
+     },
+     {
+      "text": "601 (183)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1955",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Chicago in the 1950s.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "333 South Wabash",
+      "link": "333 South Wabash"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′38″N 87°37′32″W / 41.87722°N 87.62556°W / 41.87722; -87.62556 (CNA Center)",
+      "link": null
+     },
+     {
+      "text": "601 (183)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "1972",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "Heller International Building",
+      "link": "Heller International Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′51″N 87°38′25″W / 41.88083°N 87.64028°W / 41.88083; -87.64028 (Heller International Building)",
+      "link": null
+     },
+     {
+      "text": "600 (183)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "200 West Madison",
+      "link": "200 West Madison"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°38′4″W / 41.88222°N 87.63444°W / 41.88222; -87.63444 (200 West Madison)",
+      "link": null
+     },
+     {
+      "text": "599 (182)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "1982",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "The Grant",
+      "link": "The Grant"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′1.5″N 87°37′19″W / 41.867083°N 87.62194°W / 41.867083; -87.62194 (One Museum Park West)",
+      "link": null
+     },
+     {
+      "text": "595 (181)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1000 Lake Shore Plaza",
+      "link": "1000 Lake Shore Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°54′3.5″N 87°37′28″W / 41.900972°N 87.62444°W / 41.900972; -87.62444 (1000 Lake Shore Plaza)",
+      "link": null
+     },
+     {
+      "text": "590 (180)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "1964",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "62",
+      "link": null
+     },
+     {
+      "text": "The Clare",
+      "link": "The Clare"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′50″N 87°37′34″W / 41.89722°N 87.62611°W / 41.89722; -87.62611 (The Clare)",
+      "link": null
+     },
+     {
+      "text": "589 (179)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "An independent-living community for seniors",
+      "link": "Independent living"
+     }
+    ],
+    [
+     {
+      "text": "63",
+      "link": null
+     },
+     {
+      "text": "Accenture Tower",
+      "link": "Accenture Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°38′26″W / 41.88222°N 87.64056°W / 41.88222; -87.64056 (Citigroup Center)",
+      "link": null
+     },
+     {
+      "text": "588 (179)",
+      "link": null
+     },
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "1987",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "64",
+      "link": null
+     },
+     {
+      "text": "Marina City I",
+      "link": "Marina City"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′17.5″N 87°37′42.5″W / 41.888194°N 87.628472°W / 41.888194; -87.628472 (Marina City I)",
+      "link": null
+     },
+     {
+      "text": "588 (179)",
+      "link": null
+     },
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1964",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Marina City was the first building in the United States to be constructed with the Linden climbing tower cranes. It was also the first post-war urban high-rise residential complex in the United States. The two towers were both the tallest residential and tallest concrete structures in the world upon completion in 1968.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "Marina City II",
+      "link": "Marina City"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′16.5″N 87°37′45″W / 41.887917°N 87.62917°W / 41.887917; -87.62917 (Marina City II)",
+      "link": null
+     },
+     {
+      "text": "588 (179)",
+      "link": null
+     },
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1964",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Marina City was the first building in the United States to be constructed with the Linden climbing tower cranes. It was also the first post-war urban high-rise residential complex in the United States. The two towers were both the tallest residential and tallest concrete structures in the world upon completion in 1968.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "Optima Signature",
+      "link": "Optima Signature"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′29.5″N 87°37′18″W / 41.891528°N 87.62167°W / 41.891528; -87.62167 (Optima Signature)",
+      "link": null
+     },
+     {
+      "text": "587 (179)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "67",
+      "link": null
+     },
+     {
+      "text": "Mid-Continental Plaza",
+      "link": "Mid-Continental Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′49″N 87°37′32.5″W / 41.88028°N 87.625694°W / 41.88028; -87.625694 (Mid-Continental Plaza)",
+      "link": null
+     },
+     {
+      "text": "583 (178)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "1972",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Also known by its address, 55 East Monroe. Mixed-use office and residential skyscraper.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "68",
+      "link": null
+     },
+     {
+      "text": "Crain Communications Building",
+      "link": "Crain Communications Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′5″N 87°37′30″W / 41.88472°N 87.62500°W / 41.88472; -87.62500 (Smurfit-Stone Building)",
+      "link": null
+     },
+     {
+      "text": "582 (177)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1983",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known by its address, 150 North Michigan Avenue.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "69",
+      "link": null
+     },
+     {
+      "text": "North Pier Apartments",
+      "link": "North Pier Apartments"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′27″N 87°36′52.5″W / 41.89083°N 87.614583°W / 41.89083; -87.614583 (North Pier Apartments)",
+      "link": null
+     },
+     {
+      "text": "581 (177)",
+      "link": null
+     },
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "70",
+      "link": null
+     },
+     {
+      "text": "Citadel Center",
+      "link": "Citadel Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′47″N 87°37′43″W / 41.87972°N 87.62861°W / 41.87972; -87.62861 (Citadel Center)",
+      "link": null
+     },
+     {
+      "text": "580 (177)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "2003",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "71",
+      "link": null
+     },
+     {
+      "text": "The Fordham",
+      "link": "The Fordham"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′43.5″N 87°37′38″W / 41.895417°N 87.62722°W / 41.895417; -87.62722 (The Fordham)",
+      "link": null
+     },
+     {
+      "text": "574 (175)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2003",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "72",
+      "link": null
+     },
+     {
+      "text": "One Chicago West Tower",
+      "link": "One Chicago Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′47″N 87°37′46″W / 41.896437°N 87.62933°W / 41.896437; -87.62933 (215 West)",
+      "link": null
+     },
+     {
+      "text": "574 (174)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as 23 West Chicago Avenue.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "73",
+      "link": null
+     },
+     {
+      "text": "190 South LaSalle Street",
+      "link": "190 South LaSalle Street"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′47″N 87°37′58″W / 41.87972°N 87.63278°W / 41.87972; -87.63278 (190 South LaSalle Street)",
+      "link": null
+     },
+     {
+      "text": "573 (175)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "1987",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "74",
+      "link": null
+     },
+     {
+      "text": "One South Dearborn",
+      "link": "One South Dearborn"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′54″N 87°37′43″W / 41.88167°N 87.62861°W / 41.88167; -87.62861 (One South Dearborn)",
+      "link": null
+     },
+     {
+      "text": "571 (174)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "75",
+      "link": null
+     },
+     {
+      "text": "Axis Apartments",
+      "link": "Axis Apartments"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′38″N 87°36′59″W / 41.89389°N 87.61639°W / 41.89389; -87.61639 (Onterie Center)",
+      "link": null
+     },
+     {
+      "text": "570 (174)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "1986",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Formerly known as the Onterie Center. Originally an office tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "76",
+      "link": null
+     },
+     {
+      "text": "Loews Hotel Tower",
+      "link": "Loews Hotel Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′23.9″N 87°37′8″W / 41.889972°N 87.61889°W / 41.889972; -87.61889 (Loews Hotel Tower)",
+      "link": null
+     },
+     {
+      "text": "569 (174)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use hotel and residential skyscraper.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "77",
+      "link": null
+     },
+     {
+      "text": "Chicago Temple Building",
+      "link": "Chicago Temple Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′59″N 87°37′50″W / 41.88306°N 87.63056°W / 41.88306; -87.63056 (Chicago Temple Building)",
+      "link": null
+     },
+     {
+      "text": "568 (173)",
+      "link": null
+     },
+     {
+      "text": "21",
+      "link": null
+     },
+     {
+      "text": "1924",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Chicago in the 1920s. Was the tallest building in Chicago before being surpassed by the Chicago Board Of Trade Building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "Palmolive Building",
+      "link": "Palmolive Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′59″N 87°37′25″W / 41.89972°N 87.62361°W / 41.89972; -87.62361 (Palmolive Building)",
+      "link": null
+     },
+     {
+      "text": "565 (172)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "1929",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "79",
+      "link": null
+     },
+     {
+      "text": "Kluczynski Federal Building",
+      "link": "Kluczynski Federal Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′42.2″N 87°37′47.6″W / 41.878389°N 87.629889°W / 41.878389; -87.629889 (Kluczynski Federal Building)",
+      "link": null
+     },
+     {
+      "text": "562 (171)",
+      "link": null
+     },
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "80",
+      "link": null
+     },
+     {
+      "text": "Cirrus",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°36′53″W / 41.88639°N 87.61472°W / 41.88639; -87.61472 (Cirrus Condominiums)",
+      "link": null
+     },
+     {
+      "text": "562 (171)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "81",
+      "link": null
+     },
+     {
+      "text": "Huron Plaza",
+      "link": "Huron Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′43″N 87°37′36″W / 41.89528°N 87.62667°W / 41.89528; -87.62667 (Huron Plaza)",
+      "link": null
+     },
+     {
+      "text": "560 (171)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1983",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "82",
+      "link": null
+     },
+     {
+      "text": "Boeing International Headquarters",
+      "link": "Boeing International Headquarters"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′2.5″N 87°38′19″W / 41.884028°N 87.63861°W / 41.884028; -87.63861 (Boeing International Headquarters)",
+      "link": null
+     },
+     {
+      "text": "560 (171)",
+      "link": null
+     },
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as the Boeing Building or by its address, 100 North Riverside Plaza. Was the headquarters of Boeing from 2001 to 2022.",
+      "link": "Boeing"
+     }
+    ],
+    [
+     {
+      "text": "83",
+      "link": null
+     },
+     {
+      "text": "Pittsfield Building",
+      "link": "Pittsfield Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′59″N 87°37′52.5″W / 41.88306°N 87.631250°W / 41.88306; -87.631250 (Pittsfield Building)",
+      "link": null
+     },
+     {
+      "text": "557 (170)",
+      "link": null
+     },
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "1927",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "84",
+      "link": null
+     },
+     {
+      "text": "The Parkshore",
+      "link": "The Parkshore"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′8.5″N 87°36′53″W / 41.885694°N 87.61472°W / 41.885694; -87.61472 (The Parkshore)",
+      "link": null
+     },
+     {
+      "text": "556 (169)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1991",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "85",
+      "link": null
+     },
+     {
+      "text": "North Harbor Tower",
+      "link": "North Harbor Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′7.5″N 87°36′55.5″W / 41.885417°N 87.615417°W / 41.885417; -87.615417 (North Harbor Tower)",
+      "link": null
+     },
+     {
+      "text": "556 (169)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "1988",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "86",
+      "link": null
+     },
+     {
+      "text": "Civic Opera House",
+      "link": "Civic Opera House (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′57″N 87°38′14.5″W / 41.88250°N 87.637361°W / 41.88250; -87.637361 (Civic Opera House)",
+      "link": null
+     },
+     {
+      "text": "555 (169)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "1929",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Most of the 45-story building is office space. The lower floors house a performance space that is the second-largest opera auditorium in North America, after the Metropolitan Opera House.",
+      "link": "Metropolitan Opera House (Lincoln Center)"
+     }
+    ],
+    [
+     {
+      "text": "87",
+      "link": null
+     },
+     {
+      "text": "Harbor Point",
+      "link": "Harbor Point (skyscraper)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′6″N 87°36′53″W / 41.88500°N 87.61472°W / 41.88500; -87.61472 (Harbor Point)",
+      "link": null
+     },
+     {
+      "text": "554 (169)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "1975",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "88",
+      "link": null
+     },
+     {
+      "text": "Atwater Apartments",
+      "link": "Atwater Apartments"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′32″N 87°37′5″W / 41.89222°N 87.61806°W / 41.89222; -87.61806 (Streeter Place)",
+      "link": null
+     },
+     {
+      "text": "554 (169)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Streeter Place.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "89",
+      "link": null
+     },
+     {
+      "text": "30 North LaSalle",
+      "link": "30 North LaSalle"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′58″N 87°37′58.5″W / 41.88278°N 87.632917°W / 41.88278; -87.632917 (30 North LaSalle)",
+      "link": null
+     },
+     {
+      "text": "553 (169)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "1975",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "90",
+      "link": null
+     },
+     {
+      "text": "Michigan Plaza South",
+      "link": "Michigan Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′10″N 87°37′25″W / 41.885994°N 87.623543°W / 41.885994; -87.623543 (Michigan Plaza South)",
+      "link": null
+     },
+     {
+      "text": "553 (169)",
+      "link": null
+     },
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "1985",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "91",
+      "link": null
+     },
+     {
+      "text": "Newberry Plaza",
+      "link": "Newberry Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°54′05″N 87°37′44″W / 41.90152°N 87.628853°W / 41.90152; -87.628853 (Newberry Plaza)",
+      "link": null
+     },
+     {
+      "text": "553 (169)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "92",
+      "link": null
+     },
+     {
+      "text": "One South Wacker",
+      "link": "One South Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′54″N 87°38′10″W / 41.881531°N 87.636078°W / 41.881531; -87.636078 (One South Wacker)",
+      "link": null
+     },
+     {
+      "text": "550 (168)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "1982",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "93",
+      "link": null
+     },
+     {
+      "text": "Park Millennium",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′12″N 87°37′17″W / 41.886578°N 87.621498°W / 41.886578; -87.621498 (Park Millennium)",
+      "link": null
+     },
+     {
+      "text": "544 (166)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2002",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "94",
+      "link": null
+     },
+     {
+      "text": "AMLI River North",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′23″N 87°37′51″W / 41.889782°N 87.630707°W / 41.889782; -87.630707 (AMLI River North)",
+      "link": null
+     },
+     {
+      "text": "543 (166)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2013",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "95",
+      "link": null
+     },
+     {
+      "text": "The Franklin – South Tower",
+      "link": "Franklin Center (Chicago)"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°52′47″N 87°38′05″W / 41.879766°N 87.634860°W / 41.879766; -87.634860 (The Franklin - South Tower)",
+      "link": null
+     },
+     {
+      "text": "538 (164)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "96",
+      "link": null
+     },
+     {
+      "text": "Field Building",
+      "link": "Field Building (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′47″N 87°37′54″W / 41.87973°N 87.631569°W / 41.87973; -87.631569 (Field Building)",
+      "link": null
+     },
+     {
+      "text": "535 (163)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "1934",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Originally an office building, now a mixed-use office and residential building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "97",
+      "link": null
+     },
+     {
+      "text": "The Pinnacle",
+      "link": "The Pinnacle (Chicago)"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′40″N 87°37′38″W / 41.894505°N 87.62709°W / 41.894505; -87.62709 (The Pinnacle)",
+      "link": null
+     },
+     {
+      "text": "535 (163)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2004",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "98",
+      "link": null
+     },
+     {
+      "text": "Park Place Tower",
+      "link": "Park Place Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°57′16″N 87°38′50″W / 41.954414°N 87.647339°W / 41.954414; -87.647339 (Park Place Tower)",
+      "link": null
+     },
+     {
+      "text": "531 (162)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1971",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "99",
+      "link": null
+     },
+     {
+      "text": "One North LaSalle",
+      "link": "One North LaSalle"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°37′55″W / 41.882278°N 87.63205°W / 41.882278; -87.63205 (One North LaSalle)",
+      "link": null
+     },
+     {
+      "text": "530 (162)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "1930",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "100",
+      "link": null
+     },
+     {
+      "text": "Elysées Condominiums",
+      "link": "Elysées Condominiums"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′52″N 87°37′31″W / 41.897903°N 87.625221°W / 41.897903; -87.625221 (Elysées Condominiums)",
+      "link": null
+     },
+     {
+      "text": "529 (161)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1973",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "101",
+      "link": null
+     },
+     {
+      "text": "465 North Park",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′27″N 87°37′09″W / 41.890736°N 87.619263°W / 41.890736; -87.619263 (465 North Park)",
+      "link": null
+     },
+     {
+      "text": "525 (160)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "102",
+      "link": null
+     },
+     {
+      "text": "River Plaza",
+      "link": "River Plaza (skyscraper)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′24″N 87°37′33″W / 41.889866°N 87.625793°W / 41.889866; -87.625793 (River Plaza)",
+      "link": null
+     },
+     {
+      "text": "524 (160)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1977",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "103",
+      "link": null
+     },
+     {
+      "text": "35 East Wacker",
+      "link": "35 East Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°37′36″W / 41.886501°N 87.626785°W / 41.886501; -87.626785 (35 East Wacker)",
+      "link": null
+     },
+     {
+      "text": "523 (159)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "1927",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "104",
+      "link": null
+     },
+     {
+      "text": "Arrive Michigan Avenue",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°51′54″N 87°37′28″W / 41.865044°N 87.624565°W / 41.865044; -87.624565 (Arrive Michigan Avenue)",
+      "link": null
+     },
+     {
+      "text": "523 (159)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as The Paragon.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "105",
+      "link": null
+     },
+     {
+      "text": "Kemper Building",
+      "link": "Kemper Building (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°37′39″W / 41.886501°N 87.627548°W / 41.886501; -87.627548 (Kemper Building)",
+      "link": null
+     },
+     {
+      "text": "522 (159)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1962",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as the United Insurance Building, or Unitrin Building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "106",
+      "link": null
+     },
+     {
+      "text": "Mather Tower",
+      "link": "Mather Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′15″N 87°37′32″W / 41.887596°N 87.625458°W / 41.887596; -87.625458 (Mather Tower)",
+      "link": null
+     },
+     {
+      "text": "521 (159)",
+      "link": null
+     },
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "1928",
+      "link": null
+     },
+     {
+      "text": "Hotel",
+      "link": null
+     },
+     {
+      "text": "Also known as Club Quarters River Hotel",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "107",
+      "link": null
+     },
+     {
+      "text": "30 South Wacker",
+      "link": "Chicago Mercantile Exchange Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′51″N 87°38′15″W / 41.880863°N 87.637527°W / 41.880863; -87.637527 (30 South Wacker)",
+      "link": null
+     },
+     {
+      "text": "520 (158)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "1983",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as \"the Merc\"; part of the Chicago Mercantile Exchange Center.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "108",
+      "link": null
+     },
+     {
+      "text": "10 South Wacker",
+      "link": "Chicago Mercantile Exchange"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′54″N 87°38′15″W / 41.881584°N 87.637527°W / 41.881584; -87.637527 (10 South Wacker)",
+      "link": null
+     },
+     {
+      "text": "520 (158)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "1987",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "109",
+      "link": null
+     },
+     {
+      "text": "The Columbian",
+      "link": "The Columbian (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′04″N 87°37′28″W / 41.867695°N 87.62458°W / 41.867695; -87.62458 (The Columbian)",
+      "link": null
+     },
+     {
+      "text": "517 (158)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "110",
+      "link": null
+     },
+     {
+      "text": "151 North Franklin",
+      "link": "151 North Franklin"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′05″N 87°38′06″W / 41.884815°N 87.634933°W / 41.884815; -87.634933 (151 North Franklin)",
+      "link": null
+     },
+     {
+      "text": "517 (158)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "In June 2018, 151 North Franklin became the new corporate headquarters for CNA Insurance, which has been headquartered in the Chicago Loop since 1900. CNA Insurance was previously located at 333 South Wabash.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "111",
+      "link": null
+     },
+     {
+      "text": "191 North Wacker",
+      "link": "191 North Wacker"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′07″N 87°38′11″W / 41.885338°N 87.636475°W / 41.885338; -87.636475 (191 North Wacker)",
+      "link": null
+     },
+     {
+      "text": "516 (157)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "2002",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "112",
+      "link": null
+     },
+     {
+      "text": "425 South Financial Place",
+      "link": "425 South Financial Place"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′33″N 87°37′56″W / 41.875904°N 87.632172°W / 41.875904; -87.632172 (425 South Financial Place)",
+      "link": null
+     },
+     {
+      "text": "515 (157)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "1985",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as One Financial Place",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "113",
+      "link": null
+     },
+     {
+      "text": "401 East Ontario",
+      "link": "401 East Ontario"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′36″N 87°37′01″W / 41.893211°N 87.616898°W / 41.893211; -87.616898 (401 East Ontario)",
+      "link": null
+     },
+     {
+      "text": "515 (157)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "114",
+      "link": null
+     },
+     {
+      "text": "Millie on Michigan",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′13″N 87°37′30″W / 41.88699°N 87.625°W / 41.88699; -87.625 (Millie on Michigan)",
+      "link": null
+     },
+     {
+      "text": "515 (157)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "115",
+      "link": null
+     },
+     {
+      "text": "The Streeter",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′32″N 87°37′09″W / 41.892361°N 87.619034°W / 41.892361; -87.619034 (The Streeter)",
+      "link": null
+     },
+     {
+      "text": "514 (157)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2007",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "116",
+      "link": null
+     },
+     {
+      "text": "Park Tower Condominiums",
+      "link": "Park Tower and Mall"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°58′48″N 87°39′17″W / 41.980114°N 87.654716°W / 41.980114; -87.654716 (Park Tower Condominiums)",
+      "link": null
+     },
+     {
+      "text": "513 (156)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "1973",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Not to be confused with Park Tower. Also known as 5415 North Sheridan.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "117",
+      "link": null
+     },
+     {
+      "text": "600 North Lake Shore Drive – South Tower",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′34″N 87°36′54″W / 41.892876°N 87.614967°W / 41.892876; -87.614967 (600 North Lake Shore Drive - South Tower)",
+      "link": null
+     },
+     {
+      "text": "513 (156)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "118",
+      "link": null
+     },
+     {
+      "text": "LaSalle-Wacker Building",
+      "link": "LaSalle–Wacker Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′11″N 87°37′55″W / 41.886494°N 87.631973°W / 41.886494; -87.631973 (LaSalle-Wacker Building)",
+      "link": null
+     },
+     {
+      "text": "512 (156)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1930",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "119",
+      "link": null
+     },
+     {
+      "text": "Harris Bank Addition II",
+      "link": "Harris Bank Addition II"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′49″N 87°37′55″W / 41.88028°N 87.631912°W / 41.88028; -87.631912 (Harris Bank Addition II)",
+      "link": null
+     },
+     {
+      "text": "510 (155)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Officially renamed to the Jesse White State of Illinois building in 2025.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "120",
+      "link": null
+     },
+     {
+      "text": "321 North Clark",
+      "link": "321 North Clark"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′18″N 87°37′50″W / 41.888218°N 87.63063°W / 41.888218; -87.63063 (321 North Clark)",
+      "link": null
+     },
+     {
+      "text": "510 (155)",
+      "link": null
+     },
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "1987",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as Quaker Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "121",
+      "link": null
+     },
+     {
+      "text": "215 West",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′59″N 87°38′04″W / 41.882946°N 87.634438°W / 41.882946; -87.634438 (215 West)",
+      "link": null
+     },
+     {
+      "text": "509 (155)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "122",
+      "link": null
+     },
+     {
+      "text": "Carbide & Carbon Building",
+      "link": "Carbide & Carbon Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′12″N 87°37′30″W / 41.886574°N 87.624886°W / 41.886574; -87.624886 (Carbide & Carbon Building)",
+      "link": null
+     },
+     {
+      "text": "503 (153)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "1929",
+      "link": null
+     },
+     {
+      "text": "Hotel",
+      "link": null
+     },
+     {
+      "text": "Now a hotel known as Pendry Chicago.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "123",
+      "link": null
+     },
+     {
+      "text": "400 East Ohio Street",
+      "link": "400 East Ohio Street"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′34″N 87°37′03″W / 41.892807°N 87.617409°W / 41.892807; -87.617409 (400 East Ohio Street)",
+      "link": null
+     },
+     {
+      "text": "503 (153)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "1982",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "124",
+      "link": null
+     },
+     {
+      "text": "One Superior Place",
+      "link": "One Superior Place"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′44″N 87°37′45″W / 41.895451°N 87.629028°W / 41.895451; -87.629028 (One Superior Place)",
+      "link": null
+     },
+     {
+      "text": "502 (153)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "1999",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "125",
+      "link": null
+     },
+     {
+      "text": "10 South LaSalle",
+      "link": "10 South LaSalle"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′54″N 87°37′58″W / 41.881599°N 87.632706°W / 41.881599; -87.632706 (10 South LaSalle)",
+      "link": null
+     },
+     {
+      "text": "501 (153)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "1986",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Formerly known under several names, including Chemical Plaza, Manufacturers Hanover Plaza, and Chase Plaza.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "126",
+      "link": null
+     },
+     {
+      "text": "120 North LaSalle",
+      "link": "120 North LaSalle"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′01″N 87°37′58″W / 41.883717°N 87.632896°W / 41.883717; -87.632896 (120 North LaSalle)",
+      "link": null
+     },
+     {
+      "text": "501 (153)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "127",
+      "link": null
+     },
+     {
+      "text": "200 South Wacker Drive",
+      "link": "200 South Wacker Drive"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′44″N 87°38′15″W / 41.879021°N 87.63739°W / 41.879021; -87.63739 (200 South Wacker Drive)",
+      "link": null
+     },
+     {
+      "text": "500 (152)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1981",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "128",
+      "link": null
+     },
+     {
+      "text": "The Tides at Lakeshore East",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′12″N 87°37′05″W / 41.886677°N 87.618164°W / 41.886677; -87.618164 (The Tides at Lakeshore East)",
+      "link": null
+     },
+     {
+      "text": "500 (152)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "129",
+      "link": null
+     },
+     {
+      "text": "Parkview West",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′28″N 87°37′02″W / 41.891247°N 87.617271°W / 41.891247; -87.617271 (Parkview West)",
+      "link": null
+     },
+     {
+      "text": "498 (152)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "130",
+      "link": null
+     },
+     {
+      "text": "500 North Lake Shore Drive",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′30″N 87°36′53″W / 41.891624°N 87.614777°W / 41.891624; -87.614777 (500 North Lake Shore Drive)",
+      "link": null
+     },
+     {
+      "text": "497 (151)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2013",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "131",
+      "link": null
+     },
+     {
+      "text": "727 West Madison",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°52′53″N 87°38′48″W / 41.881454°N 87.646667°W / 41.881454; -87.646667 (727 West Madison)",
+      "link": null
+     },
+     {
+      "text": "496 (151)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as 1 South Halsted.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "132",
+      "link": null
+     },
+     {
+      "text": "55 West Monroe",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°52′49″N 87°37′47″W / 41.880367°N 87.629814°W / 41.880367; -87.629814 (55 West Monroe)",
+      "link": null
+     },
+     {
+      "text": "495 (151)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1980",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as the Xerox Center.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "133",
+      "link": null
+     },
+     {
+      "text": "Ontario Place",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′37″N 87°37′40″W / 41.893562°N 87.627762°W / 41.893562; -87.627762 (Ontario Place)",
+      "link": null
+     },
+     {
+      "text": "495 (151)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "1983",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "134",
+      "link": null
+     },
+     {
+      "text": "The Row",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′06″N 87°39′01″W / 41.88496°N 87.650169°W / 41.88496; -87.650169 (The Row)",
+      "link": null
+     },
+     {
+      "text": "495 (151)",
+      "link": null
+     },
+     {
+      "text": "43",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "135",
+      "link": null
+     },
+     {
+      "text": "50 East Chestnut Street",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "41°53′55″N 87°37′34″W / 41.898544°N 87.626198°W / 41.898544; -87.626198 (50 East Chestnut Street)",
+      "link": null
+     },
+     {
+      "text": "495 (151)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "136",
+      "link": null
+     },
+     {
+      "text": "The Ritz-Carlton Residences",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′40″N 87°37′29″W / 41.894474°N 87.624634°W / 41.894474; -87.624634 (The Ritz-Carlton Residences)",
+      "link": null
+     },
+     {
+      "text": "495 (151)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "137",
+      "link": null
+     },
+     {
+      "text": "PNC Center",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°52′56″N 87°38′06″W / 41.882256°N 87.634972°W / 41.882256; -87.634972 (PNC Center)",
+      "link": null
+     },
+     {
+      "text": "494 (151)",
+      "link": null
+     },
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Also known as One North Franklin",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "138",
+      "link": null
+     },
+     {
+      "text": "No. 9 Walton",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41°53′59″N 87°37′44″W / 41.899708°N 87.628761°W / 41.899708; -87.628761 (No. 9 Walton)",
+      "link": null
+     },
+     {
+      "text": "494 (151)",
+      "link": null
+     },
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest buildings > Tallest buildings by pinnacle height",
+   "columns": [
+    "Pinn.rank",
+    "Std.rank",
+    "Name",
+    "Pinn.heightft (m)",
+    "Std.heightft (m)",
+    "Floors",
+    "Year",
+    "Source"
+   ],
+   "rows": [
+    [
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "Willis Tower",
+      "link": "Willis Tower"
+     },
+     {
+      "text": "1,730 (527)",
+      "link": null
+     },
+     {
+      "text": "1,451 (442)",
+      "link": null
+     },
+     {
+      "text": "110",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "2",
+      "link": null
+     },
+     {
+      "text": "5",
+      "link": null
+     },
+     {
+      "text": "875 North Michigan Avenue",
+      "link": "875 North Michigan Avenue"
+     },
+     {
+      "text": "1,500 (457)",
+      "link": null
+     },
+     {
+      "text": "1,127 (344)",
+      "link": null
+     },
+     {
+      "text": "100",
+      "link": null
+     },
+     {
+      "text": "1969",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "3",
+      "link": null
+     },
+     {
+      "text": "2",
+      "link": null
+     },
+     {
+      "text": "Trump International Hotel and Tower",
+      "link": "Trump International Hotel and Tower (Chicago)"
+     },
+     {
+      "text": "1,389 (423)",
+      "link": null
+     },
+     {
+      "text": "1,389 (423)",
+      "link": null
+     },
+     {
+      "text": "98",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "4",
+      "link": null
+     },
+     {
+      "text": "3",
+      "link": null
+     },
+     {
+      "text": "St Regis Chicago",
+      "link": "St. Regis Chicago"
+     },
+     {
+      "text": "1,198 (365)",
+      "link": null
+     },
+     {
+      "text": "1,198 (365)",
+      "link": null
+     },
+     {
+      "text": "101",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "5",
+      "link": null
+     },
+     {
+      "text": "4",
+      "link": null
+     },
+     {
+      "text": "Aon Center",
+      "link": "Aon Center (Chicago)"
+     },
+     {
+      "text": "1,136 (346)",
+      "link": null
+     },
+     {
+      "text": "1,136 (346)",
+      "link": null
+     },
+     {
+      "text": "83",
+      "link": null
+     },
+     {
+      "text": "1973",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "6",
+      "link": null
+     },
+     {
+      "text": "6",
+      "link": null
+     },
+     {
+      "text": "Franklin Center North Tower",
+      "link": "Franklin Center (Chicago)"
+     },
+     {
+      "text": "1,007 (307)",
+      "link": null
+     },
+     {
+      "text": "887 (270)",
+      "link": null
+     },
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "1989",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "7",
+      "link": null
+     },
+     {
+      "text": "7",
+      "link": null
+     },
+     {
+      "text": "Two Prudential Plaza",
+      "link": "Two Prudential Plaza"
+     },
+     {
+      "text": "995 (303)",
+      "link": null
+     },
+     {
+      "text": "995 (303)",
+      "link": null
+     },
+     {
+      "text": "64",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "8",
+      "link": null
+     },
+     {
+      "text": "8",
+      "link": null
+     },
+     {
+      "text": "311 South Wacker Drive",
+      "link": "311 South Wacker Drive"
+     },
+     {
+      "text": "961 (293)",
+      "link": null
+     },
+     {
+      "text": "961 (293)",
+      "link": null
+     },
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "9",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "One Prudential Plaza",
+      "link": "One Prudential Plaza"
+     },
+     {
+      "text": "912 (278)",
+      "link": null
+     },
+     {
+      "text": "601 (183)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1955",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "10",
+      "link": null
+     },
+     {
+      "text": "9",
+      "link": null
+     },
+     {
+      "text": "NEMA Chicago",
+      "link": "NEMA (Chicago)"
+     },
+     {
+      "text": "896 (273)",
+      "link": null
+     },
+     {
+      "text": "896 (273)",
+      "link": null
+     },
+     {
+      "text": "76",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest demolished",
+   "columns": [
+    "Name",
+    "Image",
+    "Heightft (m)",
+    "Floors",
+    "Year completed",
+    "Year demolished",
+    "Purpose",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "Morrisons Hotel",
+      "link": "Morrison Hotel (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "526 (160)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "1925",
+      "link": null
+     },
+     {
+      "text": "1965",
+      "link": null
+     },
+     {
+      "text": "Hotel",
+      "link": null
+     },
+     {
+      "text": "Was the tallest hotel in Chicago until its demolition. First building outside of New York City to have more than 40 floors. The hotel first opened in 1915, with the tower added during an expansion in 1925. It was demolished in 1965. The Chase Tower was later built on the site.",
+      "link": "Chase Tower (Chicago)"
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest under construction",
+   "columns": [
+    "Name",
+    "Location",
+    "Heightft (m)",
+    "Floors",
+    "Year",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "Halsted Pointe Phase 1",
+      "link": null
+     },
+     {
+      "text": "Goose Island (Chicago)",
+      "link": "Goose Island (Chicago)"
+     },
+     {
+      "text": "502 (153.0)",
+      "link": null
+     },
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "2028",
+      "link": null
+     },
+     {
+      "text": "This initial phase will consist of a 46-story tower designed by local architecture firm HPA. The skyscraper will be anchored by a five-story podium, which will meet the slope of Halsted as it descends from the nearby bridge. Construction started in April 2026. The project has a 24-month timeline.",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest unbuilt",
+   "columns": [
+    "Name",
+    "Heightft (m)",
+    "Floors",
+    "Approved",
+    "Cancelled",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "7 South Dearborn",
+      "link": "7 South Dearborn"
+     },
+     {
+      "text": "2,000 (610)",
+      "link": null
+     },
+     {
+      "text": "112",
+      "link": null
+     },
+     {
+      "text": "1999",
+      "link": null
+     },
+     {
+      "text": "2000",
+      "link": null
+     },
+     {
+      "text": "One South Dearborn was built on the site instead.",
+      "link": "One South Dearborn"
+     }
+    ],
+    [
+     {
+      "text": "Chicago Spire",
+      "link": "Chicago Spire"
+     },
+     {
+      "text": "2,000 (610)",
+      "link": null
+     },
+     {
+      "text": "150",
+      "link": null
+     },
+     {
+      "text": "2007",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "400 Lake Shore Drive is the existing proposal for the site.",
+      "link": "400 Lake Shore Drive"
+     }
+    ],
+    [
+     {
+      "text": "Old Chicago Main Post Office Twin Towers",
+      "link": "Old Chicago Main Post Office Twin Towers"
+     },
+     {
+      "text": "2,000 (610)",
+      "link": null
+     },
+     {
+      "text": "120",
+      "link": null
+     },
+     {
+      "text": "2011",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Part of the Old Chicago Main Post Office Redevelopment pursued by Bill Davies.",
+      "link": "Old Chicago Main Post Office"
+     }
+    ],
+    [
+     {
+      "text": "Thompson Center Redevelopment",
+      "link": null
+     },
+     {
+      "text": "1,699 (518)",
+      "link": null
+     },
+     {
+      "text": "115",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "—",
+      "link": null
+     },
+     {
+      "text": "Thompson Center is acquired by Alphabet Inc. and is being renovated to become Google's new Midwest HQ.",
+      "link": "James R. Thompson Center"
+     }
+    ],
+    [
+     {
+      "text": "Waterview Tower",
+      "link": "OneEleven"
+     },
+     {
+      "text": "1,047 (319)",
+      "link": null
+     },
+     {
+      "text": "89",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "The original design for Waterview Tower was cancelled after construction of the first 26 floors of the building. OneEleven was built on the vacated structure.",
+      "link": "OneEleven"
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Timeline of tallest buildings",
+   "columns": [
+    "Name",
+    "Image",
+    "Years as tallest (Yrs)",
+    "Height ft (m)",
+    "Floors",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "First Holy Name Cathedral[A]",
+      "link": "Holy Name Cathedral, Chicago"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1854–1869 (15)",
+      "link": null
+     },
+     {
+      "text": "245 (75)",
+      "link": null
+     },
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Saint Michael's Church",
+      "link": "St. Michael's Church, Old Town, Chicago"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1869–1885 (16)",
+      "link": null
+     },
+     {
+      "text": "290 (88)",
+      "link": null
+     },
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Chicago Board of Trade Building[B]",
+      "link": "Chicago Board of Trade Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1885–1895 (10)",
+      "link": null
+     },
+     {
+      "text": "322 (98)",
+      "link": null
+     },
+     {
+      "text": "10",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Masonic Temple Building",
+      "link": "Masonic Temple (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1895–1899 (4)[C]",
+      "link": null
+     },
+     {
+      "text": "302 (92)",
+      "link": null
+     },
+     {
+      "text": "21",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Montgomery Ward Building[D]",
+      "link": "Montgomery Ward Company Complex"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1899–1922 (23)",
+      "link": null
+     },
+     {
+      "text": "394 (120)",
+      "link": null
+     },
+     {
+      "text": "22",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Wrigley Building",
+      "link": "Wrigley Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1922–1924 (2)",
+      "link": null
+     },
+     {
+      "text": "438 (134)",
+      "link": null
+     },
+     {
+      "text": "30",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Chicago Temple Building",
+      "link": "Chicago Temple Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1924–1930 (6)",
+      "link": null
+     },
+     {
+      "text": "568 (173)",
+      "link": null
+     },
+     {
+      "text": "23",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Chicago Board of Trade Building",
+      "link": "Chicago Board of Trade Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1930–1965 (35)",
+      "link": null
+     },
+     {
+      "text": "605 (184)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Richard J. Daley Center",
+      "link": "Richard J. Daley Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1965–1969 (4)",
+      "link": null
+     },
+     {
+      "text": "648 (198)",
+      "link": null
+     },
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Chase Tower (Chicago)",
+      "link": "Chase Tower (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1969 (0)",
+      "link": null
+     },
+     {
+      "text": "850 (260)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "John Hancock Center",
+      "link": "John Hancock Center"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1969–1973 (4)",
+      "link": null
+     },
+     {
+      "text": "1,127 (344)",
+      "link": null
+     },
+     {
+      "text": "100",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Aon Center",
+      "link": "Aon Center (Chicago)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1973–1974 (1)",
+      "link": null
+     },
+     {
+      "text": "1,136 (346)",
+      "link": null
+     },
+     {
+      "text": "83",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Willis Tower",
+      "link": "Willis Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1974–present (52)",
+      "link": null
+     },
+     {
+      "text": "1,451 (442)",
+      "link": null
+     },
+     {
+      "text": "108",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  }
+ ],
+ "pages": {
+  "10 South LaSalle": {
+   "title": "10 South LaSalle",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2598533"
+  },
+  "1000 Lake Shore Plaza": {
+   "title": "1000 Lake Shore Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1920923"
+  },
+  "1000M": {
+   "title": "1000M",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q21609042"
+  },
+  "110 North Wacker": {
+   "title": "110 North Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q85341956"
+  },
+  "111 South Wacker Drive": {
+   "title": "111 South Wacker Drive",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q170442"
+  },
+  "120 North LaSalle": {
+   "title": "120 North LaSalle",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2259283"
+  },
+  "150 North Riverside": {
+   "title": "150 North Riverside",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q21011003"
+  },
+  "151 North Franklin": {
+   "title": "151 North Franklin",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q60763905"
+  },
+  "155 North Wacker": {
+   "title": "155 North Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q4550543"
+  },
+  "181 West Madison Street": {
+   "title": "181 West Madison Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q200780"
+  },
+  "190 South LaSalle Street": {
+   "title": "U.S. Bank Building (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1886439"
+  },
+  "191 North Wacker": {
+   "title": "191 North Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2731989"
+  },
+  "200 South Wacker Drive": {
+   "title": "200 South Wacker Drive",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2739407"
+  },
+  "200 West Madison": {
+   "title": "200 West Madison",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2672118"
+  },
+  "30 North LaSalle": {
+   "title": "30 North LaSalle",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2367374"
+  },
+  "300 North LaSalle": {
+   "title": "300 North LaSalle",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q223788"
+  },
+  "311 South Wacker Drive": {
+   "title": "311 South Wacker Drive",
+   "missing": false,
+   "lat": 41.87777778,
+   "lon": -87.63555556,
+   "qid": "Q224563"
+  },
+  "321 North Clark": {
+   "title": "321 North Clark",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2308936"
+  },
+  "330 North Wabash": {
+   "title": "AMA Plaza",
+   "missing": false,
+   "lat": 41.8886,
+   "lon": -87.6275,
+   "qid": "Q225731"
+  },
+  "333 South Wabash": {
+   "title": "333 South Wabash",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q961346"
+  },
+  "340 on the Park": {
+   "title": "340 on the Park",
+   "missing": false,
+   "lat": 41.88484167,
+   "lon": -87.61888889,
+   "qid": "Q226246"
+  },
+  "35 East Wacker": {
+   "title": "35 East Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2816312"
+  },
+  "353 North Clark": {
+   "title": "353 North Clark",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q4635502"
+  },
+  "400 East Ohio Street": {
+   "title": "400 East Ohio Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1989226"
+  },
+  "400 Lake Shore Drive": {
+   "title": "400 Lake Shore",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q56280353"
+  },
+  "401 East Ontario": {
+   "title": "401 East Ontario",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2203092"
+  },
+  "425 South Financial Place": {
+   "title": "425 South Financial Place",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2615799"
+  },
+  "55 East Erie Street": {
+   "title": "55 East Erie Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1839186"
+  },
+  "7 South Dearborn": {
+   "title": "7 South Dearborn",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1934760"
+  },
+  "71 South Wacker": {
+   "title": "71 South Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1639792"
+  },
+  "77 West Wacker Drive": {
+   "title": "77 West Wacker Drive",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q268559"
+  },
+  "875 North Michigan Avenue": {
+   "title": "John Hancock Center",
+   "missing": false,
+   "lat": 41.8988,
+   "lon": -87.623,
+   "qid": "Q217727"
+  },
+  "900 North Michigan": {
+   "title": "900 North Michigan",
+   "missing": false,
+   "lat": 41.89972222,
+   "lon": -87.625,
+   "qid": "Q275936"
+  },
+  "Accenture Tower (Chicago)": {
+   "title": "Accenture Tower (Chicago)",
+   "missing": false,
+   "lat": 41.882005,
+   "lon": -87.64049,
+   "qid": "Q2425550"
+  },
+  "Aon Center (Chicago)": {
+   "title": "Aon Center (Chicago)",
+   "missing": false,
+   "lat": 41.88527778,
+   "lon": -87.62138889,
+   "qid": "Q271695"
+  },
+  "Aqua (Chicago)": {
+   "title": "Aqua (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q622895"
+  },
+  "Art Deco": {
+   "title": "Art Deco",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q173782"
+  },
+  "Atwater Apartments": {
+   "title": "Atwater Apartments",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7623091"
+  },
+  "Axis Apartments": {
+   "title": "Axis Apartments",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2240739"
+  },
+  "BMO Tower (Chicago)": {
+   "title": "BMO Tower (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q107646016"
+  },
+  "Blue Cross Blue Shield Tower": {
+   "title": "Blue Cross Blue Shield Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q885672"
+  },
+  "Boeing": {
+   "title": "Boeing",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q66"
+  },
+  "Boeing International Headquarters": {
+   "title": "Boeing Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q961568"
+  },
+  "Carbide & Carbon Building": {
+   "title": "Carbide & Carbon Building",
+   "missing": false,
+   "lat": 41.8866,
+   "lon": -87.6249,
+   "qid": "Q1925179"
+  },
+  "Chase Tower (Chicago)": {
+   "title": "Chase Tower (Chicago)",
+   "missing": false,
+   "lat": 41.8816,
+   "lon": -87.6301,
+   "qid": "Q291304"
+  },
+  "Chicago Board of Trade Building": {
+   "title": "Chicago Board of Trade Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2224700"
+  },
+  "Chicago Mercantile Exchange": {
+   "title": "Chicago Mercantile Exchange",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1071967"
+  },
+  "Chicago Mercantile Exchange Center": {
+   "title": "Chicago Mercantile Exchange Center",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2187086"
+  },
+  "Chicago Place": {
+   "title": "Chicago Place",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2963328"
+  },
+  "Chicago River": {
+   "title": "Chicago River",
+   "missing": false,
+   "lat": 41.88638889,
+   "lon": -87.6375,
+   "qid": "Q643284"
+  },
+  "Chicago Spire": {
+   "title": "Chicago Spire",
+   "missing": false,
+   "lat": 41.88988889,
+   "lon": -87.61488889,
+   "qid": "Q638403"
+  },
+  "Chicago Temple Building": {
+   "title": "First United Methodist Church of Chicago",
+   "missing": false,
+   "lat": 41.883,
+   "lon": -87.6306,
+   "qid": "Q14687499"
+  },
+  "Citadel Center": {
+   "title": "Citadel Center",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2456156"
+  },
+  "Civic Opera House (Chicago)": {
+   "title": "Civic Opera House (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1833594"
+  },
+  "Crain Communications Building": {
+   "title": "Crain Communications Building",
+   "missing": false,
+   "lat": 41.8854,
+   "lon": -87.6248,
+   "qid": "Q2444330"
+  },
+  "Elysées Condominiums": {
+   "title": "Elysées Condominiums",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2195755"
+  },
+  "Essex on the Park": {
+   "title": "Essex on the Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q85759658"
+  },
+  "Field Building (Chicago)": {
+   "title": "Field Building (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3756447"
+  },
+  "Franklin Center (Chicago)": {
+   "title": "Franklin Center (Chicago)",
+   "missing": false,
+   "lat": 41.880681,
+   "lon": -87.634184,
+   "qid": "Q298584"
+  },
+  "Goose Island (Chicago)": {
+   "title": "Goose Island (Chicago)",
+   "missing": false,
+   "lat": 41.90444444,
+   "lon": -87.65416667,
+   "qid": "Q5584067"
+  },
+  "Grand Plaza I": {
+   "title": "Grand Plaza I",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2300049"
+  },
+  "Grant Thornton Tower": {
+   "title": "Grant Thornton Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q934401"
+  },
+  "Harbor Point (skyscraper)": {
+   "title": "Harbor Point (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2415903"
+  },
+  "Harris Bank Addition II": {
+   "title": "Harris Bank Addition II",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3756449"
+  },
+  "Heller International Building": {
+   "title": "500 West Monroe",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2513875"
+  },
+  "Holy Name Cathedral, Chicago": {
+   "title": "Holy Name Cathedral (Chicago)",
+   "missing": false,
+   "lat": 41.89587,
+   "lon": -87.62755,
+   "qid": "Q2942930"
+  },
+  "Huron Plaza": {
+   "title": "Huron Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2370872"
+  },
+  "Independent living": {
+   "title": "Independent living",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1373709"
+  },
+  "James R. Thompson Center": {
+   "title": "James R. Thompson Center",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3161356"
+  },
+  "John Hancock Center": {
+   "title": "John Hancock Center",
+   "missing": false,
+   "lat": 41.8988,
+   "lon": -87.623,
+   "qid": "Q217727"
+  },
+  "Kemper Building (Chicago)": {
+   "title": "Kemper Building (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2793789"
+  },
+  "Kluczynski Federal Building": {
+   "title": "Kluczynski Federal Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2058889"
+  },
+  "LaSalle–Wacker Building": {
+   "title": "LaSalle–Wacker Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1960267"
+  },
+  "Lake Point Tower": {
+   "title": "Lake Point Tower",
+   "missing": false,
+   "lat": 41.89166667,
+   "lon": -87.61222222,
+   "qid": "Q1801054"
+  },
+  "Lake Shore Drive": {
+   "title": "Lake Shore Drive",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3216467"
+  },
+  "Legacy at Millennium Park": {
+   "title": "Legacy at Millennium Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1812350"
+  },
+  "Leo Burnett Building": {
+   "title": "Leo Burnett Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2556762"
+  },
+  "List of tallest buildings designed by women": {
+   "title": "List of tallest buildings designed by women",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q60518419"
+  },
+  "List of tallest buildings in the United States": {
+   "title": "List of tallest buildings in the United States",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q930338"
+  },
+  "Loews Hotel Tower": {
+   "title": "Loews Hotel Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q27975185"
+  },
+  "Marina City": {
+   "title": "Marina City",
+   "missing": false,
+   "lat": 41.887986,
+   "lon": -87.628761,
+   "qid": "Q653584"
+  },
+  "Masonic Temple (Chicago)": {
+   "title": "Masonic Temple (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1907269"
+  },
+  "Mather Tower": {
+   "title": "Mather Tower",
+   "missing": false,
+   "lat": 41.8877,
+   "lon": -87.6254,
+   "qid": "Q3117510"
+  },
+  "Metropolitan Opera House (Lincoln Center)": {
+   "title": "Metropolitan Opera House (Lincoln Center)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q188031"
+  },
+  "Michigan Plaza": {
+   "title": "Michigan Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6837642"
+  },
+  "Mid-Continental Plaza": {
+   "title": "Mid-Continental Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2783742"
+  },
+  "Millennium Centre (Chicago)": {
+   "title": "Millennium Centre (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2342206"
+  },
+  "Montgomery Ward Company Complex": {
+   "title": "Montgomery Ward Company Complex",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6905828"
+  },
+  "Morrison Hotel (Chicago)": {
+   "title": "Morrison Hotel (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6914041"
+  },
+  "NBC Tower": {
+   "title": "NBC Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1810949"
+  },
+  "NEMA (Chicago)": {
+   "title": "NEMA Chicago",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q21609043"
+  },
+  "Newberry Plaza": {
+   "title": "Newberry Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2190930"
+  },
+  "North Harbor Tower": {
+   "title": "North Harbor Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q774991"
+  },
+  "North Pier Apartments": {
+   "title": "474 North Lake Shore Drive",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2166184"
+  },
+  "Old Chicago Main Post Office": {
+   "title": "Old Chicago Main Post Office",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3881507"
+  },
+  "Old Chicago Main Post Office Twin Towers": {
+   "title": "Old Chicago Main Post Office Twin Towers",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q18155373"
+  },
+  "Olympia Centre": {
+   "title": "Olympia Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1787863"
+  },
+  "One Bennett Park": {
+   "title": "One Bennett Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q19817574"
+  },
+  "One Chicago Square": {
+   "title": "One Chicago (building)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q48969627"
+  },
+  "One Magnificent Mile": {
+   "title": "One Magnificent Mile",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1860472"
+  },
+  "One Museum Park": {
+   "title": "One Museum Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q511256"
+  },
+  "One North LaSalle": {
+   "title": "One North LaSalle",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2565075"
+  },
+  "One North Wacker": {
+   "title": "One North Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1876150"
+  },
+  "One Prudential Plaza": {
+   "title": "One Prudential Plaza",
+   "missing": false,
+   "lat": 41.8849,
+   "lon": -87.6233,
+   "qid": "Q643334"
+  },
+  "One South Dearborn": {
+   "title": "One South Dearborn",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2736389"
+  },
+  "One South Wacker": {
+   "title": "One South Wacker",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2259682"
+  },
+  "One Superior Place": {
+   "title": "One Superior Place",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2257273"
+  },
+  "OneEleven": {
+   "title": "OneEleven",
+   "missing": false,
+   "lat": 41.88652778,
+   "lon": -87.63138889,
+   "qid": "Q2302438"
+  },
+  "Optima Signature": {
+   "title": "Optima Signature",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q41811212"
+  },
+  "Palmolive Building": {
+   "title": "Palmolive Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3387206"
+  },
+  "Park Place Tower": {
+   "title": "Park Place Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2707913"
+  },
+  "Park Tower (Chicago)": {
+   "title": "Park Tower (Chicago)",
+   "missing": false,
+   "lat": 41.89694444,
+   "lon": -87.62527778,
+   "qid": "Q1810424"
+  },
+  "Park Tower and Mall": {
+   "title": "Park Tower and Mall",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2363313"
+  },
+  "Pittsfield Building": {
+   "title": "Pittsfield Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2056267"
+  },
+  "Richard J. Daley Center": {
+   "title": "Richard J. Daley Center",
+   "missing": false,
+   "lat": 41.88393,
+   "lon": -87.6302,
+   "qid": "Q1766475"
+  },
+  "River East Center": {
+   "title": "River East Center",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2050970"
+  },
+  "River Plaza (skyscraper)": {
+   "title": "River Plaza (skyscraper)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3307842"
+  },
+  "River Point": {
+   "title": "River Point",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q4616395"
+  },
+  "St. Michael's Church, Old Town, Chicago": {
+   "title": "St. Michael's Church, Old Town, Chicago",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3583169"
+  },
+  "St. Regis Chicago": {
+   "title": "St. Regis Chicago",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q19817578"
+  },
+  "The Clare": {
+   "title": "The Clare",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2387082"
+  },
+  "The Columbian (Chicago)": {
+   "title": "The Columbian (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2788256"
+  },
+  "The Fordham": {
+   "title": "The Fordham",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q866660"
+  },
+  "The Grant": {
+   "title": "The Grant",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7093003"
+  },
+  "The Heritage at Millennium Park": {
+   "title": "The Heritage at Millennium Park",
+   "missing": false,
+   "lat": 41.88388889,
+   "lon": -87.62555556,
+   "qid": "Q376658"
+  },
+  "The Parkshore": {
+   "title": "The Parkshore",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2667628"
+  },
+  "The Pinnacle (Chicago)": {
+   "title": "The Pinnacle (Chicago)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2180787"
+  },
+  "Three First National Plaza": {
+   "title": "Three First National Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1787391"
+  },
+  "Trump International Hotel and Tower (Chicago)": {
+   "title": "Trump International Hotel and Tower (Chicago)",
+   "missing": false,
+   "lat": 41.8889,
+   "lon": -87.6264,
+   "qid": "Q546221"
+  },
+  "Two Prudential Plaza": {
+   "title": "Two Prudential Plaza",
+   "missing": false,
+   "lat": 41.88555556,
+   "lon": -87.62277778,
+   "qid": "Q1121971"
+  },
+  "Waldorf Astoria Chicago": {
+   "title": "Waldorf Astoria Chicago",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1140508"
+  },
+  "Water Tower Place": {
+   "title": "Water Tower Place",
+   "missing": false,
+   "lat": 41.89791667,
+   "lon": -87.62236111,
+   "qid": "Q1582716"
+  },
+  "Willis Tower": {
+   "title": "Willis Tower",
+   "missing": false,
+   "lat": 41.8789,
+   "lon": -87.6358,
+   "qid": "Q29294"
+  },
+  "Wolf Point East Tower": {
+   "title": "Wolf Point East Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q26710810"
+  },
+  "Wolf Point South Tower": {
+   "title": "Salesforce Tower Chicago",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q17039466"
+  },
+  "Wrigley Building": {
+   "title": "Wrigley Building",
+   "missing": false,
+   "lat": 41.889707,
+   "lon": -87.624861,
+   "qid": "Q1464592"
+  }
+ }
+}

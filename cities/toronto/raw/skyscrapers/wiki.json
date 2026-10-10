@@ -1,0 +1,6639 @@
+{
+ "fetched": "2026-10-10T10:51:20+00:00",
+ "page": "List of tallest buildings in Toronto",
+ "revid": 1378696540,
+ "license": "CC BY-SA 4.0, Wikipedia contributors",
+ "tables": [
+  {
+   "section": "Tallest buildings",
+   "columns": [
+    "Rank",
+    "Name",
+    "Image",
+    "Location",
+    "Heightm (ft)",
+    "Floors",
+    "Year",
+    "Purpose",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "N/A",
+      "link": null
+     },
+     {
+      "text": "CN Tower",
+      "link": "CN Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "290 Bremner Boulevard 43°38′33″N 79°23′14″W / 43.642506°N 79.387108°W / 43.642506; -79.387108 (CN Tower)",
+      "link": "Bremner Boulevard"
+     },
+     {
+      "text": "553.4 (1,816)",
+      "link": null
+     },
+     {
+      "text": "N/A",
+      "link": null
+     },
+     {
+      "text": "1976",
+      "link": null
+     },
+     {
+      "text": "CommunicationObservation",
+      "link": null
+     },
+     {
+      "text": "Not a habitable building. Included for comparison purposes. Tallest free-standing structure in the world from 1976 to 2007, and tallest tower until 2009.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "SkyTower at Pinnacle One Yonge",
+      "link": "Pinnacle One Yonge"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "7 Yonge Street 43°38′36″N 79°22′30″W / 43.64333°N 79.37500°W / 43.64333; -79.37500",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "351.8 (1,154)",
+      "link": null
+     },
+     {
+      "text": "106",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Currently the tallest building in Canada. Topped off in early 2026. First building in Canada over 100 storeys.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "2",
+      "link": null
+     },
+     {
+      "text": "One Bloor West",
+      "link": "One Bloor West"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 Bloor Street West 43°40′11.7″N 79°23′13.3″W / 43.669917°N 79.387028°W / 43.669917; -79.387028",
+      "link": "Bloor Street West"
+     },
+     {
+      "text": "308.9 (1,013)",
+      "link": null
+     },
+     {
+      "text": "85",
+      "link": null
+     },
+     {
+      "text": "2028",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Formerly known as The One. Topped off in late 2025. Briefly the tallest building in Canada from 2025 to 2026.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "3",
+      "link": null
+     },
+     {
+      "text": "First Canadian Place",
+      "link": "First Canadian Place"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "100 King Street West 43°38′56″N 79°22′54″W / 43.648838°N 79.381744°W / 43.648838; -79.381744 (First Canadian Place)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "298.3 (979)",
+      "link": null
+     },
+     {
+      "text": "72",
+      "link": null
+     },
+     {
+      "text": "1975",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building in Canada from 1975 to 2025. 8th-tallest building in the world at the time of its completion. Tallest building in the world outside Chicago and New York City at the time of its completion. Tallest building completed in Toronto in the 1970s. Formerly known as First Bank Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "4",
+      "link": null
+     },
+     {
+      "text": "The St. Regis Toronto",
+      "link": "The St. Regis Toronto"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "325 Bay Street 43°38′59″N 79°22′49″W / 43.649818°N 79.380341°W / 43.649818; -79.380341",
+      "link": "Bay Street"
+     },
+     {
+      "text": "276.9 (908)",
+      "link": null
+     },
+     {
+      "text": "63",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Tallest mixed-use building in Canada. Tallest building completed in Toronto in the 2010s. Formerly known as Trump International Hotel & Tower Toronto and later as The Adelaide Hotel.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "5",
+      "link": null
+     },
+     {
+      "text": "Scotia Plaza",
+      "link": "Scotia Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "40 King Street West 43°38′58″N 79°22′46″W / 43.649422°N 79.379578°W / 43.649422; -79.379578 (Scotia Plaza)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "275 (902)",
+      "link": null
+     },
+     {
+      "text": "68",
+      "link": null
+     },
+     {
+      "text": "1988",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Toronto in the 1980s.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "6",
+      "link": null
+     },
+     {
+      "text": "Aura",
+      "link": "Aura (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "388 Yonge Street 43°39′34″N 79°22′58″W / 43.659431°N 79.382812°W / 43.659431; -79.382812 (Aura)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "271.9 (892)",
+      "link": null
+     },
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Tallest residential building in Toronto and in Canada.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "7",
+      "link": null
+     },
+     {
+      "text": "TD Canada Trust Tower",
+      "link": "Brookfield Place (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "161 Bay Street 43°38′47″N 79°22′44″W / 43.646465°N 79.378784°W / 43.646465; -79.378784 (TD Canada Trust Tower)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "260.9 (856)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "1990",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Toronto in the 1990s.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "8",
+      "link": null
+     },
+     {
+      "text": "One Bloor",
+      "link": "One Bloor"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 Bloor Street East 43°40′12″N 79°23′10″W / 43.669983°N 79.386147°W / 43.669983; -79.386147 (One Bloor)",
+      "link": "Bloor Street"
+     },
+     {
+      "text": "257.3 (844)",
+      "link": null
+     },
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "9",
+      "link": null
+     },
+     {
+      "text": "CIBC Square II",
+      "link": "CIBC Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "141 Bay Street 43°38′43″N 79°22′44″W / 43.64527°N 79.3788°W / 43.64527; -79.3788 (CIBC Square I)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "243.1 (798)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "10",
+      "link": null
+     },
+     {
+      "text": "CIBC Square I",
+      "link": "CIBC Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "81 Bay Street 43°38′39″N 79°22′40″W / 43.644161°N 79.377762°W / 43.644161; -79.377762 (CIBC Square I)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "241.3 (792)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Toronto in the 2020s so far.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "11",
+      "link": null
+     },
+     {
+      "text": "Commerce Court West",
+      "link": "Commerce Court West"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "199 Bay Street 43°38′54″N 79°22′46″W / 43.648209°N 79.379509°W / 43.648209; -79.379509 (Commerce Court West)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "239 (784)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "1973",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building in Toronto from 1972 to 1975.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "12",
+      "link": null
+     },
+     {
+      "text": "TD Terrace",
+      "link": "TD Terrace"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "160 Front Street West 43°38′43″N 79°23′04″W / 43.645195°N 79.384583°W / 43.645195; -79.384583 (TD Terrace)",
+      "link": "Front Street (Toronto)"
+     },
+     {
+      "text": "236.5 (776)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "8+8=16",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "13",
+      "link": null
+     },
+     {
+      "text": "ICE Condominiums II",
+      "link": "ICE Condominiums"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "14 York Street 43°38′31″N 79°22′54″W / 43.642048°N 79.381676°W / 43.642048; -79.381676 (ICE Condominiums II)",
+      "link": "York Street (Toronto)"
+     },
+     {
+      "text": "234.2 (768)",
+      "link": null
+     },
+     {
+      "text": "68",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "14",
+      "link": null
+     },
+     {
+      "text": "Harbour Plaza East",
+      "link": "Harbour Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "88 Harbour Street 43°38′32″N 79°22′44″W / 43.642113°N 79.379013°W / 43.642113; -79.379013 (Harbour Plaza East)",
+      "link": null
+     },
+     {
+      "text": "233 (764)",
+      "link": null
+     },
+     {
+      "text": "71",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "15",
+      "link": null
+     },
+     {
+      "text": "Concord Canada House 1",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "23 Spadina Avenue 43°38′29″N 79°23′32″W / 43.641399°N 79.392265°W / 43.641399; -79.392265 (Concord Canada House 1)",
+      "link": "Spadina Avenue"
+     },
+     {
+      "text": "231.3 (759)",
+      "link": null
+     },
+     {
+      "text": "69",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "16",
+      "link": null
+     },
+     {
+      "text": "Sugar Wharf Tower G",
+      "link": "Sugar Wharf"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "55 Lake Shore Boulevard East 43°38′41″N 79°22′18″W / 43.64476°N 79.371704°W / 43.64476; -79.371704 (Sugar Wharf Tower G)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "230.2 (755)",
+      "link": null
+     },
+     {
+      "text": "74",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Sugar Wharf Tower II.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "17",
+      "link": null
+     },
+     {
+      "text": "Eau du Soleil Sky Tower",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "2183 Lake Shore Boulevard West 43°37′24″N 79°28′48″W / 43.623436°N 79.480064°W / 43.623436; -79.480064 (Eau du Soleil Sky Tower)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "228.2 (749)",
+      "link": null
+     },
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Canada's tallest building outside a central business district.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "18",
+      "link": null
+     },
+     {
+      "text": "Harbour Plaza West",
+      "link": "Harbour Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "100 Harbour Street 43°38′32″N 79°22′47″W / 43.642109°N 79.379616°W / 43.642109; -79.379616 (Harbour Plaza West)",
+      "link": null
+     },
+     {
+      "text": "224 (735)",
+      "link": null
+     },
+     {
+      "text": "67",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "19",
+      "link": null
+     },
+     {
+      "text": "Ten York",
+      "link": "Ten York"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "10 York Street 43°38′28″N 79°22′52″W / 43.641106°N 79.381248°W / 43.641106; -79.381248 (Ten York)",
+      "link": "York Street (Toronto)"
+     },
+     {
+      "text": "224 (735)",
+      "link": null
+     },
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "20",
+      "link": null
+     },
+     {
+      "text": "TD Bank Tower",
+      "link": "Toronto-Dominion Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "66 Wellington Street West 43°38′51″N 79°22′52″W / 43.647568°N 79.381012°W / 43.647568; -79.381012 (TD Bank Tower)",
+      "link": "Wellington Street (Toronto)"
+     },
+     {
+      "text": "222.8 (731)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "1967",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building in Toronto from 1967 to 1972. Tallest building completed in Toronto in the 1960s. Also known simply as TD Tower.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "21",
+      "link": null
+     },
+     {
+      "text": "11 YV",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "11 Yorkville Avenue 43°40′17″N 79°23′18″W / 43.671486°N 79.388222°W / 43.671486; -79.388222 (11 YV)",
+      "link": null
+     },
+     {
+      "text": "221.91 (728)",
+      "link": null
+     },
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "22",
+      "link": null
+     },
+     {
+      "text": "Sugar Wharf Tower F",
+      "link": "Sugar Wharf"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "55 Lake Shore Boulevard East 43°38′40″N 79°22′16″W / 43.644562°N 79.371086°W / 43.644562; -79.371086 (Sugar Wharf Tower F)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "218.4 (717)",
+      "link": null
+     },
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "23",
+      "link": null
+     },
+     {
+      "text": "Prestige at Pinnacle One Yonge",
+      "link": "Prestige at Pinnacle One Yonge"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "28 Freeland Street 43°38′37″N 79°22′27″W / 43.643608°N 79.374184°W / 43.643608; -79.374184 (Prestige at Pinnacle One Yonge)",
+      "link": null
+     },
+     {
+      "text": "216.2 (709)",
+      "link": null
+     },
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "24",
+      "link": null
+     },
+     {
+      "text": "Bay Adelaide Centre West",
+      "link": "Bay Adelaide Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "333 Bay Street 43°39′01″N 79°22′50″W / 43.650269°N 79.380508°W / 43.650269; -79.380508 (Bay Adelaide Centre West)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "214.7 (704)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "Tallest building completed in Toronto in the 2000s.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "25",
+      "link": null
+     },
+     {
+      "text": "Shangri-La Toronto",
+      "link": "Shangri-La Toronto"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "188 University Avenue 43°38′57″N 79°23′10″W / 43.649086°N 79.386177°W / 43.649086; -79.386177 (Shangri-La Toronto)",
+      "link": "University Avenue (Toronto)"
+     },
+     {
+      "text": "214 (702)",
+      "link": null
+     },
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "26",
+      "link": null
+     },
+     {
+      "text": "Ritz-Carlton Toronto",
+      "link": "Ritz-Carlton Toronto"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "181 Wellington Street West 43°38′43″N 79°23′13″W / 43.645226°N 79.387009°W / 43.645226; -79.387009 (Ritz-Carlton Toronto)",
+      "link": "Wellington Street (Toronto)"
+     },
+     {
+      "text": "209.5 (687)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2011",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "27",
+      "link": null
+     },
+     {
+      "text": "488 University Avenue",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "488 University Avenue 43°39′18″N 79°23′20″W / 43.655064°N 79.389008°W / 43.655064; -79.389008 (488 University Avenue)",
+      "link": "University Avenue (Toronto)"
+     },
+     {
+      "text": "207.6 (681)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Also known as Residences of 488 University.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "28",
+      "link": null
+     },
+     {
+      "text": "Bay-Wellington Tower",
+      "link": "Brookfield Place (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "181 Bay Street 43°38′51″N 79°22′42″W / 43.647369°N 79.378334°W / 43.647369; -79.378334 (Bay-Wellington Tower)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "207 (679)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "1991",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "29",
+      "link": null
+     },
+     {
+      "text": "L Tower",
+      "link": "L Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "8 The Esplanade 43°38′46″N 79°22′35″W / 43.646172°N 79.376312°W / 43.646172; -79.376312 (L Tower)",
+      "link": "The Esplanade (Toronto)"
+     },
+     {
+      "text": "205 (673)",
+      "link": null
+     },
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "30",
+      "link": null
+     },
+     {
+      "text": "Massey Tower",
+      "link": "Massey Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "197 Yonge Street 43°39′13″N 79°22′45″W / 43.653683°N 79.37915°W / 43.653683; -79.37915 (Massey Tower)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "204.2 (670)",
+      "link": null
+     },
+     {
+      "text": "62",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "31",
+      "link": null
+     },
+     {
+      "text": "Four Seasons Hotel and Residences West",
+      "link": "Four Seasons Hotel and Residences Toronto"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "60 Yorkville Avenue 43°40′18″N 79°23′24″W / 43.671764°N 79.38987°W / 43.671764; -79.38987 (Four Seasons Hotel and Residences West)",
+      "link": null
+     },
+     {
+      "text": "204 (669)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Mixed-Use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "ICE Condominiums I",
+      "link": "ICE Condominiums"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "12 York Street 43°38′30″N 79°22′55″W / 43.641655°N 79.382034°W / 43.641655; -79.382034 (ICE Condominiums I)",
+      "link": "York Street (Toronto)"
+     },
+     {
+      "text": "202.3 (664)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "33",
+      "link": null
+     },
+     {
+      "text": "Concord Canada House 2",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "23 Spadina Avenue 43°38′28″N 79°23′34″W / 43.64101°N 79.392715°W / 43.64101; -79.392715 (Concord Canada House 2)",
+      "link": "Spadina Avenue"
+     },
+     {
+      "text": "202.2 (663)",
+      "link": null
+     },
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "34",
+      "link": null
+     },
+     {
+      "text": "YC Condominiums",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "460 Yonge Street 43°39′43″N 79°23′01″W / 43.661823°N 79.383675°W / 43.661823; -79.383675 (YC Condominiums)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "202.2 (663)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "88 Scott",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "88 Scott Street 43°38′54″N 79°22′35″W / 43.648434°N 79.376495°W / 43.648434; -79.376495 (88 Scott)",
+      "link": null
+     },
+     {
+      "text": "198.2 (650)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "Bay Adelaide Centre East",
+      "link": "Bay Adelaide Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "22 Adelaide Street West 43°39′03″N 79°22′46″W / 43.650723°N 79.379471°W / 43.650723; -79.379471 (Bay Adelaide Centre East)",
+      "link": "Adelaide Street (Toronto)"
+     },
+     {
+      "text": "196 (643)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "E Condos South",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "8 Eglinton Avenue East 43°42′27″N 79°23′53″W / 43.707436°N 79.398018°W / 43.707436; -79.398018 (E Condos South)",
+      "link": "Eglinton Avenue"
+     },
+     {
+      "text": "195.7 (642)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as E Condominiums.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "Wellesley on the Park",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "11 Wellesley Street West 43°39′52″N 79°23′07″W / 43.664406°N 79.385292°W / 43.664406; -79.385292 (Wellesley on the Park)",
+      "link": "Wellesley Street (Toronto)"
+     },
+     {
+      "text": "194.2 (637)",
+      "link": null
+     },
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "2221 Yonge",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "2221 Yonge Street 43°42′22″N 79°23′51″W / 43.706104°N 79.397629°W / 43.706104; -79.397629 (2221 Yonge)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "192.5 (632)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "EY Tower",
+      "link": "EY Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "100 Adelaide Street West 43°39′01″N 79°22′57″W / 43.650162°N 79.382515°W / 43.650162; -79.382515 (EY Tower)",
+      "link": "Adelaide Street (Toronto)"
+     },
+     {
+      "text": "188.2 (617)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "Toronto House",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "225 Adelaide Street West 43°38′53″N 79°23′18″W / 43.648094°N 79.388229°W / 43.648094; -79.388229 (Toronto House)",
+      "link": "Adelaide Street (Toronto)"
+     },
+     {
+      "text": "186.5 (612)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "RBC Centre",
+      "link": "RBC Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "155 Wellington Street West 43°38′44″N 79°23′09″W / 43.645622°N 79.385735°W / 43.645622; -79.385735 (RBC Centre)",
+      "link": "Wellington Street (Toronto)"
+     },
+     {
+      "text": "184.9 (607)",
+      "link": null
+     },
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "43",
+      "link": null
+     },
+     {
+      "text": "Casa II",
+      "link": "Casa II"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "42 Charles Street East 43°40′10″N 79°23′03″W / 43.669441°N 79.384201°W / 43.669441; -79.384201 (Casa II)",
+      "link": null
+     },
+     {
+      "text": "184.5 (605)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "U Condominiums East Tower",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1080 Bay Street 43°40′01″N 79°23′19″W / 43.666916°N 79.388718°W / 43.666916; -79.388718 (U Condominiums East Tower)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "184 (604)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as U Condominiums II.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "1 Yorkville",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "1 Yorkville Avenue 43°40′18″N 79°23′16″W / 43.671604°N 79.387764°W / 43.671604; -79.387764 (1 Yorkville)",
+      "link": null
+     },
+     {
+      "text": "183.2 (601)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "TD North Tower",
+      "link": "Toronto-Dominion Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "77 King Street West 43°38′53″N 79°22′55″W / 43.647926°N 79.381996°W / 43.647926; -79.381996 (TD North Tower)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "182.9 (600)",
+      "link": null
+     },
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "1969",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "Water's Edge at the Cove",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "38 The Marginal Boulevard 43°37′34″N 79°28′43″W / 43.625999°N 79.478714°W / 43.625999; -79.478714 (Water's Edge at the Cove)",
+      "link": null
+     },
+     {
+      "text": "182.3 (598)",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "Maple Leaf Square North Tower",
+      "link": "Maple Leaf Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "65 Bremner Boulevard 43°38′34″N 79°22′50″W / 43.642849°N 79.380585°W / 43.642849; -79.380585 (Maple Leaf Square North Tower)",
+      "link": "Bremner Boulevard"
+     },
+     {
+      "text": "181.3 (595)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "8 Wellesley",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "8 Wellesley Street West 43°39′54″N 79°23′07″W / 43.665043°N 79.385155°W / 43.665043; -79.385155 (8 Wellesley)",
+      "link": "Wellesley Street (Toronto)"
+     },
+     {
+      "text": "181.2 (594)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "Eau Du Soleil Water Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "2183 Lake Shore Boulevard West 43°37′24″N 79°28′44″W / 43.623417°N 79.478889°W / 43.623417; -79.478889 (Eau Du Soleil Water Tower)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "180.8 (593)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "Casa III",
+      "link": "Casa III"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "50 Charles Street East 43°40′10″N 79°23′01″W / 43.669529°N 79.383698°W / 43.669529; -79.383698 (Casa III)",
+      "link": null
+     },
+     {
+      "text": "179.6 (589)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Casa III Condominiums & Fifty Nine Hayden.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "Rosedale on Bloor",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "387 Bloor Street East 43°40′19″N 79°22′39″W / 43.671947°N 79.377403°W / 43.671947; -79.377403 (Rosedale on Bloor)",
+      "link": "Bloor Street"
+     },
+     {
+      "text": "179 (587)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "INDX Tower",
+      "link": "Sapphire Tower"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "70 Temperance Street 43°39′03″N 79°22′56″W / 43.650749°N 79.382118°W / 43.650749; -79.382118 (INDX Tower)",
+      "link": null
+     },
+     {
+      "text": "178.2 (585)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "Vita on the Lake",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "70 Anne Craig Drive 43°37′29″N 79°28′45″W / 43.624702°N 79.479187°W / 43.624702; -79.479187 (Vita on the Lake)",
+      "link": null
+     },
+     {
+      "text": "177.1 (581)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "88 Queen Street East",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "88 Queen Street East 43°39′13″N 79°22′30″W / 43.653687°N 79.374878°W / 43.653687; -79.374878 (88 Queen Street East)",
+      "link": "Queen Street (Toronto)"
+     },
+     {
+      "text": "177 (581)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "56",
+      "link": null
+     },
+     {
+      "text": "One King West Hotel & Residence",
+      "link": "One King West Hotel & Residence"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 King Street West 43°38′56″N 79°22′42″W / 43.648808°N 79.378204°W / 43.648808; -79.378204 (One King West Hotel & Residence)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "176.2 (578)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "First building taller than 150 m (492 ft) in Toronto to be built in the 21st century.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "8 Spadina at The Well",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "8 Spadina Avenue 43°38′35″N 79°23′41″W / 43.643082°N 79.394661°W / 43.643082; -79.394661 (8 Spadina at The Well)",
+      "link": "Spadina Avenue"
+     },
+     {
+      "text": "174.1 (571)",
+      "link": null
+     },
+     {
+      "text": "38",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "Success Tower 2",
+      "link": "Pinnacle Centre"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "33 Bay Street 43°38′36″N 79°22′37″W / 43.643204°N 79.376892°W / 43.643204; -79.376892 (Success Tower 2)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "173.3 (569)",
+      "link": null
+     },
+     {
+      "text": "55",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "Royal Bank Plaza South",
+      "link": "Royal Bank Plaza"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "200 Bay Street 43°38′46″N 79°22′47″W / 43.646198°N 79.379761°W / 43.646198; -79.379761 (Royal Bank Plaza South)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "173 (568)",
+      "link": null
+     },
+     {
+      "text": "41",
+      "link": null
+     },
+     {
+      "text": "1979",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "60",
+      "link": null
+     },
+     {
+      "text": "Maple Leaf Square South Tower",
+      "link": "Maple Leaf Square"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "55 Bremner Boulevard 43°38′32″N 79°22′51″W / 43.642296°N 79.380814°W / 43.642296; -79.380814 (Maple Leaf Square South Tower)",
+      "link": "Bremner Boulevard"
+     },
+     {
+      "text": "171.3 (562)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2010",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "61",
+      "link": null
+     },
+     {
+      "text": "The Selby",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "25 Selby Street 43°40′16″N 79°22′38″W / 43.671158°N 79.377098°W / 43.671158; -79.377098 (The Selby)",
+      "link": null
+     },
+     {
+      "text": "170.6 (560)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "62",
+      "link": null
+     },
+     {
+      "text": "Teahouse Condominiums South",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "501 Yonge Street 43°39′48″N 79°23′01″W / 43.663258°N 79.383537°W / 43.663258; -79.383537 (Teahouse Condominiums South)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "170 (558)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "63",
+      "link": null
+     },
+     {
+      "text": "Eight Cumberland",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "8 Cumberland Street 43°40′17″N 79°23′16″W / 43.671314°N 79.387718°W / 43.671314; -79.387718 (Eight Cumberland)",
+      "link": null
+     },
+     {
+      "text": "169.8 (557)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "64",
+      "link": null
+     },
+     {
+      "text": "Hullmark Centre I",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "5 Sheppard Avenue East 43°45′41″N 79°24′35″W / 43.761433°N 79.409859°W / 43.761433; -79.409859 (Hullmark Centre I)",
+      "link": "Sheppard Avenue"
+     },
+     {
+      "text": "169.6 (556)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "65",
+      "link": null
+     },
+     {
+      "text": "Lago",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "56 Anne Craig Drive 43°37′32″N 79°28′44″W / 43.625473°N 79.478897°W / 43.625473; -79.478897 (Lago)",
+      "link": null
+     },
+     {
+      "text": "167.5 (550)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Lago at the Waterfront.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "55C",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "55 Charles Street East 43°40′08″N 79°23′01″W / 43.668858°N 79.383537°W / 43.668858; -79.383537",
+      "link": null
+     },
+     {
+      "text": "167 (548)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "67",
+      "link": null
+     },
+     {
+      "text": "252 Church",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "252 Church Street 43°39′22″N 79°22′38″W / 43.656181°N 79.377342°W / 43.656181; -79.377342 (252 Church)",
+      "link": "Church Street (Toronto)"
+     },
+     {
+      "text": "166.1 (545)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "68",
+      "link": null
+     },
+     {
+      "text": "44 Charles Street West",
+      "link": "Manulife Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "44 Charles Street West 43°40′07″N 79°23′18″W / 43.668678°N 79.388229°W / 43.668678; -79.388229 (44 Charles Street West)",
+      "link": null
+     },
+     {
+      "text": "166 (545)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "1974",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "69",
+      "link": null
+     },
+     {
+      "text": "Karma",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "24 Grenville Street 43°39′42″N 79°23′03″W / 43.661747°N 79.384209°W / 43.661747; -79.384209 (Karma)",
+      "link": null
+     },
+     {
+      "text": "165.9 (544)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "70",
+      "link": null
+     },
+     {
+      "text": "Quantum 2",
+      "link": "Minto Midtown"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "2191 Yonge Street 43°42′20″N 79°23′51″W / 43.705669°N 79.397453°W / 43.705669; -79.397453 (Quantum 2)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "165 (541)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2008",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Quantum North.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "71",
+      "link": null
+     },
+     {
+      "text": "Theatre Park",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "224 King Street West 43°38′51″N 79°23′14″W / 43.64761°N 79.387352°W / 43.64761; -79.387352 (Theatre Park)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "164.8 (541)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "72",
+      "link": null
+     },
+     {
+      "text": "Social",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "229 Church Street 43°39′23″N 79°22′36″W / 43.656265°N 79.376701°W / 43.656265; -79.376701",
+      "link": "Church Street (Toronto)"
+     },
+     {
+      "text": "164.8 (541)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Social at Church + Dundas.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "73",
+      "link": null
+     },
+     {
+      "text": "400 King West",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "400 King Street West 43°38′46″N 79°23′35″W / 43.6460451°N 79.3929238°W / 43.6460451; -79.3929238 (400 King West)",
+      "link": null
+     },
+     {
+      "text": "164.6 (540)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "74",
+      "link": null
+     },
+     {
+      "text": "Burke Condominiums",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "603 Sherbourne Street 43°40′17″N 79°22′35″W / 43.671421°N 79.376309°W / 43.671421; -79.376309 (Burke Condominiums)",
+      "link": "Sherbourne Street, Toronto"
+     },
+     {
+      "text": "163.3 (536)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "75",
+      "link": null
+     },
+     {
+      "text": "Residences of College Park I",
+      "link": "Residences of College Park"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "763 Bay Street 43°39′37″N 79°23′06″W / 43.660305°N 79.385063°W / 43.660305; -79.385063 (Residences of College Park I)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "163 (535)",
+      "link": null
+     },
+     {
+      "text": "51",
+      "link": null
+     },
+     {
+      "text": "2006",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Residences of College Park North.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "76",
+      "link": null
+     },
+     {
+      "text": "Burano",
+      "link": "Burano (building)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "832 Bay Street 43°39′44″N 79°23′11″W / 43.662212°N 79.386497°W / 43.662212; -79.386497 (Burano)",
+      "link": "Bay Street"
+     },
+     {
+      "text": "163 (535)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Burnao on Bay.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "77",
+      "link": null
+     },
+     {
+      "text": "Success Tower 1",
+      "link": "Pinnacle Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "18 Harbour Street 43°38′34″N 79°22′38″W / 43.642719°N 79.377144°W / 43.642719; -79.377144 (Success Tower 1)",
+      "link": null
+     },
+     {
+      "text": "161.9 (531)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2011",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as 33 Bay Residences at Pinnacle Centre.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "Pinnacle Etobicoke 2A",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "5415 Dundas Street West 43°37′55″N 79°32′33″W / 43.63191°N 79.54246°W / 43.63191; -79.54246 (Pinnacle Etobicoke 2A)",
+      "link": null
+     },
+     {
+      "text": "161.9 (531)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "79",
+      "link": null
+     },
+     {
+      "text": "E2 at E Place",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "41 Roehampton Avenue 43°42′28″N 79°23′49″W / 43.707916°N 79.396996°W / 43.707916; -79.396996 (E2 at E Place)",
+      "link": null
+     },
+     {
+      "text": "161.8 (531)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2022",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "80",
+      "link": null
+     },
+     {
+      "text": "X2",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "101 Charles Street East 43°40′10″N 79°22′50″W / 43.669582°N 79.380569°W / 43.669582; -79.380569 (X2)",
+      "link": null
+     },
+     {
+      "text": "161.1 (529)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "81",
+      "link": null
+     },
+     {
+      "text": "FIVE",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "5 St. Joseph Street 43°39′56″N 79°23′08″W / 43.665569°N 79.385597°W / 43.665569; -79.385597 (FIVE)",
+      "link": null
+     },
+     {
+      "text": "161 (528)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "82",
+      "link": null
+     },
+     {
+      "text": "Kipling Station Condos",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "5251 Dundas Street West 43°38′17″N 79°32′16″W / 43.63814°N 79.53779°W / 43.63814; -79.53779 (Alias)",
+      "link": null
+     },
+     {
+      "text": "160.8 (528)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Topped out in May 2026.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "83",
+      "link": null
+     },
+     {
+      "text": "Alias",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "120 Church Street 43°39′07″N 79°22′32″W / 43.652061°N 79.375542°W / 43.652061; -79.375542 (Alias)",
+      "link": null
+     },
+     {
+      "text": "158.7 (521)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "84",
+      "link": null
+     },
+     {
+      "text": "The Uptown Residences",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "35 Balmuto Street 43°40′10″N 79°23′15″W / 43.669468°N 79.387459°W / 43.669468; -79.387459 (The Uptown Residences)",
+      "link": null
+     },
+     {
+      "text": "158 (518)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2011",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "85",
+      "link": null
+     },
+     {
+      "text": "One Delisle",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 Delisle Avenue 43°41′20″N 79°23′42″W / 43.6889175°N 79.3948974°W / 43.6889175; -79.3948974 (One Delisle)",
+      "link": null
+     },
+     {
+      "text": "158 (518)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "86",
+      "link": null
+     },
+     {
+      "text": "Three Hundred",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "300 Front Street West 43°38′39″N 79°23′22″W / 43.644222°N 79.389481°W / 43.644222; -79.389481 (Three Hundred)",
+      "link": "Front Street (Toronto)"
+     },
+     {
+      "text": "157.9 (518)",
+      "link": null
+     },
+     {
+      "text": "52",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "87",
+      "link": null
+     },
+     {
+      "text": "Lighthouse Tower Condominium",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "132 Queens Quay East 43°38′43″N 79°22′09″W / 43.645248°N 79.369301°W / 43.645248; -79.369301 (Lighthouse Tower Condominium)",
+      "link": "Queens Quay (Toronto)"
+     },
+     {
+      "text": "157.9 (518)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Lighthouse West at Daniels Waterfront.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "88",
+      "link": null
+     },
+     {
+      "text": "The Well Residential One",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "435 Wellington Street West 43°38′34″N 79°23′44″W / 43.642761°N 79.395424°W / 43.642761; -79.395424 (The Well Residential One)",
+      "link": "Wellington Street (Toronto)"
+     },
+     {
+      "text": "157.3 (516)",
+      "link": null
+     },
+     {
+      "text": "46",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as FourFifty The Well.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "89",
+      "link": null
+     },
+     {
+      "text": "Grid Condos",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "181 Dundas Street East 43°39′25″N 79°22′27″W / 43.656948°N 79.374092°W / 43.656948; -79.374092 (Grid Condos)",
+      "link": "Dundas Street"
+     },
+     {
+      "text": "157 (515)",
+      "link": null
+     },
+     {
+      "text": "50",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "90",
+      "link": null
+     },
+     {
+      "text": "16 York",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "16 York Street 43°38′33″N 79°22′55″W / 43.642635°N 79.382019°W / 43.642635; -79.382019 (16 York)",
+      "link": "York Street (Toronto)"
+     },
+     {
+      "text": "157 (515)",
+      "link": null
+     },
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "91",
+      "link": null
+     },
+     {
+      "text": "Delta Toronto Hotel",
+      "link": "Delta Toronto Hotel"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "75 Lower Simcoe Street 43°38′36″N 79°23′02″W / 43.643208°N 79.383827°W / 43.643208; -79.383827",
+      "link": null
+     },
+     {
+      "text": "156.8 (514)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "Hotel",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "92",
+      "link": null
+     },
+     {
+      "text": "One York Street",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 York Street 43°38′30″N 79°22′49″W / 43.641617°N 79.380264°W / 43.641617; -79.380264 (One York Street)",
+      "link": "York Street (Toronto)"
+     },
+     {
+      "text": "156.8 (514)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "93",
+      "link": null
+     },
+     {
+      "text": "Festival Tower",
+      "link": "Festival Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "80 John Street 43°38′49″N 79°23′25″W / 43.64698°N 79.390182°W / 43.64698; -79.390182 (Festival Tower)",
+      "link": "John Street (Toronto)"
+     },
+     {
+      "text": "156.7 (514)",
+      "link": null
+     },
+     {
+      "text": "42",
+      "link": null
+     },
+     {
+      "text": "2011",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "94",
+      "link": null
+     },
+     {
+      "text": "Hotel Riu Plaza Toronto",
+      "link": "Hotel Riu Plaza Toronto"
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "30 Widmer Street 43°38′50″N 79°23′31″W / 43.64732°N 79.39183°W / 43.64732; -79.39183 (Riu Plaza Hotel)",
+      "link": null
+     },
+     {
+      "text": "156.1 (512)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Mixed-use residential and hotel building.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "95",
+      "link": null
+     },
+     {
+      "text": "Theatre District Residences",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "8 Widmer Street 43°38′49″N 79°23′30″W / 43.64694°N 79.39167°W / 43.64694; -79.39167 (Theatre District Residences)",
+      "link": null
+     },
+     {
+      "text": "156.1 (512)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "96",
+      "link": null
+     },
+     {
+      "text": "Dundas Square Gardens",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "251 Jarvis Street 43°39′27″N 79°22′27″W / 43.657566°N 79.374268°W / 43.657566; -79.374268 (Dundas Square Gardens)",
+      "link": "Jarvis Street"
+     },
+     {
+      "text": "156 (512)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "97",
+      "link": null
+     },
+     {
+      "text": "No. 55 Mercer",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "55 Mercer Street 43°38′43″N 79°23′29″W / 43.64529°N 79.391518°W / 43.64529; -79.391518 (No. 55 Mercer)",
+      "link": null
+     },
+     {
+      "text": "156 (512)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "98",
+      "link": null
+     },
+     {
+      "text": "Nobu Residences East Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "15 Mercer Street 43°38′44″N 79°23′25″W / 43.645611°N 79.390396°W / 43.645611; -79.390396 (Nobu Residences East Tower)",
+      "link": null
+     },
+     {
+      "text": "156 (512)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Nobu Residences II.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "99",
+      "link": null
+     },
+     {
+      "text": "Nobu Residences West Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "35 Mercer Street 43°38′44″N 79°23′28″W / 43.645451°N 79.390976°W / 43.645451; -79.390976 (Nobu Residences West Tower)",
+      "link": null
+     },
+     {
+      "text": "156 (512)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Nobu Hotel & Residences I.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "100",
+      "link": null
+     },
+     {
+      "text": "King Blue North Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "355 King Street West 43°38′46″N 79°23′29″W / 43.646004°N 79.39151°W / 43.646004; -79.39151 (King Blue North Tower)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "155.8 (511)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "Also called King Blue Hotel & Condominiums.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "101",
+      "link": null
+     },
+     {
+      "text": "PJ Condos",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "99 John Street 43°38′51″N 79°23′24″W / 43.647514°N 79.389877°W / 43.647514; -79.389877 (PJ Condos)",
+      "link": "John Street (Toronto)"
+     },
+     {
+      "text": "155.8 (511)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "102",
+      "link": null
+     },
+     {
+      "text": "Maverick",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "333 King Street West 43°38′46″N 79°23′28″W / 43.64613°N 79.39109°W / 43.64613; -79.39109 (Maverick)",
+      "link": "King Street (Toronto)"
+     },
+     {
+      "text": "154.5 (507)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "103",
+      "link": null
+     },
+     {
+      "text": "U Condominiums West Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "65 St. Mary Street 43°40′01″N 79°23′22″W / 43.666927°N 79.389389°W / 43.666927; -79.389389 (U Condominiums West Tower)",
+      "link": null
+     },
+     {
+      "text": "154 (505)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as U Condominiums I.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "104",
+      "link": null
+     },
+     {
+      "text": "87 Peter",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "87 Peter Street 43°38′49″N 79°23′32″W / 43.647053°N 79.392242°W / 43.647053; -79.392242 (87 Peter)",
+      "link": null
+     },
+     {
+      "text": "154 (505)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "105",
+      "link": null
+     },
+     {
+      "text": "Yonge + Rich",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "25 Richmond Street East 43°39′07″N 79°22′37″W / 43.651878°N 79.376968°W / 43.651878; -79.376968 (Yonge + Rich)",
+      "link": "Richmond Street"
+     },
+     {
+      "text": "154 (505)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2021",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "106",
+      "link": null
+     },
+     {
+      "text": "TD South Tower",
+      "link": "Toronto-Dominion Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "79 Wellington Street West 43°38′48″N 79°22′52″W / 43.646774°N 79.381233°W / 43.646774; -79.381233 (TD South Tower)",
+      "link": "Wellington Street (Toronto)"
+     },
+     {
+      "text": "153.6 (504)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "1985",
+      "link": null
+     },
+     {
+      "text": "Office",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "107",
+      "link": null
+     },
+     {
+      "text": "Westlake Village 1",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "2220 Lake Shore Boulevard West 43°37′22″N 79°29′00″W / 43.622723°N 79.483253°W / 43.622723; -79.483253 (Westlake Village 1)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "153.3 (503)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "108",
+      "link": null
+     },
+     {
+      "text": "35 Mariner",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "35 Mariner Terrace 43°38′23″N 79°23′31″W / 43.639828°N 79.392036°W / 43.639828; -79.392036 (35 Mariner)",
+      "link": null
+     },
+     {
+      "text": "153.2 (503)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as Harbourview Estates II at Cityplace.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "109",
+      "link": null
+     },
+     {
+      "text": "Montage",
+      "link": "Montage (building)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "25 Telegram Mews 43°38′28″N 79°23′40″W / 43.641155°N 79.394371°W / 43.641155; -79.394371 (Montage)",
+      "link": null
+     },
+     {
+      "text": "153 (502)",
+      "link": null
+     },
+     {
+      "text": "48",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also called Montage at Cityplace.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "110",
+      "link": null
+     },
+     {
+      "text": "IMMIX",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "484 Yonge Street 43°39′46″N 79°23′03″W / 43.662724°N 79.384033°W / 43.662724; -79.384033 (IMMIX)",
+      "link": null
+     },
+     {
+      "text": "153 (502)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2023",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "111",
+      "link": null
+     },
+     {
+      "text": "Peter & Adelaide",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "114 Peter Street 43°38′52″N 79°23′36″W / 43.647713°N 79.3934323°W / 43.647713; -79.3934323 (Peter & Adelaide)",
+      "link": null
+     },
+     {
+      "text": "153 (502)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "112",
+      "link": null
+     },
+     {
+      "text": "The Charles at Church",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "68 Charles Street East 43°40′10″N 79°22′59″W / 43.669559°N 79.383041°W / 43.669559; -79.383041 (The Charles at Church*)",
+      "link": null
+     },
+     {
+      "text": "152.7 (501)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "113",
+      "link": null
+     },
+     {
+      "text": "Beyond the Sea Star Tower",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "2230 Lake Shore Boulevard West 43°37′18″N 79°28′58″W / 43.621723°N 79.482834°W / 43.621723; -79.482834 (Beyond the Sea Star Tower)",
+      "link": "Lake Shore Boulevard"
+     },
+     {
+      "text": "151.5 (497)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "2012",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "114",
+      "link": null
+     },
+     {
+      "text": "Chaz Yorkville Condos",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "45 Charles Street East 43°40′08″N 79°23′02″W / 43.668934°N 79.383865°W / 43.668934; -79.383865 (Chaz Yorkville Condos)",
+      "link": null
+     },
+     {
+      "text": "151.4 (497)",
+      "link": null
+     },
+     {
+      "text": "47",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "115",
+      "link": null
+     },
+     {
+      "text": "The 250",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "250 Yonge Street 43°39′17″N 79°22′50″W / 43.654598°N 79.380524°W / 43.654598; -79.380524 (The 250)",
+      "link": "Yonge Street"
+     },
+     {
+      "text": "150.6 (494)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "1992",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "Also known as 250 Yonge at Toronto Eaton Centre.",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "116",
+      "link": null
+     },
+     {
+      "text": "Monde",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "12 Bonnycastle Street 43°38′47″N 79°21′54″W / 43.646305°N 79.36512°W / 43.646305; -79.36512 (Monde)",
+      "link": null
+     },
+     {
+      "text": "150 (492)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "2018",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "117",
+      "link": null
+     },
+     {
+      "text": "The Saint",
+      "link": null
+     },
+     {
+      "text": "–",
+      "link": null
+     },
+     {
+      "text": "89 Church Street 43°39′07″N 79°22′30″W / 43.652061°N 79.374992°W / 43.652061; -79.374992 (The Saint)",
+      "link": "Church Street (Toronto)"
+     },
+     {
+      "text": "150 (492)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest buildings > Tallest completed buildings by neighbourhood",
+   "columns": [
+    "Sub-division",
+    "Neighbourhoods",
+    "Name",
+    "Heightm (ft)",
+    "Floors",
+    "Year",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "Old Toronto,Downtown",
+      "link": "Old Toronto"
+     },
+     {
+      "text": "Financial District",
+      "link": "Financial District, Toronto"
+     },
+     {
+      "text": "First Canadian Place",
+      "link": "First Canadian Place"
+     },
+     {
+      "text": "298.1 (978)",
+      "link": null
+     },
+     {
+      "text": "72",
+      "link": null
+     },
+     {
+      "text": "1975",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Old Toronto,Downtown",
+      "link": "Old Toronto"
+     },
+     {
+      "text": "Yorkville",
+      "link": "Yorkville, Toronto"
+     },
+     {
+      "text": "One Bloor",
+      "link": "One Bloor"
+     },
+     {
+      "text": "257.3 (844)",
+      "link": null
+     },
+     {
+      "text": "78",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Old Toronto, Midtown",
+      "link": "Midtown, Toronto"
+     },
+     {
+      "text": "Yonge–Eglinton",
+      "link": "Yonge–Eglinton"
+     },
+     {
+      "text": "E Condos South",
+      "link": null
+     },
+     {
+      "text": "195.7 (642)",
+      "link": null
+     },
+     {
+      "text": "58",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Old Toronto, Midtown",
+      "link": "Midtown, Toronto"
+     },
+     {
+      "text": "Casa Loma / Forest Hill",
+      "link": "Casa Loma (neighbourhood)"
+     },
+     {
+      "text": "The Heathview Apartments(Twin buildings)",
+      "link": null
+     },
+     {
+      "text": "109 (358)",
+      "link": null
+     },
+     {
+      "text": "30",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Old Toronto,West End",
+      "link": null
+     },
+     {
+      "text": "Wallace Emerson",
+      "link": "Wallace Emerson"
+     },
+     {
+      "text": "The Diamond I",
+      "link": null
+     },
+     {
+      "text": "101.1 (332)",
+      "link": null
+     },
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "East York",
+      "link": null
+     },
+     {
+      "text": "Thorncliffe Park",
+      "link": "Thorncliffe Park"
+     },
+     {
+      "text": "Leaside Towers (Twin buildings)",
+      "link": null
+     },
+     {
+      "text": "129 (423)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "1970",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "East York",
+      "link": null
+     },
+     {
+      "text": "Taylor–Massey /Crescent Town",
+      "link": "Crescent Town"
+     },
+     {
+      "text": "Bela Square Phase 1",
+      "link": null
+     },
+     {
+      "text": "112.5 (369)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "East York",
+      "link": null
+     },
+     {
+      "text": "Wynford–Concorde",
+      "link": null
+     },
+     {
+      "text": "Accolade",
+      "link": null
+     },
+     {
+      "text": "110 (361)",
+      "link": null
+     },
+     {
+      "text": "36",
+      "link": null
+     },
+     {
+      "text": "2009",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "York",
+      "link": null
+     },
+     {
+      "text": "Weston",
+      "link": "Weston, Toronto"
+     },
+     {
+      "text": "West 22 at Weston Common",
+      "link": null
+     },
+     {
+      "text": "107.5 (353)",
+      "link": null
+     },
+     {
+      "text": "30",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Etobicoke",
+      "link": "Etobicoke"
+     },
+     {
+      "text": "The Queensway–Humber Bay",
+      "link": "The Queensway–Humber Bay"
+     },
+     {
+      "text": "Eau du Soleil Sky Tower",
+      "link": null
+     },
+     {
+      "text": "228.2 (749)",
+      "link": null
+     },
+     {
+      "text": "66",
+      "link": null
+     },
+     {
+      "text": "2019",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Etobicoke",
+      "link": "Etobicoke"
+     },
+     {
+      "text": "Islington-CityCentre West",
+      "link": "Islington-City Centre West"
+     },
+     {
+      "text": "Islington Terrace",
+      "link": null
+     },
+     {
+      "text": "145.1 (476)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2020",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Etobicoke",
+      "link": "Etobicoke"
+     },
+     {
+      "text": "Eatonville",
+      "link": "Eatonville, Toronto"
+     },
+     {
+      "text": "Thunderbird at One Valhalla",
+      "link": null
+     },
+     {
+      "text": "111.3 (365)",
+      "link": null
+     },
+     {
+      "text": "35",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Willowdale",
+      "link": "Willowdale, Toronto"
+     },
+     {
+      "text": "Hullmark Centre",
+      "link": null
+     },
+     {
+      "text": "169.6 (556)",
+      "link": null
+     },
+     {
+      "text": "45",
+      "link": null
+     },
+     {
+      "text": "2015",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Henry Farm",
+      "link": "Henry Farm"
+     },
+     {
+      "text": "Alto at Atria",
+      "link": null
+     },
+     {
+      "text": "137.3 (450)",
+      "link": null
+     },
+     {
+      "text": "43",
+      "link": null
+     },
+     {
+      "text": "2016",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Bayview Village",
+      "link": "Bayview Village"
+     },
+     {
+      "text": "Empire Tower",
+      "link": null
+     },
+     {
+      "text": "130 (427)",
+      "link": null
+     },
+     {
+      "text": "28",
+      "link": null
+     },
+     {
+      "text": "2005",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Parkway Forest",
+      "link": "Parkway Forest"
+     },
+     {
+      "text": "Emerald City I",
+      "link": null
+     },
+     {
+      "text": "126 (413)",
+      "link": null
+     },
+     {
+      "text": "37",
+      "link": null
+     },
+     {
+      "text": "2014",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Don Mills",
+      "link": "Don Mills"
+     },
+     {
+      "text": "Rodeo Drive Condominiums 1",
+      "link": null
+     },
+     {
+      "text": "105.5 (346)",
+      "link": null
+     },
+     {
+      "text": "32",
+      "link": null
+     },
+     {
+      "text": "2024",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "North York",
+      "link": "North York"
+     },
+     {
+      "text": "Yorkdale–Glen Park",
+      "link": "Yorkdale–Glen Park"
+     },
+     {
+      "text": "The Sloane East Tower",
+      "link": null
+     },
+     {
+      "text": "103.4 (339)",
+      "link": null
+     },
+     {
+      "text": "29",
+      "link": null
+     },
+     {
+      "text": "2025",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Scarborough",
+      "link": "Scarborough, Ontario"
+     },
+     {
+      "text": "ScarboroughCity Centre",
+      "link": "Scarborough City Centre"
+     },
+     {
+      "text": "Encore at Equinox",
+      "link": null
+     },
+     {
+      "text": "131 (430)",
+      "link": null
+     },
+     {
+      "text": "39",
+      "link": null
+     },
+     {
+      "text": "2013",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Scarborough",
+      "link": "Scarborough, Ontario"
+     },
+     {
+      "text": "Agincourt",
+      "link": "Agincourt, Toronto"
+     },
+     {
+      "text": "Solaris at Metrogate (Twin buildings)",
+      "link": null
+     },
+     {
+      "text": "127 (417)",
+      "link": null
+     },
+     {
+      "text": "40",
+      "link": null
+     },
+     {
+      "text": "2017",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Tallest under construction",
+   "columns": [
+    "Rank",
+    "Name",
+    "Image",
+    "Heightm (ft)",
+    "Floors",
+    "Year",
+    "Purpose",
+    "Notes"
+   ],
+   "rows": [
+    [
+     {
+      "text": "1",
+      "link": null
+     },
+     {
+      "text": "Concord Sky (385 Yonge Street)",
+      "link": "Concord Sky"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "300.2 (985)",
+      "link": null
+     },
+     {
+      "text": "85",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "2",
+      "link": null
+     },
+     {
+      "text": "Forma East Tower (266 King Street West)",
+      "link": "Forma (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "266.5 (874)",
+      "link": null
+     },
+     {
+      "text": "74",
+      "link": null
+     },
+     {
+      "text": "2028",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "3",
+      "link": null
+     },
+     {
+      "text": "8 Elm Street",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "220.3 (723)",
+      "link": null
+     },
+     {
+      "text": "69",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "4",
+      "link": null
+     },
+     {
+      "text": "The Pemberton (33 Yorkville Avenue)",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "215.8 (708)",
+      "link": null
+     },
+     {
+      "text": "68",
+      "link": null
+     },
+     {
+      "text": "2026",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "5",
+      "link": null
+     },
+     {
+      "text": "Q Tower (200 Queens Quay West)",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "197.4 (648)",
+      "link": null
+     },
+     {
+      "text": "59",
+      "link": null
+     },
+     {
+      "text": "2029",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "6",
+      "link": null
+     },
+     {
+      "text": "Queen Church",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "186.2 (611)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2028",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "7",
+      "link": null
+     },
+     {
+      "text": "The United BLDG (481 University Avenue)",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "179.5 (589)",
+      "link": null
+     },
+     {
+      "text": "54",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "8",
+      "link": null
+     },
+     {
+      "text": "241 Church Street",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "170.1 (558)",
+      "link": null
+     },
+     {
+      "text": "53",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "9",
+      "link": null
+     },
+     {
+      "text": "The Bourne",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "169.8 (557)",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "10",
+      "link": null
+     },
+     {
+      "text": "4800 Yonge",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "167.1 (548)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "11",
+      "link": null
+     },
+     {
+      "text": "170 Roehampton",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "162.5 (533)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "12",
+      "link": null
+     },
+     {
+      "text": "Pinnacle Lakeside Tower 1 (215 Lake Shore Boulevard East)",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "157 (515)",
+      "link": null
+     },
+     {
+      "text": "49",
+      "link": null
+     },
+     {
+      "text": "2027",
+      "link": null
+     },
+     {
+      "text": "Residential",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "13",
+      "link": null
+     },
+     {
+      "text": "49 Ontario Street West Tower",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "152.4 (500)",
+      "link": null
+     },
+     {
+      "text": "44",
+      "link": null
+     },
+     {
+      "text": "TBD",
+      "link": null
+     },
+     {
+      "text": "Mixed-use",
+      "link": null
+     },
+     {
+      "text": "",
+      "link": null
+     }
+    ]
+   ]
+  },
+  {
+   "section": "Timeline of tallest buildings",
+   "columns": [
+    "Name",
+    "Image",
+    "Street address",
+    "Years as tallest",
+    "Heightm / ft",
+    "Floors"
+   ],
+   "rows": [
+    [
+     {
+      "text": "Beard Building",
+      "link": "Beard Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "163 King Street East",
+      "link": null
+     },
+     {
+      "text": "1894–1896",
+      "link": null
+     },
+     {
+      "text": "30 / 98",
+      "link": null
+     },
+     {
+      "text": "7",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Temple Building",
+      "link": "Temple Building (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "62 Richmond Street West",
+      "link": null
+     },
+     {
+      "text": "1896–1906",
+      "link": null
+     },
+     {
+      "text": "40 / 131",
+      "link": null
+     },
+     {
+      "text": "10",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Trader's Bank Building",
+      "link": "Trader's Bank Building"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "67 Yonge Street",
+      "link": null
+     },
+     {
+      "text": "1906–1912",
+      "link": null
+     },
+     {
+      "text": "60 / 197",
+      "link": null
+     },
+     {
+      "text": "15",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Canadian Pacific Building",
+      "link": "Canadian Pacific Building (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "69 Yonge Street",
+      "link": null
+     },
+     {
+      "text": "1912–1915",
+      "link": null
+     },
+     {
+      "text": "65 / 213",
+      "link": null
+     },
+     {
+      "text": "15",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Royal Bank Building",
+      "link": "Royal Bank Building (Toronto)"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "2 King Street East",
+      "link": null
+     },
+     {
+      "text": "1915–1928",
+      "link": null
+     },
+     {
+      "text": "89 / 295",
+      "link": null
+     },
+     {
+      "text": "20",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Sterling Tower",
+      "link": "Sterling Tower"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "372 Bay Street",
+      "link": null
+     },
+     {
+      "text": "1928–1929",
+      "link": null
+     },
+     {
+      "text": "90 / 295",
+      "link": null
+     },
+     {
+      "text": "21",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Royal York Hotel",
+      "link": "Fairmont Royal York"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "100 Front Street West",
+      "link": null
+     },
+     {
+      "text": "1929–1931",
+      "link": null
+     },
+     {
+      "text": "124 / 407",
+      "link": null
+     },
+     {
+      "text": "28",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Commerce Court North",
+      "link": "Commerce Court"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "25 King Street West",
+      "link": null
+     },
+     {
+      "text": "1931–1967",
+      "link": null
+     },
+     {
+      "text": "145 / 476",
+      "link": null
+     },
+     {
+      "text": "34",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Toronto-Dominion Bank Tower",
+      "link": "Toronto-Dominion Centre"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "66 Wellington Street West",
+      "link": null
+     },
+     {
+      "text": "1967–1973",
+      "link": null
+     },
+     {
+      "text": "223 / 731",
+      "link": null
+     },
+     {
+      "text": "56",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "Commerce Court West",
+      "link": "Commerce Court"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "199 Bay Street",
+      "link": null
+     },
+     {
+      "text": "1973–1975",
+      "link": null
+     },
+     {
+      "text": "239 / 784",
+      "link": null
+     },
+     {
+      "text": "57",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "First Canadian Place",
+      "link": "First Canadian Place"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "100 King Street West",
+      "link": null
+     },
+     {
+      "text": "1975–2025",
+      "link": null
+     },
+     {
+      "text": "298 / 978",
+      "link": null
+     },
+     {
+      "text": "72",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "One Bloor West",
+      "link": "One Bloor West"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "1 Bloor Street West",
+      "link": null
+     },
+     {
+      "text": "2025–2026",
+      "link": null
+     },
+     {
+      "text": "309 / 1,012",
+      "link": null
+     },
+     {
+      "text": "85",
+      "link": null
+     }
+    ],
+    [
+     {
+      "text": "SkyTower at Pinnacle One Yonge",
+      "link": "SkyTower at Pinnacle One Yonge"
+     },
+     {
+      "text": "",
+      "link": null
+     },
+     {
+      "text": "7 Yonge Street",
+      "link": null
+     },
+     {
+      "text": "2026–",
+      "link": null
+     },
+     {
+      "text": "356 / 1,168",
+      "link": null
+     },
+     {
+      "text": "106",
+      "link": null
+     }
+    ]
+   ]
+  }
+ ],
+ "pages": {
+  "Adelaide Street (Toronto)": {
+   "title": "List of east–west roads in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6617684"
+  },
+  "Agincourt, Toronto": {
+   "title": "Agincourt, Toronto",
+   "missing": false,
+   "lat": 43.7925,
+   "lon": -79.28388889,
+   "qid": "Q4692573"
+  },
+  "Aura (Toronto)": {
+   "title": "Aura (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q774178"
+  },
+  "Bay Adelaide Centre": {
+   "title": "Bay Adelaide Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q812062"
+  },
+  "Bay Street": {
+   "title": "Bay Street",
+   "missing": false,
+   "lat": 43.657291,
+   "lon": -79.384302,
+   "qid": "Q812088"
+  },
+  "Bayview Village": {
+   "title": "Bayview Village",
+   "missing": false,
+   "lat": 43.777,
+   "lon": -79.379,
+   "qid": "Q4875017"
+  },
+  "Beard Building": {
+   "title": "Beard Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q4876641"
+  },
+  "Bloor Street": {
+   "title": "Bloor Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q885416"
+  },
+  "Bloor Street West": {
+   "title": "Bloor Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q885416"
+  },
+  "Bremner Boulevard": {
+   "title": "Bremner Boulevard",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q138756843"
+  },
+  "Brookfield Place (Toronto)": {
+   "title": "Brookfield Place (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q929051"
+  },
+  "Burano (building)": {
+   "title": "Burano (building)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q4998116"
+  },
+  "CIBC Square": {
+   "title": "CIBC Square",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q29467888"
+  },
+  "CN Tower": {
+   "title": "CN Tower",
+   "missing": false,
+   "lat": 43.64255556,
+   "lon": -79.38708333,
+   "qid": "Q134883"
+  },
+  "Canadian Pacific Building (Toronto)": {
+   "title": "Canadian Pacific Building (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5030422"
+  },
+  "Casa II": {
+   "title": "Casa Condominio Residenza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5047801"
+  },
+  "Casa III": {
+   "title": "Casa Condominio Residenza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5047801"
+  },
+  "Casa Loma (neighbourhood)": {
+   "title": "Casa Loma (neighbourhood)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5047848"
+  },
+  "Church Street (Toronto)": {
+   "title": "List of north–south roads in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2925855"
+  },
+  "Commerce Court": {
+   "title": "Commerce Court",
+   "missing": false,
+   "lat": 43.6481,
+   "lon": -79.3788,
+   "qid": "Q1115331"
+  },
+  "Commerce Court West": {
+   "title": "Commerce Court",
+   "missing": false,
+   "lat": 43.6481,
+   "lon": -79.3788,
+   "qid": "Q1115331"
+  },
+  "Concord Sky": {
+   "title": "Concord Sky",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q85816504"
+  },
+  "Crescent Town": {
+   "title": "Crescent Town",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5184434"
+  },
+  "Delta Toronto Hotel": {
+   "title": "Delta Toronto Hotel",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q19817552"
+  },
+  "Don Mills": {
+   "title": "Don Mills",
+   "missing": false,
+   "lat": 43.73722222,
+   "lon": -79.34333333,
+   "qid": "Q14875138"
+  },
+  "Dundas Street": {
+   "title": "Dundas Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5314778"
+  },
+  "EY Tower": {
+   "title": "EY Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q19817569"
+  },
+  "Eatonville, Toronto": {
+   "title": "Eatonville, Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5331415"
+  },
+  "Eglinton Avenue": {
+   "title": "Eglinton Avenue",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5348068"
+  },
+  "Etobicoke": {
+   "title": "Etobicoke",
+   "missing": false,
+   "lat": 43.61611111,
+   "lon": -79.5125,
+   "qid": "Q1020159"
+  },
+  "Fairmont Royal York": {
+   "title": "Fairmont Royal York",
+   "missing": false,
+   "lat": 43.646133,
+   "lon": -79.381561,
+   "qid": "Q1393350"
+  },
+  "Festival Tower": {
+   "title": "TIFF Lightbox",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2384310"
+  },
+  "Financial District, Toronto": {
+   "title": "Financial District, Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1002871"
+  },
+  "First Canadian Place": {
+   "title": "First Canadian Place",
+   "missing": false,
+   "lat": 43.64877778,
+   "lon": -79.38169444,
+   "qid": "Q1052475"
+  },
+  "Forma (Toronto)": {
+   "title": "Forma (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q28163242"
+  },
+  "Four Seasons Hotel and Residences Toronto": {
+   "title": "Four Seasons Hotel and Residences Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q593320"
+  },
+  "Front Street (Toronto)": {
+   "title": "Front Street (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1470041"
+  },
+  "Harbour Plaza": {
+   "title": "Harbour Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q30688176"
+  },
+  "Henry Farm": {
+   "title": "Henry Farm",
+   "missing": false,
+   "lat": 43.77,
+   "lon": -79.352,
+   "qid": "Q5721114"
+  },
+  "Hotel Riu Plaza Toronto": {
+   "title": "Hotel Riu Plaza Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q136498633"
+  },
+  "ICE Condominiums": {
+   "title": "ICE Condominiums",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1656109"
+  },
+  "Islington-City Centre West": {
+   "title": "Islington-City Centre West",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6084325"
+  },
+  "Jarvis Street": {
+   "title": "Jarvis Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6161258"
+  },
+  "John Street (Toronto)": {
+   "title": "John Street (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6259420"
+  },
+  "King Street (Toronto)": {
+   "title": "King Street (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q598441"
+  },
+  "L Tower": {
+   "title": "L Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q780392"
+  },
+  "Lake Shore Boulevard": {
+   "title": "Lake Shore Boulevard",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q283628"
+  },
+  "Manulife Centre": {
+   "title": "Manulife Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1682432"
+  },
+  "Maple Leaf Square": {
+   "title": "Maple Leaf Square",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1892072"
+  },
+  "Massey Tower": {
+   "title": "Massey Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q20006849"
+  },
+  "Midtown, Toronto": {
+   "title": "Midtown, Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6843067"
+  },
+  "Minto Midtown": {
+   "title": "Minto Midtown",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1937575"
+  },
+  "Montage (building)": {
+   "title": "CityPlace, Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5122973"
+  },
+  "North York": {
+   "title": "North York",
+   "missing": false,
+   "lat": 43.76194444,
+   "lon": -79.41027778,
+   "qid": "Q1586510"
+  },
+  "Old Toronto": {
+   "title": "Old Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q919169"
+  },
+  "One Bloor": {
+   "title": "One Bloor",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q612340"
+  },
+  "One Bloor West": {
+   "title": "One Bloor West",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q28163699"
+  },
+  "One King West Hotel & Residence": {
+   "title": "One King West Hotel & Residence",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2024006"
+  },
+  "Parkway Forest": {
+   "title": "Parkway Forest",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7138795"
+  },
+  "Pinnacle Centre": {
+   "title": "Pinnacle Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2095908"
+  },
+  "Pinnacle One Yonge": {
+   "title": "Pinnacle One Yonge",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q107240467"
+  },
+  "Prestige at Pinnacle One Yonge": {
+   "title": "Pinnacle One Yonge",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q107240467"
+  },
+  "Queen Street (Toronto)": {
+   "title": "Queen Street (Toronto)",
+   "missing": false,
+   "lat": 43.649584,
+   "lon": -79.39241,
+   "qid": "Q1067220"
+  },
+  "Queens Quay (Toronto)": {
+   "title": "Queens Quay (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7270810"
+  },
+  "RBC Centre": {
+   "title": "RBC Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1224878"
+  },
+  "Residences of College Park": {
+   "title": "Residences of College Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2145641"
+  },
+  "Richmond Street": {
+   "title": "List of east–west roads in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6617684"
+  },
+  "Ritz-Carlton Toronto": {
+   "title": "Ritz-Carlton Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1143174"
+  },
+  "Royal Bank Building (Toronto)": {
+   "title": "Royal Bank Building (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7373788"
+  },
+  "Royal Bank Plaza": {
+   "title": "Royal Bank Plaza",
+   "missing": false,
+   "lat": 43.646528,
+   "lon": -79.380139,
+   "qid": "Q1848303"
+  },
+  "Sapphire Tower": {
+   "title": "Sapphire Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7421067"
+  },
+  "Scarborough City Centre": {
+   "title": "Scarborough City Centre",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7430271"
+  },
+  "Scarborough, Ontario": {
+   "title": "Scarborough, Ontario",
+   "missing": false,
+   "lat": 43.75583333,
+   "lon": -79.23083333,
+   "qid": "Q1025401"
+  },
+  "Scotia Plaza": {
+   "title": "Scotia Plaza",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1327514"
+  },
+  "Shangri-La Toronto": {
+   "title": "Shangri-La Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q2276983"
+  },
+  "Sheppard Avenue": {
+   "title": "Sheppard Avenue",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7494532"
+  },
+  "Sherbourne Street, Toronto": {
+   "title": "Sherbourne Street, Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7494739"
+  },
+  "SkyTower at Pinnacle One Yonge": {
+   "title": "Pinnacle One Yonge",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q107240467"
+  },
+  "Spadina Avenue": {
+   "title": "Spadina Avenue",
+   "missing": false,
+   "lat": 43.6525,
+   "lon": -79.398,
+   "qid": "Q3120143"
+  },
+  "Sterling Tower": {
+   "title": "Sterling Tower",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7611475"
+  },
+  "Sugar Wharf": {
+   "title": "Sugar Wharf",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q65063287"
+  },
+  "TD Terrace": {
+   "title": "TD Terrace",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q131548710"
+  },
+  "Temple Building (Toronto)": {
+   "title": "Temple Building (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7698491"
+  },
+  "Ten York": {
+   "title": "Ten York",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q30744065"
+  },
+  "The Esplanade (Toronto)": {
+   "title": "The Esplanade (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q25351859"
+  },
+  "The Queensway–Humber Bay": {
+   "title": "The Queensway–Humber Bay",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7759036"
+  },
+  "The St. Regis Toronto": {
+   "title": "The St. Regis Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q1567534"
+  },
+  "Thorncliffe Park": {
+   "title": "Thorncliffe Park",
+   "missing": false,
+   "lat": 43.70472222,
+   "lon": -79.34638889,
+   "qid": "Q7796352"
+  },
+  "Toronto-Dominion Centre": {
+   "title": "Toronto-Dominion Centre",
+   "missing": false,
+   "lat": 43.6479,
+   "lon": -79.3808,
+   "qid": "Q1239847"
+  },
+  "Trader's Bank Building": {
+   "title": "Traders Bank Building",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7832148"
+  },
+  "University Avenue (Toronto)": {
+   "title": "University Avenue (Toronto)",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q3551335"
+  },
+  "Wallace Emerson": {
+   "title": "Wallace Emerson",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q7962793"
+  },
+  "Wellesley Street (Toronto)": {
+   "title": "List of east–west roads in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6617684"
+  },
+  "Wellington Street (Toronto)": {
+   "title": "List of east–west roads in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q6617684"
+  },
+  "Weston, Toronto": {
+   "title": "Weston, Toronto",
+   "missing": false,
+   "lat": 43.70098889,
+   "lon": -79.5197,
+   "qid": "Q962866"
+  },
+  "Willowdale, Toronto": {
+   "title": "Willowdale, Toronto",
+   "missing": false,
+   "lat": 43.78722222,
+   "lon": -79.42944444,
+   "qid": "Q3569134"
+  },
+  "Yonge Street": {
+   "title": "Yonge Street",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q20725"
+  },
+  "Yonge–Eglinton": {
+   "title": "Yonge–Eglinton",
+   "missing": false,
+   "lat": 43.70675,
+   "lon": -79.39833,
+   "qid": "Q14875490"
+  },
+  "York Street (Toronto)": {
+   "title": "List of notable streets in Toronto",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q141252519"
+  },
+  "Yorkdale–Glen Park": {
+   "title": "Yorkdale–Glen Park",
+   "missing": false,
+   "lat": null,
+   "lon": null,
+   "qid": "Q5567946"
+  },
+  "Yorkville, Toronto": {
+   "title": "Yorkville, Toronto",
+   "missing": false,
+   "lat": 43.67027778,
+   "lon": -79.39111111,
+   "qid": "Q1022897"
+  }
+ }
+}
