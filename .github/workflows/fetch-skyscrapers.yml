@@ -1,0 +1,39 @@
+name: Fetch skyscrapers
+# Downloads each city's "List of tallest buildings" from English Wikipedia (tables, linked articles'
+# coordinates and Wikidata ids) into cities/<city>/raw/skyscrapers/wiki.json and commits it to main.
+# The sandbox can't reach Wikipedia; Actions can. Runs when the fetch script changes on main, on the
+# 1st of each month (towers open, lists change), or by hand from the Actions tab.
+# After it runs, rebuild with cities/<city>/run.sh (or python3 engine/skyscrapers.py <city>).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 1 * *'
+  push:
+    branches: [main]
+    paths: ['engine/fetch_skyscrapers.py', '.github/workflows/fetch-skyscrapers.yml']
+permissions:
+  contents: write
+concurrency: fetch-skyscrapers
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install lxml
+      # Each city on its own, so one failing doesn't lose the other. The logs are committed too.
+      - run: |
+          for c in toronto chicago; do
+            mkdir -p cities/$c/raw/skyscrapers
+            python3 -u engine/fetch_skyscrapers.py $c 2>&1 | tee cities/$c/raw/skyscrapers/fetch.log || true
+          done
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add cities/toronto/raw/skyscrapers cities/chicago/raw/skyscrapers
+          git commit -m "Fetch skyscraper lists from Wikipedia" || echo "no changes"
+          git pull --rebase
+          git push
